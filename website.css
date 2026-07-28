@@ -650,21 +650,12 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-/* Dashed Box around Card 4 */
-.framework-card-wrapper.buyer-fit-wrapper {
-    border: 1.5px dashed var(--refined-brass);
-    border-radius: 12px;
-    padding: 6px;
-    background: transparent;
-}
-
+}/* Architectural Decision Framework Cards */
 .framework-card {
     background: var(--white);
     border: 1px solid var(--divider);
     border-radius: 8px;
-    padding: 1.75rem 1.25rem 1.4rem 1.25rem;
+    padding: 1.6rem 1.35rem 1.25rem 1.35rem;
     box-shadow: none;
     display: flex;
     flex-direction: column;
@@ -677,42 +668,40 @@ body {
     border-color: var(--refined-brass);
 }
 
-/* Step Number Badge */
-.framework-step-badge {
-    position: absolute;
-    top: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 26px;
-    height: 26px;
-    background: var(--deep-navy);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.78rem;
-    font-weight: 700;
-    z-index: 10;
-    box-shadow: none;
+/* Card 4 Dashed Framing */
+.framework-card-wrapper.buyer-fit-wrapper {
+    border: 1px dashed var(--refined-brass);
+    border-radius: 10px;
+    padding: 5px;
+    background: transparent;
+}
+
+/* Integrated Phase Badge Header */
+.framework-phase-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: block;
 }
 
 /* Card Header */
 .framework-card-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(183, 175, 164, 0.35);
 }
 
 .framework-card-title {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--deep-navy);
     font-weight: 400;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
 }
 
@@ -726,33 +715,38 @@ body {
     font-size: 0.8rem;
     color: var(--muted-slate);
     font-weight: 500;
+    margin-top: 2px;
 }
 
-/* Card Bullet List */
+/* Checklist Rows */
 .framework-bullets {
     list-style: none;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
+    gap: 0.55rem;
 }
 
 .framework-bullets li {
-    font-size: 0.85rem;
+    font-size: 0.86rem;
     color: var(--deep-navy);
     font-weight: 600;
-    text-align: center;
-    padding: 0.4rem 0;
-    border-bottom: 1px dashed rgba(183, 175, 164, 0.25);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.framework-bullets li:last-child {
-    border-bottom: none;
+.framework-bullets li::before {
+    content: '✓';
+    color: var(--refined-brass);
+    font-size: 0.8rem;
+    font-weight: 800;
 }
 
-/* Bottom Questions Box */
+/* Bottom Integrated Q&A Footer Panel */
 .framework-questions-box {
-    background: var(--warm-ivory);
+    background: #FAF7F2;
     border-radius: 6px;
     padding: 0.85rem 0.9rem;
     margin-top: auto;
@@ -760,9 +754,9 @@ body {
 }
 
 .framework-questions-header {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--refined-brass);
     text-transform: uppercase;
     margin-bottom: 0.4rem;
