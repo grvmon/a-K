@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>acre&key — Technical Design Scheme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="technical-guide.css">
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="interactions.js"></script>
+</head>
+<body class="sd-root">
+
+<!-- NAV -->
+<div class="wrap">
+  <nav class="nav">
+    <div class="nav__logo">acre&amp;key</div>
+    <button class="nav__toggle" id="mobile-menu-btn" type="button" aria-label="Toggle menu" aria-controls="mobile-menu-links" aria-expanded="false"><i data-feather="menu"></i></button>
+    <div class="nav__links" id="mobile-menu-links"><a href="index.html">Style Guide</a><a href="technical-guide.html" style="color: var(--sd-accent);">Technical Guide</a><a href="preview.html">Brand Board</a></div>
+    <div class="nav__spacer">
+      <button class="sd-btn sd-btn--primary" type="button">Book Consultation</button>
+    </div>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="sd-hero">
+  <div class="wrap hero sd-ruled">
+    <span class="sd-kicker">INDEPENDENT HOME BUYER CONCIERGE</span>
+    <h1 class="sd-display" style="margin-top:var(--sd-4); max-width:18ch; margin-inline:auto;">The right decision means asking the <span class="sd-display__accent">right questions.</span></h1>
+    <p class="sd-lead">We represent the interests of home buyers in Bengaluru and help them make confident, informed decisions.</p>
+    <div class="hero__cta">
+      <button class="sd-btn sd-btn--primary sd-btn--lg sd-btn--magnetic" type="button">Book a Free 30-Minute Call</button>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="band" style="text-align: center;"><div class="wrap">
+  <span class="sd-kicker" style="display:block; margin-bottom:var(--sd-5)">WHY BUYERS TRUST ACRE&KEY</span>
+  <div class="logos" style="justify-content: center;">
+    <span>62+ Checks</span>
+    <span>₹2–10L* Savings</span>
+    <span>₹0 Advisory Fee</span>
+    <span>100% Independent</span>
+  </div>
+</div></section>
+
+<!-- =============== STYLEGUIDE BANDS =============== -->
+<div class="wrap">
+
+  <div class="band">
+    <span class="sd-kicker band__label">01 · COLOR PALETTE</span>
+    <p class="sd-body" style="margin-bottom:var(--sd-5); max-width:70ch">Our color palette utilizes a 75/20/5 ratio (Ivory/Navy/Brass) to establish a "quiet luxury" aesthetic.</p>
+    
+    <div class="swrow" style="grid-template-columns: repeat(7, 1fr); gap: 12px;">
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-deep-navy)"></div><span><strong>Deep Navy</strong><br><small style="font-style:italic;">Primary</small><br>#1F2B38<br><small style="font-size:9px;">RGB 31, 43, 56<br>CMYK 84, 67, 46, 58</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-refined-brass)"></div><span><strong>Antique Brass</strong><br><small style="font-style:italic;">Accent</small><br>#B88E52<br><small style="font-size:9px;">RGB 184, 142, 82<br>CMYK 24, 41, 76, 6</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-warm-ivory); border: 1px solid var(--sd-divider)"></div><span><strong>Warm Ivory</strong><br><small style="font-style:italic;">Neutral / BG</small><br>#F7F3EC<br><small style="font-size:9px;">RGB 247, 243, 236<br>CMYK 2, 3, 7, 0</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-white); border: 1px solid var(--sd-divider)"></div><span><strong>White</strong><br><small style="font-style:italic;">Neutral</small><br>#FFFFFF<br><small style="font-size:9px;">RGB 255, 255, 255<br>CMYK 0, 0, 0, 0</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background-color:#59616B;"></div><span><strong>Muted Slate</strong><br><small style="font-style:italic;">Text / UI</small><br>#59616B<br><small style="font-size:9px;">RGB 89, 97, 107<br>CMYK 61, 48, 41, 20</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-warm-stone)"></div><span><strong>Warm Stone</strong><br><small style="font-style:italic;">Neutral / Tint</small><br>#E5DED4<br><small style="font-size:9px;">RGB 229, 222, 212<br>CMYK 9, 10, 15, 0</small></span></div>
+      <div class="sw"><div class="sd-swatch" style="background:var(--sd-divider)"></div><span><strong>Divider</strong><br><small style="font-style:italic;">Rule / Border</small><br>#B7AFA4<br><small style="font-size:9px;">RGB 183, 175, 164<br>CMYK 24, 23, 29, 0</small></span></div>
+    </div>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">02 · TYPOGRAPHY</span>
+    <div class="typerow"><span class="sd-display" style="font-size: 2.5rem;">Display Heading</span><small>Marcellus 400</small></div>
+    <div class="typerow"><span class="sd-h1">Heading one</span><small>Marcellus 400</small></div>
+    <div class="typerow"><span class="sd-h2">Heading two</span><small>Marcellus 400</small></div>
+    <div class="typerow"><span class="sd-lead">Lead paragraph. We hold the key to your right decision.</span><small>Manrope · lg · slate</small></div>
+    <div class="typerow"><span class="sd-body">Body copy sits in Manrope at 16px with generous 1.6 line height for elegant reading.</span></div>
+    <div class="typerow"><span class="sd-kicker">MONO KICKER</span><small>Manrope · 600 · uppercase · tracking</small></div>
+    <div class="typerow"><span class="sd-display__accent" style="font-size:1.4rem">Accent text.</span><small>Marcellus · italic</small></div>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">03 · BUTTONS &amp; ICONS</span>
+    <div class="btnrow">
+      <button class="sd-btn sd-btn--primary" type="button">Primary Action</button>
+      <button class="sd-btn sd-btn--ghost" type="button">Secondary</button>
+      <button class="sd-btn sd-btn--text" type="button">Read more &rsaquo;</button>
+    </div>
+    
+    <div class="icons-grid" style="display: flex; gap: var(--sd-5); margin-top: var(--sd-6); color: var(--sd-deep-navy);">
+        <i data-feather="shield"></i>
+        <i data-feather="search"></i>
+        <i data-feather="file-text"></i>
+        <i data-feather="users"></i>
+        <i data-feather="trending-up"></i>
+        <i data-feather="user"></i>
+        <i data-feather="map-pin"></i>
+        <i data-feather="calendar"></i>
+    </div>
+    <p class="sd-body" style="font-size: 13px; margin-top: 12px;">Line icons • 2px stroke • Navy. Use only when they add clarity.</p>
+  </div>
+
+  <div class="band section-dark" style="padding-block: 80px;">
+    <span class="sd-kicker band__label">04 · CARDS & GRIDS</span>
+    <div class="sd-grid-3">
+      <div class="sd-card feat stagger-1">
+        <div class="feat__icon"><i data-feather="search"></i></div>
+        <h4 class="sd-h4">Shortlist better</h4>
+        <p class="sd-body">Curated options that truly fit your goals.</p>
+      </div>
+      <div class="sd-card feat stagger-2">
+        <div class="feat__icon"><i data-feather="shield"></i></div>
+        <h4 class="sd-h4">Due diligence</h4>
+        <p class="sd-body">62+ checks to uncover what others miss.</p>
+      </div>
+      <div class="sd-card feat stagger-3 sd-card--trace">
+        <div class="feat__icon"><i data-feather="briefcase"></i></div>
+        <h4 class="sd-h4">Negotiate better</h4>
+        <p class="sd-body">We negotiate terms, price & benefits.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="band section-brass">
+    <h3>OVER ₹500CR IN REAL ESTATE EVALUATED</h3>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">05 · OUR PROVEN PROCESS</span>
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+      <div class="timeline-step">
+        <div class="step-indicator">
+            <div class="step-num">1</div>
+        </div>
+        <h4 class="sd-h4">Understand You</h4>
+        <p class="sd-body" style="font-size: 13px;">Goals, budget, timeline, preferences.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-indicator">
+            <div class="step-num">2</div>
+        </div>
+        <h4 class="sd-h4">Shortlist</h4>
+        <p class="sd-body" style="font-size: 13px;">4-6 best-fit options, not hundreds.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-indicator">
+            <div class="step-num">3</div>
+        </div>
+        <h4 class="sd-h4">Evaluate</h4>
+        <p class="sd-body" style="font-size: 13px;">Site visits, quality checks, legal & financial due diligence.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-indicator">
+            <div class="step-num">4</div>
+        </div>
+        <h4 class="sd-h4">Negotiate</h4>
+        <p class="sd-body" style="font-size: 13px;">Best price, payment plan, waivers & more.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-indicator">
+            <div class="step-num">5</div>
+        </div>
+        <h4 class="sd-h4">Decide</h4>
+        <p class="sd-body" style="font-size: 13px;">You decide. We support every step.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">06 · DESIGN TOKENS &amp; RESPONSIVE SYSTEM</span>
+    <p class="sd-body" style="max-width:70ch; margin-bottom:var(--sd-5)">Use these values as the single source of truth. The Fibonacci principle should influence composition and white space—not force every element into a rigid ratio.</p>
+    <div class="system-grid">
+      <article class="system-card">
+        <h4>Colour rules</h4>
+        <ul class="token-list">
+          <li><strong>Canvas:</strong> Warm Ivory #F7F3EC</li>
+          <li><strong>Ink:</strong> Deep Navy #1F2B38</li>
+          <li><strong>Accent:</strong> Antique Brass #B88E52</li>
+          <li><strong>Ratio:</strong> 75% light, 20% navy, 5% brass</li>
+          <li><strong>Brass:</strong> details, dividers and emphasis only—not body text.</li>
+        </ul>
+      </article>
+      <article class="system-card">
+        <h4>Type hierarchy</h4>
+        <ul class="token-list">
+          <li><strong>Display:</strong> Marcellus · 40–64px · 1.2</li>
+          <li><strong>H1:</strong> Marcellus · 32–48px · 1.2</li>
+          <li><strong>H2:</strong> Marcellus · 24–35px · 1.25</li>
+          <li><strong>Body:</strong> Manrope · 16px · 1.6</li>
+          <li><strong>Label:</strong> Manrope 600 · 12px · uppercase</li>
+        </ul>
+      </article>
+      <article class="system-card">
+        <h4>Space &amp; form</h4>
+        <ul class="token-list">
+          <li><strong>Scale:</strong> 4, 8, 16, 24, 32, 48, 64, 96px</li>
+          <li><strong>Desktop gutter:</strong> 24px minimum</li>
+          <li><strong>Section rhythm:</strong> 96–120px desktop; 64px mobile</li>
+          <li><strong>Radius:</strong> 4px controls; 8px cards</li>
+          <li><strong>Shadows:</strong> subtle elevation only; never glossy.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <div class="band section-stone">
+    <span class="sd-kicker band__label">07 · REAL-ESTATE COMPONENTS</span>
+    <div class="component-grid">
+      <article class="sd-card property-sample">
+        <div class="property-sample__image"><span class="property-sample__tag">PRIVATE VIEWING</span></div>
+        <div class="property-sample__body">
+          <h4 class="sd-h4">A considered home, in the right setting.</h4>
+          <p class="property-sample__meta">Indiranagar · 3 bedrooms · 2,180 sq ft</p>
+          <p class="sd-body" style="margin-top:var(--sd-3)">Property cards should lead with one striking image and a restrained, human description. Keep facts concise and never overload the card with badges.</p>
+        </div>
+      </article>
+      <article class="system-card advisor-sample">
+        <div>
+          <p class="advisor-sample__label">ADVISOR TOUCHPOINT</p>
+          <h4 class="sd-h2" style="margin-top:var(--sd-3)">A private conversation, before a shortlist.</h4>
+          <p class="sd-body" style="margin-top:var(--sd-3)">Use one warm portrait, one clear promise and a single meaningful next step.</p>
+        </div>
+        <button class="sd-btn sd-btn--primary" type="button" style="margin-top:var(--sd-5)">Book a consultation</button>
+      </article>
+    </div>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">08 · IMAGE &amp; TONE DIRECTION</span>
+    <div class="direction-grid">
+      <article class="direction-card">
+        <h4>Use</h4>
+        <ul>
+          <li>Architectural composition, natural light and tactile materials.</li>
+          <li>Warm, restrained colour grading; real homes and authentic moments.</li>
+          <li>Editorial crops with room for typography and breathing space.</li>
+          <li>Language that sounds like an independent advisor: calm, precise and discreet.</li>
+        </ul>
+      </article>
+      <article class="direction-card direction-card--avoid">
+        <h4>Avoid</h4>
+        <ul>
+          <li>Generic façades, artificial HDR, stock-smile photography and cluttered collages.</li>
+          <li>Bright gradients, glossy effects, excessive rounded cards or loud promotional badges.</li>
+          <li>Sales-heavy language such as “best deal” or “limited time only”.</li>
+          <li>Using brass for long text, interactive errors or low-contrast labels.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <div class="band">
+    <span class="sd-kicker band__label">09 · ACCESSIBILITY &amp; INTERACTION</span>
+    <div class="access-list">
+      <div class="access-item"><strong>Focus</strong><span class="sd-body">All links and controls show a 2px brass focus ring with a 3px offset.</span></div>
+      <div class="access-item"><strong>Contrast</strong><span class="sd-body">Use navy for essential text. Brass is decorative and should not carry critical information alone.</span></div>
+      <div class="access-item"><strong>Motion</strong><span class="sd-body">Keep transitions within 150–300ms. Honour reduced-motion preferences and never rely on movement to explain an action.</span></div>
+      <div class="access-item"><strong>Mobile</strong><span class="sd-body">Stack content below 768px, keep tap targets at least 44px high, and give one primary action per screen.</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="section-stone" style="border-top:1px solid var(--sd-divider); padding-block: 64px;">
+  <div class="wrap foot" style="padding-block: 0;">
+  <div class="foot__cols">
+    <div>
+        <div class="nav__logo" style="margin-bottom:12px">acre&amp;key</div>
+        <p class="sd-body" style="max-width:34ch">Independent Home Buyer Concierge.</p>
+    </div>
+    <div><h5>Guides</h5><a href="index.html">Style Guide</a><a href="technical-guide.html">Technical Guide</a><a href="preview.html">Brand Board</a></div>
+    <div><h5>Company</h5><a>About</a><a>Process</a><a>Pricing</a></div>
+  </div>
+</div></footer>
+
+<script>
+    feather.replace();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var links = document.getElementById('mobile-menu-links');
+    if(btn && links) {
+      btn.addEventListener('click', function() {
+        var isOpen = links.classList.toggle('is-active');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  });
+</script>
+</body>
+</html>
