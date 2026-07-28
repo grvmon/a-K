@@ -546,6 +546,156 @@ body {
     }
 }
 
+/* ================= SECTION 2: THE FRAGMENTATION PROBLEM ================= */
+.problem-section {
+    padding: 100px 0;
+    background: var(--warm-ivory);
+    border-top: 1px solid var(--divider);
+    position: relative;
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--deep-navy);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.section-kicker-line {
+    width: 24px;
+    height: 2px;
+    background: var(--refined-brass);
+    display: inline-block;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 1.6rem + 1.2vw, 3rem);
+    line-height: 1.25;
+    color: var(--deep-navy);
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    max-width: 920px;
+}
+
+.section-intro {
+    font-size: 1.15rem;
+    color: var(--muted-slate);
+    line-height: 1.7;
+    max-width: 860px;
+    margin-bottom: 3.5rem;
+    font-weight: 500;
+}
+
+/* 5-Column Grid */
+.cards-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.role-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+    padding: 1.75rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lux);
+    border-color: var(--refined-brass);
+}
+
+.role-card-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--warm-stone);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--deep-navy);
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--divider);
+}
+
+.role-card-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.role-card-name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--deep-navy);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+}
+
+.role-card-desc {
+    font-size: 0.9rem;
+    color: var(--muted-slate);
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+/* Closing Statement Banner */
+.closing-statement-banner {
+    background: var(--deep-navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 2.2rem 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border-left: 5px solid var(--refined-brass);
+    box-shadow: var(--shadow-lux);
+}
+
+.closing-statement-text {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.closing-statement-highlight {
+    color: var(--refined-brass);
+    font-style: italic;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+    .cards-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cards-grid-5 {
+        grid-template-columns: 1fr;
+    }
+    .closing-statement-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.8rem 1.5rem;
+    }
+}
+
 /* ================= ULTRA-FAST PURE CSS STAGGERED ENTRANCE ANIMATIONS ================= */
 @keyframes heroFadeUp {
     from {
