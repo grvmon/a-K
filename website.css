@@ -682,23 +682,53 @@ body {
 }
 
 /* Central Advisory Brain Core Node */
+/* Core Node Ambient Pulse Animation */
+@keyframes corePulseHalo {
+    0%, 100% {
+        box-shadow: 0 16px 40px rgba(31, 43, 56, 0.3), 0 0 0 0 rgba(184, 142, 82, 0.4);
+    }
+    50% {
+        box-shadow: 0 20px 50px rgba(31, 43, 56, 0.4), 0 0 0 18px rgba(184, 142, 82, 0);
+    }
+}
+
 .center-brain-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    background: var(--deep-navy);
-    color: var(--white);
-    border-radius: 50%;
-    width: 190px;
-    height: 190px;
-    box-shadow: 0 16px 40px rgba(31, 43, 56, 0.3);
-    border: 4px solid var(--warm-ivory);
-    position: relative;
-    z-index: 5;
-    transition: transform var(--transition-smooth);
+    animation: corePulseHalo 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Node Staggered Entrance Animations */
+.flow-nodes-col:first-child .flow-node-card:nth-child(2) { animation: nodeSlideLeft 600ms ease 100ms backwards; }
+.flow-nodes-col:first-child .flow-node-card:nth-child(3) { animation: nodeSlideLeft 600ms ease 200ms backwards; }
+.flow-nodes-col:first-child .flow-node-card:nth-child(4) { animation: nodeSlideLeft 600ms ease 300ms backwards; }
+.flow-nodes-col:first-child .flow-node-card:nth-child(5) { animation: nodeSlideLeft 600ms ease 400ms backwards; }
+.flow-nodes-col:first-child .flow-node-card:nth-child(6) { animation: nodeSlideLeft 600ms ease 500ms backwards; }
+
+.flow-nodes-col:last-child .flow-node-card:nth-child(2) { animation: nodeSlideRight 600ms ease 200ms backwards; }
+.flow-nodes-col:last-child .flow-node-card:nth-child(3) { animation: nodeSlideRight 600ms ease 300ms backwards; }
+.flow-nodes-col:last-child .flow-node-card:nth-child(4) { animation: nodeSlideRight 600ms ease 400ms backwards; }
+.flow-nodes-col:last-child .flow-node-card:nth-child(5) { animation: nodeSlideRight 600ms ease 500ms backwards; }
+.flow-nodes-col:last-child .flow-node-card:nth-child(6) { animation: nodeSlideRight 600ms ease 600ms backwards; }
+
+@keyframes nodeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes nodeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .center-brain-node:hover {
