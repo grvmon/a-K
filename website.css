@@ -580,75 +580,209 @@ body {
     color: var(--refined-brass);
 }
 
-/* ================= SECTION 2: THE FRAGMENTATION PROBLEM ================= */
-.problem-section {
-    padding: 20px 0 100px 0;
+/* ================= SECTION 2: WHY ACRE&KEY EXISTS ================= */
+.why-exists-section {
+    padding: 20px 0 90px 0;
     background: var(--warm-ivory);
     position: relative;
 }
 
-.section-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+.why-exists-kicker {
+    display: inline-block;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.12em;
-    color: var(--deep-navy);
+    color: var(--refined-brass);
     text-transform: uppercase;
     margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid var(--refined-brass);
 }
 
-.section-kicker-line {
-    width: 24px;
-    height: 2px;
-    background: var(--refined-brass);
-    display: inline-block;
-}
-
-.section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 1.6rem + 1.2vw, 3rem);
-    line-height: 1.25;
-    color: var(--deep-navy);
-    font-weight: 400;
-    margin-bottom: 1.25rem;
-    max-width: 920px;
-}
-
-.section-intro {
-    font-size: 1.15rem;
-    color: var(--muted-slate);
-    line-height: 1.7;
-    max-width: 860px;
-    margin-bottom: 3.5rem;
-    font-weight: 500;
-}
-
-/* 5-Column Grid */
-.cards-grid-5 {
+.why-exists-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 2.5rem;
     margin-bottom: 3rem;
 }
 
-.role-card {
-    background: var(--white);
-    border: 1px solid var(--divider);
-    border-radius: 8px;
-    padding: 1.75rem 1.4rem;
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+/* Orbit Diagram Container */
+.orbit-diagram {
+    position: relative;
+    width: 100%;
+    height: 440px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    background: rgba(229, 222, 212, 0.25);
+    border-radius: 16px;
+    border: 1px solid rgba(183, 175, 164, 0.4);
+    padding: 2rem;
 }
 
-.role-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lux);
+/* Central Buyer Node */
+.buyer-hub-node {
+    width: 115px;
+    height: 115px;
+    background: var(--deep-navy);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    z-index: 5;
+    box-shadow: 0 12px 32px rgba(31, 43, 56, 0.25);
+    border: 3.5px solid var(--warm-ivory);
+}
+
+.buyer-hub-node i {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    color: var(--refined-brass);
+}
+
+.buyer-hub-label {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Orbiting Player Cards */
+.orbit-card {
+    position: absolute;
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    padding: 0.85rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 215px;
+    z-index: 4;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.orbit-card:hover {
     border-color: var(--refined-brass);
+    transform: translateY(-2px);
+}
+
+.orbit-card-icon {
+    width: 34px;
+    height: 34px;
+    color: var(--deep-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.orbit-card-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.orbit-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    line-height: 1.2;
+}
+
+.orbit-card-sub {
+    font-size: 0.78rem;
+    color: var(--muted-slate);
+    font-weight: 500;
+}
+
+/* Positions around Buyer Hub */
+.orbit-card-builder {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit-card-seller {
+    top: 145px;
+    left: 20px;
+}
+
+.orbit-card-broker {
+    top: 145px;
+    right: 20px;
+}
+
+.orbit-card-lawyer {
+    bottom: 35px;
+    left: 20px;
+}
+
+.orbit-card-bank {
+    bottom: 35px;
+    right: 20px;
+}
+
+/* Right Photo Card */
+.stressed-buyer-photo-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lux);
+    border: 1px solid var(--divider);
+    height: 440px;
+    background: var(--white);
+}
+
+.stressed-buyer-photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Closing Banner */
+.closing-navy-banner {
+    background: var(--deep-navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 1.6rem 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-lux);
+    margin-top: 1rem;
+}
+
+.closing-navy-text {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--white);
+}
+
+.closing-navy-highlight {
+    color: var(--refined-brass);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .why-exists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .orbit-diagram {
+        height: 480px;
+    }
 }
 
 .role-card-icon {
