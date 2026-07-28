@@ -654,48 +654,47 @@ body {
 
 /* Dashed Box around Card 4 */
 .framework-card-wrapper.buyer-fit-wrapper {
-    border: 2px dashed var(--refined-brass);
-    border-radius: 16px;
-    padding: 8px;
-    background: rgba(184, 142, 82, 0.04);
+    border: 1.5px dashed var(--refined-brass);
+    border-radius: 12px;
+    padding: 6px;
+    background: transparent;
 }
 
 .framework-card {
     background: var(--white);
     border: 1px solid var(--divider);
-    border-radius: 12px;
-    padding: 1.75rem 1.2rem;
-    box-shadow: var(--shadow-sm);
+    border-radius: 8px;
+    padding: 1.75rem 1.25rem 1.4rem 1.25rem;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
-    transition: transform var(--transition-fast), border-color var(--transition-fast);
+    transition: border-color var(--transition-fast);
 }
 
 .framework-card:hover {
     border-color: var(--refined-brass);
-    transform: translateY(-3px);
 }
 
 /* Step Number Badge */
 .framework-step-badge {
     position: absolute;
-    top: -14px;
+    top: -13px;
     left: 50%;
     transform: translateX(-50%);
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     background: var(--deep-navy);
     color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.78rem;
+    font-weight: 700;
     z-index: 10;
-    box-shadow: 0 4px 10px rgba(31, 43, 56, 0.2);
+    box-shadow: none;
 }
 
 /* Card Header */
@@ -753,11 +752,11 @@ body {
 
 /* Bottom Questions Box */
 .framework-questions-box {
-    background: #FAF7F2;
-    border-radius: 8px;
-    padding: 0.9rem 0.85rem;
+    background: var(--warm-ivory);
+    border-radius: 6px;
+    padding: 0.85rem 0.9rem;
     margin-top: auto;
-    border: 1px solid rgba(183, 175, 164, 0.3);
+    border: 1px solid rgba(183, 175, 164, 0.35);
 }
 
 .framework-questions-header {
@@ -792,14 +791,14 @@ body {
 .framework-statement-bar {
     background: var(--deep-navy);
     color: var(--white);
-    border-radius: 8px;
-    padding: 1.3rem 2.2rem;
+    border-radius: 6px;
+    padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 2.5rem;
-    box-shadow: var(--shadow-lux);
+    box-shadow: none;
 }
 
 .framework-statement-primary {
@@ -825,12 +824,12 @@ body {
 .framework-stats-bar {
     background: var(--white);
     border: 1px solid var(--divider);
-    border-radius: 10px;
-    padding: 1.4rem 2rem;
+    border-radius: 8px;
+    padding: 1.3rem 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .framework-stat-item {
