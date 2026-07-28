@@ -650,30 +650,65 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-}/* Architectural Decision Framework Cards */
+}
+
+.framework-card-wrapper::after {
+    content: '›';
+    position: absolute;
+    top: 50%;
+    right: -0.85rem;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--refined-brass);
+    z-index: 5;
+}
+
+.framework-grid .framework-card-wrapper:last-child::after {
+    display: none;
+}
+
+/* Architectural Decision Framework Cards */
 .framework-card {
     background: var(--white);
     border: 1px solid var(--divider);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.6rem 1.35rem 1.25rem 1.35rem;
-    box-shadow: none;
+    box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
-    transition: border-color var(--transition-fast);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .framework-card:hover {
     border-color: var(--refined-brass);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(31, 43, 56, 0.09);
 }
 
 /* Card 4 Dashed Framing */
 .framework-card-wrapper.buyer-fit-wrapper {
     border: 1px dashed var(--refined-brass);
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 5px;
     background: transparent;
+}
+
+/* Step Number Circle Badge */
+.framework-step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--deep-navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin: 0 auto 0.75rem auto;
 }
 
 /* Integrated Phase Badge Header */
