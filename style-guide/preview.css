@@ -133,12 +133,44 @@ body {
 
 .usage-ratio-bar {
     display: flex;
-    height: 15px;
+    height: 32px;
     width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--divider);
 }
-.ratio-ivory { width: 75%; background: var(--warm-stone); font-size: 0.6rem; text-align: center; color: var(--deep-navy); padding-top: 1px;}
-.ratio-navy { width: 20%; background: var(--deep-navy); font-size: 0.6rem; text-align: center; color: var(--white); padding-top: 1px;}
-.ratio-brass { width: 5%; background: var(--refined-brass); font-size: 0.6rem; text-align: center; color: var(--white); padding-top: 1px;}
+.ratio-ivory {
+    width: 75%;
+    background: var(--warm-ivory);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ratio-navy {
+    width: 20%;
+    background: var(--deep-navy);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ratio-brass {
+    width: 5%;
+    background: var(--refined-brass);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .typo-icon-cell {
     display: flex;
