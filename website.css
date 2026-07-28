@@ -605,22 +605,26 @@ body {
 }
 
 .framework-kicker {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.12em;
     color: var(--refined-brass);
     text-transform: uppercase;
     margin-bottom: 1.25rem;
-    position: relative;
-    padding-bottom: 4px;
-    border-bottom: 1.5px solid var(--refined-brass);
+}
+
+.framework-kicker .kicker-dash {
+    color: var(--refined-brass);
 }
 
 .framework-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 1.6rem + 1.2vw, 3rem);
-    line-height: 1.25;
+    font-size: clamp(2.2rem, 1.8rem + 1.4vw, 3.2rem);
+    line-height: 1.2;
     color: var(--deep-navy);
     font-weight: 400;
     margin-bottom: 3.5rem;
