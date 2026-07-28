@@ -365,7 +365,48 @@ body {
     transform: scale(1.03);
 }
 
-/* Floating Glassmorphic Badges */
+/* Floating Glassmorphic Badges & Overlay Strip */
+.hero-image-overlay-strip {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(13, 21, 30, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 142, 82, 0.45);
+    border-radius: 6px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.overlay-stat-item i {
+    color: var(--refined-brass);
+    width: 16px;
+    height: 16px;
+}
+
+.overlay-stat-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(183, 175, 164, 0.4);
+}
+
 .glass-badge {
     position: absolute;
     background: rgba(253, 251, 249, 0.88);
