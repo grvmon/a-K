@@ -578,214 +578,122 @@ body {
     content: '◆';
     font-size: 0.7rem;
     color: var(--refined-brass);
-}
-
-/* ================= SYSTEM FLOW DIAGRAM (SPIDERBRAIN INSPIRATION) ================= */
-.system-flow-wrapper {
+}/* ================= 4-STEP BUYER ADVISORY PROCESS ================= */
+.process-flow-wrapper {
     position: relative;
     width: 100%;
-    background: rgba(247, 243, 236, 0.6);
-    border: 1px solid var(--divider);
-    border-radius: 16px;
-    padding: 3.5rem 2.5rem;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 3.5rem;
-    overflow: hidden;
 }
 
-.system-flow-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.system-flow-container {
+.process-grid-4 {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     position: relative;
     z-index: 2;
 }
 
-/* Node Column (Left & Right) */
-.flow-nodes-col {
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-}
-
-/* Column Header Labels */
-.flow-col-label {
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted-slate);
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.flow-col-label-right {
-    justify-content: flex-end;
-}
-
-/* Individual Node Card */
-.flow-node-card {
+.process-card {
     background: var(--white);
     border: 1px solid var(--divider);
-    border-radius: 10px;
-    padding: 0.85rem 1.15rem;
+    border-radius: 12px;
+    padding: 2rem 1.6rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.process-card:hover {
+    border-color: var(--refined-brass);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lux);
+}
+
+.process-step-num {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.05);
-    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    justify-content: space-between;
 }
 
-.flow-node-card:hover {
-    border-color: var(--refined-brass);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.15);
+.process-step-num i {
+    width: 16px;
+    height: 16px;
+    color: var(--divider);
 }
 
-.flow-node-icon {
-    width: 36px;
-    height: 36px;
+.process-icon-box {
+    width: 48px;
+    height: 48px;
     background: var(--warm-stone);
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--deep-navy);
-    flex-shrink: 0;
+    margin-bottom: 1.25rem;
     border: 1px solid var(--divider);
 }
 
-.flow-node-icon i {
-    width: 18px;
-    height: 18px;
+.process-icon-box i {
+    width: 22px;
+    height: 22px;
 }
 
-.flow-node-title {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--deep-navy);
-    line-height: 1.25;
-}
-
-.flow-node-sub {
-    font-size: 0.76rem;
-    color: var(--muted-slate);
-    font-weight: 500;
-}
-
-/* Central Advisory Brain Core Node */
-/* Core Node Ambient Pulse Animation */
-@keyframes corePulseHalo {
-    0%, 100% {
-        box-shadow: 0 16px 40px rgba(31, 43, 56, 0.3), 0 0 0 0 rgba(184, 142, 82, 0.4);
-    }
-    50% {
-        box-shadow: 0 20px 50px rgba(31, 43, 56, 0.4), 0 0 0 18px rgba(184, 142, 82, 0);
-    }
-}
-
-.center-brain-node {
-    animation: corePulseHalo 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-/* Node Staggered Entrance Animations */
-.flow-nodes-col:first-child .flow-node-card:nth-child(2) { animation: nodeSlideLeft 600ms ease 100ms backwards; }
-.flow-nodes-col:first-child .flow-node-card:nth-child(3) { animation: nodeSlideLeft 600ms ease 200ms backwards; }
-.flow-nodes-col:first-child .flow-node-card:nth-child(4) { animation: nodeSlideLeft 600ms ease 300ms backwards; }
-.flow-nodes-col:first-child .flow-node-card:nth-child(5) { animation: nodeSlideLeft 600ms ease 400ms backwards; }
-.flow-nodes-col:first-child .flow-node-card:nth-child(6) { animation: nodeSlideLeft 600ms ease 500ms backwards; }
-
-.flow-nodes-col:last-child .flow-node-card:nth-child(2) { animation: nodeSlideRight 600ms ease 200ms backwards; }
-.flow-nodes-col:last-child .flow-node-card:nth-child(3) { animation: nodeSlideRight 600ms ease 300ms backwards; }
-.flow-nodes-col:last-child .flow-node-card:nth-child(4) { animation: nodeSlideRight 600ms ease 400ms backwards; }
-.flow-nodes-col:last-child .flow-node-card:nth-child(5) { animation: nodeSlideRight 600ms ease 500ms backwards; }
-.flow-nodes-col:last-child .flow-node-card:nth-child(6) { animation: nodeSlideRight 600ms ease 600ms backwards; }
-
-@keyframes nodeSlideLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-24px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes nodeSlideRight {
-    from {
-        opacity: 0;
-        transform: translateX(24px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.center-brain-node:hover {
-    transform: scale(1.04);
-}
-
-.center-brain-icon {
-    width: 34px;
-    height: 34px;
-    color: var(--refined-brass);
-    margin-bottom: 4px;
-}
-
-.center-brain-title {
-    font-family: var(--font-logo);
+.process-title {
+    font-family: var(--font-heading);
     font-size: 1.25rem;
-    letter-spacing: 0.04em;
-    color: var(--white);
-    line-height: 1.1;
+    line-height: 1.3;
+    color: var(--deep-navy);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
 }
 
-.center-brain-sub {
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    color: var(--refined-brass);
-    text-transform: uppercase;
-    margin-top: 4px;
+.process-desc {
+    font-size: 0.9rem;
+    color: var(--muted-slate);
+    line-height: 1.6;
+    font-weight: 500;
+    margin-top: auto;
 }
 
-/* SVG Connecting Lines Overlay */
-.flow-svg-overlay {
+/* Connecting Process Arrow (between cards) */
+.process-card::after {
+    content: '→';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    top: 50%;
+    right: -1.1rem;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--refined-brass);
+    z-index: 5;
 }
 
-.flow-svg-overlay path {
-    stroke: rgba(184, 142, 82, 0.45);
-    stroke-width: 1.5;
-    stroke-dasharray: 4 4;
-    fill: none;
+.process-grid-4 .process-card:last-child::after {
+    display: none;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .system-flow-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .process-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .process-card::after {
+        display: none;
+    }
+}
 
-    .center-brain-node {
-        margin: 0 auto;
+@media (max-width: 640px) {
+    .process-grid-4 {
+        grid-template-columns: 1fr;
     }
 }
 
