@@ -611,122 +611,311 @@ body {
     content: '◆';
     font-size: 0.7rem;
     color: var(--refined-brass);
-}/* ================= 4-STEP BUYER ADVISORY PROCESS ================= */
-.process-flow-wrapper {
+}/* ================= SECTION 2: ACRE&KEY DECISION FRAMEWORK ================= */
+.framework-section {
+    padding: 20px 0 90px 0;
+    background: var(--warm-ivory);
     position: relative;
-    width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
 }
 
-.process-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.process-card {
-    background: var(--white);
-    border: 1px solid var(--divider);
-    border-radius: 12px;
-    padding: 2rem 1.6rem;
-    box-shadow: var(--shadow-sm);
-    position: relative;
-    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.process-card:hover {
-    border-color: var(--refined-brass);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lux);
-}
-
-.process-step-num {
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
+.framework-kicker {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     color: var(--refined-brass);
     text-transform: uppercase;
     margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid var(--refined-brass);
+}
+
+.framework-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 1.6rem + 1.2vw, 3rem);
+    line-height: 1.25;
+    color: var(--deep-navy);
+    font-weight: 400;
+    margin-bottom: 3.5rem;
+    max-width: 920px;
+}
+
+.framework-title-gold {
+    color: var(--refined-brass);
+    font-style: italic;
+}
+
+/* 4-Card Framework Grid */
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.framework-card-wrapper {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.process-step-num i {
-    width: 16px;
-    height: 16px;
-    color: var(--divider);
+/* Dashed Box around Card 4 */
+.framework-card-wrapper.buyer-fit-wrapper {
+    border: 2px dashed var(--refined-brass);
+    border-radius: 16px;
+    padding: 8px;
+    background: rgba(184, 142, 82, 0.04);
 }
 
-.process-icon-box {
-    width: 48px;
-    height: 48px;
-    background: var(--warm-stone);
-    border-radius: 8px;
+.framework-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    padding: 1.75rem 1.2rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.framework-card:hover {
+    border-color: var(--refined-brass);
+    transform: translateY(-3px);
+}
+
+/* Step Number Badge */
+.framework-step-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    background: var(--deep-navy);
+    color: var(--white);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--deep-navy);
-    margin-bottom: 1.25rem;
-    border: 1px solid var(--divider);
+    font-size: 0.8rem;
+    font-weight: 800;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(31, 43, 56, 0.2);
 }
 
-.process-icon-box i {
+/* Card Header */
+.framework-card-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
+}
+
+.framework-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--deep-navy);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.framework-card-title i {
+    width: 18px;
+    height: 18px;
+    color: var(--refined-brass);
+}
+
+.framework-card-sub {
+    font-size: 0.8rem;
+    color: var(--muted-slate);
+    font-weight: 500;
+}
+
+/* Card Bullet List */
+.framework-bullets {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.framework-bullets li {
+    font-size: 0.85rem;
+    color: var(--deep-navy);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed rgba(183, 175, 164, 0.25);
+}
+
+.framework-bullets li:last-child {
+    border-bottom: none;
+}
+
+/* Bottom Questions Box */
+.framework-questions-box {
+    background: #FAF7F2;
+    border-radius: 8px;
+    padding: 0.9rem 0.85rem;
+    margin-top: auto;
+    border: 1px solid rgba(183, 175, 164, 0.3);
+}
+
+.framework-questions-header {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.framework-questions-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.framework-questions-list li {
+    font-size: 0.78rem;
+    color: var(--deep-navy);
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+.framework-questions-list strong {
+    color: var(--deep-navy);
+    font-weight: 700;
+}
+
+/* Middle Navy Statement Bar */
+.framework-statement-bar {
+    background: var(--deep-navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 1.3rem 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-lux);
+}
+
+.framework-statement-primary {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.framework-statement-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(184, 142, 82, 0.6);
+}
+
+.framework-statement-secondary {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 500;
+}
+
+/* Bottom Data Stats Proof Bar */
+.framework-stats-bar {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    padding: 1.4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.framework-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-right: 1rem;
+    border-right: 1px solid rgba(183, 175, 164, 0.35);
+}
+
+.framework-stat-item:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.framework-stat-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--refined-brass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.framework-stat-icon i {
     width: 22px;
     height: 22px;
 }
 
-.process-title {
+.framework-stat-val {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
-    line-height: 1.3;
+    font-size: 1.5rem;
     color: var(--deep-navy);
-    margin-bottom: 0.75rem;
     font-weight: 400;
+    line-height: 1;
 }
 
-.process-desc {
-    font-size: 0.9rem;
+.framework-stat-lbl {
+    font-size: 0.78rem;
     color: var(--muted-slate);
-    line-height: 1.6;
+    line-height: 1.35;
     font-weight: 500;
-    margin-top: auto;
+    margin-top: 3px;
 }
 
-/* Connecting Process Arrow (between cards) */
-.process-card::after {
-    content: '→';
-    position: absolute;
-    top: 50%;
-    right: -1.1rem;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: var(--refined-brass);
-    z-index: 5;
-}
-
-.process-grid-4 .process-card:last-child::after {
-    display: none;
-}
-
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .process-grid-4 {
+    .framework-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
-    .process-card::after {
-        display: none;
+    .framework-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .framework-stat-item {
+        border-right: none;
     }
 }
 
 @media (max-width: 640px) {
-    .process-grid-4 {
+    .framework-grid {
         grid-template-columns: 1fr;
+    }
+    .framework-stats-bar {
+        grid-template-columns: 1fr;
+    }
+    .framework-statement-bar {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+    .framework-statement-divider {
+        display: none;
     }
 }
 
