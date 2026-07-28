@@ -546,6 +546,44 @@ body {
     }
 }
 
+/* ================= SECTION SEPARATOR ================= */
+.section-separator {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.separator-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--divider), transparent);
+}
+
+.separator-emblem {
+    width: 32px;
+    height: 32px;
+    background: var(--warm-stone);
+    border: 1px solid var(--divider);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5rem;
+    color: var(--refined-brass);
+    flex-shrink: 0;
+}
+
+.separator-emblem::after {
+    content: '◆';
+    font-size: 0.65rem;
+    color: var(--refined-brass);
+}
+
 /* ================= SECTION 2: THE FRAGMENTATION PROBLEM ================= */
 .problem-section {
     padding: 100px 0;
