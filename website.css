@@ -414,18 +414,20 @@ body {
 
 .glass-badge {
     position: absolute;
-    background: rgba(250, 248, 245, 0.96);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(247, 243, 236, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(183, 175, 164, 0.4);
-    padding: 0.75rem 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.12);
+    padding: 0.55rem 0.95rem;
+    border-radius: 4px;
+    box-shadow: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     z-index: 20;
     white-space: nowrap;
+    cursor: default;
+    user-select: none;
 }
 
 .glass-badge-top {
@@ -439,28 +441,28 @@ body {
 }
 
 .badge-icon {
-    width: 38px;
-    height: 38px;
-    background: var(--warm-stone);
-    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--deep-navy);
+    color: var(--refined-brass);
     flex-shrink: 0;
-    border: 1px solid var(--divider);
+    border: none;
 }
 
 .badge-icon i {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 
 .badge-title {
-    font-size: 0.85rem;
-    font-weight: 800;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--deep-navy);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
