@@ -40,7 +40,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    padding: 20px 32px;
+    padding: 0 20px;
 }
 
 /* Tactile Fine Paper Grain Overlay */
@@ -53,20 +53,20 @@ body::before {
     height: 100vh;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.28;
+    opacity: 0.10;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     mix-blend-mode: overlay;
 }
 
-/* Framed Inset Site Canvas (Spiderbrain Inspiration) */
+/* Site Canvas */
 .site-canvas {
     background-color: var(--warm-ivory);
-    border: 1px solid var(--divider);
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(31, 43, 56, 0.08);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     position: relative;
     overflow: hidden;
-    min-height: calc(100vh - 40px);
+    min-height: 100vh;
 }
 
 /* Container Utility */
@@ -79,17 +79,17 @@ body::before {
 /* ================= HEADER NAVIGATION ================= */
 .header-nav {
     position: fixed;
-    top: 20px;
-    left: 32px;
-    right: 32px;
-    width: calc(100% - 64px);
-    max-width: calc(100vw - 64px);
+    top: 0;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: calc(100vw - 40px);
     z-index: 1000;
     background: rgba(247, 243, 236, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(183, 175, 164, 0.3);
-    border-radius: 16px 16px 0 0;
+    border-radius: 0;
     transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
