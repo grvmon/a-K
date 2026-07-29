@@ -596,7 +596,66 @@ body {
     content: '◆';
     font-size: 0.7rem;
     color: var(--refined-brass);
-}/* ================= SECTION 2: ACRE&KEY DECISION FRAMEWORK ================= */
+}/* Contextual Section CTA Buttons */
+.section-cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.25rem;
+    width: 100%;
+}
+
+.sd-btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--refined-brass);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.85rem 1.85rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.25);
+    transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.sd-btn-gold:hover {
+    background: var(--deep-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.22);
+}
+
+.sd-btn-navy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--deep-navy);
+    color: var(--white);
+    border: 1px solid var(--refined-brass);
+    text-decoration: none;
+    padding: 0.85rem 1.85rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.15);
+    transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.sd-btn-navy:hover {
+    background: var(--refined-brass);
+    border-color: var(--refined-brass);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.28);
+}
+
+/* ================= SECTION 2: ACRE&KEY DECISION FRAMEWORK ================= */
 .framework-section {
     padding: var(--space-section-desktop) 0;
     background-color: var(--warm-ivory);
