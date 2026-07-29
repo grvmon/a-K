@@ -678,8 +678,15 @@ body {
     margin-bottom: 2.25rem;
 }
 
-/* Left Column: 8-Step Grid with Vertical Stage Labels */
-.core-stage-block {
+/* Left Column: 8-Step Grid with Vertical Stage Labels (Sub-Column Layout) */
+.core-process-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.core-subcol {
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
@@ -688,8 +695,8 @@ body {
 
 .core-stage-group {
     display: flex;
-    align-items: center;
-    gap: 14px;
+    align-items: flex-start;
+    gap: 12px;
 }
 
 .stage-label {
@@ -703,13 +710,13 @@ body {
     opacity: 0.75;
     flex-shrink: 0;
     text-align: center;
-    padding: 4px 0;
+    padding: 12px 0;
 }
 
 .stage-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
     width: 100%;
 }
 
