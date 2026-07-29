@@ -870,33 +870,39 @@ body {
 .framework-summary-banner {
     background: var(--deep-navy);
     color: var(--white);
-    border-radius: 10px;
-    padding: 1.1rem 2rem;
+    border-radius: 8px;
+    padding: 1.15rem 2.25rem;
     text-align: center;
     margin-bottom: 1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    font-size: 0.95rem;
+    gap: 1.5rem;
+    border: 1px solid rgba(184, 142, 82, 0.25);
+    box-shadow: 0 6px 24px rgba(31, 43, 56, 0.08);
 }
 
-.summary-bold {
+.summary-headline {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: var(--white);
     font-weight: 400;
+    line-height: 1;
 }
 
-.summary-divider {
-    color: var(--refined-brass);
-    font-weight: 300;
-    opacity: 0.8;
+.summary-line {
+    width: 1px;
+    height: 22px;
+    background: var(--refined-brass);
+    opacity: 0.6;
+    flex-shrink: 0;
 }
 
-.summary-text {
-    color: rgba(255, 255, 255, 0.85);
+.summary-subtext {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.88);
     font-weight: 400;
+    line-height: 1;
 }
 
 /* Stats Bar Styling */
