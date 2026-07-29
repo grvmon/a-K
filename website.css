@@ -678,11 +678,18 @@ body {
     margin-bottom: 2.25rem;
 }
 
-/* Left Column: 8-Step Grid (2 columns x 4 rows) */
-.core-steps-grid {
+/* Left Column: 8-Step Process (Sub-column 1: 01-04, Sub-column 2: 05-08) */
+.core-process-column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.core-subcol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
     height: 100%;
 }
 
