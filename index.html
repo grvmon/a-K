@@ -17,6 +17,7 @@
     
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="story.css">
 </head>
 <body>
 
@@ -883,155 +884,126 @@
         </div>
     </section>
 
-    <!-- ================= SECTION 1.6: THE REAL ESTATE ECOSYSTEM ================= -->
+    <!-- ================= SECTION 1.6: THE REAL ESTATE ECOSYSTEM (ANIMATED STORYTELLING) ================= -->
     <section class="ecosystem-section" id="ecosystem">
         <div class="container">
             
-            <!-- Section Kicker -->
-            <div class="who-kicker">
-                <span class="who-kicker-line"></span>
-                <span>THE REAL ESTATE ECOSYSTEM</span>
+            <!-- Section Header Area -->
+            <div class="story-header-area">
+                <div class="who-kicker">
+                    <span class="who-kicker-line"></span>
+                    <span>THE REAL ESTATE ECOSYSTEM</span>
+                </div>
+                <h2 class="who-display-title" id="storyTitle">
+                    Everyone in the transaction has a goal.
+                </h2>
+                <div class="story-caption-text highlight-brass" id="storySub">
+                    Except for the buyer.
+                </div>
             </div>
 
-            <!-- Main Display Headline -->
-            <h2 class="who-display-title">
-                Everyone in the transaction has a goal.<br>
-                <span class="highlight-brass">Except for the buyer.</span>
-            </h2>
-
-            <!-- Interactive Ecosystem Network Container -->
-            <div class="ecosystem-network-container">
+            <!-- Animated Story Canvas Container -->
+            <div class="story-canvas">
                 
-                <!-- SVG Wire Connection Canvas -->
-                <svg class="ecosystem-wire-canvas" viewBox="0 0 1000 480" preserveAspectRatio="none" aria-hidden="true">
-                    <!-- Wire 1: Builder (Top: 500, 65) -> Buyer Hub (500, 240) -->
-                    <path d="M 500 70 L 500 240" class="spider-wire-path"></path>
+                <!-- SVG Connector Wire Canvas -->
+                <svg class="story-svg-wire-canvas" viewBox="0 0 1000 480" preserveAspectRatio="none" aria-hidden="true">
+                    <!-- Builder (Top: 500, 70) -> Buyer Node (500, 240) -->
+                    <path id="wireBuilder" d="M 500 70 L 500 240" class="story-wire-path"></path>
 
-                    <!-- Wire 2: Seller (Left Middle: 270, 195) -> Buyer Hub (500, 240) -->
-                    <path d="M 270 195 C 370 195, 420 240, 500 240" class="spider-wire-path"></path>
+                    <!-- Seller (Left Mid: 270, 195) -> Buyer Node (500, 240) -->
+                    <path id="wireSeller" d="M 270 195 C 370 195, 420 240, 500 240" class="story-wire-path"></path>
 
-                    <!-- Wire 3: Lawyer (Left Bottom: 270, 365) -> Buyer Hub (500, 240) -->
-                    <path d="M 270 365 C 370 365, 420 240, 500 240" class="spider-wire-path"></path>
+                    <!-- Lawyer (Left Bot: 270, 365) -> Buyer Node (500, 240) -->
+                    <path id="wireLawyer" d="M 270 365 C 370 365, 420 240, 500 240" class="story-wire-path"></path>
 
-                    <!-- Wire 4: Broker (Right Middle: 730, 195) -> Buyer Hub (500, 240) -->
-                    <path d="M 730 195 C 630 195, 580 240, 500 240" class="spider-wire-path"></path>
+                    <!-- Broker (Right Mid: 730, 195) -> Buyer Node (500, 240) -->
+                    <path id="wireBroker" d="M 730 195 C 630 195, 580 240, 500 240" class="story-wire-path"></path>
 
-                    <!-- Wire 5: Bank (Right Bottom: 730, 365) -> Buyer Hub (500, 240) -->
-                    <path d="M 730 365 C 630 365, 580 240, 500 240" class="spider-wire-path"></path>
-
-                    <!-- Animated Flow Dots -->
-                    <circle r="3.5" class="spider-flow-dot">
-                        <animateMotion dur="2.4s" repeatCount="indefinite" path="M 500 70 L 500 240"></animateMotion>
-                    </circle>
-                    <circle r="3.5" class="spider-flow-dot">
-                        <animateMotion dur="2.8s" repeatCount="indefinite" path="M 270 195 C 370 195, 420 240, 500 240"></animateMotion>
-                    </circle>
-                    <circle r="3.5" class="spider-flow-dot">
-                        <animateMotion dur="3.2s" repeatCount="indefinite" path="M 270 365 C 370 365, 420 240, 500 240"></animateMotion>
-                    </circle>
-                    <circle r="3.5" class="spider-flow-dot-out">
-                        <animateMotion dur="2.6s" repeatCount="indefinite" path="M 730 195 C 630 195, 580 240, 500 240"></animateMotion>
-                    </circle>
-                    <circle r="3.5" class="spider-flow-dot-out">
-                        <animateMotion dur="3.0s" repeatCount="indefinite" path="M 730 365 C 630 365, 580 240, 500 240"></animateMotion>
-                    </circle>
+                    <!-- Bank (Right Bot: 730, 365) -> Buyer Node (500, 240) -->
+                    <path id="wireBank" d="M 730 365 C 630 365, 580 240, 500 240" class="story-wire-path"></path>
                 </svg>
 
-                <!-- Ecosystem Nodes Layout -->
-                <div class="ecosystem-layout">
-                    
-                    <!-- Top Node: Builder -->
-                    <div class="ecosystem-top-row">
-                        <div class="eco-node-card">
-                            <div class="eco-node-icon">
-                                <i data-feather="grid"></i>
-                            </div>
-                            <div class="eco-node-text">
-                                <h4 class="eco-node-title">Builder</h4>
-                                <p class="eco-node-desc">Sell Inventory</p>
-                            </div>
-                        </div>
+                <!-- Center Core Node (Buyer -> Acre&Key Hub) -->
+                <div class="story-gold-ring" id="storyGoldRing"></div>
+                <div class="story-center-node" id="storyCenterNode">
+                    <div class="story-node-icon"><i data-feather="user"></i></div>
+                    <div class="story-node-label" id="storyCenterLabel">BUYER</div>
+                    <div class="story-node-sub" id="storyCenterSub">No Advisory</div>
+                </div>
+
+                <!-- 5 Orbital Stakeholder Cards -->
+                <!-- 1. Builder -->
+                <div class="stakeholder-card card-builder" id="cardBuilder">
+                    <div class="stakeholder-icon"><i data-feather="grid"></i></div>
+                    <div class="stakeholder-info">
+                        <div class="stakeholder-name">Builder</div>
+                        <div class="stakeholder-caption">Sell inventory</div>
                     </div>
+                </div>
 
-                    <!-- Middle & Bottom Split Row -->
-                    <div class="ecosystem-main-row">
-                        
-                        <!-- Left Stakeholders -->
-                        <div class="eco-side-col eco-left-col">
-                            <div class="eco-node-card">
-                                <div class="eco-node-icon">
-                                    <i data-feather="user"></i>
-                                </div>
-                                <div class="eco-node-text">
-                                    <h4 class="eco-node-title">Seller</h4>
-                                    <p class="eco-node-desc">Maximize price</p>
-                                </div>
-                            </div>
-
-                            <div class="eco-node-card">
-                                <div class="eco-node-icon">
-                                    <i data-feather="file-text"></i>
-                                </div>
-                                <div class="eco-node-text">
-                                    <h4 class="eco-node-title">Lawyer</h4>
-                                    <p class="eco-node-desc">Review legal risk</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Center Core Hub: ACRE&KEY BUYER SHIELD -->
-                        <div class="spider-core-hub eco-buyer-hub">
-                            <div class="spider-core-pulse-ring"></div>
-                            <div class="spider-core-pulse-ring-outer"></div>
-                            <div class="spider-core-inner">
-                                <div class="spider-core-badge"><i data-feather="shield" style="width:15px;height:15px;stroke:var(--refined-brass);stroke-width:2.5px;"></i></div>
-                                <h3 class="spider-core-title" style="font-family: var(--font-logo); font-size: 0.95rem; letter-spacing: 0.05em; color: var(--refined-brass);">ACRE &amp; KEY</h3>
-                                <div class="spider-core-tag" style="color: var(--white); font-weight: 700; letter-spacing: 0.04em;">PROTECTS THE BUYER</div>
-                            </div>
-                        </div>
-
-                        <!-- Right Stakeholders -->
-                        <div class="eco-side-col eco-right-col">
-                            <div class="eco-node-card">
-                                <div class="eco-node-icon">
-                                    <i data-feather="dollar-sign"></i>
-                                </div>
-                                <div class="eco-node-text">
-                                    <h4 class="eco-node-title">Broker</h4>
-                                    <p class="eco-node-desc">Close transaction</p>
-                                </div>
-                            </div>
-
-                            <div class="eco-node-card">
-                                <div class="eco-node-icon">
-                                    <i data-feather="shield"></i>
-                                </div>
-                                <div class="eco-node-text">
-                                    <h4 class="eco-node-title">Bank</h4>
-                                    <p class="eco-node-desc">Protect lending risk</p>
-                                </div>
-                            </div>
-                        </div>
-
+                <!-- 2. Seller -->
+                <div class="stakeholder-card card-seller" id="cardSeller">
+                    <div class="stakeholder-icon"><i data-feather="user"></i></div>
+                    <div class="stakeholder-info">
+                        <div class="stakeholder-name">Seller</div>
+                        <div class="stakeholder-caption">Maximise price</div>
                     </div>
+                </div>
 
+                <!-- 3. Lawyer -->
+                <div class="stakeholder-card card-lawyer" id="cardLawyer">
+                    <div class="stakeholder-icon"><i data-feather="file-text"></i></div>
+                    <div class="stakeholder-info">
+                        <div class="stakeholder-name">Lawyer</div>
+                        <div class="stakeholder-caption">Review legal risk</div>
+                    </div>
+                </div>
+
+                <!-- 4. Broker -->
+                <div class="stakeholder-card card-broker" id="cardBroker">
+                    <div class="stakeholder-icon"><i data-feather="dollar-sign"></i></div>
+                    <div class="stakeholder-info">
+                        <div class="stakeholder-name">Broker</div>
+                        <div class="stakeholder-caption">Close transaction</div>
+                    </div>
+                </div>
+
+                <!-- 5. Bank -->
+                <div class="stakeholder-card card-bank" id="cardBank">
+                    <div class="stakeholder-icon"><i data-feather="shield"></i></div>
+                    <div class="stakeholder-info">
+                        <div class="stakeholder-name">Bank</div>
+                        <div class="stakeholder-caption">Protect lending risk</div>
+                    </div>
                 </div>
 
             </div>
 
-            <!-- Solution Callout Box -->
-            <div class="who-best-time-card">
-                <div class="who-best-time-bar"></div>
-                <div class="who-best-time-content">
-                    <div class="who-best-time-kicker">100% INDEPENDENT ADVISORY</div>
-                    <p class="who-best-time-desc">
-                        Acre&amp;Key acts exclusively for the buyer — <span class="highlight-brass">ensuring zero conflict of interest and complete peace of mind.</span>
-                    </p>
+            <!-- Scene 7 Benefit Chips Row -->
+            <div class="story-benefits-row" id="storyBenefitsRow">
+                <div class="benefit-chip">
+                    <span class="benefit-chip-check">✓</span> Independent Advice
+                </div>
+                <div class="benefit-chip">
+                    <span class="benefit-chip-check">✓</span> Aligned with Your Interests
+                </div>
+                <div class="benefit-chip">
+                    <span class="benefit-chip-check">✓</span> Risk Evaluation
+                </div>
+                <div class="benefit-chip">
+                    <span class="benefit-chip-check">✓</span> Right Decision Support
+                </div>
+            </div>
+
+            <!-- Scene 8 Final State Banner -->
+            <div class="story-final-banner" id="storyFinalBanner">
+                <div class="story-final-text">
+                    One trusted partner. Confident home-buying decisions.
                 </div>
             </div>
 
             <!-- Contextual Section CTA -->
-            <div class="section-cta-row">
+            <div class="section-cta-row" style="margin-top: 2.5rem;">
                 <a href="#contact" class="sd-btn-gold">
                     <span>Get Independent Representation</span>
                     <span class="btn-arrow-badge">
@@ -1272,5 +1244,7 @@
             });
         });
     </script>
+    <!-- Ecosystem Storytelling Animation Script -->
+    <script src="story.js"></script>
 </body>
 </html>
