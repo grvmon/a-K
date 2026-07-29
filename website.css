@@ -1080,6 +1080,124 @@ body {
     font-weight: 400;
 }
 
+/* ================= SECTION 1.5: WHY, WHEN AND WHO SHOULD TALK TO US ================= */
+.who-should-talk-section {
+    padding: var(--space-section-desktop) 0;
+    background-color: var(--warm-ivory);
+    border-top: 1px solid rgba(183, 175, 164, 0.4);
+    border-bottom: 1px solid rgba(183, 175, 164, 0.4);
+}
+
+.who-kicker {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+}
+
+.who-kicker-underline {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.who-kicker-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--refined-brass);
+}
+
+.who-display-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    color: var(--deep-navy);
+    line-height: 1.2;
+    margin-bottom: 2.25rem;
+    max-width: 900px;
+    font-weight: 400;
+}
+
+.who-subhead-title {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--refined-brass);
+    margin-bottom: 1.5rem;
+}
+
+.who-persona-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 3.5rem;
+    margin-bottom: 2.75rem;
+}
+
+.who-persona-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.who-persona-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.who-check-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.who-persona-text {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    line-height: 1.35;
+}
+
+.who-best-time-card {
+    background: var(--white);
+    border: 1px solid var(--warm-stone);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+    box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
+}
+
+.who-best-time-bar {
+    width: 4px;
+    background-color: var(--refined-brass);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.who-best-time-title {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--refined-brass);
+    margin-bottom: 6px;
+}
+
+.who-best-time-desc {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    line-height: 1.45;
+}
+
 /* Bottom Advisor Quote Banner */
 .core-advisor-banner {
     background: var(--deep-navy);
