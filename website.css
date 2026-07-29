@@ -650,30 +650,33 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.framework-card-wrapper::after {
-    display: none;
+    height: 100%;
 }
 
 .framework-card {
     background: var(--white);
     border: 1px solid var(--divider);
     border-radius: 12px;
-    padding: 1.8rem 1.35rem 1.25rem 1.35rem;
+    padding: 1.8rem 1.35rem 1.35rem 1.35rem;
     box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     position: relative;
 }
 
-/* Card 4 Dashed Framing */
+/* Card 4 High-Contrast Dashed Framing & Soft Gold Fill */
 .framework-card-wrapper.buyer-fit-wrapper {
-    border: 1px dashed var(--refined-brass);
+    border: 1.5px dashed var(--refined-brass);
     border-radius: 14px;
     padding: 5px;
     background: transparent;
+    height: 100%;
+}
+
+.framework-card-wrapper.buyer-fit-wrapper .framework-card {
+    background: #FFFDF9;
 }
 
 /* Integrated Accent Badge Header */
@@ -691,8 +694,8 @@ body {
 }
 
 .framework-accent-badge.buyer-accent-badge {
-    color: var(--refined-brass);
-    background: rgba(184, 142, 82, 0.12);
+    color: #92400E;
+    background: rgba(184, 142, 82, 0.15);
 }
 
 /* Card Header */
@@ -718,13 +721,20 @@ body {
     margin-top: 4px;
 }
 
-/* Checklist Rows with Icon Badges */
+.framework-card-sub.buyer-sub {
+    color: #92400E;
+    font-weight: 700;
+}
+
+/* Checklist Rows with Icon Badges & 24px Gap */
 .framework-bullets {
     list-style: none;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
+    flex-grow: 1;
+    justify-content: flex-start;
 }
 
 .framework-bullets li {
@@ -735,6 +745,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    line-height: 1.35;
 }
 
 /* Single Feather SVG Checkmark Badge */
@@ -756,11 +767,11 @@ body {
 }
 
 .bullet-icon-badge.brass-badge {
-    background: rgba(184, 142, 82, 0.12);
-    color: var(--refined-brass);
+    background: rgba(184, 142, 82, 0.15);
+    color: #92400E;
 }
 
-/* Bottom Integrated Q&A Callout Panel */
+/* Bottom Integrated Q&A Callout Panel Pinned to Bottom Baseline */
 .framework-questions-box {
     background: #FAF7F2;
     border-radius: 8px;
@@ -770,8 +781,8 @@ body {
 }
 
 .framework-questions-box.buyer-q-box {
-    background: rgba(184, 142, 82, 0.05);
-    border-color: rgba(184, 142, 82, 0.35);
+    background: rgba(184, 142, 82, 0.08);
+    border-color: rgba(184, 142, 82, 0.4);
 }
 
 .framework-questions-header {
@@ -781,6 +792,10 @@ body {
     color: var(--refined-brass);
     text-transform: uppercase;
     margin-bottom: 0.4rem;
+}
+
+.framework-questions-header.buyer-q-header {
+    color: #92400E;
 }
 
 .framework-questions-list {
