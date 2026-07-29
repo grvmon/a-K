@@ -596,7 +596,7 @@ body {
     content: '◆';
     font-size: 0.7rem;
     color: var(--refined-brass);
-}/* Contextual Section CTA Buttons */
+}/* Perform.digital Style Luxury Magnetic CTA Buttons & Arrow Badges */
 .section-cta-row {
     display: flex;
     justify-content: center;
@@ -605,54 +605,82 @@ body {
     width: 100%;
 }
 
-.sd-btn-gold {
+.sd-btn-gold, .sd-btn-navy {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: var(--refined-brass);
-    color: var(--white);
-    text-decoration: none;
+    gap: 12px;
     padding: 0.85rem 1.85rem;
-    border-radius: 6px;
+    border-radius: 50px;
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.88rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.25);
-    transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-arrow-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.btn-arrow-badge svg {
+    width: 15px;
+    height: 15px;
+}
+
+.sd-btn-gold {
+    background: var(--refined-brass);
+    color: var(--white);
+    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.28);
+}
+
+.sd-btn-gold .btn-arrow-badge {
+    background: rgba(31, 43, 56, 0.2);
+    color: var(--white);
 }
 
 .sd-btn-gold:hover {
     background: var(--deep-navy);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.22);
+    box-shadow: 0 10px 28px rgba(31, 43, 56, 0.25);
+}
+
+.sd-btn-gold:hover .btn-arrow-badge {
+    background: var(--refined-brass);
+    transform: translateX(4px);
 }
 
 .sd-btn-navy {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
     background: var(--deep-navy);
     color: var(--white);
-    border: 1px solid var(--refined-brass);
-    text-decoration: none;
-    padding: 0.85rem 1.85rem;
-    border-radius: 6px;
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 0.88rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.15);
-    transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    border: 1.5px solid var(--refined-brass);
+    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.18);
+}
+
+.sd-btn-navy .btn-arrow-badge {
+    background: rgba(184, 142, 82, 0.25);
+    color: var(--refined-brass);
 }
 
 .sd-btn-navy:hover {
     background: var(--refined-brass);
     border-color: var(--refined-brass);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.28);
+    box-shadow: 0 10px 28px rgba(184, 142, 82, 0.32);
+}
+
+.sd-btn-navy:hover .btn-arrow-badge {
+    background: var(--deep-navy);
+    color: var(--white);
+    transform: translateX(4px);
 }
 
 /* ================= SECTION 2: ACRE&KEY DECISION FRAMEWORK ================= */
