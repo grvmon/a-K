@@ -827,13 +827,13 @@
                 feather.replace();
             }
 
-            // Cookie Consent Pop-up Logic
+            // Cookie Consent Pop-up Logic (Shows once per session per customer)
             const cookieBanner = document.getElementById('cookieBanner');
             const acceptBtn = document.getElementById('cookieAcceptBtn');
             const customizeBtn = document.getElementById('cookieCustomizeBtn');
             const rejectBtn = document.getElementById('cookieRejectBtn');
 
-            if (!localStorage.getItem('ackey_cookie_consent')) {
+            if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
                 setTimeout(function() {
                     if (cookieBanner) cookieBanner.classList.add('active');
                 }, 800);
@@ -841,7 +841,7 @@
 
             function dismissCookieBanner() {
                 if (cookieBanner) cookieBanner.classList.remove('active');
-                localStorage.setItem('ackey_cookie_consent', 'true');
+                sessionStorage.setItem('ackey_cookie_consent_session', 'true');
             }
 
             if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
