@@ -653,18 +653,26 @@ body {
     height: 100%;
 }
 
-/* Next Process Chevron Arrow between cards */
+/* Next Process Chevron Arrow with Soft Rounded Background Circle */
 .framework-card-wrapper::after {
     content: '›';
     position: absolute;
     top: 50%;
     right: -0.85rem;
     transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    background: rgba(184, 142, 82, 0.14);
     color: var(--refined-brass);
-    font-size: 1.5rem;
+    border: 1px solid rgba(184, 142, 82, 0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
     font-weight: 700;
+    line-height: 1;
     z-index: 10;
-    opacity: 0.85;
     pointer-events: none;
 }
 
