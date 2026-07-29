@@ -1238,9 +1238,6 @@
                 <button type="button" class="cookie-btn cookie-btn-decline" id="cookieRejectBtn">Decline</button>
                 <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept All</button>
             </div>
-            <button type="button" class="cookie-close-btn" id="cookieCloseBtn" aria-label="Close Cookie Banner">
-                <i data-feather="x"></i>
-            </button>
         </div>
     </div>
 
@@ -1254,9 +1251,7 @@
             // Cookie Consent Pop-up Logic (Shows once per session per customer)
             const cookieBanner = document.getElementById('cookieBanner');
             const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const manageBtn = document.getElementById('cookieManageBtn');
             const rejectBtn = document.getElementById('cookieRejectBtn');
-            const closeBtn = document.getElementById('cookieCloseBtn');
 
             if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
                 setTimeout(function() {
@@ -1270,9 +1265,7 @@
             }
 
             if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
-            if (manageBtn) manageBtn.addEventListener('click', dismissCookieBanner);
             if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
-            if (closeBtn) closeBtn.addEventListener('click', dismissCookieBanner);
 
             // Escape key listener for accessibility
             document.addEventListener('keydown', function(e) {
