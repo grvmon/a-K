@@ -1224,15 +1224,22 @@
     </div> <!-- End Site Canvas -->
 
     <!-- ================= COOKIE CONSENT POPUP ================= -->
-    <div class="cookie-banner-popup" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie Preferences">
+    <div class="cookie-banner-popup" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie Preferences" tabindex="-1">
+        <button type="button" class="cookie-close-btn" id="cookieCloseBtn" aria-label="Close Cookie Banner">
+            <i data-feather="x"></i>
+        </button>
         <div class="cookie-popup-content">
-            <h4 class="cookie-popup-title">Cookies, briefly.</h4>
+            <h4 class="cookie-popup-title">Your Privacy Matters</h4>
             <p class="cookie-popup-desc">
-                We use cookies to enhance your experience and analyze site traffic. Read our <a href="#" class="cookie-link">Privacy Policy</a> and <a href="#" class="cookie-link">Terms</a>.
+                We use cookies to improve your browsing experience, personalise content, and analyse website traffic. Learn more in our <a href="#" class="cookie-link">Privacy Policy</a>.
             </p>
             <div class="cookie-popup-actions">
                 <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept All</button>
-                <button type="button" class="cookie-link-reject" id="cookieRejectBtn">Reject All</button>
+                <div class="cookie-secondary-actions">
+                    <button type="button" class="cookie-link-text" id="cookieManageBtn">Manage Preferences</button>
+                    <span class="cookie-action-dot">•</span>
+                    <button type="button" class="cookie-link-text" id="cookieRejectBtn">Reject All</button>
+                </div>
             </div>
         </div>
     </div>
@@ -1247,7 +1254,9 @@
             // Cookie Consent Pop-up Logic (Shows once per session per customer)
             const cookieBanner = document.getElementById('cookieBanner');
             const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const manageBtn = document.getElementById('cookieManageBtn');
             const rejectBtn = document.getElementById('cookieRejectBtn');
+            const closeBtn = document.getElementById('cookieCloseBtn');
 
             if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
                 setTimeout(function() {
@@ -1261,7 +1270,16 @@
             }
 
             if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
+            if (manageBtn) manageBtn.addEventListener('click', dismissCookieBanner);
             if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
+            if (closeBtn) closeBtn.addEventListener('click', dismissCookieBanner);
+
+            // Escape key listener for accessibility
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && cookieBanner && cookieBanner.classList.contains('active')) {
+                    dismissCookieBanner();
+                }
+            });
         });
     </script>
 </body>

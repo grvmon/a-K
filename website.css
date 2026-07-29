@@ -2101,19 +2101,21 @@ body {
 /* ================= COOKIE CONSENT POPUP ================= */
 .cookie-banner-popup {
     position: fixed !important;
-    bottom: 24px !important;
-    left: 24px !important;
+    bottom: 32px !important;
+    left: 32px !important;
     z-index: 999999 !important;
-    width: 350px !important;
-    max-width: calc(100vw - 48px) !important;
-    background: var(--deep-navy) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 20px !important;
+    width: 400px !important;
+    max-width: calc(100vw - 32px) !important;
+    background: rgba(31, 43, 56, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
     padding: 28px !important;
-    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0 24px 60px rgba(15, 25, 40, 0.18) !important;
     display: block !important;
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
     pointer-events: none;
     transition: transform 350ms ease-out, opacity 350ms ease-out;
 }
@@ -2124,22 +2126,64 @@ body {
     pointer-events: auto !important;
 }
 
+.cookie-banner-popup:focus-visible {
+    outline: 2px solid var(--refined-brass) !important;
+    outline-offset: 2px !important;
+}
+
+/* Close Icon Button */
+.cookie-close-btn {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: transparent !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: color 200ms ease, background 200ms ease !important;
+    padding: 0 !important;
+}
+
+.cookie-close-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    stroke-width: 2px !important;
+}
+
+.cookie-close-btn:hover {
+    color: var(--white) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.cookie-close-btn:focus-visible {
+    outline: 2px solid var(--refined-brass) !important;
+    outline-offset: 1px !important;
+}
+
+/* Header & Typography */
 .cookie-popup-title {
-    font-family: var(--font-heading) !important;
-    font-size: 1.25rem !important;
-    font-weight: 700 !important;
+    font-family: var(--font-body) !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
     color: var(--refined-brass) !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.65rem !important;
     display: block !important;
-    line-height: 1.2 !important;
+    line-height: 1.25 !important;
+    padding-right: 24px !important;
 }
 
 .cookie-popup-desc {
     font-family: var(--font-body) !important;
     font-size: 0.86rem !important;
     color: rgba(255, 255, 255, 0.85) !important;
-    line-height: 1.45 !important;
-    margin-bottom: 1.25rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
     display: block !important;
 }
 
@@ -2148,12 +2192,19 @@ body {
     text-decoration: underline !important;
     text-underline-offset: 3px !important;
     font-weight: 600 !important;
+    transition: color 200ms ease !important;
 }
 
 .cookie-link:hover {
     color: var(--refined-brass) !important;
 }
 
+.cookie-link:focus-visible {
+    outline: 2px solid var(--refined-brass) !important;
+    outline-offset: 2px !important;
+}
+
+/* Actions Stack */
 .cookie-popup-actions {
     display: flex !important;
     flex-direction: column !important;
@@ -2163,44 +2214,82 @@ body {
 
 .cookie-btn-accept {
     width: 100% !important;
-    height: 46px !important;
+    height: 56px !important;
     background: var(--refined-brass) !important;
     color: var(--white) !important;
     border: none !important;
-    border-radius: 12px !important;
+    border-radius: 16px !important;
     font-family: var(--font-body) !important;
-    font-size: 0.92rem !important;
-    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
     cursor: pointer !important;
     text-align: center !important;
     outline: none !important;
     transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease !important;
-    box-shadow: 0 4px 14px rgba(184, 142, 82, 0.25) !important;
+    box-shadow: 0 4px 16px rgba(184, 142, 82, 0.25) !important;
 }
 
 .cookie-btn-accept:hover {
     background: #a37b42 !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 6px 18px rgba(184, 142, 82, 0.35) !important;
+    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.35) !important;
 }
 
-.cookie-link-reject {
+.cookie-btn-accept:focus-visible {
+    outline: 2px solid var(--white) !important;
+    outline-offset: 2px !important;
+}
+
+.cookie-secondary-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
+}
+
+.cookie-link-text {
     background: none !important;
     border: none !important;
-    padding: 0 !important;
-    margin-top: 16px !important;
+    padding: 4px 6px !important;
     font-family: var(--font-body) !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
     color: rgba(255, 255, 255, 0.65) !important;
     cursor: pointer !important;
     text-decoration: none !important;
+    border-radius: 4px !important;
     transition: color 200ms ease !important;
 }
 
-.cookie-link-reject:hover {
+.cookie-link-text:hover {
     color: var(--white) !important;
     text-decoration: underline !important;
     text-underline-offset: 3px !important;
+}
+
+.cookie-link-text:focus-visible {
+    outline: 2px solid var(--refined-brass) !important;
+    color: var(--white) !important;
+}
+
+.cookie-action-dot {
+    font-size: 10px !important;
+    color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .cookie-banner-popup {
+        bottom: 16px !important;
+        left: 16px !important;
+        right: 16px !important;
+        width: calc(100% - 32px) !important;
+        max-width: 380px !important;
+        margin: 0 auto !important;
+        padding: 22px !important;
+        border-radius: 20px !important;
+    }
 }
 
 /* ================= BENGALURU MARKET LENS SECTION ================= */
