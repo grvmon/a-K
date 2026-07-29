@@ -2104,18 +2104,18 @@ body {
     bottom: 24px !important;
     left: 24px !important;
     z-index: 999999 !important;
-    width: 360px !important;
+    width: 350px !important;
     max-width: calc(100vw - 48px) !important;
     background: var(--deep-navy) !important;
-    border: 1.5px solid var(--refined-brass) !important;
-    border-radius: 16px !important;
-    padding: 1.65rem !important;
-    box-shadow: 0 16px 40px rgba(31, 43, 56, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 28px !important;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18) !important;
     display: block !important;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
     pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    transition: transform 350ms ease-out, opacity 350ms ease-out;
 }
 
 .cookie-banner-popup.active {
@@ -2131,12 +2131,13 @@ body {
     color: var(--refined-brass) !important;
     margin-bottom: 0.5rem !important;
     display: block !important;
+    line-height: 1.2 !important;
 }
 
 .cookie-popup-desc {
     font-family: var(--font-body) !important;
-    font-size: 0.88rem !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.86rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     line-height: 1.45 !important;
     margin-bottom: 1.25rem !important;
     display: block !important;
@@ -2156,47 +2157,50 @@ body {
 .cookie-popup-actions {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.65rem !important;
+    align-items: center !important;
     width: 100% !important;
-}
-
-.cookie-btn {
-    width: 100% !important;
-    padding: 0.75rem 1rem !important;
-    border-radius: 50px !important;
-    font-family: var(--font-body) !important;
-    font-size: 0.92rem !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    outline: none !important;
-    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, box-shadow 200ms ease !important;
 }
 
 .cookie-btn-accept {
+    width: 100% !important;
+    height: 46px !important;
     background: var(--refined-brass) !important;
     color: var(--white) !important;
     border: none !important;
-    box-shadow: 0 4px 16px rgba(184, 142, 82, 0.3) !important;
+    border-radius: 12px !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    outline: none !important;
+    transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease !important;
+    box-shadow: 0 4px 14px rgba(184, 142, 82, 0.25) !important;
 }
 
 .cookie-btn-accept:hover {
     background: #a37b42 !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.4) !important;
+    box-shadow: 0 6px 18px rgba(184, 142, 82, 0.35) !important;
 }
 
-.cookie-btn-outline {
-    background: transparent !important;
+.cookie-link-reject {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 16px !important;
+    font-family: var(--font-body) !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: color 200ms ease !important;
+}
+
+.cookie-link-reject:hover {
     color: var(--white) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-}
-
-.cookie-btn-outline:hover {
-    border-color: var(--refined-brass) !important;
-    color: var(--refined-brass) !important;
-    background: rgba(184, 142, 82, 0.08) !important;
-    transform: translateY(-1px) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
 }
 
 /* ================= BENGALURU MARKET LENS SECTION ================= */

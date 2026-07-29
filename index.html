@@ -1228,12 +1228,11 @@
         <div class="cookie-popup-content">
             <h4 class="cookie-popup-title">Cookies, briefly.</h4>
             <p class="cookie-popup-desc">
-                We use a small set of cookies to run the site, remember your preferences, and see what is working. See our <a href="#" class="cookie-link">Privacy Policy</a> and <a href="#" class="cookie-link">Terms</a>.
+                We use cookies to enhance your experience and analyze site traffic. Read our <a href="#" class="cookie-link">Privacy Policy</a> and <a href="#" class="cookie-link">Terms</a>.
             </p>
             <div class="cookie-popup-actions">
-                <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept all</button>
-                <button type="button" class="cookie-btn cookie-btn-outline" id="cookieCustomizeBtn">Customize</button>
-                <button type="button" class="cookie-btn cookie-btn-outline" id="cookieRejectBtn">Reject all</button>
+                <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept All</button>
+                <button type="button" class="cookie-link-reject" id="cookieRejectBtn">Reject All</button>
             </div>
         </div>
     </div>
@@ -1248,7 +1247,6 @@
             // Cookie Consent Pop-up Logic (Shows once per session per customer)
             const cookieBanner = document.getElementById('cookieBanner');
             const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const customizeBtn = document.getElementById('cookieCustomizeBtn');
             const rejectBtn = document.getElementById('cookieRejectBtn');
 
             if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
@@ -1263,7 +1261,6 @@
             }
 
             if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
-            if (customizeBtn) customizeBtn.addEventListener('click', dismissCookieBanner);
             if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
         });
     </script>
