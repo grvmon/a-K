@@ -2779,5 +2779,250 @@ body {
     }
 }
 
+/* ================= BENGALURU MICRO-MARKET LENS SECTION ================= */
+.micromarket-lens-section {
+    padding-top: var(--space-section-desktop);
+    padding-bottom: var(--space-section-desktop);
+    background-color: var(--warm-ivory);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    position: relative;
+    border-bottom: 1px solid var(--divider);
+}
+
+.micromarket-header {
+    margin-bottom: 2.5rem;
+}
+
+.micromarket-title {
+    font-family: var(--font-body);
+    font-size: clamp(2rem, 1.8rem + 1vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--deep-navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+}
+
+.micromarket-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--deep-navy);
+    max-width: 850px;
+    font-weight: 500;
+}
+
+/* Grid Layout: Stack vs Map */
+.micromarket-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: stretch;
+    margin-bottom: 2.5rem;
+}
+
+.micromarket-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: space-between;
+}
+
+.corridor-card {
+    background: var(--white);
+    border: 1px solid rgba(183, 175, 164, 0.4);
+    border-radius: 12px;
+    padding: 1.35rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(31, 43, 56, 0.03);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.corridor-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.08);
+    border-color: var(--refined-brass);
+}
+
+.corridor-accent {
+    position: absolute;
+    left: 0;
+    top: 14%;
+    bottom: 14%;
+    width: 4px;
+    background: var(--deep-navy);
+    border-radius: 0 4px 4px 0;
+}
+
+.corridor-north .corridor-accent {
+    background: var(--refined-brass);
+}
+
+.corridor-south .corridor-accent {
+    background: var(--muted-slate);
+}
+
+.corridor-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.corridor-name {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--deep-navy);
+    line-height: 1.2;
+}
+
+.corridor-areas {
+    font-size: 0.82rem;
+    color: var(--muted-slate);
+    font-weight: 500;
+}
+
+.corridor-details {
+    font-size: 0.86rem;
+    color: var(--deep-navy);
+    line-height: 1.45;
+    margin-top: 0.25rem;
+}
+
+.corridor-details strong {
+    font-weight: 700;
+}
+
+/* Metrics Pills */
+.corridor-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 145px;
+}
+
+.metric-pill {
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.metric-price {
+    background: var(--warm-ivory);
+    border: 1px solid var(--divider);
+}
+
+.metric-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--muted-slate);
+}
+
+.metric-val {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.metric-price .metric-val {
+    color: var(--deep-navy);
+}
+
+.bg-navy-growth {
+    background: var(--deep-navy);
+    color: var(--white);
+}
+
+.bg-brass-growth {
+    background: var(--refined-brass);
+    color: var(--white);
+}
+
+.bg-slate-growth {
+    background: var(--muted-slate);
+    color: var(--white);
+}
+
+.bg-navy-growth .metric-label,
+.bg-brass-growth .metric-label,
+.bg-slate-growth .metric-label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Map Graphic Wrapper */
+.micromarket-map-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--divider);
+    box-shadow: var(--shadow-lux);
+    background: var(--white);
+    height: 100%;
+    min-height: 480px;
+}
+
+.micromarket-map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bottom Dark Navy Banner */
+.micromarket-banner {
+    background-color: var(--deep-navy);
+    border-radius: 10px;
+    padding: 1.25rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.15);
+}
+
+.micromarket-banner-text {
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .micromarket-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .corridor-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .corridor-metrics {
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .metric-pill {
+        flex: 1;
+    }
+    
+    .micromarket-map-wrapper {
+        min-height: 380px;
+        height: 380px;
+    }
+}
+
+
 
 
