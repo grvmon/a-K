@@ -1,21 +1,22 @@
 /**
- * Acre&Key Ecosystem Storytelling Interactive Component
- * 60 FPS Lightweight Vanilla ES6 & Intersection Observer
+ * Acre&Key Ecosystem Storytelling Component
+ * 60 FPS Smooth Seamless Looping Sequence matching Storyboard Scenes 1-8
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     const ecosystemSection = document.getElementById('ecosystem');
     if (!ecosystemSection) return;
 
-    // Check accessibility reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const mainTitle = document.getElementById('storyTitle');
-    const mainSub = document.getElementById('storySub');
+    // Elements
+    const storyTitle = document.getElementById('storyTitle');
+    const storySub = document.getElementById('storySub');
     const centerNode = document.getElementById('storyCenterNode');
     const goldRing = document.getElementById('storyGoldRing');
     const centerLabel = document.getElementById('storyCenterLabel');
     const centerSub = document.getElementById('storyCenterSub');
+
     const benefitsRow = document.getElementById('storyBenefitsRow');
     const finalBanner = document.getElementById('storyFinalBanner');
 
@@ -35,133 +36,165 @@ document.addEventListener('DOMContentLoaded', () => {
         lawyer: document.getElementById('wireLawyer')
     };
 
-    let animationTriggered = false;
+    let isRunning = false;
 
     if (prefersReducedMotion) {
-        // Render Final State Immediately for Reduced Motion
         renderFinalState();
         return;
     }
 
-    // Intersection Observer to trigger animation once
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !animationTriggered) {
-                animationTriggered = true;
-                observer.unobserve(entry.target);
-                startStorySequence();
+            if (entry.isIntersecting && !isRunning) {
+                isRunning = true;
+                runLoopingStory();
             }
         });
     }, { threshold: 0.25 });
 
     observer.observe(ecosystemSection);
 
-    function startStorySequence() {
-        // Scene 1 (0-1s): Show BUYER node in center
+    function resetAllState() {
+        if (storyTitle) storyTitle.textContent = 'Everyone in the transaction has a goal.';
+        if (storySub) storySub.textContent = 'Except for the buyer.';
+        if (centerLabel) centerLabel.textContent = 'BUYER';
+        if (centerSub) centerSub.textContent = 'No Advisory';
+
+        if (centerNode) {
+            centerNode.classList.remove('visible', 'pulse', 'shake', 'fast-pulse');
+        }
+        if (goldRing) goldRing.classList.remove('active');
+        if (benefitsRow) benefitsRow.classList.remove('visible');
+        if (finalBanner) finalBanner.classList.remove('visible');
+
+        Object.keys(cards).forEach(key => {
+            if (cards[key]) {
+                cards[key].classList.remove('visible', 'glowing', 'faded', 'stacked');
+            }
+        });
+        Object.keys(wires).forEach(key => {
+            if (wires[key]) {
+                wires[key].classList.remove('active', 'gold');
+            }
+        });
+    }
+
+    function runLoopingStory() {
+        resetAllState();
+
+        // Scene 1 (0 - 1.5s): Fade in BUYER circle scale 90% -> 100%, soft gold pulse
         setTimeout(() => {
-            centerNode.classList.add('visible');
+            if (centerNode) centerNode.classList.add('visible', 'pulse');
+            if (storySub) storySub.textContent = 'The buyer starts the journey.';
         }, 100);
 
-        // Scene 2 (1-3s): Animate stakeholder cards one by one (300ms each, 150ms delay)
-        // Order: Builder, Seller, Broker, Bank, Lawyer
-        const order = ['builder', 'seller', 'broker', 'bank', 'lawyer'];
-        order.forEach((key, index) => {
-            setTimeout(() => {
-                if (cards[key]) cards[key].classList.add('visible');
-            }, 1000 + (index * 400));
-        });
-
-        // Scene 3 (3-6s): Highlight each stakeholder individually with caption
+        // Scene 2 (1.5 - 4s): Stakeholders enter individually (Builder top, Seller left, Broker right, Lawyer bottom-left, Bank bottom-right)
+        const order = ['builder', 'seller', 'broker', 'lawyer', 'bank'];
         setTimeout(() => {
-            highlightStakeholdersSequentially(order);
-        }, 3200);
+            if (storyTitle) storyTitle.textContent = 'Advice comes from all sides';
+            if (storySub) storySub.textContent = 'Different stakeholders enter the picture.';
 
-        // Scene 4 (6-8s): Draw animated connector lines, pulse buyer, show headline
-        setTimeout(() => {
-            order.forEach(key => {
-                if (wires[key]) wires[key].classList.add('active');
+            order.forEach((key, index) => {
+                setTimeout(() => {
+                    if (cards[key]) cards[key].classList.add('visible');
+                    if (wires[key]) wires[key].classList.add('active');
+                }, index * 250);
             });
-            centerNode.classList.add('pulse');
-            
-            if (mainTitle) {
-                mainTitle.innerHTML = 'Everyone has advice.';
-            }
-            setTimeout(() => {
-                if (mainSub) {
-                    mainSub.innerHTML = 'No one represents the buyer.';
+        }, 1500);
+
+        // Scene 3 (4 - 9s): One stakeholder highlighted at a time with caption
+        setTimeout(() => {
+            if (storyTitle) storyTitle.textContent = 'Everyone has their own agenda';
+            if (storySub) storySub.textContent = 'Each has a different priority.';
+
+            order.forEach((key, index) => {
+                setTimeout(() => {
+                    order.forEach(k => {
+                        if (cards[k]) {
+                            if (k === key) {
+                                cards[k].classList.add('glowing');
+                                cards[k].classList.remove('faded');
+                            } else {
+                                cards[k].classList.remove('glowing');
+                                cards[k].classList.add('faded');
+                            }
+                        }
+                    });
+                }, index * 800);
+            });
+        }, 4000);
+
+        // Scene 4 (9 - 12s): All stakeholders active, connector lines pulse, buyer shakes, title "Too many voices. Too much pressure."
+        setTimeout(() => {
+            if (storyTitle) storyTitle.textContent = 'Conflicting advice creates confusion';
+            if (storySub) storySub.textContent = 'Too many voices. Too much pressure.';
+
+            order.forEach(k => {
+                if (cards[k]) {
+                    cards[k].classList.remove('faded');
+                    cards[k].classList.add('glowing');
                 }
-            }, 1000);
-        }, 6200);
-
-        // Scene 5 (8-10s): Fade stakeholder cards to 35% opacity
-        setTimeout(() => {
-            order.forEach(key => {
-                if (cards[key]) cards[key].classList.add('faded');
             });
-        }, 8200);
 
-        // Scene 6 (10-13s): Expand gold ring, display Acre&Key logo beside buyer, reconnect
+            if (centerNode) centerNode.classList.add('shake', 'fast-pulse');
+        }, 9000);
+
+        // Scene 5 (12 - 14s): The noise fades, stakeholder cards reduce to 25% opacity
         setTimeout(() => {
-            goldRing.classList.add('active');
+            if (storyTitle) storyTitle.textContent = 'The noise fades';
+            if (storySub) storySub.textContent = 'The buyer is left uncertain.';
+
+            if (centerNode) centerNode.classList.remove('shake', 'fast-pulse');
+
+            order.forEach(k => {
+                if (cards[k]) {
+                    cards[k].classList.remove('glowing');
+                    cards[k].classList.add('faded');
+                }
+            });
+        }, 12000);
+
+        // Scene 6 (14 - 18s): Acre&Key steps in. Gold glow expands, Acre&Key logo slides in, wires re-route
+        setTimeout(() => {
+            if (storyTitle) storyTitle.textContent = 'Acre&Key steps in';
+            if (storySub) storySub.textContent = 'Acre&Key connects, coordinates and represents the buyer.';
+
+            if (goldRing) goldRing.classList.add('active');
             if (centerLabel) centerLabel.textContent = 'ACRE & KEY';
             if (centerSub) centerSub.textContent = 'PROTECTS THE BUYER';
 
-            order.forEach(key => {
-                if (wires[key]) wires[key].classList.add('gold');
-            });
-
-            if (mainTitle) mainTitle.innerHTML = 'Everyone in the transaction has a goal.';
-            if (mainSub) mainSub.innerHTML = 'Except for the buyer.';
-        }, 10200);
-
-        // Scene 7 (13-16s): Show Benefit Chips
-        setTimeout(() => {
-            order.forEach(key => {
-                if (cards[key]) cards[key].classList.remove('faded');
-            });
-            if (benefitsRow) benefitsRow.classList.add('visible');
-        }, 13200);
-
-        // Scene 8 (16s+ Final State)
-        setTimeout(() => {
-            if (finalBanner) finalBanner.classList.add('visible');
-        }, 15200);
-    }
-
-    function highlightStakeholdersSequentially(order) {
-        let step = 0;
-        const interval = setInterval(() => {
-            if (step >= order.length) {
-                clearInterval(interval);
-                // Reset glows
-                order.forEach(k => {
-                    if (cards[k]) {
-                        cards[k].classList.remove('glowing');
-                        cards[k].classList.remove('faded');
-                    }
-                });
-                return;
-            }
-
-            const currentKey = order[step];
             order.forEach(k => {
-                if (cards[k]) {
-                    if (k === currentKey) {
-                        cards[k].classList.add('glowing');
-                        cards[k].classList.remove('faded');
-                    } else {
-                        cards[k].classList.remove('glowing');
-                        cards[k].classList.add('faded');
-                    }
-                }
+                if (wires[k]) wires[key => k].classList.add('gold');
+                if (cards[k]) cards[k].classList.remove('faded');
             });
+        }, 14000);
 
-            step++;
-        }, 600);
+        // Scene 7 (18 - 22s): Advice is filtered. Stakeholders align, Benefit chips slide in
+        setTimeout(() => {
+            if (storyTitle) storyTitle.textContent = 'Advice is filtered. You get clarity.';
+            if (storySub) storySub.textContent = 'We simplify complexity and align every angle to your best interest.';
+
+            if (benefitsRow) benefitsRow.classList.add('visible');
+        }, 18000);
+
+        // Scene 8 (22 - 26s): Final State Banner "One trusted partner. Confident decisions."
+        setTimeout(() => {
+            if (storyTitle) storyTitle.textContent = 'One trusted partner. Confident decisions.';
+            if (storySub) storySub.textContent = 'That’s the Acre&Key advantage.';
+
+            if (finalBanner) finalBanner.classList.add('visible');
+        }, 22000);
+
+        // Seamless loop hold 3s and restart sequence
+        setTimeout(() => {
+            runLoopingStory();
+        }, 26000);
     }
 
     function renderFinalState() {
-        if (centerNode) centerNode.classList.add('visible');
+        if (storyTitle) storyTitle.textContent = 'One trusted partner. Confident decisions.';
+        if (storySub) storySub.textContent = 'That’s the Acre&Key advantage.';
+        if (centerNode) centerNode.classList.add('visible', 'pulse');
         if (goldRing) goldRing.classList.add('active');
         if (centerLabel) centerLabel.textContent = 'ACRE & KEY';
         if (centerSub) centerSub.textContent = 'PROTECTS THE BUYER';
@@ -170,10 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         Object.keys(cards).forEach(key => {
             if (cards[key]) cards[key].classList.add('visible');
-            if (wires[key]) {
-                wires[key].classList.add('active');
-                wires[key].classList.add('gold');
-            }
+            if (wires[key]) wires[key].classList.add('active', 'gold');
         });
     }
 });

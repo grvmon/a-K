@@ -14,12 +14,12 @@
 }
 
 .story-caption-text {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--refined-brass);
-    margin-top: 0.75rem;
-    min-height: 1.8rem;
-    transition: opacity 300ms ease;
+    margin-top: 0.5rem;
+    min-height: 2rem;
+    transition: opacity 300ms ease, transform 300ms ease;
 }
 
 /* Stage Layout Canvas */
@@ -68,7 +68,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.9);
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -80,7 +80,7 @@
     justify-content: center;
     z-index: 10;
     opacity: 0;
-    transition: opacity 350ms ease-out, transform 350ms ease-out, box-shadow 350ms ease;
+    transition: opacity 400ms ease-out, transform 400ms ease-out, box-shadow 400ms ease;
 }
 
 .story-center-node.visible {
@@ -89,7 +89,15 @@
 }
 
 .story-center-node.pulse {
-    animation: centerNodePulse 2s infinite ease-in-out;
+    animation: centerNodePulse 2.5s infinite ease-in-out;
+}
+
+.story-center-node.fast-pulse {
+    animation: centerNodePulse 1s infinite ease-in-out;
+}
+
+.story-center-node.shake {
+    animation: centerNodeShake 400ms infinite ease-in-out;
 }
 
 @keyframes centerNodePulse {
@@ -97,8 +105,14 @@
         box-shadow: 0 12px 32px rgba(31, 43, 56, 0.25), 0 0 0 0 rgba(184, 142, 82, 0.4);
     }
     50% {
-        box-shadow: 0 16px 40px rgba(31, 43, 56, 0.35), 0 0 0 18px rgba(184, 142, 82, 0);
+        box-shadow: 0 16px 40px rgba(31, 43, 56, 0.35), 0 0 0 20px rgba(184, 142, 82, 0);
     }
+}
+
+@keyframes centerNodeShake {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-51%, -49%) rotate(-1deg); }
+    75% { transform: translate(-49%, -51%) rotate(1deg); }
 }
 
 .story-gold-ring {
@@ -113,12 +127,12 @@
     opacity: 0;
     pointer-events: none;
     z-index: 9;
-    transition: opacity 400ms ease, transform 400ms ease;
+    transition: opacity 450ms ease, transform 450ms ease;
 }
 
 .story-gold-ring.active {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.18);
 }
 
 .story-node-icon {
@@ -168,7 +182,7 @@
     z-index: 5;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 300ms ease-out, transform 300ms ease-out, border-color 300ms ease, box-shadow 300ms ease;
+    transition: opacity 350ms ease-out, transform 350ms ease-out, border-color 350ms ease, box-shadow 350ms ease;
 }
 
 .stakeholder-card:hover {
@@ -183,23 +197,31 @@
 }
 
 .stakeholder-card.faded {
-    opacity: 0.35;
+    opacity: 0.25;
 }
 
 .stakeholder-card.glowing {
     opacity: 1;
     border-color: var(--refined-brass);
-    box-shadow: 0 0 20px rgba(184, 142, 82, 0.3), 0 8px 24px rgba(31, 43, 56, 0.1);
-    transform: scale(1.04) !important;
+    box-shadow: 0 0 20px rgba(184, 142, 82, 0.35), 0 8px 24px rgba(31, 43, 56, 0.1);
+    transform: scale(1.05) !important;
 }
 
-/* Orbital Positions on Desktop */
-.card-builder { top: 30px; left: 50%; transform: translateX(-50%) translateY(20px); }
+/* Directional Slides in Scene 2 */
+.card-builder { top: 30px; left: 50%; transform: translateX(-50%) translateY(-20px); }
 .card-builder.visible { transform: translateX(-50%) translateY(0); }
-.card-seller  { top: 170px; left: 60px; }
-.card-lawyer  { bottom: 50px; left: 60px; }
-.card-broker  { top: 170px; right: 60px; }
-.card-bank    { bottom: 50px; right: 60px; }
+
+.card-seller  { top: 170px; left: 60px; transform: translateX(-20px); }
+.card-seller.visible { transform: translateX(0); }
+
+.card-lawyer  { bottom: 50px; left: 60px; transform: translateY(20px) translateX(-10px); }
+.card-lawyer.visible { transform: translateY(0) translateX(0); }
+
+.card-broker  { top: 170px; right: 60px; transform: translateX(20px); }
+.card-broker.visible { transform: translateX(0); }
+
+.card-bank    { bottom: 50px; right: 60px; transform: translateY(20px) translateX(10px); }
+.card-bank.visible { transform: translateY(0) translateX(0); }
 
 .stakeholder-icon {
     width: 40px;
@@ -277,7 +299,7 @@
     font-weight: 800;
 }
 
-/* Final Banner Overlay */
+/* Final Banner Overlay (Scene 8) */
 .story-final-banner {
     background: var(--deep-navy);
     border-radius: 12px;
