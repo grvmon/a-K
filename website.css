@@ -726,7 +726,7 @@ body {
     font-weight: 700;
 }
 
-/* Checklist Rows with Icon Badges & 24px Gap */
+/* Checklist Rows with Icon Badges */
 .framework-bullets {
     list-style: none;
     margin-bottom: 1.5rem;
@@ -738,14 +738,17 @@ body {
 }
 
 .framework-bullets li {
-    font-size: 0.86rem;
+    font-size: 0.82rem;
     color: var(--deep-navy);
     font-weight: 600;
     text-align: left;
     display: flex;
     align-items: center;
-    gap: 10px;
-    line-height: 1.35;
+    gap: 8px;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Single Google Material Symbols Outlined Checkmark Badge */
