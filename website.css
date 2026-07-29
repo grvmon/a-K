@@ -725,7 +725,38 @@ body {
 .spider-node-col {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 1.2rem;
+}
+
+.spider-stage-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.spider-stage-label {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    flex-shrink: 0;
+    text-align: center;
+    opacity: 0.85;
+}
+
+.spider-right-col .spider-stage-label {
+    transform: rotate(0deg);
+}
+
+.spider-stage-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
 }
 
 .spider-node-card {
