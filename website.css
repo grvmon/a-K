@@ -653,6 +653,25 @@ body {
     height: 100%;
 }
 
+/* Next Process Arrow between cards */
+.framework-card-wrapper::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: -0.85rem;
+    transform: translateY(-50%);
+    color: var(--refined-brass);
+    font-size: 1.25rem;
+    font-weight: 600;
+    z-index: 10;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+.framework-grid .framework-card-wrapper:last-child::after {
+    display: none;
+}
+
 .framework-card {
     background: var(--white);
     border: 1px solid var(--divider);
