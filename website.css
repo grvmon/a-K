@@ -653,12 +653,26 @@ body {
     height: 100%;
 }
 
-/* Next Process Chevron Arrow with Soft Rounded Background Circle */
-.framework-card-wrapper::after {
+.framework-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    padding: 1.75rem 1.1rem 1.25rem 1.1rem;
+    box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+/* Next Process Chevron Arrow - 100% Mathematically Centered on Inner White Card Baseline */
+.framework-card::after {
     content: '›';
     position: absolute;
-    top: 44px;
+    top: 50%;
     right: -1.65rem;
+    transform: translateY(-50%);
     width: 26px;
     height: 26px;
     background: rgba(184, 142, 82, 0.14);
@@ -675,21 +689,8 @@ body {
     pointer-events: none;
 }
 
-.framework-grid .framework-card-wrapper:last-child::after {
+.framework-card-wrapper:last-child .framework-card::after {
     display: none;
-}
-
-.framework-card {
-    background: var(--white);
-    border: 1px solid var(--divider);
-    border-radius: 12px;
-    padding: 1.75rem 1.1rem 1.25rem 1.1rem;
-    box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    position: relative;
 }
 
 /* Card 4 High-Contrast Dashed Framing & Soft Gold Fill */
@@ -959,7 +960,8 @@ body {
     .framework-card-wrapper:nth-child(4) {
         transform: translateY(0px);
     }
-    .framework-card-wrapper::after {
+    .framework-card-wrapper::after,
+    .framework-card::after {
         display: none;
     }
     .framework-stats-bar {
