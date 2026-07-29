@@ -637,12 +637,13 @@ body {
 }
 
 /* 4-Card Framework Grid */
+/* ================= SECTION 2: WATERFALL CASCADE FRAMEWORK ================= */
 .framework-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
-    align-items: stretch;
-    margin-bottom: 2.5rem;
+    align-items: flex-start;
+    margin-bottom: 7.5rem;
     position: relative;
 }
 
@@ -650,13 +651,40 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: transform var(--transition-smooth);
 }
 
-/* Architectural Decision Framework Cards */
-.framework-card-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+/* Staggered Waterfall Vertical Cascade Offsets */
+.framework-card-wrapper:nth-child(1) {
+    transform: translateY(0px);
+}
+
+.framework-card-wrapper:nth-child(2) {
+    transform: translateY(32px);
+}
+
+.framework-card-wrapper:nth-child(3) {
+    transform: translateY(64px);
+}
+
+.framework-card-wrapper:nth-child(4) {
+    transform: translateY(96px);
+}
+
+/* Waterfall Downward Cascade Connector Arrow */
+.framework-card-wrapper::after {
+    content: '⤵';
+    position: absolute;
+    top: 24px;
+    right: -1rem;
+    font-size: 1.2rem;
+    color: var(--refined-brass);
+    z-index: 5;
+    opacity: 0.8;
+}
+
+.framework-grid .framework-card-wrapper:last-child::after {
+    display: none;
 }
 
 .framework-card {
@@ -906,6 +934,16 @@ body {
     .framework-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+    .framework-card-wrapper:nth-child(1),
+    .framework-card-wrapper:nth-child(2),
+    .framework-card-wrapper:nth-child(3),
+    .framework-card-wrapper:nth-child(4) {
+        transform: translateY(0px);
+    }
+    .framework-card-wrapper::after {
+        display: none;
     }
     .framework-stats-bar {
         grid-template-columns: repeat(2, 1fr);
