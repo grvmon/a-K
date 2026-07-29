@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="preview.css">
+    <link rel="stylesheet" href="../story.css">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -132,6 +133,28 @@
             <div class="grid-cell card-05">
                 <span class="card-number">05</span>
                 <h2 class="card-title mb-4">How we <span class="highlight-brass">help</span><br>home buyers.</h2>
+                <div class="story-mini-wrapper" style="background: var(--warm-ivory); border: 1px solid var(--divider); border-radius: 12px; padding: 1.5rem; margin-top: 1rem;">
+                    <!-- Embedded Ecosystem Moving Animation Canvas -->
+                    <div class="story-canvas" style="height: 380px; margin-bottom: 1rem;">
+                        <svg class="story-svg-wire-canvas" viewBox="0 0 1000 480" preserveAspectRatio="none" aria-hidden="true">
+                            <path id="wireBuilder" d="M 500 70 L 500 240" class="story-wire-path active gold"></path>
+                            <path id="wireSeller" d="M 270 195 C 370 195, 420 240, 500 240" class="story-wire-path active gold"></path>
+                            <path id="wireLawyer" d="M 270 365 C 370 365, 420 240, 500 240" class="story-wire-path active gold"></path>
+                            <path id="wireBroker" d="M 730 195 C 630 195, 580 240, 500 240" class="story-wire-path active gold"></path>
+                            <path id="wireBank" d="M 730 365 C 630 365, 580 240, 500 240" class="story-wire-path active gold"></path>
+                        </svg>
+                        <div class="story-gold-ring active" id="storyGoldRing"></div>
+                        <div class="story-center-node visible pulse" id="storyCenterNode">
+                            <div class="story-node-icon"><i data-feather="user"></i></div>
+                            <div class="story-node-label">BUYER</div>
+                        </div>
+                        <div class="stakeholder-card card-builder visible glowing" style="scale: 0.85;"><div class="stakeholder-icon"><i data-feather="grid"></i></div><div><div class="stakeholder-name">Builder</div><div class="stakeholder-caption">Sell inventory</div></div></div>
+                        <div class="stakeholder-card card-seller visible glowing" style="scale: 0.85;"><div class="stakeholder-icon"><i data-feather="user"></i></div><div><div class="stakeholder-name">Seller</div><div class="stakeholder-caption">Maximise price</div></div></div>
+                        <div class="stakeholder-card card-lawyer visible glowing" style="scale: 0.85;"><div class="stakeholder-icon"><i data-feather="file-text"></i></div><div><div class="stakeholder-name">Lawyer</div><div class="stakeholder-caption">Review legal risk</div></div></div>
+                        <div class="stakeholder-card card-broker visible glowing" style="scale: 0.85;"><div class="stakeholder-icon"><i data-feather="dollar-sign"></i></div><div><div class="stakeholder-name">Broker</div><div class="stakeholder-caption">Close transaction</div></div></div>
+                        <div class="stakeholder-card card-bank visible glowing" style="scale: 0.85;"><div class="stakeholder-icon"><i data-feather="shield"></i></div><div><div class="stakeholder-name">Bank</div><div class="stakeholder-caption">Protect lending risk</div></div></div>
+                    </div>
+                </div>
                 <ul class="feature-list mt-4">
                     <li>
                         <i data-feather="search"></i>
