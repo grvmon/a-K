@@ -805,7 +805,49 @@
 
     </div> <!-- End Site Canvas -->
 
-    <!-- Custom Script -->
-    <script src="website.js"></script>
+    <!-- ================= COOKIE CONSENT POPUP ================= -->
+    <div class="cookie-banner-popup" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie Preferences">
+        <div class="cookie-popup-content">
+            <h4 class="cookie-popup-title">Cookies, briefly.</h4>
+            <p class="cookie-popup-desc">
+                We use a small set of cookies to run the site, remember your preferences, and see what is working. See our <a href="#" class="cookie-link">Privacy Policy</a> and <a href="#" class="cookie-link">Terms</a>.
+            </p>
+            <div class="cookie-popup-actions">
+                <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept all</button>
+                <button type="button" class="cookie-btn cookie-btn-outline" id="cookieCustomizeBtn">Customize</button>
+                <button type="button" class="cookie-btn cookie-btn-outline" id="cookieRejectBtn">Reject all</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feather Icons Init Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+
+            // Cookie Consent Pop-up Logic
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const customizeBtn = document.getElementById('cookieCustomizeBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            if (!localStorage.getItem('ackey_cookie_consent')) {
+                setTimeout(function() {
+                    if (cookieBanner) cookieBanner.classList.add('active');
+                }, 800);
+            }
+
+            function dismissCookieBanner() {
+                if (cookieBanner) cookieBanner.classList.remove('active');
+                localStorage.setItem('ackey_cookie_consent', 'true');
+            }
+
+            if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
+            if (customizeBtn) customizeBtn.addEventListener('click', dismissCookieBanner);
+            if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
+        });
+    </script>
 </body>
 </html>
