@@ -905,24 +905,24 @@ body {
     line-height: 1;
 }
 
-/* Stats Bar Styling */
+/* Stats Bar Styling (Pixel-Match Reference Image) */
 .framework-stats-bar {
     background: var(--white);
     border: 1px solid var(--divider);
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    box-shadow: 0 4px 20px rgba(31, 43, 56, 0.04);
+    grid-template-columns: 1fr 1fr 1fr 1.25fr;
+    gap: 1.25rem;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.05);
 }
 
 .framework-stat-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     border-right: 1px solid rgba(183, 175, 164, 0.35);
-    padding-right: 1rem;
+    padding-right: 1.25rem;
 }
 
 .framework-stat-item:last-child {
@@ -930,39 +930,37 @@ body {
     padding-right: 0;
 }
 
-.framework-stat-icon {
-    width: 38px;
-    height: 38px;
-    background: rgba(184, 142, 82, 0.12);
-    color: var(--refined-brass);
-    border-radius: 50%;
-    display: inline-flex;
+.framework-stat-icon-outline {
+    color: var(--deep-navy);
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
 
-.framework-stat-icon .material-symbols-outlined {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1;
+.framework-stat-icon-outline i {
+    width: 26px;
+    height: 26px;
+    stroke: var(--deep-navy);
+    stroke-width: 1.5;
 }
 
-.framework-stat-val {
-    font-family: var(--font-heading);
+.framework-stat-val-bold {
+    font-family: var(--font-body);
     font-size: 1.5rem;
     color: var(--deep-navy);
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1;
+    margin-bottom: 4px;
 }
 
 .framework-stat-lbl {
+    font-family: var(--font-body);
     font-size: 0.74rem;
-    color: var(--muted-slate);
-    line-height: 1.2;
+    color: var(--deep-navy);
+    line-height: 1.35;
     font-weight: 500;
-    margin-top: 3px;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 /* Responsive Adjustments */
