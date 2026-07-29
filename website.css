@@ -636,6 +636,198 @@ body {
     font-style: italic;
 }
 
+/* ================= SECTION 1: END-TO-END BUYER SUPPORT (CORE FRAMEWORK) ================= */
+.core-framework-section {
+    background-color: var(--warm-ivory);
+    position: relative;
+    z-index: 10;
+    padding: var(--space-section-desktop) 0;
+    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
+}
+
+.core-subkicker-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+}
+
+.core-subkicker-divider {
+    opacity: 0.5;
+}
+
+.core-subkicker-acronym {
+    color: var(--muted-slate);
+    font-weight: 500;
+    text-transform: none;
+    font-style: italic;
+    letter-spacing: normal;
+}
+
+/* 2-Column Split Layout */
+.core-split-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 2.25rem;
+}
+
+/* Left Column: 8-Step Grid (2 columns x 4 rows) */
+.core-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+    height: 100%;
+}
+
+.core-step-card {
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    padding: 1.15rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.03);
+}
+
+/* Highlighted Due Diligence Step (Step 05) */
+.core-step-card.core-step-highlight {
+    background: #FFFDF9;
+    border: 1.5px solid var(--refined-brass);
+    box-shadow: 0 6px 20px rgba(184, 142, 82, 0.12);
+}
+
+.core-step-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.core-step-num {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--refined-brass);
+    font-weight: 400;
+}
+
+.core-step-title {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--deep-navy);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.core-step-desc {
+    font-size: 0.76rem;
+    color: var(--muted-slate);
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+/* Right Column: OUR PROMISE Executive Navy Card */
+.our-promise-card {
+    background: var(--deep-navy);
+    border: 1.5px solid var(--refined-brass);
+    border-radius: 14px;
+    padding: 2.25rem 2rem;
+    color: var(--white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 32px rgba(31, 43, 56, 0.16);
+}
+
+.promise-header {
+    border-bottom: 1px solid rgba(184, 142, 82, 0.4);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.promise-kicker {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.promise-subhead {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.promise-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.promise-pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.pillar-num {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--refined-brass);
+    font-weight: 400;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pillar-title {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.pillar-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* Bottom Advisor Quote Banner */
+.core-advisor-banner {
+    background: var(--deep-navy);
+    border: 1px solid rgba(184, 142, 82, 0.3);
+    border-radius: 8px;
+    padding: 1.15rem 2rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--white);
+    font-weight: 400;
+    box-shadow: 0 6px 24px rgba(31, 43, 56, 0.08);
+}
+
+.quote-gold {
+    color: var(--refined-brass);
+    font-style: italic;
+}
+
 /* ================= SECTION 2: DECISION FRAMEWORK GRID ================= */
 .framework-grid {
     display: grid;
@@ -980,6 +1172,10 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
+    .core-split-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
     .framework-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -1005,6 +1201,12 @@ body {
 }
 
 @media (max-width: 640px) {
+    .core-steps-grid {
+        grid-template-columns: 1fr;
+    }
+    .core-subkicker-bar {
+        flex-wrap: wrap;
+    }
     .framework-grid {
         grid-template-columns: 1fr;
     }
