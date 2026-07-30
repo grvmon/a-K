@@ -156,21 +156,20 @@
 
             <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
             <div class="agenda-flow-container">
-                <!-- SVG Bezier Funnel Flow: Seamless Funnel Passing Inside Center Protection Layer -->
-                <svg class="flow-svg-beams" viewBox="0 0 1160 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <!-- SVG Bezier Funnel Flow: Seamless Funnel Passing Inside Center Protection Layer                 <svg class="flow-svg-beams" viewBox="0 0 1160 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Left Cards (x=315, Y = 54, 118, 182, 246, 310) -> Funneling into Center Card (x=440, y=220) -->
-                        <path id="flow-l1" d="M 315 54 C 375 54, 400 220, 440 220"/>
-                        <path id="flow-l2" d="M 315 118 C 365 118, 400 220, 440 220"/>
-                        <path id="flow-l3" d="M 315 182 L 440 220"/>
-                        <path id="flow-l4" d="M 315 246 C 365 246, 400 220, 440 220"/>
-                        <path id="flow-l5" d="M 315 310 C 375 310, 400 220, 440 220"/>
+                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Left Cards (x=350, Y = 54, 118, 182, 246, 310) -> Funneling into Center Card Left Border (x=400, y=220) -->
+                        <path id="flow-l1" d="M 350 54 C 380 54, 390 220, 400 220"/>
+                        <path id="flow-l2" d="M 350 118 C 375 118, 390 220, 400 220"/>
+                        <path id="flow-l3" d="M 350 182 L 400 220"/>
+                        <path id="flow-l4" d="M 350 246 C 375 246, 390 220, 400 220"/>
+                        <path id="flow-l5" d="M 350 310 C 380 310, 390 220, 400 220"/>
 
-                        <!-- Outgoing Clarity Paths: Emerging From Inside Center Card (x=720, y=220) -> Docking Exactly at Right Card Outer Left Border (x=780) -->
-                        <path id="flow-r1" d="M 720 220 C 745 220, 760 60, 780 60"/>
-                        <path id="flow-r2" d="M 720 220 C 745 220, 760 134, 780 134"/>
-                        <path id="flow-r3" d="M 720 220 C 745 220, 760 208, 780 208"/>
-                        <path id="flow-r4" d="M 720 220 C 745 220, 760 282, 780 282"/>
+                        <!-- Outgoing Clarity Paths: Emerging From Right Border of Center Card (x=740, y=220) -> Docking Exactly at Right Card Outer Left Border (x=810) -->
+                        <path id="flow-r1" d="M 740 220 C 765 220, 785 54, 810 54"/>
+                        <path id="flow-r2" d="M 740 220 C 765 220, 785 118, 810 118"/>
+                        <path id="flow-r3" d="M 740 220 C 765 220, 785 182, 810 182"/>
+                        <path id="flow-r4" d="M 740 220 C 765 220, 785 246, 810 246"/>
 
                         <!-- Gold Arrowhead Marker for Outgoing Beams -->
                         <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -194,8 +193,8 @@
                     <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
 
-                    <!-- Convergence Ring Node (Matching Reference Design) -->
-                    <circle cx="440" cy="220" r="6.5" class="convergence-node-ring"/>
+                    <!-- Convergence Ring Node (Docked on Center Card Left Edge) -->
+                    <circle cx="400" cy="220" r="6.5" class="convergence-node-ring"/>
 
                     <!-- Center to Right Beams (Solid gold outgoing connectors with arrowheads docking at Box 3 card border) -->
                     <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
@@ -204,16 +203,16 @@
                     <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
 
                     <!-- Animated Particles Seamlessly Entering and Emerging Inside Card -->
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 315 54 C 375 54, 400 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 315 118 C 365 118, 400 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 315 182 L 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 246 C 365 246, 400 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 310 C 375 310, 400 220, 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 350 54 C 380 54, 390 220, 400 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 350 118 C 375 118, 390 220, 400 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 350 182 L 400 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 350 246 C 375 246, 390 220, 400 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 350 310 C 380 310, 390 220, 400 220"/></circle>
 
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 220 C 745 220, 760 60, 780 60"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 220 C 760 220, 780 134, 780 134"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 220 C 745 220, 760 208, 780 208"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 220 C 745 220, 760 282, 780 282"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 54, 810 54"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 118, 810 118"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 182, 810 182"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 246, 810 246"/></circle>
                 </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
