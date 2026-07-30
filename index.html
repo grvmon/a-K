@@ -159,26 +159,21 @@
                 <!-- SVG Bezier Funnel Flow: Seamless Funnel Passing Inside Center Protection Layer -->
                 <svg class="flow-svg-beams" viewBox="0 0 1160 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Each 54px Stakeholder Box (x=315, Y = 53, 117, 181, 245, 309) -->
-                        <path id="flow-l1" d="M 315 53 C 375 53, 410 220, 440 220"/>
-                        <path id="flow-l2" d="M 315 117 C 370 117, 410 220, 440 220"/>
-                        <path id="flow-l3" d="M 315 181 C 370 181, 410 220, 440 220"/>
-                        <path id="flow-l4" d="M 315 245 C 370 245, 410 220, 440 220"/>
-                        <path id="flow-l5" d="M 315 309 C 375 309, 410 220, 440 220"/>
+                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Left Cards (x=315, Y = 54, 118, 182, 246, 310) -> Funneling into Center Card (x=440, y=220) -->
+                        <path id="flow-l1" d="M 315 54 C 375 54, 400 220, 440 220"/>
+                        <path id="flow-l2" d="M 315 118 C 365 118, 400 220, 440 220"/>
+                        <path id="flow-l3" d="M 315 182 L 440 220"/>
+                        <path id="flow-l4" d="M 315 246 C 365 246, 400 220, 440 220"/>
+                        <path id="flow-l5" d="M 315 310 C 375 310, 400 220, 440 220"/>
 
-                        <!-- Outgoing Clarity Paths: Emerging From Inside Center Card (x=720, y=220) -> Terminating at Right Item Boxes (Y = 60, 134, 208, 282) -->
-                        <path id="flow-r1" d="M 720 220 C 765 220, 785 60, 845 60"/>
-                        <path id="flow-r2" d="M 720 220 C 765 220, 785 134, 845 134"/>
-                        <path id="flow-r3" d="M 720 220 C 765 220, 785 208, 845 208"/>
-                        <path id="flow-r4" d="M 720 220 C 765 220, 785 282, 845 282"/>
+                        <!-- Outgoing Clarity Paths: Emerging From Inside Center Card (x=720, y=220) -> Docking Exactly at Right Card Outer Left Border (x=808) -->
+                        <path id="flow-r1" d="M 720 220 C 760 220, 780 60, 808 60"/>
+                        <path id="flow-r2" d="M 720 220 C 760 220, 780 134, 808 134"/>
+                        <path id="flow-r3" d="M 720 220 C 760 220, 780 208, 808 208"/>
+                        <path id="flow-r4" d="M 720 220 C 760 220, 780 282, 808 282"/>
 
                         <!-- Gold Arrowhead Marker for Outgoing Beams -->
                         <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
-                        </marker>
-
-                        <!-- Dotted Arrowhead Marker for Left Stakeholder Boxes (Pointing Right into Center Card) -->
-                        <marker id="dotted-arrow" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto">
                             <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
                         </marker>
 
@@ -192,30 +187,33 @@
                         </filter>
                     </defs>
 
-                    <!-- Left to Center Beams (Dotted incoming connectors flowing smoothly into center card with arrowheads at stakeholder boxes) -->
-                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
-                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
-                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
-                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
-                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
+                    <!-- Left to Center Beams (Clean Dotted Funnel Lines Matching Reference) -->
+                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
+                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
+                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
+                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
+                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
 
-                    <!-- Center to Right Beams (Solid gold outgoing connectors with arrows touching right card border) -->
+                    <!-- Convergence Ring Node (Matching Reference Design) -->
+                    <circle cx="440" cy="220" r="6.5" class="convergence-node-ring"/>
+
+                    <!-- Center to Right Beams (Solid gold outgoing connectors with arrowheads docking at Box 3 card border) -->
                     <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
                     <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
                     <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
                     <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
 
                     <!-- Animated Particles Seamlessly Entering and Emerging Inside Card -->
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 315 53 C 375 53, 410 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 315 117 C 370 117, 410 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 315 181 C 370 181, 410 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 245 C 370 245, 410 220, 440 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 309 C 375 309, 410 220, 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 315 54 C 375 54, 400 220, 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 315 118 C 365 118, 400 220, 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 315 182 L 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 246 C 365 246, 400 220, 440 220"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 310 C 375 310, 400 220, 440 220"/></circle>
 
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 220 C 765 220, 785 60, 845 60"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 220 C 765 220, 785 134, 845 134"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 220 C 765 220, 785 208, 845 208"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 220 C 765 220, 785 282, 845 282"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 220 C 760 220, 780 60, 808 60"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 220 C 760 220, 780 134, 808 134"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 220 C 760 220, 780 208, 808 208"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 220 C 760 220, 780 282, 808 282"/></circle>
                 </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
