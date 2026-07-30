@@ -3480,9 +3480,16 @@ body {
     opacity: 0.85;
 }
 
-.flow-particle {
-    fill: var(--refined-brass);
-    filter: drop-shadow(0 0 4px rgba(184, 142, 82, 0.9));
+/* Incoming Noise Particles (Muted, smaller, absorbed into center card) */
+.flow-particle-incoming {
+    fill: rgba(184, 142, 82, 0.7);
+    opacity: 0.8;
+}
+
+/* Outgoing Clarity Particles (Brighter, larger, luminous gold) */
+.flow-particle-outgoing {
+    fill: #FFDF9E;
+    filter: drop-shadow(0 0 8px #B88E52) drop-shadow(0 0 16px #FFDF9E);
 }
 
 /* Entry & Exit Portal Glow Nodes on Center Shield Layer */
@@ -3492,8 +3499,9 @@ body {
 }
 
 .filter-exit-glow {
-    fill: #B88E52;
-    opacity: 0.95;
+    fill: #FFDF9E;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #B88E52);
 }
 
 /* Ensure SVG beams pass behind inner content but over card backdrop */
