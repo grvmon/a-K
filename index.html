@@ -159,7 +159,7 @@
                 <!-- SVG Bezier Funnel Flow: Seamless Funnel Passing Inside Center Protection Layer -->
                 <svg class="flow-svg-beams" viewBox="0 0 1160 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Incoming Funnel Paths: Perfectly Aligned to Center of 54px Invisible Item Bounding Boxes (Y = 53, 117, 181, 245, 309) -->
+                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Each 54px Stakeholder Box (x=315, Y = 53, 117, 181, 245, 309) -->
                         <path id="flow-l1" d="M 315 53 C 375 53, 410 220, 440 220"/>
                         <path id="flow-l2" d="M 315 117 C 370 117, 410 220, 440 220"/>
                         <path id="flow-l3" d="M 315 181 C 370 181, 410 220, 440 220"/>
@@ -177,6 +177,11 @@
                             <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
                         </marker>
 
+                        <!-- Dotted Arrowhead Marker for Left Stakeholder Boxes (Pointing Right into Center Card) -->
+                        <marker id="dotted-arrow" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
+                        </marker>
+
                         <!-- Luminous Outgoing Glow Filter -->
                         <filter id="clarity-glow" x="-50%" y="-50%" width="200%" height="200%">
                             <feGaussianBlur stdDeviation="4" result="blur" />
@@ -187,12 +192,12 @@
                         </filter>
                     </defs>
 
-                    <!-- Left to Center Beams (Dotted incoming connectors flowing smoothly into center card) -->
-                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
+                    <!-- Left to Center Beams (Dotted incoming connectors flowing smoothly into center card with arrowheads at stakeholder boxes) -->
+                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
+                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
+                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
+                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
+                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted" marker-start="url(#dotted-arrow)"/>
 
                     <!-- Center to Right Beams (Solid gold outgoing connectors with arrows touching right card border) -->
                     <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
