@@ -3439,165 +3439,281 @@ body {
     font-weight: 500;
 }
 
-/* ================= INTERACTIVE RADIAL ECOSYSTEM DIAGRAM (REFERENCE MATCH) ================= */
-.agenda-radial-container {
+/* ================= 3-COLUMN BUYER PROTECTION LAYER FLOW DIAGRAM ================= */
+.agenda-flow-container {
     position: relative;
     width: 100%;
-    max-width: 860px;
-    height: 480px;
-    margin: 0 auto 6rem auto;
-    display: flex;
+    max-width: 1120px;
+    margin: 0 auto 5rem auto;
+    display: grid;
+    grid-template-columns: 280px 370px 280px;
+    gap: 2.5rem;
     align-items: center;
     justify-content: center;
 }
 
-/* Central BUYER Node */
-.radial-buyer-core {
+/* SVG Animated Bezier Beams Canvas */
+.flow-svg-beams {
     position: absolute;
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: var(--deep-navy);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    box-shadow: 0 12px 32px rgba(31, 43, 56, 0.18);
-    transition: transform 300ms ease, box-shadow 300ms ease;
-}
-
-.radial-buyer-core:hover {
-    transform: scale(1.06);
-    box-shadow: 0 16px 40px rgba(31, 43, 56, 0.25);
-}
-
-.buyer-core-icon {
-    margin-bottom: 4px;
-}
-
-.buyer-core-icon i, .buyer-core-icon svg {
-    width: 28px;
-    height: 28px;
-    color: var(--white);
-}
-
-.buyer-core-text {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    color: var(--white);
-}
-
-/* Outer Stakeholder Cards (1px Brass Border + Soft Shadow) */
-.radial-card {
-    position: absolute;
-    background: var(--white);
-    border: 1px solid rgba(184, 142, 82, 0.4);
-    border-radius: 10px;
-    padding: 0.85rem 1.35rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.06);
-    z-index: 8;
-    min-width: 210px;
-    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-    cursor: default;
-}
-
-.radial-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--refined-brass);
-    box-shadow: 0 10px 28px rgba(31, 43, 56, 0.12);
-}
-
-.radial-card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--deep-navy);
-}
-
-.radial-card-icon i, .radial-card-icon svg {
-    width: 24px;
-    height: 24px;
-    stroke-width: 1.6px;
-    color: var(--deep-navy);
-}
-
-.radial-card-name {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 800;
-    color: var(--deep-navy);
-    line-height: 1.2;
-}
-
-.radial-card-role {
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    color: var(--muted-slate);
-    font-weight: 500;
-}
-
-/* Exact Radial Coordinates around (400px, 240px) Center */
-.card-builder { top: 30px; left: 50%; transform: translateX(-50%); }
-.card-seller  { top: 160px; left: 40px; }
-.card-broker  { top: 160px; right: 40px; }
-.card-lawyer  { bottom: 40px; left: 40px; }
-.card-bank    { bottom: 40px; right: 40px; }
-
-.card-builder:hover { transform: translateX(-50%) translateY(-3px); }
-
-/* SVG Inward Laser Beams Canvas */
-.radial-laser-svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    z-index: 4;
+    z-index: 1;
 }
 
-.laser-beam-path {
+.flow-beam-line {
+    fill: none;
     stroke: rgba(184, 142, 82, 0.35);
     stroke-width: 1.5;
     stroke-dasharray: 4 5;
 }
 
-.laser-flow-dot {
+.flow-particle {
     fill: var(--refined-brass);
-    filter: drop-shadow(0 0 5px rgba(184, 142, 82, 0.9));
+    filter: drop-shadow(0 0 4px rgba(184, 142, 82, 0.9));
 }
 
-/* Responsive Radial Layout */
-@media (max-width: 850px) {
-    .agenda-radial-container {
-        height: auto;
-        min-height: 520px;
-        flex-direction: column;
-        gap: 1.25rem;
+/* Column General Styling */
+.flow-col {
+    position: relative;
+    z-index: 5;
+}
+
+.flow-col-header {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--refined-brass);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Card Stack (Left & Right) */
+.flow-card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(184, 142, 82, 0.3);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 10px 30px rgba(31, 43, 56, 0.04);
+}
+
+/* Single Item Row */
+.flow-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    transition: background 200ms ease;
+}
+
+.flow-item:hover {
+    background: rgba(247, 243, 236, 0.6);
+}
+
+.flow-item-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--warm-ivory);
+    border: 1px solid rgba(184, 142, 82, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.flow-item-icon i, .flow-item-icon svg {
+    width: 18px;
+    height: 18px;
+    color: var(--refined-brass);
+    stroke-width: 1.8px;
+}
+
+.flow-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.flow-item-text strong {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--deep-navy);
+    line-height: 1.2;
+}
+
+.flow-item-text span {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--muted-slate);
+}
+
+/* Right Item Specific Checkmarks */
+.flow-item-right {
+    position: relative;
+    justify-content: space-between;
+}
+
+.flow-item-check {
+    color: var(--refined-brass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.flow-item-check i, .flow-item-check svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.2px;
+}
+
+/* Center Column: Acre&Key Dark Navy Card */
+.center-badge-card {
+    background: var(--deep-navy);
+    border: 1.5px solid var(--refined-brass);
+    border-radius: 18px;
+    padding: 2.2rem 1.8rem;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 16px 45px rgba(31, 43, 56, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.center-badge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 55px rgba(31, 43, 56, 0.3);
+}
+
+.center-brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-key-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--refined-brass);
+    margin-bottom: 0.3rem;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    line-height: 1;
+}
+
+.brand-sub {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--refined-brass);
+    letter-spacing: 0.14em;
+    margin-top: 0.4rem;
+}
+
+.center-divider-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(184, 142, 82, 0.4);
+}
+
+.center-headline {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--white);
+}
+
+.headline-shield {
+    width: 20px;
+    height: 20px;
+    color: var(--refined-brass);
+}
+
+.center-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.2rem;
+}
+
+.center-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+}
+
+.slash-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(184, 142, 82, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--refined-brass);
+}
+
+.slash-icon i, .slash-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2px;
+}
+
+.check-icon-gold {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--refined-brass);
+    color: var(--deep-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.check-icon-gold i, .check-icon-gold svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 3px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .agenda-flow-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .radial-laser-svg {
+    .flow-svg-beams {
         display: none;
     }
-
-    .radial-buyer-core {
-        position: relative;
-        margin: 1.5rem 0;
-    }
-
-    .radial-card {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
+}
         transform: none !important;
         width: 100%;
         max-width: 320px;

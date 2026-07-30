@@ -151,87 +151,161 @@
 
             </div>
 
-            <!-- Interactive Radial Ecosystem Diagram matching reference image with inward laser lines -->
-            <div class="agenda-radial-container">
+            <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
+            <div class="agenda-flow-container">
                 
-                <!-- SVG Inward Laser Beams Connecting Outer Cards to Central BUYER Node -->
-                <svg class="radial-laser-svg" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                    <!-- Laser Lines: (x1, y1) Outer Card Centers -> (400, 240) Center BUYER Node -->
-                    <line x1="400" y1="80" x2="400" y2="240" class="laser-beam-path"></line> <!-- Top: Builder -->
-                    <line x1="160" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Left: Seller -->
-                    <line x1="640" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Right: Broker -->
-                    <line x1="160" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Left: Lawyer -->
-                    <line x1="640" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Right: Bank -->
+                <!-- SVG Bezier Beam Animations connecting Left -> Center -> Right -->
+                <svg class="flow-svg-beams" viewBox="0 0 1100 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <defs>
+                        <!-- Paths Left -> Center -->
+                        <path id="flow-l1" d="M 280 88 C 340 88, 350 240, 410 240"/>
+                        <path id="flow-l2" d="M 280 156 C 330 156, 350 240, 410 240"/>
+                        <path id="flow-l3" d="M 280 224 C 330 224, 350 240, 410 240"/>
+                        <path id="flow-l4" d="M 280 292 C 330 292, 350 240, 410 240"/>
+                        <path id="flow-l5" d="M 280 360 C 340 360, 350 240, 410 240"/>
 
-                    <!-- Traveling Light Particles (Inward Inflow to BUYER Node) -->
-                    <circle r="4" class="laser-flow-dot">
-                        <animateMotion dur="2.6s" repeatCount="indefinite" path="M 400 80 L 400 240"></animateMotion>
-                    </circle>
-                    <circle r="4" class="laser-flow-dot">
-                        <animateMotion dur="3.0s" repeatCount="indefinite" path="M 160 200 L 400 240"></animateMotion>
-                    </circle>
-                    <circle r="4" class="laser-flow-dot">
-                        <animateMotion dur="2.8s" repeatCount="indefinite" path="M 640 200 L 400 240"></animateMotion>
-                    </circle>
-                    <circle r="4" class="laser-flow-dot">
-                        <animateMotion dur="3.4s" repeatCount="indefinite" path="M 160 360 L 400 240"></animateMotion>
-                    </circle>
-                    <circle r="4" class="laser-flow-dot">
-                        <animateMotion dur="3.1s" repeatCount="indefinite" path="M 640 360 L 400 240"></animateMotion>
-                    </circle>
+                        <!-- Paths Center -> Right -->
+                        <path id="flow-r1" d="M 690 240 C 740 240, 760 100, 810 100"/>
+                        <path id="flow-r2" d="M 690 240 C 740 240, 760 190, 810 190"/>
+                        <path id="flow-r3" d="M 690 240 C 740 240, 760 280, 810 280"/>
+                        <path id="flow-r4" d="M 690 240 C 740 240, 760 370, 810 370"/>
+                    </defs>
+
+                    <!-- Left to Center Beams -->
+                    <use href="#flow-l1" class="flow-beam-line"/>
+                    <use href="#flow-l2" class="flow-beam-line"/>
+                    <use href="#flow-l3" class="flow-beam-line"/>
+                    <use href="#flow-l4" class="flow-beam-line"/>
+                    <use href="#flow-l5" class="flow-beam-line"/>
+
+                    <!-- Right to Center Beams -->
+                    <use href="#flow-r1" class="flow-beam-line"/>
+                    <use href="#flow-r2" class="flow-beam-line"/>
+                    <use href="#flow-r3" class="flow-beam-line"/>
+                    <use href="#flow-r4" class="flow-beam-line"/>
+
+                    <!-- Particles: Left -> Center -->
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 280 88 C 340 88, 350 240, 410 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 280 156 C 330 156, 350 240, 410 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 280 224 C 330 224, 350 240, 410 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 280 292 C 330 292, 350 240, 410 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 280 360 C 340 360, 350 240, 410 240"/></circle>
+
+                    <!-- Particles: Center -> Right -->
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 100, 810 100"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 190, 810 190"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 280, 810 280"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 370, 810 370"/></circle>
                 </svg>
 
-                <!-- Central BUYER Focal Node (Dark Navy Circle with User Icon) -->
-                <div class="radial-buyer-core">
-                    <div class="buyer-core-icon">
-                        <i data-feather="user"></i>
-                    </div>
-                    <span class="buyer-core-text">BUYER</span>
-                </div>
-
-                <!-- 5 Outer Stakeholder Cards (Matching Reference Image Pixel Structure) -->
-                <!-- 1. Top Center: Builder -->
-                <div class="radial-card card-builder">
-                    <div class="radial-card-icon"><i data-feather="home"></i></div>
-                    <div class="radial-card-content">
-                        <div class="radial-card-name">Builder</div>
-                        <div class="radial-card-role">Sell Inventory</div>
-                    </div>
-                </div>
-
-                <!-- 2. Middle Left: Seller -->
-                <div class="radial-card card-seller">
-                    <div class="radial-card-icon"><i data-feather="user-check"></i></div>
-                    <div class="radial-card-content">
-                        <div class="radial-card-name">Seller</div>
-                        <div class="radial-card-role">Maximize price</div>
-                    </div>
-                </div>
-
-                <!-- 3. Middle Right: Broker -->
-                <div class="radial-card card-broker">
-                    <div class="radial-card-icon"><i data-feather="briefcase"></i></div>
-                    <div class="radial-card-content">
-                        <div class="radial-card-name">Broker</div>
-                        <div class="radial-card-role">Close transaction</div>
-                    </div>
-                </div>
-
-                <!-- 4. Bottom Left: Lawyer -->
-                <div class="radial-card card-lawyer">
-                    <div class="radial-card-icon"><i data-feather="scale"></i></div>
-                    <div class="radial-card-content">
-                        <div class="radial-card-name">Lawyer</div>
-                        <div class="radial-card-role">Review legal risk</div>
+                <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
+                <div class="flow-col flow-col-left">
+                    <div class="flow-col-header">OTHERS REPRESENT THEIR INTERESTS</div>
+                    <div class="flow-card-stack">
+                        <div class="flow-item">
+                            <div class="flow-item-icon"><i data-feather="home"></i></div>
+                            <div class="flow-item-text">
+                                <strong>BUILDER</strong>
+                                <span>Maximise inventory sales</span>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-item-icon"><i data-feather="user"></i></div>
+                            <div class="flow-item-text">
+                                <strong>BROKER</strong>
+                                <span>Close the deal</span>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-item-icon"><i data-feather="briefcase"></i></div>
+                            <div class="flow-item-text">
+                                <strong>BANK</strong>
+                                <span>Protect the loan</span>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-item-icon"><i data-feather="tag"></i></div>
+                            <div class="flow-item-text">
+                                <strong>SELLER</strong>
+                                <span>Maximise sale price</span>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-item-icon"><i data-feather="scale"></i></div>
+                            <div class="flow-item-text">
+                                <strong>LAWYER</strong>
+                                <span>Reduce legal risk</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 5. Bottom Right: Bank -->
-                <div class="radial-card card-bank">
-                    <div class="radial-card-icon"><i data-feather="shield"></i></div>
-                    <div class="radial-card-content">
-                        <div class="radial-card-name">Bank</div>
-                        <div class="radial-card-role">Protect lending risk</div>
+                <!-- Center Column: Acre&Key BUYER PROTECTION LAYER -->
+                <div class="flow-col flow-col-center">
+                    <div class="center-badge-card">
+                        <div class="center-brand-logo">
+                            <i data-feather="key" class="brand-key-icon"></i>
+                            <span class="brand-name">Acre&amp;Key</span>
+                            <span class="brand-sub">BUYER PROTECTION LAYER</span>
+                        </div>
+                        <div class="center-divider-line"></div>
+                        <div class="center-headline">
+                            <i data-feather="shield" class="headline-shield"></i>
+                            <span>Only your interests.</span>
+                        </div>
+                        <div class="center-checklist">
+                            <div class="center-check-item">
+                                <span class="slash-icon"><i data-feather="slash"></i></span>
+                                <span>No inventory to sell</span>
+                            </div>
+                            <div class="center-check-item">
+                                <span class="slash-icon"><i data-feather="slash"></i></span>
+                                <span>No transaction targets</span>
+                            </div>
+                            <div class="center-check-item">
+                                <span class="check-icon-gold"><i data-feather="check"></i></span>
+                                <span>One accountable advisor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: YOU GET INDEPENDENT REPRESENTATION -->
+                <div class="flow-col flow-col-right">
+                    <div class="flow-col-header">YOU GET INDEPENDENT REPRESENTATION</div>
+                    <div class="flow-card-stack">
+                        <div class="flow-item flow-item-right">
+                            <div class="flow-item-icon"><i data-feather="tag"></i></div>
+                            <div class="flow-item-text">
+                                <strong>Price</strong>
+                                <span>reviewed independently</span>
+                            </div>
+                            <div class="flow-item-check"><i data-feather="check"></i></div>
+                        </div>
+                        <div class="flow-item flow-item-right">
+                            <div class="flow-item-icon"><i data-feather="scale"></i></div>
+                            <div class="flow-item-text">
+                                <strong>Legal risks</strong>
+                                <span>identified for you</span>
+                            </div>
+                            <div class="flow-item-check"><i data-feather="check"></i></div>
+                        </div>
+                        <div class="flow-item flow-item-right">
+                            <div class="flow-item-icon"><i data-feather="briefcase"></i></div>
+                            <div class="flow-item-text">
+                                <strong>Loan terms</strong>
+                                <span>evaluated for your fit</span>
+                            </div>
+                            <div class="flow-item-check"><i data-feather="check"></i></div>
+                        </div>
+                        <div class="flow-item flow-item-right">
+                            <div class="flow-item-icon"><i data-feather="user"></i></div>
+                            <div class="flow-item-text">
+                                <strong>Deal</strong>
+                                <span>closed on your terms</span>
+                            </div>
+                            <div class="flow-item-check"><i data-feather="check"></i></div>
+                        </div>
                     </div>
                 </div>
 
