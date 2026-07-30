@@ -154,70 +154,88 @@
                 </p>
             </div>
 
-            <!-- Two-Column Pure Editorial Spread with Spiderbrain SVG Wire Animation -->
-            <div class="agenda-editorial-grid spider-agenda-container">
+            <!-- Interactive Radial Ecosystem Diagram matching reference image with inward laser lines -->
+            <div class="agenda-radial-container">
                 
-                <!-- SVG Wire Connection Canvas with Animated Flow Dots -->
-                <svg class="spider-agenda-svg" viewBox="0 0 1000 360" preserveAspectRatio="none" aria-hidden="true">
-                    <!-- Curved Paths from Left Stakeholder Rows to Center BUYER Focal Point -->
-                    <path d="M 450 36 C 580 36, 600 180, 680 180" class="spider-agenda-path"></path>
-                    <path d="M 450 108 C 560 108, 600 180, 680 180" class="spider-agenda-path"></path>
-                    <path d="M 450 180 C 560 180, 600 180, 680 180" class="spider-agenda-path"></path>
-                    <path d="M 450 252 C 560 252, 600 180, 680 180" class="spider-agenda-path"></path>
-                    <path d="M 450 324 C 580 324, 600 180, 680 180" class="spider-agenda-path"></path>
+                <!-- SVG Inward Laser Beams Connecting Outer Cards to Central BUYER Node -->
+                <svg class="radial-laser-svg" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <!-- Laser Lines: (x1, y1) Outer Card Centers -> (400, 240) Center BUYER Node -->
+                    <line x1="400" y1="80" x2="400" y2="240" class="laser-beam-path"></line> <!-- Top: Builder -->
+                    <line x1="160" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Left: Seller -->
+                    <line x1="640" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Right: Broker -->
+                    <line x1="160" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Left: Lawyer -->
+                    <line x1="640" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Right: Bank -->
 
-                    <!-- Traveling Light Particles (Brass Accent Flow) -->
-                    <circle r="3.5" class="spider-agenda-dot">
-                        <animateMotion dur="3.2s" repeatCount="indefinite" path="M 450 36 C 580 36, 600 180, 680 180"></animateMotion>
+                    <!-- Traveling Light Particles (Inward Inflow to BUYER Node) -->
+                    <circle r="4" class="laser-flow-dot">
+                        <animateMotion dur="2.6s" repeatCount="indefinite" path="M 400 80 L 400 240"></animateMotion>
                     </circle>
-                    <circle r="3.5" class="spider-agenda-dot">
-                        <animateMotion dur="2.8s" repeatCount="indefinite" path="M 450 108 C 560 108, 600 180, 680 180"></animateMotion>
+                    <circle r="4" class="laser-flow-dot">
+                        <animateMotion dur="3.0s" repeatCount="indefinite" path="M 160 200 L 400 240"></animateMotion>
                     </circle>
-                    <circle r="3.5" class="spider-agenda-dot">
-                        <animateMotion dur="3.5s" repeatCount="indefinite" path="M 450 180 C 560 180, 600 180, 680 180"></animateMotion>
+                    <circle r="4" class="laser-flow-dot">
+                        <animateMotion dur="2.8s" repeatCount="indefinite" path="M 640 200 L 400 240"></animateMotion>
                     </circle>
-                    <circle r="3.5" class="spider-agenda-dot">
-                        <animateMotion dur="3.0s" repeatCount="indefinite" path="M 450 252 C 560 252, 600 180, 680 180"></animateMotion>
+                    <circle r="4" class="laser-flow-dot">
+                        <animateMotion dur="3.4s" repeatCount="indefinite" path="M 160 360 L 400 240"></animateMotion>
                     </circle>
-                    <circle r="3.5" class="spider-agenda-dot">
-                        <animateMotion dur="3.4s" repeatCount="indefinite" path="M 450 324 C 580 324, 600 180, 680 180"></animateMotion>
+                    <circle r="4" class="laser-flow-dot">
+                        <animateMotion dur="3.1s" repeatCount="indefinite" path="M 640 360 L 400 240"></animateMotion>
                     </circle>
                 </svg>
 
-                <!-- Left Column: Stakeholders & Self-Interest Incentives -->
-                <div class="editorial-stakeholders">
-                    <div class="stakeholder-item">
-                        <span class="stakeholder-name">Builder</span>
-                        <span class="stakeholder-duty">Maximise inventory sales</span>
+                <!-- Central BUYER Focal Node (Dark Navy Circle with User Icon) -->
+                <div class="radial-buyer-core">
+                    <div class="buyer-core-icon">
+                        <i data-feather="user"></i>
                     </div>
-                    <div class="stakeholder-item">
-                        <span class="stakeholder-name">Broker</span>
-                        <span class="stakeholder-duty">Close the deal</span>
-                    </div>
-                    <div class="stakeholder-item">
-                        <span class="stakeholder-name">Bank</span>
-                        <span class="stakeholder-duty">Protect the loan</span>
-                    </div>
-                    <div class="stakeholder-item">
-                        <span class="stakeholder-name">Seller</span>
-                        <span class="stakeholder-duty">Maximise sale price</span>
-                    </div>
-                    <div class="stakeholder-item">
-                        <span class="stakeholder-name">Lawyer</span>
-                        <span class="stakeholder-duty">Reduce legal risk</span>
+                    <span class="buyer-core-text">BUYER</span>
+                </div>
+
+                <!-- 5 Outer Stakeholder Cards (Matching Reference Image Pixel Structure) -->
+                <!-- 1. Top Center: Builder -->
+                <div class="radial-card card-builder">
+                    <div class="radial-card-icon"><i data-feather="home"></i></div>
+                    <div class="radial-card-content">
+                        <div class="radial-card-name">Builder</div>
+                        <div class="radial-card-role">Sell Inventory</div>
                     </div>
                 </div>
 
-                <!-- Right Column: Option A Pure Typography BUYER Representation -->
-                <div class="buyer-pure-editorial">
-                    <h3 class="buyer-card-title">BUYER</h3>
-                    <div class="buyer-card-sub">Independent Representation</div>
-                    <ul class="buyer-card-bullets">
-                        <li>Only your interests</li>
-                        <li>No inventory to sell</li>
-                        <li>No transaction targets</li>
-                        <li>One accountable advisor</li>
-                    </ul>
+                <!-- 2. Middle Left: Seller -->
+                <div class="radial-card card-seller">
+                    <div class="radial-card-icon"><i data-feather="user-check"></i></div>
+                    <div class="radial-card-content">
+                        <div class="radial-card-name">Seller</div>
+                        <div class="radial-card-role">Maximize price</div>
+                    </div>
+                </div>
+
+                <!-- 3. Middle Right: Broker -->
+                <div class="radial-card card-broker">
+                    <div class="radial-card-icon"><i data-feather="briefcase"></i></div>
+                    <div class="radial-card-content">
+                        <div class="radial-card-name">Broker</div>
+                        <div class="radial-card-role">Close transaction</div>
+                    </div>
+                </div>
+
+                <!-- 4. Bottom Left: Lawyer -->
+                <div class="radial-card card-lawyer">
+                    <div class="radial-card-icon"><i data-feather="scale"></i></div>
+                    <div class="radial-card-content">
+                        <div class="radial-card-name">Lawyer</div>
+                        <div class="radial-card-role">Review legal risk</div>
+                    </div>
+                </div>
+
+                <!-- 5. Bottom Right: Bank -->
+                <div class="radial-card card-bank">
+                    <div class="radial-card-icon"><i data-feather="shield"></i></div>
+                    <div class="radial-card-content">
+                        <div class="radial-card-name">Bank</div>
+                        <div class="radial-card-role">Protect lending risk</div>
+                    </div>
                 </div>
 
             </div>
