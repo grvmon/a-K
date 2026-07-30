@@ -3598,21 +3598,29 @@ body {
     stroke-width: 2.2px;
 }
 
-/* Priority 6 & Priority 4: Center Column — Largest card, Deep Navy, Subtle Pulsing Glow */
+/* Center Column: Acre&Key Dark Blue Filter Shield (Matching Reference Dark Banner Style) */
 .center-badge-card {
+    position: relative;
     background: var(--deep-navy);
-    border: 1.5px solid var(--refined-brass);
+    border: 1.5px solid rgba(184, 142, 82, 0.45);
     border-radius: 18px;
-    padding: 2.4rem 1.8rem;
+    padding: 2.2rem 1.8rem;
     color: var(--white);
-    text-align: center;
     box-shadow: 0 16px 45px rgba(31, 43, 56, 0.22);
+    display: flex;
+    align-items: stretch;
+    gap: 1.25rem;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    animation: filterShieldPulse 4s infinite ease-in-out;
+}
+
+.center-card-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
-    transition: transform 300ms ease, box-shadow 300ms ease;
-    animation: filterShieldPulse 4s infinite ease-in-out;
+    text-align: center;
+    gap: 1.1rem;
+    width: 100%;
 }
 
 @keyframes filterShieldPulse {
