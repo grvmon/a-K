@@ -3548,26 +3548,18 @@ body {
     height: 440px;
 }
 
-/* Single Item Row (Symmetrical Inner Padding & Rounded Corner Radius) */
+/* Single Item Row (Static Symmetrical Box) */
 .flow-item {
     display: flex;
     align-items: center;
     gap: 1.0rem;
-    padding: 0.7rem 1.0rem; /* Equal 1.0rem horizontal padding on left & right sides */
+    padding: 0.7rem 1.0rem;
     border-radius: 10px;
     background: #FAF8F5;
     border: 1px solid rgba(184, 142, 82, 0.22);
     box-shadow: 0 2px 6px rgba(31, 43, 56, 0.03);
-    transition: all 0.25s ease;
     box-sizing: border-box;
     height: 58px;
-}
-
-.flow-item:hover {
-    border-color: rgba(184, 142, 82, 0.55);
-    background: #FFFFFF;
-    box-shadow: 0 4px 14px rgba(184, 142, 82, 0.12);
-    transform: translateX(-2px);
 }
 
 .flow-item-icon {
