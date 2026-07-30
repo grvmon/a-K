@@ -156,25 +156,30 @@
 
             <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
             <div class="agenda-flow-container">
-                <!-- SVG Bezier Funnel Flow: Noise -> Analysis (Disappears inside Shield) -> Luminous Clarity Emergence -->
+                <!-- SVG Bezier Funnel Flow: Exact Card Edge-to-Edge Connection with Gold Arrowheads -->
                 <svg class="flow-svg-beams" viewBox="0 0 1160 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Incoming Funnel Paths: Left (x=315) -> Absorb Node (x=410, y=240) -->
-                        <path id="flow-l1" d="M 315 88 C 365 88, 380 240, 410 240"/>
-                        <path id="flow-l2" d="M 315 156 C 360 156, 380 240, 410 240"/>
-                        <path id="flow-l3" d="M 315 224 C 360 224, 380 240, 410 240"/>
-                        <path id="flow-l4" d="M 315 292 C 360 292, 380 240, 410 240"/>
-                        <path id="flow-l5" d="M 315 360 C 365 360, 380 240, 410 240"/>
+                        <!-- Incoming Funnel Paths: From Left Card Outer Edge (x=315) -> Center Card Left Outer Edge (x=410) -->
+                        <path id="flow-l1" d="M 315 94 C 365 94, 380 240, 410 240"/>
+                        <path id="flow-l2" d="M 315 162 C 360 162, 380 240, 410 240"/>
+                        <path id="flow-l3" d="M 315 230 C 360 230, 380 240, 410 240"/>
+                        <path id="flow-l4" d="M 315 298 C 360 298, 380 240, 410 240"/>
+                        <path id="flow-l5" d="M 315 366 C 365 366, 380 240, 410 240"/>
 
-                        <!-- Outgoing Clarity Paths: Emerge Node (x=750, y=240) -> Right (x=845) -->
-                        <path id="flow-r1" d="M 750 240 C 780 240, 795 100, 845 100"/>
-                        <path id="flow-r2" d="M 750 240 C 780 240, 795 190, 845 190"/>
-                        <path id="flow-r3" d="M 750 240 C 780 240, 795 280, 845 280"/>
-                        <path id="flow-r4" d="M 750 240 C 780 240, 795 370, 845 370"/>
+                        <!-- Outgoing Clarity Paths: From Center Card Right Outer Edge (x=750) -> Right Card Outer Edge (x=845) -->
+                        <path id="flow-r1" d="M 750 240 C 780 240, 795 106, 845 106"/>
+                        <path id="flow-r2" d="M 750 240 C 780 240, 795 195, 845 195"/>
+                        <path id="flow-r3" d="M 750 240 C 780 240, 795 284, 845 284"/>
+                        <path id="flow-r4" d="M 750 240 C 780 240, 795 373, 845 373"/>
+
+                        <!-- Gold Arrowhead Marker for Outgoing Beams -->
+                        <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
+                        </marker>
 
                         <!-- Luminous Outgoing Glow Filter -->
                         <filter id="clarity-glow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="6" result="blur" />
+                            <feGaussianBlur stdDeviation="5" result="blur" />
                             <feMerge>
                                 <feMergeNode in="blur" />
                                 <feMergeNode in="SourceGraphic" />
@@ -182,35 +187,34 @@
                         </filter>
                     </defs>
 
-                    <!-- Left to Center Beams (Dotted incoming noise connectors converging into single entry point) -->
+                    <!-- Left to Center Beams (Dotted incoming connectors touching card edges) -->
                     <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
 
-                    <!-- Center to Right Beams (Luminous solid gold outgoing clarity connectors) -->
-                    <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold"/>
+                    <!-- Center to Right Beams (Solid gold outgoing connectors with arrows touching right card edge) -->
+                    <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
+                    <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
+                    <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
+                    <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
 
-                    <!-- Filter Absorb & Emerge Node Portals -->
+                    <!-- Edge Portal Anchor Nodes on Center Card Edges (x=410 & x=750) -->
                     <circle cx="410" cy="240" r="8" class="filter-entry-glow" filter="url(#clarity-glow)"/>
                     <circle cx="750" cy="240" r="8" class="filter-exit-glow" filter="url(#clarity-glow)"/>
 
-                    <!-- Incoming Noise Particles: Animate Left -> Disappear/Absorb inside Center Protection Card -->
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 315 88 C 365 88, 380 240, 410 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 315 156 C 360 156, 380 240, 410 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 315 224 C 360 224, 380 240, 410 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 292 C 360 292, 380 240, 410 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 360 C 365 360, 380 240, 410 240"/></circle>
+                    <!-- Animated Particles Traveling Edge-to-Edge -->
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 315 94 C 365 94, 380 240, 410 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 315 162 C 360 162, 380 240, 410 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 315 230 C 360 230, 380 240, 410 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 298 C 360 298, 380 240, 410 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 366 C 365 366, 380 240, 410 240"/></circle>
 
-                    <!-- Outgoing Luminous Clarity Particles: Emerge Brighter & Cleaner from Right Exit Node -->
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 100, 845 100"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 190, 845 190"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 280, 845 280"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 370, 845 370"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 106, 845 106"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 195, 845 195"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 284, 845 284"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 750 240 C 780 240, 795 373, 845 373"/></circle>
                 </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
