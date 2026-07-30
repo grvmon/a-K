@@ -3444,7 +3444,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 1120px;
-    margin: 0 auto 5rem auto;
+    margin: 0 auto 7rem auto;
     display: grid;
     grid-template-columns: 280px 370px 280px;
     gap: 2.5rem;
@@ -3463,11 +3463,21 @@ body {
     z-index: 1;
 }
 
-.flow-beam-line {
+/* Priority 4: Dotted connectors incoming from left */
+.flow-beam-dotted {
     fill: none;
-    stroke: rgba(184, 142, 82, 0.35);
+    stroke: rgba(184, 142, 82, 0.28);
     stroke-width: 1.5;
     stroke-dasharray: 4 5;
+}
+
+/* Priority 4: Solid gold connectors exiting from center toward right */
+.flow-beam-solid-gold {
+    fill: none;
+    stroke: url(#gold-gradient-beam);
+    stroke: var(--refined-brass);
+    stroke-width: 2;
+    opacity: 0.85;
 }
 
 .flow-particle {
@@ -3492,16 +3502,28 @@ body {
     text-align: center;
 }
 
-/* Card Stack (Left & Right) */
-.flow-card-stack {
+/* Priority 6: Left Stack — Light border, NO shadow */
+.flow-col-left .flow-card-stack {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    background: #FFFFFF;
-    border: 1px solid rgba(184, 142, 82, 0.3);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(184, 142, 82, 0.2);
     border-radius: 14px;
     padding: 1rem 1.1rem;
-    box-shadow: 0 10px 30px rgba(31, 43, 56, 0.04);
+    box-shadow: none; /* No shadow */
+}
+
+/* Priority 6: Right Stack — Warm Ivory, Very subtle shadow, Thin border */
+.flow-col-right .flow-card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: var(--warm-ivory);
+    border: 1px solid rgba(184, 142, 82, 0.35);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 4px 18px rgba(31, 43, 56, 0.04);
 }
 
 /* Single Item Row */
@@ -3576,12 +3598,12 @@ body {
     stroke-width: 2.2px;
 }
 
-/* Center Column: Acre&Key Dark Navy Card */
+/* Priority 6 & Priority 4: Center Column — Largest card, Deep Navy, Subtle Pulsing Glow */
 .center-badge-card {
     background: var(--deep-navy);
     border: 1.5px solid var(--refined-brass);
     border-radius: 18px;
-    padding: 2.2rem 1.8rem;
+    padding: 2.4rem 1.8rem;
     color: var(--white);
     text-align: center;
     box-shadow: 0 16px 45px rgba(31, 43, 56, 0.22);
@@ -3590,11 +3612,21 @@ body {
     align-items: center;
     gap: 1.2rem;
     transition: transform 300ms ease, box-shadow 300ms ease;
+    animation: filterShieldPulse 4s infinite ease-in-out;
+}
+
+@keyframes filterShieldPulse {
+    0%, 100% {
+        box-shadow: 0 16px 45px rgba(31, 43, 56, 0.22), 0 0 0px rgba(184, 142, 82, 0);
+    }
+    50% {
+        box-shadow: 0 20px 55px rgba(31, 43, 56, 0.28), 0 0 25px rgba(184, 142, 82, 0.25);
+    }
 }
 
 .center-badge-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 22px 55px rgba(31, 43, 56, 0.3);
+    box-shadow: 0 22px 55px rgba(31, 43, 56, 0.3), 0 0 30px rgba(184, 142, 82, 0.35);
 }
 
 .center-brand-logo {
@@ -3752,29 +3784,31 @@ body {
     }
 }
 
-/* Closing Emotional Payoff Pull Quote (+20% Font Size, Generous Whitespace) */
+/* Priority 9: Closing Emotional Payoff Pull Quote (Generous Whitespace + Matching Header Typography Bookend) */
 .agenda-emotional-payoff {
     text-align: center;
-    max-width: 860px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 4rem auto 0 auto;
     padding: 0;
 }
 
 .payoff-main-text {
     font-family: var(--font-heading);
-    font-size: clamp(1.9rem, 1.5rem + 1.2vw, 2.7rem);
-    line-height: 1.38;
+    font-size: clamp(1.8rem, 1.4rem + 1.1vw, 2.5rem);
+    line-height: 1.35;
     color: var(--deep-navy);
     font-weight: 400;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
+/* Priority 9: "We are." matches exact typography of "Who protects yours?" */
 .payoff-closing {
     font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 2rem + 1.4vw, 3.4rem);
+    font-size: clamp(1.55rem, 1.3rem + 1vw, 2.05rem); /* Exactly matches Section 2 .agenda-title headline size */
     font-weight: 400;
     color: var(--refined-brass);
-    font-style: italic;
+    letter-spacing: -0.01em;
+    font-style: normal;
 }
 
 /* Responsive Layout */
