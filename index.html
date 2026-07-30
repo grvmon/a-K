@@ -166,11 +166,11 @@
                         <path id="flow-l4" d="M 315 298 C 370 298, 395 240, 440 240"/>
                         <path id="flow-l5" d="M 315 366 C 375 366, 395 240, 440 240"/>
 
-                        <!-- Outgoing Clarity Paths: Emerging From Inside Center Card (x=720, y=240) -> Directly Linking to Right Items (x=875) -->
-                        <path id="flow-r1" d="M 720 240 C 770 240, 800 106, 875 106"/>
-                        <path id="flow-r2" d="M 720 240 C 770 240, 800 195, 875 195"/>
-                        <path id="flow-r3" d="M 720 240 C 770 240, 800 284, 875 284"/>
-                        <path id="flow-r4" d="M 720 240 C 770 240, 800 373, 875 373"/>
+                        <!-- Outgoing Clarity Paths: Emerging From Inside Center Card (x=720, y=240) -> Linking Cleanly to Right Card Box Border (x=845) -->
+                        <path id="flow-r1" d="M 720 240 C 765 240, 785 106, 845 106"/>
+                        <path id="flow-r2" d="M 720 240 C 765 240, 785 195, 845 195"/>
+                        <path id="flow-r3" d="M 720 240 C 765 240, 785 284, 845 284"/>
+                        <path id="flow-r4" d="M 720 240 C 765 240, 785 373, 845 373"/>
 
                         <!-- Gold Arrowhead Marker for Outgoing Beams -->
                         <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -194,7 +194,7 @@
                     <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
 
-                    <!-- Center to Right Beams (Solid gold outgoing connectors with arrows touching right card) -->
+                    <!-- Center to Right Beams (Solid gold outgoing connectors with arrows touching right card border) -->
                     <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
                     <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
                     <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold" marker-end="url(#gold-arrow)"/>
@@ -207,10 +207,10 @@
                     <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 315 298 C 370 298, 395 240, 440 240"/></circle>
                     <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 315 366 C 375 366, 395 240, 440 240"/></circle>
 
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 240 C 770 240, 800 106, 875 106"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 240 C 770 240, 800 195, 875 195"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 240 C 770 240, 800 284, 875 284"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 240 C 770 240, 800 373, 875 373"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 240 C 765 240, 785 106, 845 106"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 240 C 765 240, 785 195, 845 195"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 240 C 765 240, 785 284, 845 284"/></circle>
+                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 240 C 765 240, 785 373, 845 373"/></circle>
                 </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
