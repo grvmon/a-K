@@ -1208,73 +1208,31 @@
         </div>
     </div>
 
-    <!-- Cookie Consent & Floating Widget Top Alignment Script -->
+    <!-- Feather Icons Init Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof feather !== 'undefined') {
                 feather.replace();
             }
 
+            // Cookie Consent Pop-up Logic (Shows once per session per customer)
             const cookieBanner = document.getElementById('cookieBanner');
             const acceptBtn = document.getElementById('cookieAcceptBtn');
             const rejectBtn = document.getElementById('cookieRejectBtn');
-            const headerNav = document.getElementById('header-nav');
-            const mobileDrawer = document.getElementById('mobile-drawer');
 
-            function getBannerHeight() {
-                if (cookieBanner && cookieBanner.classList.contains('active')) {
-                    return cookieBanner.offsetHeight || 0;
-                }
-                return 0;
-            }
-
-            function updateLayoutSpacing() {
-                const height = getBannerHeight();
-                document.body.style.paddingTop = height + 'px';
-
-                if (headerNav) {
-                    headerNav.style.top = height + 'px';
-                }
-
-                if (mobileDrawer) {
-                    mobileDrawer.style.top = (80 + height) + 'px';
-                }
-
-                // Dynamically offset any fixed or absolute floating widgets with data-original-top attribute
-                const floatingWidgets = document.querySelectorAll('[data-original-top]');
-                floatingWidgets.forEach(function(widget) {
-                    const originalTop = parseFloat(widget.getAttribute('data-original-top')) || 0;
-                    widget.style.top = (originalTop + height) + 'px';
-                });
-            }
-
-            // Show banner if consent not given for session
             if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
                 setTimeout(function() {
-                    if (cookieBanner) {
-                        cookieBanner.classList.add('active');
-                        updateLayoutSpacing();
-                    }
-                }, 400);
-            } else {
-                updateLayoutSpacing();
+                    if (cookieBanner) cookieBanner.classList.add('active');
+                }, 800);
             }
 
             function dismissCookieBanner() {
-                if (cookieBanner) {
-                    cookieBanner.classList.remove('active');
-                }
+                if (cookieBanner) cookieBanner.classList.remove('active');
                 sessionStorage.setItem('ackey_cookie_consent_session', 'true');
-                updateLayoutSpacing();
             }
 
             if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
             if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
-
-            // Recalculate layout spacing on browser resize (e.g., text wrapping height changes)
-            window.addEventListener('resize', function() {
-                updateLayoutSpacing();
-            });
 
             // Escape key listener for accessibility
             document.addEventListener('keydown', function(e) {
