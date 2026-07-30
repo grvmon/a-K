@@ -3509,69 +3509,6 @@ body {
     z-index: 6;
 }
 
-/* ================= 9-STEP CHRONOLOGICAL SEQUENCE ANIMATION ================= */
-.seq-left-col,
-.seq-left-item,
-.seq-incoming-beam,
-.seq-incoming-particle,
-.seq-portal-node,
-.seq-center-col,
-.seq-center-hero,
-.seq-center-meta,
-.seq-outgoing-beam,
-.seq-outgoing-particle,
-.seq-right-col,
-.seq-right-item,
-.seq-payoff-main,
-.seq-payoff-closing {
-    opacity: 0;
-    transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Initial Offsets */
-.seq-left-col { transform: translateY(20px); }
-.seq-left-item { transform: translateX(-15px); }
-.seq-center-col { transform: scale(0.96); }
-.seq-center-hero { transform: translateY(10px); }
-.seq-right-col { transform: translateY(20px); }
-.seq-right-item { transform: translateX(15px); }
-.seq-payoff-main { transform: translateY(15px); }
-.seq-payoff-closing { transform: translateY(15px); }
-
-/* Active States applied chronologically by JS */
-.seq-active {
-    opacity: 1 !important;
-    transform: translate(0, 0) scale(1) !important;
-}
-
-/* Special Active State for Center Shield Card */
-.seq-center-col.seq-active {
-    box-shadow: 0 20px 50px rgba(31, 43, 56, 0.3), 0 0 30px rgba(184, 142, 82, 0.25) !important;
-}
-
-/* Bottom Emotional Payoff Block Styling */
-.agenda-emotional-payoff {
-    text-align: center;
-    margin-top: 4.5rem;
-}
-
-.payoff-main-text {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--deep-navy);
-    line-height: 1.35;
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-}
-
-.payoff-closing {
-    font-family: var(--font-heading);
-    font-size: 2.3rem;
-    color: var(--refined-brass);
-    font-weight: 400;
-    letter-spacing: -0.01em;
-}
-
 /* Column General Styling */
 .flow-col {
     position: relative;
