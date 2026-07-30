@@ -3460,43 +3460,48 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* 5. DASH PATTERN & 9. VISUAL WEIGHT: Architectural 72% Opacity & 5px 4px Dash Array */
+/* Priority 4: Dotted connectors incoming from left */
 .flow-beam-dotted {
     fill: none;
-    stroke: rgba(184, 142, 82, 0.72); /* 72% Visual Weight */
-    stroke-width: 1.5px;
-    stroke-dasharray: 5 4;
-    stroke-dashoffset: 200;
-    animation: drawAppleMapsRoute 2.8s ease-out forwards;
+    stroke: rgba(184, 142, 82, 0.28);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 5;
 }
 
-/* Outgoing Solid Gold Beams */
+/* Priority 4: Solid gold connectors exiting from center toward right */
 .flow-beam-solid-gold {
     fill: none;
+    stroke: url(#gold-gradient-beam);
     stroke: var(--refined-brass);
-    stroke-width: 1.8px;
-    opacity: 0.75;
-    stroke-dasharray: 200;
-    stroke-dashoffset: 200;
-    animation: drawAppleMapsRoute 2.4s ease-out 1.2s forwards;
+    stroke-width: 2;
+    opacity: 0.85;
 }
 
-/* 7. CONVERGENCE NODE: 13px Soft Antique Brass (No glow, no shadow) */
-.convergence-node-brass {
+/* Incoming Noise Particles (Muted, smaller, absorbed into center card) */
+.flow-particle-incoming {
+    fill: rgba(184, 142, 82, 0.7);
+    opacity: 0.8;
+}
+
+/* Outgoing Clarity Particles (Brighter, larger, luminous gold) */
+.flow-particle-outgoing {
+    fill: #FFDF9E;
+    filter: drop-shadow(0 0 8px #B88E52) drop-shadow(0 0 16px #FFDF9E);
+}
+
+/* Entry & Exit Portal Glow Nodes on Center Shield Layer */
+.filter-entry-glow {
     fill: #B88E52;
-    stroke: none;
-    filter: none;
-    box-shadow: none;
+    opacity: 0.85;
 }
 
-/* 10. ANIMATION: Apple Maps Route Animation (Path grows outward from stakeholder) */
-@keyframes drawAppleMapsRoute {
-    to {
-        stroke-dashoffset: 0;
-    }
+.filter-exit-glow {
+    fill: #FFDF9E;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #B88E52);
 }
 
 /* Ensure SVG beams pass behind inner content but over card backdrop */
