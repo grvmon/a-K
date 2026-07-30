@@ -3537,14 +3537,14 @@ body {
 .flow-col-right .flow-card-stack {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1.1rem; /* Increased vertical spacing between rows */
+    justify-content: flex-start;
+    gap: 1.2rem;
     background: #FFFFFF;
     border: 1px solid rgba(184, 142, 82, 0.35);
     border-radius: 12px;
-    padding: 1.6rem 1.4rem; /* Increased padding inside cards */
+    padding: 1.6rem 1.4rem;
     box-shadow: 0 10px 30px rgba(31, 43, 56, 0.05);
-    min-height: 430px; /* Expanded min-height for open, spacious layout */
+    height: 440px; /* Fixed height for deterministic optical Y-center alignment */
 }
 
 /* Single Item Row */
