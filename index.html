@@ -154,67 +154,8 @@
                 </p>
             </div>
 
-            <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
+            <!-- Interactive 3-Column Buyer Protection Layer Layout -->
             <div class="agenda-flow-container">
-                <!-- SVG Bezier Funnel Flow: Seamless Funnel Passing Inside Center Protection Layer -->
-                <svg class="flow-svg-beams" viewBox="0 0 1160 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                    <defs>
-                        <!-- Incoming Funnel Paths: Starting at Center-Right Edge of Left Cards (x=350, Y = 54, 118, 182, 246, 310) -> Funneling into Center Card Left Border (x=400, y=220) -->
-                        <path id="flow-l1" d="M 350 54 C 380 54, 390 220, 400 220"/>
-                        <path id="flow-l2" d="M 350 118 C 375 118, 390 220, 400 220"/>
-                        <path id="flow-l3" d="M 350 182 L 400 220"/>
-                        <path id="flow-l4" d="M 350 246 C 375 246, 390 220, 400 220"/>
-                        <path id="flow-l5" d="M 350 310 C 380 310, 390 220, 400 220"/>
-
-                        <!-- Outgoing Clarity Paths: Emerging From Right Border of Center Card (x=740, y=220) -> Docking Exactly at Right Card Outer Left Border (x=810) -->
-                        <path id="flow-r1" d="M 740 220 C 765 220, 785 54, 810 54"/>
-                        <path id="flow-r2" d="M 740 220 C 765 220, 785 118, 810 118"/>
-                        <path id="flow-r3" d="M 740 220 C 765 220, 785 182, 810 182"/>
-                        <path id="flow-r4" d="M 740 220 C 765 220, 785 246, 810 246"/>
-
-                        <!-- Gold Arrowhead Marker for Outgoing Beams -->
-                        <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#B88E52"/>
-                        </marker>
-
-                        <!-- Luminous Outgoing Glow Filter -->
-                        <filter id="clarity-glow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="4" result="blur" />
-                            <feMerge>
-                                <feMergeNode in="blur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-
-                    <!-- Left to Center Beams (Clean Dotted Funnel Lines Matching Reference) -->
-                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
-
-                    <!-- Convergence Ring Node (Docked on Center Card Left Edge) -->
-                    <circle cx="400" cy="220" r="6.5" class="convergence-node-ring"/>
-
-                    <!-- Center to Right Beams (Clean solid gold outgoing connectors without arrowheads) -->
-                    <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold"/>
-
-                    <!-- Animated Particles Seamlessly Entering and Emerging Inside Card -->
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 350 54 C 380 54, 390 220, 400 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 350 118 C 375 118, 390 220, 400 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 350 182 L 400 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 350 246 C 375 246, 390 220, 400 220"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 350 310 C 380 310, 390 220, 400 220"/></circle>
-
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 54, 810 54"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 118, 810 118"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 182, 810 182"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 740 220 C 765 220, 785 246, 810 246"/></circle>
-                </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
                 <div class="flow-col flow-col-left">
