@@ -159,40 +159,14 @@
                 
                 <!-- SVG Inward Laser Beams Connecting Outer Cards to Central BUYER Node -->
                 <svg class="radial-laser-svg" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                    <defs>
-                        <!-- Path definitions for text-on-path labels -->
-                        <path id="path-builder" d="M 400 80 L 400 240"/>
-                        <path id="path-seller"  d="M 160 200 L 400 240"/>
-                        <path id="path-broker"  d="M 640 200 L 400 240"/>
-                        <path id="path-lawyer"  d="M 160 360 L 400 240"/>
-                        <path id="path-bank"    d="M 640 360 L 400 240"/>
-                    </defs>
+                    <!-- Laser Lines: (x1, y1) Outer Card Centers -> (400, 240) Center BUYER Node -->
+                    <line x1="400" y1="80" x2="400" y2="240" class="laser-beam-path"></line> <!-- Top: Builder -->
+                    <line x1="160" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Left: Seller -->
+                    <line x1="640" y1="200" x2="400" y2="240" class="laser-beam-path"></line> <!-- Mid Right: Broker -->
+                    <line x1="160" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Left: Lawyer -->
+                    <line x1="640" y1="360" x2="400" y2="240" class="laser-beam-path"></line> <!-- Bottom Right: Bank -->
 
-                    <!-- Laser beam lines -->
-                    <line x1="400" y1="80"  x2="400" y2="240" class="laser-beam-path"></line>
-                    <line x1="160" y1="200" x2="400" y2="240" class="laser-beam-path"></line>
-                    <line x1="640" y1="200" x2="400" y2="240" class="laser-beam-path"></line>
-                    <line x1="160" y1="360" x2="400" y2="240" class="laser-beam-path"></line>
-                    <line x1="640" y1="360" x2="400" y2="240" class="laser-beam-path"></line>
-
-                    <!-- Contextual mid-line labels: what each stakeholder sends toward the buyer -->
-                    <text class="laser-label">
-                        <textPath href="#path-builder" startOffset="28%">Pushes inventory</textPath>
-                    </text>
-                    <text class="laser-label">
-                        <textPath href="#path-seller" startOffset="18%">Wants highest price</textPath>
-                    </text>
-                    <text class="laser-label">
-                        <textPath href="#path-broker" startOffset="18%">Earns on closing</textPath>
-                    </text>
-                    <text class="laser-label">
-                        <textPath href="#path-lawyer" startOffset="18%">Limits own liability</textPath>
-                    </text>
-                    <text class="laser-label">
-                        <textPath href="#path-bank" startOffset="18%">Secures collateral</textPath>
-                    </text>
-
-                    <!-- Traveling light particles inward to BUYER -->
+                    <!-- Traveling Light Particles (Inward Inflow to BUYER Node) -->
                     <circle r="4" class="laser-flow-dot">
                         <animateMotion dur="2.6s" repeatCount="indefinite" path="M 400 80 L 400 240"></animateMotion>
                     </circle>
