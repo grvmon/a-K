@@ -3668,63 +3668,65 @@ body {
     line-height: 1;
 }
 
-.protection-layer-kicker {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    font-weight: 800;
+/* Hero Dominant Focal Statement (Top of Card Position, Supreme Dominance) */
+.center-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 2.15rem; /* Enlarged to dominate top of card */
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0.2rem 0 0.1rem 0;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.headline-shield {
+    width: 28px;
+    height: 28px;
     color: var(--refined-brass);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    background: rgba(184, 142, 82, 0.12);
-    border: 1px solid rgba(184, 142, 82, 0.35);
-    border-radius: 20px;
-    padding: 0.25rem 0.8rem;
-    margin-bottom: -0.2rem;
+    filter: drop-shadow(0 0 8px rgba(184, 142, 82, 0.75));
+}
+
+.center-divider-line {
+    width: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--refined-brass), transparent);
+    opacity: 0.6;
+    margin: 0.1rem 0 0.4rem 0;
 }
 
 .center-brand-logo {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: -0.1rem;
 }
 
-/* Match brand logo font (Josefin Sans) and reduce size by 15% */
+/* Secondary Brand Signature (Subtle, refined) */
 .brand-name {
     font-family: var(--font-logo);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     letter-spacing: -0.02em;
-    color: rgba(255, 255, 255, 0.7); /* Subtle secondary contrast */
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1;
 }
 
-/* Hero Focal Statement: Maximum Contrast */
-.center-headline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.65rem;
-    font-family: var(--font-heading);
-    font-size: 1.85rem;
-    font-weight: 400;
-    color: #FFFFFF; /* High contrast bright white */
-    margin: 0.4rem 0;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.headline-shield {
-    width: 24px;
-    height: 24px;
+/* Secondary Layer Tag */
+.protection-layer-kicker {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 800;
     color: var(--refined-brass);
-    filter: drop-shadow(0 0 6px rgba(184, 142, 82, 0.6));
-}
-
-.center-divider-line {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--refined-brass), transparent);
-    opacity: 0.5;
-    margin: 0.1rem 0 0.5rem 0;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: rgba(184, 142, 82, 0.1);
+    border: 1px solid rgba(184, 142, 82, 0.3);
+    border-radius: 20px;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 0.2rem;
+    opacity: 0.85;
 }
 
 /* Supporting Proof Bullets: +8px Vertical Spacing & High-Contrast Key Hero Bullet */
