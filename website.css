@@ -3489,6 +3489,8 @@ body {
 .flow-col {
     position: relative;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
 }
 
 .flow-col-header {
@@ -3500,30 +3502,38 @@ body {
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
+    min-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Priority 6: Left Stack — Architectural 8px border-radius */
 .flow-col-left .flow-card-stack {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 0.7rem;
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(184, 142, 82, 0.2);
     border-radius: 8px;
-    padding: 1rem 1.1rem;
+    padding: 1.25rem 1.1rem;
     box-shadow: none;
+    min-height: 380px;
 }
 
 /* Priority 6: Right Stack — Architectural 8px border-radius */
 .flow-col-right .flow-card-stack {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 0.7rem;
     background: var(--warm-ivory);
     border: 1px solid rgba(184, 142, 82, 0.35);
     border-radius: 8px;
-    padding: 1rem 1.1rem;
+    padding: 1.25rem 1.1rem;
     box-shadow: 0 4px 18px rgba(31, 43, 56, 0.04);
+    min-height: 380px;
 }
 
 /* Single Item Row */
@@ -3610,6 +3620,7 @@ body {
     display: flex;
     align-items: stretch;
     gap: 1.25rem;
+    min-height: 380px;
     transition: transform 300ms ease, box-shadow 300ms ease;
     animation: filterShieldPulse 4s infinite ease-in-out;
 }
