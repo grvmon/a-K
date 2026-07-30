@@ -3485,6 +3485,22 @@ body {
     filter: drop-shadow(0 0 4px rgba(184, 142, 82, 0.9));
 }
 
+/* Entry & Exit Portal Glow Nodes on Center Shield Layer */
+.filter-entry-glow {
+    fill: #B88E52;
+    opacity: 0.85;
+}
+
+.filter-exit-glow {
+    fill: #B88E52;
+    opacity: 0.95;
+}
+
+/* Ensure SVG beams pass behind inner content but over card backdrop */
+.flow-svg-beams {
+    z-index: 6;
+}
+
 /* Column General Styling */
 .flow-col {
     position: relative;

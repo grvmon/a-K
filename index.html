@@ -153,49 +153,60 @@
 
             <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
             <div class="agenda-flow-container">
-                
-                <!-- SVG Bezier Beam Animations connecting Left -> Center -> Right -->
+                             <!-- SVG Bezier Beam Animations passing through the Center Filter Shield Layer -->
                 <svg class="flow-svg-beams" viewBox="0 0 1100 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Paths Left -> Center -->
-                        <path id="flow-l1" d="M 280 88 C 340 88, 350 240, 410 240"/>
-                        <path id="flow-l2" d="M 280 156 C 330 156, 350 240, 410 240"/>
-                        <path id="flow-l3" d="M 280 224 C 330 224, 350 240, 410 240"/>
-                        <path id="flow-l4" d="M 280 292 C 330 292, 350 240, 410 240"/>
-                        <path id="flow-l5" d="M 280 360 C 340 360, 350 240, 410 240"/>
+                        <!-- Paths Left -> Extending Inside Center Card (x=440) -->
+                        <path id="flow-l1" d="M 290 88 C 350 88, 370 240, 440 240"/>
+                        <path id="flow-l2" d="M 290 156 C 340 156, 370 240, 440 240"/>
+                        <path id="flow-l3" d="M 290 224 C 340 224, 370 240, 440 240"/>
+                        <path id="flow-l4" d="M 290 292 C 340 292, 370 240, 440 240"/>
+                        <path id="flow-l5" d="M 290 360 C 350 360, 370 240, 440 240"/>
 
-                        <!-- Paths Center -> Right -->
-                        <path id="flow-r1" d="M 690 240 C 740 240, 760 100, 810 100"/>
-                        <path id="flow-r2" d="M 690 240 C 740 240, 760 190, 810 190"/>
-                        <path id="flow-r3" d="M 690 240 C 740 240, 760 280, 810 280"/>
-                        <path id="flow-r4" d="M 690 240 C 740 240, 760 370, 810 370"/>
+                        <!-- Paths Center Card (x=660) -> Right -->
+                        <path id="flow-r1" d="M 660 240 C 730 240, 750 100, 810 100"/>
+                        <path id="flow-r2" d="M 660 240 C 730 240, 750 190, 810 190"/>
+                        <path id="flow-r3" d="M 660 240 C 730 240, 750 280, 810 280"/>
+                        <path id="flow-r4" d="M 660 240 C 730 240, 750 370, 810 370"/>
+
+                        <!-- Gold Entry/Exit Glow Filters -->
+                        <filter id="entry-glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
                     </defs>
 
-                    <!-- Left to Center Beams (Dotted incoming connectors) -->
+                    <!-- Left to Center Beams (Dotted incoming connectors entering center card) -->
                     <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
                     <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
 
-                    <!-- Center to Right Beams (Solid gold outgoing connectors) -->
+                    <!-- Center to Right Beams (Solid gold outgoing connectors exiting center card) -->
                     <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold"/>
                     <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold"/>
                     <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold"/>
                     <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold"/>
 
-                    <!-- Particles: Left -> Center -->
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 280 88 C 340 88, 350 240, 410 240"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 280 156 C 330 156, 350 240, 410 240"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 280 224 C 330 224, 350 240, 410 240"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 280 292 C 330 292, 350 240, 410 240"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 280 360 C 340 360, 350 240, 410 240"/></circle>
+                    <!-- Entry/Exit Portal Glow Nodes on Center Card Edges -->
+                    <circle cx="380" cy="240" r="7" class="filter-entry-glow" filter="url(#entry-glow)"/>
+                    <circle cx="720" cy="240" r="7" class="filter-exit-glow" filter="url(#entry-glow)"/>
 
-                    <!-- Particles: Center -> Right -->
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 100, 810 100"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 190, 810 190"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 280, 810 280"/></circle>
-                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 690 240 C 740 240, 760 370, 810 370"/></circle>
+                    <!-- Particles: Left -> Center (Passing through entry boundary) -->
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 290 88 C 350 88, 370 240, 440 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 290 156 C 340 156, 370 240, 440 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 290 224 C 340 224, 370 240, 440 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 290 292 C 340 292, 370 240, 440 240"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 290 360 C 350 360, 370 240, 440 240"/></circle>
+
+                    <!-- Particles: Center -> Right (Exiting through exit boundary) -->
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 660 240 C 730 240, 750 100, 810 100"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 660 240 C 730 240, 750 190, 810 190"/></circle>
+                    <circle r="3.5" class="flow-particle"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 660 240 C 730 240, 750 280, 810 280"/></circle>
                 </svg>
 
                 <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
