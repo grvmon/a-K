@@ -152,7 +152,7 @@
             </div>
 
             <!-- Interactive 3-Column Buyer Protection Layer Animated Flow Diagram -->
-            <div class="agenda-flow-container">
+            <div class="agenda-flow-container seq-flow-section">
                 <!-- SVG Bezier Funnel Flow: Noise -> Analysis (Disappears inside Shield) -> Luminous Clarity Emergence -->
                 <svg class="flow-svg-beams" viewBox="0 0 1100 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
@@ -180,69 +180,70 @@
                     </defs>
 
                     <!-- Left to Center Beams (Dotted incoming noise connectors converging into single entry point) -->
-                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted"/>
-                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted"/>
+                    <use href="#flow-l1" class="flow-beam-line flow-beam-dotted seq-incoming-beam"/>
+                    <use href="#flow-l2" class="flow-beam-line flow-beam-dotted seq-incoming-beam"/>
+                    <use href="#flow-l3" class="flow-beam-line flow-beam-dotted seq-incoming-beam"/>
+                    <use href="#flow-l4" class="flow-beam-line flow-beam-dotted seq-incoming-beam"/>
+                    <use href="#flow-l5" class="flow-beam-line flow-beam-dotted seq-incoming-beam"/>
 
                     <!-- Center to Right Beams (Luminous solid gold outgoing clarity connectors) -->
-                    <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold"/>
-                    <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold"/>
+                    <use href="#flow-r1" class="flow-beam-line flow-beam-solid-gold seq-outgoing-beam"/>
+                    <use href="#flow-r2" class="flow-beam-line flow-beam-solid-gold seq-outgoing-beam"/>
+                    <use href="#flow-r3" class="flow-beam-line flow-beam-solid-gold seq-outgoing-beam"/>
+                    <use href="#flow-r4" class="flow-beam-line flow-beam-solid-gold seq-outgoing-beam"/>
 
                     <!-- Filter Absorb & Emerge Node Portals -->
-                    <circle cx="380" cy="240" r="8" class="filter-entry-glow" filter="url(#clarity-glow)"/>
-                    <circle cx="720" cy="240" r="8" class="filter-exit-glow" filter="url(#clarity-glow)"/>
+                    <circle cx="380" cy="240" r="8" class="filter-entry-glow seq-portal-node" filter="url(#clarity-glow)"/>
+                    <circle cx="720" cy="240" r="8" class="filter-exit-glow seq-portal-node" filter="url(#clarity-glow)"/>
 
                     <!-- Incoming Noise Particles: Animate Left -> Disappear/Absorb inside Center Protection Card -->
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 290 88 C 340 88, 350 240, 380 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 290 156 C 335 156, 350 240, 380 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 290 224 C 335 224, 350 240, 380 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 290 292 C 335 292, 350 240, 380 240"/></circle>
-                    <circle r="3" class="flow-particle-incoming"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 290 360 C 340 360, 350 240, 380 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming seq-incoming-particle"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 290 88 C 340 88, 350 240, 380 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming seq-incoming-particle"><animateMotion dur="2.8s" repeatCount="indefinite" path="M 290 156 C 335 156, 350 240, 380 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming seq-incoming-particle"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 290 224 C 335 224, 350 240, 380 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming seq-incoming-particle"><animateMotion dur="3.0s" repeatCount="indefinite" path="M 290 292 C 335 292, 350 240, 380 240"/></circle>
+                    <circle r="3" class="flow-particle-incoming seq-incoming-particle"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 290 360 C 340 360, 350 240, 380 240"/></circle>
 
                     <!-- Outgoing Luminous Clarity Particles: Emerge Brighter & Cleaner from Right Exit Node -->
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 100, 810 100"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 190, 810 190"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 280, 810 280"/></circle>
-                    <circle r="4" class="flow-particle-outgoing" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 370, 810 370"/></circle>
+                    <circle r="4" class="flow-particle-outgoing seq-outgoing-particle" filter="url(#clarity-glow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 100, 810 100"/></circle>
+                    <circle r="4" class="flow-particle-outgoing seq-outgoing-particle" filter="url(#clarity-glow)"><animateMotion dur="2.9s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 190, 810 190"/></circle>
+                    <circle r="4" class="flow-particle-outgoing seq-outgoing-particle" filter="url(#clarity-glow)"><animateMotion dur="2.3s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 280, 810 280"/></circle>
+                    <circle r="4" class="flow-particle-outgoing seq-outgoing-particle" filter="url(#clarity-glow)"><animateMotion dur="2.7s" repeatCount="indefinite" path="M 720 240 C 750 240, 760 370, 810 370"/></circle>
                 </svg>
 
-                <!-- Left Column: OTHERS REPRESENT THEIR INTERESTS -->
-                <div class="flow-col flow-col-left">
+                <!-- Step 1: Left Column appears -->
+                <div class="flow-col flow-col-left seq-left-col">
                     <div class="flow-col-header">OTHERS REPRESENT THEIR INTERESTS</div>
                     <div class="flow-card-stack">
-                        <div class="flow-item">
+                        <!-- Step 2: Each stakeholder lights up one by one -->
+                        <div class="flow-item seq-left-item" data-left-index="0">
                             <div class="flow-item-icon"><i data-feather="home"></i></div>
                             <div class="flow-item-text">
                                 <strong>Builder</strong>
                                 <span>Focused on selling inventory.</span>
                             </div>
                         </div>
-                        <div class="flow-item">
+                        <div class="flow-item seq-left-item" data-left-index="1">
                             <div class="flow-item-icon"><i data-feather="users"></i></div>
                             <div class="flow-item-text">
                                 <strong>Broker</strong>
                                 <span>Focused on closing the deal.</span>
                             </div>
                         </div>
-                        <div class="flow-item">
+                        <div class="flow-item seq-left-item" data-left-index="2">
                             <div class="flow-item-icon"><i data-feather="tag"></i></div>
                             <div class="flow-item-text">
                                 <strong>Seller</strong>
                                 <span>Focused on achieving the highest price.</span>
                             </div>
                         </div>
-                        <div class="flow-item">
+                        <div class="flow-item seq-left-item" data-left-index="3">
                             <div class="flow-item-icon"><i data-feather="briefcase"></i></div>
                             <div class="flow-item-text">
                                 <strong>Bank</strong>
                                 <span>Protect lending risk</span>
                             </div>
                         </div>
-                        <div class="flow-item">
+                        <div class="flow-item seq-left-item" data-left-index="4">
                             <div class="flow-item-icon"><i data-feather="file-text"></i></div>
                             <div class="flow-item-text">
                                 <strong>Lawyer</strong>
@@ -252,27 +253,23 @@
                     </div>
                 </div>
 
-                <!-- Center Column: Acre&Key BUYER PROTECTION LAYER (Filter Shield) -->
-                <div class="flow-col flow-col-center">
+                <!-- Step 4: Protection layer activates & Step 5: "Only your interests." fades in -->
+                <div class="flow-col flow-col-center seq-center-col">
                     <div class="center-badge-card">
                         <div class="center-card-inner">
-                            <!-- Hero Dominant Statement (Top Position) -->
-                            <div class="center-headline">
+                            <div class="center-headline seq-center-hero">
                                 <i data-feather="shield" class="headline-shield"></i>
                                 <span>Only your interests.</span>
                             </div>
 
-                            <!-- Gold Divider below dominant statement -->
-                            <div class="center-divider-line"></div>
+                            <div class="center-divider-line seq-center-meta"></div>
 
-                            <!-- Secondary Brand & Layer Signatures -->
-                            <div class="center-brand-logo">
+                            <div class="center-brand-logo seq-center-meta">
                                 <span class="brand-name">Acre&amp;Key</span>
                             </div>
-                            <span class="protection-layer-kicker">BUYER PROTECTION LAYER</span>
+                            <span class="protection-layer-kicker seq-center-meta">BUYER PROTECTION LAYER</span>
 
-                            <!-- Supporting Proof Bullets -->
-                            <div class="center-checklist">
+                            <div class="center-checklist seq-center-meta">
                                 <div class="center-check-item">
                                     <span class="slash-icon"><i data-feather="home"></i></span>
                                     <span>No inventory to sell</span>
@@ -290,11 +287,11 @@
                     </div>
                 </div>
 
-                <!-- Right Column: YOUR INTERESTS. REPRESENTED. -->
-                <div class="flow-col flow-col-right">
+                <!-- Step 7: Buyer outcomes appear one after another -->
+                <div class="flow-col flow-col-right seq-right-col">
                     <div class="flow-col-header">YOUR INTERESTS. REPRESENTED.</div>
                     <div class="flow-card-stack">
-                        <div class="flow-item flow-item-right">
+                        <div class="flow-item flow-item-right seq-right-item" data-right-index="0">
                             <div class="flow-item-icon"><i data-feather="tag"></i></div>
                             <div class="flow-item-text">
                                 <strong>Price</strong>
@@ -302,7 +299,7 @@
                             </div>
                             <div class="flow-item-check"><i data-feather="check"></i></div>
                         </div>
-                        <div class="flow-item flow-item-right">
+                        <div class="flow-item flow-item-right seq-right-item" data-right-index="1">
                             <div class="flow-item-icon"><i data-feather="file-text"></i></div>
                             <div class="flow-item-text">
                                 <strong>Legal Risks</strong>
@@ -310,7 +307,7 @@
                             </div>
                             <div class="flow-item-check"><i data-feather="check"></i></div>
                         </div>
-                        <div class="flow-item flow-item-right">
+                        <div class="flow-item flow-item-right seq-right-item" data-right-index="2">
                             <div class="flow-item-icon"><i data-feather="briefcase"></i></div>
                             <div class="flow-item-text">
                                 <strong>Financing</strong>
@@ -318,7 +315,7 @@
                             </div>
                             <div class="flow-item-check"><i data-feather="check"></i></div>
                         </div>
-                        <div class="flow-item flow-item-right">
+                        <div class="flow-item flow-item-right seq-right-item" data-right-index="3">
                             <div class="flow-item-icon"><i data-feather="users"></i></div>
                             <div class="flow-item-text">
                                 <strong>Negotiation</strong>
@@ -331,12 +328,12 @@
 
             </div>
 
-            <!-- Closing Emotional Payoff Pull Quote -->
-            <div class="agenda-emotional-payoff">
-                <p class="payoff-main-text">
+            <!-- Step 8: Bottom statement fades in & Step 9: "We are." appears after a 300ms delay -->
+            <div class="agenda-emotional-payoff seq-payoff-block">
+                <p class="payoff-main-text seq-payoff-main">
                     No one is accountable for helping you<br>make the right buying decision.
                 </p>
-                <p class="payoff-closing">We are.</p>
+                <p class="payoff-closing seq-payoff-closing">We are.</p>
             </div>
 
         </div>
