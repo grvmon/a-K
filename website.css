@@ -3784,31 +3784,122 @@ body {
     }
 }
 
-/* Priority 9: Closing Emotional Payoff Pull Quote (Generous Whitespace + Matching Header Typography Bookend) */
-.agenda-emotional-payoff {
-    text-align: center;
-    max-width: 960px;
-    margin: 4rem auto 0 auto;
-    padding: 0;
+/* Dark Executive Promise Banner (Pixel Match to Reference Banner Image) */
+.agenda-payoff-banner {
+    position: relative;
+    background: var(--deep-navy);
+    border: 1.5px solid rgba(184, 142, 82, 0.45);
+    border-radius: 14px;
+    max-width: 1100px;
+    margin: 4.5rem auto 0 auto;
+    padding: 2.2rem 2.8rem;
+    box-shadow: 0 16px 45px rgba(31, 43, 56, 0.18);
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
 }
 
-.payoff-main-text {
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 1.4rem + 1.1vw, 2.5rem);
-    line-height: 1.35;
-    color: var(--deep-navy);
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+.banner-gold-accent-line {
+    width: 3.5px;
+    background: var(--refined-brass);
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
-/* Priority 9: "We are." matches exact typography of "Who protects yours?" */
-.payoff-closing {
-    font-family: var(--font-heading);
-    font-size: clamp(1.55rem, 1.3rem + 1vw, 2.05rem); /* Exactly matches Section 2 .agenda-title headline size */
-    font-weight: 400;
+.banner-inner-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.banner-top-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.banner-kicker {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 800;
     color: var(--refined-brass);
-    letter-spacing: -0.01em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.banner-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.85rem);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.banner-highlight {
+    color: var(--refined-brass);
     font-style: normal;
+    font-weight: 400;
+}
+
+.banner-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin-bottom: 1.35rem;
+}
+
+.banner-pillars-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.banner-pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.pillar-num {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--refined-brass);
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.95;
+}
+
+.pillar-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.pillar-text strong {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.pillar-text span {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.4;
+}
+
+@media (max-width: 850px) {
+    .agenda-payoff-banner {
+        padding: 1.8rem;
+    }
+    .banner-pillars-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
 }
 
 /* Responsive Layout */
