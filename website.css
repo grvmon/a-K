@@ -292,13 +292,15 @@ body {
 
 /* ================= HERO SECTION ================= */
 .hero-section {
-    padding-top: 148px;
-    padding-bottom: 0;
-    min-height: auto;
-    display: block;
+    min-height: calc(100vh - 80px); /* full viewport minus header height */
+    padding: 0; /* remove fixed top padding */
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
     position: relative;
     border-bottom: none;
 }
+
 
 .hero-grid {
     display: grid;
