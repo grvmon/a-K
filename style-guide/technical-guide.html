@@ -14,16 +14,32 @@
 <body class="sd-root">
 
 <!-- NAV -->
-<div class="wrap">
-  <nav class="nav">
-    <div class="nav__logo">acre&amp;key</div>
-    <button class="nav__toggle" id="mobile-menu-btn" type="button" aria-label="Toggle menu" aria-controls="mobile-menu-links" aria-expanded="false"><i data-feather="menu"></i></button>
-    <div class="nav__links" id="mobile-menu-links"><a href="index.html">Style Guide</a><a href="technical-guide.html" style="color: var(--sd-accent);">Technical Guide</a><a href="preview.html">Brand Board</a></div>
-    <div class="nav__spacer">
-      <button class="sd-btn sd-btn--primary" type="button">Book Consultation</button>
+<header class="header-nav" id="header-nav" style="position: sticky; top: 0; z-index: 100; background: var(--sd-warm-ivory); border-bottom: 1px solid var(--sd-line); margin-bottom: 2rem;">
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 72px;">
+    <!-- Brand Logo -->
+    <a href="../index.html" class="nav-brand" style="text-decoration: none;">
+      <span class="brand-logo-text" style="font-family: var(--font-logo, 'Josefin Sans', sans-serif); font-size: 1.5rem; font-weight: 700; color: var(--sd-deep-navy);">acre&amp;key</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <div class="nav__links" id="mobile-menu-links" style="display: flex; align-items: center; gap: 0.5rem;">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#due-diligence">Due Diligence</a>
+      <a href="../index.html#process">Our Process</a>
+      <a href="../index.html#locations">Bengaluru Focus</a>
+      <a href="preview.html">Brand Board</a>
+      <a href="technical-guide.html" style="color: var(--sd-deep-navy); font-weight: 700;">Design System</a>
     </div>
-  </nav>
-</div>
+
+    <!-- Header CTA Button -->
+    <a href="../index.html#contact" class="sd-btn-gold nav-cta-btn" style="background: var(--sd-refined-brass); color: var(--sd-white); text-decoration: none; padding: 0.7rem 1.4rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px;">
+      <span>GET IN TOUCH</span>
+      <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: rgba(0, 0, 0, 0.15); border-radius: 50%;">
+        <i data-feather="arrow-right" style="width: 13px; height: 13px;"></i>
+      </span>
+    </a>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="sd-hero">
