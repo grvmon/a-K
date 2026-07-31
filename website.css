@@ -120,8 +120,27 @@ body {
     background: #FFFFFF !important;
     border: 1.5px solid rgba(184, 142, 82, 0.25) !important;
     border-radius: 8px !important;
-    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.06) !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Master Card Hover Neutralization (Zero Hover Shift / Animation Across All Cards) */
+.card-item:hover,
+.hub-unified-card:hover,
+.market-lens-card:hover,
+.founder-card:hover,
+.story-card:hover,
+.credentials-col-card:hover,
+.news-card:hover,
+.testimonial-quote-card:hover,
+.testimonial-card:hover,
+.corridor-card:hover,
+.framework-card:hover,
+.spider-node-card:hover,
+.who-persona-item:hover,
+.eco-node-card:hover {
+    transform: none !important;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.06) !important;
+    border: 1.5px solid rgba(184, 142, 82, 0.25) !important;
 }
 
 /* Master All Component & Card Headings Across All Sections */
@@ -1258,10 +1277,6 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.spider-node-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--refined-brass);
-    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.15);
 }
 
 .spider-node-num {
@@ -2547,10 +2562,6 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.market-lens-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--refined-brass);
-    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.15);
 }
 
 .market-lens-num {
@@ -2712,10 +2723,6 @@ body {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.founder-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.08);
-    border-color: var(--refined-brass);
 }
 
 .founder-img-wrapper {
@@ -2909,10 +2916,6 @@ body {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.news-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.08);
-    border-color: var(--refined-brass);
 }
 
 .news-img-wrapper {
@@ -3106,10 +3109,6 @@ body {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.corridor-card:hover {
-    transform: translateX(4px);
-    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.08);
-    border-color: var(--refined-brass);
 }
 
 .corridor-accent {
