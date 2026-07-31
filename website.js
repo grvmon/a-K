@@ -31,4 +31,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // 4. Scroll Triggered Animation for Buyer Ecosystem Hub Diagram
+    const hubGridMatrix = document.querySelector('.hub-grid-matrix');
+    if (hubGridMatrix) {
+        const observerOptions = {
+            root: null,
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver(function (entries, observerInstance) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observerInstance.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(hubGridMatrix);
+    }
 });
