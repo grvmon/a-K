@@ -4043,18 +4043,29 @@ body {
     box-shadow: 0 10px 28px rgba(31, 43, 56, 0.12);
 }
 
-/* Dark Callout Banner (Single Line Dark Slate Indigo Bar) */
+/* Dark Callout Banner (Single Line Statement with Left Gold Accent Bar) */
 .agenda-payoff-banner {
     position: relative;
     z-index: 15;
     background: #1D2635;
-    border-radius: 8px;
+    border: 1px solid rgba(184, 142, 82, 0.4);
+    border-radius: 12px;
     width: 100%;
     margin: 2.2rem 0 2.2rem 0;
-    padding: 1.15rem 2.0rem;
-    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.15);
-    text-align: center;
+    padding: 1.25rem 2.0rem;
+    box-shadow: 0 12px 36px rgba(31, 43, 56, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     box-sizing: border-box;
+}
+
+.banner-gold-accent-line {
+    width: 4px;
+    height: 28px;
+    background: var(--refined-brass);
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .banner-full-callout-text {
@@ -4063,6 +4074,7 @@ body {
     font-weight: 500;
     color: #FFFFFF;
     letter-spacing: -0.01em;
+    text-align: left;
 }
 
 .highlight-gold-bold {
