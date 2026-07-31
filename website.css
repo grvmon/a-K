@@ -3870,14 +3870,38 @@ body {
     box-sizing: border-box;
 }
 
-/* Section 2 Grid Layout: Left Photograph + Right Hub */
+/* Section 2 Grid Layout: Left Photograph (Subtle) + Right Dominant Hub */
 .agenda-layout-grid {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 3.0rem;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 3.5rem;
     align-items: center;
     width: 100%;
     margin-bottom: 2.5rem;
+}
+
+/* Left Photograph Wrapper (De-emphasized Focus) */
+.agenda-photo-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.08);
+    opacity: 0.88;
+    filter: saturate(0.92);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.agenda-photo-wrapper:hover {
+    opacity: 1;
+    filter: saturate(1);
+}
+
+.agenda-photo-img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block;
 }
 
 /* Left Orbital Hub Wrapper */
