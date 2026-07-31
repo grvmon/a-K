@@ -64,6 +64,72 @@ body {
     padding: 0 2rem;
 }
 
+/* ================= MASTER UNIFIED TYPOGRAPHY CLASSES ================= */
+
+/* Section Main Title (All Sections except Hero) */
+.section-title,
+.framework-title,
+.market-lens-title,
+.who-we-are-title,
+.credentials-title,
+.micromarket-title,
+.who-display-title,
+.agenda-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5625rem) !important; /* 20.0px - 25.0px */
+    font-weight: 400 !important;
+    line-height: 1.28 !important;
+    color: var(--deep-navy) !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Section Lead Subtitle / Paragraph */
+.section-subtitle,
+.who-we-are-subtitle,
+.micromarket-subtitle,
+.agenda-editorial-sub {
+    font-family: var(--font-body) !important;
+    font-size: 1.1rem !important; /* 17.6px */
+    font-weight: 500 !important;
+    line-height: 1.65 !important;
+    color: var(--muted-slate) !important;
+}
+
+/* All Component & Card Headings Across All Sections */
+.card-title,
+.spider-node-title,
+.market-lens-card-title,
+.founder-name,
+.story-title,
+.news-card-title,
+.testimonial-quote-title,
+.corridor-name,
+.framework-card-title,
+.pillar-title,
+.hub-card-title,
+.credentials-col-title {
+    font-family: var(--font-body) !important;
+    font-size: 1.1rem !important; /* 17.6px */
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: var(--deep-navy) !important;
+}
+
+/* Standard Dark Navy Summary Banner Text */
+.summary-banner-text,
+.summary-headline,
+.market-lens-banner-text,
+.who-we-are-banner-text,
+.micromarket-banner-text,
+.banner-full-callout-text {
+    font-family: var(--font-heading) !important;
+    font-size: 1.25rem !important; /* 20.0px */
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.01em !important;
+}
+
 /* ================= HEADER NAVIGATION ================= */
 .header-nav {
     position: fixed;
@@ -1678,10 +1744,7 @@ body {
 }
 
 .framework-card-title {
-    font-family: var(--font-heading);
-    font-size: 1.55rem;
     color: var(--deep-navy);
-    font-weight: 400;
     line-height: 1.15;
 }
 
