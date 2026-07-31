@@ -4128,6 +4128,57 @@ body {
     color: #FFFFFF;
 }
 
+/* ===== Hub Entrance Animations (scroll-triggered) ===== */
+
+/* Initial hidden state — cards and buyer circle start invisible */
+.hub-grid-matrix .hub-unified-card,
+.hub-grid-matrix .buyer-center-circle {
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+/* Buyer circle — scales up first */
+.hub-grid-matrix.animated .buyer-center-circle {
+    animation: hubEnterCenter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Cards — slide in from their respective directions */
+.hub-grid-matrix.animated .cell-builder .hub-unified-card {
+    animation: hubEnterTop 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+.hub-grid-matrix.animated .cell-seller .hub-unified-card {
+    animation: hubEnterLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+.hub-grid-matrix.animated .cell-broker .hub-unified-card {
+    animation: hubEnterRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+.hub-grid-matrix.animated .cell-lawyer .hub-unified-card {
+    animation: hubEnterLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+.hub-grid-matrix.animated .cell-bank .hub-unified-card {
+    animation: hubEnterRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.85s forwards;
+}
+
+@keyframes hubEnterCenter {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hubEnterTop {
+    0% { opacity: 0; transform: translateY(-30px) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes hubEnterLeft {
+    0% { opacity: 0; transform: translateX(-30px) scale(0.9); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes hubEnterRight {
+    0% { opacity: 0; transform: translateX(30px) scale(0.9); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
 .hub-bottom-row {
     display: flex;
     align-items: center;
