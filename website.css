@@ -69,14 +69,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1000;
-    background: rgba(247, 243, 236, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
+    z-index: 100;
+    background: var(--warm-ivory);
+    border-bottom: 1px solid var(--divider);
     border-radius: 0;
     transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -90,7 +85,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 88px;
+    height: 64px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -98,16 +93,17 @@ body {
 .nav-brand {
     text-decoration: none;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     margin-right: 10px;
 }
 
 .brand-logo-text {
     font-family: var(--font-logo);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--deep-navy);
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .brand-tagline-text {
