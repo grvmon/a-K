@@ -3934,38 +3934,58 @@ body {
     height: 100%;
 }
 
-/* Unified Card Dimensions (Identical Width, Height, Padding, Icons) */
+/* Unified Card Dimensions (Matching OUR BUYER FRAMEWORK flow-item styling) */
 .hub-unified-card {
-    width: 190px !important;
-    height: 68px !important;
-    padding: 0.85rem 1.0rem !important;
+    width: 195px !important;
+    height: 64px !important;
+    padding: 0.7rem 0.85rem !important;
     box-sizing: border-box !important;
-    box-shadow: 0 6px 18px rgba(31, 43, 56, 0.08) !important;
+    box-shadow: 0 2px 6px rgba(31, 43, 56, 0.03) !important;
     display: flex !important;
     align-items: center !important;
-    gap: 0.75rem !important;
-    background: #FFFFFF !important;
-    border: 1px solid #E6DEC6 !important;
-    border-radius: 8px !important;
+    gap: 0.85rem !important;
+    background: #FAF8F5 !important;
+    border: 1px solid rgba(184, 142, 82, 0.22) !important;
+    border-radius: 10px !important;
     margin: 0 !important;
 }
 
 .hub-unified-card .flow-item-icon {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    font-size: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 50% !important;
+    background: #F5EFE6 !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: inset 0 0 0 1px rgba(184, 142, 82, 0.08) !important;
+}
+
+.hub-unified-card .flow-item-icon i,
+.hub-unified-card .flow-item-icon svg {
+    width: 17px !important;
+    height: 17px !important;
+    color: #B88E52 !important;
+    stroke-width: 1.6px !important;
 }
 
 .hub-unified-card .flow-item-text strong {
-    font-size: 0.92rem !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    color: var(--deep-navy) !important;
     line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
 }
 
 .hub-unified-card .flow-item-text span {
+    font-family: var(--font-body) !important;
     font-size: 0.76rem !important;
-    line-height: 1.2 !important;
     color: var(--muted-slate) !important;
+    line-height: 1.2 !important;
     white-space: nowrap !important;
 }
 
