@@ -3858,12 +3858,12 @@ body {
     }
 }
 
-/* Slide Card Frame Outer Container */
+/* Slide Card Frame Outer Container (Increased Top/Bottom Breathing Room) */
 .agenda-slide-card {
     background: #FAF8F5;
     border: 1px solid #EAE0D3;
     border-radius: 12px;
-    padding: 3.0rem 3.5rem 2.0rem 3.5rem;
+    padding: 4.2rem 3.5rem 3.5rem 3.5rem;
     box-shadow: 0 12px 36px rgba(31, 43, 56, 0.06);
     max-width: 1180px;
     margin: 0 auto;
@@ -3873,7 +3873,7 @@ body {
 /* Section 2 Grid Layout: Left Photograph (Subtle) + Right Dominant Hub */
 .agenda-layout-grid {
     display: grid;
-    grid-template-columns: 0.72fr 1.28fr;
+    grid-template-columns: 0.7fr 1.3fr;
     gap: 3.5rem;
     align-items: center;
     width: 100%;
@@ -3904,26 +3904,45 @@ body {
     display: block;
 }
 
-/* Left Orbital Hub Wrapper */
+/* Right Orbital Hub Wrapper */
 .agenda-hub-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
-    padding: 1.0rem 0;
+    padding: 0.5rem 0;
 }
 
-/* 3x3 Invisible Grid Matrix */
+/* SVG Connecting Lines (1px Light Gold/Grey Lines Overlay) */
+.hub-connecting-lines-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hub-connect-line {
+    stroke: var(--refined-brass);
+    stroke-width: 1px;
+    stroke-opacity: 0.18;
+    stroke-dasharray: 3 3;
+}
+
+/* 3x3 Symmetrical Grid Matrix (Inward Side Cards & Lower Builder Position) */
 .hub-grid-matrix {
     display: grid;
-    grid-template-columns: 190px 110px 190px;
-    grid-template-rows: 72px 90px 72px;
-    column-gap: 3.5rem;
-    row-gap: 2.2rem;
+    grid-template-columns: 180px 100px 180px;
+    grid-template-rows: 68px 80px 68px;
+    column-gap: 2.2rem;
+    row-gap: 1.5rem;
     align-items: center;
     justify-items: center;
     position: relative;
+    z-index: 2;
 }
 
 .hub-grid-cell {
@@ -3934,16 +3953,21 @@ body {
     height: 100%;
 }
 
+/* Builder Card Cell (Shifted Down 25px towards Buyer) */
+.cell-builder {
+    transform: translateY(22px);
+}
+
 /* Unified Card Dimensions (Identical Width, Height, Padding, Icons) */
 .hub-unified-card {
-    width: 190px !important;
-    height: 68px !important;
-    padding: 0.85rem 1.0rem !important;
+    width: 180px !important;
+    height: 64px !important;
+    padding: 0.75rem 0.9rem !important;
     box-sizing: border-box !important;
-    box-shadow: 0 6px 18px rgba(31, 43, 56, 0.08) !important;
+    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.06) !important;
     display: flex !important;
     align-items: center !important;
-    gap: 0.75rem !important;
+    gap: 0.7rem !important;
     background: #FFFFFF !important;
     border: 1px solid #E6DEC6 !important;
     border-radius: 8px !important;
@@ -3951,32 +3975,32 @@ body {
 }
 
 .hub-unified-card .flow-item-icon {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    font-size: 14px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    font-size: 13px !important;
 }
 
 .hub-unified-card .flow-item-text strong {
-    font-size: 0.92rem !important;
+    font-size: 0.88rem !important;
     line-height: 1.2 !important;
 }
 
 .hub-unified-card .flow-item-text span {
-    font-size: 0.76rem !important;
+    font-size: 0.74rem !important;
     line-height: 1.2 !important;
     color: var(--muted-slate) !important;
     white-space: nowrap !important;
 }
 
-/* BUYER Center Circle Hub */
+/* BUYER Center Circle Hub (Softer Diffuse Shadow & Perfect Center Anchor) */
 .cell-buyer {
     z-index: 10;
 }
 
 .buyer-center-circle {
-    width: 96px;
-    height: 96px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
     background: #1F2B38;
     color: #FFFFFF;
@@ -3985,13 +4009,13 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 10px 28px rgba(31, 43, 56, 0.25);
-    border: 2px solid rgba(184, 142, 82, 0.4);
+    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.12), 0 2px 6px rgba(184, 142, 82, 0.15);
+    border: 2px solid rgba(184, 142, 82, 0.35);
 }
 
 .buyer-circle-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     color: #FFFFFF;
     stroke-width: 1.8px;
     margin-bottom: 2px;
@@ -3999,7 +4023,7 @@ body {
 
 .buyer-circle-label {
     font-family: var(--font-body);
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: #FFFFFF;
