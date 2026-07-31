@@ -123,36 +123,24 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 0.5rem;
     list-style: none;
 }
 
 .nav-links a {
+    color: var(--muted-slate);
     text-decoration: none;
-    color: var(--deep-navy);
+    font-size: 14px;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: color var(--transition-fast);
-    position: relative;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background var(--transition-fast) ease, color var(--transition-fast) ease;
 }
 
 .nav-links a:hover {
-    color: var(--refined-brass);
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--refined-brass);
-    transition: width var(--transition-fast);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
+    background: rgba(31, 43, 56, 0.04);
+    color: var(--deep-navy);
 }
 
 .nav-cta-btn {
