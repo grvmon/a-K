@@ -2535,7 +2535,7 @@ body {
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
     gap: 2.5rem;
-    align-items: stretch;
+    align-items: flex-start;
     margin-bottom: 1rem;
 }
 
@@ -2545,6 +2545,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(31, 43, 56, 0.04);
+    align-self: stretch;
     height: 100%;
 }
 
@@ -2559,8 +2560,8 @@ body {
 .market-lens-stack {
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    justify-content: space-between;
+    gap: 0.45rem !important;
+    justify-content: flex-start !important;
 }
 
 .market-lens-section .summary-banner {
