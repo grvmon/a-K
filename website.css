@@ -3907,41 +3907,76 @@ body {
 /* Left Orbital Hub Wrapper */
 .agenda-hub-wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1.25rem;
-    position: relative;
     width: 100%;
+    position: relative;
+    padding: 1.0rem 0;
 }
 
-.hub-card-top {
+/* 3x3 Invisible Grid Matrix */
+.hub-grid-matrix {
+    display: grid;
+    grid-template-columns: 190px 110px 190px;
+    grid-template-rows: 72px 90px 72px;
+    column-gap: 3.5rem;
+    row-gap: 2.2rem;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+
+.hub-grid-cell {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
 }
 
-.hub-card-top .flow-item {
-    width: 220px;
-    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.08);
+/* Unified Card Dimensions (Identical Width, Height, Padding, Icons) */
+.hub-unified-card {
+    width: 190px !important;
+    height: 68px !important;
+    padding: 0.85rem 1.0rem !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 6px 18px rgba(31, 43, 56, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E6DEC6 !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
 }
 
-.hub-middle-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 0.8rem;
+.hub-unified-card .flow-item-icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 14px !important;
 }
 
-.hub-card-side {
-    width: 180px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.08);
+.hub-unified-card .flow-item-text strong {
+    font-size: 0.92rem !important;
+    line-height: 1.2 !important;
+}
+
+.hub-unified-card .flow-item-text span {
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
+    color: var(--muted-slate) !important;
+    white-space: nowrap !important;
+}
+
+/* BUYER Center Circle Hub */
+.cell-buyer {
+    z-index: 10;
 }
 
 .buyer-center-circle {
-    width: 92px;
-    height: 92px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     background: #1F2B38;
     color: #FFFFFF;
@@ -3950,12 +3985,13 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.22);
+    box-shadow: 0 10px 28px rgba(31, 43, 56, 0.25);
+    border: 2px solid rgba(184, 142, 82, 0.4);
 }
 
 .buyer-circle-icon {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     color: #FFFFFF;
     stroke-width: 1.8px;
     margin-bottom: 2px;
@@ -3963,7 +3999,7 @@ body {
 
 .buyer-circle-label {
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: #FFFFFF;

@@ -161,66 +161,76 @@
                         <img src="style-guide/assets/stressed_buyer_couple.jpg" alt="Home buyer couple reviewing documents and floor plans" class="agenda-photo-img">
                     </div>
 
-                    <!-- Right Column: Stakeholder Orbital Hub -->
+                    <!-- Right Column: Stakeholder Orbital Hub (Symmetrical Invisible Grid) -->
                     <div class="agenda-hub-wrapper">
                         
-                        <!-- Top Card: Builder -->
-                        <div class="hub-card-top">
-                            <div class="flow-item">
-                                <div class="flow-item-icon"><i data-feather="grid"></i></div>
-                                <div class="flow-item-text">
-                                    <strong>Builder</strong>
-                                    <span>Sell Inventory</span>
+                        <!-- 3x3 Grid Matrix Layout -->
+                        <div class="hub-grid-matrix">
+                            
+                            <!-- Row 1: Empty, Builder (Centered Top), Empty -->
+                            <div class="hub-grid-cell cell-empty"></div>
+                            <div class="hub-grid-cell cell-builder">
+                                <div class="flow-item hub-unified-card">
+                                    <div class="flow-item-icon"><i data-feather="grid"></i></div>
+                                    <div class="flow-item-text">
+                                        <strong>Builder</strong>
+                                        <span>Sell inventory</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="hub-grid-cell cell-empty"></div>
 
-                        <!-- Middle Row: Seller, BUYER Center Node, Broker -->
-                        <div class="hub-middle-row">
-                            <!-- Left: Seller Card -->
-                            <div class="flow-item hub-card-side">
-                                <div class="flow-item-icon"><i data-feather="user"></i></div>
-                                <div class="flow-item-text">
-                                    <strong>Seller</strong>
-                                    <span>Maximize price</span>
-                                </div>
-                            </div>
-
-                            <!-- Center Dark Circle Node: BUYER -->
-                            <div class="buyer-center-circle">
-                                <i data-feather="user" class="buyer-circle-icon"></i>
-                                <span class="buyer-circle-label">BUYER</span>
-                            </div>
-
-                            <!-- Right: Broker Card -->
-                            <div class="flow-item hub-card-side">
-                                <div class="flow-item-icon"><i data-feather="home"></i></div>
-                                <div class="flow-item-text">
-                                    <strong>Broker</strong>
-                                    <span>Close transaction</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Row: Lawyer, Bank -->
-                        <div class="hub-bottom-row">
-                            <!-- Left: Lawyer Card -->
-                            <div class="flow-item hub-card-bottom">
-                                <div class="flow-item-icon"><i data-feather="scale"></i></div>
-                                <div class="flow-item-text">
-                                    <strong>Lawyer</strong>
-                                    <span>Review legal risk</span>
+                            <!-- Row 2: Seller (Left), BUYER (Center Hub), Broker (Right) -->
+                            <div class="hub-grid-cell cell-seller">
+                                <div class="flow-item hub-unified-card">
+                                    <div class="flow-item-icon"><i data-feather="user"></i></div>
+                                    <div class="flow-item-text">
+                                        <strong>Seller</strong>
+                                        <span>Maximize price</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Right: Bank Card -->
-                            <div class="flow-item hub-card-bottom">
-                                <div class="flow-item-icon"><i data-feather="columns"></i></div>
-                                <div class="flow-item-text">
-                                    <strong>Bank</strong>
-                                    <span>Protect lending risk</span>
+                            <div class="hub-grid-cell cell-buyer">
+                                <div class="buyer-center-circle">
+                                    <i data-feather="user" class="buyer-circle-icon"></i>
+                                    <span class="buyer-circle-label">BUYER</span>
                                 </div>
                             </div>
+
+                            <div class="hub-grid-cell cell-broker">
+                                <div class="flow-item hub-unified-card">
+                                    <div class="flow-item-icon"><i data-feather="home"></i></div>
+                                    <div class="flow-item-text">
+                                        <strong>Broker</strong>
+                                        <span>Close transaction</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 3: Lawyer (Left), Empty, Bank (Right) -->
+                            <div class="hub-grid-cell cell-lawyer">
+                                <div class="flow-item hub-unified-card">
+                                    <div class="flow-item-icon"><i data-feather="scale"></i></div>
+                                    <div class="flow-item-text">
+                                        <strong>Lawyer</strong>
+                                        <span>Review legal risk</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hub-grid-cell cell-empty"></div>
+
+                            <div class="hub-grid-cell cell-bank">
+                                <div class="flow-item hub-unified-card">
+                                    <div class="flow-item-icon"><i data-feather="columns"></i></div>
+                                    <div class="flow-item-text">
+                                        <strong>Bank</strong>
+                                        <span>Protect lending risk</span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
