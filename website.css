@@ -2426,72 +2426,61 @@ body {
     justify-content: space-between;
 }
 
+/* Right Stack of Cards (Pixel Match to Master Step Card Component Token) */
+.market-lens-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: space-between;
+}
+
 .market-lens-card {
     background: var(--white);
-    border: 1px solid rgba(183, 175, 164, 0.4);
-    border-radius: 12px;
-    padding: 1.1rem 1.4rem;
+    border: 1.5px solid #E4DACB;
+    border-radius: 10px;
+    padding: 0.9rem 1.25rem;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(31, 43, 56, 0.03);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    gap: 14px;
+    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .market-lens-card:hover {
-    transform: translateX(4px);
-    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.08);
+    transform: translateY(-2px);
     border-color: var(--refined-brass);
+    box-shadow: 0 8px 24px rgba(184, 142, 82, 0.15);
 }
 
-.market-lens-card-accent {
-    position: absolute;
-    left: 0;
-    top: 14%;
-    bottom: 14%;
-    width: 4px;
-    background: var(--refined-brass);
-    border-radius: 0 4px 4px 0;
-}
-
-.market-lens-card-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    border-radius: 50%;
-    border: 1.5px solid var(--divider);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--deep-navy);
-    background: var(--warm-ivory);
-}
-
-.market-lens-card-icon svg {
-    width: 20px;
-    height: 20px;
-    stroke-width: 1.8px;
+.market-lens-num {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--refined-brass);
+    font-weight: 400;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
 .market-lens-card-body {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0.1rem;
 }
 
 .market-lens-card-title {
     font-family: var(--font-body);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--deep-navy);
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .market-lens-card-desc {
-    font-size: 0.88rem;
+    font-family: var(--font-body);
+    font-size: 0.76rem;
     color: var(--muted-slate);
-    line-height: 1.45;
+    line-height: 1.35;
+    font-weight: 500;
 }
 
 /* Bottom Dark Navy Banner */
