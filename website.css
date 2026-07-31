@@ -3858,14 +3858,26 @@ body {
     }
 }
 
-   /* Section 2 Grid Layout: Left Hub + Right Photograph */
+/* Slide Card Frame Outer Container */
+.agenda-slide-card {
+    background: #FAF8F5;
+    border: 1px solid #EAE0D3;
+    border-radius: 12px;
+    padding: 3.0rem 3.5rem 2.0rem 3.5rem;
+    box-shadow: 0 12px 36px rgba(31, 43, 56, 0.06);
+    max-width: 1180px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Section 2 Grid Layout: Left Hub + Right Photograph */
 .agenda-layout-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.0rem;
     align-items: center;
-    max-width: 1160px;
-    margin: 0 auto 3.5rem auto;
+    width: 100%;
+    margin-bottom: 2.5rem;
 }
 
 /* Left Orbital Hub Wrapper */
@@ -3873,7 +3885,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     position: relative;
     width: 100%;
 }
@@ -3885,7 +3897,8 @@ body {
 }
 
 .hub-card-top .flow-item {
-    width: 240px;
+    width: 220px;
+    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.08);
 }
 
 .hub-middle-row {
@@ -3893,32 +3906,32 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 1.0rem;
+    gap: 0.8rem;
 }
 
 .hub-card-side {
-    width: 185px;
+    width: 180px;
     flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.08);
 }
 
 .buyer-center-circle {
-    width: 100px;
-    height: 100px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
-    background: #1D2635;
+    background: #1F2B38;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 10px 25px rgba(31, 43, 56, 0.25);
-    border: 2px solid rgba(184, 142, 82, 0.3);
+    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.22);
 }
 
 .buyer-circle-icon {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     color: #FFFFFF;
     stroke-width: 1.8px;
     margin-bottom: 2px;
@@ -3926,7 +3939,7 @@ body {
 
 .buyer-circle-label {
     font-family: var(--font-body);
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: #FFFFFF;
@@ -3937,25 +3950,26 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 1.5rem;
+    gap: 1.0rem;
 }
 
 .hub-card-bottom {
-    width: 230px;
+    width: 220px;
+    box-shadow: 0 4px 14px rgba(31, 43, 56, 0.08);
 }
 
 /* Right Photograph Card */
 .agenda-photo-wrapper {
     position: relative;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(31, 43, 56, 0.15);
+    box-shadow: 0 10px 28px rgba(31, 43, 56, 0.12);
 }
 
 .agenda-photo-img {
     width: 100%;
-    height: 380px;
+    height: 360px;
     object-fit: cover;
     display: block;
 }
@@ -3964,18 +3978,19 @@ body {
 .agenda-payoff-banner {
     position: relative;
     z-index: 15;
-    background: #1D2635;
-    border-radius: 10px;
-    max-width: 1160px;
-    margin: 3.0rem auto 2.5rem auto;
-    padding: 1.25rem 2.0rem;
-    box-shadow: 0 10px 30px rgba(31, 43, 56, 0.15);
+    background: #1F2B38;
+    border-radius: 8px;
+    width: 100%;
+    margin: 2.2rem 0 2.2rem 0;
+    padding: 1.1rem 2.0rem;
+    box-shadow: 0 8px 24px rgba(31, 43, 56, 0.15);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .banner-full-callout-text {
     font-family: var(--font-body);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #FFFFFF;
     letter-spacing: -0.01em;
@@ -3991,10 +4006,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1160px;
-    margin: 2.0rem auto 0 auto;
+    width: 100%;
     padding-top: 1.0rem;
-    border-top: 1px solid rgba(31, 43, 56, 0.12);
+    border-top: 1px solid #E5DED4;
     font-family: var(--font-body);
     font-size: 0.72rem;
     color: var(--muted-slate);
@@ -4003,7 +4017,7 @@ body {
 .slide-footer-left {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.0rem;
 }
 
 .slide-brand-name {
@@ -4020,6 +4034,7 @@ body {
 
 .slide-number {
     font-weight: 600;
+    color: var(--deep-navy);
 }
 
 @media (max-width: 992px) {
