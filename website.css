@@ -3870,31 +3870,23 @@ body {
     box-sizing: border-box;
 }
 
-/* Section 2 Grid Layout: Left Photograph (Subtle) + Right Dominant Hub */
+/* Section 2 Grid Layout: Left Photograph + Right Dominant Hub (Flush Left/Right Alignment with Banner) */
 .agenda-layout-grid {
     display: grid;
-    grid-template-columns: 0.72fr 1.28fr;
+    grid-template-columns: 380px 1fr;
     gap: 3.5rem;
     align-items: center;
     width: 100%;
     margin-bottom: 2.5rem;
 }
 
-/* Left Photograph Wrapper (De-emphasized Focus) */
+/* Left Photograph Wrapper (Moved Inward & Perfectly Proportional) */
 .agenda-photo-wrapper {
     position: relative;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.08);
-    opacity: 0.88;
-    filter: saturate(0.92);
-    transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.agenda-photo-wrapper:hover {
-    opacity: 1;
-    filter: saturate(1);
+    box-shadow: 0 6px 20px rgba(31, 43, 56, 0.08);
 }
 
 .agenda-photo-img {
@@ -3904,22 +3896,22 @@ body {
     display: block;
 }
 
-/* Left Orbital Hub Wrapper */
+/* Right Orbital Hub Wrapper (Spans Flush to Right Edge of Banner) */
 .agenda-hub-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     position: relative;
-    padding: 1.0rem 0;
+    padding: 0.5rem 0;
 }
 
-/* 3x3 Invisible Grid Matrix (BUYER Dead Center Symmetrical Alignment) */
+/* 3x3 Invisible Grid Matrix (Expanded Symmetrical Hub) */
 .hub-grid-matrix {
     display: grid;
-    grid-template-columns: 205px 110px 205px;
+    grid-template-columns: 215px 120px 215px;
     grid-template-rows: 64px 64px 64px;
-    column-gap: 2.2rem;
+    column-gap: 3.2rem;
     row-gap: 1.8rem;
     align-items: center;
     justify-items: center;
@@ -3936,9 +3928,9 @@ body {
 
 /* Unified Card Dimensions (Pixel Match to Requirement Mapping spider-node-card) */
 .hub-unified-card {
-    width: 205px !important;
-    min-width: 205px !important;
-    max-width: 205px !important;
+    width: 215px !important;
+    min-width: 215px !important;
+    max-width: 215px !important;
     height: 64px !important;
     padding: 0.8rem 1.0rem !important;
     box-sizing: border-box !important;
