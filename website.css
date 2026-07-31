@@ -4026,7 +4026,6 @@ body {
     border: 1.5px solid #E4DACB !important;
     border-radius: 10px !important;
     margin: 0 !important;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
 
 .hub-card-num {
@@ -4073,43 +4072,6 @@ body {
     line-height: 1.3 !important;
     font-weight: 500 !important;
     white-space: nowrap !important;
-}
-
-.cell-builder .hub-unified-card {
-    animation: floatCard 4s ease-in-out infinite alternate;
-}
-
-.cell-seller .hub-unified-card {
-    animation: floatCard 4.2s ease-in-out 0.3s infinite alternate-reverse;
-}
-
-.cell-broker .hub-unified-card {
-    animation: floatCard 3.8s ease-in-out 0.5s infinite alternate;
-}
-
-.cell-lawyer .hub-unified-card {
-    animation: floatCard 4.4s ease-in-out 0.7s infinite alternate-reverse;
-}
-
-.cell-bank .hub-unified-card {
-    animation: floatCard 4.1s ease-in-out 0.9s infinite alternate;
-}
-
-@keyframes floatCard {
-    0% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
-}
-
-.hub-unified-card:hover {
-    animation-play-state: paused !important;
-    transform: none !important;
-    border-color: rgba(184, 142, 82, 0.25) !important; /* keep default border */
-    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.06) !important; /* keep default shadow */
-    background: #FFFFFF !important;
 }
 
 /* BUYER Center Circle Hub */
