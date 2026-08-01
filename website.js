@@ -52,9 +52,33 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(hubGridMatrix);
     }
 
-    // 5. Walkthrough Step Highlight Sequence for "The Process" section (Card 1 -> 2 -> 3 -> 4 -> 5 -> STOPS)
+    // 5. Walkthrough Step Highlight Sequence & Synced Laptop Image Crossfade for "The Process" section
     const processCards = document.querySelectorAll('.market-lens-card');
     const processSection = document.getElementById('bengaluru-market-lens');
+    const processImg = document.getElementById('process-visual-img');
+
+    // Preload & map synced visual dashboard images for each decision step
+    const stepImages = {
+        0: 'style-guide/assets/acrekey_property_comparison_dashboard.jpg', // Steps 1-3: Builder & Property Comparison
+        1: 'style-guide/assets/acrekey_property_comparison_dashboard.jpg',
+        2: 'style-guide/assets/acrekey_property_comparison_dashboard.jpg',
+        3: 'style-guide/assets/acrekey_floor_view_comparison.jpg',         // Step 4: Floor & View Premium Evaluation
+        4: 'style-guide/assets/acrekey_investment_analysis.jpg'           // Step 5: Investment & ROI Yield Analysis
+    };
+
+    function updateStepVisual(stepIndex) {
+        if (!processImg) return;
+        const targetSrc = stepImages[stepIndex] || stepImages[0];
+        
+        // If image source changes, perform a subtle crossfade transition
+        if (processImg.getAttribute('src') !== targetSrc) {
+            processImg.classList.add('fade-out');
+            setTimeout(function () {
+                processImg.setAttribute('src', targetSrc);
+                processImg.classList.remove('fade-out');
+            }, 180);
+        }
+    }
 
     if (processCards.length > 0 && processSection) {
         let hasAnimated = false;
@@ -74,6 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
 
+                // Crossfade laptop dashboard image synchronized with active card
+                updateStepVisual(step);
+
                 step++;
                 if (step < processCards.length) {
                     setTimeout(highlightNextCard, 2000); // 2 seconds per card transition
@@ -82,6 +109,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             highlightNextCard();
         }
+
+        // Allow user hover to highlight card and update synced laptop screen
+        processCards.forEach(function (card, idx) {
+            card.addEventListener('mouseenter', function () {
+                processCards.forEach(c => c.classList.remove('active-step'));
+                card.classList.add('active-step');
+                updateStepVisual(idx);
+            });
+        });
 
         // Trigger 1-time walkthrough when section scrolls into view
         const processObserver = new IntersectionObserver(function (entries, observerInstance) {
