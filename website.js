@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const processSection = document.getElementById('bengaluru-market-lens');
     const processImg = document.getElementById('process-visual-img');
 
-    // Preload & map 5 distinct contextual dashboard images for each decision step
+    // Preload & map 5 distinctly framed contextual dashboard images for each decision step
     const stepImages = {
-        0: 'style-guide/assets/acrekey_construction_vs_ready.jpg',        // Step 1: Construction Timeline vs Ready-to-Move
-        1: 'style-guide/assets/acrekey_property_comparison_dashboard.jpg',// Step 2: Builder A vs Builder B Evaluation
-        2: 'style-guide/assets/acrekey_corridor_growth_map.jpg',          // Step 3: Bangalore Micro-Market & Corridor Growth Map
-        3: 'style-guide/assets/acrekey_floor_view_comparison.jpg',        // Step 4: Floor & View Premium Evaluation
-        4: 'style-guide/assets/acrekey_investment_analysis.jpg'          // Step 5: Investment & ROI Yield Analysis
+        0: 'style-guide/assets/acrekey_construction_vs_ready.jpg?v=2',        // Step 1: Wide kitchen & dining perspective
+        1: 'style-guide/assets/acrekey_property_comparison_dashboard.jpg?v=2',// Step 2: Mid-angle side consultation perspective
+        2: 'style-guide/assets/acrekey_corridor_growth_map.jpg?v=2',          // Step 3: Centered corridor map perspective
+        3: 'style-guide/assets/acrekey_floor_view_comparison.jpg?v=2',        // Step 4: Wide balcony window perspective
+        4: 'style-guide/assets/acrekey_investment_analysis.jpg?v=2'          // Step 5: Intimate close-up table perspective
     };
 
     function updateStepVisual(stepIndex) {
