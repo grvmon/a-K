@@ -44,7 +44,13 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--warm-ivory);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-image: 
+        linear-gradient(rgba(184, 142, 82, 0.055) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(184, 142, 82, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(184, 142, 82, 0.08) 0%, rgba(247, 243, 236, 0.02) 40%, rgba(31, 43, 56, 0.05) 100%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 40px 40px, 40px 40px, 100% 100%, auto;
+    background-attachment: fixed;
     color: var(--deep-navy);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -224,16 +230,17 @@ body {
     width: 100%;
     max-width: 100%;
     z-index: 1000;
-    background: rgba(247, 243, 236, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
+    background: transparent;
+    border-bottom: 1px solid rgba(184, 142, 82, 0.15);
     border-radius: 0;
-    transition: background var(--transition-fast), box-shadow var(--transition-fast);
+    transition: background 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
 }
 
 .header-nav.scrolled {
-    background: rgba(247, 243, 236, 0.98);
+    background: rgba(247, 243, 236, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(183, 175, 164, 0.3);
     box-shadow: 0 4px 20px rgba(31, 43, 56, 0.08);
 }
 
@@ -287,30 +294,34 @@ body {
 }
 
 .nav-links a {
-    color: var(--muted-slate);
+    font-family: var(--font-heading) !important;
+    color: var(--deep-navy);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 4px;
-    transition: background var(--transition-fast) ease, color var(--transition-fast) ease;
+    padding: 6px 14px;
+    background: transparent;
+    transition: color 200ms ease;
 }
 
 .nav-links a:hover {
+    color: var(--refined-brass);
     background: transparent;
-    color: var(--deep-navy);
 }
 
 .nav-cta-btn {
+    font-family: var(--font-heading) !important;
     background: var(--refined-brass);
     color: var(--white);
     text-decoration: none;
     padding: 0.75rem 1.6rem;
-    border-radius: 4px;
-    font-weight: 700;
+    border-radius: 2px !important;
+    font-weight: 400;
     font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     box-shadow: 0 4px 12px rgba(184, 142, 82, 0.25);
@@ -351,10 +362,25 @@ body {
     justify-content: center;
     position: relative;
     border-bottom: none;
+    overflow: hidden;
+}
+
+.bg-shape-grid {
+    display: none !important;
+}
+
+.bg-shape-glow {
+    display: none !important;
+}
+
+.bg-blueprint-pattern {
+    display: none !important;
 }
 
 .hero-section > .container {
     width: 100%; /* ensure container fills hero for grid to work */
+    position: relative;
+    z-index: 5;
 }
 
 
@@ -398,8 +424,8 @@ body {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 1.5rem + 1.2vw, 2.4rem);
-    line-height: 1.22;
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    line-height: 1.25;
     color: var(--deep-navy);
     margin-bottom: 1.5rem;
     font-weight: 400;
@@ -495,36 +521,41 @@ body {
 .hero-trust-bar {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--divider);
+    gap: 2.25rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba(183, 175, 164, 0.25);
+    margin-bottom: 2rem;
     width: 100%;
 }
 
 .trust-item {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
 }
 
 .trust-number {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--deep-navy);
-    line-height: 1;
-    font-weight: 700;
+    line-height: 1.1;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 .trust-label {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--deep-slate);
-    font-weight: 600;
-    margin-top: 4px;
+    font-weight: 500;
+    line-height: 1.35;
+    white-space: nowrap;
 }
 
 .trust-divider {
     width: 1px;
-    height: 40px;
-    background: var(--divider);
+    height: 36px;
+    background: rgba(183, 175, 164, 0.3);
+    flex-shrink: 0;
 }
 
 /* Right Hero Visual Card & Glass Badges */
@@ -744,13 +775,21 @@ body {
     }
 
     .mobile-drawer-content > a:not(.sd-btn-navy) {
+        font-family: var(--font-heading) !important;
         text-decoration: none;
         color: var(--deep-navy);
-        font-size: 1.1rem;
-        font-weight: 700;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
         border-bottom: 1px solid rgba(183, 175, 164, 0.2);
         padding-bottom: 1rem;
         display: block;
+        transition: color var(--transition-fast) ease;
+    }
+
+    .mobile-drawer-content > a:not(.sd-btn-navy):hover {
+        color: #0B131E;
     }
 
     .hero-section {
@@ -851,11 +890,11 @@ body {
     background: var(--refined-brass) !important; /* Solid Antique Brass Gold #B88E52 */
     color: var(--white) !important;
     border: 1px solid var(--refined-brass) !important;
-    border-radius: 8px !important; /* Boxed shape with rounded corners */
-    font-family: var(--font-body) !important;
-    font-weight: 700 !important;
-    font-size: 0.9rem !important;
-    letter-spacing: 0.06em !important;
+    border-radius: 2px !important; /* Crisp 2px corners */
+    font-family: var(--font-heading) !important;
+    font-weight: 400 !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
     cursor: pointer !important;
@@ -897,13 +936,19 @@ body {
 
 /* Compact Header Navigation CTA Button */
 .nav-cta-btn {
-    padding: 0.5rem 1.1rem !important;
-    font-size: 0.78rem !important;
-    letter-spacing: 0.05em !important;
-    border-radius: 6px !important;
+    font-family: var(--font-heading) !important;
+    padding: 0.5rem 1rem 0.5rem 1.2rem !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    border-radius: 2px !important;
     height: 38px !important;
     white-space: nowrap !important;
     box-shadow: 0 4px 12px rgba(184, 142, 82, 0.22) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
 }
 
 .nav-cta-btn .btn-arrow-badge {
@@ -1047,11 +1092,11 @@ body {
     align-items: center;
     gap: 12px;
     padding: 0.85rem 1.85rem;
-    border-radius: 6px;
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 0.88rem;
-    letter-spacing: 0.06em;
+    border-radius: 2px !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 400 !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.12em !important;
     text-transform: uppercase;
     text-decoration: none;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -4528,21 +4573,22 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        word-break: break-word;
+        padding: 0 0.25rem;
     }
     .hero-trust-bar .trust-number {
-        font-size: 1rem;
+        font-size: 1.15rem;
+        white-space: nowrap;
     }
     .hero-trust-bar .trust-label {
-        font-size: 0.5rem;
+        font-size: 0.68rem;
         text-align: center;
         margin-top: 4px;
-        line-height: 1.2;
+        line-height: 1.25;
     }
     .hero-trust-bar .trust-divider {
         display: block !important;
-        height: 30px;
-        background: var(--divider);
+        height: 28px;
+        background: rgba(183, 175, 164, 0.3);
         width: 1px;
         align-self: center;
     }
