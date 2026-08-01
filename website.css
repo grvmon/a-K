@@ -887,19 +887,20 @@ body {
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    padding: 0.55rem 1.75rem !important; /* Increased horizontal padding (+10px) */
+    padding: 0.65em 1.6em !important; /* Standardized em ratio for mathematical height scaling */
+    line-height: 1.35 !important;
     background: var(--refined-brass) !important; /* Solid Antique Brass Gold #B88E52 */
     color: var(--white) !important;
     border: 1px solid var(--refined-brass) !important;
     border-radius: 2px !important; /* Crisp 2px corners */
     font-family: var(--font-heading) !important;
-    font-weight: 600 !important; /* Slightly increased weight (600) */
-    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
     letter-spacing: 0.03em !important;
     text-transform: none !important; /* Title case readability */
     text-decoration: none !important;
     cursor: pointer !important;
-    box-shadow: 0 2px 8px rgba(184, 142, 82, 0.18) !important; /* Lightweight ambient shadow */
+    box-shadow: 0 2px 8px rgba(184, 142, 82, 0.18) !important;
     transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease !important;
 }
 
@@ -924,13 +925,14 @@ body {
 /* Compact Header Navigation CTA Button */
 .nav-cta-btn {
     font-family: var(--font-heading) !important;
-    padding: 0.45rem 1.6rem !important; /* Increased horizontal padding (+10px) */
-    font-size: 0.84rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    padding: 0.65em 1.5em !important; /* Exact same 0.65em vertical ratio as hero button */
     font-weight: 600 !important;
     letter-spacing: 0.03em !important;
     text-transform: none !important;
     border-radius: 2px !important;
-    height: 36px !important;
+    height: auto !important; /* Auto height scales naturally with font size */
     white-space: nowrap !important;
     box-shadow: 0 2px 8px rgba(184, 142, 82, 0.16) !important;
     display: inline-flex !important;
