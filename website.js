@@ -149,4 +149,76 @@ document.addEventListener('DOMContentLoaded', function () {
 
         processObserver.observe(processSection);
     }
+
+    // 6. Framework Cards Highlight Sequence for "69 Due Diligence Checks" section
+    const frameworkCards = document.querySelectorAll('.framework-card');
+    const frameworkSection = document.getElementById('services');
+
+    if (frameworkCards.length > 0 && frameworkSection) {
+        let currentFrameworkStep = 0;
+        let frameworkTimer = null;
+        let isFrameworkHovering = false;
+
+        function highlightFrameworkStep(index) {
+            frameworkCards.forEach(function (card, i) {
+                if (i === index) {
+                    card.classList.add('active-step');
+                } else {
+                    card.classList.remove('active-step');
+                }
+            });
+        }
+
+        function advanceFrameworkStep() {
+            if (isFrameworkHovering) return;
+            highlightFrameworkStep(currentFrameworkStep);
+            currentFrameworkStep = (currentFrameworkStep + 1) % frameworkCards.length;
+        }
+
+        function startFrameworkLoop() {
+            if (!frameworkTimer) {
+                advanceFrameworkStep();
+                frameworkTimer = setInterval(advanceFrameworkStep, 2200); // 2.2 seconds per step continuous loop
+            }
+        }
+
+        function stopFrameworkLoop() {
+            if (frameworkTimer) {
+                clearInterval(frameworkTimer);
+                frameworkTimer = null;
+            }
+        }
+
+        // Add interactive hover & click listeners
+        frameworkCards.forEach(function (card, idx) {
+            card.addEventListener('mouseenter', function () {
+                isFrameworkHovering = true;
+                stopFrameworkLoop();
+                highlightFrameworkStep(idx);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                isFrameworkHovering = false;
+                currentFrameworkStep = (idx + 1) % frameworkCards.length;
+                startFrameworkLoop();
+            });
+
+            card.addEventListener('click', function () {
+                highlightFrameworkStep(idx);
+            });
+        });
+
+        // Trigger continuous loop when section scrolls into view
+        const frameworkObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    startFrameworkLoop();
+                } else {
+                    stopFrameworkLoop();
+                }
+            });
+        }, { threshold: 0.2 });
+
+        frameworkObserver.observe(frameworkSection);
+    }
 });

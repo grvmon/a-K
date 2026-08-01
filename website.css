@@ -1816,6 +1816,19 @@ body {
     justify-content: space-between;
     height: 100%;
     position: relative;
+    transition: background 250ms ease, border-color 250ms ease, box-shadow 250ms ease !important;
+}
+
+.framework-card.active-step {
+    background: #FFFDF7 !important;
+    border-color: rgba(184, 142, 82, 0.45) !important;
+    box-shadow: 0 4px 12px rgba(31, 43, 56, 0.08) !important;
+    transform: none !important;
+}
+
+.framework-card.active-step .framework-questions-box {
+    background: rgba(184, 142, 82, 0.08) !important;
+    border-color: rgba(184, 142, 82, 0.4) !important;
 }
 
 /* Next Process Chevron Arrow - 100% Mathematically Symmetrical Midpoint Alignment */
@@ -1883,6 +1896,12 @@ body {
     font-family: var(--font-heading);
     font-weight: 400;
     margin-right: 4px;
+    transition: color 250ms ease;
+}
+
+.framework-card.active-step .title-num {
+    color: var(--dark-brass);
+    font-weight: 600;
 }
 
 .title-num.buyer-num {
