@@ -1852,6 +1852,14 @@ body {
     line-height: 1;
     z-index: 10;
     pointer-events: none;
+    transition: background 250ms ease, color 250ms ease, border-color 250ms ease, transform 250ms ease;
+}
+
+.framework-card.active-step::after {
+    background: var(--refined-brass);
+    color: var(--white);
+    border-color: var(--refined-brass);
+    transform: translate(65%, -50%);
 }
 
 .framework-card-wrapper:last-child .framework-card::after {
