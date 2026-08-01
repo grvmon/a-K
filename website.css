@@ -915,23 +915,25 @@ body {
 
 .sd-btn-gold .btn-arrow-badge,
 .sd-btn-navy .btn-arrow-badge,
-.btn-primary .btn-arrow-badge {
-    width: 28px !important;
-    height: 28px !important;
-    border-radius: 50% !important;
-    background: rgba(31, 43, 56, 0.25) !important;
-    color: var(--white) !important;
+.btn-primary .btn-arrow-badge,
+.nav-cta-btn .btn-arrow-badge {
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     flex-shrink: 0 !important;
 }
 
 .sd-btn-gold:hover .btn-arrow-badge,
 .sd-btn-navy:hover .btn-arrow-badge,
-.btn-primary:hover .btn-arrow-badge {
-    background: var(--refined-brass) !important;
+.btn-primary:hover .btn-arrow-badge,
+.nav-cta-btn:hover .btn-arrow-badge {
+    background: transparent !important;
     transform: translateX(4px) !important;
 }
 
@@ -1104,30 +1106,33 @@ body {
 }
 
 .btn-arrow-badge {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent !important;
+    color: inherit;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     flex-shrink: 0;
 }
 
 .btn-arrow-badge svg {
-    width: 15px;
-    height: 15px;
+    width: 16px !important;
+    height: 16px !important;
+    stroke-width: 2.2;
 }
 
 .sd-btn-gold {
     background: var(--refined-brass);
-    color: var(--deep-navy);
+    color: var(--white);
     box-shadow: 0 6px 20px rgba(184, 142, 82, 0.28);
 }
 
 .sd-btn-gold .btn-arrow-badge {
-    background: rgba(31, 43, 56, 0.2);
-    color: var(--white);
+    background: transparent;
+    color: inherit;
 }
 
 .sd-btn-gold:hover {
@@ -1137,7 +1142,7 @@ body {
 }
 
 .sd-btn-gold:hover .btn-arrow-badge {
-    background: var(--refined-brass);
+    background: transparent;
     transform: translateX(4px);
 }
 
@@ -1149,8 +1154,8 @@ body {
 }
 
 .sd-btn-navy .btn-arrow-badge {
-    background: rgba(184, 142, 82, 0.25);
-    color: var(--refined-brass);
+    background: transparent;
+    color: inherit;
 }
 
 .sd-btn-navy:hover {
@@ -1161,8 +1166,8 @@ body {
 }
 
 .sd-btn-navy:hover .btn-arrow-badge {
-    background: var(--deep-navy);
-    color: var(--white);
+    background: transparent;
+    color: inherit;
     transform: translateX(4px);
 }
 
