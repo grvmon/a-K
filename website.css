@@ -2622,8 +2622,7 @@ body {
 }
 
 /* Master Shared Card Specs for Section 3 & Section 4 */
-.spider-node-card,
-.market-lens-card {
+.spider-node-card {
     background: var(--white) !important;
     border: 1.5px solid rgba(184, 142, 82, 0.25) !important;
     border-radius: 8px !important;
@@ -2635,11 +2634,31 @@ body {
     transition: none !important;
 }
 
-.spider-node-card:hover,
+.market-lens-card {
+    background: var(--white) !important;
+    border: 1.5px solid rgba(184, 142, 82, 0.22) !important;
+    border-radius: 8px !important;
+    padding: 0.65rem 1.1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    box-shadow: 0 2px 8px rgba(31, 43, 56, 0.04) !important;
+    transform: none !important; /* Strictly stationary - cards don't move */
+    transition: background 600ms ease, border-color 600ms ease, box-shadow 600ms ease !important;
+}
+
+.market-lens-card.active-step,
 .market-lens-card:hover {
-    transform: none !important;
-    border-color: rgba(184, 142, 82, 0.25) !important;
-    box-shadow: 0 4px 16px rgba(31, 43, 56, 0.04) !important;
+    transform: none !important; /* Cards stay stationary */
+    background: #FFFDF8 !important; /* Light cream background */
+    border-color: #B88E52 !important; /* Soft gold border */
+    box-shadow: 0 4px 20px rgba(184, 142, 82, 0.18), 0 0 0 1px rgba(184, 142, 82, 0.25) !important; /* Tiny glow */
+}
+
+.market-lens-card.active-step .market-lens-num,
+.market-lens-card:hover .market-lens-num {
+    color: #B88E52 !important; /* Gold number */
+    font-weight: 700 !important;
 }
 
 .spider-node-num,
@@ -2650,6 +2669,7 @@ body {
     font-weight: 400 !important;
     flex-shrink: 0 !important;
     line-height: 1 !important;
+    transition: color 600ms ease, font-weight 600ms ease !important;
 }
 
 .spider-node-text,

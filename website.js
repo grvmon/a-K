@@ -51,4 +51,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
         observer.observe(hubGridMatrix);
     }
+
+    // 5. Walkthrough Step Highlight Sequence for "The Process" section (Card 1 -> 2 -> 3 -> 4 -> 5 -> STOPS)
+    const processCards = document.querySelectorAll('.market-lens-card');
+    const processSection = document.getElementById('bengaluru-market-lens');
+
+    if (processCards.length > 0 && processSection) {
+        let hasAnimated = false;
+
+        function runWalkthroughSequence() {
+            if (hasAnimated) return;
+            hasAnimated = true;
+
+            let step = 0;
+            
+            function highlightNextCard() {
+                processCards.forEach(function (card, i) {
+                    if (i === step) {
+                        card.classList.add('active-step');
+                    } else {
+                        card.classList.remove('active-step');
+                    }
+                });
+
+                step++;
+                if (step < processCards.length) {
+                    setTimeout(highlightNextCard, 2000); // 2 seconds per card transition
+                }
+            }
+
+            highlightNextCard();
+        }
+
+        // Trigger 1-time walkthrough when section scrolls into view
+        const processObserver = new IntersectionObserver(function (entries, observerInstance) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    runWalkthroughSequence();
+                    observerInstance.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+
+        processObserver.observe(processSection);
+    }
 });
