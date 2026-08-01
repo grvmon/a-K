@@ -81,53 +81,71 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (processCards.length > 0 && processSection) {
-        let hasAnimated = false;
+        let currentStep = 0;
+        let stepTimer = null;
+        let isUserHovering = false;
 
-        function runWalkthroughSequence() {
-            if (hasAnimated) return;
-            hasAnimated = true;
-
-            let step = 0;
-            
-            function highlightNextCard() {
-                processCards.forEach(function (card, i) {
-                    if (i === step) {
-                        card.classList.add('active-step');
-                    } else {
-                        card.classList.remove('active-step');
-                    }
-                });
-
-                // Crossfade laptop dashboard image synchronized with active card
-                updateStepVisual(step);
-
-                step++;
-                if (step < processCards.length) {
-                    setTimeout(highlightNextCard, 2000); // 2 seconds per card transition
+        function highlightStep(index) {
+            processCards.forEach(function (card, i) {
+                if (i === index) {
+                    card.classList.add('active-step');
+                } else {
+                    card.classList.remove('active-step');
                 }
-            }
-
-            highlightNextCard();
+            });
+            // Crossfade laptop dashboard image synchronized with active card
+            updateStepVisual(index);
         }
 
-        // Allow user hover to highlight card and update synced laptop screen
+        function advanceStep() {
+            if (isUserHovering) return;
+            highlightStep(currentStep);
+            currentStep = (currentStep + 1) % processCards.length; // Modulo 5 continuous loop
+        }
+
+        function startLoop() {
+            if (!stepTimer) {
+                advanceStep();
+                stepTimer = setInterval(advanceStep, 2200); // 2.2 seconds per step continuous loop
+            }
+        }
+
+        function stopLoop() {
+            if (stepTimer) {
+                clearInterval(stepTimer);
+                stepTimer = null;
+            }
+        }
+
+        // Add interactive hover & click listeners
         processCards.forEach(function (card, idx) {
             card.addEventListener('mouseenter', function () {
-                processCards.forEach(c => c.classList.remove('active-step'));
-                card.classList.add('active-step');
-                updateStepVisual(idx);
+                isUserHovering = true;
+                stopLoop();
+                highlightStep(idx);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                isUserHovering = false;
+                currentStep = (idx + 1) % processCards.length;
+                startLoop();
+            });
+
+            card.addEventListener('click', function () {
+                highlightStep(idx);
             });
         });
 
-        // Trigger 1-time walkthrough when section scrolls into view
-        const processObserver = new IntersectionObserver(function (entries, observerInstance) {
+        // Trigger continuous loop when section scrolls into view
+        const processObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    runWalkthroughSequence();
-                    observerInstance.unobserve(entry.target);
+                    startLoop();
+                } else {
+                    stopLoop();
                 }
             });
-        }, { threshold: 0.25 });
+        }, { threshold: 0.2 });
 
         processObserver.observe(processSection);
     }
