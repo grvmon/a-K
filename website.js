@@ -221,4 +221,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         frameworkObserver.observe(frameworkSection);
     }
+
+    // 7. Who Are We — Scroll Reveal Animations
+    const wawRevealEls = document.querySelectorAll('.waw-reveal');
+    if (wawRevealEls.length > 0) {
+        var wawDelay = 0;
+        const wawObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    // Stagger each element's reveal by 80ms
+                    var el = entry.target;
+                    var d = wawDelay;
+                    wawDelay += 80;
+                    setTimeout(function () {
+                        el.classList.add('is-visible');
+                    }, d);
+                    wawObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        wawRevealEls.forEach(function (el) {
+            wawObserver.observe(el);
+        });
+    }
 });
