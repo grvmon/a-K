@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 5. Walkthrough Step Highlight Sequence & Synced Laptop Image Crossfade for "The Process" section
     const processCards = document.querySelectorAll('.market-lens-card');
-    const processSection = document.getElementById('bengaluru-market-lens');
+    const processSection = document.getElementById('buyers-checklist');
     const processImg = document.getElementById('process-visual-img');
 
     // Preload & map 5 distinctly framed contextual dashboard images for each decision step
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 6. Framework Cards Highlight Sequence for "69 Due Diligence Checks" section
     const frameworkCards = document.querySelectorAll('.framework-card');
-    const frameworkSection = document.getElementById('services');
+    const frameworkSection = document.getElementById('framework');
 
     if (frameworkCards.length > 0 && frameworkSection) {
         let currentFrameworkStep = 0;
