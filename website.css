@@ -878,35 +878,37 @@ body {
     width: 100% !important;
 }
 
+/* Standardized Master CTA Button Rule */
 .sd-btn-gold,
 .sd-btn-navy,
-.btn-primary {
-    position: relative !important;
-    z-index: 10 !important;
+.btn-primary,
+.nav-cta-btn {
+    font-family: var(--font-heading) !important;
+    font-size: 1.25rem !important; /* 20px */
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    padding: 12px 24px !important; /* Top: 12px, Right: 24px, Bottom: 12px, Left: 24px */
+    height: auto !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.03em !important;
+    text-transform: none !important;
+    border-radius: 2px !important;
+    border: 1px solid var(--refined-brass) !important;
+    background: var(--refined-brass) !important;
+    color: var(--white) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important;
-    padding: 0.45em 1.4em !important; /* Balanced 9px top & bottom vertical padding */
-    line-height: 1.22 !important;
-    background: var(--refined-brass) !important; /* Solid Antique Brass Gold #B88E52 */
-    color: var(--white) !important;
-    border: 1px solid var(--refined-brass) !important;
-    border-radius: 2px !important; /* Crisp 2px corners */
-    font-family: var(--font-heading) !important;
-    font-weight: 600 !important;
-    font-size: 1.25rem !important; /* Exact 20px */
-    letter-spacing: 0.03em !important;
-    text-transform: none !important; /* Title case readability */
-    text-decoration: none !important;
-    cursor: pointer !important;
     box-shadow: 0 2px 8px rgba(184, 142, 82, 0.18) !important;
     transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
 }
 
 .sd-btn-gold:hover,
 .sd-btn-navy:hover,
-.btn-primary:hover {
+.btn-primary:hover,
+.nav-cta-btn:hover {
     background: var(--deep-navy) !important;
     border-color: var(--deep-navy) !important;
     color: var(--white) !important;
@@ -920,25 +922,6 @@ body {
 .nav-cta-btn .btn-arrow-badge,
 .btn-arrow-badge {
     display: none !important;
-}
-
-/* Compact Header Navigation CTA Button */
-.nav-cta-btn {
-    font-family: var(--font-heading) !important;
-    font-size: 1.25rem !important; /* Exact 20px */
-    line-height: 1.22 !important;
-    padding: 0.35em 1.2em !important; /* Balanced 7px top & bottom vertical padding */
-    font-weight: 600 !important;
-    letter-spacing: 0.03em !important;
-    text-transform: none !important;
-    border-radius: 2px !important;
-    height: auto !important; /* Auto height scales naturally with font size */
-    white-space: nowrap !important;
-    box-shadow: 0 2px 8px rgba(184, 142, 82, 0.16) !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 7px !important;
 }
 
 .nav-cta-btn .btn-arrow-badge {
