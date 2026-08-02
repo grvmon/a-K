@@ -471,26 +471,18 @@ if (entry.isIntersecting) {
 if (el.dataset.staggerChildren) {
 const children = el.querySelectorAll(el.dataset.staggerChildren);
 children.forEach((child, index) => {
-child.style.transitionDelay = `${index * 70}ms`;
+child.style.transitionDelay = `${index * 80}ms`;
 child.classList.add('revealed');
 });
 }
 el.classList.add('revealed');
-} else {
-el.classList.remove('revealed');
-if (el.dataset.staggerChildren) {
-const children = el.querySelectorAll(el.dataset.staggerChildren);
-children.forEach(child => {
-child.classList.remove('revealed');
-child.style.transitionDelay = '';
-});
-}
+premiumObserver.unobserve(el);
 }
 });
 }, {
 root: null,
-threshold: 0.02,
-rootMargin: '-5% 0px -5% 0px'
+threshold: 0.01,
+rootMargin: '0px 0px -60px 0px'
 });
 premiumRevealElements.forEach(el => {
 premiumObserver.observe(el);

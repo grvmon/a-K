@@ -568,27 +568,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (el.dataset.staggerChildren) {
                     const children = el.querySelectorAll(el.dataset.staggerChildren);
                     children.forEach((child, index) => {
-                        child.style.transitionDelay = `${index * 70}ms`;
+                        child.style.transitionDelay = `${index * 80}ms`;
                         child.classList.add('revealed');
                     });
                 }
                 el.classList.add('revealed');
-            } else {
-                // Reset states when scrolled out of fold to ensure they are visible only on fold
-                el.classList.remove('revealed');
-                if (el.dataset.staggerChildren) {
-                    const children = el.querySelectorAll(el.dataset.staggerChildren);
-                    children.forEach(child => {
-                        child.classList.remove('revealed');
-                        child.style.transitionDelay = '';
-                    });
-                }
+                premiumObserver.unobserve(el); // Stay visible once revealed to prevent flashing or hide errors
             }
         });
     }, {
         root: null,
-        threshold: 0.02,
-        rootMargin: '-5% 0px -5% 0px' // Keep active precisely within the viewport fold
+        threshold: 0.01,
+        rootMargin: '0px 0px -60px 0px' // Trigger slightly before entering viewport for seamless reveal
     });
     
     premiumRevealElements.forEach(el => {
