@@ -85,16 +85,112 @@
 <body>
 
     <div class="site-canvas">
-        <!-- ================= STICKY HEADER NAVIGATION ================= -->
-        <header class="header-nav scrolled" style="position: fixed; background: rgba(31, 43, 56, 0.98); top: 0; width: 100%; z-index: 1000;">
-            <div class="nav-container container">
-                <a href="index.html" class="nav-brand" aria-label="Acre&Key Homepage">
-                    <span class="logo-accent">Acre</span><span class="logo-divider">&amp;</span><span class="logo-main">Key</span>
+        <!-- ================= HEADER NAVIGATION ================= -->
+        <header class="header-nav" id="header-nav" style="background: rgba(31, 43, 56, 0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+            <div class="container nav-container">
+                <!-- Brand Logo -->
+                <a href="index.html" class="nav-brand">
+                    <span class="brand-logo-text">acre&amp;key</span>
                 </a>
-                <a href="index.html" class="back-home-btn" style="margin-bottom: 0;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    Back to Website
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="nav-links">
+                    <li><a href="index.html#buyers-checklist">Buyer's Checklist</a></li>
+                    <li><a href="index.html#framework">Decision Framework</a></li>
+                    <li><a href="index.html#core">CORE</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                </ul>
+
+                <!-- Header CTA Button (Desktop) -->
+                <a href="index.html#footer" class="sd-btn-gold nav-cta-btn">
+                    <span>Talk to an Advisor</span>
                 </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span class="hamburger-line top-line"></span>
+                    <span class="hamburger-line mid-line"></span>
+                    <span class="hamburger-line bot-line"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Backdrop Overlay -->
+            <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+                <div class="mobile-drawer-inner">
+                    <div class="mobile-drawer-header">
+                        <a href="index.html" class="mobile-drawer-brand" aria-label="Acre and Key Home">
+                            <span class="brand-logo-text">acre&amp;key</span>
+                        </a>
+                        <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <nav class="mobile-nav-list">
+                        <a href="index.html#buyers-checklist" class="mobile-nav-item">
+                            <span class="mobile-nav-label">Buyer's Checklist</span>
+                            <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#framework" class="mobile-nav-item">
+                            <span class="mobile-nav-label">Decision Framework</span>
+                            <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#core" class="mobile-nav-item">
+                            <span class="mobile-nav-label">Core</span>
+                            <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#testimonials" class="mobile-nav-item">
+                            <span class="mobile-nav-label">Testimonials</span>
+                            <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="index.html#about-us" class="mobile-nav-item">
+                            <span class="mobile-nav-label">About Us</span>
+                            <svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                    </nav>
+
+                    <div class="mobile-drawer-footer">
+                        <a href="index.html#footer" class="mobile-drawer-cta">
+                            <span>Talk to an Advisor</span>
+                        </a>
+                        <span class="mobile-drawer-subtext">Expert Property Guidance</span>
+
+                        <div class="mobile-drawer-socials">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -238,23 +334,89 @@
             </div>
         </main>
 
-        <!-- ================= FOOTER SECTION ================= -->
-        <footer class="footer-section">
+        <!-- ================= SITE FOOTER (FULL WIDTH) ================= -->
+        <footer class="site-footer" id="footer">
             <div class="container">
-                <div class="footer-bottom-bar" style="border-top: none; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <!-- Footer Bottom Bar -->
+                <div class="footer-bottom-bar" style="border-top: none; padding-top: 10px;">
                     <div class="footer-bottom-left">
                         <span>© 2026 Acre&amp;Key Advisory LLP. All rights reserved.</span>
                     </div>
+                    <div class="footer-social-icons" style="margin-top: 0;">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+                        <a href="#" aria-label="Quora"><i class="fa-brands fa-quora"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
                     <div class="footer-bottom-right">
-                        <ul class="footer-legal-links" style="display: flex; gap: 1.5rem; list-style: none;">
-                            <li><a href="index.html" style="color: var(--muted-slate); text-decoration: none;">Home</a></li>
-                            <li><a href="privacy-policy.html" style="color: var(--refined-brass); text-decoration: none; font-weight: 600;">Privacy Policy</a></li>
+                        <ul class="footer-legal-links">
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">RERA Disclaimer</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+
+        <!-- ================= COOKIE CONSENT POPUP ================= -->
+        <div class="cookie-banner-popup" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie Preferences" tabindex="-1">
+            <div class="cookie-popup-content">
+                <div class="cookie-text-group">
+                    <p class="cookie-popup-desc">
+                        We use cookies to improve your browsing experience and analyse website traffic. Learn more in our <a href="privacy-policy.html" class="cookie-link">Privacy Policy</a>.
+                    </p>
+                </div>
+                <div class="cookie-popup-actions">
+                    <button type="button" class="cookie-btn cookie-btn-decline" id="cookieRejectBtn">Decline</button>
+                    <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accept All</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Feather Icons Init & Dynamic Cookie Clearance Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            if (!sessionStorage.getItem('ackey_cookie_consent_session')) {
+                setTimeout(function() {
+                    if (cookieBanner) {
+                        cookieBanner.classList.add('active');
+                    }
+                }, 600);
+            }
+
+            function dismissCookieBanner() {
+                if (cookieBanner) {
+                    cookieBanner.classList.remove('active');
+                }
+                sessionStorage.setItem('ackey_cookie_consent_session', 'true');
+            }
+
+            if (acceptBtn) acceptBtn.addEventListener('click', dismissCookieBanner);
+            if (rejectBtn) rejectBtn.addEventListener('click', dismissCookieBanner);
+
+            // Escape key listener for accessibility
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && cookieBanner && cookieBanner.classList.contains('active')) {
+                    dismissCookieBanner();
+                }
+            });
+        });
+    </script>
+    <!-- Site Interactions & Scroll Animations -->
+    <script src="website.js?v=4" defer></script>
 </body>
 </html>
