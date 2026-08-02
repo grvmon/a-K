@@ -5676,3 +5676,21 @@ body.drawer-open {
         letter-spacing: -0.01em !important;
     }
 }
+
+/* Premium Unified Scroll Reveal System */
+.premium-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(6px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform, filter;
+}
+
+.premium-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+

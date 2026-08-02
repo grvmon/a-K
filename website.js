@@ -463,4 +463,28 @@ stopTestimonialAutoScroll();
 }
 });
 }
+const premiumRevealElements = document.querySelectorAll('.premium-reveal');
+const premiumObserver = new IntersectionObserver((entries, obs) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const el = entry.target;
+if (el.dataset.staggerChildren) {
+const children = el.querySelectorAll(el.dataset.staggerChildren);
+children.forEach((child, index) => {
+child.style.transitionDelay = `${index * 70}ms`;
+child.classList.add('revealed');
+});
+}
+el.classList.add('revealed');
+obs.unobserve(el);
+}
+});
+}, {
+root: null,
+threshold: 0.05,
+rootMargin: '0px 0px -40px 0px'
+});
+premiumRevealElements.forEach(el => {
+premiumObserver.observe(el);
+});
 });
