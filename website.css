@@ -5731,3 +5731,26 @@ body.drawer-open {
         transform: scale(1.1) !important;
     }
 }
+
+/* Ensure summary banners have less padding and smaller text to fit in fewer lines on mobile */
+@media (max-width: 991px) {
+    .summary-banner,
+    .agenda-payoff-banner,
+    .our-promise-banner,
+    .market-lens-banner,
+    .who-we-are-banner,
+    .micromarket-banner,
+    .framework-summary-banner {
+        padding: 1rem 1rem !important;
+    }
+    
+    .summary-banner-text,
+    .summary-headline,
+    .market-lens-banner-text,
+    .who-we-are-banner-text,
+    .micromarket-banner-text,
+    .banner-full-callout-text {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+}
