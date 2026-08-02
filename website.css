@@ -532,11 +532,11 @@ body {
 }
 
 .trust-number {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 1.5rem;
     color: var(--deep-navy);
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 600; /* Increased weight for Manrope to match heading visual weight */
     white-space: nowrap;
 }
 
@@ -741,6 +741,10 @@ body {
 
 /* ================= LUXURY MOBILE NAVIGATION & DRAWER ================= */
 @media (max-width: 991px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .nav-links,
     .nav-cta-btn {
         display: none !important;
@@ -1079,7 +1083,7 @@ body {
     }
 
     .hero-section {
-        padding-top: 2rem;
+        padding-top: 3rem;
         padding-bottom: 3rem;
     }
 
@@ -5395,9 +5399,9 @@ body.drawer-open {
     }
 
     .hero-trust-bar .trust-number {
-        font-family: var(--font-heading) !important;
+        font-family: var(--font-body) !important;
         font-size: 1.45rem !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
         color: var(--deep-navy) !important;
         white-space: nowrap !important;
     }
