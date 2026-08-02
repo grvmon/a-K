@@ -1079,7 +1079,6 @@ body {
     }
 
     /* Standardize all section paddings on mobile */
-    .framework-section,
     .core-framework-section,
     .credentials-section,
     .who-are-we-section {
@@ -5469,6 +5468,13 @@ body.drawer-open {
 
 /* ================= DECISION FRAMEWORK MOBILE SWIPE CAROUSEL ================= */
 @media (max-width: 991px) {
+    .framework-section {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    .framework-section .section-header {
+        margin-bottom: 0.75rem !important;
+    }
     .framework-grid {
         display: flex !important;
         flex-direction: row !important;
@@ -5478,13 +5484,14 @@ body.drawer-open {
         -webkit-overflow-scrolling: touch !important;
         scroll-behavior: smooth !important;
         gap: 16px !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
         padding-top: 8px !important;
         padding-bottom: 12px !important;
-        margin-left: -20px !important;
-        margin-right: -20px !important;
+        margin-left: -1rem !important;
+        margin-right: -1rem !important;
         margin-bottom: 0 !important;
+        scroll-padding-left: 1rem !important;
         scrollbar-width: none !important; /* Firefox */
         -ms-overflow-style: none !important;  /* IE/Edge */
     }
@@ -5506,6 +5513,7 @@ body.drawer-open {
     }
 
     .framework-card {
+        padding: 1rem !important;
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
