@@ -2596,10 +2596,19 @@ body.drawer-open {
 @media (max-width: 1024px) {
     .spider-architecture-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0.45rem !important;
     }
     .spider-wire-canvas {
         display: none;
+    }
+    .spider-core-hub {
+        display: none !important;
+    }
+    .spider-right-col .spider-stage-group {
+        flex-direction: row-reverse !important;
+    }
+    .spider-right-col .spider-stage-label {
+        transform: rotate(180deg) !important;
     }
     .cards-grid-5 {
         grid-template-columns: repeat(3, 1fr);
