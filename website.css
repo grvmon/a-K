@@ -1079,7 +1079,6 @@ body {
     }
 
     /* Standardize all section paddings on mobile */
-    .market-lens-section,
     .framework-section,
     .core-framework-section,
     .credentials-section,
@@ -3123,18 +3122,29 @@ body.drawer-open {
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
+    .market-lens-section {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .market-lens-section .section-header {
+        margin-bottom: 0.75rem !important;
+    }
     .market-lens-grid {
         grid-template-columns: 1fr;
+        gap: 0.5rem !important;
     }
     
     .market-lens-image-wrapper {
-        min-height: 350px;
-        height: 350px;
+        display: none !important;
     }
     
     .market-lens-stack {
         height: auto !important;
-        gap: 0.5rem !important;
+        gap: 0.35rem !important;
+    }
+
+    .market-lens-card {
+        padding: 0.4rem 1.1rem !important;
     }
     
     .market-lens-footer-bar {
