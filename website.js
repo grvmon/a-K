@@ -371,6 +371,16 @@ document.addEventListener('DOMContentLoaded', function () {
         frameworkGrid.addEventListener('mouseenter', handleUserInteractionStart);
         frameworkGrid.addEventListener('mouseleave', handleUserInteractionEnd);
 
+        let cardWidth = 0;
+        function updateCardWidth() {
+            const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
+            if (wrappers.length > 0) {
+                cardWidth = wrappers[0].offsetWidth + 16;
+            }
+        }
+        updateCardWidth();
+        window.addEventListener('resize', updateCardWidth);
+
         // Detect Scroll Position for Live Dot Indicators
         let isScrollDebouncing = false;
         frameworkGrid.addEventListener('scroll', () => {
@@ -379,8 +389,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
                     if (wrappers.length > 0) {
                         const scrollLeft = frameworkGrid.scrollLeft;
-                        const cardWidth = wrappers[0].offsetWidth + 16;
-                        const calculatedIndex = Math.round(scrollLeft / cardWidth);
+                        if (!cardWidth) updateCardWidth();
+                        const calculatedIndex = Math.round(scrollLeft / (cardWidth || 1));
                         const clampedIndex = Math.max(0, Math.min(wrappers.length - 1, calculatedIndex));
                         if (clampedIndex !== currentCardIndex) {
                             currentCardIndex = clampedIndex;
@@ -493,6 +503,16 @@ document.addEventListener('DOMContentLoaded', function () {
         testimonialsContainer.addEventListener('mouseenter', handleTUserStart);
         testimonialsContainer.addEventListener('mouseleave', handleTUserEnd);
 
+        let tCardWidth = 0;
+        function updateTCardWidth() {
+            const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
+            if (tCards.length > 0) {
+                tCardWidth = tCards[0].offsetWidth + 16;
+            }
+        }
+        updateTCardWidth();
+        window.addEventListener('resize', updateTCardWidth);
+
         // Scroll listener for live dot indicators
         let isTScrollDebouncing = false;
         testimonialsContainer.addEventListener('scroll', () => {
@@ -501,8 +521,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
                     if (tCards.length > 0) {
                         const scrollLeft = testimonialsContainer.scrollLeft;
-                        const cardWidth = tCards[0].offsetWidth + 16;
-                        const calculatedIndex = Math.round(scrollLeft / cardWidth);
+                        if (!tCardWidth) updateTCardWidth();
+                        const calculatedIndex = Math.round(scrollLeft / (tCardWidth || 1));
                         const clampedIndex = Math.max(0, Math.min(tCards.length - 1, calculatedIndex));
                         if (clampedIndex !== currentTestimonialIndex) {
                             currentTestimonialIndex = clampedIndex;
