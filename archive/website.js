@@ -560,11 +560,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Premium Scroll Reveal Observer
     const premiumRevealElements = document.querySelectorAll('.premium-reveal');
-    const premiumObserver = new IntersectionObserver((entries, obs) => {
+    const premiumObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const el = entry.target;
             if (entry.isIntersecting) {
-                const el = entry.target;
-                
                 // If the element specifies staggering for its children via data attributes
                 if (el.dataset.staggerChildren) {
                     const children = el.querySelectorAll(el.dataset.staggerChildren);
@@ -573,15 +572,23 @@ document.addEventListener('DOMContentLoaded', function () {
                         child.classList.add('revealed');
                     });
                 }
-                
                 el.classList.add('revealed');
-                obs.unobserve(el);
+            } else {
+                // Reset states when scrolled out of fold to ensure they are visible only on fold
+                el.classList.remove('revealed');
+                if (el.dataset.staggerChildren) {
+                    const children = el.querySelectorAll(el.dataset.staggerChildren);
+                    children.forEach(child => {
+                        child.classList.remove('revealed');
+                        child.style.transitionDelay = '';
+                    });
+                }
             }
         });
     }, {
         root: null,
-        threshold: 0.05,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.02,
+        rootMargin: '-5% 0px -5% 0px' // Keep active precisely within the viewport fold
     });
     
     premiumRevealElements.forEach(el => {
