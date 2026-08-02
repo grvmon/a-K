@@ -14,20 +14,68 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // 3. Mobile Menu Toggle
+    // 3. Luxury Mobile Navigation Drawer & Interactions
     const mobileBtn = document.getElementById('mobile-toggle-btn');
     const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+    const mobileDrawerClose = document.getElementById('mobile-drawer-close');
 
-    if (mobileBtn && mobileDrawer) {
-        mobileBtn.addEventListener('click', function () {
-            mobileDrawer.classList.toggle('active');
+    function openMobileDrawer() {
+        if (mobileDrawer) mobileDrawer.classList.add('is-active');
+        if (mobileNavOverlay) mobileNavOverlay.classList.add('is-active');
+        if (mobileBtn) {
+            mobileBtn.classList.add('is-active');
+            mobileBtn.setAttribute('aria-expanded', 'true');
+        }
+        document.body.classList.add('drawer-open');
+    }
+
+    function closeMobileDrawer() {
+        if (mobileDrawer) mobileDrawer.classList.remove('is-active');
+        if (mobileNavOverlay) mobileNavOverlay.classList.remove('is-active');
+        if (mobileBtn) {
+            mobileBtn.classList.remove('is-active');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('drawer-open');
+    }
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (mobileDrawer && mobileDrawer.classList.contains('is-active')) {
+                closeMobileDrawer();
+            } else {
+                openMobileDrawer();
+            }
         });
+    }
 
-        // Close mobile menu on link click
+    if (mobileDrawerClose) {
+        mobileDrawerClose.addEventListener('click', function () {
+            closeMobileDrawer();
+        });
+    }
+
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener('click', function () {
+            closeMobileDrawer();
+        });
+    }
+
+    // Close mobile drawer on ESC key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('is-active')) {
+            closeMobileDrawer();
+        }
+    });
+
+    // Close mobile drawer when any link inside drawer is clicked
+    if (mobileDrawer) {
         const drawerLinks = mobileDrawer.querySelectorAll('a');
         drawerLinks.forEach(function (link) {
             link.addEventListener('click', function () {
-                mobileDrawer.classList.remove('active');
+                closeMobileDrawer();
             });
         });
     }
@@ -243,6 +291,250 @@ document.addEventListener('DOMContentLoaded', function () {
 
         wawRevealEls.forEach(function (el) {
             wawObserver.observe(el);
+        });
+    }
+
+    // 8. Mobile Swipe Carousel for Decision Framework Cards
+    const frameworkGrid = document.querySelector('.framework-grid');
+    const dots = document.querySelectorAll('.framework-carousel-dots .dot-btn');
+    
+    if (frameworkGrid && dots.length > 0) {
+        let currentCardIndex = 0;
+        let autoScrollInterval = null;
+        let inactivityTimeout = null;
+        let isUserInteracting = false;
+
+        function updateDots(index) {
+            dots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function scrollToCard(index) {
+            if (window.innerWidth > 991) return;
+            const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
+            if (wrappers[index]) {
+                const targetCard = wrappers[index];
+                const scrollLeftPos = targetCard.offsetLeft - frameworkGrid.offsetLeft - 20;
+                frameworkGrid.scrollTo({
+                    left: scrollLeftPos,
+                    behavior: 'smooth'
+                });
+                currentCardIndex = index;
+                updateDots(index);
+            }
+        }
+
+        function startAutoScroll() {
+            if (isUserInteracting || window.innerWidth > 991) return;
+            stopAutoScroll();
+            autoScrollInterval = setInterval(() => {
+                const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
+                currentCardIndex = (currentCardIndex + 1) % wrappers.length;
+                scrollToCard(currentCardIndex);
+            }, 6500); // 6.5 seconds auto-scroll
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+        }
+
+        function handleUserInteractionStart() {
+            isUserInteracting = true;
+            stopAutoScroll();
+            if (inactivityTimeout) {
+                clearTimeout(inactivityTimeout);
+                inactivityTimeout = null;
+            }
+        }
+
+        function handleUserInteractionEnd() {
+            if (inactivityTimeout) clearTimeout(inactivityTimeout);
+            inactivityTimeout = setTimeout(() => {
+                isUserInteracting = false;
+                startAutoScroll();
+            }, 8500); // Resume auto-scroll after 8.5s inactivity
+        }
+
+        // Touch & Mouse Event Listeners for Instant Pause & Delayed Resume
+        frameworkGrid.addEventListener('touchstart', handleUserInteractionStart, { passive: true });
+        frameworkGrid.addEventListener('touchend', handleUserInteractionEnd, { passive: true });
+        frameworkGrid.addEventListener('mousedown', handleUserInteractionStart);
+        frameworkGrid.addEventListener('mouseup', handleUserInteractionEnd);
+        frameworkGrid.addEventListener('mouseenter', handleUserInteractionStart);
+        frameworkGrid.addEventListener('mouseleave', handleUserInteractionEnd);
+
+        // Detect Scroll Position for Live Dot Indicators
+        let isScrollDebouncing = false;
+        frameworkGrid.addEventListener('scroll', () => {
+            if (!isScrollDebouncing) {
+                window.requestAnimationFrame(() => {
+                    const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
+                    if (wrappers.length > 0) {
+                        const scrollLeft = frameworkGrid.scrollLeft;
+                        const cardWidth = wrappers[0].offsetWidth + 16;
+                        const calculatedIndex = Math.round(scrollLeft / cardWidth);
+                        const clampedIndex = Math.max(0, Math.min(wrappers.length - 1, calculatedIndex));
+                        if (clampedIndex !== currentCardIndex) {
+                            currentCardIndex = clampedIndex;
+                            updateDots(clampedIndex);
+                        }
+                    }
+                    isScrollDebouncing = false;
+                });
+                isScrollDebouncing = true;
+            }
+        }, { passive: true });
+
+        // Dot Click Listeners
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                handleUserInteractionStart();
+                scrollToCard(idx);
+                handleUserInteractionEnd();
+            });
+        });
+
+        // Initialize Carousel Auto-Scroll on Load
+        if (window.innerWidth <= 991) {
+            startAutoScroll();
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 991) {
+                startAutoScroll();
+            } else {
+                stopAutoScroll();
+            }
+        });
+    }
+
+    // 9. Mobile Swipe Carousel for Customer Speak / Testimonial Cards
+    const testimonialsContainer = document.querySelector('.credentials-col');
+    const testimonialDots = document.querySelectorAll('.testimonials-carousel-dots .dot-btn');
+    
+    if (testimonialsContainer && testimonialDots.length > 0) {
+        let currentTestimonialIndex = 0;
+        let tAutoScrollInterval = null;
+        let tInactivityTimeout = null;
+        let isTUserInteracting = false;
+
+        function updateTestimonialDots(index) {
+            testimonialDots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function scrollToTestimonial(index) {
+            if (window.innerWidth > 991) return;
+            const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
+            if (tCards[index]) {
+                const targetCard = tCards[index];
+                const scrollLeftPos = targetCard.offsetLeft - testimonialsContainer.offsetLeft - 20;
+                testimonialsContainer.scrollTo({
+                    left: scrollLeftPos,
+                    behavior: 'smooth'
+                });
+                currentTestimonialIndex = index;
+                updateTestimonialDots(index);
+            }
+        }
+
+        function startTestimonialAutoScroll() {
+            if (isTUserInteracting || window.innerWidth > 991) return;
+            stopTestimonialAutoScroll();
+            tAutoScrollInterval = setInterval(() => {
+                const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % tCards.length;
+                scrollToTestimonial(currentTestimonialIndex);
+            }, 6500); // 6.5s auto scroll
+        }
+
+        function stopTestimonialAutoScroll() {
+            if (tAutoScrollInterval) {
+                clearInterval(tAutoScrollInterval);
+                tAutoScrollInterval = null;
+            }
+        }
+
+        function handleTUserStart() {
+            isTUserInteracting = true;
+            stopTestimonialAutoScroll();
+            if (tInactivityTimeout) {
+                clearTimeout(tInactivityTimeout);
+                tInactivityTimeout = null;
+            }
+        }
+
+        function handleTUserEnd() {
+            if (tInactivityTimeout) clearTimeout(tInactivityTimeout);
+            tInactivityTimeout = setTimeout(() => {
+                isTUserInteracting = false;
+                startTestimonialAutoScroll();
+            }, 8500); // Resume auto-scroll after 8.5s inactivity
+        }
+
+        // Event listeners
+        testimonialsContainer.addEventListener('touchstart', handleTUserStart, { passive: true });
+        testimonialsContainer.addEventListener('touchend', handleTUserEnd, { passive: true });
+        testimonialsContainer.addEventListener('mousedown', handleTUserStart);
+        testimonialsContainer.addEventListener('mouseup', handleTUserEnd);
+        testimonialsContainer.addEventListener('mouseenter', handleTUserStart);
+        testimonialsContainer.addEventListener('mouseleave', handleTUserEnd);
+
+        // Scroll listener for live dot indicators
+        let isTScrollDebouncing = false;
+        testimonialsContainer.addEventListener('scroll', () => {
+            if (!isTScrollDebouncing) {
+                window.requestAnimationFrame(() => {
+                    const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
+                    if (tCards.length > 0) {
+                        const scrollLeft = testimonialsContainer.scrollLeft;
+                        const cardWidth = tCards[0].offsetWidth + 16;
+                        const calculatedIndex = Math.round(scrollLeft / cardWidth);
+                        const clampedIndex = Math.max(0, Math.min(tCards.length - 1, calculatedIndex));
+                        if (clampedIndex !== currentTestimonialIndex) {
+                            currentTestimonialIndex = clampedIndex;
+                            updateTestimonialDots(clampedIndex);
+                        }
+                    }
+                    isTScrollDebouncing = false;
+                });
+                isTScrollDebouncing = true;
+            }
+        }, { passive: true });
+
+        // Dot Click Listeners
+        testimonialDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                handleTUserStart();
+                scrollToTestimonial(idx);
+                handleTUserEnd();
+            });
+        });
+
+        // Initialize Carousel Auto-Scroll on Load
+        if (window.innerWidth <= 991) {
+            startTestimonialAutoScroll();
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 991) {
+                startTestimonialAutoScroll();
+            } else {
+                stopTestimonialAutoScroll();
+            }
         });
     }
 });
