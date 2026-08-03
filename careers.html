@@ -300,6 +300,13 @@
 
         .value-circle svg { width: 20px; height: 20px; stroke-width: 2.2; }
 
+        .value-text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         .value-title {
             font-family: var(--font-body);
             font-size: 1.05rem;
@@ -749,13 +756,37 @@
                 align-items: flex-start;
                 gap: 1.25rem;
             }
+            .value-text-block {
+                align-items: flex-start;
+                text-align: left;
+            }
             .value-circle, .step-badge {
                 margin-bottom: 0;
                 flex-shrink: 0;
             }
+            .careers-section {
+                padding: var(--space-section-mobile) 0;
+            }
         }
 
         @media (max-width: 640px) {
+            .floating-badge {
+                padding: 6px 12px;
+            }
+            .floating-badge-text {
+                font-size: 0.65rem;
+            }
+            .floating-badge-icon {
+                width: 24px;
+                height: 24px;
+            }
+            .floating-badge-icon svg {
+                width: 12px;
+                height: 12px;
+            }
+            .badge-1 { top: 8%; left: 0%; }
+            .badge-2 { bottom: 12%; right: 0%; }
+            .badge-3 { bottom: 4%; left: 4%; }
             .roles-grid, .benefits-grid {
                 grid-template-columns: 1fr;
             }
@@ -1032,36 +1063,46 @@
                         <div class="value-circle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
                         </div>
-                        <h4 class="value-title">Customer First</h4>
-                        <p class="value-desc">We work exclusively for the home buyer, serving as their dedicated fiduciary guides at every stage.</p>
+                        <div class="value-text-block">
+                            <h4 class="value-title">Customer First</h4>
+                            <p class="value-desc">We work exclusively for the home buyer, serving as their dedicated fiduciary guides at every stage.</p>
+                        </div>
                     </div>
                     <div class="value-node">
                         <div class="value-circle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
                         </div>
-                        <h4 class="value-title">Transparency</h4>
-                        <p class="value-desc">We reveal the true status of legal clearances, RERA certifications, and developer delivery records.</p>
+                        <div class="value-text-block">
+                            <h4 class="value-title">Transparency</h4>
+                            <p class="value-desc">We reveal the true status of legal clearances, RERA certifications, and developer delivery records.</p>
+                        </div>
                     </div>
                     <div class="value-node">
                         <div class="value-circle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
-                        <h4 class="value-title">Integrity</h4>
-                        <p class="value-desc">Our advice is independent, objective, and unbiased. We represent you—and only you.</p>
+                        <div class="value-text-block">
+                            <h4 class="value-title">Integrity</h4>
+                            <p class="value-desc">Our advice is independent, objective, and unbiased. We represent you—and only you.</p>
+                        </div>
                     </div>
                     <div class="value-node">
                         <div class="value-circle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
-                        <h4 class="value-title">Excellence</h4>
-                        <p class="value-desc">We deploy a strategy-consulting approach to property search, setting the standard for market audits.</p>
+                        <div class="value-text-block">
+                            <h4 class="value-title">Excellence</h4>
+                            <p class="value-desc">We deploy a strategy-consulting approach to property search, setting the standard for market audits.</p>
+                        </div>
                     </div>
                     <div class="value-node">
                         <div class="value-circle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                         </div>
-                        <h4 class="value-title">Curiosity</h4>
-                        <p class="value-desc">We push boundaries, verify data points, and investigate civic blueprints to ensure home buyer safety.</p>
+                        <div class="value-text-block">
+                            <h4 class="value-title">Curiosity</h4>
+                            <p class="value-desc">We push boundaries, verify data points, and investigate civic blueprints to ensure home buyer safety.</p>
+                        </div>
                     </div>
                 </div>
             </div>
