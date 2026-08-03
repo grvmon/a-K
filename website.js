@@ -79,11 +79,12 @@ const observerOptions = {
 root: null,
 threshold: 0.2
 };
-const observer = new IntersectionObserver(function (entries, observerInstance) {
+const observer = new IntersectionObserver(function (entries) {
 entries.forEach(function (entry) {
 if (entry.isIntersecting) {
 entry.target.classList.add('animated');
-observerInstance.unobserve(entry.target);
+} else {
+entry.target.classList.remove('animated');
 }
 });
 }, observerOptions);
@@ -231,13 +232,9 @@ var wawDelay = 0;
 const wawObserver = new IntersectionObserver(function (entries) {
 entries.forEach(function (entry) {
 if (entry.isIntersecting) {
-var el = entry.target;
-var d = wawDelay;
-wawDelay += 80;
-setTimeout(function () {
-el.classList.add('is-visible');
-}, d);
-wawObserver.unobserve(el);
+entry.target.classList.add('is-visible');
+} else {
+entry.target.classList.remove('is-visible');
 }
 });
 }, { threshold: 0.15 });
@@ -484,13 +481,21 @@ child.classList.add('revealed');
 });
 }
 el.classList.add('revealed');
-premiumObserver.unobserve(el);
+} else {
+if (el.dataset.staggerChildren) {
+const children = el.querySelectorAll(el.dataset.staggerChildren);
+children.forEach((child) => {
+child.style.transitionDelay = '0ms';
+child.classList.remove('revealed');
+});
+}
+el.classList.remove('revealed');
 }
 });
 }, {
 root: null,
-threshold: 0.01,
-rootMargin: '0px 0px -60px 0px'
+threshold: 0.08,
+rootMargin: '0px 0px -40px 0px'
 });
 premiumRevealElements.forEach(el => {
 premiumObserver.observe(el);
