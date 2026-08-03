@@ -31,9 +31,8 @@
     <link rel="preload" href="style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
 
 
-    <!-- Custom Stylesheet (Asynchronous Non-Blocking Load) -->
-    <link rel="preload" href="website.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="website.css?v=4"></noscript>
+    <!-- Custom Stylesheet (Instant Render Blocking) -->
+    <link rel="stylesheet" href="website.css?v=4">
     <!-- Preload Critical Hero Image -->
     <link rel="preload" as="image" href="style-guide/assets/acrekey_bengaluru_hero_advisor.webp" fetchpriority="high">
     <!-- Structured JSON-LD Schema Data (SEO Rich Snippets) -->
