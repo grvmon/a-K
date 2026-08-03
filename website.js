@@ -3,12 +3,20 @@ if (typeof feather !== 'undefined') {
 feather.replace();
 }
 const headerNav = document.getElementById('header-nav');
-window.addEventListener('scroll', function () {
-if (window.scrollY > 30) {
-headerNav.classList.add('scrolled');
-} else {
-headerNav.classList.remove('scrolled');
+const hasHero = document.querySelector('.hero-section');
+if (!hasHero && headerNav) {
+    headerNav.classList.add('scrolled');
 }
+window.addEventListener('scroll', function () {
+    if (headerNav) {
+        if (!hasHero) {
+            headerNav.classList.add('scrolled');
+        } else if (window.scrollY > 30) {
+            headerNav.classList.add('scrolled');
+        } else {
+            headerNav.classList.remove('scrolled');
+        }
+    }
 });
 const mobileBtn = document.getElementById('mobile-toggle-btn');
 const mobileDrawer = document.getElementById('mobile-drawer');
