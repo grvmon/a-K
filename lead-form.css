@@ -2,17 +2,7 @@
 .lf-modal-overlay,
 .lf-modal-overlay * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.lf-page-cta-btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  height: 54px; padding: 0 36px;
-  border: none !important; border-radius:2px !important;
-  background: var(--refined-brass, #B88E52) !important; color: #FFFFFF !important;
-  font-family: 'Manrope', sans-serif !important; font-size: 14px !important;
-  font-weight: 600 !important; letter-spacing: 0.1em !important;
-  text-transform: uppercase !important; cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
-  transition: background-color 0.2s ease, transform 0.2s ease !important;
-}
+
 .lf-page-cta-btn:hover { background: var(--deep-navy, #1F2B38) !important; transform: translateY(-1px); }
 
 /* ── MODAL OVERLAY ── */
@@ -340,10 +330,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 #lfModalFormContent.lf-showing-success > :not(.lf-success-canvas) {
   display: none !important;
 }
-.lf-success-circle {
-  width: 64px; height: 64px; border-radius: 50%; background: #EDE8E2;
-  display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #B88E52;
-}
+
 .lf-success-circle svg { width: 28px; height: 28px; stroke-dasharray: 40; stroke-dashoffset: 40; animation: lfStrokeCheck 0.4s cubic-bezier(0.4,0,0.2,1) forwards 0.15s; }
 @keyframes lfStrokeCheck { to { stroke-dashoffset: 0; } }
 
