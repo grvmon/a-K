@@ -131,3 +131,38 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+/* Cookie Banner Popup - Compact Mobile Optimization */
+@media (max-width: 768px) {
+    .cookie-banner-popup {
+        bottom: 12px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: calc(100vw - 24px) !important;
+        max-width: calc(100vw - 24px) !important;
+        padding: 10px 14px !important;
+        border-radius: 8px !important;
+    }
+    .cookie-popup-content {
+        gap: 8px !important;
+    }
+    .cookie-text-group p {
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+    }
+    .cookie-popup-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        margin-top: 4px !important;
+    }
+    .cookie-btn {
+        padding: 6px 10px !important;
+        min-height: 32px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        border-radius: 2px !important;
+    }
+}
