@@ -5,7 +5,7 @@
   var COOLDOWN_SECONDS  = (typeof window.lfCooldownSeconds !== "undefined") ? window.lfCooldownSeconds : 15;
 
   var STRINGS = {
-    btnSubmit:        "Submit",
+    btnSubmit:        "Book Free Consultation",
     btnSending:       "Sending...",
     errNameRequired:  "Name is required",
     errNameInvalid:   "Enter a valid name",
@@ -20,7 +20,7 @@
     successHeading:   "Thank You",
     successBody:      "Your request has been received. Redirecting in {n}s...",
     successBodyStay:  "Your request has been received. Tell us what you're looking for, and our buyer-first advisors will help you shortlist, evaluate, and negotiate the right property..",
-    errOffline:       "Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.",
+    errOffline:       "Connection issue. Your details are safely held — please click Book Free Consultation once more to retry or reach out to support.",
   };
 
   var nameRx  = /^[\p{Letter}\p{Mark}\p{Number}\s.'-]{2,60}$/u;
