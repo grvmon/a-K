@@ -24,3 +24,110 @@
 .cookie-btn, .form-submit-btn, .btn-secondary-white, .cookie-btn-accept, .cookie-btn-decline {
     border-radius: 2px !important;
 }
+
+
+/* ================= 404 CUSTOM PAGE STYLES ================= */
+.error-404-section {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 1.5rem 80px 1.5rem;
+    background: var(--warm-ivory);
+    text-align: center;
+}
+.error-404-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error-404-illustration {
+    margin-bottom: 1.25rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+.error-404-code {
+    font-family: var(--font-heading), 'Josefin Sans', serif !important;
+    font-size: clamp(4.5rem, 3.5rem + 4vw, 7.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: var(--refined-brass) !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 0.75rem !important;
+}
+.error-404-headline {
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: clamp(1.35rem, 1.15rem + 1vw, 1.85rem) !important;
+    font-weight: 700 !important;
+    color: var(--deep-navy) !important;
+    margin-bottom: 1rem !important;
+}
+.error-404-desc {
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+    color: var(--deep-slate) !important;
+    max-width: 540px !important;
+    margin: 0 auto 2rem auto !important;
+}
+.error-404-cta-group {
+    margin-bottom: 3rem;
+}
+.error-404-quicklinks {
+    width: 100%;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(184, 142, 82, 0.25);
+}
+.quicklinks-title {
+    display: block;
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--refined-brass);
+    margin-bottom: 1.25rem;
+}
+.quicklinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+}
+.quicklink-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.75rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(184, 142, 82, 0.25);
+    border-radius: 8px !important;
+    color: var(--deep-navy);
+    text-decoration: none;
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 200ms ease;
+}
+.quicklink-card svg, .quicklink-card i {
+    width: 16px;
+    height: 16px;
+    color: var(--refined-brass);
+    stroke-width: 2;
+}
+.quicklink-card:hover {
+    border-color: var(--refined-brass);
+    background: #FAF6F3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(31, 43, 56, 0.08);
+}
+@media (max-width: 768px) {
+    .error-404-section {
+        padding: 100px 1rem 60px 1rem;
+    }
+    .quicklinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
