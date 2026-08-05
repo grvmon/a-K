@@ -986,9 +986,14 @@
       // Don't intercept internal anchor links that are purely navigational if they are not CTAs,
       // but if they are CTA buttons or contain consultation/talk/advisory text, bind modal.
       el.addEventListener('click', function(e) {
-        // Exclude mailto: or purely external links unless they are explicit CTA classes
-        if (el.tagName === 'A' && el.getAttribute('href') && el.getAttribute('href').startsWith('mailto:')) {
+        if (el.hasAttribute('data-no-modal') || el.getAttribute('data-no-modal') === 'true') {
           return;
+        }
+        var href = el.getAttribute('href');
+        if (el.tagName === 'A' && href) {
+          if (href === '/' || href === 'index.html' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
+            return;
+          }
         }
         e.preventDefault();
         window.openModal();
