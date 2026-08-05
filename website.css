@@ -228,3 +228,66 @@
     flex-shrink: 0 !important;
     margin-top: auto !important;
 }
+
+
+/* Testimonial Cards - Guaranteed Identical Width & Height */
+.credentials-col {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+}
+
+.credentials-col > .testimonial-card {
+    flex: 1 1 0px !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+}
+
+.testimonial-body {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.testimonial-quote-title {
+    min-height: 3.2em !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.testimonial-quote-text {
+    flex: 1 1 auto !important;
+}
+
+.testimonial-divider {
+    margin-top: 24px !important;
+    margin-bottom: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.testimonial-author-block {
+    flex-shrink: 0 !important;
+    margin-top: auto !important;
+}
+
+@media (max-width: 991px) {
+    .credentials-col {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+    }
+    .credentials-col > .testimonial-card {
+        flex: 0 0 86vw !important;
+        width: 86vw !important;
+        min-width: 86vw !important;
+    }
+    .testimonial-quote-title {
+        min-height: auto !important;
+    }
+}
