@@ -19,7 +19,7 @@
     slowSubmit:       "Still submitting... Please wait.",
     successHeading:   "Thank You",
     successBody:      "Your request has been received. Redirecting in {n}s...",
-    successBodyStay:  "Your request has been received. Someone will reach out to you in 24 hours.",
+    successBodyStay:  "Your request has been received. Tell us what you're looking for, and our buyer-first advisors will help you shortlist, evaluate, and negotiate the right property..",
     errOffline:       "Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.",
   };
 
