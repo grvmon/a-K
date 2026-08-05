@@ -1,29 +1,37 @@
-# robots.txt for https://acrenkey.com/
+# robots.txt
+# https://acrenkey.com/robots.txt
 
 User-agent: *
 Allow: /
 
-# OpenAI
+# Block internal/system folders (if they exist)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Allow major AI crawlers
+User-agent: GPTBot
+Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic
 User-agent: ClaudeBot
 Allow: /
 
-# Perplexity
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-# Google AI
 User-agent: Google-Extended
 Allow: /
 
-# Common AI crawlers
-User-agent: Bytespider
+User-agent: CCBot
 Allow: /
 
 User-agent: Applebot
@@ -32,4 +40,11 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
 Sitemap: https://acrenkey.com/sitemap.xml
+
+# AI documentation
+# https://acrenkey.com/llms.txt
