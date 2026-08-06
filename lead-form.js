@@ -21,6 +21,7 @@
     successBody:      "Your request has been received. Redirecting in {n}s...",
     successBodyStay:  "Your request has been received. Tell us what you're looking for, and our buyer-first advisors will help you shortlist, evaluate, and negotiate the right property..",
     errOffline:       "Connection issue. Your details are safely held — please click Book Free Consultation once more to retry or reach out to support.",
+    errSubmit:        "Form submission blocked by server policy. Please email us directly or try again later.",
   };
 
   var nameRx  = /^[\p{Letter}\p{Mark}\p{Number}\s.'-]{2,60}$/u;
@@ -955,7 +956,7 @@
       resetSubmitButton();
       if (globalErr) {
         globalErr.classList.add("lf-show");
-        globalErr.textContent = STRINGS.errOffline;
+        globalErr.textContent = STRINGS.errSubmit;
       }
       console.error("[Submission Failed]", err);
     }
