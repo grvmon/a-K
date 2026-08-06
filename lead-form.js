@@ -978,7 +978,7 @@
       'a[href="#footer"]',
       'a[href="#contact"]',
       'a[href="#inquiry-form"]',
-      'a[href="index.html#footer"]'
+      'a[href="/#footer"]'
     ].join(', ');
 
     var elements = document.querySelectorAll(ctaSelector);
@@ -991,7 +991,7 @@
         }
         var href = el.getAttribute('href');
         if (el.tagName === 'A' && href) {
-          if (href === '/' || href === 'index.html' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
+          if (href === '/' || href === '/' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
             return;
           }
         }
