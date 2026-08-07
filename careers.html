@@ -82,18 +82,20 @@
 
         /* Hero Section Split Layout */
         .careers-hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 4.5rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             padding-top: 130px;
             padding-bottom: 4rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .careers-hero-content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .careers-hero-title {
@@ -754,13 +756,7 @@
         /* Responsive Breakpoints */
         @media (max-width: 1024px) {
             .careers-hero-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
                 padding-top: 100px;
-            }
-            .careers-hero-illustration {
-                height: 320px;
-                order: -1;
             }
             .why-cards-grid {
                 grid-template-columns: 1fr;
@@ -992,51 +988,10 @@
                     <p class="careers-hero-desc">
                         Join a team that's making home buying more transparent, informed, and buyer-first. If you're driven by ownership, curiosity, and solving meaningful problems, you'll fit right in.
                     </p>
-                    <div class="careers-hero-buttons">
+                    <div class="careers-hero-buttons" style="justify-content: center;">
                         <a href="#openings" class="sd-btn-gold">
                             <span>Explore Open Roles</span>
                         </a>
-                        <a href="mailto:careers@acrenkey.com?subject=Resume%20Submission" class="btn-secondary">
-                            <span>Send Resume</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="careers-hero-illustration">
-                    <div class="illustration-bg"></div>
-                    <!-- Abstract CSS Graphic Representing Growth & Real Estate -->
-                    <svg class="careers-svg-art" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="150" width="220" height="180" rx="16" fill="#FFFFFF" stroke="rgba(184, 142, 82, 0.3)" stroke-width="2"/>
-                        <circle cx="160" cy="240" r="60" fill="none" stroke="rgba(184, 142, 82, 0.4)" stroke-width="1.5"/>
-                        <line x1="160" y1="180" x2="160" y2="300" stroke="rgba(184, 142, 82, 0.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
-                        <line x1="100" y1="240" x2="220" y2="240" stroke="rgba(184, 142, 82, 0.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
-                        <!-- Isometric Building Outline -->
-                        <path d="M280 180 L340 140 L340 260 L280 300 Z" fill="#F7F3EC" stroke="var(--refined-brass)" stroke-width="2"/>
-                        <path d="M340 140 L400 180 L400 300 L340 260 Z" fill="#E5DED4" stroke="var(--refined-brass)" stroke-width="2"/>
-                        <path d="M280 180 L340 220 L400 180 L340 140 Z" fill="#FFFFFF" stroke="var(--refined-brass)" stroke-width="2"/>
-                        <!-- Growth Line Graph -->
-                        <path d="M80 310 L140 260 L200 280 L280 200 L350 220" fill="none" stroke="var(--refined-brass)" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="350" cy="220" r="6" fill="var(--refined-brass)"/>
-                    </svg>
-                    
-                    <!-- Floating Badges -->
-                    <div class="floating-badge badge-1">
-                        <div class="floating-badge-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <span class="floating-badge-text">TECHNOLOGY</span>
-                    </div>
-                    <div class="floating-badge badge-2">
-                        <div class="floating-badge-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <span class="floating-badge-text">COLLABORATION</span>
-                    </div>
-                    <div class="floating-badge badge-3">
-                        <div class="floating-badge-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                        </div>
-                        <span class="floating-badge-text">REAL ESTATE</span>
                     </div>
                 </div>
             </section>
