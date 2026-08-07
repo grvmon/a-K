@@ -245,3 +245,34 @@ body.page-404 .error-404-section{
     letter-spacing: 0.08em !important;
     padding: 0.85rem 2rem !important;
 }
+
+
+/* ── BREADCRUMBS ── */
+.page-breadcrumb {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--deep-slate);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+.page-breadcrumb a {
+    color: var(--deep-navy);
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+.page-breadcrumb a:hover {
+    color: var(--refined-brass);
+}
+.page-breadcrumb .separator {
+    color: rgba(183,175,164,0.7);
+    font-size: 0.75rem;
+}
+.page-breadcrumb .current {
+    color: var(--muted-slate);
+    pointer-events: none;
+}

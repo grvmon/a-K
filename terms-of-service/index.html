@@ -47,6 +47,23 @@
     <meta name="twitter:title" content="Terms of Service - Acre&Key Advisory">
     <meta name="twitter:description" content="Acre&Key Terms of Service. Review our advisory agreement terms, client confidentiality commitments, and service conditions.">
     <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://acrenkey.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service"
+      }]
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -169,7 +186,13 @@
 
         <!-- ================= MAIN CONTENT ================= -->
         <main class="privacy-page-container">
-            <a class="back-home-btn" href="../">← Back to Home</a>
+            <nav aria-label="breadcrumb">
+                <ol class="page-breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><span class="separator">›</span></li>
+                    <li class="current" aria-current="page">Terms of Service</li>
+                </ol>
+            </nav>
             <h1 class="privacy-title">Terms of Service</h1>
             <div class="privacy-dates">
                 <span>Effective Date: 2 August 2026</span>
