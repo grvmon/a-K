@@ -4,9 +4,7 @@ feather.replace();
 }
 const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');
-if (!hasHero && headerNav) {
-    headerNav.classList.add('scrolled');
-}
+
 window.addEventListener('scroll', function () {
     if (headerNav) {
         if (!hasHero) {
