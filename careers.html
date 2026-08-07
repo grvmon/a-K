@@ -491,39 +491,45 @@
         /* Benefits Grid */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            column-gap: 3rem;
+            row-gap: 2.5rem;
             margin-top: 3.5rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .benefit-card {
-            background: var(--white);
-            border: 1px solid rgba(183, 175, 164, 0.3);
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(31, 43, 56, 0.03);
-            text-align: center;
+            background: transparent;
+            border: none;
+            padding: 1rem 0;
+            text-align: left;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            gap: 1.25rem;
+            transition: transform var(--transition-fast);
+            box-shadow: none;
         }
 
         .benefit-card:hover {
-            border-color: var(--refined-brass);
-            box-shadow: 0 8px 24px rgba(31, 43, 56, 0.06);
+            transform: translateX(6px);
+            border: none;
+            box-shadow: none;
         }
 
         .benefit-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(184, 142, 82, 0.15) 0%, rgba(184, 142, 82, 0.05) 100%);
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: rgba(184, 142, 82, 0.06);
             color: var(--refined-brass);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
         }
 
         .benefit-icon svg { width: 20px; height: 20px; stroke-width: 2.2; }
@@ -831,9 +837,6 @@
             .roles-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
             .life-split {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -882,7 +885,7 @@
             .badge-1 { top: 8%; left: 0%; }
             .badge-2 { bottom: 12%; right: 0%; }
             .badge-3 { bottom: 4%; left: 4%; }
-            .roles-grid, .benefits-grid {
+            .roles-grid {
                 grid-template-columns: 1fr;
             }
             .careers-hero-buttons {
