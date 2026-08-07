@@ -126,6 +126,58 @@
     font-weight: 500;
 }
 
+/* What You'll Learn */
+.blog-what-you-learn {
+    background: #FAF7F2;
+    border: 1px solid rgba(184,142,82,0.2);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    max-width: 760px;
+    margin: 0 auto 2.5rem auto;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(31,43,56,0.02);
+}
+.blog-what-you-learn-title {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--refined-brass);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.blog-what-you-learn-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+@media (min-width: 640px) {
+    .blog-what-you-learn-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.blog-what-you-learn-list li {
+    font-size: 0.95rem;
+    color: var(--deep-navy);
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+.blog-what-you-learn-list li svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    stroke: var(--refined-brass);
+    margin-top: 3px;
+}
+
 .blog-meta-row {
     display: flex;
     align-items: center;
