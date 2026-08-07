@@ -31,17 +31,16 @@
     margin: 0 auto;
     padding: 2rem 2rem 6rem;
     display: grid;
-    grid-template-columns: 240px 1fr 240px;
-    gap: 3rem;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
     position: relative;
+}
+.blog-right-sidebar {
+    display: none;
 }
 @media (max-width: 1200px) {
     .blog-layout-container {
-        grid-template-columns: 240px 1fr;
         gap: 2.5rem;
-    }
-    .blog-right-sidebar {
-        display: none;
     }
 }
 @media (max-width: 991px) {
@@ -303,7 +302,7 @@
 
 /* 5. MAIN CONTENT TYPOGRAPHY & BLOCKS */
 .blog-main-content {
-    max-width: 860px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
 }
