@@ -575,3 +575,140 @@ body.property-page {
     gap: 0.5rem;
   }
 }
+
+
+/* ================= PHASE 2: LOCATION INTELLIGENCE & COMMUTE STYLES ================= */
+
+/* Commute Rating Badges */
+.prop-commute-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.prop-commute-badge.excellent {
+  background: #E8F5E9;
+  color: #168A5B;
+  border: 1px solid #A5D6A7;
+}
+.prop-commute-badge.very-good {
+  background: #E0F2FE;
+  color: #0284C7;
+  border: 1px solid #BAE6FD;
+}
+.prop-commute-badge.good {
+  background: #FEF3C7;
+  color: #D97706;
+  border: 1px solid #FDE68A;
+}
+.prop-commute-badge.weak {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FCA5A5;
+}
+
+/* Workday Commute Grid */
+.prop-workday-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.prop-workday-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 10px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.prop-workday-hub {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--prop-navy-light);
+  margin-bottom: 0.5rem;
+}
+
+/* Location Score Section */
+.prop-loc-score-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 14px;
+  padding: 2.25rem;
+  margin-top: 1.5rem;
+}
+.prop-loc-score-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--prop-border);
+  padding-bottom: 1.5rem;
+}
+.prop-loc-score-num-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.prop-loc-score-big {
+  font-family: 'Marcellus', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--prop-gold);
+  line-height: 1;
+}
+.prop-loc-score-sub {
+  font-size: 1rem;
+  color: var(--prop-text-muted);
+}
+.prop-loc-bars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2.5rem;
+}
+.prop-loc-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.prop-loc-bar-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--prop-navy-light);
+}
+.prop-loc-bar-track {
+  height: 8px;
+  background: var(--prop-bg-warm);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.prop-loc-bar-fill {
+  height: 100%;
+  background: var(--prop-gold);
+  border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  .prop-workday-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .prop-loc-bars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-workday-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .prop-loc-score-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
