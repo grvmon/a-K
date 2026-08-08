@@ -200,29 +200,31 @@
     <!-- ================= MAIN CONTENT ================= -->
     <main>
         <!-- Breadcrumb & Last Updated Bar -->
-        <div class="prop-container">
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
-                <div class="prop-breadcrumb">
-                    <a href="/">Home</a> <span class="sep">→</span>
-                    <a href="/#core">New Projects</a> <span class="sep">→</span>
-                    <a href="/#core">Bangalore</a> <span class="sep">→</span>
-                    <a href="/#core">Whitefield</a> <span class="sep">→</span>
-                    <span style="color: var(--prop-navy-light); font-weight: 600;">Sumadhura Solace</span>
-                </div>
-                <div style="font-size:0.8rem; color:var(--prop-text-muted); padding-top:0.75rem;">
-                    <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
-                </div>
-            </div>
-        </div>
+        
 
         <!-- HERO SECTION (PHASE 1) -->
         <section class="prop-hero-section">
             <div class="prop-container">
+                
+                <!-- Breadcrumb Positioned Inside Page Container Immediately Above Hero -->
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:1.25rem;">
+                    <div class="prop-breadcrumb" style="padding:0;">
+                        <a href="/">Home</a> <span class="sep">→</span>
+                        <a href="/#core">New Projects</a> <span class="sep">→</span>
+                        <a href="/#core">Bangalore</a> <span class="sep">→</span>
+                        <a href="/#core">Whitefield</a> <span class="sep">→</span>
+                        <span style="color: var(--prop-navy-light); font-weight: 600;">Sumadhura Solace</span>
+                    </div>
+                    <div style="font-size:0.8rem; color:var(--prop-text-muted);">
+                        <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
+                    </div>
+                </div>
+
                 <div class="prop-hero-grid">
                     
-                    <!-- Left: Gallery -->
+                    <!-- Left: Gallery (60%) -->
                     <div class="prop-gallery-wrapper">
-                        <div class="prop-badge-overlay">Premium Project</div>
+                        <div class="prop-badge-overlay">PREMIUM PROJECT</div>
                         <div class="prop-photo-count-badge"><i data-feather="image" style="width:14px;height:14px;"></i> 1/12 Photos</div>
                         <div class="prop-main-img-box">
                             <img id="propMainImage" src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Sumadhura Solace Whitefield Main View">
@@ -243,51 +245,52 @@
                         </div>
                     </div>
 
-                    <!-- Right: Hero Details -->
+                    <!-- Right: Hero Details (40%) -->
                     <div class="prop-hero-details">
-                        <div class="prop-tag-badge">PREMIUM PROJECT</div>
-                        <h1 class="prop-hero-title">Sumadhura Solace Whitefield</h1>
-                        <div class="prop-hero-location">
+                        <h1 class="prop-hero-title">Sumadhura Solace</h1>
+                        <div class="prop-hero-location-line">
                             <i data-feather="map-pin" style="width:16px;height:16px;color:var(--prop-gold);"></i>
-                            Thubarahalli, Whitefield, Bengaluru
+                            Whitefield, Bengaluru
                         </div>
-                        <div class="prop-rating-row">
-                            <span class="prop-star-rating">★ 4.8</span>
-                            <span class="prop-analysis-label">· AcrenKey Independent Analysis</span>
+
+                        <!-- Rating Badge -->
+                        <div class="prop-rating-tag">
+                            <i data-feather="shield-check" style="width:15px;height:15px;color:var(--prop-gold);"></i>
+                            AcrenKey Independent Analysis · <strong>9.2/10</strong>
                         </div>
                         
-                        <div style="font-size:1.05rem; font-weight:600; color:var(--prop-navy-light); margin-bottom:0.25rem;">Luxury 3 &amp; 4 BHK Residences</div>
-                        <div style="font-size:0.9rem; color:var(--prop-gold); font-weight:600; margin-bottom:1rem;">Twin Lake Views · 81% Open Space</div>
+                        <div style="font-size:1.05rem; font-weight:700; color:var(--prop-navy-light); margin-bottom:0.2rem;">3 &amp; 4 BHK Residences</div>
+                        <div style="font-size:0.9rem; color:var(--prop-gold); font-weight:600; margin-bottom:1.15rem;">Twin Lake Views · 81% Open Space</div>
 
+                        <!-- Price Tag & Disclaimer Qualifier -->
                         <div class="prop-hero-price-tag">₹2.18 Cr* onwards</div>
+                        <div class="prop-price-qualifier">*Indicative starting price. Verify latest availability and final cost before booking.</div>
 
-                        <!-- Compact Info Row -->
-                        <div class="prop-compact-info-row">
-                            <div class="prop-compact-info-item">
-                                <span class="lbl">RERA:</span>
-                                <strong>PRM/KA/RERA/1251/446/PR/111225/008330</strong>
-                            </div>
-                            <div class="prop-compact-info-item">
-                                <span class="lbl">Possession:</span>
-                                <strong>Dec 2029</strong>
-                            </div>
-                            <div class="prop-compact-info-item">
-                                <span class="lbl">Project Area:</span>
-                                <strong>11.66 Acres</strong>
-                            </div>
+                        <!-- Main Hero Key Details -->
+                        <div class="prop-key-facts-row">
+                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> 11.66 Acres</div>
+                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> 7 Towers</div>
+                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> Dec 2029 Possession</div>
+                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> RERA Registered</div>
                         </div>
+                        <div style="font-size:0.75rem; color:var(--prop-text-muted); margin-top:-0.75rem; margin-bottom:1.25rem;">RERA No: PRM/KA/RERA/1251/446/PR/111225/008330</div>
 
                         <!-- CTAs -->
-                        <button class="prop-cta-primary" onclick="window.openModal();">
+                        <button class="prop-cta-primary" onclick="window.openModal();" style="box-shadow:0 4px 14px rgba(184, 142, 82, 0.25);">
                             Get Latest Price &amp; Availability
                         </button>
                         <div class="prop-cta-secondary-row">
-                            <button class="prop-sec-btn" onclick="window.openModal();">
+                            <button class="prop-sec-btn" onclick="window.openModal();" style="background:#FAF6F3;">
                                 <i data-feather="calendar" style="width:14px;height:14px;"></i> Schedule Site Visit
                             </button>
                             <a href="https://wa.me/919403897777?text=Hi%20AcrenKey%2C%20I%20want%20price%20and%20availability%20for%20Sumadhura%20Solace" target="_blank" class="prop-sec-btn whatsapp-btn">
                                 <i data-feather="message-circle" style="width:14px;height:14px;"></i> WhatsApp
                             </a>
+                        </div>
+
+                        <!-- Trust Micro-Copy -->
+                        <div class="prop-trust-subtle-line">
+                            Independent property analysis · Price, location, floor-plan &amp; risk assessment
                         </div>
 
                     </div>
