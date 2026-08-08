@@ -1570,3 +1570,82 @@ body.property-page .header-nav {
     display: none;
   }
 }
+
+/* ================= FULL WIDTH METRICS STRIP FIX ================= */
+.prop-snapshot-strip-v2 {
+  width: 100% !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  padding: 1.5rem 2rem !important;
+  margin-top: 2.25rem !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03) !important;
+  box-sizing: border-box !important;
+}
+
+.prop-snapshot-grid-v2 {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 1rem !important;
+  align-items: center !important;
+}
+
+.prop-snapshot-item-v2 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
+  position: relative !important;
+}
+
+.prop-snapshot-item-v2:not(:last-child)::after {
+  content: '' !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 15% !important;
+  height: 70% !important;
+  width: 1px !important;
+  background: #E2E8F0 !important;
+}
+
+.prop-snap-icon-v2 {
+  color: #B88E52 !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.prop-snap-num-v2 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1.45rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  line-height: 1.1 !important;
+}
+
+.prop-snap-lbl-v2 {
+  font-size: 0.8rem !important;
+  color: #667085 !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 1024px) {
+  .prop-snapshot-grid-v2 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem 0 !important;
+  }
+  .prop-snapshot-item-v2:nth-child(3)::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-snapshot-grid-v2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .prop-snapshot-item-v2::after {
+    display: none !important;
+  }
+}
