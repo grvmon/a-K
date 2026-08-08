@@ -7,9 +7,7 @@ const hasHero = document.querySelector('.hero-section');
 
 window.addEventListener('scroll', function () {
     if (headerNav) {
-        if (!hasHero) {
-            headerNav.classList.add('scrolled');
-        } else if (window.scrollY > 30) {
+        if (window.scrollY > 30) {
             headerNav.classList.add('scrolled');
         } else {
             headerNav.classList.remove('scrolled');
