@@ -553,145 +553,214 @@
         </section>
 
         <!-- FLOOR PLANS (PHASE 3) -->
-        <section id="floor-plans" class="prop-section">
+        <section id="floor-plans" class="prop-section prop-fp-section-v3">
             <div class="prop-container">
-                <h2 class="prop-section-title" style="font-size:2rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.35rem;">Spacious Floor Plans</h2>
-
-                <!-- Tabs -->
-                <div class="prop-fp-tabs-v2">
-                    <button class="prop-fp-tab-btn-v2 active" data-tab="3bhk">3 BHK</button>
-                    <button class="prop-fp-tab-btn-v2" data-tab="4bhk">4 BHK</button>
+                
+                <!-- Section Header -->
+                <div class="prop-fp-header-v3">
+                    <h2 class="prop-fp-title-v3">Floor Plans &amp; Space Analysis</h2>
+                    <div class="prop-fp-subtitle-v3">Compare layouts, usable space and pricing across configurations.</div>
                 </div>
 
-                <!-- 3 BHK 3-Column Side-by-Side Content -->
-                <div id="fp-v2-3bhk" class="prop-fp-grid-v2">
-                    <!-- Col 1: Image -->
-                    <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');" title="Click to expand 3 BHK Floor Plan">
-                        <img src="../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg" alt="Sumadhura Solace 3 BHK Floor Plan Layout">
-                    </div>
+                <!-- Configuration Tabs -->
+                <div class="prop-fp-tabs-v3">
+                    <button class="prop-fp-tab-btn-v3 active" data-tab="3bhk">
+                        3 BHK <span class="price-tag">(from ₹2.18 Cr*)</span>
+                    </button>
+                    <button class="prop-fp-tab-btn-v3" data-tab="4bhk">
+                        4 BHK <span class="price-tag">(from ₹3.10 Cr*)</span>
+                    </button>
+                </div>
 
-                    <!-- Col 2: Specifications -->
-                    <div class="prop-fp-details-v2">
-                        <h3 class="prop-fp-title-v2">3 BHK Large</h3>
-                        
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Saleable Area</span>
-                            <span class="prop-fp-stat-val-v2">1,865 – 2,050 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Carpet Area</span>
-                            <span class="prop-fp-stat-val-v2">1,250 – 1,380 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Balcony &amp; Utility</span>
-                            <span class="prop-fp-stat-val-v2">185 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Indicative Price</span>
-                            <span class="prop-fp-stat-val-v2">₹2.18 Cr* onwards</span>
-                        </div>
-
-                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');">
-                            View Floor Plan
-                        </button>
-                    </div>
-
-                    <!-- Col 3: Price Overview Card (Just Next to the Right Side) -->
-                    <div class="prop-price-card-v2" style="margin-top:0;">
-                        <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
-                        
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-bottom:1rem;">
-                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
-                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
-                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong></div>
+                <!-- 3 BHK Main Content Grid -->
+                <div id="fp-v3-3bhk" class="prop-fp-main-grid-v3">
+                    <!-- Left: Dominant Floor Plan Image Box -->
+                    <div>
+                        <div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');" title="Click to enlarge 3 BHK Floor Plan">
+                            <div class="prop-fp-enlarge-badge">
+                                <i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge
                             </div>
-                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
-                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
-                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong></div>
+                            <div class="prop-fp-image-wrapper-v3">
+                                <img src="../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg" alt="Sumadhura Solace 3 BHK Floor Plan Layout">
                             </div>
                         </div>
+                        <div class="prop-fp-img-caption-bar">
+                            <span class="prop-fp-img-caption-title">Representative 3 BHK Floor Plans</span>
+                            <span>Actual layouts, dimensions and availability may vary by tower/unit.</span>
+                        </div>
+                    </div>
 
-                        <div style="font-size:0.82rem; font-weight:700; color:#0F1F3D; margin-bottom:0.45rem;">Price Includes</div>
-                        
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem 0.5rem; margin-bottom:1rem; font-size:0.78rem; color:#59616B;">
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Base Price</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Clubhouse</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Car Parking</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Power Backup</div>
+                    <!-- Right: Information Column -->
+                    <div class="prop-fp-specs-col-v3">
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">1,865–2,050 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Saleable Area</span>
                         </div>
 
-                        <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.6rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.82rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer;">
-                            Price Breakup &amp; Cost Sheet
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">1,250–1,380 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Carpet Area</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">185 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3 highlight">~67%</span>
+                            <span class="prop-fp-spec-lbl-v3">Carpet Efficiency</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">₹2.18 Cr* onwards</span>
+                            <span class="prop-fp-spec-lbl-v3">Indicative Price</span>
+                        </div>
+
+                        <button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();">
+                            Get Detailed Cost Sheet
                         </button>
                     </div>
                 </div>
 
-                <!-- 4 BHK 3-Column Side-by-Side Content (Hidden by Default) -->
-                <div id="fp-v2-4bhk" class="prop-fp-grid-v2" style="display:none !important;">
-                    <!-- Col 1: Image -->
-                    <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');" title="Click to expand 4 BHK Floor Plan">
-                        <img src="../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg" alt="Sumadhura Solace 4 BHK Floor Plan Layout">
-                    </div>
-
-                    <!-- Col 2: Specifications -->
-                    <div class="prop-fp-details-v2">
-                        <h3 class="prop-fp-title-v2">4 BHK Luxury</h3>
-                        
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Saleable Area</span>
-                            <span class="prop-fp-stat-val-v2">2,450 – 2,680 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Carpet Area</span>
-                            <span class="prop-fp-stat-val-v2">1,620 – 1,760 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Balcony &amp; Utility</span>
-                            <span class="prop-fp-stat-val-v2">235 sq.ft.</span>
-                        </div>
-
-                        <div class="prop-fp-stat-item-v2">
-                            <span class="prop-fp-stat-label-v2">Indicative Price</span>
-                            <span class="prop-fp-stat-val-v2">₹3.10 Cr* onwards</span>
-                        </div>
-
-                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');">
-                            View Floor Plan
-                        </button>
-                    </div>
-
-                    <!-- Col 3: Price Overview Card (Just Next to the Right Side) -->
-                    <div class="prop-price-card-v2" style="margin-top:0;">
-                        <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
-                        
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-bottom:1rem;">
-                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
-                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
-                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong></div>
+                <!-- 4 BHK Main Content Grid (Hidden by Default) -->
+                <div id="fp-v3-4bhk" class="prop-fp-main-grid-v3" style="display:none !important;">
+                    <!-- Left: Dominant Floor Plan Image Box -->
+                    <div>
+                        <div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');" title="Click to enlarge 4 BHK Floor Plan">
+                            <div class="prop-fp-enlarge-badge">
+                                <i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge
                             </div>
-                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
-                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
-                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong></div>
+                            <div class="prop-fp-image-wrapper-v3">
+                                <img src="../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg" alt="Sumadhura Solace 4 BHK Floor Plan Layout">
                             </div>
                         </div>
+                        <div class="prop-fp-img-caption-bar">
+                            <span class="prop-fp-img-caption-title">Representative 4 BHK Floor Plans</span>
+                            <span>Actual layouts, dimensions and availability may vary by tower/unit.</span>
+                        </div>
+                    </div>
 
-                        <div style="font-size:0.82rem; font-weight:700; color:#0F1F3D; margin-bottom:0.45rem;">Price Includes</div>
-                        
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem 0.5rem; margin-bottom:1rem; font-size:0.78rem; color:#59616B;">
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Base Price</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Clubhouse</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Car Parking</div>
-                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Power Backup</div>
+                    <!-- Right: Information Column -->
+                    <div class="prop-fp-specs-col-v3">
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">2,450–2,680 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Saleable Area</span>
                         </div>
 
-                        <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.6rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.82rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer;">
-                            Price Breakup &amp; Cost Sheet
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">1,620–1,760 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Carpet Area</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">235 sq.ft.</span>
+                            <span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3 highlight">~66%</span>
+                            <span class="prop-fp-spec-lbl-v3">Carpet Efficiency</span>
+                        </div>
+
+                        <div class="prop-fp-spec-block-v3">
+                            <span class="prop-fp-spec-num-v3">₹3.10 Cr* onwards</span>
+                            <span class="prop-fp-spec-lbl-v3">Indicative Price</span>
+                        </div>
+
+                        <button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();">
+                            Get Detailed Cost Sheet
                         </button>
+                    </div>
+                </div>
+
+                <!-- AcrenKey Floor Plan Review -->
+                <div class="prop-fp-review-box-v3">
+                    <div class="prop-fp-review-header">
+                        <span class="prop-fp-review-title">ACRENKEY FLOOR PLAN REVIEW</span>
+                        <div class="prop-fp-review-score-badge">
+                            <i data-feather="award" style="width:16px;height:16px;color:#B88E52;"></i>
+                            Floor Plan Verdict: <strong style="color:#0F1F3D;">9.1 / 10</strong>
+                        </div>
+                    </div>
+
+                    <div class="prop-fp-review-grid">
+                        <!-- What We Like -->
+                        <div>
+                            <div class="prop-fp-review-col-h" style="color:#15803D;">
+                                <i data-feather="check-circle" style="width:18px;height:18px;color:#15803D;"></i>
+                                What We Like
+                            </div>
+                            <ul class="prop-fp-review-list">
+                                <li><i data-feather="check" style="width:15px;height:15px;color:#15803D;"></i> Large-format layouts</li>
+                                <li><i data-feather="check" style="width:15px;height:15px;color:#15803D;"></i> Good balcony / utility provision</li>
+                                <li><i data-feather="check" style="width:15px;height:15px;color:#15803D;"></i> Multiple layout options</li>
+                            </ul>
+                        </div>
+
+                        <!-- What to Check -->
+                        <div>
+                            <div class="prop-fp-review-col-h" style="color:#D97706;">
+                                <i data-feather="alert-circle" style="width:18px;height:18px;color:#D97706;"></i>
+                                What to Check
+                            </div>
+                            <ul class="prop-fp-review-list">
+                                <li><i data-feather="minus" style="width:15px;height:15px;color:#D97706;"></i> Carpet efficiency</li>
+                                <li><i data-feather="minus" style="width:15px;height:15px;color:#D97706;"></i> Loading</li>
+                                <li><i data-feather="minus" style="width:15px;height:15px;color:#D97706;"></i> Bedroom dimensions</li>
+                                <li><i data-feather="minus" style="width:15px;height:15px;color:#D97706;"></i> Orientation</li>
+                                <li><i data-feather="minus" style="width:15px;height:15px;color:#D97706;"></i> Unit-specific views</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 BHK vs 4 BHK Minimal Comparison Table -->
+                <div class="prop-fp-compare-box-v3">
+                    <h3 class="prop-fp-compare-title">3 BHK vs 4 BHK</h3>
+                    
+                    <div style="overflow-x:auto;">
+                        <table class="prop-fp-compare-table">
+                            <thead>
+                                <tr>
+                                    <th>Specification</th>
+                                    <th>3 BHK</th>
+                                    <th>4 BHK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Saleable Area</strong></td>
+                                    <td>1,865 – 2,050 sq.ft.</td>
+                                    <td>2,450 – 2,680 sq.ft.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Carpet Area</strong></td>
+                                    <td>1,250 – 1,380 sq.ft.</td>
+                                    <td>1,620 – 1,760 sq.ft.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Balcony / Utility</strong></td>
+                                    <td>185 sq.ft.</td>
+                                    <td>235 sq.ft.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Carpet Efficiency</strong></td>
+                                    <td><strong style="color:#B88E52;">~67%</strong></td>
+                                    <td><strong style="color:#B88E52;">~66%</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Starting Price</strong></td>
+                                    <td><strong>₹2.18 Cr* onwards</strong></td>
+                                    <td><strong>₹3.10 Cr* onwards</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Best Suited For</strong></td>
+                                    <td>Families &amp; IT Professionals</td>
+                                    <td>Large Families &amp; Luxury Buyers</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

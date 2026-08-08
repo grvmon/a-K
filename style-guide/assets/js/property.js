@@ -237,3 +237,26 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.style.overflow = '';
     }
   };
+
+
+  // 12. Floor Plans & Space Analysis v3 Tab Controller
+  var fpTabsV3 = document.querySelectorAll('.prop-fp-tab-btn-v3');
+  var fpV3_3bhk = document.getElementById('fp-v3-3bhk');
+  var fpV3_4bhk = document.getElementById('fp-v3-4bhk');
+
+  fpTabsV3.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      if (e) e.preventDefault();
+      var target = this.getAttribute('data-tab');
+      fpTabsV3.forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+
+      if (target === '3bhk') {
+        if (fpV3_3bhk) fpV3_3bhk.style.setProperty('display', 'grid', 'important');
+        if (fpV3_4bhk) fpV3_4bhk.style.setProperty('display', 'none', 'important');
+      } else if (target === '4bhk') {
+        if (fpV3_3bhk) fpV3_3bhk.style.setProperty('display', 'none', 'important');
+        if (fpV3_4bhk) fpV3_4bhk.style.setProperty('display', 'grid', 'important');
+      }
+    });
+  });

@@ -2124,3 +2124,320 @@ body.property-page main {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ================= FLOOR PLANS & SPACE ANALYSIS REDESIGN ================= */
+
+.prop-fp-section-v3 {
+  padding: 3.5rem 0;
+}
+
+.prop-fp-header-v3 {
+  margin-bottom: 2rem;
+}
+
+.prop-fp-title-v3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.02em;
+}
+
+.prop-fp-subtitle-v3 {
+  font-size: 1.02rem;
+  color: #59616B;
+  font-weight: 500;
+}
+
+.prop-fp-tabs-v3 {
+  display: flex;
+  gap: 1.25rem;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 2rem;
+}
+
+.prop-fp-tab-btn-v3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #59616B;
+  padding: 0.75rem 1.25rem 0.85rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.prop-fp-tab-btn-v3 span.price-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #718096;
+}
+
+.prop-fp-tab-btn-v3.active {
+  color: #0F1F3D;
+  border-bottom-color: #B88E52;
+}
+
+.prop-fp-tab-btn-v3.active span.price-tag {
+  color: #B88E52;
+}
+
+/* 2-Column Main Floor Plan Area (Image 65%, Specs 35%) */
+.prop-fp-main-grid-v3 {
+  display: grid;
+  grid-template-columns: 66% calc(34% - 2rem);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.prop-fp-image-container-v3 {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 0.85rem;
+  box-shadow: 0 4px 20px rgba(15, 31, 61, 0.04);
+  cursor: pointer;
+}
+
+.prop-fp-image-wrapper-v3 {
+  width: 100%;
+  aspect-ratio: 16/11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+.prop-fp-image-wrapper-v3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.prop-fp-enlarge-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(15, 31, 61, 0.82);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  pointer-events: none;
+}
+
+.prop-fp-img-caption-bar {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #667085;
+}
+
+.prop-fp-img-caption-title {
+  font-weight: 700;
+  color: #0F1F3D;
+}
+
+/* Specs Column */
+.prop-fp-specs-col-v3 {
+  background: #F8FAF9;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.prop-fp-spec-block-v3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-fp-spec-num-v3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  line-height: 1.1;
+}
+
+.prop-fp-spec-num-v3.highlight {
+  color: #B88E52;
+}
+
+.prop-fp-spec-lbl-v3 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #667085;
+  margin-top: 0.15rem;
+}
+
+.prop-fp-cost-btn-v3 {
+  width: 100%;
+  border: none;
+  background: #0F1F3D;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.prop-fp-cost-btn-v3:hover {
+  background: #172B50;
+}
+
+/* AcrenKey Review Block */
+.prop-fp-review-box-v3 {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 12px rgba(15, 31, 61, 0.03);
+}
+
+.prop-fp-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prop-fp-review-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.prop-fp-review-score-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F8FAF9;
+  border: 1px solid #E2E8F0;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0F1F3D;
+}
+
+.prop-fp-review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.prop-fp-review-col-h {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prop-fp-review-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.prop-fp-review-list li {
+  font-size: 0.9rem;
+  color: #4A5568;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.prop-fp-review-list li i {
+  flex-shrink: 0;
+}
+
+/* Minimal Comparison Table */
+.prop-fp-compare-box-v3 {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(15, 31, 61, 0.03);
+}
+
+.prop-fp-compare-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  margin: 0 0 1.5rem 0;
+}
+
+.prop-fp-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prop-fp-compare-table th {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F1F3D;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid #E2E8F0;
+  background: #F8FAF9;
+}
+
+.prop-fp-compare-table td {
+  font-size: 0.9rem;
+  color: #333E4C;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.prop-fp-compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .prop-fp-main-grid-v3 {
+    grid-template-columns: 1fr !important;
+  }
+  .prop-fp-review-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
