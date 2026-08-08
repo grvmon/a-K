@@ -188,3 +188,25 @@ document.addEventListener('DOMContentLoaded', function() {
       videoBox.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPSGGacZMBw?autoplay=1" title="Sumadhura Solace Project Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>';
     }
   };
+
+
+  // 10. Spacious Floor Plans Tab Controller
+  var fpTabsV2 = document.querySelectorAll('.prop-fp-tab-btn-v2');
+  var fpGrid3bhk = document.getElementById('fp-v2-3bhk');
+  var fpGrid4bhk = document.getElementById('fp-v2-4bhk');
+
+  fpTabsV2.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = this.getAttribute('data-tab');
+      fpTabsV2.forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+
+      if (target === '3bhk') {
+        if (fpGrid3bhk) fpGrid3bhk.style.display = 'grid';
+        if (fpGrid4bhk) fpGrid4bhk.style.display = 'none';
+      } else if (target === '4bhk') {
+        if (fpGrid3bhk) fpGrid3bhk.style.display = 'none';
+        if (fpGrid4bhk) fpGrid4bhk.style.display = 'grid';
+      }
+    });
+  });

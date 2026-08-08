@@ -1890,3 +1890,114 @@ body.property-page main {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
+/* ================= SPACIOUS FLOOR PLANS REFERENCE MATCH ================= */
+.prop-fp-tabs-v2 {
+  display: flex !important;
+  gap: 2rem !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+.prop-fp-tab-btn-v2 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #59616B !important;
+  padding: 0.65rem 0.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.prop-fp-tab-btn-v2.active {
+  color: #B88E52 !important;
+  border-bottom-color: #B88E52 !important;
+}
+
+.prop-fp-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 55% calc(45% - 2rem) !important;
+  gap: 2rem !important;
+  align-items: center !important;
+}
+
+.prop-fp-img-card-v2 {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  padding: 1.25rem !important;
+  box-shadow: 0 4px 16px rgba(15, 31, 61, 0.04) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.prop-fp-img-card-v2 img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 420px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.prop-fp-details-v2 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+}
+
+.prop-fp-title-v2 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  margin: 0 !important;
+}
+
+.prop-fp-stat-item-v2 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.prop-fp-stat-label-v2 {
+  font-size: 0.85rem !important;
+  color: #718096 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.15rem !important;
+}
+
+.prop-fp-stat-val-v2 {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+}
+
+.prop-fp-view-btn-v2 {
+  display: inline-block !important;
+  align-self: flex-start !important;
+  border: 1px solid #CBD5E0 !important;
+  border-radius: 8px !important;
+  padding: 0.65rem 1.75rem !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #0F1F3D !important;
+  background: #FFFFFF !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.prop-fp-view-btn-v2:hover {
+  background: #F8FAF9 !important;
+  border-color: #A0AEC0 !important;
+}
+
+@media (max-width: 1024px) {
+  .prop-fp-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+}
