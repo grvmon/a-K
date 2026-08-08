@@ -31,12 +31,19 @@
     margin: 0 auto;
     padding: 130px 2rem 6rem;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 4rem;
     position: relative;
 }
 .blog-right-sidebar {
     display: none;
+}
+.blog-left-sidebar {
+    display: block;
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    height: max-content;
 }
 @media (max-width: 1200px) {
     .blog-layout-container {
