@@ -154,8 +154,21 @@ document.addEventListener('DOMContentLoaded', function() {
   window.playOverviewVideo = function() {
     var box = document.getElementById('propVideoBox') || document.getElementById('overviewVideoBox');
     if (box) {
-      box.innerHTML = '<video controls autoplay playsinline width="100%" style="border-radius:12px; width:100%; aspect-ratio:16/9; object-fit:cover; background:#000000;"><source src="../../style-guide/assets/sumadhura_solace_walkthrough.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>';
+      box.innerHTML = '<video id="overviewVideoPlayer" controls playsinline preload="auto" width="100%" style="border-radius:12px; width:100%; aspect-ratio:16/9; object-fit:cover; background:#000000;"><source src="../../style-guide/assets/sumadhura_solace_walkthrough.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>';
+      
+      var player = document.getElementById('overviewVideoPlayer');
+      if (player) {
+        var playPromise = player.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(error) {
+            console.warn('Playback error, retrying muted:', error);
+            player.muted = true;
+            player.play();
+          });
+        }
+      }
     }
+  };
   }
   }
   };
