@@ -873,3 +873,169 @@ body.property-page {
     font-size: 0.85rem;
   }
 }
+
+
+/* ================= PHASE 4: TOWER ANALYSIS & EXPERT REVIEW STYLES ================= */
+
+/* Tower Selector Tabs */
+.prop-tower-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  scrollbar-width: none;
+}
+.prop-tower-tabs::-webkit-scrollbar { display: none; }
+.prop-tower-btn {
+  padding: 0.75rem 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--prop-text-dark);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+.prop-tower-btn.active, .prop-tower-btn:hover {
+  background: var(--prop-navy-light);
+  color: #FFFFFF;
+  border-color: var(--prop-navy-light);
+}
+.prop-tower-btn span.sub {
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+/* Tower Detail Card */
+.prop-tower-detail-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.25rem;
+}
+.prop-tower-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.prop-tower-info-item {
+  background: var(--prop-bg-warm);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.prop-tower-info-lbl {
+  font-size: 0.78rem;
+  color: var(--prop-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+.prop-tower-info-val {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--prop-navy-light);
+}
+
+/* Recommended Units Grid */
+.prop-rec-units-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.prop-rec-unit-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.prop-rec-tag {
+  display: inline-block;
+  background: rgba(184, 142, 82, 0.12);
+  color: var(--prop-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.prop-rec-title {
+  font-family: 'Marcellus', serif;
+  font-size: 1.2rem;
+  color: var(--prop-navy-light);
+  margin-bottom: 0.5rem;
+}
+.prop-rec-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--prop-text-muted);
+}
+
+/* Methodology Grid */
+.prop-meth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.prop-meth-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prop-meth-pct {
+  font-family: 'Marcellus', serif;
+  font-size: 1.75rem;
+  color: var(--prop-gold);
+  font-weight: 400;
+}
+
+/* Due Diligence Grid */
+.prop-dd-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.prop-dd-card {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.prop-dd-cat-title {
+  font-family: 'Marcellus', serif;
+  font-size: 1.2rem;
+  color: var(--prop-navy-light);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--prop-border);
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .prop-tower-grid, .prop-rec-units-grid, .prop-dd-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prop-meth-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-tower-grid, .prop-rec-units-grid, .prop-meth-grid, .prop-dd-grid {
+    grid-template-columns: 1fr;
+  }
+}

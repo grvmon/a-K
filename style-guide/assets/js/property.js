@@ -125,3 +125,41 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+
+  // 7. Interactive Tower Analysis Selector
+  var towerData = {
+    'luma': { name: 'LUMA (Tower 01)', orientation: 'East - West', view: 'Podium Green & Entrance Water Plaza', privacy: 'High (Corner Placement)', noise: 'Low', configs: '3 BHK Regal & 4 BHK Elite' },
+    'sora': { name: 'SORA (Tower 02)', orientation: 'East - West', view: 'Direct Lake View & Central Courtyard', privacy: 'High', noise: 'Low', configs: '1 BHK, 3 BHK & 4 BHK Regal' },
+    'vana': { name: 'VANA (Tower 03)', orientation: 'East - West', view: 'Unobstructed Lake Frontage', privacy: 'Very High', noise: 'Very Low', configs: '1 BHK, 3 BHK & 4 BHK Elite' },
+    'nira': { name: 'NIRA (Tower 04)', orientation: 'East - West', view: 'Twin Lake Vistas & Fitness Park', privacy: 'High', noise: 'Low', configs: '3 BHK Elite & Regal' },
+    'kora': { name: 'KORA (Tower 05)', orientation: 'East - West', view: 'South Courtyard & Garden Belts', privacy: 'High', noise: 'Low', configs: '3 BHK Elite & Regal' },
+    'mira': { name: 'MIRA (Tower 06)', orientation: 'North - South', view: 'East Green Belt & Open Sky', privacy: 'High', noise: 'Low', configs: '3 BHK & 4 BHK Luxury' },
+    'olea': { name: 'OLEA (Tower 07)', orientation: 'North - South', view: 'Clubhouse Deck & Reflexology Pathway', privacy: 'Moderate', noise: 'Low', configs: '3 BHK & 4 BHK Luxury' }
+  };
+
+  var towerBtns = document.querySelectorAll('.prop-tower-btn');
+  var tName = document.getElementById('t-detail-name');
+  var tOrient = document.getElementById('t-detail-orient');
+  var tView = document.getElementById('t-detail-view');
+  var tPrivacy = document.getElementById('t-detail-privacy');
+  var tNoise = document.getElementById('t-detail-noise');
+  var tConfigs = document.getElementById('t-detail-configs');
+
+  towerBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var key = this.getAttribute('data-tower');
+      towerBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+
+      if (towerData[key]) {
+        var d = towerData[key];
+        if (tName) tName.textContent = d.name;
+        if (tOrient) tOrient.textContent = d.orientation;
+        if (tView) tView.textContent = d.view;
+        if (tPrivacy) tPrivacy.textContent = d.privacy;
+        if (tNoise) tNoise.textContent = d.noise;
+        if (tConfigs) tConfigs.textContent = d.configs;
+      }
+    });
+  });
