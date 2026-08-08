@@ -38,29 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // 4. Section Navigation Active State on Scroll
-  var sections = document.querySelectorAll('.prop-section, .prop-hero-section');
+    // 4. Robust Section Navigation Active State & Smooth Scroll Controller
   var navLinks = document.querySelectorAll('.prop-nav-link');
+  var isNavClicking = false;
 
-  window.addEventListener('scroll', function() {
-    var fromTop = window.scrollY + 130;
+  function setActiveNavLink(activeLink) {
+    if (!activeLink) return;
+    navLinks.forEach(function(l) { l.classList.remove('active'); });
+    activeLink.classList.add('active');
+  }
 
-    sections.forEach(function(sec) {
-      var id = sec.getAttribute('id');
-      if (!id) return;
-
-      if (sec.offsetTop <= fromTop && (sec.offsetTop + sec.offsetHeight) > fromTop) {
-        navLinks.forEach(function(link) {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  });
-
-  // 5. Smooth Scroll for Section Nav Links
   navLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
@@ -68,18 +55,53 @@ document.addEventListener('DOMContentLoaded', function() {
         var targetEl = document.querySelector(href);
         if (targetEl) {
           e.preventDefault();
-          var offsetTop = targetEl.offsetTop - 124;
+          isNavClicking = true;
+          setActiveNavLink(this);
+
+          var topPos = targetEl.offsetTop - 120;
           window.scrollTo({
-            top: offsetTop,
+            top: topPos,
             behavior: 'smooth'
           });
+
+          setTimeout(function() {
+            isNavClicking = false;
+          }, 850);
         }
       }
     });
   });
 
-});
+  window.addEventListener('scroll', function() {
+    if (isNavClicking) return;
 
+    var scrollPos = window.scrollY + 160;
+    var currentSecId = '';
+
+    navLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        var sec = document.querySelector(href);
+        if (sec) {
+          var top = sec.offsetTop;
+          var height = sec.offsetHeight;
+          if (scrollPos >= top && scrollPos < (top + height)) {
+            currentSecId = href;
+          }
+        }
+      }
+    });
+
+    if (currentSecId) {
+      navLinks.forEach(function(link) {
+        if (link.getAttribute('href') === currentSecId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  });
 
   // 6. Amenities Drawer Overlay Controls
   var amDrawer = document.getElementById('propAmenitiesDrawer');
