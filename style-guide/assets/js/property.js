@@ -38,16 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-    // 4. Robust Section Navigation Active State & Smooth Scroll Controller
-  var navLinks = document.querySelectorAll('.prop-nav-link');
-  var isNavClicking = false;
+      // 4. Robust Section Navigation Active Underline & Smooth Scroll Controller
+  window.isNavClicking = false;
 
-  function setActiveNavLink(activeLink) {
-    if (!activeLink) return;
+  window.switchPropNavTab = function(el) {
+    if (!el) return;
+    var navLinks = document.querySelectorAll('.prop-nav-link');
     navLinks.forEach(function(l) { l.classList.remove('active'); });
-    activeLink.classList.add('active');
-  }
+    el.classList.add('active');
+  };
 
+  var navLinks = document.querySelectorAll('.prop-nav-link');
   navLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
@@ -55,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var targetEl = document.querySelector(href);
         if (targetEl) {
           e.preventDefault();
-          isNavClicking = true;
-          setActiveNavLink(this);
+          window.isNavClicking = true;
+          window.switchPropNavTab(this);
 
           var topPos = targetEl.offsetTop - 120;
           window.scrollTo({
@@ -65,36 +66,33 @@ document.addEventListener('DOMContentLoaded', function() {
           });
 
           setTimeout(function() {
-            isNavClicking = false;
-          }, 850);
+            window.isNavClicking = false;
+          }, 900);
         }
       }
     });
   });
 
   window.addEventListener('scroll', function() {
-    if (isNavClicking) return;
+    if (window.isNavClicking) return;
 
-    var scrollPos = window.scrollY + 160;
-    var currentSecId = '';
+    var scrollPos = window.scrollY + 180;
+    var activeHref = '#overview';
 
-    navLinks.forEach(function(link) {
+    var allNavLinks = document.querySelectorAll('.prop-nav-link');
+    allNavLinks.forEach(function(link) {
       var href = link.getAttribute('href');
       if (href && href.startsWith('#')) {
         var sec = document.querySelector(href);
-        if (sec) {
-          var top = sec.offsetTop;
-          var height = sec.offsetHeight;
-          if (scrollPos >= top && scrollPos < (top + height)) {
-            currentSecId = href;
-          }
+        if (sec && sec.offsetTop <= scrollPos) {
+          activeHref = href;
         }
       }
     });
 
-    if (currentSecId) {
-      navLinks.forEach(function(link) {
-        if (link.getAttribute('href') === currentSecId) {
+    if (activeHref) {
+      allNavLinks.forEach(function(link) {
+        if (link.getAttribute('href') === activeHref) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
