@@ -163,3 +163,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  // 8. FAQ Accordion Handler
+  var faqQuestions = document.querySelectorAll('.prop-faq-q');
+  faqQuestions.forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.parentElement;
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.prop-faq-item').forEach(function(i) {
+        i.classList.remove('active');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
