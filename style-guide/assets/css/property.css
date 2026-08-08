@@ -1649,3 +1649,28 @@ body.property-page .header-nav {
     display: none !important;
   }
 }
+
+/* ================= STICKY SECTION NAV FREEZE FIX ================= */
+html, body.property-page {
+  overflow-x: clip !important;
+}
+
+body.property-page main {
+  overflow: visible !important;
+}
+
+.prop-section-nav-sticky {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 68px !important;
+  z-index: 990 !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E8E8E3 !important;
+  box-shadow: 0 4px 12px rgba(15, 31, 61, 0.05) !important;
+}
+
+@media (max-width: 768px) {
+  .prop-section-nav-sticky {
+    top: 60px !important;
+  }
+}

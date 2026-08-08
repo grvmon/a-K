@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var navLinks = document.querySelectorAll('.prop-nav-link');
 
   window.addEventListener('scroll', function() {
-    var fromTop = window.scrollY + 120;
+    var fromTop = window.scrollY + 125;
 
     sections.forEach(function(sec) {
       var id = sec.getAttribute('id');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var targetEl = document.querySelector(href);
         if (targetEl) {
           e.preventDefault();
-          var offsetTop = targetEl.offsetTop - 100;
+          var offsetTop = targetEl.offsetTop - 116;
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
