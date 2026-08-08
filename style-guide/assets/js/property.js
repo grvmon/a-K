@@ -179,3 +179,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  // 9. Overview YouTube Video Embed Trigger
+  window.playOverviewVideo = function() {
+    var videoBox = document.getElementById('propVideoBox');
+    if (videoBox) {
+      videoBox.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPSGGacZMBw?autoplay=1" title="Sumadhura Solace Project Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe>';
+    }
+  };

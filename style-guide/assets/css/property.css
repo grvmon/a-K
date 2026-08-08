@@ -1674,3 +1674,104 @@ body.property-page main {
     top: 64px !important;
   }
 }
+
+/* ================= OVERVIEW SECTION REFERENCE LAYOUT & YOUTUBE EMBED ================= */
+.prop-overview-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 45% calc(55% - 2rem) !important;
+  gap: 2rem !important;
+  align-items: center !important;
+  margin-bottom: 2.25rem !important;
+}
+
+.prop-overview-video-box {
+  position: relative !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  aspect-ratio: 16/9 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 20px rgba(15, 31, 61, 0.08) !important;
+  background: #000000 !important;
+}
+
+.prop-overview-video-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.prop-video-play-btn {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0F1F3D !important;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+  z-index: 5 !important;
+}
+
+.prop-overview-video-box:hover .prop-video-play-btn {
+  transform: translate(-50%, -50%) scale(1.12) !important;
+  background: #B88E52 !important;
+  color: #FFFFFF !important;
+}
+
+.prop-diff-grid-v2 {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.25rem !important;
+}
+
+.prop-diff-card-v2 {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.15rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+}
+
+.prop-diff-icon-v2 {
+  color: #B88E52 !important;
+  flex-shrink: 0 !important;
+  margin-top: 0.1rem !important;
+}
+
+.prop-diff-title-v2 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.prop-diff-desc-v2 {
+  font-size: 0.82rem !important;
+  color: #667085 !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 1024px) {
+  .prop-overview-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+  .prop-diff-grid-v2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-diff-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+}
