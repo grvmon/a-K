@@ -38,21 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // 3. FAQ Accordion Toggle
-  var faqItems = document.querySelectorAll('.prop-faq-item');
-  faqItems.forEach(function(item) {
-    var q = item.querySelector('.prop-faq-q');
-    if (q) {
-      q.addEventListener('click', function() {
-        var isOpen = item.classList.contains('active');
-        faqItems.forEach(function(i) { i.classList.remove('active'); });
-        if (!isOpen) {
-          item.classList.add('active');
-        }
-      });
-    }
-  });
-
   // 4. Section Navigation Active State on Scroll
   var sections = document.querySelectorAll('.prop-section, .prop-hero-section');
   var navLinks = document.querySelectorAll('.prop-nav-link');
@@ -160,22 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tPrivacy) tPrivacy.textContent = d.privacy;
         if (tNoise) tNoise.textContent = d.noise;
         if (tConfigs) tConfigs.textContent = d.configs;
-      }
-    });
-  });
-
-
-  // 8. FAQ Accordion Handler
-  var faqQuestions = document.querySelectorAll('.prop-faq-q');
-  faqQuestions.forEach(function(q) {
-    q.addEventListener('click', function() {
-      var item = this.parentElement;
-      var isActive = item.classList.contains('active');
-      document.querySelectorAll('.prop-faq-item').forEach(function(i) {
-        i.classList.remove('active');
-      });
-      if (!isActive) {
-        item.classList.add('active');
       }
     });
   });
@@ -411,25 +380,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  // 15. Global Robust FAQ Accordion Handler
+  
+
+  // Unified Single-Source FAQ Accordion Handler
   window.toggleFaqItem = function(qEl) {
     if (!qEl) return;
     var item = qEl.closest ? qEl.closest('.prop-faq-item') : qEl.parentElement;
     if (!item) return;
 
-    var isActive = item.classList.contains('active');
-    document.querySelectorAll('.prop-faq-item').forEach(function(i) {
-      i.classList.remove('active');
-    });
+    var isOpen = item.classList.contains('active');
+    
+    // Close all FAQ items cleanly
+    var allItems = document.querySelectorAll('.prop-faq-item');
+    for (var i = 0; i < allItems.length; i++) {
+      allItems[i].classList.remove('active');
+    }
 
-    if (!isActive) {
+    // Toggle current item
+    if (!isOpen) {
       item.classList.add('active');
     }
   };
-
-  var faqQuestions = document.querySelectorAll('.prop-faq-q');
-  faqQuestions.forEach(function(q) {
-    q.addEventListener('click', function(e) {
-      window.toggleFaqItem(this);
-    });
-  });

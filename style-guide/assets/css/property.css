@@ -2720,3 +2720,61 @@ body.property-page main {
 .prop-faq-item.active .prop-faq-q svg {
   transform: rotate(180deg) !important;
 }
+
+/* ================= FAQ ACCORDION FAIL-SAFE DISPLAY RULES ================= */
+.prop-faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.85rem !important;
+  margin-top: 1.5rem !important;
+}
+
+.prop-faq-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.prop-faq-item.active {
+  border-color: #B88E52 !important;
+  box-shadow: 0 4px 14px rgba(15, 31, 61, 0.05) !important;
+}
+
+.prop-faq-q {
+  padding: 1.15rem 1.35rem !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #0F1F3D !important;
+  cursor: pointer !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  user-select: none !important;
+}
+
+.prop-faq-q i, .prop-faq-q svg {
+  transition: transform 0.25s ease !important;
+  color: #B88E52 !important;
+  flex-shrink: 0 !important;
+}
+
+.prop-faq-item.active .prop-faq-q i,
+.prop-faq-item.active .prop-faq-q svg {
+  transform: rotate(180deg) !important;
+}
+
+.prop-faq-a {
+  display: none !important;
+  padding: 0 1.35rem 1.25rem 1.35rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #333E4C !important;
+  border-top: 1px solid transparent !important;
+}
+
+.prop-faq-item.active .prop-faq-a {
+  display: block !important;
+}
