@@ -225,7 +225,7 @@
                     <!-- Left: Main Image & Overlay Thumbnails (Exact Reference Layout) -->
                     <div class="prop-gallery-wrapper">
                         <div class="prop-badge-overlay">Premium Project</div>
-                        <div class="prop-main-img-box">
+                        <div class="prop-main-img-box" onclick="openHeroGalleryModal();" title="Click to open photo gallery">
                             <img id="propMainImage" src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Sumadhura Solace Whitefield Main View">
                         </div>
                         
@@ -245,7 +245,7 @@
                                     <img src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Tower View">
                                 </div>
                             </div>
-                            <button class="prop-view-all-btn-overlay" onclick="window.openModal();">
+                            <button class="prop-view-all-btn-overlay" onclick="openHeroGalleryModal();">
                                 <i data-feather="image" style="width:15px;height:15px;"></i> View All Photos
                             </button>
                         </div>
@@ -1221,6 +1221,29 @@
                     <span>Download Full Brochure &amp; Cost Sheet</span>
                 </button>
             </div>
+        </div>
+    </div>
+
+
+    <!-- ================= FULLSCREEN HERO GALLERY LIGHTBOX MODAL ================= -->
+    <div id="propGalleryLightboxModal" class="prop-gallery-lightbox-overlay" onclick="closeHeroGalleryModal(event);">
+        <div class="prop-gallery-lightbox-container" onclick="event.stopPropagation();">
+            <button type="button" class="prop-gallery-lightbox-close" onclick="closeHeroGalleryModal();" aria-label="Close Lightbox">&times;</button>
+            
+            <div class="prop-gallery-lightbox-top-bar">
+                <span class="prop-gallery-lightbox-counter" id="heroGalleryCounter">1 / 6</span>
+                <span class="prop-gallery-lightbox-title" id="heroGalleryTitle">Sumadhura Solace — Photo Gallery</span>
+            </div>
+
+            <div class="prop-gallery-lightbox-stage">
+                <button type="button" class="prop-gallery-lightbox-arrow prev" onclick="prevHeroGallerySlide();" aria-label="Previous Photo">&#10094;</button>
+                <div class="prop-gallery-lightbox-img-box">
+                    <img id="heroGalleryLightboxImg" src="" alt="Sumadhura Solace High Res Photo">
+                </div>
+                <button type="button" class="prop-gallery-lightbox-arrow next" onclick="nextHeroGallerySlide();" aria-label="Next Photo">&#10095;</button>
+            </div>
+
+            <div class="prop-gallery-lightbox-thumbs" id="heroGalleryLightboxThumbs"></div>
         </div>
     </div>
 

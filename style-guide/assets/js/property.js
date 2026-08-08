@@ -326,3 +326,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startAutoScroll();
   })();
+
+
+  // 14. Fullscreen Hero Gallery Lightbox Controller
+  var heroPhotos = [
+    { src: '../../style-guide/assets/sumadhura_solace_hero.jpg', title: 'Twin Towers & Infinity Pool View' },
+    { src: '../../style-guide/assets/sumadhura_solace_aerial.jpg', title: '11.66-Acre Twin Lake Aerial View' },
+    { src: '../../style-guide/assets/bengaluru_couple_tablet.webp', title: 'Luxury Clubhouse & Living Environment' },
+    { src: '../../style-guide/assets/sumadhura_solace_google_map.jpg', title: 'Whitefield Prime Location Map' },
+    { src: '../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', title: '3 BHK Floor Plan Layout' },
+    { src: '../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', title: '4 BHK Floor Plan Layout' }
+  ];
+
+  var activeHeroIdx = 0;
+
+  function renderHeroModalSlide(idx) {
+    if (idx < 0) idx = heroPhotos.length - 1;
+    if (idx >= heroPhotos.length) idx = 0;
+    activeHeroIdx = idx;
+
+    var modalImg = document.getElementById('heroGalleryLightboxImg');
+    var counterEl = document.getElementById('heroGalleryCounter');
+    var titleEl = document.getElementById('heroGalleryTitle');
+    var thumbsBox = document.getElementById('heroGalleryLightboxThumbs');
+
+    var p = heroPhotos[activeHeroIdx];
+    if (modalImg) modalImg.src = p.src;
+    if (counterEl) counterEl.textContent = (activeHeroIdx + 1) + ' / ' + heroPhotos.length;
+    if (titleEl) titleEl.textContent = p.title;
+
+    if (thumbsBox && thumbsBox.children.length === 0) {
+      thumbsBox.innerHTML = '';
+      heroPhotos.forEach(function(item, i) {
+        var t = document.createElement('div');
+        t.className = 'prop-gallery-lightbox-thumb-item' + (i === activeHeroIdx ? ' active' : '');
+        t.innerHTML = '<img src="' + item.src + '" alt="' + item.title + '">';
+        t.onclick = function() { renderHeroModalSlide(i); };
+        thumbsBox.appendChild(t);
+      });
+    } else if (thumbsBox) {
+      var tItems = thumbsBox.querySelectorAll('.prop-gallery-lightbox-thumb-item');
+      tItems.forEach(function(item, i) {
+        if (i === activeHeroIdx) item.classList.add('active');
+        else item.classList.remove('active');
+      });
+    }
+  }
+
+  window.openHeroGalleryModal = function(startIndex) {
+    var modal = document.getElementById('propGalleryLightboxModal');
+    renderHeroModalSlide(typeof startIndex === 'number' ? startIndex : 0);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeHeroGalleryModal = function(e) {
+    if (e && e.target && e.target.id !== 'propGalleryLightboxModal' && !e.target.classList.contains('prop-gallery-lightbox-close')) {
+      return;
+    }
+    var modal = document.getElementById('propGalleryLightboxModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  window.nextHeroGallerySlide = function() {
+    renderHeroModalSlide(activeHeroIdx + 1);
+  };
+
+  window.prevHeroGallerySlide = function() {
+    renderHeroModalSlide(activeHeroIdx - 1);
+  };
+
+  document.addEventListener('keydown', function(e) {
+    var modal = document.getElementById('propGalleryLightboxModal');
+    if (modal && modal.classList.contains('active')) {
+      if (e.key === 'ArrowRight') nextHeroGallerySlide();
+      if (e.key === 'ArrowLeft') prevHeroGallerySlide();
+      if (e.key === 'Escape') closeHeroGalleryModal();
+    }
+  });
