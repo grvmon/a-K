@@ -196,17 +196,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var fpGrid4bhk = document.getElementById('fp-v2-4bhk');
 
   fpTabsV2.forEach(function(tab) {
-    tab.addEventListener('click', function() {
+    tab.addEventListener('click', function(e) {
+      if (e) e.preventDefault();
       var target = this.getAttribute('data-tab');
       fpTabsV2.forEach(function(t) { t.classList.remove('active'); });
       this.classList.add('active');
 
       if (target === '3bhk') {
-        if (fpGrid3bhk) fpGrid3bhk.style.display = 'grid';
-        if (fpGrid4bhk) fpGrid4bhk.style.display = 'none';
+        if (fpGrid3bhk) fpGrid3bhk.style.setProperty('display', 'grid', 'important');
+        if (fpGrid4bhk) fpGrid4bhk.style.setProperty('display', 'none', 'important');
       } else if (target === '4bhk') {
-        if (fpGrid3bhk) fpGrid3bhk.style.display = 'none';
-        if (fpGrid4bhk) fpGrid4bhk.style.display = 'grid';
+        if (fpGrid3bhk) fpGrid3bhk.style.setProperty('display', 'none', 'important');
+        if (fpGrid4bhk) fpGrid4bhk.style.setProperty('display', 'grid', 'important');
       }
     });
   });
