@@ -260,3 +260,69 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  // 13. Hero Gallery Auto-Scroll Slideshow Controller
+  (function() {
+    var mainImg = document.getElementById('propMainImage');
+    var thumbs = document.querySelectorAll('.prop-thumb-overlay-item, .prop-thumb-item');
+    var galleryWrapper = document.querySelector('.prop-gallery-wrapper');
+    
+    if (!mainImg || thumbs.length === 0) return;
+
+    var currentIndex = 0;
+    var autoScrollTimer = null;
+    var isHovered = false;
+
+    function showSlide(index) {
+      if (index >= thumbs.length) index = 0;
+      if (index < 0) index = thumbs.length - 1;
+
+      currentIndex = index;
+      var targetThumb = thumbs[currentIndex];
+      var fullUrl = targetThumb.getAttribute('data-full');
+
+      if (fullUrl && mainImg) {
+        mainImg.style.transition = 'opacity 0.3s ease';
+        mainImg.style.opacity = '0.85';
+        
+        setTimeout(function() {
+          mainImg.src = fullUrl;
+          mainImg.style.opacity = '1';
+        }, 150);
+
+        thumbs.forEach(function(t) { t.classList.remove('active'); });
+        targetThumb.classList.add('active');
+      }
+    }
+
+    function startAutoScroll() {
+      stopAutoScroll();
+      autoScrollTimer = setInterval(function() {
+        if (!isHovered) {
+          showSlide(currentIndex + 1);
+        }
+      }, 3600);
+    }
+
+    function stopAutoScroll() {
+      if (autoScrollTimer) {
+        clearInterval(autoScrollTimer);
+        autoScrollTimer = null;
+      }
+    }
+
+    thumbs.forEach(function(thumb, idx) {
+      thumb.addEventListener('click', function() {
+        showSlide(idx);
+        startAutoScroll();
+      });
+    });
+
+    if (galleryWrapper) {
+      galleryWrapper.addEventListener('mouseenter', function() { isHovered = true; });
+      galleryWrapper.addEventListener('mouseleave', function() { isHovered = false; });
+    }
+
+    startAutoScroll();
+  })();
