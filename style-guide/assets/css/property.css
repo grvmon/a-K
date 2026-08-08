@@ -1775,3 +1775,118 @@ body.property-page main {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ================= LOCATION INTELLIGENCE & AMENITIES REFERENCE MATCH ================= */
+.prop-loc-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 50% calc(50% - 1.75rem) !important;
+  gap: 1.75rem !important;
+  align-items: center !important;
+}
+
+.prop-loc-map-box-v2 {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(15, 31, 61, 0.06) !important;
+  aspect-ratio: 16/10 !important;
+}
+
+.prop-loc-map-box-v2 img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.prop-commute-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1rem !important;
+}
+
+.prop-commute-card-v2 {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  padding: 1.1rem 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+}
+
+.prop-commute-icon-v2 {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  background: #F8FAF9 !important;
+  border: 1px solid #E2E8F0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0F1F3D !important;
+  flex-shrink: 0 !important;
+}
+
+.prop-commute-name-v2 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  line-height: 1.2 !important;
+}
+
+.prop-commute-time-v2 {
+  font-size: 0.82rem !important;
+  color: #667085 !important;
+  font-weight: 600 !important;
+}
+
+/* 8 Amenities Strip */
+.prop-amenities-strip-v2 {
+  display: grid !important;
+  grid-template-columns: repeat(8, 1fr) !important;
+  gap: 1rem !important;
+  margin-top: 2rem !important;
+}
+
+.prop-amenity-item-v2 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 0.65rem !important;
+}
+
+.prop-amenity-icon-v2 {
+  color: #B88E52 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.prop-amenity-label-v2 {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #0F1F3D !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 1024px) {
+  .prop-loc-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+  .prop-amenities-strip-v2 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-commute-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+  .prop-amenities-strip-v2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
