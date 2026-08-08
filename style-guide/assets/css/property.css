@@ -2110,3 +2110,17 @@ body.property-page main {
   margin-top: 1.25rem !important;
   box-shadow: 0 2px 8px rgba(15, 31, 61, 0.02) !important;
 }
+
+/* 3-Column Floor Plan & Price Side-by-Side Layout */
+.prop-fp-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 45% 26% 29% !important;
+  gap: 1.25rem !important;
+  align-items: start !important;
+}
+
+@media (max-width: 1024px) {
+  .prop-fp-grid-v2 {
+    grid-template-columns: 1fr !important;
+  }
+}

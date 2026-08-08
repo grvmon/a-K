@@ -563,11 +563,14 @@
                     <button class="prop-fp-tab-btn-v2" data-tab="4bhk">4 BHK</button>
                 </div>
 
-                <!-- 3 BHK Grid Content -->
+                <!-- 3 BHK 3-Column Side-by-Side Content -->
                 <div id="fp-v2-3bhk" class="prop-fp-grid-v2">
+                    <!-- Col 1: Image -->
                     <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');" title="Click to expand 3 BHK Floor Plan">
                         <img src="../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg" alt="Sumadhura Solace 3 BHK Floor Plan Layout">
                     </div>
+
+                    <!-- Col 2: Specifications -->
                     <div class="prop-fp-details-v2">
                         <h3 class="prop-fp-title-v2">3 BHK Large</h3>
                         
@@ -591,44 +594,49 @@
                             <span class="prop-fp-stat-val-v2">₹2.18 Cr* onwards</span>
                         </div>
 
-                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');">View Floor Plan</button>
+                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');">
+                            View Floor Plan
+                        </button>
+                    </div>
 
-                        <!-- PRICE OVERVIEW CARD (Exact Reference Layout) -->
-                        <div class="prop-price-card-v2">
-                            <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
-                            
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1rem;">
-                                <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.75rem; text-align:center;">
-                                    <div style="font-size:0.85rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
-                                    <div style="font-size:0.78rem; color:#667085; margin-top:0.2rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong> onwards</div>
-                                </div>
-                                <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.75rem; text-align:center;">
-                                    <div style="font-size:0.85rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
-                                    <div style="font-size:0.78rem; color:#667085; margin-top:0.2rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong> onwards</div>
-                                </div>
+                    <!-- Col 3: Price Overview Card (Just Next to the Right Side) -->
+                    <div class="prop-price-card-v2" style="margin-top:0;">
+                        <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
+                        
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-bottom:1rem;">
+                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
+                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
+                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong></div>
                             </div>
-
-                            <div style="font-size:0.85rem; font-weight:700; color:#0F1F3D; margin-bottom:0.55rem;">Price Includes</div>
-                            
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem 0.85rem; margin-bottom:1.1rem; font-size:0.82rem; color:#59616B;">
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Base Price</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Clubhouse</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Car Parking</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Power Backup</div>
+                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
+                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
+                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong></div>
                             </div>
-
-                            <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.65rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.88rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer; transition:all 0.2s ease;">
-                                Price Breakup &amp; Cost Sheet
-                            </button>
                         </div>
+
+                        <div style="font-size:0.82rem; font-weight:700; color:#0F1F3D; margin-bottom:0.45rem;">Price Includes</div>
+                        
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem 0.5rem; margin-bottom:1rem; font-size:0.78rem; color:#59616B;">
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Base Price</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Clubhouse</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Car Parking</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Power Backup</div>
+                        </div>
+
+                        <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.6rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.82rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer;">
+                            Price Breakup &amp; Cost Sheet
+                        </button>
                     </div>
                 </div>
 
-                <!-- 4 BHK Grid Content (Hidden by Default) -->
+                <!-- 4 BHK 3-Column Side-by-Side Content (Hidden by Default) -->
                 <div id="fp-v2-4bhk" class="prop-fp-grid-v2" style="display:none !important;">
+                    <!-- Col 1: Image -->
                     <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');" title="Click to expand 4 BHK Floor Plan">
                         <img src="../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg" alt="Sumadhura Solace 4 BHK Floor Plan Layout">
                     </div>
+
+                    <!-- Col 2: Specifications -->
                     <div class="prop-fp-details-v2">
                         <h3 class="prop-fp-title-v2">4 BHK Luxury</h3>
                         
@@ -652,36 +660,38 @@
                             <span class="prop-fp-stat-val-v2">₹3.10 Cr* onwards</span>
                         </div>
 
-                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');">View Floor Plan</button>
+                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');">
+                            View Floor Plan
+                        </button>
+                    </div>
 
-                        <!-- PRICE OVERVIEW CARD (Exact Reference Layout) -->
-                        <div class="prop-price-card-v2">
-                            <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
-                            
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1rem;">
-                                <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.75rem; text-align:center;">
-                                    <div style="font-size:0.85rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
-                                    <div style="font-size:0.78rem; color:#667085; margin-top:0.2rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong> onwards</div>
-                                </div>
-                                <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.75rem; text-align:center;">
-                                    <div style="font-size:0.85rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
-                                    <div style="font-size:0.78rem; color:#667085; margin-top:0.2rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong> onwards</div>
-                                </div>
+                    <!-- Col 3: Price Overview Card (Just Next to the Right Side) -->
+                    <div class="prop-price-card-v2" style="margin-top:0;">
+                        <h4 style="font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.85rem;">Price Overview</h4>
+                        
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-bottom:1rem;">
+                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
+                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">3 BHK</div>
+                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹2.18 Cr*</strong></div>
                             </div>
-
-                            <div style="font-size:0.85rem; font-weight:700; color:#0F1F3D; margin-bottom:0.55rem;">Price Includes</div>
-                            
-                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.45rem 0.85rem; margin-bottom:1.1rem; font-size:0.82rem; color:#59616B;">
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Base Price</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Clubhouse</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Car Parking</div>
-                                <div style="display:flex; align-items:center; gap:0.4rem;"><i data-feather="check-circle" style="width:14px;height:14px;color:#B88E52;"></i> Power Backup</div>
+                            <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; padding:0.65rem 0.5rem; text-align:center;">
+                                <div style="font-size:0.82rem; font-weight:800; color:#0F1F3D;">4 BHK</div>
+                                <div style="font-size:0.75rem; color:#667085; margin-top:0.15rem;">From <strong style="color:#0F1F3D;">₹3.10 Cr*</strong></div>
                             </div>
-
-                            <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.65rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.88rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer; transition:all 0.2s ease;">
-                                Price Breakup &amp; Cost Sheet
-                            </button>
                         </div>
+
+                        <div style="font-size:0.82rem; font-weight:700; color:#0F1F3D; margin-bottom:0.45rem;">Price Includes</div>
+                        
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem 0.5rem; margin-bottom:1rem; font-size:0.78rem; color:#59616B;">
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Base Price</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Clubhouse</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Car Parking</div>
+                            <div style="display:flex; align-items:center; gap:0.3rem;"><i data-feather="check-circle" style="width:12px;height:12px;color:#B88E52;"></i> Power Backup</div>
+                        </div>
+
+                        <button type="button" onclick="window.openModal();" style="width:100%; border:1px solid #CBD5E0; border-radius:8px; padding:0.6rem; font-family:'Manrope',sans-serif; font-weight:700; font-size:0.82rem; color:#0F1F3D; background:#FFFFFF; cursor:pointer;">
+                            Price Breakup &amp; Cost Sheet
+                        </button>
                     </div>
                 </div>
 
