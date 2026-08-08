@@ -94,3 +94,34 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+
+  // 6. Amenities Drawer Overlay Controls
+  var amDrawer = document.getElementById('propAmenitiesDrawer');
+  var amCloseBtn = document.getElementById('propDrawerClose');
+
+  window.openAmenitiesDrawer = function() {
+    if (amDrawer) {
+      amDrawer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeAmenitiesDrawer = function() {
+    if (amDrawer) {
+      amDrawer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (amCloseBtn) {
+    amCloseBtn.addEventListener('click', window.closeAmenitiesDrawer);
+  }
+
+  if (amDrawer) {
+    amDrawer.addEventListener('click', function(e) {
+      if (e.target === amDrawer) {
+        window.closeAmenitiesDrawer();
+      }
+    });
+  }

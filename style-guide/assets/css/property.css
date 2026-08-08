@@ -712,3 +712,164 @@ body.property-page {
     gap: 1rem;
   }
 }
+
+
+/* ================= PHASE 3: FLOOR PLANS, PRICING & AMENITIES STYLES ================= */
+
+/* Carpet Efficiency Badge */
+.prop-efficiency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--prop-bg-warm);
+  border: 1px solid var(--prop-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--prop-gold);
+}
+
+/* Floor Plan Review Box */
+.prop-fp-review-box {
+  background: var(--prop-bg-warm);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--prop-border);
+}
+.prop-fp-review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.prop-fp-works-title {
+  color: var(--prop-success);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.65rem;
+}
+.prop-fp-check-title {
+  color: #D97706;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Price Comparison Table */
+.prop-table-wrapper {
+  overflow-x: auto;
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+.prop-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+.prop-table th {
+  background: var(--prop-bg-warm);
+  color: var(--prop-navy-light);
+  font-family: 'Marcellus', serif;
+  font-size: 0.98rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--prop-border);
+  font-weight: 400;
+}
+.prop-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--prop-border);
+  color: var(--prop-text-dark);
+}
+.prop-table tr:last-child td {
+  border-bottom: none;
+}
+.prop-table tr.highlight-row {
+  background: rgba(184, 142, 82, 0.05);
+  font-weight: 600;
+}
+
+/* Inclusions List */
+.prop-inclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.prop-inc-item {
+  background: #FFFFFF;
+  border: 1px solid var(--prop-border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--prop-navy-light);
+}
+
+/* Amenities Modal / Drawer */
+.prop-amenities-drawer-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 31, 61, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.prop-amenities-drawer-overlay.active {
+  display: flex;
+}
+.prop-amenities-drawer {
+  background: #FFFFFF;
+  border-radius: 14px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.prop-drawer-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--prop-bg-warm);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .prop-inclusions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prop-fp-review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .prop-inclusions-grid {
+    grid-template-columns: 1fr;
+  }
+  .prop-table th, .prop-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
