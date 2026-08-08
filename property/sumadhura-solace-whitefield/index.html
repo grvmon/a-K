@@ -400,13 +400,12 @@
                     </div>
 
                     <!-- Right YouTube Video Thumbnail with Centered Play Button -->
-                    <div id="propVideoBox" class="prop-overview-video-box" onclick="playOverviewVideo();" title="Click to play Sumadhura Solace Video">
-                        <img src="../../style-guide/assets/sumadhura_solace_aerial.jpg" alt="Sumadhura Solace Aerial View">
-                        <div class="prop-video-play-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-left:3px;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div>
+                    <div id="propVideoBox" class="prop-overview-video-box">
+                        <video id="overviewVideoPlayer" controls playsinline preload="metadata" poster="../../style-guide/assets/sumadhura_solace_aerial.jpg" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; background:#000000; display:block;">
+                            <source src="../../style-guide/assets/sumadhura_solace_walkthrough.mp4" type="video/mp4">
+                            <source src="/style-guide/assets/sumadhura_solace_walkthrough.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
                     </div>
                 </div>
 
