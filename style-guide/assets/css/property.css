@@ -2009,3 +2009,94 @@ body.property-page main {
 #fp-v2-4bhk {
   display: none !important;
 }
+
+/* ================= FLOOR PLAN LIGHTBOX MODAL ================= */
+.prop-fp-modal-overlay {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(15, 31, 61, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  z-index: 2500 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.5rem !important;
+}
+
+.prop-fp-modal-overlay.active {
+  display: flex !important;
+}
+
+.prop-fp-modal-content {
+  position: relative !important;
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  width: 1050px !important;
+  padding: 1.75rem 2rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+.prop-fp-modal-close {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1.25rem !important;
+  font-size: 2.2rem !important;
+  line-height: 1 !important;
+  border: none !important;
+  background: transparent !important;
+  color: #59616B !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease !important;
+}
+
+.prop-fp-modal-close:hover {
+  color: #0F1F3D !important;
+}
+
+.prop-fp-modal-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  text-align: center !important;
+}
+
+.prop-fp-modal-img-wrapper {
+  width: 100% !important;
+  max-height: calc(80vh - 100px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: auto !important;
+  background: #F8FAF9 !important;
+  border-radius: 10px !important;
+  border: 1px solid #E2E8F0 !important;
+  padding: 1rem !important;
+}
+
+.prop-fp-modal-img-wrapper img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+.prop-fp-img-card-v2 {
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.prop-fp-img-card-v2:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(15, 31, 61, 0.08) !important;
+}

@@ -211,3 +211,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  // 11. Floor Plan Lightbox Modal Controller
+  window.openFloorPlanModal = function(imgSrc, title) {
+    var modal = document.getElementById('propFloorPlanModal');
+    var modalImg = document.getElementById('propFpModalImg');
+    var modalTitle = document.getElementById('propFpModalTitle');
+
+    if (modalImg && imgSrc) modalImg.src = imgSrc;
+    if (modalTitle && title) modalTitle.textContent = title;
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeFloorPlanModal = function(e) {
+    if (e && e.target && e.target.id !== 'propFloorPlanModal' && !e.target.classList.contains('prop-fp-modal-close')) {
+      return;
+    }
+    var modal = document.getElementById('propFloorPlanModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };

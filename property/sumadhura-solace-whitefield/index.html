@@ -565,7 +565,7 @@
 
                 <!-- 3 BHK Grid Content -->
                 <div id="fp-v2-3bhk" class="prop-fp-grid-v2">
-                    <div class="prop-fp-img-card-v2">
+                    <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');" title="Click to expand 3 BHK Floor Plan">
                         <img src="../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg" alt="Sumadhura Solace 3 BHK Floor Plan Layout">
                     </div>
                     <div class="prop-fp-details-v2">
@@ -591,13 +591,13 @@
                             <span class="prop-fp-stat-val-v2">₹2.18 Cr* onwards</span>
                         </div>
 
-                        <button class="prop-fp-view-btn-v2" onclick="window.openModal();">View Floor Plan</button>
+                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_3bhk_floorplan.jpg', 'Sumadhura Solace 3 BHK Floor Plan');">View Floor Plan</button>
                     </div>
                 </div>
 
                 <!-- 4 BHK Grid Content (Hidden by Default) -->
                 <div id="fp-v2-4bhk" class="prop-fp-grid-v2" style="display:none !important;">
-                    <div class="prop-fp-img-card-v2">
+                    <div class="prop-fp-img-card-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');" title="Click to expand 4 BHK Floor Plan">
                         <img src="../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg" alt="Sumadhura Solace 4 BHK Floor Plan Layout">
                     </div>
                     <div class="prop-fp-details-v2">
@@ -623,7 +623,7 @@
                             <span class="prop-fp-stat-val-v2">₹3.10 Cr* onwards</span>
                         </div>
 
-                        <button class="prop-fp-view-btn-v2" onclick="window.openModal();">View Floor Plan</button>
+                        <button class="prop-fp-view-btn-v2" onclick="openFloorPlanModal('../../style-guide/assets/sumadhura_solace_4bhk_floorplan.jpg', 'Sumadhura Solace 4 BHK Floor Plan');">View Floor Plan</button>
                     </div>
                 </div>
 
@@ -976,5 +976,22 @@
             }
         });
     </script>
+
+    <!-- ================= FULLSCREEN FLOOR PLAN LIGHTBOX MODAL ================= -->
+    <div id="propFloorPlanModal" class="prop-fp-modal-overlay" onclick="closeFloorPlanModal(event);">
+        <div class="prop-fp-modal-content" onclick="event.stopPropagation();">
+            <button type="button" class="prop-fp-modal-close" onclick="closeFloorPlanModal();" aria-label="Close Lightbox">&times;</button>
+            <h3 id="propFpModalTitle" class="prop-fp-modal-title">Sumadhura Solace Floor Plan</h3>
+            <div class="prop-fp-modal-img-wrapper">
+                <img id="propFpModalImg" src="" alt="Floor Plan Expanded High-Res View">
+            </div>
+            <div style="margin-top:1.25rem; display:flex; gap:1rem;">
+                <button type="button" class="sd-btn-gold" onclick="closeFloorPlanModal(); window.openModal();" style="padding:0.65rem 1.5rem; font-size:0.9rem;">
+                    <span>Download Full Brochure &amp; Cost Sheet</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
