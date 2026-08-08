@@ -409,3 +409,27 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Escape') closeHeroGalleryModal();
     }
   });
+
+
+  // 15. Global Robust FAQ Accordion Handler
+  window.toggleFaqItem = function(qEl) {
+    if (!qEl) return;
+    var item = qEl.closest ? qEl.closest('.prop-faq-item') : qEl.parentElement;
+    if (!item) return;
+
+    var isActive = item.classList.contains('active');
+    document.querySelectorAll('.prop-faq-item').forEach(function(i) {
+      i.classList.remove('active');
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  };
+
+  var faqQuestions = document.querySelectorAll('.prop-faq-q');
+  faqQuestions.forEach(function(q) {
+    q.addEventListener('click', function(e) {
+      window.toggleFaqItem(this);
+    });
+  });
