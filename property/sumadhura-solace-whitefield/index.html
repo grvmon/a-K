@@ -206,7 +206,7 @@
         <section class="prop-hero-section">
             <div class="prop-container">
                 
-                <!-- Breadcrumb Positioned Inside Page Container Immediately Above Hero -->
+                <!-- Breadcrumb -->
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:1.25rem;">
                     <div class="prop-breadcrumb" style="padding:0;">
                         <a href="/">Home</a> <span class="sep">→</span>
@@ -222,65 +222,93 @@
 
                 <div class="prop-hero-grid">
                     
-                    <!-- Left: Gallery (60%) -->
+                    <!-- Left: Main Image & Overlay Thumbnails (Exact Reference Layout) -->
                     <div class="prop-gallery-wrapper">
-                        <div class="prop-badge-overlay">PREMIUM PROJECT</div>
-                        <div class="prop-photo-count-badge"><i data-feather="image" style="width:14px;height:14px;"></i> 1/12 Photos</div>
+                        <div class="prop-badge-overlay">Premium Project</div>
                         <div class="prop-main-img-box">
                             <img id="propMainImage" src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Sumadhura Solace Whitefield Main View">
                         </div>
-                        <div class="prop-thumb-strip">
-                            <div class="prop-thumb-item active" data-full="../../style-guide/assets/sumadhura_solace_hero.jpg">
-                                <img src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Hero Pool View">
+                        
+                        <!-- Overlay at the bottom of the main image -->
+                        <div class="prop-gallery-bottom-overlay">
+                            <div class="prop-thumb-overlay-strip">
+                                <div class="prop-thumb-overlay-item active" data-full="../../style-guide/assets/sumadhura_solace_hero.jpg">
+                                    <img src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Hero Pool View">
+                                </div>
+                                <div class="prop-thumb-overlay-item" data-full="../../style-guide/assets/sumadhura_solace_aerial.jpg">
+                                    <img src="../../style-guide/assets/sumadhura_solace_aerial.jpg" alt="Aerial Lake View">
+                                </div>
+                                <div class="prop-thumb-overlay-item" data-full="../../style-guide/assets/bengaluru_couple_tablet.webp">
+                                    <img src="../../style-guide/assets/bengaluru_couple_tablet.webp" alt="Clubhouse Living">
+                                </div>
+                                <div class="prop-thumb-overlay-item" data-full="../../style-guide/assets/sumadhura_solace_hero.jpg">
+                                    <img src="../../style-guide/assets/sumadhura_solace_hero.jpg" alt="Tower View">
+                                </div>
                             </div>
-                            <div class="prop-thumb-item" data-full="../../style-guide/assets/sumadhura_solace_aerial.jpg">
-                                <img src="../../style-guide/assets/sumadhura_solace_aerial.jpg" alt="Aerial Lake View">
-                            </div>
-                            <div class="prop-thumb-item" data-full="../../style-guide/assets/bengaluru_couple_tablet.webp">
-                                <img src="../../style-guide/assets/bengaluru_couple_tablet.webp" alt="Clubhouse Living">
-                            </div>
-                            <button class="prop-view-all-btn" onclick="window.openModal();">
-                                <i data-feather="grid" style="width:14px;height:14px;"></i> View All Photos
+                            <button class="prop-view-all-btn-overlay" onclick="window.openModal();">
+                                <i data-feather="image" style="width:15px;height:15px;"></i> View All Photos
                             </button>
                         </div>
                     </div>
 
-                    <!-- Right: Hero Details (40%) -->
+                    <!-- Right: Details Column (Exact Reference Layout) -->
                     <div class="prop-hero-details">
-                        <h1 class="prop-hero-title">Sumadhura Solace</h1>
-                        <div class="prop-hero-location-line">
-                            <i data-feather="map-pin" style="width:16px;height:16px;color:var(--prop-gold);"></i>
+                        <h1 class="prop-hero-title-main">Sumadhura Solace</h1>
+                        <div class="prop-hero-loc-row">
+                            <i data-feather="map-pin" style="width:16px;height:16px;color:#B88E52;"></i>
                             Whitefield, Bengaluru
                         </div>
 
-                        <!-- Rating Badge -->
-                        <div class="prop-rating-tag">
-                            <i data-feather="shield-check" style="width:15px;height:15px;color:var(--prop-gold);"></i>
-                            AcrenKey Independent Analysis · <strong>9.2/10</strong>
+                        <!-- Rating Row -->
+                        <div class="prop-hero-rating-row">
+                            <span class="star">★ 4.8</span>
+                            <span class="reviews">(128 Reviews)</span>
                         </div>
                         
-                        <div style="font-size:1.05rem; font-weight:700; color:var(--prop-navy-light); margin-bottom:0.2rem;">3 &amp; 4 BHK Residences</div>
-                        <div style="font-size:0.9rem; color:var(--prop-gold); font-weight:600; margin-bottom:1.15rem;">Twin Lake Views · 81% Open Space</div>
+                        <div class="prop-config-line">Luxury 3 &amp; 4 BHK Apartments</div>
+                        <div class="prop-view-line">Twin Lake Views | 81% Open Space</div>
 
-                        <!-- Price Tag & Disclaimer Qualifier -->
-                        <div class="prop-hero-price-tag">₹2.18 Cr* onwards</div>
-                        <div class="prop-price-qualifier">*Indicative starting price. Verify latest availability and final cost before booking.</div>
+                        <!-- Light Specifications Card Box -->
+                        <div class="prop-spec-card-box">
+                            <div class="prop-spec-card-item">
+                                <div class="prop-spec-icon-circle"><i data-feather="shield" style="width:18px;height:18px;"></i></div>
+                                <div class="prop-spec-item-content">
+                                    <span class="prop-spec-item-label">RERA Approved</span>
+                                    <span class="prop-spec-item-val">PRM/KA/RERA/1251/446/PR/111225/008330</span>
+                                </div>
+                            </div>
 
-                        <!-- Main Hero Key Details -->
-                        <div class="prop-key-facts-row">
-                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> 11.66 Acres</div>
-                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> 7 Towers</div>
-                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> Dec 2029 Possession</div>
-                            <div class="prop-key-fact-item"><i data-feather="check" style="width:14px;height:14px;color:var(--prop-gold);"></i> RERA Registered</div>
+                            <div class="prop-spec-card-item">
+                                <div class="prop-spec-icon-circle"><i data-feather="clock" style="width:18px;height:18px;"></i></div>
+                                <div class="prop-spec-item-content">
+                                    <span class="prop-spec-item-label">Possession</span>
+                                    <span class="prop-spec-item-val">Dec 2029</span>
+                                </div>
+                            </div>
+
+                            <div class="prop-spec-card-item">
+                                <div class="prop-spec-icon-circle"><i data-feather="user-check" style="width:18px;height:18px;"></i></div>
+                                <div class="prop-spec-item-content">
+                                    <span class="prop-spec-item-label">Builder</span>
+                                    <span class="prop-spec-item-val">Sumadhura Group</span>
+                                </div>
+                            </div>
+
+                            <div class="prop-spec-card-item">
+                                <div class="prop-spec-icon-circle"><i data-feather="compass" style="width:18px;height:18px;"></i></div>
+                                <div class="prop-spec-item-content">
+                                    <span class="prop-spec-item-label">Status</span>
+                                    <span class="prop-spec-item-val">Under Construction</span>
+                                </div>
+                            </div>
                         </div>
-                        <div style="font-size:0.75rem; color:var(--prop-text-muted); margin-top:-0.75rem; margin-bottom:1.25rem;">RERA No: PRM/KA/RERA/1251/446/PR/111225/008330</div>
 
                         <!-- CTAs -->
-                        <button class="prop-cta-primary" onclick="window.openModal();" style="box-shadow:0 4px 14px rgba(184, 142, 82, 0.25);">
+                        <button class="prop-cta-primary" onclick="window.openModal();" style="box-shadow:0 4px 14px rgba(184, 142, 82, 0.25); margin-bottom:0.75rem;">
                             Get Latest Price &amp; Availability
                         </button>
                         <div class="prop-cta-secondary-row">
-                            <button class="prop-sec-btn" onclick="window.openModal();" style="background:#FAF6F3;">
+                            <button class="prop-sec-btn" onclick="window.openModal();">
                                 <i data-feather="calendar" style="width:14px;height:14px;"></i> Schedule Site Visit
                             </button>
                             <a href="https://wa.me/919403897777?text=Hi%20AcrenKey%2C%20I%20want%20price%20and%20availability%20for%20Sumadhura%20Solace" target="_blank" class="prop-sec-btn whatsapp-btn">
@@ -288,17 +316,64 @@
                             </a>
                         </div>
 
-                        <!-- Trust Micro-Copy -->
-                        <div class="prop-trust-subtle-line">
-                            Independent property analysis · Price, location, floor-plan &amp; risk assessment
-                        </div>
-
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- PROJECT SNAPSHOT STRIP (PHASE 1) -->
+                <!-- PROJECT METRICS STRIP WITH ICONS (Exact Reference Layout) -->
+                <div class="prop-snapshot-strip-v2">
+                    <div class="prop-snapshot-grid-v2">
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="maximize-2" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">11.66</span>
+                                <span class="prop-snap-lbl-v2">Acres Land Parcel</span>
+                            </div>
+                        </div>
+
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="sun" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">81%</span>
+                                <span class="prop-snap-lbl-v2">Open Space</span>
+                            </div>
+                        </div>
+
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="layers" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">7</span>
+                                <span class="prop-snap-lbl-v2">Towers</span>
+                            </div>
+                        </div>
+
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="home" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">526</span>
+                                <span class="prop-snap-lbl-v2">Units (Phase 1)</span>
+                            </div>
+                        </div>
+
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="coffee" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">45,000</span>
+                                <span class="prop-snap-lbl-v2">sq.ft. Clubhouse</span>
+                            </div>
+                        </div>
+
+                        <div class="prop-snapshot-item-v2">
+                            <div class="prop-snap-icon-v2"><i data-feather="award" style="width:24px;height:24px;"></i></div>
+                            <div class="prop-snap-content-v2">
+                                <span class="prop-snap-num-v2">90+</span>
+                                <span class="prop-snap-lbl-v2">Amenities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- PROJECT SNAPSHOT STRIP (PHASE 1) -->
         <div class="prop-snapshot-strip">
             <div class="prop-container">
                 <div class="prop-snapshot-grid">
