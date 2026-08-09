@@ -444,6 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.openAcrenKeyScoreModal = function() {
   var modal = document.getElementById('acrenkeyScoreModal');
   if (modal) {
+    modal.style.setProperty('display', 'flex', 'important');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -452,6 +453,7 @@ window.openAcrenKeyScoreModal = function() {
 window.closeAcrenKeyScoreModal = function() {
   var modal = document.getElementById('acrenkeyScoreModal');
   if (modal) {
+    modal.style.setProperty('display', 'none', 'important');
     modal.classList.remove('active');
     document.body.style.overflow = '';
   }
@@ -462,6 +464,17 @@ window.closeAcrenKeyScoreModalOnOverlay = function(e) {
     window.closeAcrenKeyScoreModal();
   }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  var badge = document.querySelector('.prop-hero-score-badge');
+  if (badge) {
+    badge.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.openAcrenKeyScoreModal();
+    });
+  }
+});
 
 document.addEventListener('click', function(e) {
   if (e.target && (e.target.classList.contains('prop-hero-score-badge') || e.target.closest('.prop-hero-score-badge'))) {
