@@ -1290,6 +1290,32 @@
             <div class="prop-container">
                 <h2 class="prop-section-title" style="font-size:2rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:0.35rem;">Frequently Asked Questions</h2>
                 <p style="color:#59616B; font-size:0.95rem; margin-bottom:1.75rem;">Verified answers to key buyer questions about Sumadhura Solace Whitefield.</p>
+
+                <!-- Fail-Safe Self-Contained Accordion Script -->
+                <script>
+                window.toggleFaqItem = function(elem) {
+                    if (!elem) return;
+                    var item = elem.closest ? elem.closest('.prop-faq-item') : elem.parentElement;
+                    if (!item) return;
+
+                    var wasActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items in container
+                    var allItems = document.querySelectorAll('.prop-faq-item');
+                    allItems.forEach(function(el) {
+                        el.classList.remove('active');
+                        var ans = el.querySelector('.prop-faq-a');
+                        if (ans) ans.style.display = 'none';
+                    });
+
+                    // Toggle clicked item
+                    if (!wasActive) {
+                        item.classList.add('active');
+                        var targetAns = item.querySelector('.prop-faq-a');
+                        if (targetAns) targetAns.style.display = 'block';
+                    }
+                };
+                </script>
                 
                 <div class="prop-faq-list">
                     <div class="prop-faq-item active">

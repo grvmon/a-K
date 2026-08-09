@@ -3488,3 +3488,16 @@ body.property-page main {
     gap: 1.5rem !important;
   }
 }
+
+/* Fail-Safe FAQ Accordion Styling */
+.prop-faq-q {
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+.prop-faq-item.active .prop-faq-a {
+  display: block !important;
+}
+.prop-faq-item:not(.active) .prop-faq-a {
+  display: none !important;
+}
