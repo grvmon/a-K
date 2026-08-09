@@ -438,25 +438,33 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
 
-  // AcrenKey Score Breakup Modal Handlers
-  window.openAcrenKeyScoreModal = function() {
-    var modal = document.getElementById('acrenkeyScoreModal');
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  };
+  
 
-  window.closeAcrenKeyScoreModal = function() {
-    var modal = document.getElementById('acrenkeyScoreModal');
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  };
+// Global AcrenKey Score Breakup Modal Handlers
+window.openAcrenKeyScoreModal = function() {
+  var modal = document.getElementById('acrenkeyScoreModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+};
 
-  window.closeAcrenKeyScoreModalOnOverlay = function(e) {
-    if (e.target && e.target.id === 'acrenkeyScoreModal') {
-      window.closeAcrenKeyScoreModal();
-    }
-  };
+window.closeAcrenKeyScoreModal = function() {
+  var modal = document.getElementById('acrenkeyScoreModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+window.closeAcrenKeyScoreModalOnOverlay = function(e) {
+  if (e && e.target && e.target.id === 'acrenkeyScoreModal') {
+    window.closeAcrenKeyScoreModal();
+  }
+};
+
+document.addEventListener('click', function(e) {
+  if (e.target && (e.target.classList.contains('prop-hero-score-badge') || e.target.closest('.prop-hero-score-badge'))) {
+    window.openAcrenKeyScoreModal();
+  }
+});
