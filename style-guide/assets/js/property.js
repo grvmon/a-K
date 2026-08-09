@@ -436,3 +436,27 @@ document.addEventListener('DOMContentLoaded', function() {
       item.classList.add('active');
     }
   };
+
+
+  // AcrenKey Score Breakup Modal Handlers
+  window.openAcrenKeyScoreModal = function() {
+    var modal = document.getElementById('acrenkeyScoreModal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeAcrenKeyScoreModal = function() {
+    var modal = document.getElementById('acrenkeyScoreModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  window.closeAcrenKeyScoreModalOnOverlay = function(e) {
+    if (e.target && e.target.id === 'acrenkeyScoreModal') {
+      window.closeAcrenKeyScoreModal();
+    }
+  };

@@ -260,9 +260,10 @@
                         </div>
 
                         <!-- Rating Row -->
-                        <div class="prop-hero-rating-row">
-                            <span class="star">★ 4.8</span>
-                            <span class="reviews">(128 Reviews)</span>
+                        <div class="prop-hero-score-badge" onclick="openAcrenKeyScoreModal();" title="Click to view AcrenKey Score breakup">
+                            <span class="prop-score-star">★ 77.4</span>
+                            <span class="prop-score-lbl">AcrenKey Score</span>
+                            <i data-feather="info" class="prop-score-info-icon"></i>
                         </div>
                         
                         <div class="prop-config-line">Luxury 3 &amp; 4 BHK Apartments</div>
@@ -1522,6 +1523,102 @@
             <div class="prop-gallery-lightbox-thumbs" id="heroGalleryLightboxThumbs"></div>
         </div>
     </div>
+
+
+<!-- ================= ACRENKEY SCORE BREAKUP MODAL ================= -->
+<div id="acrenkeyScoreModal" class="ak-score-modal-overlay" onclick="closeAcrenKeyScoreModalOnOverlay(event)">
+    <div class="ak-score-modal-card">
+        <button class="ak-score-modal-close" onclick="closeAcrenKeyScoreModal()" title="Close">&times;</button>
+        
+        <div class="ak-score-modal-header">
+            <h3 class="ak-score-modal-title">AcrenKey Score</h3>
+            <p class="ak-score-modal-subtitle">
+                Sumadhura Solace Phase 1 receives an AcrenKey Score rating of <strong style="color:#B88E52;">77.4 / 100</strong> on the basis of the technical &amp; qualitative parameters evaluated below.
+            </p>
+        </div>
+
+        <div class="ak-score-modal-body">
+            <table class="ak-score-table">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Parameters</th>
+                        <th style="text-align:right;">Score</th>
+                        <th style="text-align:right;">Rating Bar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Builder</div>
+                            <div class="ak-param-desc">Developer pedigree, past track record &amp; market standing</div>
+                        </td>
+                        <td class="ak-score-val">76.7</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:76.7%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Approvals</div>
+                            <div class="ak-param-desc">Clear land title, RERA registration &amp; statutory clearances</div>
+                        </td>
+                        <td class="ak-score-val">70.0</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:70.0%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Location</div>
+                            <div class="ak-param-desc">Whitefield connectivity, metro proximity &amp; social infrastructure</div>
+                        </td>
+                        <td class="ak-score-val">77.0</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:77.0%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Masterplan</div>
+                            <div class="ak-param-desc">11.66-acre layout, 81% open area &amp; 45k sq.ft. clubhouse</div>
+                        </td>
+                        <td class="ak-score-val">87.3</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:87.3%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Delivery</div>
+                            <div class="ak-param-desc">Construction progress &amp; Dec 2029 possession timeline</div>
+                        </td>
+                        <td class="ak-score-val">68.0</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:68.0%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ak-param-name">Liquidity</div>
+                            <div class="ak-param-desc">Micro-market demand, resale potential &amp; rental yields</div>
+                        </td>
+                        <td class="ak-score-val">87.7</td>
+                        <td class="ak-score-bar-td">
+                            <div class="ak-bar-bg"><div class="ak-bar-fill" style="width:87.7%;"></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ak-score-modal-footer">
+            <div class="ak-score-overall-box">
+                <span>Overall AcrenKey Score</span>
+                <span class="ak-overall-score-badge">77.4 / 100</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
