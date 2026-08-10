@@ -919,14 +919,14 @@
 
       var h3 = document.createElement("h3");
       h3.setAttribute("tabindex","-1");
-      h3.style.cssText = "font-size:20px;font-weight:500;color:#182A3D;margin-bottom:6px;outline:none;";
+      h3.style.cssText = "font-size:20px;font-weight:500;color:#1F2B38;margin-bottom:6px;outline:none;";
       h3.textContent = STRINGS.successHeading;
 
       var willRedirect = !!(REDIRECT_URL && REDIRECT_URL !== "#");
       var delay = willRedirect ? 3000 : 2500;
       var remaining = 3;
       var p = document.createElement("p");
-      p.style.cssText = "font-size:14px;color:rgba(24, 42, 61, 0.6);";
+      p.style.cssText = "font-size:14px;color:rgba(31, 43, 56, 0.6);";
       p.textContent = willRedirect
         ? STRINGS.successBody.replace("{n}", remaining)
         : STRINGS.successBodyStay;
