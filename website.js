@@ -493,7 +493,27 @@ root: null,
 threshold: 0.08,
 rootMargin: '0px 0px -40px 0px'
 });
-premiumRevealElements.forEach(el => {
-premiumObserver.observe(el);
-});
+    premiumRevealElements.forEach(el => {
+        premiumObserver.observe(el);
+    });
+
+    // Editorial & Long-Form Reading Progress Bar
+    const hasLongContent = document.querySelector('.blog-article-content, .privacy-body, .prop-container, .editorial-layout, .blog-post-content');
+    if (hasLongContent) {
+        let track = document.querySelector('.reading-progress-track');
+        if (!track) {
+            track = document.createElement('div');
+            track.className = 'reading-progress-track';
+            track.innerHTML = '<div class="reading-progress-fill"></div>';
+            document.body.appendChild(track);
+        }
+        const fill = track.querySelector('.reading-progress-fill');
+        window.addEventListener('scroll', function () {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (totalHeight > 0 && fill) {
+                const progress = (window.scrollY / totalHeight) * 100;
+                fill.style.width = Math.min(100, Math.max(0, progress)) + '%';
+            }
+        }, { passive: true });
+    }
 });

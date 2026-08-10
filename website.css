@@ -276,3 +276,52 @@ body.page-404 .error-404-section{
     color: var(--muted-slate);
     pointer-events: none;
 }
+
+/* ── EDITORIAL / ARTICLE READING PROGRESS BAR ── */
+.reading-progress-track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    z-index: 1001;
+    pointer-events: none;
+}
+.reading-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--refined-brass) 0%, #D4AF37 100%);
+    box-shadow: 0 0 10px rgba(154, 123, 79, 0.45);
+    transition: width 80ms ease-out;
+}
+
+/* ── AUTO-CYCLING STEP CARD PROGRESS INDICATOR ── */
+.market-lens-card {
+    position: relative;
+    overflow: hidden;
+}
+.market-lens-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--refined-brass);
+    transition: width 2200ms linear;
+    opacity: 0;
+}
+.market-lens-card.active-step::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* ── LUXURY AMBIENT CARD ELEVATION & DEPTH ── */
+.market-lens-card, .framework-card, .spider-node-card, .testimonial-card, .waw-founder-card, .waw-story-card {
+    box-shadow: 0 1px 3px rgba(24, 42, 61, 0.03), 0 6px 20px -4px rgba(24, 42, 61, 0.05) !important;
+}
+.market-lens-card:hover, .framework-card:hover, .testimonial-card:hover, .waw-founder-card:hover, .waw-story-card:hover {
+    box-shadow: 0 2px 8px rgba(24, 42, 61, 0.04), 0 14px 30px -6px rgba(24, 42, 61, 0.09) !important;
+}
+
