@@ -859,26 +859,65 @@
         
         <section id="towers" class="prop-section">
             <div class="prop-container">
-                <h1 class="prop-section-title" style="font-size:2.2rem;">Tower Analysis &amp; Master Plan</h1>
+                <h2 class="prop-section-title" style="font-size:2rem; font-weight:800; color:#0F1F3D; margin-top:0; margin-bottom:1.5rem;">Tower Analysis &amp; Master Plan</h2>
+
+                <!-- Fail-Safe Interactive Tower Controller Script -->
+                <script>
+                var towerDataMap = {
+                    'luma': { name: 'LUMA (Tower 01)', orientation: 'East - West', view: 'Podium Green & Entrance Water Plaza', privacy: 'High (Corner Placement)', noise: 'Low', configs: '3 BHK Regal & 4 BHK Elite', assessment: 'Recommended for Privacy' },
+                    'sora': { name: 'SORA (Tower 02)', orientation: 'East - West', view: 'Direct Lake View & Central Courtyard', privacy: 'High', noise: 'Low', configs: '1 BHK, 3 BHK & 4 BHK Regal', assessment: 'Best Lake View Option' },
+                    'vana': { name: 'VANA (Tower 03)', orientation: 'East - West', view: 'Unobstructed Lake Frontage', privacy: 'Very High', noise: 'Very Low', configs: '1 BHK, 3 BHK & 4 BHK Elite', assessment: 'Premium Quiet Zone' },
+                    'nira': { name: 'NIRA (Tower 04)', orientation: 'East - West', view: 'Twin Lake Vistas & Fitness Park', privacy: 'High', noise: 'Low', configs: '3 BHK Elite & Regal', assessment: 'Balanced Family Location' },
+                    'kora': { name: 'KORA (Tower 05)', orientation: 'East - West', view: 'South Courtyard & Garden Belts', privacy: 'High', noise: 'Low', configs: '3 BHK Elite & Regal', assessment: 'Garden View Priority' },
+                    'mira': { name: 'MIRA (Tower 06)', orientation: 'North - South', view: 'East Green Belt & Open Sky', privacy: 'High', noise: 'Low', configs: '3 BHK & 4 BHK Luxury', assessment: 'Optimal Sunlight Alignment' },
+                    'olea': { name: 'OLEA (Tower 07)', orientation: 'North - South', view: 'Clubhouse Deck & Reflexology Pathway', privacy: 'Moderate', noise: 'Low', configs: '3 BHK & 4 BHK Luxury', assessment: 'Proximity to Clubhouse' }
+                };
+
+                function switchTower(towerKey, btnEl) {
+                    var allBtns = document.querySelectorAll('.prop-tower-btn');
+                    allBtns.forEach(function(b) { b.classList.remove('active'); });
+                    if (btnEl) btnEl.classList.add('active');
+
+                    var data = towerDataMap[towerKey];
+                    if (!data) return;
+
+                    var tName = document.getElementById('t-detail-name');
+                    var tOrient = document.getElementById('t-detail-orient');
+                    var tView = document.getElementById('t-detail-view');
+                    var tPrivacy = document.getElementById('t-detail-privacy');
+                    var tNoise = document.getElementById('t-detail-noise');
+                    var tConfigs = document.getElementById('t-detail-configs');
+                    var tAssessment = document.getElementById('t-detail-assessment');
+
+                    if (tName) tName.textContent = data.name;
+                    if (tOrient) tOrient.textContent = data.orientation;
+                    if (tView) tView.textContent = data.view;
+                    if (tPrivacy) tPrivacy.textContent = data.privacy;
+                    if (tNoise) tNoise.textContent = data.noise;
+                    if (tConfigs) tConfigs.textContent = data.configs;
+                    if (tAssessment) tAssessment.textContent = data.assessment;
+                }
+                </script>
+
                 <div class="prop-tower-tabs">
-                    <button class="prop-tower-btn active" data-tower="luma">LUMA <span>Tower 01</span></button>
-                    <button class="prop-tower-btn" data-tower="sora">SORA <span>Tower 02</span></button>
-                    <button class="prop-tower-btn" data-tower="vana">VANA <span>Tower 03</span></button>
-                    <button class="prop-tower-btn" data-tower="nira">NIRA <span>Tower 04</span></button>
-                    <button class="prop-tower-btn" data-tower="kora">KORA <span>Tower 05</span></button>
-                    <button class="prop-tower-btn" data-tower="mira">MIRA <span>Tower 06</span></button>
-                    <button class="prop-tower-btn" data-tower="olea">OLEA <span>Tower 07</span></button>
+                    <button type="button" class="prop-tower-btn active" data-tower="luma" onclick="switchTower('luma', this);">LUMA <span>Tower 01</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="sora" onclick="switchTower('sora', this);">SORA <span>Tower 02</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="vana" onclick="switchTower('vana', this);">VANA <span>Tower 03</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="nira" onclick="switchTower('nira', this);">NIRA <span>Tower 04</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="kora" onclick="switchTower('kora', this);">KORA <span>Tower 05</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="mira" onclick="switchTower('mira', this);">MIRA <span>Tower 06</span></button>
+                    <button type="button" class="prop-tower-btn" data-tower="olea" onclick="switchTower('olea', this);">OLEA <span>Tower 07</span></button>
                 </div>
 
                 <div class="prop-tower-detail-card">
-                    <h3 id="t-detail-name" style="font-family:'Marcellus',serif; font-size:1.6rem; color:var(--prop-navy-light); margin-top:0;">LUMA (Tower 01)</h3>
+                    <h3 id="t-detail-name" style="font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--prop-navy-light); margin-top:0;">LUMA (Tower 01)</h3>
                     <div class="prop-tower-grid">
                         <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">Orientation</div><div id="t-detail-orient" class="prop-tower-info-val">East - West</div></div>
                         <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">Primary Vistas &amp; Views</div><div id="t-detail-view" class="prop-tower-info-val">Podium Green &amp; Entrance Water Plaza</div></div>
                         <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">Privacy Rating</div><div id="t-detail-privacy" class="prop-tower-info-val">High (Corner Placement)</div></div>
                         <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">Noise Level</div><div id="t-detail-noise" class="prop-tower-info-val">Low</div></div>
                         <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">Available Configurations</div><div id="t-detail-configs" class="prop-tower-info-val">3 BHK Regal &amp; 4 BHK Elite</div></div>
-                        <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">AcrenKey Assessment</div><div class="prop-tower-info-val" style="color:var(--prop-gold);">Recommended for Privacy</div></div>
+                        <div class="prop-tower-info-item"><div class="prop-tower-info-lbl">AcrenKey Assessment</div><div id="t-detail-assessment" class="prop-tower-info-val" style="color:var(--prop-gold); font-weight:700;">Recommended for Privacy</div></div>
                     </div>
                 </div>
             </div>
