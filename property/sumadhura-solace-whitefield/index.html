@@ -547,11 +547,58 @@
                 </div>
 
                 <!-- Configuration Tabs -->
+                <!-- Fail-Safe Floor Plan Controller Script -->
+                <script>
+                function switchFpTab(targetTab, btnEl) {
+                    var allTabs = document.querySelectorAll('.prop-fp-tab-btn-v3');
+                    allTabs.forEach(function(t) { t.classList.remove('active'); });
+                    if (btnEl) btnEl.classList.add('active');
+
+                    var grid3bhk = document.getElementById('fp-v3-3bhk');
+                    var grid4bhk = document.getElementById('fp-v3-4bhk');
+
+                    if (targetTab === '3bhk') {
+                        if (grid3bhk) grid3bhk.style.setProperty('display', 'grid', 'important');
+                        if (grid4bhk) grid4bhk.style.setProperty('display', 'none', 'important');
+                    } else if (targetTab === '4bhk') {
+                        if (grid3bhk) grid3bhk.style.setProperty('display', 'none', 'important');
+                        if (grid4bhk) grid4bhk.style.setProperty('display', 'grid', 'important');
+                    }
+                }
+
+                function openFloorPlanModal(imgSrc, title) {
+                    var modal = document.getElementById('propFloorPlanModal');
+                    var modalImg = document.getElementById('propFpModalImg');
+                    var modalTitle = document.getElementById('propFpModalTitle');
+
+                    if (modalImg && imgSrc) modalImg.src = imgSrc;
+                    if (modalTitle && title) modalTitle.textContent = title;
+                    if (modal) {
+                        modal.style.setProperty('display', 'flex', 'important');
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+
+                function closeFloorPlanModal(e) {
+                    if (e && e.target && e.target.closest && e.target.closest('.prop-fp-modal-content') && !e.target.classList.contains('prop-fp-modal-close')) {
+                        return;
+                    }
+                    var modal = document.getElementById('propFloorPlanModal');
+                    if (modal) {
+                        modal.style.setProperty('display', 'none', 'important');
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+                </script>
+
+                <!-- Configuration Tabs -->
                 <div class="prop-fp-tabs-v3">
-                    <button class="prop-fp-tab-btn-v3 active" data-tab="3bhk">
+                    <button type="button" class="prop-fp-tab-btn-v3 active" data-tab="3bhk" onclick="switchFpTab('3bhk', this);">
                         3 BHK <span class="price-tag">(from ₹2.18 Cr*)</span>
                     </button>
-                    <button class="prop-fp-tab-btn-v3" data-tab="4bhk">
+                    <button type="button" class="prop-fp-tab-btn-v3" data-tab="4bhk" onclick="switchFpTab('4bhk', this);">
                         4 BHK <span class="price-tag">(from ₹3.10 Cr*)</span>
                     </button>
                 </div>

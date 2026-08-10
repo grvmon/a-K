@@ -3667,3 +3667,43 @@ body.property-page main {
     font-size: 0.8rem !important;
   }
 }
+
+/* Fail-Safe Floor Plan Tab & Lightbox Modal Styling */
+.prop-fp-tab-btn-v3 {
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.prop-fp-image-container-v3 {
+  cursor: pointer !important;
+}
+
+.prop-fp-enlarge-badge {
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.prop-fp-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(15, 31, 61, 0.8) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  z-index: 999999 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+.prop-fp-modal-overlay.active {
+  display: flex !important;
+}
+
+.prop-fp-modal-overlay:not(.active) {
+  display: none !important;
+}
