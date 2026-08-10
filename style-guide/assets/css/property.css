@@ -3501,3 +3501,169 @@ body.property-page main {
 .prop-faq-item:not(.active) .prop-faq-a {
   display: none !important;
 }
+
+/* Reusable AcrenKey Assessment: Strengths & Risks Component */
+.ak-assessment-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E8E3 !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  box-shadow: 0 4px 16px rgba(15, 31, 61, 0.04) !important;
+  margin-bottom: 2rem !important;
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.ak-assessment-header {
+  margin-bottom: 1.75rem !important;
+}
+
+.ak-assessment-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  margin: 0 0 0.35rem 0 !important;
+  line-height: 1.25 !important;
+}
+
+.ak-assessment-subtitle {
+  font-size: 0.88rem !important;
+  color: #59616B !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+}
+
+.ak-assessment-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2.5rem !important;
+  align-items: start !important;
+}
+
+.ak-assessment-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+}
+
+.ak-assessment-subhead {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 2px solid #E8E8E3 !important;
+}
+
+.ak-assessment-subhead.strength {
+  color: #10B981 !important;
+  border-bottom-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+.ak-assessment-subhead.risk {
+  color: #EF4444 !important;
+  border-bottom-color: rgba(239, 68, 68, 0.25) !important;
+}
+
+.ak-subhead-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+}
+
+.ak-subhead-badge.strength {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #10B981 !important;
+}
+
+.ak-subhead-badge.risk {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #EF4444 !important;
+}
+
+.ak-assessment-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.1rem !important;
+}
+
+.ak-assessment-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.2rem !important;
+  padding: 0.1rem 0 !important;
+}
+
+.ak-item-title-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.ak-item-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  flex-shrink: 0 !important;
+}
+
+.ak-item-icon.strength {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #10B981 !important;
+}
+
+.ak-item-icon.risk {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #EF4444 !important;
+}
+
+.ak-item-title {
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #0F1F3D !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.ak-item-evidence {
+  font-size: 0.82rem !important;
+  color: #59616B !important;
+  line-height: 1.4 !important;
+  padding-left: 1.625rem !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 768px) {
+  .ak-assessment-card {
+    padding: 1.25rem 1.15rem !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 12px !important;
+  }
+  .ak-assessment-title {
+    font-size: 1.25rem !important;
+  }
+  .ak-assessment-subtitle {
+    font-size: 0.82rem !important;
+  }
+  .ak-assessment-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+  .ak-item-evidence {
+    padding-left: 1.5rem !important;
+    font-size: 0.8rem !important;
+  }
+}
