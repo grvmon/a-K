@@ -92,7 +92,7 @@ const processImg = document.getElementById('process-visual-img');
 const stepImages = {
 0: 'style-guide/assets/acrekey_construction_vs_ready.webp?v=2',
 1: 'style-guide/assets/acrekey_property_comparison_dashboard.webp?v=2',
-2: 'style-guide/assets/acrekey_corridor_growth_map.jpg?v=20260811_wcagAAA',
+2: 'style-guide/assets/acrekey_corridor_growth_map.jpg?v=20260811_whitebanners',
 3: 'style-guide/assets/acrekey_floor_view_comparison.webp?v=2',
 4: 'style-guide/assets/acrekey_investment_analysis.webp?v=2'
 };
