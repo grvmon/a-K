@@ -218,15 +218,23 @@
             <div class="prop-container">
                 
                 <!-- Breadcrumb -->
-                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:1.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
                     <div class="prop-breadcrumb" style="padding:0;">
                         <a href="/">Home</a> <span class="sep">→</span>
                         <a href="/#core">Bangalore</a> <span class="sep">→</span>
                         <a href="/#core">Whitefield</a> <span class="sep">→</span>
                         <span style="color: var(--prop-navy-light); font-weight: 600;">Sumadhura Solace</span>
                     </div>
-                    <div style="font-size:0.8rem; color:var(--prop-text-muted);">
-                        <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
+
+                    <div style="display:flex; align-items:center; gap:1.25rem;">
+                        <div style="font-size:0.8rem; color:var(--prop-text-muted);">
+                            <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
+                        </div>
+
+                        <button type="button" class="ak-hero-share-btn" onclick="triggerShareAction(this);" aria-label="Share property" title="Share Sumadhura Solace">
+                            <i data-feather="share-2" style="width:14px;height:14px;color:#8C6734;"></i>
+                            <span>Share</span>
+                        </button>
                     </div>
                 </div>
 
@@ -263,10 +271,19 @@
 
                     <!-- Right: Details Column (Exact Reference Layout) -->
                     <div class="prop-hero-details">
-                        <h1 class="prop-hero-title-main">Sumadhura Solace</h1>
-                        <div class="prop-hero-loc-row">
-                            <i data-feather="map-pin" style="width:16px;height:16px;color:#B88E52;"></i>
-                            Whitefield, Bengaluru
+                        <div class="prop-hero-title-header-row">
+                            <div>
+                                <h1 class="prop-hero-title-main">Sumadhura Solace</h1>
+                                <div class="prop-hero-loc-row">
+                                    <i data-feather="map-pin" style="width:16px;height:16px;color:#8C6734;"></i>
+                                    <span>Whitefield, Bengaluru</span>
+                                </div>
+                            </div>
+
+                            <button type="button" class="ak-hero-share-btn" onclick="triggerShareAction(this);" aria-label="Share property" title="Share Sumadhura Solace">
+                                <i data-feather="share-2" style="width:14px;height:14px;color:#8C6734;"></i>
+                                <span>Share</span>
+                            </button>
                         </div>
 
                                                 <!-- Rating Row (Clickable Score Badge) -->
