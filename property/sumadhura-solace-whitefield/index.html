@@ -1994,5 +1994,116 @@ View pricing, floor plans and AcreNKey analysis:
     });
     </script>
 
+
+    <!-- ================= OFFICIAL ACRE & KEY SCORE BREAKUP MODAL ================= -->
+    <div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(24,42,61,0.7); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;">
+        <div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius:12px; max-width:540px; width:100%; padding:1.75rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.3); box-sizing:border-box;">
+            <button type="button" class="ak-score-modal-close" onclick="closeAkScoreModal();" style="position:absolute; top:1.25rem; right:1.25rem; background:rgba(24,42,61,0.06); border:none; width:32px; height:32px; border-radius:50%; font-size:1.25rem; line-height:1; color:#182A3D; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Score Breakup Modal" title="Close">&times;</button>
+            
+            <div style="margin-bottom:1.25rem;">
+                <h3 id="akScoreModalTitle" style="font-family:'Marcellus', serif; font-size:1.55rem; color:#182A3D; margin:0 0 0.35rem 0; font-weight:400;">AcreNKey Score Breakdown</h3>
+                <p style="font-family:'Manrope', sans-serif; font-size:0.85rem; color:#59616B; margin:0;">
+                    Sumadhura Solace receives an AcreNKey Score of <strong style="color:#8C6734; font-size:0.95rem;">7.7 / 10</strong> evaluated across key parameters.
+                </p>
+            </div>
+
+            <table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope', sans-serif;">
+                <thead>
+                    <tr style="border-bottom:1px solid #DDD7CF;">
+                        <th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; font-weight:700;">Parameters</th>
+                        <th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; padding-right:1rem;">Score</th>
+                        <th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; width:110px;">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Builder</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Developer pedigree, past track record &amp; market standing</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">7.7</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:77%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Approvals</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Clear land title, RERA registration &amp; statutory clearances</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">7.0</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:70%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Location</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Whitefield connectivity, metro proximity &amp; social infrastructure</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">7.7</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:77%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Masterplan</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">11.66-acre layout, 81% open area &amp; 45k sq.ft. clubhouse</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">8.7</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:87%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Delivery</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Construction progress &amp; Dec 2029 possession timeline</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">6.8</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:68%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0F2F5;">
+                        <td style="padding:0.6rem 0;">
+                            <div style="font-weight:700; font-size:0.88rem; color:#182A3D;">Liquidity</div>
+                            <div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Micro-market demand, resale potential &amp; rental yields</div>
+                        </td>
+                        <td style="font-weight:800; font-size:0.92rem; color:#8C6734; text-align:right; padding-right:1rem;">8.8</td>
+                        <td style="width:110px; text-align:right;">
+                            <div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:88%; height:100%; background:#8C6734; border-radius:3px;"></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top:1.15rem; padding-top:0.75rem; border-top:1px solid #DDD7CF;">
+                <div style="display:flex; align-items:center; justify-content:space-between; background:#FBF6F3; padding:0.75rem 1rem; border-radius:8px; border:1px solid #DDD7CF; font-weight:700; color:#182A3D; font-size:0.9rem;">
+                    <span>Overall AcreNKey Score</span>
+                    <span style="font-size:1.05rem; font-weight:800; color:#8C6734; background:#FFFFFF; padding:0.25rem 0.75rem; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">7.7 / 10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function openAkScoreModal() {
+        var modal = document.getElementById("akScoreBreakupModal");
+        if (modal) {
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+    }
+    function closeAkScoreModal() {
+        var modal = document.getElementById("akScoreBreakupModal");
+        if (modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    }
+    </script>
+
 </body>
 </html>
