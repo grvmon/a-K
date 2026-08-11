@@ -329,7 +329,7 @@ body.page-404 .error-404-section{
 
 
 .hero-section {
-    background-image: url('../style-guide/assets/hero_meeting.jpg?v=22260811_flush_cache_v22');
+    background-image: url('../style-guide/assets/hero_meeting.jpg?v=23260811_flush_cache_v22');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -390,5 +390,34 @@ body.page-404 .error-404-section{
     }
     .hero-trust-bar .trust-label {
         text-align: center !important;
+    }
+}
+
+.hero-section {
+    min-height: 95vh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+}
+.hero-section > .container {
+    width: 100%;
+}
+.hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    max-width: 700px;
+}
+@media (min-width: 992px) {
+    .hero-content {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+}
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 80vh !important;
+        padding-top: 100px !important;
     }
 }
