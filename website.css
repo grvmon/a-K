@@ -327,3 +327,68 @@ body.page-404 .error-404-section{
 
 
 
+
+.hero-section {
+    background-image: url('../style-guide/assets/hero_meeting.jpg?v=22260811_flush_cache_v22');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+.hero-section > .container {
+    z-index: 2;
+    position: relative;
+}
+.hero-grid {
+    display: block !important;
+    max-width: 650px;
+}
+.hero-visual-wrapper {
+    display: none !important;
+}
+.hero-kicker, .hero-kicker span {
+    color: var(--warm-ivory) !important;
+}
+.hero-title {
+    color: var(--white) !important;
+}
+.hero-subtitle {
+    color: rgba(255,255,255,0.9) !important;
+}
+.hero-trust-bar .trust-number {
+    color: var(--white) !important;
+}
+.hero-trust-bar .trust-label {
+    color: rgba(255,255,255,0.8) !important;
+}
+.hero-trust-bar .trust-divider {
+    background: rgba(255,255,255,0.2) !important;
+}
+@media (max-width: 991px) {
+    .hero-grid {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-section::before {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    .hero-content {
+        align-items: center;
+    }
+    .hero-trust-bar .trust-item {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .hero-trust-bar .trust-label {
+        text-align: center !important;
+    }
+}
