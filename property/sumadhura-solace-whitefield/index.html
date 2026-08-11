@@ -218,23 +218,15 @@
             <div class="prop-container">
                 
                 <!-- Breadcrumb -->
-                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:1.25rem;">
                     <div class="prop-breadcrumb" style="padding:0;">
                         <a href="/">Home</a> <span class="sep">→</span>
                         <a href="/#core">Bangalore</a> <span class="sep">→</span>
                         <a href="/#core">Whitefield</a> <span class="sep">→</span>
                         <span style="color: var(--prop-navy-light); font-weight: 600;">Sumadhura Solace</span>
                     </div>
-
-                    <div style="display:flex; align-items:center; gap:1.25rem;">
-                        <div style="font-size:0.8rem; color:var(--prop-text-muted);">
-                            <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
-                        </div>
-
-                        <button type="button" class="ak-hero-share-btn" onclick="triggerShareAction(this);" aria-label="Share property" title="Share Sumadhura Solace">
-                            <i data-feather="share-2" style="width:14px;height:14px;color:#8C6734;"></i>
-                            <span>Share</span>
-                        </button>
+                    <div style="font-size:0.8rem; color:var(--prop-text-muted);">
+                        <i data-feather="clock" style="width:12px;height:12px;"></i> <strong>Last updated:</strong> August 2026
                     </div>
                 </div>
 
@@ -1921,9 +1913,9 @@ function closeAkScoreModal() {
 
 
     <!-- ================= OFFICIAL ACRE & KEY SHARE MODAL & BOTTOM SHEET ================= -->
-    <div id="akShareModal" class="ak-share-modal-overlay" onclick="if(event.target===this) closeShareModal();" role="dialog" aria-modal="true" aria-labelledby="akShareModalTitle">
+    <div id="akShareModal" class="ak-share-modal-overlay" onclick="if(event.target===this) window.closeShareModal();" role="dialog" aria-modal="true" aria-labelledby="akShareModalTitle">
         <div class="ak-share-modal-card" onclick="event.stopPropagation();">
-            <button type="button" class="ak-share-close-btn" onclick="closeShareModal();" aria-label="Close Share Dialog" title="Close">&times;</button>
+            <button type="button" class="ak-share-close-btn" onclick="window.closeShareModal();" aria-label="Close Share Dialog" title="Close">&times;</button>
             
             <div class="ak-share-header">
                 <h3 id="akShareModalTitle" class="ak-share-title">Share Sumadhura Solace</h3>
@@ -1943,15 +1935,15 @@ function closeAkScoreModal() {
 
             <!-- Primary Share Options (WhatsApp, Copy Link, Email) -->
             <div class="ak-share-options-grid">
-                <button type="button" class="ak-share-opt-btn whatsapp" onclick="shareWhatsApp();" aria-label="Share on WhatsApp">
+                <button type="button" class="ak-share-opt-btn whatsapp" onclick="window.shareWhatsApp();" aria-label="Share on WhatsApp">
                     <i data-feather="message-circle" style="width:20px;height:20px;"></i>
                     <span>WhatsApp</span>
                 </button>
-                <button type="button" class="ak-share-opt-btn copy" onclick="copyShareLink();" aria-label="Copy Property Link">
+                <button type="button" class="ak-share-opt-btn copy" onclick="window.copyShareLink();" aria-label="Copy Property Link">
                     <i data-feather="copy" style="width:20px;height:20px;"></i>
                     <span>Copy Link</span>
                 </button>
-                <button type="button" class="ak-share-opt-btn email" onclick="shareEmail();" aria-label="Share via Email">
+                <button type="button" class="ak-share-opt-btn email" onclick="window.shareEmail();" aria-label="Share via Email">
                     <i data-feather="mail" style="width:20px;height:20px;"></i>
                     <span>Email</span>
                 </button>
@@ -1966,134 +1958,137 @@ function closeAkScoreModal() {
     </div>
 
     <script>
-    var shareTriggerBtnEl = null;
+    (function() {
+        var shareTriggerBtnEl = null;
 
-    function triggerShareAction(btnEl) {
-        if (btnEl) shareTriggerBtnEl = btnEl;
+        window.triggerShareAction = function(btnEl) {
+            if (btnEl) shareTriggerBtnEl = btnEl;
 
-        if (typeof window.trackShareEvent === 'function') {
-            window.trackShareEvent('share_opened', { project: 'Sumadhura Solace' });
-        }
+            if (typeof window.trackShareEvent === 'function') {
+                window.trackShareEvent('share_opened', { project: 'Sumadhura Solace' });
+            }
 
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (isMobile && navigator.share) {
-            navigator.share({
-                title: 'Sumadhura Solace, Whitefield | AcreNKey',
-                text: 'Sumadhura Solace — Whitefield, Bengaluru
-
-₹2.81–₹4.50 Cr · 3 & 4 BHK
-AcreNKey Score: 7.7/10
-
-View pricing, floor plans & AcreNKey analysis:
-',
-                url: window.location.href
-            }).then(function() {
-                if (typeof window.trackShareEvent === 'function') {
-                    window.trackShareEvent('share_native_clicked', { project: 'Sumadhura Solace' });
-                }
-            }).catch(function(err) {
-                openShareModal();
-            });
-            return;
-        }
-
-        openShareModal();
-    }
-
-    function openShareModal() {
-        var modal = document.getElementById('akShareModal');
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            var closeBtn = modal.querySelector('.ak-share-close-btn');
-            if (closeBtn) closeBtn.focus();
-        }
-    }
-
-    function closeShareModal() {
-        var modal = document.getElementById('akShareModal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        if (shareTriggerBtnEl && typeof shareTriggerBtnEl.focus === 'function') {
-            shareTriggerBtnEl.focus();
-        }
-    }
-
-    function shareWhatsApp() {
-        if (typeof window.trackShareEvent === 'function') {
-            window.trackShareEvent('share_whatsapp_clicked', { project: 'Sumadhura Solace' });
-        }
-        var shareUrl = window.location.href;
-        var msg = 'Sumadhura Solace — Whitefield, Bengaluru
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile && navigator.share) {
+                var shareText = "Sumadhura Solace — Whitefield, Bengaluru
 
 ₹2.81–₹4.50 Cr · 3 & 4 BHK
 AcreNKey Score: 7.7/10
 
 View pricing, floor plans & AcreNKey analysis:
-' + shareUrl;
-        var waUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msg);
-        window.open(waUrl, '_blank', 'noopener,noreferrer');
-    }
+";
+                navigator.share({
+                    title: 'Sumadhura Solace, Whitefield | AcreNKey',
+                    text: shareText,
+                    url: window.location.href
+                }).then(function() {
+                    if (typeof window.trackShareEvent === 'function') {
+                        window.trackShareEvent('share_native_clicked', { project: 'Sumadhura Solace' });
+                    }
+                }).catch(function(err) {
+                    window.openShareModal();
+                });
+                return;
+            }
 
-    function copyShareLink() {
-        if (typeof window.trackShareEvent === 'function') {
-            window.trackShareEvent('share_copy_link_clicked', { project: 'Sumadhura Solace' });
-        }
-        var shareUrl = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(shareUrl).then(showShareToast).catch(function() {
+            window.openShareModal();
+        };
+
+        window.openShareModal = function() {
+            var modal = document.getElementById('akShareModal');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                var closeBtn = modal.querySelector('.ak-share-close-btn');
+                if (closeBtn) closeBtn.focus();
+            }
+        };
+
+        window.closeShareModal = function() {
+            var modal = document.getElementById('akShareModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (shareTriggerBtnEl && typeof shareTriggerBtnEl.focus === 'function') {
+                shareTriggerBtnEl.focus();
+            }
+        };
+
+        window.shareWhatsApp = function() {
+            if (typeof window.trackShareEvent === 'function') {
+                window.trackShareEvent('share_whatsapp_clicked', { project: 'Sumadhura Solace' });
+            }
+            var shareUrl = window.location.href;
+            var msg = "Sumadhura Solace — Whitefield, Bengaluru
+
+₹2.81–₹4.50 Cr · 3 & 4 BHK
+AcreNKey Score: 7.7/10
+
+View pricing, floor plans & AcreNKey analysis:
+" + shareUrl;
+            var waUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msg);
+            window.open(waUrl, '_blank', 'noopener,noreferrer');
+        };
+
+        window.copyShareLink = function() {
+            if (typeof window.trackShareEvent === 'function') {
+                window.trackShareEvent('share_copy_link_clicked', { project: 'Sumadhura Solace' });
+            }
+            var shareUrl = window.location.href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(shareUrl).then(showShareToast).catch(function() {
+                    fallbackCopyText(shareUrl);
+                });
+            } else {
                 fallbackCopyText(shareUrl);
-            });
-        } else {
-            fallbackCopyText(shareUrl);
+            }
+        };
+
+        function fallbackCopyText(text) {
+            var input = document.createElement('textarea');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            try {
+                document.execCommand('copy');
+                showShareToast();
+            } catch(e) {}
+            document.body.removeChild(input);
         }
-    }
 
-    function fallbackCopyText(text) {
-        var input = document.createElement('textarea');
-        input.value = text;
-        document.body.appendChild(input);
-        input.select();
-        try {
-            document.execCommand('copy');
-            showShareToast();
-        } catch(e) {}
-        document.body.removeChild(input);
-    }
-
-    function showShareToast() {
-        var toast = document.getElementById('akShareToast');
-        if (!toast) return;
-        toast.classList.add('active');
-        setTimeout(function() {
-            toast.classList.remove('active');
-        }, 2500);
-    }
-
-    function shareEmail() {
-        if (typeof window.trackShareEvent === 'function') {
-            window.trackShareEvent('share_email_clicked', { project: 'Sumadhura Solace' });
+        function showShareToast() {
+            var toast = document.getElementById('akShareToast');
+            if (!toast) return;
+            toast.classList.add('active');
+            setTimeout(function() {
+                toast.classList.remove('active');
+            }, 2500);
         }
-        var shareUrl = window.location.href;
-        var subject = 'Sumadhura Solace — AcreNKey Property Review';
-        var body = 'Sumadhura Solace
+
+        window.shareEmail = function() {
+            if (typeof window.trackShareEvent === 'function') {
+                window.trackShareEvent('share_email_clicked', { project: 'Sumadhura Solace' });
+            }
+            var shareUrl = window.location.href;
+            var subject = 'Sumadhura Solace — AcreNKey Property Review';
+            var body = "Sumadhura Solace
 Whitefield, Bengaluru
 
 ₹2.81–₹4.50 Cr · 3 & 4 BHK
 AcreNKey Score: 7.7/10
 
 View pricing, floor plans and AcreNKey analysis:
-' + shareUrl;
-        window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }
+" + shareUrl;
+            window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        };
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeShareModal();
-        }
-    });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                window.closeShareModal();
+            }
+        });
+    })();
     </script>
 
 </body>
