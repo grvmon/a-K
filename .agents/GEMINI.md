@@ -3,9 +3,11 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 1. Master Color Palette (Locked & Permanent)
 - **Antique Brass / Refined Brass (`--refined-brass`)**: `#9A7B4F` (`rgba(154, 123, 79, ...)`)
-  - Used for: All primary CTA buttons (`.sd-btn-gold`), timeline step numbers (01–04), active progress traces, key italic accents, badges, and icon highlights.
+  - Used for: All primary CTA buttons (`.sd-btn-gold`), timeline step numbers (01–04), active progress traces, badges, and icon highlights.
+- **Editorial Russet / Terracotta (`--editorial-russet`)**: `#743737`
+  - Used for: Italic heading emphasis keywords (`.highlight-brass`, `.framework-title-gold`) for maximum editorial contrast and reader engagement.
 - **Warm Ivory Canvas Base (`--warm-ivory`)**: `#FBF6F3`
-  - Used for: 75% site background canvas with subtle `soft-light` paper noise texture. Provides clean, soft ivory warmth. Zero grid lines, zero blueprint drawings, zero tint gradients.
+  - Used for: 75% site background canvas with subtle ambient radial lighting glows and `soft-light` paper noise texture. Provides clean, soft ivory warmth. Zero heavy grid lines, zero blueprint sketches.
 - **Deep Navy (`--deep-navy` / `--deep-navy-100`)**: `rgba(24, 42, 61, 0.84)` / `#182A3D`
   - Used for: All primary titles, H1–H4 headings, 1-line Summary Banner boxes, mobile drawer headers, and site footer foundation.
 - **Card Surfaces (`--white`)**: `#FFFFFF` / `#FDFBF9` (Pure White with 8px radius and subtle ambient drop shadow).
@@ -17,8 +19,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
   - Hairline Dividers & Borders: `#DDD7CF` / `rgba(24, 42, 61, 0.08)` / `rgba(154, 123, 79, 0.25)`
 
 ## 2. Background Texture
-- **Official Texture**: Soft paper noise filter with `background-blend-mode: soft-light` over `#FBF6F3`.
-- **Prohibited**: Heavy repeating grid crosshatches, yellow/navy full-viewport vertical tint gradients, or blueprint watermark sketches.
+- **Official Texture**: Soft paper noise filter with `background-blend-mode: soft-light` over `#FBF6F3` with soft ambient radial light blooms.
 
 ## 3. Typography
 - **Headings & Display**: `'Marcellus', serif` (Weight 400, editorial architectural luxury)
