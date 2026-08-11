@@ -90,11 +90,11 @@ const processCards = document.querySelectorAll('.market-lens-card');
 const processSection = document.getElementById('buyers-checklist');
 const processImg = document.getElementById('process-visual-img');
 const stepImages = {
-0: 'style-guide/assets/market_lens_ready_vs_uc.jpg?v=20260811_flush_cache_v19',
-1: 'style-guide/assets/market_lens_builder.jpg?v=20260811_flush_cache_v19',
-2: 'style-guide/assets/market_lens_corridor.jpg?v=20260811_flush_cache_v19',
-3: 'style-guide/assets/market_lens_floor.jpg?v=20260811_flush_cache_v19',
-4: 'style-guide/assets/market_lens_home_inv.jpg?v=20260811_flush_cache_v19'
+0: 'style-guide/assets/market_lens_ready_vs_uc.jpg?v=20260811_flush_cache_v20',
+1: 'style-guide/assets/market_lens_builder.jpg?v=20260811_flush_cache_v20',
+2: 'style-guide/assets/market_lens_corridor.jpg?v=20260811_flush_cache_v20',
+3: 'style-guide/assets/market_lens_floor.jpg?v=20260811_flush_cache_v20',
+4: 'style-guide/assets/market_lens_home_inv.jpg?v=20260811_flush_cache_v20'
 };
 function updateStepVisual(stepIndex) {
 if (!processImg) return;
