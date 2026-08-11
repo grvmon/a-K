@@ -90,11 +90,11 @@ const processCards = document.querySelectorAll('.market-lens-card');
 const processSection = document.getElementById('buyers-checklist');
 const processImg = document.getElementById('process-visual-img');
 const stepImages = {
-0: 'style-guide/assets/acrekey_construction_vs_ready.webp?v=2',
-1: 'style-guide/assets/acrekey_property_comparison_dashboard.webp?v=2',
-2: 'style-guide/assets/acrekey_corridor_growth_map.jpg?v=20260811_testimonialfontfix',
-3: 'style-guide/assets/acrekey_floor_view_comparison.webp?v=2',
-4: 'style-guide/assets/acrekey_investment_analysis.webp?v=2'
+0: 'style-guide/assets/acrekey_construction_vs_ready.webp?v=20260811_image_revert',
+1: 'style-guide/assets/acrekey_property_comparison_dashboard.webp?v=20260811_image_revert',
+2: 'style-guide/assets/acrekey_corridor_growth_map.jpg?v=20260811_image_revert',
+3: 'style-guide/assets/acrekey_floor_view_comparison.webp?v=20260811_image_revert',
+4: 'style-guide/assets/acrekey_investment_analysis.webp?v=20260811_image_revert'
 };
 function updateStepVisual(stepIndex) {
 if (!processImg) return;
