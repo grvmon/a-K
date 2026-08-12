@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan EMI Calculator | AcreNKey</title>
+    <meta name="description" content="Calculate your home loan EMI, total interest and repayment with AcreNKey's simple Home Loan EMI Calculator. Plan your home purchase with greater clarity.">
+    <meta name="keywords" content="home loan EMI calculator, home loan calculator, EMI calculator, housing loan EMI calculator, home loan interest calculator, home loan repayment calculator, home buying calculator">
+    <link rel="canonical" href="https://acrenkey.com/home-loan-emi-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Loan EMI Calculator | AcreNKey">
+    <meta property="og:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260811_flush_cache_v5">
+    <meta property="og:url" content="https://acrenkey.com/home-loan-emi-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Loan EMI Calculator | AcreNKey">
+    <meta name="twitter:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260811_flush_cache_v5">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="icon" href="../style-guide/assets/favicon.svg?v=20260811_flush_cache_v5" type="image/svg+xml">
+    <link rel="stylesheet" href="../website.min.css?v=56">
+    <link rel="stylesheet" href="../lead-form.css?v=20260811_flush_cache_v5">
+    
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Structured Data (JSON-LD) for Financial Calculator -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "AcreNKey Home Loan EMI Calculator",
+      "description": "Independent home loan EMI calculator to estimate monthly EMI, total interest payable, and repayment schedule.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AcreNKey",
+        "url": "https://acrenkey.com/"
+      },
+      "url": "https://acrenkey.com/home-loan-emi-calculator/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://acrenkey.com/#core" },
+        { "@type": "ListItem", "position": 3, "name": "Home Loan EMI Calculator", "item": "https://acrenkey.com/home-loan-emi-calculator/" }
+      ]
+    }
+    </script>
+
+    <style>
+    /* ==========================================================================
+       OFFICIAL ACRE & KEY HOME LOAN EMI CALCULATOR STYLES
+       ========================================================================== */
+    :root {
+      --ak-navy: #182A3D;
+      --ak-navy-dark: #0F1F3D;
+      --ak-gold: #8C6734;
+      --ak-gold-hover: #755428;
+      --ak-ivory: #FBF6F3;
+      --ak-white: #FFFFFF;
+      --ak-slate: #303F4F;
+      --ak-slate-light: #59616B;
+      --ak-divider: #DDD7CF;
+      --ak-border: #E5E7EB;
+      --ak-radius: 12px;
+      --ak-radius-sm: 8px;
+    }
+
+    body {
+      background-color: var(--ak-ivory) !important;
+      color: var(--ak-slate) !important;
+      font-family: 'Manrope', sans-serif !important;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ak-calc-section {
+      padding: 3rem 1.5rem 4rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* Hero Layout Grid (Desktop 40% Left / 60% Right) */
+    .ak-calc-hero-grid {
+      display: grid;
+      grid-template-columns: 38% 58%;
+      gap: 4%;
+      align-items: flex-start;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .ak-calc-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* Left Copy Column */
+    .ak-calc-hero-copy {
+      padding-top: 1rem;
+    }
+
+    .ak-calc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(140, 103, 52, 0.1);
+      color: var(--ak-gold);
+      border: 1px solid rgba(140, 103, 52, 0.25);
+      border-radius: 20px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .ak-calc-h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 2.75rem;
+      font-weight: 400;
+      color: var(--ak-navy);
+      line-height: 1.15;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .ak-calc-h1 {
+        font-size: 2.15rem;
+      }
+    }
+
+    .ak-calc-sub {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ak-navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .ak-calc-desc {
+      font-size: 0.95rem;
+      color: var(--ak-slate-light);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .ak-calc-trust-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .ak-calc-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ak-slate);
+    }
+
+    .ak-calc-trust-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(140, 103, 52, 0.12);
+      color: var(--ak-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Calculator Card (Right Column) */
+    .ak-calc-card {
+      background: var(--ak-white);
+      border: 1px solid var(--ak-divider);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 12px 40px rgba(24, 42, 61, 0.06);
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .ak-calc-card {
+        padding: 1.5rem 1.15rem;
+      }
+    }
+
+    .ak-calc-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #F0F2F5;
+    }
+
+    .ak-calc-card-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+      letter-spacing: 0.5px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .ak-calc-reset-btn {
+      background: none;
+      border: none;
+      color: var(--ak-slate-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .ak-calc-reset-btn:hover {
+      color: var(--ak-gold);
+      background: rgba(140, 103, 52, 0.08);
+    }
+
+    /* Input Field Container */
+    .ak-input-group {
+      margin-bottom: 1.65rem;
+    }
+
+    .ak-input-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .ak-input-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ak-navy);
+    }
+
+    .ak-input-value-display {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+      background: #F9FAFC;
+      border: 1px solid var(--ak-border);
+      border-radius: 8px;
+      padding: 0.35rem 0.75rem;
+      min-width: 130px;
+      text-align: right;
+      box-sizing: border-box;
+    }
+
+    .ak-input-box {
+      width: 100%;
+      border: 1px solid var(--ak-border);
+      border-radius: 8px;
+      padding: 0.65rem 0.85rem;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ak-navy);
+      box-sizing: border-box;
+      transition: border-color 0.2s ease;
+      background: #FDFBF9;
+    }
+
+    .ak-input-box:focus {
+      outline: none;
+      border-color: var(--ak-gold);
+      background: var(--ak-white);
+      box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15);
+    }
+
+    /* Custom Slider Controls */
+    .ak-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #EAEFF5;
+      outline: none;
+      margin-top: 0.65rem;
+      cursor: pointer;
+    }
+
+    .ak-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--ak-gold);
+      border: 3px solid var(--ak-white);
+      box-shadow: 0 2px 8px rgba(24, 42, 61, 0.25);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .ak-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    /* Quick Preset Pills */
+    .ak-pill-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .ak-pill-btn {
+      background: #F4F6F9;
+      border: 1px solid var(--ak-border);
+      border-radius: 20px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ak-slate-light);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ak-pill-btn:hover, .ak-pill-btn.active {
+      background: rgba(140, 103, 52, 0.15);
+      border-color: var(--ak-gold);
+      color: var(--ak-navy);
+      font-weight: 700;
+    }
+
+    /* Read-Only Calculated Field */
+    .ak-readonly-box {
+      background: #F9FAFC;
+      border: 1px dashed var(--ak-border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ak-readonly-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+    }
+
+    .ak-readonly-pct {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ak-gold);
+      background: rgba(140, 103, 52, 0.1);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    /* Validation Inline Error */
+    .ak-input-error {
+      color: #C5221F;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 0.35rem;
+      display: none;
+    }
+
+    .ak-input-error.active {
+      display: block;
+    }
+
+    /* Primary Result Block (EMI Highlight) */
+    .ak-result-box {
+      background: linear-gradient(135deg, #182A3D 0%, #0F1F3D 100%);
+      color: var(--ak-white);
+      border-radius: 12px;
+      padding: 1.65rem;
+      margin: 2rem 0 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(24, 42, 61, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ak-result-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 0.4rem;
+    }
+
+    .ak-result-emi-val {
+      font-family: 'Manrope', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    @media (max-width: 600px) {
+      .ak-result-emi-val {
+        font-size: 2.25rem;
+      }
+    }
+
+    .ak-result-unit {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+
+    /* 3 Summary Metrics Row */
+    .ak-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .ak-summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ak-summary-card {
+      background: #FBF6F3;
+      border: 1px solid var(--ak-divider);
+      border-radius: 8px;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .ak-summary-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--ak-slate-light);
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .ak-summary-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+    }
+
+    /* Donut Chart Section: Where does your money go? */
+    .ak-chart-section {
+      background: var(--ak-white);
+      border: 1px solid var(--ak-divider);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 6px 24px rgba(24, 42, 61, 0.03);
+    }
+
+    .ak-chart-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .ak-chart-title {
+      font-family: 'Marcellus', serif;
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--ak-navy);
+      margin: 0 0 0.35rem 0;
+    }
+
+    .ak-chart-sub {
+      font-size: 0.88rem;
+      color: var(--ak-slate-light);
+      margin: 0;
+    }
+
+    .ak-chart-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .ak-donut-wrapper {
+      position: relative;
+      width: 180px;
+      height: 180px;
+    }
+
+    .ak-chart-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 220px;
+    }
+
+    .ak-legend-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      background: #FBF6F3;
+      border: 1px solid var(--ak-divider);
+    }
+
+    .ak-legend-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .ak-legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .ak-legend-dot.principal { background: var(--ak-navy); }
+    .ak-legend-dot.interest { background: var(--ak-gold); }
+
+    .ak-legend-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ak-navy);
+    }
+
+    .ak-legend-val {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+    }
+
+    /* Amortization Repayment Schedule Table */
+    .ak-schedule-section {
+      background: var(--ak-white);
+      border: 1px solid var(--ak-divider);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 6px 24px rgba(24, 42, 61, 0.03);
+    }
+
+    .ak-table-responsive {
+      overflow-x: auto;
+      margin-top: 1.5rem;
+    }
+
+    .ak-schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .ak-schedule-table th {
+      background: #FBF6F3;
+      color: var(--ak-navy);
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid var(--ak-divider);
+    }
+
+    .ak-schedule-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid #F0F2F5;
+      color: var(--ak-slate);
+      font-weight: 600;
+    }
+
+    .ak-schedule-table tr:hover {
+      background: #FBF6F3;
+    }
+
+    .ak-schedule-toggle-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--ak-divider);
+      border-radius: 8px;
+      padding: 0.65rem 1.25rem;
+      color: var(--ak-navy);
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .ak-schedule-toggle-btn:hover {
+      border-color: var(--ak-gold);
+      color: var(--ak-gold);
+      background: rgba(140, 103, 52, 0.04);
+    }
+
+    /* AcreNKey Conversion CTA Section */
+    .ak-cta-banner {
+      background: linear-gradient(135deg, #182A3D 0%, #0F1F3D 100%);
+      color: var(--ak-white);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 16px 40px rgba(24, 42, 61, 0.15);
+    }
+
+    .ak-cta-h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 2.25rem;
+      font-weight: 400;
+      margin: 0 0 0.85rem 0;
+      color: #FFFFFF;
+    }
+
+    .ak-cta-body {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 680px;
+      margin: 0 auto 1.85rem auto;
+      line-height: 1.6;
+    }
+
+    .ak-cta-primary-btn {
+      background: var(--ak-gold);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 0.95rem 2rem;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(140, 103, 52, 0.3);
+    }
+
+    .ak-cta-primary-btn:hover {
+      background: var(--ak-gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .ak-cta-micro {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Trust Section: 3 Credibility Points */
+    .ak-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 850px) {
+      .ak-trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ak-trust-card {
+      background: var(--ak-white);
+      border: 1px solid var(--ak-divider);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .ak-trust-card-h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--ak-navy);
+      margin: 0 0 0.4rem 0;
+    }
+
+    .ak-trust-card-desc {
+      font-size: 0.88rem;
+      color: var(--ak-slate-light);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Educational SEO Content Section */
+    .ak-seo-content-box {
+      background: var(--ak-white);
+      border: 1px solid var(--ak-divider);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    .ak-seo-h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 1.65rem;
+      color: var(--ak-navy);
+      margin: 1.75rem 0 0.65rem 0;
+      font-weight: 400;
+    }
+
+    .ak-seo-h2:first-child {
+      margin-top: 0;
+    }
+
+    .ak-seo-p {
+      font-size: 0.95rem;
+      color: var(--ak-slate);
+      margin-bottom: 1rem;
+    }
+
+    /* Disclaimer Section */
+    .ak-disclaimer-box {
+      font-size: 0.78rem;
+      color: var(--ak-slate-light);
+      line-height: 1.5;
+      padding: 1rem 0;
+      border-top: 1px solid var(--ak-divider);
+      margin-bottom: 2rem;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a>
+            <ul class="nav-links">
+                <li><a href="/#buyers-checklist">Buyer's Checklist</a></li>
+                <li><a href="/#framework">Decision Framework</a></li>
+                <li><a href="/#core">CORE</a></li>
+                <li><a href="/#testimonials">Testimonials</a></li>
+                <li><a href="/#about-us">About Us</a></li>
+            </ul>
+            <a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav();"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-section">
+        
+        <!-- Breadcrumbs -->
+        <div style="margin-bottom:1.5rem; font-size:0.85rem; color:var(--ak-slate-light);">
+            <a href="/" style="color:var(--ak-slate-light); text-decoration:none;">Home</a> &rarr; 
+            <a href="/#core" style="color:var(--ak-slate-light); text-decoration:none;">Calculators</a> &rarr; 
+            <strong style="color:var(--ak-navy); font-weight:700;">Home Loan EMI Calculator</strong>
+        </div>
+
+        <!-- HERO GRID (40% Left Copy / 60% Right Calculator Card) -->
+        <div class="ak-calc-hero-grid">
+            
+            <!-- LEFT COLUMN: Copy & Trust Points -->
+            <div class="ak-calc-hero-copy">
+                <div class="ak-calc-badge">
+                    <i data-feather="calculator" style="width:14px;height:14px;"></i>
+                    <span>Financial Decision Tool</span>
+                </div>
+                
+                <h1 class="ak-calc-h1">Home Loan EMI Calculator</h1>
+                <div class="ak-calc-sub">Calculate your monthly home loan EMI in seconds.</div>
+                <p class="ak-calc-desc">
+                    See your estimated EMI, total interest and repayment before you commit to a home purchase. Plan with 100% financial clarity.
+                </p>
+
+                <ul class="ak-calc-trust-list">
+                    <li class="ak-calc-trust-item">
+                        <span class="ak-calc-trust-icon">&check;</span>
+                        <span>Standard Reducing-Balance Formula</span>
+                    </li>
+                    <li class="ak-calc-trust-item">
+                        <span class="ak-calc-trust-icon">&check;</span>
+                        <span>Instant Real-Time Recalculation</span>
+                    </li>
+                    <li class="ak-calc-trust-item">
+                        <span class="ak-calc-trust-icon">&check;</span>
+                        <span>Zero Phone Number or Lead Form Required</span>
+                    </li>
+                    <li class="ak-calc-trust-item">
+                        <span class="ak-calc-trust-icon">&check;</span>
+                        <span>100% Independent &amp; Buyer-First</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RIGHT COLUMN: Interactive Calculator Card -->
+            <div class="ak-calc-card">
+                <div class="ak-calc-card-header">
+                    <h2 class="ak-calc-card-title">HOME LOAN EMI CALCULATOR</h2>
+                    <button type="button" class="ak-calc-reset-btn" onclick="resetEmiCalculator();" title="Reset to Defaults">
+                        <i data-feather="rotate-ccw" style="width:13px;height:13px;"></i>
+                        <span>Reset</span>
+                    </button>
+                </div>
+
+                <!-- Input 1: Property Value -->
+                <div class="ak-input-group">
+                    <div class="ak-input-label-row">
+                        <label for="propValueInput" class="ak-input-label">Property Value</label>
+                        <div id="propValueFormatted" class="ak-input-value-display">₹1.50 Cr</div>
+                    </div>
+                    <input type="number" id="propValueInput" class="ak-input-box" value="15000000" min="2000000" max="100000000" step="100000" oninput="onPropertyValueChange(this.value);">
+                    <input type="range" id="propValueSlider" class="ak-slider" value="15000000" min="2000000" max="100000000" step="500000" oninput="onPropertyValueChange(this.value);">
+                    <div class="ak-pill-row">
+                        <button type="button" class="ak-pill-btn" onclick="setPropValue(7500000);">₹75 Lakh</button>
+                        <button type="button" class="ak-pill-btn active" onclick="setPropValue(15000000);">₹1.50 Cr</button>
+                        <button type="button" class="ak-pill-btn" onclick="setPropValue(25000000);">₹2.50 Cr</button>
+                        <button type="button" class="ak-pill-btn" onclick="setPropValue(50000000);">₹5.00 Cr</button>
+                    </div>
+                    <div id="propValueError" class="ak-input-error">Property value must be greater than zero.</div>
+                </div>
+
+                <!-- Input 2: Down Payment -->
+                <div class="ak-input-group">
+                    <div class="ak-input-label-row">
+                        <label for="downPayInput" class="ak-input-label">Down Payment</label>
+                        <div id="downPayFormatted" class="ak-input-value-display">₹30.00 Lakh</div>
+                    </div>
+                    <input type="number" id="downPayInput" class="ak-input-box" value="3000000" min="0" max="100000000" step="50000" oninput="onDownPayChange(this.value);">
+                    <input type="range" id="downPaySlider" class="ak-slider" value="3000000" min="0" max="100000000" step="100000" oninput="onDownPayChange(this.value);">
+                    <div class="ak-pill-row">
+                        <button type="button" class="ak-pill-btn" onclick="setDownPayPct(15);">15%</button>
+                        <button type="button" class="ak-pill-btn active" onclick="setDownPayPct(20);">20%</button>
+                        <button type="button" class="ak-pill-btn" onclick="setDownPayPct(25);">25%</button>
+                        <button type="button" class="ak-pill-btn" onclick="setDownPayPct(30);">30%</button>
+                    </div>
+                    <div id="downPayError" class="ak-input-error">Down payment cannot be higher than the property value.</div>
+                </div>
+
+                <!-- Input 3: Read-Only Loan Amount -->
+                <div class="ak-input-group">
+                    <div class="ak-input-label-row">
+                        <span class="ak-input-label">Calculated Loan Amount</span>
+                    </div>
+                    <div class="ak-readonly-box">
+                        <span id="loanAmountFormatted" class="ak-readonly-val">₹1,20,00,000</span>
+                        <span id="loanAmountPct" class="ak-readonly-pct">80% of property value</span>
+                    </div>
+                </div>
+
+                <!-- Input 4: Interest Rate -->
+                <div class="ak-input-group">
+                    <div class="ak-input-label-row">
+                        <label for="interestInput" class="ak-input-label">Interest Rate (p.a.)</label>
+                        <div id="interestFormatted" class="ak-input-value-display">8.5% p.a.</div>
+                    </div>
+                    <input type="number" id="interestInput" class="ak-input-box" value="8.5" min="6.0" max="15.0" step="0.1" oninput="onInterestChange(this.value);">
+                    <input type="range" id="interestSlider" class="ak-slider" value="8.5" min="6.0" max="15.0" step="0.1" oninput="onInterestChange(this.value);">
+                    <div class="ak-pill-row">
+                        <button type="button" class="ak-pill-btn" onclick="setInterestRate(8.0);">8.0%</button>
+                        <button type="button" class="ak-pill-btn active" onclick="setInterestRate(8.5);">8.5%</button>
+                        <button type="button" class="ak-pill-btn" onclick="setInterestRate(9.0);">9.0%</button>
+                        <button type="button" class="ak-pill-btn" onclick="setInterestRate(9.5);">9.5%</button>
+                    </div>
+                </div>
+
+                <!-- Input 5: Loan Tenure -->
+                <div class="ak-input-group">
+                    <div class="ak-input-label-row">
+                        <label for="tenureInput" class="ak-input-label">Loan Tenure</label>
+                        <div id="tenureFormatted" class="ak-input-value-display">20 Years</div>
+                    </div>
+                    <input type="number" id="tenureInput" class="ak-input-box" value="20" min="5" max="30" step="1" oninput="onTenureChange(this.value);">
+                    <input type="range" id="tenureSlider" class="ak-slider" value="20" min="5" max="30" step="1" oninput="onTenureChange(this.value);">
+                    <div class="ak-pill-row">
+                        <button type="button" class="ak-pill-btn" onclick="setTenureYears(10);">10 Yrs</button>
+                        <button type="button" class="ak-pill-btn" onclick="setTenureYears(15);">15 Yrs</button>
+                        <button type="button" class="ak-pill-btn active" onclick="setTenureYears(20);">20 Yrs</button>
+                        <button type="button" class="ak-pill-btn" onclick="setTenureYears(25);">25 Yrs</button>
+                        <button type="button" class="ak-pill-btn" onclick="setTenureYears(30);">30 Yrs</button>
+                    </div>
+                </div>
+
+                <!-- PRIMARY RESULT: ESTIMATED MONTHLY EMI -->
+                <div class="ak-result-box">
+                    <div class="ak-result-title">Estimated Monthly EMI</div>
+                    <div id="emiResultDisplay" class="ak-result-emi-val">₹1,04,170</div>
+                    <div class="ak-result-unit">per month</div>
+                </div>
+
+                <!-- 3 SUMMARY METRICS ROW -->
+                <div class="ak-summary-grid">
+                    <div class="ak-summary-card">
+                        <div class="ak-summary-label">Loan Amount</div>
+                        <div id="summaryLoanVal" class="ak-summary-val">₹1.20 Cr</div>
+                    </div>
+                    <div class="ak-summary-card">
+                        <div class="ak-summary-label">Total Interest</div>
+                        <div id="summaryInterestVal" class="ak-summary-val">₹1.30 Cr</div>
+                    </div>
+                    <div class="ak-summary-card">
+                        <div class="ak-summary-label">Total Repayment</div>
+                        <div id="summaryRepayVal" class="ak-summary-val">₹2.50 Cr</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PRINCIPAL VS INTEREST SECTION (Where does your money go?) -->
+        <section class="ak-chart-section">
+            <div class="ak-chart-header">
+                <h2 class="ak-chart-title">Where does your money go?</h2>
+                <p class="ak-chart-sub">Visualizing the total breakdown between your principal loan amount and cumulative interest payable over the tenure.</p>
+            </div>
+
+            <div class="ak-chart-flex">
+                <!-- SVG Donut Chart -->
+                <div class="ak-donut-wrapper">
+                    <svg viewBox="0 0 36 36" class="ak-donut-svg" style="width:100%; height:100%; transform:rotate(-90deg);">
+                        <!-- Background Circle -->
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#EAEFF5" stroke-width="4" />
+                        <!-- Interest Arc (Gold) -->
+                        <path id="chartInterestArc" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#8C6734" stroke-width="4" stroke-dasharray="52, 100" stroke-dashoffset="0" style="transition: stroke-dasharray 0.3s ease;" />
+                        <!-- Principal Arc (Navy) -->
+                        <path id="chartPrincipalArc" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#182A3D" stroke-width="4" stroke-dasharray="48, 100" stroke-dashoffset="-52" style="transition: stroke-dasharray 0.3s ease;" />
+                    </svg>
+                </div>
+
+                <!-- Legend Cards -->
+                <div class="ak-chart-legend">
+                    <div class="ak-legend-item">
+                        <div class="ak-legend-left">
+                            <div class="ak-legend-dot principal"></div>
+                            <span class="ak-legend-name">Principal Loan</span>
+                        </div>
+                        <span id="legendPrincipalVal" class="ak-legend-val">₹1.20 Cr</span>
+                    </div>
+
+                    <div class="ak-legend-item">
+                        <div class="ak-legend-left">
+                            <div class="ak-legend-dot interest"></div>
+                            <span class="ak-legend-name">Total Interest</span>
+                        </div>
+                        <span id="legendInterestVal" class="ak-legend-val">₹1.30 Cr</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REPAYMENT AMORTIZATION SCHEDULE SECTION -->
+        <section class="ak-schedule-section">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+                <div>
+                    <h2 class="ak-chart-title">Loan Repayment Schedule</h2>
+                    <p class="ak-chart-sub">See how your principal and interest change over the life of your loan.</p>
+                </div>
+            </div>
+
+            <div class="ak-table-responsive">
+                <table class="ak-schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th style="text-align:right;">Principal Paid</th>
+                            <th style="text-align:right;">Interest Paid</th>
+                            <th style="text-align:right;">Remaining Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="amortizationTableBody">
+                        <!-- Dynamically populated rows -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align:center;">
+                <button type="button" id="toggleScheduleBtn" class="ak-schedule-toggle-btn" onclick="toggleFullSchedule();">
+                    <i data-feather="chevron-down" style="width:16px;height:16px;"></i>
+                    <span id="toggleScheduleText">View Full Amortization Schedule</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ACRENKEY CONVERSION CTA BANNER -->
+        <section class="ak-cta-banner">
+            <h2 class="ak-cta-h2">Know what you can comfortably afford?</h2>
+            <p class="ak-cta-body">
+                Your EMI is only one part of buying a home. AcreNKey helps you evaluate the property, builder, location and overall purchase before you commit.
+            </p>
+            <a href="/#footer" class="ak-cta-primary-btn" onclick="trackCtaClick();">
+                <i data-feather="compass" style="width:18px;height:18px;"></i>
+                <span>Find the right home for your budget</span>
+            </a>
+            <div class="ak-cta-micro">Home Buyer Concierge &middot; ₹0 buyer advisory fee</div>
+        </section>
+
+        <!-- TRUST SECTION (More than an EMI calculation) -->
+        <section class="ak-trust-grid">
+            <div class="ak-trust-card">
+                <h3 class="ak-trust-card-h3">Buyer-first advice</h3>
+                <p class="ak-trust-card-desc">We represent the homebuyer, not the builder or loan distributor.</p>
+            </div>
+
+            <div class="ak-trust-card">
+                <h3 class="ak-trust-card-h3">62+ Due Diligence Checks</h3>
+                <p class="ak-trust-card-desc">We help uncover legal, structural, and builder risks before you commit.</p>
+            </div>
+
+            <div class="ak-trust-card">
+                <h3 class="ak-trust-card-h3">Negotiation Support</h3>
+                <p class="ak-trust-card-desc">We help you negotiate price, payment schedules, and purchase terms.</p>
+            </div>
+        </section>
+
+        <!-- EDUCATIONAL SEO CONTENT SECTION -->
+        <section class="ak-seo-content-box">
+            <h2 class="ak-seo-h2">How is home loan EMI calculated?</h2>
+            <p class="ak-seo-p">
+                Home loan EMI (Equated Monthly Instalment) is calculated using the standard reducing-balance formula:
+            </p>
+            <div style="background:#F9FAFC; padding:1rem 1.25rem; border-left:4px solid var(--ak-gold); margin-bottom:1.25rem; font-family:monospace; font-size:0.95rem;">
+                EMI = P &times; r &times; (1+r)^n / ((1+r)^n &minus; 1)
+            </div>
+            <p class="ak-seo-p">
+                Where <strong>P</strong> is the principal loan amount (Property Value minus Down Payment), <strong>r</strong> is the monthly interest rate (Annual Rate &divide; 12 &divide; 100), and <strong>n</strong> is the total number of monthly instalments (Tenure in Years &times; 12).
+            </p>
+
+            <h2 class="ak-seo-h2">What affects your home loan EMI?</h2>
+            <p class="ak-seo-p">
+                Four primary variables govern your monthly outflow:
+            </p>
+            <ul style="color:var(--ak-slate); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">
+                <li><strong>Loan Amount:</strong> Higher borrowing directly increases your monthly EMI.</li>
+                <li><strong>Interest Rate:</strong> Even a 0.25% shift in annual rate creates significant compound interest differences over 20 years.</li>
+                <li><strong>Loan Tenure:</strong> Longer tenures reduce monthly EMI but substantially increase total interest payable.</li>
+                <li><strong>Down Payment:</strong> Paying a higher upfront down payment lowers your principal loan requirement and overall interest burden.</li>
+            </ul>
+
+            <h2 class="ak-seo-h2">Does a longer loan tenure reduce EMI?</h2>
+            <p class="ak-seo-p">
+                Yes, opting for a 25 or 30-year tenure lowers your monthly payment compared to a 15-year tenure. However, this comes with a tradeoff: you will pay significantly more cumulative interest over the loan duration.
+            </p>
+
+            <h2 class="ak-seo-h2">Should you focus only on the EMI?</h2>
+            <p class="ak-seo-p">
+                Prudent homebuyers evaluate total cost of ownership rather than monthly EMI alone. Consider statutory registration costs (approx. 5.6% to 6.6% in Karnataka), builder maintenance deposits, interior costs, interest rate fluctuations on floating loans, and emergency liquidity reserves.
+            </p>
+        </section>
+
+        <!-- DISCLAIMER BOX -->
+        <div class="ak-disclaimer-box">
+            <strong>Disclaimer:</strong> EMI calculations are indicative and based on the information entered. Actual loan terms, interest rates, eligibility, processing fees and repayment amounts may vary by lender and borrower profile. This calculator does not constitute financial advice or a formal loan offer.
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-bottom-bar" style="border-top: none; padding-top: 10px;">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</span>
+                    <span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">
+                        Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->
+    <script>
+    var isFullScheduleExpanded = false;
+
+    // Helper: Indian Currency Formatter (e.g. 15000000 -> ₹1.50 Cr, 104170 -> ₹1,04,170)
+    function formatRupees(amount) {
+        if (isNaN(amount) || amount === null) return '₹0';
+        return '₹' + Math.round(amount).toLocaleString('en-IN');
+    }
+
+    function formatRupeesCompact(amount) {
+        if (isNaN(amount)) return '₹0';
+        if (amount >= 10000000) {
+            var cr = amount / 10000000;
+            return '₹' + (cr % 1 === 0 ? cr.toFixed(0) : cr.toFixed(2)) + ' Cr';
+        } else if (amount >= 100000) {
+            var lakh = amount / 100000;
+            return '₹' + (lakh % 1 === 0 ? lakh.toFixed(0) : lakh.toFixed(2)) + ' Lakh';
+        }
+        return '₹' + Math.round(amount).toLocaleString('en-IN');
+    }
+
+    // Analytics Hook
+    function trackEmiEvent(eventName, payload) {
+        if (typeof window.trackEvent === 'function') {
+            window.trackEvent(eventName, payload);
+        } else {
+            console.log('[Analytics Event]', eventName, payload);
+        }
+    }
+
+    function calculateEmiEngine() {
+        var propVal = parseFloat(document.getElementById('propValueInput').value) || 0;
+        var downPay = parseFloat(document.getElementById('downPayInput').value) || 0;
+        var annualRate = parseFloat(document.getElementById('interestInput').value) || 0;
+        var tenureYears = parseInt(document.getElementById('tenureInput').value) || 0;
+
+        // Validation UI
+        var propError = document.getElementById('propValueError');
+        var downError = document.getElementById('downPayError');
+
+        if (propVal <= 0) {
+            propError.classList.add('active');
+        } else {
+            propError.classList.remove('active');
+        }
+
+        if (downPay > propVal) {
+            downError.classList.add('active');
+        } else {
+            downError.classList.remove('active');
+        }
+
+        // Calculated Loan Amount
+        var loanAmount = Math.max(0, propVal - downPay);
+        var loanPct = propVal > 0 ? Math.round((loanAmount / propVal) * 100) : 0;
+
+        document.getElementById('loanAmountFormatted').textContent = formatRupees(loanAmount);
+        document.getElementById('loanAmountPct').textContent = loanPct + '% of property value';
+
+        // EMI Calculation Formula
+        var monthlyRate = annualRate / 12 / 100;
+        var totalMonths = tenureYears * 12;
+
+        var emi = 0;
+        if (loanAmount > 0 && monthlyRate > 0 && totalMonths > 0) {
+            var factor = Math.pow(1 + monthlyRate, totalMonths);
+            emi = (loanAmount * monthlyRate * factor) / (factor - 1);
+        }
+
+        var totalRepayment = emi * totalMonths;
+        var totalInterest = Math.max(0, totalRepayment - loanAmount);
+
+        // Update Primary Result UI
+        document.getElementById('emiResultDisplay').textContent = formatRupees(emi);
+
+        // Update Summary Grid
+        document.getElementById('summaryLoanVal').textContent = formatRupeesCompact(loanAmount);
+        document.getElementById('summaryInterestVal').textContent = formatRupeesCompact(totalInterest);
+        document.getElementById('summaryRepayVal').textContent = formatRupeesCompact(totalRepayment);
+
+        // Update Donut Chart
+        updateDonutChart(loanAmount, totalInterest);
+
+        // Update Amortization Schedule Table
+        updateAmortizationTable(loanAmount, monthlyRate, totalMonths, emi);
+    }
+
+    function updateDonutChart(principal, interest) {
+        var total = principal + interest;
+        var principalPct = total > 0 ? (principal / total) * 100 : 50;
+        var interestPct = total > 0 ? (interest / total) * 100 : 50;
+
+        document.getElementById('legendPrincipalVal').textContent = formatRupeesCompact(principal);
+        document.getElementById('legendInterestVal').textContent = formatRupeesCompact(interest);
+
+        var pArc = document.getElementById('chartPrincipalArc');
+        var iArc = document.getElementById('chartInterestArc');
+
+        if (pArc && iArc) {
+            iArc.setAttribute('stroke-dasharray', interestPct.toFixed(1) + ', 100');
+            pArc.setAttribute('stroke-dasharray', principalPct.toFixed(1) + ', 100');
+            pArc.setAttribute('stroke-dashoffset', '-' + interestPct.toFixed(1));
+        }
+    }
+
+    function updateAmortizationTable(principal, monthlyRate, totalMonths, emi) {
+        var tbody = document.getElementById('amortizationTableBody');
+        if (!tbody) return;
+
+        tbody.innerHTML = '';
+        var currentBalance = principal;
+        var totalYears = Math.ceil(totalMonths / 12);
+
+        var yearSummary = [];
+
+        for (var year = 1; year <= totalYears; year++) {
+            var yearlyPrincipal = 0;
+            var yearlyInterest = 0;
+
+            for (var m = 1; m <= 12; m++) {
+                if (currentBalance <= 0) break;
+                var interestForMonth = currentBalance * monthlyRate;
+                var principalForMonth = Math.min(currentBalance, emi - interestForMonth);
+                
+                yearlyInterest += interestForMonth;
+                yearlyPrincipal += principalForMonth;
+                currentBalance = Math.max(0, currentBalance - principalForMonth);
+            }
+
+            yearSummary.push({
+                year: year,
+                principalPaid: yearlyPrincipal,
+                interestPaid: yearlyInterest,
+                remainingBalance: currentBalance
+            });
+        }
+
+        var rowsToShow = isFullScheduleExpanded ? yearSummary : yearSummary.filter(function(y) {
+            return y.year === 1 || y.year % 5 === 0 || y.year === totalYears;
+        });
+
+        rowsToShow.forEach(function(item) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>Year ' + item.year + '</td>' +
+                '<td style="text-align:right;">' + formatRupeesCompact(item.principalPaid) + '</td>' +
+                '<td style="text-align:right;">' + formatRupeesCompact(item.interestPaid) + '</td>' +
+                '<td style="text-align:right; font-weight:800; color:var(--ak-navy);">' + formatRupeesCompact(item.remainingBalance) + '</td>';
+            tbody.appendChild(tr);
+        });
+    }
+
+    function toggleFullSchedule() {
+        isFullScheduleExpanded = !isFullScheduleExpanded;
+        var btnText = document.getElementById('toggleScheduleText');
+        if (btnText) {
+            btnText.textContent = isFullScheduleExpanded ? 'Show Key Milestone Years Only' : 'View Full Amortization Schedule';
+        }
+        calculateEmiEngine();
+        trackEmiEvent('full_schedule_opened', { expanded: isFullScheduleExpanded });
+    }
+
+    // Input Controllers
+    function onPropertyValueChange(val) {
+        val = parseFloat(val) || 0;
+        document.getElementById('propValueInput').value = val;
+        document.getElementById('propValueSlider').value = val;
+        document.getElementById('propValueFormatted').textContent = formatRupeesCompact(val);
+        calculateEmiEngine();
+        trackEmiEvent('property_value_changed', { value: val });
+    }
+
+    function setPropValue(val) {
+        onPropertyValueChange(val);
+    }
+
+    function onDownPayChange(val) {
+        val = parseFloat(val) || 0;
+        document.getElementById('downPayInput').value = val;
+        document.getElementById('downPaySlider').value = val;
+        document.getElementById('downPayFormatted').textContent = formatRupeesCompact(val);
+        calculateEmiEngine();
+        trackEmiEvent('down_payment_changed', { value: val });
+    }
+
+    function setDownPayPct(pct) {
+        var propVal = parseFloat(document.getElementById('propValueInput').value) || 0;
+        var downVal = Math.round((propVal * pct) / 100);
+        onDownPayChange(downVal);
+    }
+
+    function onInterestChange(val) {
+        val = parseFloat(val) || 0;
+        document.getElementById('interestInput').value = val;
+        document.getElementById('interestSlider').value = val;
+        document.getElementById('interestFormatted').textContent = val.toFixed(1) + '% p.a.';
+        calculateEmiEngine();
+        trackEmiEvent('interest_rate_changed', { value: val });
+    }
+
+    function setInterestRate(val) {
+        onInterestChange(val);
+    }
+
+    function onTenureChange(val) {
+        val = parseInt(val) || 0;
+        document.getElementById('tenureInput').value = val;
+        document.getElementById('tenureSlider').value = val;
+        document.getElementById('tenureFormatted').textContent = val + ' Years';
+        calculateEmiEngine();
+        trackEmiEvent('loan_tenure_changed', { value: val });
+    }
+
+    function setTenureYears(val) {
+        onTenureChange(val);
+    }
+
+    function resetEmiCalculator() {
+        setPropValue(15000000);
+        setDownPayPct(20);
+        setInterestRate(8.5);
+        setTenureYears(20);
+        trackEmiEvent('reset_calculator', {});
+    }
+
+    function trackCtaClick() {
+        trackEmiEvent('advisor_cta_clicked', {});
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        calculateEmiEngine();
+        if (window.feather) window.feather.replace();
+        trackEmiEvent('emi_calculator_loaded', {});
+    });
+    </script>
+</body>
+</html>
