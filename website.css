@@ -428,15 +428,30 @@ body.page-404 .error-404-section{
 }
 
 /* --- ALIGNMENT FIX --- */
-.hero-content > * {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    text-align: left !important;
+@media (min-width: 992px) {
+    .hero-content > * {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+    }
+    .hero-trust-bar {
+        justify-content: flex-start !important;
+    }
+    .hero-trust-bar .trust-item {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
 }
-.hero-trust-bar {
-    justify-content: flex-start !important;
-}
-.hero-trust-bar .trust-item {
-    align-items: flex-start !important;
-    text-align: left !important;
+@media (max-width: 991px) {
+    .hero-content > * {
+        text-align: center !important;
+        align-items: center !important;
+    }
+    .hero-trust-bar {
+        justify-content: center !important;
+    }
+    .hero-trust-bar .trust-item {
+        align-items: center !important;
+        text-align: center !important;
+    }
 }
