@@ -917,12 +917,12 @@
                             Interest Rate (p.a.)
                         </div>
                         <div class="ak-new-input-box-wrapper">
-                            <input type="text" id="interestInputNew" class="ak-new-input has-suffix" value="8.50" onchange="onInterestChangeInput(this.value)">
+                            <input type="text" id="interestInputNew" class="ak-new-input has-suffix" value="7.12" onchange="onInterestChangeInput(this.value)">
                             <span class="suffix">%</span>
                         </div>
                     </div>
                     <div class="ak-new-slider-container">
-                        <input type="range" id="interestSliderNew" class="ak-new-slider" min="6.0" max="12.0" step="0.1" value="8.5" oninput="onInterestChangeSlider(this.value)">
+                        <input type="range" id="interestSliderNew" class="ak-new-slider" min="6.0" max="12.0" step="0.01" value="7.12" oninput="onInterestChangeSlider(this.value)">
                     </div>
                     <div class="ak-slider-labels">
                         <span>6%</span>
@@ -1125,7 +1125,7 @@
     var state = {
         propVal: 10000000,
         downPct: 20,
-        interest: 8.5,
+        interest: 7.12,
         tenure: 20
     };
 
@@ -1261,7 +1261,7 @@
     }
     function onInterestChangeInput(val) {
         var num = parseFloat(val.replace('%', ''));
-        if (isNaN(num)) num = 8.5;
+        if (isNaN(num)) num = 7.12;
         if (num < 1) num = 1;
         if (num > 20) num = 20;
         state.interest = num;
