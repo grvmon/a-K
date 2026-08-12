@@ -1,78 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Loan EMI Calculator | AcreNKey</title>
-    <meta name="description" content="Calculate your home loan EMI, total interest and repayment with AcreNKey's simple Home Loan EMI Calculator. Plan your home purchase with greater clarity.">
-    <meta name="keywords" content="home loan EMI calculator, home loan calculator, EMI calculator, housing loan EMI calculator, home loan interest calculator, home loan repayment calculator, home buying calculator">
-    <link rel="canonical" href="https://acrenkey.com/home-loan-emi-calculator/">
+import os
+import re
 
-    <!-- Open Graph (OG) Social Sharing Metadata -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Home Loan EMI Calculator | AcreNKey">
-    <meta property="og:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v6">
-    <meta property="og:url" content="https://acrenkey.com/home-loan-emi-calculator/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home Loan EMI Calculator | AcreNKey">
-    <meta name="twitter:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v6">
+file_path = "/Users/patidar/Desktop/AnK website/home-loan-emi-calculator/index.html"
 
-    <!-- Favicon & Stylesheets -->
-    <link rel="icon" href="../style-guide/assets/favicon.svg?v=20260812_flush_cache_v6" type="image/svg+xml">
-    
-    <link rel="stylesheet" href="../style-guide/assets/fonts/fontawesome/all.css?v=20260812_flush_cache_v6" media="print" onload="this.media='all'">
-    <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=20260812_flush_cache_v6" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=20260812_flush_cache_v6" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=20260812_flush_cache_v6" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=20260812_flush_cache_v6" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=20260812_flush_cache_v6" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap">
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-    <link rel="stylesheet" href="../website.min.css?v=57">
-    <link rel="stylesheet" href="../lead-form.css?v=20260812_flush_cache_v6">
-    
-    <!-- Feather Icons -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+# We want to replace everything between <style> and </style>
+# And everything between <main class="ak-calc-section"> and </main>
+# And everything between <script> and </script> (the EMI engine script)
 
-    <!-- Structured Data (JSON-LD) for Financial Calculator -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FinancialProduct",
-      "name": "AcreNKey Home Loan EMI Calculator",
-      "description": "Independent home loan EMI calculator to estimate monthly EMI, total interest payable, and repayment schedule.",
-      "provider": {
-        "@type": "Organization",
-        "name": "AcreNKey",
-        "url": "https://acrenkey.com/"
-      },
-      "url": "https://acrenkey.com/home-loan-emi-calculator/"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://acrenkey.com/#core" },
-        { "@type": "ListItem", "position": 3, "name": "Home Loan EMI Calculator", "item": "https://acrenkey.com/home-loan-emi-calculator/" }
-      ]
-    }
-    </script>
-
-    <style>
-    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased}
-
+css_new = """
     /* --- NEW CALCULATOR CSS --- */
+    body {
+        background-color: #F8F9FA;
+    }
     
     .ak-calc-wrapper {
-        max-width: 1280px;
+        max-width: 1200px;
         margin: 140px auto 4rem auto;
-        padding: 0 2rem;
-        font-family: var(--font-body);
+        padding: 0 1.5rem;
+        font-family: 'Manrope', sans-serif;
     }
 
     /* Header Row */
@@ -86,26 +34,23 @@
     }
 
     .ak-calc-header-left .ak-calc-h1 {
-        font-family: var(--font-heading);
-        font-size: clamp(20px, 6vw, 30px);
-        line-height: 1.04em;
-        color: var(--deep-navy);
+        font-family: 'Marcellus', serif;
+        font-size: clamp(28px, 4vw, 42px);
+        color: var(--ak-navy);
         margin: 0 0 0.5rem 0;
         font-weight: 400;
         letter-spacing: -0.02em;
     }
 
     .ak-calc-sub-text {
-        font-size: 18px;
-        line-height: 1.85rem;
-        color: var(--deep-slate);
+        font-size: 1.1rem;
+        color: var(--ak-slate);
         margin: 0 0 0.25rem 0;
-        font-weight: 200;
     }
 
     .ak-calc-kicker {
         font-size: 1.05rem;
-        color: var(--refined-brass);
+        color: var(--ak-gold);
         font-weight: 600;
         margin: 0;
     }
@@ -113,29 +58,30 @@
     .ak-trust-badge-header {
         display: flex;
         align-items: center;
-        background: var(--warm-ivory);
+        background: #FDF9F3;
         border: 1px solid rgba(140, 103, 52, 0.2);
         padding: 1rem 1.5rem;
-        border-radius: 8px;
+        border-radius: 12px;
         gap: 1rem;
     }
 
-    .ak-trust-badge-icon .material-symbols-outlined { font-size: 32px; color: var(--refined-brass); } /*
+    .ak-trust-badge-icon svg {
         width: 32px;
         height: 32px;
-        color: var(--refined-brass);
-        */
+        stroke: var(--ak-gold);
+        fill: rgba(140, 103, 52, 0.1);
+    }
 
     .ak-trust-badge-title {
         font-weight: 800;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         font-size: 0.95rem;
         margin-bottom: 0.2rem;
     }
 
     .ak-trust-badge-sub {
         font-size: 0.85rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
     }
 
     /* Main Grid */
@@ -156,7 +102,7 @@
     .ak-calc-left-panel {
         background: #FFFFFF;
         border: 1px solid #EAEFF5;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 2rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     }
@@ -171,14 +117,14 @@
     .ak-panel-header h2 {
         font-size: 1.15rem;
         font-weight: 800;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         margin: 0;
     }
 
-    .ak-panel-header .material-symbols-outlined {
+    .ak-panel-header svg {
         width: 20px;
         height: 20px;
-        color: var(--refined-brass);
+        stroke: var(--ak-gold);
     }
 
     /* Input Rows */
@@ -199,21 +145,14 @@
         gap: 0.5rem;
         font-size: 0.9rem;
         font-weight: 700;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
     }
 
-    .ak-new-input-label .material-symbols-outlined {
-        font-size: 22px;
-        color: var(--deep-navy-100);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .ak-new-input-label .material-symbols-outlined:last-child {
-        font-size: 18px;
-        color: var(--muted-slate);
+    .ak-new-input-label svg {
+        width: 16px;
+        height: 16px;
+        stroke: var(--ak-slate-light);
         cursor: help;
-        margin-left: 2px;
     }
 
     .ak-new-input-box-wrapper {
@@ -227,7 +166,7 @@
         top: 50%;
         transform: translateY(-50%);
         font-weight: 600;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
     }
 
     .ak-new-input-box-wrapper .suffix {
@@ -236,7 +175,7 @@
         top: 50%;
         transform: translateY(-50%);
         font-weight: 600;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
     }
 
     .ak-new-input {
@@ -244,10 +183,10 @@
         border: 1px solid #EAEFF5;
         border-radius: 8px;
         padding: 0.6rem 1rem;
-        font-family: var(--font-body);
+        font-family: 'Manrope', sans-serif;
         font-size: 0.95rem;
         font-weight: 700;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         box-sizing: border-box;
         text-align: right;
     }
@@ -257,7 +196,7 @@
     
     .ak-new-input:focus {
         outline: none;
-        border-color: var(--refined-brass);
+        border-color: var(--ak-gold);
         box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.1);
     }
 
@@ -290,7 +229,7 @@
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        background: var(--refined-brass);
+        background: var(--ak-gold);
         border: 3px solid #FFF;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         cursor: pointer;
@@ -301,7 +240,7 @@
         top: 0;
         left: 8px;
         height: 4px;
-        background: var(--refined-brass);
+        background: var(--ak-gold);
         border-radius: 2px;
         pointer-events: none;
         z-index: 1;
@@ -311,19 +250,19 @@
         display: flex;
         justify-content: space-between;
         font-size: 0.75rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
         margin-top: 0.5rem;
         font-weight: 600;
     }
 
     .ak-calc-emi-btn {
         width: 100%;
-        background: var(--deep-navy-100);
+        background: #182A3D;
         color: #FFF;
         border: none;
         border-radius: 8px;
         padding: 1rem;
-        font-family: var(--font-body);
+        font-family: 'Manrope', sans-serif;
         font-size: 1.05rem;
         font-weight: 700;
         cursor: pointer;
@@ -345,14 +284,14 @@
         justify-content: center;
         gap: 0.4rem;
         font-size: 0.8rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
         margin-top: 1rem;
     }
 
     /* Right Panel (Dark) */
     .ak-calc-right-panel {
-        background: var(--deep-navy-100);
-        border-radius: 8px;
+        background: #1E232B;
+        border-radius: 16px;
         padding: 2.5rem;
         color: #FFF;
         display: flex;
@@ -374,9 +313,9 @@
     }
 
     .ak-emi-huge {
-        font-family: var(--font-heading);
+        font-family: 'Marcellus', serif;
         font-size: 3.5rem;
-        color: var(--refined-brass);
+        color: var(--ak-gold);
         line-height: 1;
     }
 
@@ -500,8 +439,8 @@
         border-radius: 2px;
     }
 
-    .ak-legend-dot-new.principal { background: var(--refined-brass); }
-    .ak-legend-dot-new.interest { background: var(--highlight-gold); }
+    .ak-legend-dot-new.principal { background: #D4AF37; }
+    .ak-legend-dot-new.interest { background: #8B6508; }
 
     .ak-legend-val-new {
         font-size: 1rem;
@@ -536,7 +475,7 @@
     }
 
     .ak-bar-principal {
-        background: var(--refined-brass);
+        background: #D4AF37;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -547,7 +486,7 @@
     }
 
     .ak-bar-interest {
-        background: var(--highlight-gold);
+        background: #8B6508;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -575,7 +514,7 @@
     .ak-fcard {
         background: #FFF;
         border: 1px solid #EAEFF5;
-        border-radius: 8px;
+        border-radius: 12px;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -588,23 +527,24 @@
         margin-bottom: 1rem;
     }
     
-    .ak-fcard-icon .material-symbols-outlined { font-size: 40px; } /*
-        */
-    .ak-fcard-icon.green .material-symbols-outlined { color: #2ECC71; }
-    .ak-fcard-icon.purple .material-symbols-outlined { color: #9B59B6; }
-    .ak-fcard-icon.blue .material-symbols-outlined { color: #3498DB; }
-    .ak-fcard-icon.orange .material-symbols-outlined { color: #E67E22; }
+    .ak-fcard-icon svg {
+        width: 100%; height: 100%;
+    }
+    .ak-fcard-icon.green svg { stroke: #2ECC71; }
+    .ak-fcard-icon.purple svg { stroke: #9B59B6; }
+    .ak-fcard-icon.blue svg { stroke: #3498DB; }
+    .ak-fcard-icon.orange svg { stroke: #E67E22; }
 
     .ak-fcard-title {
         font-size: 1rem;
         font-weight: 800;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         margin-bottom: 0.5rem;
     }
 
     .ak-fcard-desc {
         font-size: 0.85rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
         margin-bottom: 1.5rem;
         line-height: 1.5;
         flex-grow: 1;
@@ -625,9 +565,9 @@
 
     /* True Cost Section */
     .ak-true-cost-strip {
-        background: var(--warm-ivory);
+        background: #FDF9F3;
         border: 1px solid rgba(140, 103, 52, 0.2);
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 2rem;
     }
 
@@ -636,17 +576,14 @@
     }
 
     .ak-tc-title {
-        font-family: var(--font-heading);
-        font-size: clamp(20px, 6vw, 30px);
-        color: var(--deep-navy);
+        font-family: 'Marcellus', serif;
+        font-size: 1.6rem;
+        color: var(--ak-navy);
         margin: 0 0 0.2rem 0;
-        line-height: 1.04em;
-        letter-spacing: -0.02em;
-        font-weight: 400;
     }
     .ak-tc-sub {
         font-size: 0.9rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
     }
 
     .ak-tc-math-row {
@@ -672,10 +609,10 @@
         align-items: center;
         justify-content: center;
     }
-    .ak-tc-icon-box .material-symbols-outlined {
+    .ak-tc-icon-box svg {
         width: 24px;
         height: 24px;
-        color: var(--refined-brass);
+        stroke: var(--ak-gold);
     }
 
     .ak-tc-text {
@@ -685,25 +622,25 @@
     }
     .ak-tc-label {
         font-size: 0.8rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
         font-weight: 600;
     }
     .ak-tc-val {
         font-size: 1.1rem;
         font-weight: 800;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
     }
 
     .ak-tc-operator {
         font-size: 1.5rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
         font-weight: 400;
     }
 
     .ak-tc-result-box {
         background: #F7EAD7;
-        border: 1px solid var(--refined-brass);
-        border-radius: 8px;
+        border: 1px solid var(--ak-gold);
+        border-radius: 12px;
         padding: 1.25rem;
         text-align: center;
         min-width: 200px;
@@ -712,46 +649,41 @@
     .ak-tc-result-label {
         font-size: 0.9rem;
         font-weight: 700;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         margin-bottom: 0.4rem;
     }
     .ak-tc-result-val {
         font-size: 1.75rem;
         font-weight: 800;
-        color: var(--deep-navy-100);
+        color: var(--ak-navy);
         margin-bottom: 0.2rem;
     }
     .ak-tc-result-sub {
         font-size: 0.75rem;
-        color: var(--muted-slate);
+        color: var(--ak-slate-light);
     }
-</style>
-</head>
-<body>
+"""
 
-    <!-- Header Navigation -->
-    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Buyer's Checklist</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#1E2432 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Buyer's Checklist</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
-
-    <!-- Main Calculator Page Section -->
-    
+html_new = """
     <main class="ak-calc-wrapper">
-        <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
-            <ol class="page-breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li><span class="separator">›</span></li>
-                <li><a href="/#core">Calculators</a></li>
-                <li><span class="separator">›</span></li>
-                <li class="current" aria-current="page">Home Loan EMI Calculator</li>
-            </ol>
-        </nav>
-
         <!-- Header -->
         <div class="ak-calc-header-row">
             <div class="ak-calc-header-left">
                 <h1 class="ak-calc-h1">Home Loan EMI Calculator</h1>
-                <p class="ak-calc-sub-text">Calculate your estimated home loan EMI based on your property value, down payment, interest rate and loan tenure. See how much you could pay every month and the total cost of your loan before you commit to a home purchase.</p>
+                <p class="ak-calc-sub-text">Calculate your EMI, total interest and the true cost of your home.</p>
                 <p class="ak-calc-kicker">Plan better. Borrow smarter. Buy with confidence.</p>
+            </div>
+            <div class="ak-calc-header-right">
+                <div class="ak-trust-badge-header">
+                    <div class="ak-trust-badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                    </div>
+                    <div class="ak-trust-badge-text">
+                        <div class="ak-trust-badge-title">100% Free &bull; No Sign Up Required</div>
+                        <div class="ak-trust-badge-sub">Trusted by home buyers across Bangalore</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Main Grid -->
@@ -760,6 +692,7 @@
             <!-- Left Panel -->
             <div class="ak-calc-left-panel">
                 <div class="ak-panel-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     <h2>Your Loan Details</h2>
                 </div>
 
@@ -767,8 +700,9 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">home</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
                             Property Price
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
@@ -788,8 +722,9 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                             Down Payment
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
@@ -809,8 +744,9 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">payments</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
                             Loan Amount
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
@@ -823,8 +759,9 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">percent</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                             Interest Rate (p.a.)
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <input type="text" id="interestInputNew" class="ak-new-input has-suffix" value="8.50" onchange="onInterestChangeInput(this.value)">
@@ -844,12 +781,13 @@
                 <div class="ak-new-input-row" style="margin-bottom: 1rem;">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">calendar_month</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                             Loan Tenure
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <input type="text" id="tenureInputNew" class="ak-new-input has-suffix readonly" value="20 Years" readonly>
-                            <span class="suffix" style="pointer-events:none;"><span class="material-symbols-outlined" style="font-size:16px;">expand_more</span></span>
+                            <span class="suffix" style="pointer-events:none;"><svg style="width:14px;height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
                         </div>
                     </div>
                     <div class="ak-new-slider-container">
@@ -861,6 +799,14 @@
                     </div>
                 </div>
 
+                <button class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--ak-gold)" stroke-width="2" style="width:18px;height:18px;"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    Calculate EMI
+                </button>
+                <div class="ak-secure-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--ak-gold)" stroke-width="2" style="width:12px;height:12px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Your data is secure and will not be shared.
+                </div>
             </div>
 
             <!-- Right Panel -->
@@ -892,8 +838,8 @@
                         <div style="display:flex; justify-content:center; align-items:center;">
                             <div class="ak-donut-wrapper-new">
                                 <svg viewBox="0 0 36 36" class="ak-donut-svg">
-                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--refined-brass)" stroke-width="4.2" id="donutPrincipal"/>
-                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--highlight-gold)" stroke-width="4.2" stroke-dasharray="52, 100" stroke-dashoffset="-48" id="donutInterest"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#D4AF37" stroke-width="4.2" id="donutPrincipal"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#8B6508" stroke-width="4.2" stroke-dasharray="52, 100" stroke-dashoffset="-48" id="donutInterest"/>
                                 </svg>
                                 <div class="ak-donut-center">
                                     <div class="ak-donut-center-val" id="donutTenure">20</div>
@@ -925,7 +871,7 @@
                 </div>
 
                 <div class="ak-stacked-bar-container">
-                    <div class="ak-stacked-bar-title">Break-up of your total payment</div>
+                    <div class="ak-stacked-bar-title">Break-up of your total payment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
                     <div class="ak-stacked-bar">
                         <div class="ak-bar-principal" id="barPrincipal" style="width: 48%;">48.0% (Principal)</div>
                         <div class="ak-bar-interest" id="barInterest" style="width: 52%;">52.0% (Interest)</div>
@@ -938,25 +884,25 @@
         <!-- 4 Feature Cards -->
         <div class="ak-feature-cards">
             <div class="ak-fcard">
-                <div class="ak-fcard-icon green"><span class="material-symbols-outlined">account_balance_wallet</span></div>
+                <div class="ak-fcard-icon green"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
                 <div class="ak-fcard-title">Can You Afford This EMI?</div>
                 <div class="ak-fcard-desc">Based on your income and existing commitments</div>
                 <a href="#" class="ak-fcard-link green">Check Affordability &rarr;</a>
             </div>
             <div class="ak-fcard">
-                <div class="ak-fcard-icon purple"><span class="material-symbols-outlined">tune</span></div>
+                <div class="ak-fcard-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg></div>
                 <div class="ak-fcard-title">Compare Tenures</div>
                 <div class="ak-fcard-desc">See how EMI and total interest change with tenure</div>
                 <a href="#" class="ak-fcard-link purple">Compare Now &rarr;</a>
             </div>
             <div class="ak-fcard">
-                <div class="ak-fcard-icon blue"><span class="material-symbols-outlined">trending_up</span></div>
+                <div class="ak-fcard-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
                 <div class="ak-fcard-title">Interest Rate Impact</div>
                 <div class="ak-fcard-desc">See how changes in interest rate affect your EMI</div>
                 <a href="#" class="ak-fcard-link blue">View Impact &rarr;</a>
             </div>
             <div class="ak-fcard">
-                <div class="ak-fcard-icon orange"><span class="material-symbols-outlined">currency_rupee</span></div>
+                <div class="ak-fcard-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
                 <div class="ak-fcard-title">Prepayment Savings</div>
                 <div class="ak-fcard-desc">See how prepayments can save you interest</div>
                 <a href="#" class="ak-fcard-link orange">Calculate Savings &rarr;</a>
@@ -971,7 +917,7 @@
             </div>
             <div class="ak-tc-math-row">
                 <div class="ak-tc-item">
-                    <div class="ak-tc-icon-box"><span class="material-symbols-outlined">home</span></div>
+                    <div class="ak-tc-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
                     <div class="ak-tc-text">
                         <span class="ak-tc-label">Property Price</span>
                         <span class="ak-tc-val" id="tcPropVal">₹ 1,00,00,000</span>
@@ -979,7 +925,7 @@
                 </div>
                 <div class="ak-tc-operator">+</div>
                 <div class="ak-tc-item">
-                    <div class="ak-tc-icon-box"><span class="material-symbols-outlined">account_balance_wallet</span></div>
+                    <div class="ak-tc-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
                     <div class="ak-tc-text">
                         <span class="ak-tc-label">Down Payment</span>
                         <span class="ak-tc-val" id="tcDownVal">₹ 20,00,000</span>
@@ -987,7 +933,7 @@
                 </div>
                 <div class="ak-tc-operator">+</div>
                 <div class="ak-tc-item">
-                    <div class="ak-tc-icon-box"><span class="material-symbols-outlined">receipt_long</span></div>
+                    <div class="ak-tc-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
                     <div class="ak-tc-text">
                         <span class="ak-tc-label">Stamp Duty &amp; Registration</span>
                         <span class="ak-tc-val" id="tcStampVal">₹ 6,50,000</span>
@@ -995,9 +941,9 @@
                 </div>
                 <div class="ak-tc-operator">+</div>
                 <div class="ak-tc-item">
-                    <div class="ak-tc-icon-box"><span class="material-symbols-outlined">info</span></div>
+                    <div class="ak-tc-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
                     <div class="ak-tc-text">
-                        <span class="ak-tc-label">Other Costs <span class="material-symbols-outlined" style="font-size:14px; vertical-align:middle; margin-bottom:2px; color:var(--muted-slate);">help</span></span>
+                        <span class="ak-tc-label">Other Costs <svg style="width:12px;height:12px;stroke:var(--ak-slate-light);vertical-align:middle;margin-bottom:2px;" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
                         <span class="ak-tc-val" id="tcOtherVal">₹ 2,50,000</span>
                     </div>
                 </div>
@@ -1010,12 +956,9 @@
             </div>
         </div>
     </main>
+"""
 
-
-    <!-- Footer -->
-    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right><ul class=footer-legal-links><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
-
-    
+js_new = """
     <!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->
     <script>
     // State
@@ -1036,7 +979,7 @@
         var lastThree = x.substring(x.length-3);
         var otherNumbers = x.substring(0, x.length-3);
         if (otherNumbers != '') lastThree = ',' + lastThree;
-        return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return otherNumbers.replace(/\\B(?=(\\d{2})+(?!\\d))/g, ",") + lastThree;
     }
 
     function syncUI() {
@@ -1183,8 +1126,12 @@
         syncUI();
     });
     </script>
+"""
 
-<script src="../website.js?v=20260812_flush_cache_v6" defer></script>
-<script src="../lead-form.min.js?v=20260812_flush_cache_v6" defer></script>
-</body>
-</html>
+# Regex replacements
+content = re.sub(r'<style>.*?</style>', lambda _: '<style>' + css_new + '</style>', content, flags=re.DOTALL)
+content = re.sub(r'<main class="ak-calc-section">.*?</main>', lambda _: html_new, content, flags=re.DOTALL)
+content = re.sub(r'<!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->.*?</script>', lambda _: js_new, content, flags=re.DOTALL)
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write(content)
