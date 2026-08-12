@@ -33,3 +33,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Container Widths**: Maximum container width is **1280px** with `2rem` side padding (`1216px` active content area) on Desktop, and `1rem` on Mobile.
 - **Editorial Columns**: Reading copy and paragraph text should remain constrained to ~`760px` for optimal readability.
 - **Corner Radius**: Unified **`8px`** (`border-radius: 8px`) across all cards, modals, buttons, and badges.
+
+
+## 5. Global Header & Footer Standard Rule
+- **Header & Footer Consistency**: For all new and existing pages, ALWAYS use the exact standard site header () and site footer () matching  and . Do NOT create any custom or simplified header/footer variants going forward.
