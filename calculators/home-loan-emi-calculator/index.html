@@ -87,7 +87,6 @@
 
     .ak-calc-header-left .ak-calc-h1 {
         font-family: var(--font-heading);
-        font-size: clamp(20px, 6vw, 30px);
         line-height: 1.04em;
         color: var(--deep-navy);
         margin: 0 0 0.5rem 0;
@@ -95,9 +94,7 @@
         letter-spacing: -0.02em;
     }
 
-    .ak-calc-sub-text {
-        font-size: 18px;
-        line-height: 1.85rem;
+    .ak-calc-sub-text { line-height: 1.85rem;
         color: var(--deep-slate);
         margin: 0 0 0.25rem 0;
         font-weight: 200;
@@ -139,9 +136,7 @@
     }
 
     @media (max-width: 768px) {
-        .ak-calc-sub-text {
-            font-size: 1.1rem;
-            line-height: 1.45;
+        .ak-calc-sub-text { line-height: 1.45;
             letter-spacing: -0.015em;
         }
     }
@@ -645,7 +640,6 @@
 
     .ak-tc-title {
         font-family: var(--font-heading);
-        font-size: clamp(20px, 6vw, 30px);
         color: var(--deep-navy);
         margin: 0 0 0.2rem 0;
         line-height: 1.04em;
@@ -758,8 +752,9 @@
         <div class="ak-calc-header-row">
             <div class="ak-calc-header-left">
                 <h1 class="ak-calc-h1">Home Loan EMI Calculator</h1>
-                <p class="ak-calc-sub-text">Calculate your estimated home loan EMI based on your property value, down payment, interest rate and loan tenure. See how much you could pay every month and the total cost of your loan before you commit to a home purchase.</p>
-                <p class="ak-calc-kicker">Plan better. Borrow smarter. Buy with confidence.</p>
+                <p class="ak-calc-kicker" style="margin-bottom: 0.5rem;">Calculate your home loan EMI in seconds</p>
+                <p class="ak-calc-sub-text">Planning to buy a home? Use the AcreNKey Home Loan EMI Calculator to estimate your monthly EMI, total interest payable, and total repayment based on your property value, down payment, interest rate, and loan tenure.</p>
+                <p class="ak-calc-sub-text">Adjust the numbers to understand how different loan amounts, interest rates, and repayment periods can affect the cost of your home loan.</p>
         </div>
 
         <!-- Main Grid -->
@@ -796,7 +791,7 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            <span class="material-symbols-outlined" title="Minimum 20% is typically required by most banks." style="cursor:help;">account_balance_wallet</span>
                             Down Payment
                         </div>
                         <div class="ak-new-input-box-wrapper">
@@ -831,7 +826,7 @@
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
                         <div class="ak-new-input-label">
-                            <span class="material-symbols-outlined">percent</span>
+                            <span class="material-symbols-outlined" title="Current market rates range from 8.35% to 9.5% depending on credit score." style="cursor:help;">percent</span>
                             Interest Rate (p.a.)
                         </div>
                         <div class="ak-new-input-box-wrapper">
@@ -996,7 +991,7 @@
                 <div class="ak-tc-item">
                     <div class="ak-tc-icon-box"><span class="material-symbols-outlined">receipt_long</span></div>
                     <div class="ak-tc-text">
-                        <span class="ak-tc-label">Stamp Duty &amp; Registration</span>
+                        <span class="ak-tc-label" title="Estimated at 6.6% for Bengaluru (incl. surcharge & cess)." style="cursor:help;">Stamp Duty &amp; Registration <span class="material-symbols-outlined" style="font-size:14px; vertical-align:middle; margin-bottom:2px; color:var(--muted-slate);">info</span></span>
                         <span class="ak-tc-val" id="tcStampVal">₹ 6,50,000</span>
                     </div>
                 </div>
@@ -1004,7 +999,7 @@
                 <div class="ak-tc-item">
                     <div class="ak-tc-icon-box"><span class="material-symbols-outlined">info</span></div>
                     <div class="ak-tc-text">
-                        <span class="ak-tc-label">Other Costs <span class="material-symbols-outlined" style="font-size:14px; vertical-align:middle; margin-bottom:2px; color:var(--muted-slate);">help</span></span>
+                        <span class="ak-tc-label" title="Estimated at 2.5% for registration, legal, and bank processing fees." style="cursor:help;">Other Costs <span class="material-symbols-outlined" style="font-size:14px; vertical-align:middle; margin-bottom:2px; color:var(--muted-slate);">info</span></span>
                         <span class="ak-tc-val" id="tcOtherVal">₹ 2,50,000</span>
                     </div>
                 </div>
@@ -1191,7 +1186,7 @@
     });
     </script>
 
-<script src="../website.js?v=20260812_flush_cache_v6" defer></script>
+<script src="../../website.js?v=20260812_flush_cache_v6" defer></script>
 <script src="../../lead-form.min.js?v=20260812_flush_cache_v6" defer></script>
 </body>
 </html>
