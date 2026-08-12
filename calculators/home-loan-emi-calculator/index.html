@@ -159,7 +159,7 @@
     .ak-calc-left-panel {
         background: #FFFFFF;
         border: 1px solid #EAEFF5;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 2rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     }
@@ -355,7 +355,7 @@
     /* Right Panel (Dark) */
     .ak-calc-right-panel {
         background: var(--deep-navy-100);
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 2.5rem;
         color: #FFF;
         display: flex;
@@ -373,7 +373,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .ak-emi-huge {
@@ -727,6 +727,90 @@
         font-size: 0.75rem;
         color: var(--muted-slate);
     }
+
+    /* --- NEW UI REFINEMENTS --- */
+    .ak-tip-box {
+        background: #F0F6FF;
+        border: 1px solid #D0E2FF;
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        color: #0F3F8C;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-top: 1rem;
+    }
+    .ak-tip-box .material-symbols-outlined {
+        color: #3498DB;
+        font-size: 20px;
+        margin-top: 2px;
+    }
+
+    .ak-indicative-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.25rem 0.6rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .ak-affordable-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(39, 174, 96, 0.15);
+        color: #2ECC71;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .ak-right-bottom-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 1.5rem;
+    }
+    .ak-rb-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .ak-rb-feature .material-symbols-outlined {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .ak-rb-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .ak-rb-text strong {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    .ak-rb-text span {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.3;
+    }
+    @media (max-width: 768px) {
+        .ak-right-bottom-features {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+    }
+    /* ---------------------------- */
 </style>
 </head>
 <body>
@@ -820,6 +904,9 @@
                             <input type="text" id="loanAmountInputNew" class="ak-new-input has-prefix readonly" value="80,00,000" readonly>
                         </div>
                     </div>
+                    <div style="font-size: 0.8rem; color: var(--muted-slate); margin-top: -0.5rem; font-weight: 500;">
+                        Auto-calculated (Property Price - Down Payment)
+                    </div>
                 </div>
 
                 <!-- Input: Interest Rate -->
@@ -864,14 +951,30 @@
                     </div>
                 </div>
 
+                <!-- Tip Box -->
+                <div class="ak-tip-box">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <div>Tip: Paying a higher down payment or choosing a shorter tenure can significantly reduce your total interest.</div>
+                </div>
+
             </div>
 
             <!-- Right Panel -->
             <div class="ak-calc-right-panel" id="resultsPanel">
-                <div class="ak-right-header">Your Estimated EMI</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header" style="margin-bottom:0;">Your Estimated EMI</div>
+                    <div class="ak-indicative-badge">Indicative <span class="material-symbols-outlined" style="font-size: 14px; margin-left:4px;">info</span></div>
+                </div>
+                
                 <div class="ak-emi-highlight-row">
                     <div class="ak-emi-huge" id="resultEmi">₹ 69,428</div>
                     <div class="ak-emi-month">/month</div>
+                </div>
+                
+                <div style="margin-bottom: 2.5rem; display: flex;">
+                    <div class="ak-affordable-badge">
+                        <span class="material-symbols-outlined" style="font-size: 14px; margin-right: 4px;">trending_up</span>Affordable EMI
+                    </div>
                 </div>
 
                 <div class="ak-3-stats">
@@ -931,6 +1034,31 @@
                     <div class="ak-stacked-bar">
                         <div class="ak-bar-principal" id="barPrincipal" style="width: 48%;">48.0% (Principal)</div>
                         <div class="ak-bar-interest" id="barInterest" style="width: 52%;">52.0% (Interest)</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Trust Features -->
+                <div class="ak-right-bottom-features">
+                    <div class="ak-rb-feature">
+                        <span class="material-symbols-outlined">verified_user</span>
+                        <div class="ak-rb-text">
+                            <strong>No Hidden Charges</strong>
+                            <span>What you see is what you pay</span>
+                        </div>
+                    </div>
+                    <div class="ak-rb-feature">
+                        <span class="material-symbols-outlined">percent</span>
+                        <div class="ak-rb-text">
+                            <strong>Lower Interest</strong>
+                            <span>Small changes save lakhs</span>
+                        </div>
+                    </div>
+                    <div class="ak-rb-feature">
+                        <span class="material-symbols-outlined">schedule</span>
+                        <div class="ak-rb-text">
+                            <strong>Smart Decision</strong>
+                            <span>Compare & choose</span>
+                        </div>
                     </div>
                 </div>
 
