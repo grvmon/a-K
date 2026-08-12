@@ -12,26 +12,26 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home Loan EMI Calculator | AcreNKey">
     <meta property="og:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v9">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v10">
     <meta property="og:url" content="https://acrenkey.com/calculators/home-loan-emi-calculator/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home Loan EMI Calculator | AcreNKey">
     <meta name="twitter:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v9">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v10">
 
     <!-- Favicon & Stylesheets -->
-    <link rel="icon" href="../../style-guide/assets/favicon.svg?v=20260812_flush_cache_v9" type="image/svg+xml">
+    <link rel="icon" href="../../style-guide/assets/favicon.svg?v=20260812_flush_cache_v10" type="image/svg+xml">
     
-    <link rel="stylesheet" href="../../style-guide/assets/fonts/fontawesome/all.css?v=20260812_flush_cache_v9" media="print" onload="this.media='all'">
-    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=20260812_flush_cache_v9" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=20260812_flush_cache_v9" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=20260812_flush_cache_v9" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=20260812_flush_cache_v9" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=20260812_flush_cache_v9" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../style-guide/assets/fonts/fontawesome/all.css?v=20260812_flush_cache_v10" media="print" onload="this.media='all'">
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=20260812_flush_cache_v10" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=20260812_flush_cache_v10" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=20260812_flush_cache_v10" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=20260812_flush_cache_v10" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=20260812_flush_cache_v10" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap">
 
     <link rel="stylesheet" href="../../website.min.css?v=57">
-    <link rel="stylesheet" href="../../lead-form.css?v=20260812_flush_cache_v9">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260812_flush_cache_v10">
     
     <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -366,14 +366,14 @@
         font-size: 1.1rem;
         font-weight: 700;
         color: rgba(255,255,255,0.9);
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .ak-emi-highlight-row {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .ak-emi-huge {
@@ -602,7 +602,7 @@
         font-size: 1rem;
         font-weight: 800;
         color: var(--deep-navy-100);
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .ak-fcard-desc {
@@ -865,7 +865,10 @@
                     <div class="ak-new-slider-container">
                         <input type="range" id="propValueSliderNew" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropChangeSlider(this.value)">
                     </div>
-                    
+                    <div class="ak-slider-labels">
+                        <span>10L</span>
+                        <span>10Cr</span>
+                    </div>
                 </div>
 
                 <!-- Input: Down Payment -->
@@ -883,23 +886,92 @@
                     <div class="ak-new-slider-container">
                         <input type="range" id="downPaySliderNew" class="ak-new-slider" min="0" max="50" step="1" value="20" oninput="onDownChangeSlider(this.value)">
                     </div>
-                    
+                    <div class="ak-slider-labels">
+                        <span>0%</span>
+                        <span>50%</span>
+                    </div>
                 </div>
 
-                
+                <!-- Input: Loan Amount (Readonly) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Loan Amount
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="loanAmountInputNew" class="ak-new-input has-prefix readonly" value="80,00,000" readonly>
+                        </div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--muted-slate); margin-top: -0.5rem; font-weight: 500;">
+                        Auto-calculated (Property Price - Down Payment)
+                    </div>
+                </div>
+
+                <!-- Input: Interest Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" title="Current market rates range from 8.35% to 9.5% depending on credit score." style="cursor:help;">percent</span>
+                            Interest Rate (p.a.)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="interestInputNew" class="ak-new-input has-suffix" value="7.12" onchange="onInterestChangeInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="interestSliderNew" class="ak-new-slider" min="6.0" max="12.0" step="0.01" value="7.12" oninput="onInterestChangeSlider(this.value)">
+                    </div>
+                    <div class="ak-slider-labels">
+                        <span>6%</span>
+                        <span>12%</span>
+                    </div>
+                </div>
+
+                <!-- Input: Loan Tenure -->
+                <div class="ak-new-input-row" style="margin-bottom: 1rem;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            Loan Tenure
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tenureInputNew" class="ak-new-input has-suffix readonly" value="20 Years" readonly>
+                            <span class="suffix" style="pointer-events:none;"><span class="material-symbols-outlined" style="font-size:16px;">expand_more</span></span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="tenureSliderNew" class="ak-new-slider" min="5" max="30" step="1" value="20" oninput="onTenureChangeSlider(this.value)">
+                    </div>
+                    <div class="ak-slider-labels">
+                        <span>5 yrs</span>
+                        <span>30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Tip Box -->
+                <div class="ak-tip-box">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <div>Tip: Paying a higher down payment or choosing a shorter tenure can significantly reduce your total interest.</div>
+                </div>
+
+            </div>
 
             <!-- Right Panel -->
             <div class="ak-calc-right-panel" id="resultsPanel">
-                <div class="ak-right-header">Your Estimated EMI</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header" style="margin-bottom:0;">Your Estimated EMI</div>
+                    <div class="ak-indicative-badge">Indicative <span class="material-symbols-outlined" style="font-size: 14px; margin-left:4px;">info</span></div>
+                </div>
                 
                 <div class="ak-emi-highlight-row">
                     <div class="ak-emi-huge" id="resultEmi">₹ 69,428</div>
-                    <div class="ak-emi-month" style="font-size: 0.9rem; opacity: 0.7;">/month</div>
+                    <div class="ak-emi-month">/month</div>
                 </div>
                 
-                <div style="margin-bottom: 2.5rem; display: flex;">
-                    <div class="ak-indicative-badge">Indicative <span class="material-symbols-outlined" style="font-size: 14px; margin-left:4px;">info</span></div>
-                </div>
+                <div style="margin-bottom: 2.5rem;"></div>
 
                 <div class="ak-3-stats">
                     <div class="ak-stat-item">
@@ -916,18 +988,53 @@
                     </div>
                 </div>
 
+                <div style="flex-grow:1; margin-top:2rem;">
+                    <div class="ak-right-middle-grid">
+                        <div style="display:flex; justify-content:center; align-items:center;">
+                            <div class="ak-donut-wrapper-new">
+                                <svg viewBox="0 0 36 36" class="ak-donut-svg">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--refined-brass)" stroke-width="4.2" id="donutPrincipal"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--highlight-gold)" stroke-width="4.2" stroke-dasharray="52, 100" stroke-dashoffset="-48" id="donutInterest"/>
+                                </svg>
+                                <div class="ak-donut-center">
+                                    <div class="ak-donut-center-val" id="donutTenure">20</div>
+                                    <div class="ak-donut-center-label">Years<br>Tenure</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:center;">
+                            <div class="ak-legend-new">
+                                <div class="ak-legend-item-new">
+                                    <div class="ak-legend-label-row">
+                                        <div class="ak-legend-dot-new principal"></div>
+                                        <span>Principal</span>
+                                    </div>
+                                    <div class="ak-legend-val-new" id="legendPrincipalVal">₹ 80,00,000</div>
+                                    <div class="ak-legend-pct" id="legendPrincipalPct">(48.0%)</div>
+                                </div>
+                                <div class="ak-legend-item-new">
+                                    <div class="ak-legend-label-row">
+                                        <div class="ak-legend-dot-new interest"></div>
+                                        <span>Interest</span>
+                                    </div>
+                                    <div class="ak-legend-val-new" id="legendInterestVal">₹ 86,62,720</div>
+                                    <div class="ak-legend-pct" id="legendInterestPct">(52.0%)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-stacked-bar-container">
+                    <div class="ak-stacked-bar-title">Break-up of your total payment</div>
+                    <div class="ak-stacked-bar">
+                        <div class="ak-bar-principal" id="barPrincipal" style="width: 48%;">48.0% (Principal)</div>
+                        <div class="ak-bar-interest" id="barInterest" style="width: 52%;">52.0% (Interest)</div>
+                    </div>
+                </div>
 
 
 
-
-            </div>
-        </div>
-
-        <div class="ak-stacked-bar-container" style="background: var(--warm-ivory); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-            <div class="ak-stacked-bar-title" style="color: var(--deep-navy);">Break-up of your total payment</div>
-            <div class="ak-stacked-bar">
-                <div class="ak-bar-principal" id="barPrincipal" style="width: 48%;">48.0% (Principal)</div>
-                <div class="ak-bar-interest" id="barInterest" style="width: 52%;">52.0% (Interest)</div>
             </div>
         </div>
 
@@ -1048,7 +1155,7 @@
         document.getElementById('downPaySliderNew').value = state.downPct;
         updateSliderFill('downPaySliderNew');
 
-        document.getElementById('loanAmountText').innerText = '₹ ' + formatIndian(loanVal);
+        document.getElementById('loanAmountInputNew').value = formatIndian(loanVal);
 
         document.getElementById('interestInputNew').value = state.interest.toFixed(2);
         document.getElementById('interestSliderNew').value = state.interest;
@@ -1057,6 +1164,8 @@
         document.getElementById('tenureInputNew').value = state.tenure + " Years";
         document.getElementById('tenureSliderNew').value = state.tenure;
         updateSliderFill('tenureSliderNew');
+        document.getElementById('donutTenure').innerText = state.tenure;
+
         // Calculate EMI
         var monthlyRate = state.interest / 12 / 100;
         var totalMonths = state.tenure * 12;
@@ -1074,10 +1183,15 @@
         document.getElementById('resultInterest').innerText = "₹ " + formatIndian(totalInterest);
         document.getElementById('resultRepay').innerText = "₹ " + formatIndian(totalRepayment);
 
-        // Update Bar
+        // Update Legends & Bar
         var total = loanVal + totalInterest;
         var pPct = total > 0 ? (loanVal / total) * 100 : 50;
         var iPct = total > 0 ? (totalInterest / total) * 100 : 50;
+
+        document.getElementById('legendPrincipalVal').innerText = "₹ " + formatIndian(loanVal);
+        document.getElementById('legendInterestVal').innerText = "₹ " + formatIndian(totalInterest);
+        document.getElementById('legendPrincipalPct').innerText = "(" + pPct.toFixed(1) + "%)";
+        document.getElementById('legendInterestPct').innerText = "(" + iPct.toFixed(1) + "%)";
 
         document.getElementById('barPrincipal').style.width = pPct + "%";
         document.getElementById('barPrincipal').innerText = pPct.toFixed(1) + "% (Principal)";
@@ -1173,7 +1287,7 @@
     });
     </script>
 
-<script src="../../website.js?v=20260812_flush_cache_v9" defer></script>
-<script src="../../lead-form.min.js?v=20260812_flush_cache_v9" defer></script>
+<script src="../../website.js?v=20260812_flush_cache_v10" defer></script>
+<script src="../../lead-form.min.js?v=20260812_flush_cache_v10" defer></script>
 </body>
 </html>
