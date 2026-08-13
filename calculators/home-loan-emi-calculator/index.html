@@ -70,7 +70,7 @@
     
     .ak-calc-wrapper {
         max-width: 1280px;
-        margin: 120px auto 4rem auto;
+        margin: 120px auto 1rem auto;
         padding: 0 2rem;
         font-family: var(--font-body);
     }
@@ -149,7 +149,7 @@
         grid-template-columns: 550px 550px;
         justify-content: center;
         gap: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
         font-variant-numeric: tabular-nums;
     }
 
@@ -649,6 +649,21 @@
         margin-bottom: 0.4rem;
         line-height: 1.3;
     }
+    .ak-fcard-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .ak-fcard-header-flex .ak-fcard-icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    .ak-fcard-header-flex .ak-fcard-title {
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+
     .ak-fcard-desc {
         font-size: 0.85rem;
         color: var(--muted-slate);
@@ -939,7 +954,7 @@
     
     .ak-post-widget-unit {
         max-width: 1116px;
-        margin: 2.5rem auto 0 auto;
+        margin: 16px auto 0 auto;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -1126,14 +1141,24 @@
         font-size: 1rem;
         font-weight: 700;
         color: var(--deep-navy-100);
-        min-width: 180px;
-        flex-shrink: 0;
+        flex: 0 0 260px;
+        padding-right: 1rem;
     }
     .ak-term-row dd {
         font-size: 1rem;
         color: var(--deep-slate);
         margin: 0;
         line-height: 1.6;
+    }
+    @media (max-width: 650px) {
+        .ak-term-row {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .ak-term-row dt {
+            flex: 0 0 auto;
+            padding-right: 0;
+        }
     }
     .ak-calc-article-grid {
         display: grid;
@@ -1492,63 +1517,72 @@
 
         <div class="ak-feature-cards">
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">home</span>
                 </div>
                 <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
                 <a href="/calculators/home-affordability-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">account_balance</span>
                 </div>
                 <div class="ak-fcard-title">Home Loan Eligibility Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">Estimate how much home loan you could potentially get based on your income and profile.</div>
                 <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">receipt_long</span>
                 </div>
                 <div class="ak-fcard-title">Stamp Duty &amp; Registration Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">Calculate stamp duty, registration charges and other applicable statutory fees.</div>
                 <a href="/calculators/stamp-duty-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </div>
                 <div class="ak-fcard-title">Total Home Buying Cost Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
                 <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">compare_arrows</span>
                 </div>
                 <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">Compare the long-term financial cost of renting vs buying a home in your city.</div>
                 <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
             <div class="ak-fcard">
+                <div class="ak-fcard-header-flex">
                 <div class="ak-fcard-icon">
                     <span class="material-symbols-outlined">payments</span>
                 </div>
                 <div class="ak-fcard-title">Home Loan Prepayment Calculator</div>
+                </div>
                 <div class="ak-fcard-desc">See how prepayments can help you save on interest and reduce your loan tenure.</div>
                 <a href="/calculators/home-loan-prepayment-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
             </div>
         </div>
 
-        <div class="ak-more-calcs-tip">
-            <span class="material-symbols-outlined">lightbulb</span>
-            <div><strong>Tip:</strong> These calculators help you plan your home purchase better. For expert guidance on buying the right property, talk to an <a href="/#footer">AcreNKey Home Buyer Concierge</a>.</div>
-        </div>
+
     </section>
 
     <section class="ak-calc-article">
-        <h2>What Your Home Loan EMI Really Costs</h2>
+        <h2>What Your Home Loan EMI Really Costs?</h2>
         <p>Your monthly EMI is only one part of the cost of a home loan. The total amount you repay depends on the loan amount, interest rate, and tenure you choose.</p>
         
         <dl class="ak-term-list">
@@ -1591,37 +1625,37 @@
         <p>You don't need to calculate the formula manually. Enter your loan details into the AcreNKey Home Loan EMI Calculator above to instantly estimate your monthly EMI, total interest, and total repayment.</p>
 
         <h2>What Determines Your Home Loan EMI?</h2>
-        <div class="ak-calc-article-grid">
-            <div class="ak-calc-article-grid-item">
-                <h3>Loan Amount</h3>
-                <p>The amount you borrow directly affects your EMI. A larger loan generally means a higher monthly repayment.</p>
+        <dl class="ak-term-list">
+            <div class="ak-term-row">
+                <dt>Loan Amount</dt>
+                <dd>The amount you borrow directly affects your EMI. A larger loan generally means a higher monthly repayment.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Interest Rate</h3>
-                <p>A higher interest rate increases both your monthly EMI and the total interest paid over the loan tenure.</p>
+            <div class="ak-term-row">
+                <dt>Interest Rate</dt>
+                <dd>A higher interest rate increases both your monthly EMI and the total interest paid over the loan tenure.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Loan Tenure</h3>
-                <p>A longer tenure generally reduces your monthly EMI, but increases the total interest you pay over the life of the loan.</p>
+            <div class="ak-term-row">
+                <dt>Loan Tenure</dt>
+                <dd>A longer tenure generally reduces your monthly EMI, but increases the total interest you pay over the life of the loan.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Down Payment</h3>
-                <p>A larger down payment reduces the amount you need to borrow. This can lower both your monthly EMI and total interest, provided the down payment does not leave you without sufficient financial reserves.</p>
+            <div class="ak-term-row">
+                <dt>Down Payment</dt>
+                <dd>A larger down payment reduces the amount you need to borrow. This can lower both your monthly EMI and total interest, provided the down payment does not leave you without sufficient financial reserves.</dd>
             </div>
-        </div>
+        </dl>
 
         <p><strong>Use the calculator above to adjust these variables and see how each change affects your home loan.</strong></p>
 
-        <h2>How Interest Rate and Loan Tenure Affect Your EMI</h2>
+        <h2>How Interest Rate and Loan Tenure Affect Your EMI?</h2>
         <p>Two home loans with the same loan amount can have very different monthly EMIs and total repayment costs depending on the <strong>interest rate and loan tenure</strong>.</p>
         <p>Understanding this trade-off can help you choose a loan structure that fits both your monthly budget and your long-term financial plans.</p>
 
-        <h2>How Interest Rate Affects Your Home Loan EMI</h2>
+        <h2>How Interest Rate Affects Your Home Loan EMI?</h2>
         <p>A higher interest rate generally means a higher monthly EMI and more interest paid over the life of the loan.</p>
         <p>Even a small difference in interest rate can have a significant impact when you are repaying a large home loan over 15, 20 or 25 years.</p>
         <p>Use the calculator above to compare different interest rates and see how they affect your monthly EMI and total interest.</p>
 
-        <h2>How Loan Tenure Affects Your Home Loan EMI</h2>
+        <h2>How Loan Tenure Affects Your Home Loan EMI?</h2>
         <p>Loan tenure is the length of time you take to repay your home loan.</p>
         <p>A longer tenure generally reduces your monthly EMI because the repayment is spread over more months. However, you may pay substantially more interest over the full loan period.</p>
         <p>A shorter tenure usually means a higher monthly EMI, but a lower total interest cost.</p>
@@ -1633,40 +1667,7 @@
         </div>
         <p>There is no single loan tenure that is right for every buyer. The right choice depends on your income, existing financial commitments, available savings and how much monthly repayment you are comfortable with.</p>
 
-        <h2>Compare Different Loan Tenures</h2>
-        <p>Use the calculator to compare your estimated EMI and total interest across different tenures, such as:</p>
-        
-        <table class="ak-calc-article-table">
-            <thead>
-                <tr>
-                    <th>Loan Tenure</th>
-                    <th>Monthly EMI</th>
-                    <th>Total Interest</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>15 Years</td>
-                    <td>Calculate above</td>
-                    <td>Calculate above</td>
-                </tr>
-                <tr>
-                    <td>20 Years</td>
-                    <td>Calculate above</td>
-                    <td>Calculate above</td>
-                </tr>
-                <tr>
-                    <td>25 Years</td>
-                    <td>Calculate above</td>
-                    <td>Calculate above</td>
-                </tr>
-                <tr>
-                    <td>30 Years</td>
-                    <td>Calculate above</td>
-                    <td>Calculate above</td>
-                </tr>
-            </tbody>
-        </table>
+
 
         <blockquote>
             <p>The goal isn't simply to choose the lowest EMI. It is to find the right balance between monthly affordability and the total cost of your home loan.</p>
@@ -1677,28 +1678,28 @@
         <p>Your ideal home loan should fit within your overall financial plan while leaving enough room for your regular expenses, savings and unexpected costs.</p>
 
         <h2>What Should You Consider Before Choosing Your Loan Amount?</h2>
-        <div class="ak-calc-article-grid">
-            <div class="ak-calc-article-grid-item">
-                <h3>Monthly Income</h3>
-                <p>Consider your stable monthly household income and how much of it you are comfortable allocating toward your home loan EMI.</p>
+        <dl class="ak-term-list">
+            <div class="ak-term-row">
+                <dt>Monthly Income</dt>
+                <dd>Consider your stable monthly household income and how much of it you are comfortable allocating toward your home loan EMI.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Existing EMIs</h3>
-                <p>If you already have car loans, personal loans, credit-card balances or other monthly obligations, include these when assessing your overall repayment capacity.</p>
+            <div class="ak-term-row">
+                <dt>Existing EMIs</dt>
+                <dd>If you already have car loans, personal loans, credit-card balances or other monthly obligations, include these when assessing your overall repayment capacity.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Down Payment</h3>
-                <p>A larger down payment can reduce your loan amount, monthly EMI and total interest. However, avoid using so much of your savings that you are left without an adequate financial reserve.</p>
+            <div class="ak-term-row">
+                <dt>Down Payment</dt>
+                <dd>A larger down payment can reduce your loan amount, monthly EMI and total interest. However, avoid using so much of your savings that you are left without an adequate financial reserve.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Other Home-Buying Costs</h3>
-                <p>Your EMI is not the only cost of purchasing a home. Budget separately for registration and statutory charges, interiors, furnishings, maintenance, insurance and other property-related expenses.</p>
+            <div class="ak-term-row">
+                <dt>Other Home-Buying Costs</dt>
+                <dd>Your EMI is not the only cost of purchasing a home. Budget separately for registration and statutory charges, interiors, furnishings, maintenance, insurance and other property-related expenses.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Financial Buffer</h3>
-                <p>A home loan is a long-term commitment. Maintaining sufficient savings for emergencies and unexpected expenses can be just as important as keeping your EMI manageable.</p>
+            <div class="ak-term-row">
+                <dt>Financial Buffer</dt>
+                <dd>A home loan is a long-term commitment. Maintaining sufficient savings for emergencies and unexpected expenses can be just as important as keeping your EMI manageable.</dd>
             </div>
-        </div>
+        </dl>
 
         <h2>Don't Borrow Just Because You Can</h2>
         <p>A lender may approve a particular loan amount based on its eligibility criteria. That does not necessarily mean the same amount is comfortable for you.</p>
@@ -1714,36 +1715,38 @@
         <p>Your home loan EMI is one of the biggest costs of owning a home, but it is not the only one.</p>
         <p>Before finalising your property budget, consider the upfront and ongoing costs that can affect the total cost of your purchase.</p>
 
-        <div class="ak-calc-article-grid">
-            <div class="ak-calc-article-grid-item">
-                <h3>Down Payment</h3>
-                <p>Your down payment is the amount you contribute toward the property purchase before taking the home loan. A larger down payment can reduce the amount you borrow and may lower your EMI and total interest. However, keeping sufficient savings available for emergencies and other expenses is equally important.</p>
+        <dl class="ak-term-list">
+            <div class="ak-term-row">
+                <dt>Down Payment</dt>
+                <dd>Your down payment is the amount you contribute toward the property purchase before taking the home loan. A larger down payment can reduce the amount you borrow and may lower your EMI and total interest. However, keeping sufficient savings available for emergencies and other expenses is equally important.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Registration and Statutory Charges</h3>
-                <p>Property purchases involve government and transaction-related charges in addition to the property's purchase price. These costs can vary depending on the property, transaction value and applicable regulations, so factor them into your overall purchase budget.</p>
+            <div class="ak-term-row">
+                <dt>Registration and Statutory Charges</dt>
+                <dd>Property purchases involve government and transaction-related charges in addition to the property's purchase price. These costs can vary depending on the property, transaction value and applicable regulations, so factor them into your overall purchase budget.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Interiors and Furnishing</h3>
-                <p>A new home may require additional spending on interiors, furniture, appliances, lighting and other essentials before it is ready to move into. These expenses can be significant, particularly for larger homes.</p>
+            <div class="ak-term-row">
+                <dt>Interiors and Furnishing</dt>
+                <dd>A new home may require additional spending on interiors, furniture, appliances, lighting and other essentials before it is ready to move into. These expenses can be significant, particularly for larger homes.</dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Maintenance and Recurring Costs</h3>
-                <p>Depending on the property, you may also need to budget for:</p>
-                <ul style="margin-top: 1rem; margin-bottom: 0;">
-                    <li>Monthly maintenance charges</li>
-                    <li>Property taxes</li>
-                    <li>Home insurance</li>
-                    <li>Utilities</li>
-                    <li>Repairs and upkeep</li>
-                    <li>Parking or other applicable charges</li>
-                </ul>
+            <div class="ak-term-row">
+                <dt>Maintenance and Recurring Costs</dt>
+                <dd>
+                    <p style="margin-bottom: 0.5rem;">Depending on the property, you may also need to budget for:</p>
+                    <ul style="margin: 0; padding-left: 1.2rem;">
+                        <li>Monthly maintenance charges</li>
+                        <li>Property taxes</li>
+                        <li>Home insurance</li>
+                        <li>Utilities</li>
+                        <li>Repairs and upkeep</li>
+                        <li>Parking or other applicable charges</li>
+                    </ul>
+                </dd>
             </div>
-            <div class="ak-calc-article-grid-item">
-                <h3>Loan-Related Costs</h3>
-                <p>Depending on your lender and loan, additional costs may include processing fees, documentation charges, insurance and other applicable expenses. Check the complete loan terms rather than looking only at the advertised interest rate.</p>
+            <div class="ak-term-row">
+                <dt>Loan-Related Costs</dt>
+                <dd>Depending on your lender and loan, additional costs may include processing fees, documentation charges, insurance and other applicable expenses. Check the complete loan terms rather than looking only at the advertised interest rate.</dd>
             </div>
-        </div>
+        </dl>
 
         <h2>Keep Your Total Home-Buying Budget in Mind</h2>
         <p>The true cost of buying a home is more than the property price or monthly EMI.</p>
@@ -1781,7 +1784,7 @@
             </tbody>
         </table>
 
-        <h2>Why Your Repayment Schedule Matters</h2>
+        <h2>Why Your Repayment Schedule Matters?</h2>
         <p>Looking only at your monthly EMI can make a long-term loan appear simpler than it really is.</p>
         <p>The repayment schedule shows the bigger picture: how much you will repay, how much of that amount is interest, and how your outstanding loan changes over time.</p>
 
