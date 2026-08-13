@@ -945,6 +945,20 @@
         color: var(--muted-slate);
         margin-top: 0.2rem;
     }
+    @media (max-width: 450px) {
+        .ak-loan-amount-box {
+            padding: 0.75rem 0.75rem;
+        }
+        .ak-la-row {
+            font-size: 0.85rem;
+        }
+        .ak-la-val {
+            font-size: 0.95rem;
+        }
+        .ak-la-title {
+            font-size: 0.85rem;
+        }
+    }
 
     .ak-tip-box-new {
         background: var(--warm-ivory);
@@ -1007,13 +1021,21 @@
     @media (max-width: 500px) {
         .ak-3-stats-new {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
         .ak-stat-col:not(:last-child) {
             border-right: none;
             border-bottom: 1px solid rgba(255,255,255,0.15);
             padding-right: 0;
-            padding-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+        }
+        .ak-stat-col .material-symbols-outlined {
+            display: none;
         }
     }
     .ak-stat-col {
@@ -1321,10 +1343,12 @@
             padding: 0 1rem;
             margin: 1.5rem auto 2.5rem auto;
         }
-        .ak-calc-article h2 {
+        .ak-calc-article h2,
+        .ak-panel-header h2,
+        .ak-more-calcs-title {
             margin-top: 2rem;
             margin-bottom: 0.75rem;
-            font-size: 22px;
+            font-size: 20px !important;
         }
         .ak-faq-item {
             padding: 1rem 0;
@@ -1921,29 +1945,7 @@
         <p>Your monthly EMI stays broadly consistent under a standard fixed-rate calculation, but the split between principal and interest changes over the life of the loan.</p>
         <p>In the earlier years, a larger portion of your EMI may go toward interest. As your outstanding loan balance reduces, the interest component generally decreases and more of your payment goes toward the principal.</p>
 
-        <h2>See How Your Loan Reduces Over Time</h2>
-        <p>Use the repayment schedule to understand:</p>
-        <ul style="margin-top: 1rem;">
-            <li>How much principal you repay each year</li>
-            <li>How much interest you pay each year</li>
-            <li>Your outstanding loan balance</li>
-            <li>Your cumulative repayment</li>
-            <li>How quickly your loan balance reduces</li>
-        </ul>
 
-        <table class="ak-calc-article-table">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Principal Paid</th>
-                    <th>Interest Paid</th>
-                    <th>Outstanding Balance</th>
-                </tr>
-            </thead>
-            <tbody id="amortizationTbody">
-                <!-- Dynamically populated via JS -->
-            </tbody>
-        </table>
 
         <h2>Why Your Repayment Schedule Matters?</h2>
         <p>Looking only at your monthly EMI can make a long-term loan appear simpler than it really is.</p>
