@@ -374,11 +374,12 @@
     /* Right Panel (Dark) */
     .ak-calc-right-panel {
         background: var(--deep-navy-100);
-        border-radius: 8px;
-        padding: 2.5rem;
+        border-radius: 16px;
+        padding: 1.8rem;
         color: #FFF;
         display: flex;
         flex-direction: column;
+        position: relative !important;
     }
 
     .ak-right-header {
@@ -392,14 +393,18 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .ak-emi-huge {
         font-family: var(--font-heading);
         font-size: 3.5rem;
+        font-weight: 400;
         color: var(--refined-brass);
         line-height: 1;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
     }
 
     .ak-emi-month {
@@ -539,7 +544,6 @@
     .ak-stacked-bar-container {
         margin-top: auto;
     }
-
     .ak-stacked-bar-title {
         font-size: 0.9rem;
         color: #FFF;
@@ -579,15 +583,560 @@
         transition: width 0.3s ease;
     }
 
-    /* 4 Feature Cards Grid */
+    /* More Calculators Section */
+    .ak-more-calcs-section {
+        max-width: 1140px;
+        margin: 0 auto 2rem auto;
+        padding: 3rem 2rem;
+    }
+    .ak-more-calcs-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .ak-more-calcs-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-more-calcs-sub {
+        font-size: 0.95rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
     .ak-feature-cards {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
         margin-bottom: 2rem;
     }
+    @media (max-width: 900px) {
+        .ak-feature-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+        .ak-feature-cards { grid-template-columns: 1fr; }
+    }
+    .ak-fcard {
+        background: #FFFFFF;
+        border: 1.5px solid rgba(184, 142, 82, 0.18);
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 16px rgba(24,42,61,0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .ak-fcard:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 28px rgba(24,42,61,0.08);
+        border-color: rgba(140, 103, 52, 0.4);
+    }
+    .ak-fcard-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--warm-ivory);
+        border: 1px solid rgba(184, 142, 82, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .ak-fcard-icon .material-symbols-outlined {
+        font-size: 24px;
+        color: var(--refined-brass);
+    }
+    .ak-fcard-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin-bottom: 0.4rem;
+        line-height: 1.3;
+    }
+    .ak-fcard-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .ak-fcard-header-flex .ak-fcard-icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    .ak-fcard-header-flex .ak-fcard-title {
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
 
+    .ak-fcard-desc {
+        font-size: 0.85rem;
+        color: var(--muted-slate);
+        margin-bottom: 1.25rem;
+        line-height: 1.55;
+        flex-grow: 1;
+    }
+    .ak-fcard-link {
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        color: var(--refined-brass);
+        transition: gap 0.2s ease;
+    }
+    .ak-fcard-link:hover { gap: 0.6rem; }
+    .ak-more-calcs-tip {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(140, 103, 52, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-size: 0.875rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+    }
+    .ak-more-calcs-tip .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+    .ak-more-calcs-tip a {
+        color: var(--refined-brass);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .ak-more-calcs-tip a:hover { text-decoration: underline; }
+
+    /* True Cost Section */
+    .ak-true-cost-strip {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(140, 103, 52, 0.2);
+        border-radius: 8px;
+        padding: 2rem;
+    }
+
+    .ak-tc-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-tc-title {
+        font-family: var(--font-heading);
+        color: var(--deep-navy);
+        margin: 0 0 0.2rem 0;
+        line-height: 1.04em;
+        letter-spacing: -0.02em;
+        font-weight: 400;
+    }
+    .ak-tc-sub {
+        font-size: 0.9rem;
+        color: var(--muted-slate);
+    }
+
+    .ak-tc-math-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .ak-tc-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .ak-tc-icon-box {
+        width: 48px;
+        height: 48px;
+        background: #F7EAD7;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ak-tc-icon-box .material-symbols-outlined {
+        width: 24px;
+        height: 24px;
+        color: var(--refined-brass);
+    }
+
+    .ak-tc-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .ak-tc-label {
+        font-size: 0.8rem;
+        color: var(--muted-slate);
+        font-weight: 600;
+    }
+    .ak-tc-val {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-tc-operator {
+        font-size: 1.5rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
+
+    .ak-tc-result-box {
+        background: #F7EAD7;
+        border: 1px solid var(--refined-brass);
+        border-radius: 8px;
+        padding: 1.25rem;
+        text-align: center;
+        min-width: 200px;
+    }
     
+    .ak-tc-result-label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        margin-bottom: 0.4rem;
+    }
+    .ak-tc-result-val {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin-bottom: 0.2rem;
+    }
+    .ak-tc-result-sub {
+        font-size: 0.75rem;
+        color: var(--muted-slate);
+    }
+
+    /* --- NEW UI REFINEMENTS --- */
+    .ak-tip-box {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(140, 103, 52, 0.2);
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        color: var(--deep-navy);
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-top: 1rem;
+    }
+    .ak-tip-box .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 20px;
+        margin-top: 2px;
+    }
+
+    .ak-indicative-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.25rem 0.6rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .ak-affordable-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(39, 174, 96, 0.15);
+        color: #2ECC71;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .ak-right-bottom-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 1.5rem;
+    }
+    .ak-rb-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .ak-rb-feature .material-symbols-outlined {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .ak-rb-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .ak-rb-text strong {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    .ak-rb-text span {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.3;
+    }
+    @media (max-width: 768px) {
+        .ak-right-bottom-features {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+        .ak-calc-wrapper {
+            padding: 0 1rem;
+        }
+        .ak-calc-left-panel,
+        .ak-calc-right-panel {
+            padding: 1rem;
+        }
+        .ak-panel-header h2 {
+            font-size: 22px;
+        }
+    }
+    /* ---------------------------- */
+
+    /* --- REDESIGN CSS --- */
+    .ak-loan-amount-box {
+        background: var(--warm-ivory);
+        border-radius: 8px;
+        padding: 0.75rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .ak-la-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: #F3ECE1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--refined-brass);
+    }
+    .ak-la-icon .material-symbols-outlined {
+        font-size: 24px;
+    }
+    .ak-la-content {
+        flex-grow: 1;
+    }
+    .ak-la-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: var(--deep-navy);
+        font-size: 0.95rem;
+    }
+    .ak-la-val {
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+    .ak-la-sub {
+        font-size: 0.75rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+    }
+    @media (max-width: 450px) {
+        .ak-loan-amount-box {
+            padding: 0.75rem 0.75rem;
+        }
+        .ak-la-row {
+            font-size: 0.85rem;
+        }
+        .ak-la-val {
+            font-size: 0.95rem;
+        }
+        .ak-la-title {
+            font-size: 0.85rem;
+        }
+    }
+
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        color: var(--deep-navy);
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 24px;
+    }
+    
+    .ak-post-widget-unit {
+        max-width: 1116px;
+        margin: 16px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .ak-post-widget-unit .ak-tip-box-new {
+        padding: 1.25rem 1.5rem;
+        background: #FDFBFA;
+        border: 1px solid rgba(184,142,82,0.15);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .ak-indicative-outline {
+        border: 1px solid rgba(255,255,255,0.3);
+        color: rgba(255,255,255,0.8);
+        border-radius: 20px;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .ak-emi-subtext {
+        color: rgba(255,255,255,0.6);
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        min-height: 2.5em;
+    }
+
+    .ak-3-stats-new {
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .ak-stat-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        position: relative;
+    }
+    .ak-stat-col:not(:last-child) {
+        border-right: 1px solid rgba(255,255,255,0.15);
+        padding-right: 1rem;
+    }
+    .ak-stat-col .material-symbols-outlined {
+        color: rgba(255,255,255,0.84);
+        font-size: 32px;
+        margin-bottom: 0.2rem;
+    }
+    .ak-stat-col .ak-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.7);
+    }
+    .ak-stat-col .ak-stat-val {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #FFF;
+    }
+    
+    @media (max-width: 500px) {
+        .ak-3-stats-new {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ak-stat-col:not(:last-child) {
+            border-right: none;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-right: 0;
+            padding-bottom: 0.75rem;
+        }
+        .ak-stat-col .material-symbols-outlined {
+            display: none;
+        }
+    }
+
+    .ak-money-goes-section {
+        margin-bottom: 1rem;
+    }
+    .ak-stacked-bar-title-new {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #FFF;
+        margin-bottom: 1rem;
+    }
+    .ak-stacked-bar-new {
+        display: flex;
+        height: 36px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .ak-bar-principal-new {
+        background: #DDA24A; /* Brighter gold */
+        color: #000;
+        font-weight: 700;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+    }
+    .ak-bar-interest-new {
+        background: rgba(255,255,255,0.15); /* Soft translucent white against navy */
+        color: #FFF;
+        font-weight: 700;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+    }
+    .ak-legend-row-new {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-legend-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .ak-legend-dot-new.principal { background: #DDA24A; }
+    .ak-legend-dot-new.interest { background: rgba(255,255,255,0.25); }
+
+    .ak-insight-box {
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(255,255,255,0.03);
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.9);
+        line-height: 1.5;
+        min-height: 4em;
+    }
+    .ak-insight-box .material-symbols-outlined {
+        color: rgba(255,255,255,0.84);
+        font-size: 24px;
+    }
     .ak-calc-article {
         max-width: 1140px;
         margin: 2rem auto 4rem auto;
@@ -992,7 +1541,7 @@
             <!-- Left Panel -->
             <div class="ak-calc-left-panel">
                 <div class="ak-panel-header">
-                    <h2>Your Loan Details</h2>
+                    <h2>Calculate your estimated EMI</h2>
                 </div>
 
                 <!-- Input: Property Price -->
@@ -1085,70 +1634,60 @@
 
             <!-- Right Panel -->
             <div class="ak-calc-right-panel" id="resultsPanel">
-                <div class="ak-right-header">Your Estimated EMI</div>
-                <div class="ak-emi-highlight-row">
-                    <div class="ak-emi-huge" id="resultEmi">₹ 69,428</div>
-                    <div class="ak-emi-month">/month</div>
-                    <div class="ak-affordable-badge">Affordable</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <div class="ak-right-header" style="margin-bottom:0;">Your Estimated EMI</div>
+                    <div class="ak-indicative-outline">Indicative</div>
                 </div>
-
-                <div class="ak-3-stats">
-                    <div class="ak-stat-item">
+                
+                <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <div class="ak-emi-huge" id="resultEmi" style="color: #FFFFFF;"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 2px;'>₹</span>62,601</div>
+                    <div class="ak-emi-month" style="font-size: 1.1rem; color: rgba(255,255,255,0.7); font-weight: 500;">/month</div>
+                </div>
+                <div class="ak-emi-subtext" id="emiSubtext">Based on ₹80,00,000 loan • 7.12% p.a. • 20 years</div>
+                
+                <div class="ak-3-stats-new">
+                    <div class="ak-stat-col">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
                         <div class="ak-stat-label">Loan Amount</div>
                         <div class="ak-stat-val" id="resultLoan">₹ 80,00,000</div>
                     </div>
-                    <div class="ak-stat-item">
+                    <div class="ak-stat-col">
+                        <span class="material-symbols-outlined">percent</span>
                         <div class="ak-stat-label">Total Interest</div>
-                        <div class="ak-stat-val" id="resultInterest">₹ 86,62,720</div>
+                        <div class="ak-stat-val" id="resultInterest">₹ 70,24,240</div>
                     </div>
-                    <div class="ak-stat-item">
+                    <div class="ak-stat-col">
+                        <span class="material-symbols-outlined">description</span>
                         <div class="ak-stat-label">Total Repayment</div>
-                        <div class="ak-stat-val" id="resultRepay">₹ 1,66,62,720</div>
+                        <div class="ak-stat-val" id="resultRepay">₹ 1,50,24,240</div>
                     </div>
                 </div>
 
-                <div style="flex-grow:1; margin-top:2rem;">
-                    <div class="ak-right-middle-grid">
-                        <div style="display:flex; justify-content:center; align-items:center;">
-                            <div class="ak-donut-wrapper-new">
-                                <svg viewBox="0 0 36 36" class="ak-donut-svg">
-                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--refined-brass)" stroke-width="4.2" id="donutPrincipal"/>
-                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--highlight-gold)" stroke-width="4.2" stroke-dasharray="52, 100" stroke-dashoffset="-48" id="donutInterest"/>
-                                </svg>
-                                <div class="ak-donut-center">
-                                    <div class="ak-donut-center-val" id="donutTenure">20</div>
-                                    <div class="ak-donut-center-label">Years<br>Tenure</div>
-                                </div>
-                            </div>
+                <!-- Where Your Money Goes -->
+                <div class="ak-money-goes-section">
+                    <div class="ak-stacked-bar-title-new">Where Your Money Goes</div>
+                    <div class="ak-stacked-bar-new">
+                        <div class="ak-bar-principal-new" id="barPrincipal" style="width:53.2%">53.2%</div>
+                        <div class="ak-bar-interest-new" id="barInterest" style="width:46.8%">46.8%</div>
+                    </div>
+                    <div class="ak-legend-row-new">
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new principal"></div>
+                            <span>Principal (<span id="legendPrincipalVal">₹80,00,000</span>)</span>
                         </div>
-                        <div style="display:flex; align-items:center;">
-                            <div class="ak-legend-new">
-                                <div class="ak-legend-item-new">
-                                    <div class="ak-legend-label-row">
-                                        <div class="ak-legend-dot-new principal"></div>
-                                        <span>Principal</span>
-                                    </div>
-                                    <div class="ak-legend-val-new" id="legendPrincipalVal">₹ 80,00,000</div>
-                                    <div class="ak-legend-pct" id="legendPrincipalPct">(48.0%)</div>
-                                </div>
-                                <div class="ak-legend-item-new">
-                                    <div class="ak-legend-label-row">
-                                        <div class="ak-legend-dot-new interest"></div>
-                                        <span>Interest</span>
-                                    </div>
-                                    <div class="ak-legend-val-new" id="legendInterestVal">₹ 86,62,720</div>
-                                    <div class="ak-legend-pct" id="legendInterestPct">(52.0%)</div>
-                                </div>
-                            </div>
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new interest"></div>
+                            <span>Interest (<span id="legendInterestVal">₹70,24,240</span>)</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="ak-stacked-bar-container">
-                    <div class="ak-stacked-bar-title">Break-up of your total payment</div>
-                    <div class="ak-stacked-bar">
-                        <div class="ak-bar-principal" id="barPrincipal" style="width: 48%;">48.0% (Principal)</div>
-                        <div class="ak-bar-interest" id="barInterest" style="width: 52%;">52.0% (Interest)</div>
+                <!-- Insight Box -->
+                <div class="ak-insight-box">
+                    <span class="material-symbols-outlined">info</span>
+                    <div>
+                        You will pay <strong id="insightIntVal">₹2,35,31,577</strong> in interest.<br>
+                        That's <strong id="insightIntPct" style="color: #FFFFFF;">87.6%</strong> of your loan amount.
                     </div>
                 </div>
 
@@ -1428,31 +1967,7 @@
 
 
 
-        <h2>See How Your Loan Reduces Over Time</h2>
-        <p>Use the repayment schedule to understand:</p>
-        <ul style="margin-top: 1rem;">
-            <li>How much principal you repay each year</li>
-            <li>How much interest you pay each year</li>
-            <li>Your outstanding loan balance</li>
-            <li>Your cumulative repayment</li>
-            <li>How quickly your loan balance reduces</li>
-        </ul>
-
-        <table class="ak-calc-article-table">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Principal Paid</th>
-                    <th>Interest Paid</th>
-                    <th>Outstanding Balance</th>
-                </tr>
-            </thead>
-            <tbody id="amortizationTbody">
-                <!-- Dynamically populated via JS -->
-            </tbody>
-        </table>
-
-<h2>Why Your Repayment Schedule Matters?</h2>
+        <h2>Why Your Repayment Schedule Matters?</h2>
         <p>Looking only at your monthly EMI can make a long-term loan appear simpler than it really is.</p>
         <p>The repayment schedule shows the bigger picture: how much you will repay, how much of that amount is interest, and how your outstanding loan changes over time.</p>
 
@@ -1540,7 +2055,7 @@
     <script>
     // State
     var state = {
-        propVal: 33500000,
+        propVal: 10000000,
         downPct: 20,
         interest: 7.12,
         tenure: 20
@@ -1560,10 +2075,10 @@
     }
 
     function syncUI() {
-        var downVal = (state.propVal * state.downPct) / 100;
-        var loanVal = state.propVal - downVal;
+        var loanVal = state.propVal - (state.propVal * state.downPct / 100);
+        var downVal = state.propVal - loanVal;
 
-        // Update Inputs
+        // Update Left Panel Inputs
         document.getElementById('propValueInputNew').value = formatIndian(state.propVal);
         document.getElementById('propValueSliderNew').value = state.propVal;
         updateSliderFill('propValueSliderNew');
@@ -1572,7 +2087,8 @@
         document.getElementById('downPaySliderNew').value = state.downPct;
         updateSliderFill('downPaySliderNew');
 
-        document.getElementById('loanAmountInputNew').value = formatIndian(loanVal);
+        // New Loan Amount Box
+        document.getElementById('laVal').innerText = '₹ ' + formatIndian(loanVal);
 
         document.getElementById('interestInputNew').value = state.interest.toFixed(2);
         document.getElementById('interestSliderNew').value = state.interest;
@@ -1581,7 +2097,6 @@
         document.getElementById('tenureInputNew').value = state.tenure + " Years";
         document.getElementById('tenureSliderNew').value = state.tenure;
         updateSliderFill('tenureSliderNew');
-        document.getElementById('donutTenure').innerText = state.tenure;
 
         // Calculate EMI
         var monthlyRate = state.interest / 12 / 100;
@@ -1594,103 +2109,70 @@
         var totalRepayment = emi * totalMonths;
         var totalInterest = Math.max(0, totalRepayment - loanVal);
 
-        // Update Result Cards
-        document.getElementById('resultEmi').innerText = "₹ " + formatIndian(emi);
+        // Update Right Panel Strings
+        document.getElementById('resultEmi').innerHTML = "<span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>" + formatIndian(emi);
+        document.getElementById('emiSubtext').innerText = "Based on ₹" + formatIndian(loanVal) + " loan • " + state.interest.toFixed(2) + "% p.a. • " + state.tenure + " years";
+        
         document.getElementById('resultLoan').innerText = "₹ " + formatIndian(loanVal);
         document.getElementById('resultInterest').innerText = "₹ " + formatIndian(totalInterest);
         document.getElementById('resultRepay').innerText = "₹ " + formatIndian(totalRepayment);
 
-        // Update Legends & Bar
+        // Update Stacked Bar
         var total = loanVal + totalInterest;
         var pPct = total > 0 ? (loanVal / total) * 100 : 50;
         var iPct = total > 0 ? (totalInterest / total) * 100 : 50;
 
-        document.getElementById('legendPrincipalVal').innerText = "₹ " + formatIndian(loanVal);
-        document.getElementById('legendInterestVal').innerText = "₹ " + formatIndian(totalInterest);
-        document.getElementById('legendPrincipalPct').innerText = "(" + pPct.toFixed(1) + "%)";
-        document.getElementById('legendInterestPct').innerText = "(" + iPct.toFixed(1) + "%)";
-
         document.getElementById('barPrincipal').style.width = pPct + "%";
-        document.getElementById('barPrincipal').innerText = pPct.toFixed(1) + "% (Principal)";
+        document.getElementById('barPrincipal').innerText = pPct.toFixed(1) + "%";
         document.getElementById('barInterest').style.width = iPct + "%";
-        document.getElementById('barInterest').innerText = iPct.toFixed(1) + "% (Interest)";
+        document.getElementById('barInterest').innerText = iPct.toFixed(1) + "%";
+        
+        document.getElementById('legendPrincipalVal').innerText = "₹" + formatIndian(loanVal);
+        document.getElementById('legendInterestVal').innerText = "₹" + formatIndian(totalInterest);
 
-        // Donut Chart
-        var dP = document.getElementById('donutPrincipal');
-        var dI = document.getElementById('donutInterest');
-        if (dP && dI) {
-            dP.setAttribute('stroke-dasharray', pPct.toFixed(1) + ', 100');
-            dI.setAttribute('stroke-dasharray', iPct.toFixed(1) + ', 100');
-            dI.setAttribute('stroke-dashoffset', '-' + pPct.toFixed(1));
+        // Update Insight Box
+        document.getElementById('insightIntVal').innerText = "₹" + formatIndian(totalInterest);
+        var ratio = loanVal > 0 ? (totalInterest / loanVal) * 100 : 0;
+        document.getElementById('insightIntPct').innerText = ratio.toFixed(1) + "%";
+
+        // Generate Amortization Schedule
+        var balance = loanVal;
+        var yearlySchedule = [];
+        for (var y = 1; y <= state.tenure; y++) {
+            var yearlyInterest = 0;
+            var yearlyPrincipal = 0;
+            for (var m = 1; m <= 12; m++) {
+                var interestForMonth = balance * monthlyRate;
+                var principalForMonth = emi - interestForMonth;
+                balance -= principalForMonth;
+                yearlyInterest += interestForMonth;
+                yearlyPrincipal += principalForMonth;
+            }
+            if(balance < 0) balance = 0;
+            yearlySchedule.push({
+                year: y,
+                principal: yearlyPrincipal,
+                interest: yearlyInterest,
+                balance: balance
+            });
         }
-
-        // True Cost Logic (Static % for demo)
-        var stampDuty = state.propVal * 0.065; // 6.5%
-        var otherCosts = state.propVal * 0.025; // 2.5%
-        var totalCash = downVal + stampDuty + otherCosts;
-
-        document.getElementById('tcPropVal').innerText = "₹ " + formatIndian(state.propVal);
-        document.getElementById('tcDownVal').innerText = "₹ " + formatIndian(downVal);
-        document.getElementById('tcStampVal').innerText = "₹ " + formatIndian(stampDuty);
-        document.getElementById('tcOtherVal').innerText = "₹ " + formatIndian(otherCosts);
-        document.getElementById('tcTotalVal').innerText = "₹ " + formatIndian(totalCash);
-    }
-
-    function updateSliderFill(id) {
-        var el = document.getElementById(id);
-        if(!el) return;
-        var min = parseFloat(el.min || 0);
-        var max = parseFloat(el.max || 100);
-        var val = parseFloat(el.value);
-        var pct = ((val - min) / (max - min)) * 100;
-        // Create or update fill element
-        var wrap = el.parentElement;
-        var fill = wrap.querySelector('.ak-new-slider-fill');
-        if(!fill) {
-            fill = document.createElement('div');
-            fill.className = 'ak-new-slider-fill';
-            wrap.appendChild(fill);
+        
+        var targetYears = [1, 5, 10, 15, 20, 25];
+        var rowsHTML = '';
+        for(var i=0; i<targetYears.length; i++) {
+            var y = targetYears[i];
+            if(y < state.tenure) {
+                var s = yearlySchedule[y-1];
+                rowsHTML += '<tr><td>Year ' + y + '</td><td>₹' + formatIndian(s.principal) + '</td><td>₹' + formatIndian(s.interest) + '</td><td>₹' + formatIndian(s.balance) + '</td></tr>';
+            }
         }
-        fill.style.width = pct + '%';
-    }
-
-    // Input Handlers
-    function onPropChangeInput(val) {
-        var num = parseRupees(val);
-        if (num < 1000000) num = 1000000;
-        if (num > 100000000) num = 100000000;
-        state.propVal = num;
-        syncUI();
-    }
-    function onPropChangeSlider(val) {
-        state.propVal = parseFloat(val);
-        syncUI();
-    }
-    function onDownChangeInput(val) {
-        var num = parseRupees(val);
-        if (num > state.propVal) num = state.propVal;
-        state.downPct = (num / state.propVal) * 100;
-        syncUI();
-    }
-    function onDownChangeSlider(val) {
-        state.downPct = parseFloat(val);
-        syncUI();
-    }
-    function onInterestChangeInput(val) {
-        var num = parseFloat(val.replace('%', ''));
-        if (isNaN(num)) num = 8.5;
-        if (num < 1) num = 1;
-        if (num > 20) num = 20;
-        state.interest = num;
-        syncUI();
-    }
-    function onInterestChangeSlider(val) {
-        state.interest = parseFloat(val);
-        syncUI();
-    }
-    function onTenureChangeSlider(val) {
-        state.tenure = parseInt(val);
-        syncUI();
+        if (state.tenure > 0 && yearlySchedule.length >= state.tenure) {
+            var finalS = yearlySchedule[state.tenure-1];
+            rowsHTML += '<tr><td>Final Year (' + state.tenure + ')</td><td>₹' + formatIndian(finalS.principal) + '</td><td>₹' + formatIndian(finalS.interest) + '</td><td>₹0</td></tr>';
+        }
+        
+        var tbody = document.getElementById('amortizationTbody');
+        if(tbody) tbody.innerHTML = rowsHTML;
     }
 
     function updateSliderFill(id) {
