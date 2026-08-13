@@ -1018,26 +1018,6 @@
         position: relative;
     }
 
-    @media (max-width: 500px) {
-        .ak-3-stats-new {
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
-        }
-        .ak-stat-col {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .ak-stat-col:not(:last-child) {
-            border-right: none;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            padding-right: 0;
-            padding-bottom: 0.75rem;
-        }
-        .ak-stat-col .material-symbols-outlined {
-            display: none;
-        }
-    }
     .ak-stat-col {
         display: flex;
         flex-direction: column;
@@ -1061,6 +1041,27 @@
         font-size: 1.05rem;
         font-weight: 600;
         color: #FFF;
+    }
+    
+    @media (max-width: 500px) {
+        .ak-3-stats-new {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ak-stat-col:not(:last-child) {
+            border-right: none;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-right: 0;
+            padding-bottom: 0.75rem;
+        }
+        .ak-stat-col .material-symbols-outlined {
+            display: none;
+        }
     }
 
     .ak-money-goes-section {
@@ -1341,7 +1342,11 @@
     @media (max-width: 768px) {
         .ak-calc-article {
             padding: 0 1rem;
-            margin: 1.5rem auto 2.5rem auto;
+            margin: 1.5rem auto 0 auto;
+        }
+        .ak-more-calcs-section {
+            padding: 1.5rem 1rem 2rem 1rem;
+            margin-bottom: 0;
         }
         .ak-calc-article h2,
         .ak-panel-header h2,
@@ -1349,6 +1354,9 @@
             margin-top: 2rem;
             margin-bottom: 0.75rem;
             font-size: 20px !important;
+        }
+        .ak-calc-article h2:first-of-type {
+            margin-top: 0;
         }
         .ak-faq-item {
             padding: 1rem 0;
@@ -1686,7 +1694,7 @@
                 <div><strong>Tip:</strong> Paying a higher down payment or choosing a shorter tenure can significantly reduce your total interest.</div>
             </div>
 
-            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.5; white-space: nowrap;">
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.5;">
                 EMI calculations are indicative and based on the information entered. Actual loan terms and EMI may vary by lender and borrower profile.
             </div>
         </div>
