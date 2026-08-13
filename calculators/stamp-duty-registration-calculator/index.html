@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamp Duty & Registration Calculator – Calculate Property Registration Charges | acreNkey</title>
+    <meta name="description" content="Calculate stamp duty, registration fees, total government charges and total property cost based on your property value and applicable rates with acreNkey's Stamp Duty & Registration Calculator.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://acrenkey.com/calculators/stamp-duty-registration-calculator/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://acrenkey.com/calculators/stamp-duty-registration-calculator/">
+    <meta property="og:title" content="Stamp Duty & Registration Calculator – Calculate Property Registration Charges | acreNkey">
+    <meta property="og:description" content="Calculate stamp duty, registration fees, total government charges and total property cost based on your property value and applicable rates with acreNkey's Stamp Duty & Registration Calculator.">
+    <meta property="og:image" content="https://acrenkey.com/assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stamp Duty & Registration Calculator – Calculate Property Registration Charges | acreNkey">
+    <meta name="twitter:description" content="Calculate stamp duty, registration fees, total government charges and total property cost based on your property value and applicable rates with acreNkey's Stamp Duty & Registration Calculator.">
+    <meta name="twitter:image" content="https://acrenkey.com/assets/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap"></noscript>
+
+    <link rel="stylesheet" href="../../website.min.css?v=v65">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260813_flush_cache_v71">
+
+    <!-- Structured Data (JSON-LD) for Financial Calculator -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "AcreNKey Stamp Duty & Registration Calculator",
+      "description": "Independent stamp duty and registration calculator to estimate government charges, registration fee capping, effective tax percentage, and total property acquisition cost.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AcreNKey",
+        "url": "https://acrenkey.com/"
+      },
+      "url": "https://acrenkey.com/calculators/stamp-duty-registration-calculator/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Stamp Duty & Registration Calculator",
+      "url": "https://acrenkey.com/calculators/stamp-duty-registration-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Calculate stamp duty, registration fees, total government charges and total property cost based on your property value and applicable rates.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AcreNKey",
+        "url": "https://acrenkey.com/"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://acrenkey.com/#core" },
+        { "@type": "ListItem", "position": 3, "name": "Stamp Duty & Registration Calculator", "item": "https://acrenkey.com/calculators/stamp-duty-registration-calculator/" }
+      ]
+    }
+    </script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR FAMILY STYLES --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 0 auto;
+        padding: 0 1.5rem;
+        font-family: var(--font-body);
+        color: var(--deep-navy);
+        box-sizing: border-box;
+    }
+
+    .page-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+    }
+    .page-breadcrumb a {
+        color: var(--muted-slate);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .page-breadcrumb a:hover {
+        color: var(--refined-brass);
+    }
+    .page-breadcrumb .separator {
+        color: #A0AEC0;
+    }
+    .page-breadcrumb .current {
+        color: var(--deep-navy);
+        font-weight: 600;
+    }
+
+    .ak-calc-header-row {
+        margin-bottom: 2rem;
+    }
+    .ak-calc-h1 {
+        font-family: var(--font-heading);
+        font-size: 2.25rem;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-calc-sub-text {
+        font-size: 0.95rem;
+        color: var(--deep-slate);
+        max-width: 840px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: stretch;
+        margin-bottom: 2.5rem;
+    }
+
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1.5px solid rgba(184, 142, 82, 0.25);
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(24, 42, 61, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ak-panel-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--divider);
+    }
+    .ak-panel-header h2 {
+        font-family: var(--font-heading);
+        font-size: 1.35rem;
+        color: var(--deep-navy);
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .ak-new-input-row {
+        margin-bottom: 1.25rem;
+    }
+    .ak-new-input-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+    .ak-new-input-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+    }
+    .ak-new-input-label .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 20px;
+    }
+    
+    .ak-new-input-box-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .ak-new-input-box-wrapper .prefix,
+    .ak-new-input-box-wrapper .suffix {
+        position: absolute;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+        pointer-events: none;
+    }
+    .ak-new-input-box-wrapper .prefix { left: 0.75rem; }
+    .ak-new-input-box-wrapper .suffix { right: 0.75rem; }
+
+    .ak-new-input {
+        width: 140px;
+        height: 38px;
+        background: var(--warm-ivory);
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+        text-align: right;
+        padding: 0 0.75rem;
+        box-sizing: border-box;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .ak-new-input.has-prefix { padding-left: 1.75rem; }
+    .ak-new-input.has-suffix { padding-right: 1.75rem; text-align: right; }
+    .ak-new-input:focus {
+        outline: none;
+        border-color: var(--refined-brass);
+        box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15);
+    }
+    .ak-new-input.disabled {
+        background: #F3F4F6;
+        color: #A0AEC0;
+        cursor: not-allowed;
+    }
+
+    .ak-new-slider-container {
+        position: relative;
+        width: 100%;
+        height: 24px;
+        display: flex;
+        align-items: center;
+    }
+    .ak-new-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background: #8C9BB1;
+        outline: none;
+        cursor: pointer;
+        margin: 0;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--refined-brass);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.15s ease;
+    }
+    .ak-new-slider::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+    }
+    .ak-new-slider:disabled::-webkit-slider-thumb {
+        background: #CBD5E0;
+        cursor: not-allowed;
+    }
+
+    .ak-slider-with-labels {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .ak-slider-labels-inline {
+        font-size: 0.75rem;
+        color: var(--muted-slate);
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    /* Cap Toggle Button Pill Group */
+    .ak-cap-pill-group {
+        display: flex;
+        background: var(--warm-ivory);
+        border: 1px solid var(--divider);
+        border-radius: 6px;
+        padding: 2px;
+        gap: 2px;
+    }
+    .ak-cap-pill-btn {
+        font-family: var(--font-body);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border: none;
+        background: transparent;
+        color: var(--deep-slate);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+    .ak-cap-pill-btn.active {
+        background: var(--refined-brass);
+        color: #FFFFFF;
+    }
+
+    /* Auto-Calculated Box */
+    .ak-loan-amount-box {
+        background: #F9F7F4;
+        border: 1px dashed rgba(140, 103, 52, 0.4);
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-la-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ak-la-title {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+        white-space: nowrap;
+    }
+    .ak-la-val {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--refined-brass);
+    }
+
+    /* Right Panel (Results) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 8px;
+        padding: 2rem;
+        color: #FFFFFF;
+        box-shadow: var(--shadow-lux);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ak-right-header {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+    .ak-indicative-outline {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 3px 8px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .ak-emi-huge {
+        font-family: var(--font-heading);
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.1;
+        font-weight: 400;
+        word-break: break-word;
+    }
+    .ak-emi-subtext {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-6-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .ak-stat-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    .ak-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .ak-stat-val {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    /* Stacked Bar */
+    .ak-money-goes-section {
+        margin-bottom: 1.25rem;
+    }
+    .ak-stacked-bar-title-new {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+    .ak-stacked-bar-new {
+        width: 100%;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        margin-bottom: 0.6rem;
+    }
+    .ak-bar-loan-new {
+        background: var(--refined-brass);
+        height: 100%;
+        transition: width 0.3s ease;
+    }
+    .ak-bar-down-new {
+        background: #4A607A;
+        height: 100%;
+        transition: width 0.3s ease;
+    }
+    .ak-legend-row-new {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .ak-legend-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .ak-legend-dot-new {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    .ak-legend-dot-new.loan { background: var(--refined-brass); }
+    .ak-legend-dot-new.down { background: #4A607A; }
+
+    /* Insight Box */
+    .ak-insight-box {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        font-size: 0.83rem;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .ak-insight-box .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 20px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    /* Tip Box */
+    .ak-post-widget-unit {
+        margin-top: 2rem;
+    }
+    .ak-tip-box-new {
+        background: #FFFDF9;
+        border: 1px solid rgba(140, 103, 52, 0.25);
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    /* Educational Content Section */
+    .ak-calc-article {
+        max-width: 1000px;
+        margin: 2.5rem auto 3.5rem auto;
+        font-family: var(--font-body);
+        color: var(--deep-navy);
+        line-height: 1.7;
+    }
+    .ak-calc-article h2 {
+        font-family: var(--font-heading);
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+    }
+    .ak-calc-article h2:first-of-type {
+        margin-top: 0;
+    }
+    .ak-calc-article p {
+        color: var(--deep-slate);
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Formula Transparency Box */
+    .ak-formula-card {
+        background: #FFFFFF;
+        border: 1.5px solid rgba(184, 142, 82, 0.2);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1.5rem 0 2.5rem 0;
+        box-shadow: 0 4px 16px rgba(24, 42, 61, 0.03);
+    }
+    .ak-formula-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        color: var(--deep-navy);
+        margin: 0 0 1rem 0;
+    }
+    .ak-formula-step {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed var(--divider);
+    }
+    .ak-formula-step:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .ak-formula-num {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--warm-ivory);
+        border: 1px solid var(--refined-brass);
+        color: var(--dark-brass);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 0.85rem;
+    }
+    .ak-formula-content {
+        overflow-x: auto;
+    }
+    .ak-formula-content strong {
+        color: var(--deep-navy);
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    .ak-formula-content code {
+        font-family: monospace;
+        background: #F3F4F6;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        color: var(--highlight-gold);
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
+
+    /* FAQ Section */
+    .ak-faq-container {
+        margin-top: 2rem;
+    }
+    .ak-faq-item {
+        border-bottom: 1px solid var(--divider);
+        padding: 1.25rem 0;
+    }
+    .ak-faq-question {
+        font-family: var(--font-body);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--deep-navy);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    .ak-faq-question .material-symbols-outlined {
+        transition: transform 0.3s ease;
+        color: var(--refined-brass);
+    }
+    .ak-faq-item.active .ak-faq-question .material-symbols-outlined {
+        transform: rotate(180deg);
+    }
+    .ak-faq-answer {
+        display: none;
+        padding-top: 0.75rem;
+        font-size: 0.92rem;
+        color: var(--deep-slate);
+        line-height: 1.6;
+    }
+    .ak-faq-item.active .ak-faq-answer {
+        display: block;
+    }
+
+    /* More Calculators Grid */
+    .ak-more-calcs-section {
+        max-width: 1140px;
+        margin: 0 auto 2rem auto;
+        padding: 3rem 2rem;
+    }
+    .ak-more-calcs-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .ak-more-calcs-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-more-calcs-sub {
+        font-size: 0.95rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
+    .ak-feature-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    .ak-fcard {
+        background: #FFFFFF;
+        border: 1.5px solid rgba(184, 142, 82, 0.18);
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+    .ak-fcard:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(24, 42, 61, 0.08);
+        border-color: var(--refined-brass);
+    }
+    .ak-fcard-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    .ak-fcard-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: rgba(140, 103, 52, 0.1);
+        color: var(--refined-brass);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .ak-fcard-title {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        color: var(--deep-navy);
+        font-weight: 500;
+        line-height: 1.3;
+    }
+    .ak-fcard-desc {
+        font-size: 0.85rem;
+        color: var(--deep-slate);
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+    .ak-fcard-link {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--refined-brass);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    .ak-fcard-link:hover {
+        color: var(--highlight-gold);
+    }
+
+    /* Mobile Responsive Breakpoints */
+    @media (max-width: 991px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .ak-feature-cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 768px) {
+        .ak-calc-wrapper {
+            margin: 90px auto 0 auto;
+            padding: 0 1rem;
+        }
+        .ak-calc-h1 {
+            font-size: 1.75rem;
+        }
+        .ak-calc-left-panel, .ak-calc-right-panel {
+            padding: 1.25rem;
+        }
+        .ak-calc-article {
+            padding: 0 1rem;
+            margin: 1.5rem auto 0 auto;
+        }
+        .ak-more-calcs-section {
+            padding: 1.5rem 1rem 2rem 1rem;
+            margin-bottom: 0;
+        }
+        .ak-calc-article h2,
+        .ak-panel-header h2,
+        .ak-more-calcs-title {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 20px !important;
+        }
+        .ak-calc-article h2:first-of-type {
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 500px) {
+        .ak-6-stats-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 0.75rem;
+        }
+        .ak-stat-col:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    @media (max-width: 450px) {
+        .ak-new-input {
+            width: 120px;
+            font-size: 0.88rem;
+        }
+        .ak-new-input-label {
+            font-size: 0.82rem;
+        }
+        .ak-loan-amount-box {
+            padding: 0.75rem 0.75rem;
+        }
+        .ak-la-row {
+            font-size: 0.85rem;
+        }
+        .ak-la-val {
+            font-size: 0.95rem;
+        }
+        .ak-la-title {
+            font-size: 0.85rem;
+        }
+    }
+    @media (max-width: 580px) {
+        .ak-feature-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a>
+            <ul class="nav-links">
+                <li><a href="/#buyers-checklist">Buyer's Checklist</a></li>
+                <li><a href="/#framework">Decision Framework</a></li>
+                <li><a href="/#core">CORE</a></li>
+                <li><a href="/#testimonials">Testimonials</a></li>
+                <li><a href="/#about-us">About Us</a></li>
+            </ul>
+            <a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a>
+            <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-line top-line"></span>
+                <span class="hamburger-line mid-line"></span>
+                <span class="hamburger-line bot-line"></span>
+            </button>
+        </div>
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+        <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+            <div class="mobile-drawer-inner">
+                <div class="mobile-drawer-header">
+                    <a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a>
+                    <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <nav class="mobile-nav-list">
+                    <a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Buyer's Checklist</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                    <a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                    <a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                    <a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                    <a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                </nav>
+                <div class="mobile-drawer-footer">
+                    <a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a>
+                    <span class="mobile-drawer-subtext">Expert Property Guidance</span>
+                    <div class="mobile-drawer-socials">
+                        <a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Calculator Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Stamp Duty &amp; Registration Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Stamp Duty &amp; Registration Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate stamp duty, registration charges and the total government charges payable when buying a property.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Calculate registration costs</h2>
+                </div>
+
+                <!-- Input: Property Value -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Property Value
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propValueInput" class="ak-new-input has-prefix" value="1,00,00,000" onchange="onPropValueChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propValueSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropValueChangeSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Input: Stamp Duty Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" title="Applicable stamp duty percentage for your state." style="cursor:help;">percent</span>
+                            Stamp Duty Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="stampRateInput" class="ak-new-input has-suffix" value="5.0" onchange="onStampRateChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="stampRateSlider" class="ak-new-slider" min="1.0" max="12.0" step="0.1" value="5.0" oninput="onStampRateChangeSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">12%</span>
+                    </div>
+                </div>
+
+                <!-- Auto-Calculated Box: Stamp Duty Payable -->
+                <div class="ak-loan-amount-box">
+                    <div class="ak-la-row">
+                        <span class="ak-la-title">Stamp Duty Payable <span style="font-weight:400; opacity:0.7;">(Auto-calculated)</span></span>
+                        <span class="ak-la-val" id="stampDutyVal">₹ 5,00,000</span>
+                    </div>
+                </div>
+
+                <!-- Input: Registration Fee Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" title="Applicable registration fee percentage." style="cursor:help;">description</span>
+                            Registration Fee Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="regRateInput" class="ak-new-input has-suffix" value="1.0" onchange="onRegRateChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="regRateSlider" class="ak-new-slider" min="0.0" max="5.0" step="0.1" value="1.0" oninput="onRegRateChangeSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">5%</span>
+                    </div>
+                </div>
+
+                <!-- Input: Registration Fee Cap -->
+                <div class="ak-new-input-row" style="margin-bottom: 0.5rem;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" title="Maximum registration fee cap if mandated by state regulations." style="cursor:help;">fact_check</span>
+                            Registration Fee Cap
+                        </div>
+                        <div class="ak-cap-pill-group">
+                            <button type="button" id="capBtnApply" class="ak-cap-pill-btn active" onclick="setCapMode(true)">Apply Cap</button>
+                            <button type="button" id="capBtnNoCap" class="ak-cap-pill-btn" onclick="setCapMode(false)">No Cap</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="regCapInput" class="ak-new-input has-prefix" value="50,000" onchange="onRegCapChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="regCapSlider" class="ak-new-slider" min="0" max="500000" step="5000" value="50000" oninput="onRegCapChangeSlider(this.value)">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <div class="ak-right-header" style="margin-bottom:0;">Total Government Charges</div>
+                        <div class="ak-indicative-outline">Indicative</div>
+                    </div>
+                    
+                    <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <div class="ak-emi-huge" id="resultTotalGovt" style="color: #FFFFFF;"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>5,50,000</div>
+                    </div>
+                    <div class="ak-emi-subtext" id="govtSubtext">Based on ₹1,00,00,000 property value • 5.0% Stamp Duty + 1.0% Reg</div>
+                </div>
+                
+                <div class="ak-6-stats-grid">
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Stamp Duty</div>
+                        <div class="ak-stat-val" id="resultStampDuty">₹ 5,00,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Registration Fee</div>
+                        <div class="ak-stat-val" id="resultRegFee">₹ 50,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Effective Government %</div>
+                        <div class="ak-stat-val" id="resultEffectivePct">5.5%</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Total Property Cost</div>
+                        <div class="ak-stat-val" id="resultTotalCost">₹ 1,05,50,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Property Base Value</div>
+                        <div class="ak-stat-val" id="resultPropValue">₹ 1,00,00,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Reg Fee Cap Status</div>
+                        <div class="ak-stat-val" id="resultCapStatus">Cap Applied</div>
+                    </div>
+                </div>
+
+                <!-- Funding Breakdown Stacked Bar -->
+                <div class="ak-money-goes-section">
+                    <div class="ak-stacked-bar-title-new">Property Acquisition Cost Breakdown</div>
+                    <div class="ak-stacked-bar-new">
+                        <div class="ak-bar-loan-new" id="barProp" style="width:94.8%"></div>
+                        <div class="ak-bar-down-new" id="barGovt" style="width:5.2%"></div>
+                    </div>
+                    <div class="ak-legend-row-new">
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new loan"></div>
+                            <span>Property Base Value (<span id="legendPropVal">₹1,00,00,000</span>)</span>
+                        </div>
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new down"></div>
+                            <span>Govt Charges (<span id="legendGovtVal">₹5,50,000</span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Cap Transparency Insight Box -->
+                <div class="ak-insight-box">
+                    <span class="material-symbols-outlined">info</span>
+                    <div id="insightText">
+                        Calculated registration fee (<strong>₹1,00,000</strong>) exceeds cap. Registration fee capped at <strong>₹50,000</strong>, saving you <strong>₹50,000</strong>.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ak-post-widget-unit">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">lightbulb</span>
+                <div><strong>Note:</strong> Stamp duty and registration rates vary by state, property location, buyer gender, and transaction type. Always verify final figures with your local Sub-Registrar Office.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.5;">
+                Stamp duty and registration estimates are based on user-configurable rates. Final charges may include additional local surcharge or cess depending on state rules.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Content Section -->
+    <article class="ak-calc-article container">
+        <h2>How Are Stamp Duty &amp; Registration Charges Calculated?</h2>
+        <p>Stamp Duty is a state-level tax levied on legal property transactions, while Registration Fee is paid to register the property ownership title deed in government records.</p>
+        
+        <p>Government acquisition charges are calculated using the following steps:</p>
+
+        <!-- Formula Transparency Card -->
+        <div class="ak-formula-card">
+            <h3>Stamp Duty &amp; Registration Formula Breakdown</h3>
+            
+            <div class="ak-formula-step">
+                <div class="ak-formula-num">1</div>
+                <div class="ak-formula-content">
+                    <strong>Step 1 — Calculate Stamp Duty</strong>
+                    <code>Stamp Duty = Property Value × Stamp Duty Rate%</code>
+                </div>
+            </div>
+
+            <div class="ak-formula-step">
+                <div class="ak-formula-num">2</div>
+                <div class="ak-formula-content">
+                    <strong>Step 2 — Calculate Registration Fee</strong>
+                    <code>With Cap: Registration Fee = MIN( Property Value × Registration Rate%, Registration Fee Cap )</code><br>
+                    <code>Without Cap: Registration Fee = Property Value × Registration Rate%</code>
+                </div>
+            </div>
+
+            <div class="ak-formula-step">
+                <div class="ak-formula-num">3</div>
+                <div class="ak-formula-content">
+                    <strong>Step 3 — Total Government Charges &amp; Effective Tax Rate</strong>
+                    <code>Total Government Charges = Stamp Duty + Registration Fee</code><br>
+                    <code>Effective % = ( Total Government Charges / Property Value ) × 100</code>
+                </div>
+            </div>
+
+            <div class="ak-formula-step">
+                <div class="ak-formula-num">4</div>
+                <div class="ak-formula-content">
+                    <strong>Step 4 — Total Property Acquisition Cost</strong>
+                    <code>Total Property Cost = Property Value + Total Government Charges</code>
+                </div>
+            </div>
+        </div>
+
+        <h2>Key Factors That Influence Stamp Duty Rates in India</h2>
+        <p>Stamp duty rates are non-uniform across India and depend on several key parameters:</p>
+
+        <ul style="color: var(--deep-slate); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.25rem;">
+            <li><strong>State Legislation:</strong> States like Maharashtra (5%-6%), Karnataka (5%), and Delhi (4%-6%) prescribe distinct rate schedules.</li>
+            <li><strong>Buyer Category (Gender Concessions):</strong> Many Indian states offer a 1% to 2% discount on stamp duty when property is registered in a woman's name.</li>
+            <li><strong>Urban vs. Rural Location:</strong> Properties within municipal corporation limits often attract an additional 1% local body tax (LBT) or metro cess.</li>
+            <li><strong>Property Type:</strong> Commercial real estate transactions generally carry higher stamp duty rates than residential properties.</li>
+        </ul>
+
+        <h2>Stamp Duty &amp; Registration Calculator FAQs</h2>
+        <div class="ak-faq-container">
+            <div class="ak-faq-item">
+                <div class="ak-faq-question">Are stamp duty and registration fees tax-deductible? <span class="material-symbols-outlined">expand_more</span></div>
+                <div class="ak-faq-answer">Yes. Under Section 80C of the Income Tax Act, buyers can claim a tax deduction of up to ₹1.5 Lakhs on stamp duty and registration fees paid during the financial year.</div>
+            </div>
+            <div class="ak-faq-item">
+                <div class="ak-faq-question">Can stamp duty be included in the home loan amount? <span class="material-symbols-outlined">expand_more</span></div>
+                <div class="ak-faq-answer">As per RBI guidelines, banks cannot include stamp duty and registration charges in the home loan principal for property values above ₹10 Lakhs. They must be funded separately as cash out-of-pocket.</div>
+            </div>
+            <div class="ak-faq-item">
+                <div class="ak-faq-question">What happens if a state imposes a maximum registration fee cap? <span class="material-symbols-outlined">expand_more</span></div>
+                <div class="ak-faq-answer">In states where a cap applies (e.g., ₹30,000 or ₹50,000), the payable registration fee is capped at that amount regardless of how high the property value is.</div>
+            </div>
+            <div class="ak-faq-item">
+                <div class="ak-faq-question">How is stamp duty calculated for joint property ownership? <span class="material-symbols-outlined">expand_more</span></div>
+                <div class="ak-faq-answer">If property is jointly registered with a woman as sole or first owner, concessional state rates (typically 1% lower) apply to the total transaction value.</div>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your purchase with greater clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
+                    <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate monthly EMI, total interest, and repayment schedule for your home loan.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">home</span></div>
+                    <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on income and savings.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">verified_user</span></div>
+                    <div class="ak-fcard-title">Loan Eligibility Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Check your maximum loan eligibility based on age, income, and financial profile.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
+                    <div class="ak-fcard-title">Down Payment Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Plan savings required for your initial home down payment and upfront expenses.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/total-cost-buying-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover hidden costs including interior work, GST, legal fees, and maintenance.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">balance</span></div>
+                    <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Compare the long-term financial impact of renting versus buying a home.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/property-roi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate annualized returns and overall ROI on real estate investments.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/rental-yield-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">house_siding</span></div>
+                    <div class="ak-fcard-title">Rental Yield Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate gross and net rental yield for residential properties.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+
+            <a href="/calculators/property-appreciation-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">show_chart</span></div>
+                    <div class="ak-fcard-title">Property Appreciation Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Project future property valuation based on historical growth rates.</div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem;">
+                <div style="max-width: 320px;">
+                    <span class="brand-logo-text" style="color: #FFF; font-size: 2rem; display: block; margin-bottom: 0.75rem;">acre&amp;key</span>
+                    <p style="font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.6;">Sophisticated property guidance and decision intelligence for home buyers.</p>
+                </div>
+                <div>
+                    <h4 style="color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;">Calculators</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><a href="/calculators/home-loan-emi-calculator/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home Loan EMI Calculator</a></li>
+                        <li><a href="/calculators/home-affordability-calculator/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home Affordability Calculator</a></li>
+                        <li><a href="/calculators/loan-eligibility-calculator/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Loan Eligibility Calculator</a></li>
+                        <li><a href="/calculators/down-payment-calculator/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Down Payment Calculator</a></li>
+                        <li><a href="/calculators/stamp-duty-registration-calculator/" style="color: #FFF; text-decoration: none; font-weight: 600;">Stamp Duty &amp; Registration Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;">Connect</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <div class="footer-bottom-left">&copy; 2026 acreNkey. All rights reserved.</div>
+                <ul class="footer-legal-links">
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->
+    <script>
+    // State
+    var state = {
+        propValue: 10000000,
+        stampRate: 5.0,
+        regRate: 1.0,
+        hasCap: true,
+        regCap: 50000
+    };
+
+    function parseRupees(str) {
+        return parseInt(str.replace(/[^0-9]/g, '')) || 0;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null) return '0';
+        var x = Math.round(amount).toString();
+        var lastThree = x.substring(x.length-3);
+        var otherNumbers = x.substring(0, x.length-3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+    }
+
+    function setCapMode(isCapActive) {
+        state.hasCap = isCapActive;
+        
+        var applyBtn = document.getElementById('capBtnApply');
+        var noCapBtn = document.getElementById('capBtnNoCap');
+        var inputEl = document.getElementById('regCapInput');
+        var sliderEl = document.getElementById('regCapSlider');
+
+        if (isCapActive) {
+            applyBtn.classList.add('active');
+            noCapBtn.classList.remove('active');
+            inputEl.classList.remove('disabled');
+            inputEl.disabled = false;
+            sliderEl.disabled = false;
+        } else {
+            noCapBtn.classList.add('active');
+            applyBtn.classList.remove('active');
+            inputEl.classList.add('disabled');
+            inputEl.disabled = true;
+            sliderEl.disabled = true;
+        }
+        syncUI();
+    }
+
+    function syncUI() {
+        // Step 1: Stamp Duty
+        var stampDuty = Math.round(state.propValue * (state.stampRate / 100));
+
+        // Step 2: Registration Fee
+        var uncappedRegFee = Math.round(state.propValue * (state.regRate / 100));
+        var regFee = uncappedRegFee;
+        var isCapApplied = false;
+
+        if (state.hasCap) {
+            if (uncappedRegFee > state.regCap) {
+                regFee = state.regCap;
+                isCapApplied = true;
+            }
+        }
+
+        // Step 3: Total Government Charges & Property Cost
+        var totalGovt = stampDuty + regFee;
+        var totalPropCost = state.propValue + totalGovt;
+        var effectivePct = state.propValue > 0 ? (totalGovt / state.propValue) * 100 : 0;
+
+        // Update Left Panel Inputs
+        document.getElementById('propValueInput').value = formatIndian(state.propValue);
+        document.getElementById('propValueSlider').value = state.propValue;
+        updateSliderFill('propValueSlider');
+
+        document.getElementById('stampRateInput').value = state.stampRate.toFixed(1);
+        document.getElementById('stampRateSlider').value = state.stampRate;
+        updateSliderFill('stampRateSlider');
+
+        document.getElementById('stampDutyVal').innerText = '₹ ' + formatIndian(stampDuty);
+
+        document.getElementById('regRateInput').value = state.regRate.toFixed(1);
+        document.getElementById('regRateSlider').value = state.regRate;
+        updateSliderFill('regRateSlider');
+
+        document.getElementById('regCapInput').value = formatIndian(state.regCap);
+        document.getElementById('regCapSlider').value = state.regCap;
+        updateSliderFill('regCapSlider');
+
+        // Update Right Panel Outputs
+        document.getElementById('resultTotalGovt').innerHTML = "<span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>" + formatIndian(totalGovt);
+        document.getElementById('govtSubtext').innerText = "Based on ₹" + formatIndian(state.propValue) + " property value • " + state.stampRate.toFixed(1) + "% Stamp Duty + " + state.regRate.toFixed(1) + "% Reg";
+        
+        document.getElementById('resultStampDuty').innerText = "₹ " + formatIndian(stampDuty);
+        document.getElementById('resultRegFee').innerText = "₹ " + formatIndian(regFee);
+        document.getElementById('resultEffectivePct').innerText = effectivePct.toFixed(1) + "%";
+        document.getElementById('resultTotalCost').innerText = "₹ " + formatIndian(totalPropCost);
+        document.getElementById('resultPropValue').innerText = "₹ " + formatIndian(state.propValue);
+
+        var statusEl = document.getElementById('resultCapStatus');
+        if (!state.hasCap) {
+            statusEl.innerText = "Uncapped";
+        } else if (isCapApplied) {
+            statusEl.innerText = "Cap Applied (₹" + formatIndian(state.regCap) + ")";
+        } else {
+            statusEl.innerText = "Below Cap";
+        }
+
+        // Update Stacked Bar (Base Property vs Govt Charges)
+        var propPctBar = totalPropCost > 0 ? (state.propValue / totalPropCost) * 100 : 95;
+        var govtPctBar = totalPropCost > 0 ? (totalGovt / totalPropCost) * 100 : 5;
+
+        document.getElementById('barProp').style.width = propPctBar + "%";
+        document.getElementById('barGovt').style.width = govtPctBar + "%";
+        
+        document.getElementById('legendPropVal').innerText = "₹" + formatIndian(state.propValue);
+        document.getElementById('legendGovtVal').innerText = "₹" + formatIndian(totalGovt);
+
+        // Update Dynamic Cap Insight Box
+        var insightEl = document.getElementById('insightText');
+        if (state.propValue === 0) {
+            insightEl.innerHTML = "Please enter your property value to estimate stamp duty and registration fees.";
+        } else if (!state.hasCap) {
+            insightEl.innerHTML = "Registration fee of " + state.regRate.toFixed(1) + "% (<strong>₹" + formatIndian(uncappedRegFee) + "</strong>) is calculated without any maximum capping.";
+        } else if (isCapApplied) {
+            var savings = uncappedRegFee - state.regCap;
+            insightEl.innerHTML = "Calculated registration fee (<strong>₹" + formatIndian(uncappedRegFee) + "</strong>) exceeds cap. Registration fee capped at <strong>₹" + formatIndian(state.regCap) + "</strong>, saving you <strong>₹" + formatIndian(savings) + "</strong>.";
+        } else {
+            insightEl.innerHTML = "Calculated registration fee (<strong>₹" + formatIndian(uncappedRegFee) + "</strong>) is below the <strong>₹" + formatIndian(state.regCap) + "</strong> cap limit.";
+        }
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if(!el) return;
+        if (el.disabled) {
+            el.style.background = '#E2E8F0';
+            return;
+        }
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value);
+        var pct = ((val - min) / (max - min)) * 100;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    // Input Handlers
+    function onPropValueChangeInput(val) {
+        var num = parseRupees(val);
+        if (num < 1000000) num = 1000000;
+        if (num > 100000000) num = 100000000;
+        state.propValue = num;
+        syncUI();
+    }
+    function onPropValueChangeSlider(val) {
+        state.propValue = parseFloat(val);
+        syncUI();
+    }
+
+    function onStampRateChangeInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        if (isNaN(num)) num = 5.0;
+        if (num < 0) num = 0;
+        if (num > 25) num = 25;
+        state.stampRate = num;
+        syncUI();
+    }
+    function onStampRateChangeSlider(val) {
+        state.stampRate = parseFloat(val);
+        syncUI();
+    }
+
+    function onRegRateChangeInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        if (isNaN(num)) num = 1.0;
+        if (num < 0) num = 0;
+        if (num > 10) num = 10;
+        state.regRate = num;
+        syncUI();
+    }
+    function onRegRateChangeSlider(val) {
+        state.regRate = parseFloat(val);
+        syncUI();
+    }
+
+    function onRegCapChangeInput(val) {
+        var num = parseRupees(val);
+        if (num < 0) num = 0;
+        if (num > 10000000) num = 10000000;
+        state.regCap = num;
+        syncUI();
+    }
+    function onRegCapChangeSlider(val) {
+        state.regCap = parseFloat(val);
+        syncUI();
+    }
+
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.ak-faq-question').forEach(function(item) {
+        item.addEventListener('click', function() {
+            var parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<div class="lf-modal-overlay" id="lfModalOverlay"><div class="lf-cc-backdrop" id="lfCcBackdrop"></div><div class="lf-wrap" id="lfWrap" role="dialog" aria-modal="true" aria-labelledby="lfMainHeading" aria-describedby="lfSubHeading"><div class="lf-drag-handle"></div><button type="button" class="lf-modal-close-icon lf-focusable" id="lfModalClose" aria-label="Close modal window" tabindex="0"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M1 1l12 12M13 1L1 13"/></svg></button><div id="lfModalFormContent"><div class="lf-header"><h2 class="lf-main-heading" id="lfMainHeading">Speak to a Home Buying Expert</h2><p class="lf-sub-heading" id="lfSubHeading">Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class="lf-form" id="lfForm" novalidate><input class="lf-hp" type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" id="lfGclid" name="gclid"><input type="hidden" id="lfFclid" name="fclid"><input type="hidden" id="lfUtmSource" name="utm_source"><input type="hidden" id="lfUtmMedium" name="utm_medium"><input type="hidden" id="lfUtmCampaign" name="utm_campaign"><input type="hidden" id="lfUtmTerm" name="utm_term"><input type="hidden" id="lfUtmContent" name="utm_content"><input type="hidden" id="lfSourceUrl" name="source_url"><input type="hidden" id="lfSubmittedAt" name="submitted_at"><div class="lf-field" id="lfNameField"><div class="lf-input-box"><label class="lf-label" for="lfName">Full name<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="text" id="lfName" name="name" autocomplete="name" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="60" aria-describedby="lfNameErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfNameErr" role="alert"></div></div><div class="lf-field lf-field-phone" id="lfPhoneField"><div class="lf-input-box"><label class="lf-label" id="lfPhoneLbl" for="lfPhone">Mobile<span class="lf-req" aria-hidden="true">*</span></label><div class="lf-phone-row"><button type="button" class="lf-cc-trigger lf-focusable" id="lfCcTrigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lfCcPanel" aria-label="Select country dial code" tabindex="0"><span id="lfCcDisplay">+91</span><svg class="lf-cc-arrow" viewBox="0 0 8 5" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l3 3 3-3"/></svg></button><div class="lf-cc-panel" id="lfCcPanel" role="listbox" aria-labelledby="lfPhoneLbl"><input class="lf-cc-search lf-focusable" type="text" id="lfCcSearch" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="lfCcList" placeholder="Search country..." autocomplete="off" aria-label="Search countries by name or code" tabindex="-1"><div class="lf-cc-list" id="lfCcList"></div></div><input type="hidden" id="lfCcVal" name="country_code" value="+91"><div class="lf-divider"></div><input class="lf-input lf-focusable" type="tel" id="lfPhone" name="phone" inputmode="numeric" autocomplete="tel" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="15" aria-describedby="lfPhoneErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" id="lfPhoneClearBtn" aria-label="Clear mobile number field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class="lf-err" id="lfPhoneErr" role="alert"></div></div><div class="lf-field" id="lfEmailField"><div class="lf-input-box"><label class="lf-label" for="lfEmail">Email<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="email" id="lfEmail" name="email" autocomplete="email" enterkeyhint="done" aria-required="true" tabindex="0" aria-invalid="false" maxlength="120" aria-describedby="lfEmailErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfEmailErr" role="alert"></div></div><div class="lf-submit-wrap"><button type="submit" class="lf-btn lf-focusable" id="lfSubmitBtn" tabindex="0"><div class="lf-spinner"></div><span id="lfBtnText">Book Free Consultation</span></button><p class="lf-privacy-consent" style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By booking, you agree to our <a href="/privacy-policy/" style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class="lf-global-err" id="lfGlobalErr" role="alert" aria-live="assertive" aria-atomic="true">Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+<script src="../../website.js?v=20260813_flush_cache_v71" defer></script>
+<script src="../../lead-form.min.js?v=20260813_flush_cache_v71" defer></script>
+</body>
+</html>
