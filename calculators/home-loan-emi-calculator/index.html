@@ -12,26 +12,26 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home Loan EMI Calculator | AcreNKey">
     <meta property="og:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v57">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v58">
     <meta property="og:url" content="https://acrenkey.com/calculators/home-loan-emi-calculator/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home Loan EMI Calculator | AcreNKey">
     <meta name="twitter:description" content="Calculate your home loan EMI, total interest and repayment instantly with AcreNKey's simple, transparent Home Loan EMI Calculator.">
-    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v57">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260812_flush_cache_v58">
 
     <!-- Favicon & Stylesheets -->
-    <link rel="icon" href="../../style-guide/assets/favicon.svg?v=20260812_flush_cache_v57" type="image/svg+xml">
+    <link rel="icon" href="../../style-guide/assets/favicon.svg?v=20260812_flush_cache_v58" type="image/svg+xml">
     
-    <link rel="stylesheet" href="../../style-guide/assets/fonts/fontawesome/all.css?v=20260812_flush_cache_v57" media="print" onload="this.media='all'">
-    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=20260812_flush_cache_v57" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=20260812_flush_cache_v57" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=20260812_flush_cache_v57" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=20260812_flush_cache_v57" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=20260812_flush_cache_v57" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../style-guide/assets/fonts/fontawesome/all.css?v=20260812_flush_cache_v58" media="print" onload="this.media='all'">
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=20260812_flush_cache_v58" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=20260812_flush_cache_v58" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=20260812_flush_cache_v58" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=20260812_flush_cache_v58" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=20260812_flush_cache_v58" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap">
 
     <link rel="stylesheet" href="../../website.min.css?v=57">
-    <link rel="stylesheet" href="../../lead-form.css?v=20260812_flush_cache_v57">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260812_flush_cache_v58">
     
     <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -577,71 +577,119 @@
         transition: width 0.3s ease;
     }
 
-    /* 4 Feature Cards Grid */
+    /* More Calculators Section */
+    .ak-more-calcs-section {
+        max-width: 1140px;
+        margin: 0 auto 2rem auto;
+        padding: 3rem 2rem;
+    }
+    .ak-more-calcs-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .ak-more-calcs-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-more-calcs-sub {
+        font-size: 0.95rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
     .ak-feature-cards {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
         margin-bottom: 2rem;
     }
-
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
         .ak-feature-cards { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 580px) {
         .ak-feature-cards { grid-template-columns: 1fr; }
     }
-
     .ak-fcard {
-        background: #FFF;
-        border: 1px solid #EAEFF5;
-        border-radius: 8px;
+        background: #FFFFFF;
+        border: 1.5px solid rgba(184, 142, 82, 0.18);
+        border-radius: 12px;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.015);
+        box-shadow: 0 4px 16px rgba(24,42,61,0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-
+    .ak-fcard:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 28px rgba(24,42,61,0.08);
+        border-color: rgba(140, 103, 52, 0.4);
+    }
     .ak-fcard-icon {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
+        background: var(--warm-ivory);
+        border: 1px solid rgba(184, 142, 82, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 1rem;
     }
-    
-    .ak-fcard-icon .material-symbols-outlined { font-size: 40px; } /*
-        */
-    .ak-fcard-icon.green .material-symbols-outlined { color: var(--refined-brass); }
-    .ak-fcard-icon.purple .material-symbols-outlined { color: var(--refined-brass); }
-    .ak-fcard-icon.blue .material-symbols-outlined { color: var(--refined-brass); }
-    .ak-fcard-icon.orange .material-symbols-outlined { color: var(--refined-brass); }
-
+    .ak-fcard-icon .material-symbols-outlined {
+        font-size: 24px;
+        color: var(--refined-brass);
+    }
     .ak-fcard-title {
         font-size: 1rem;
         font-weight: 800;
         color: var(--deep-navy-100);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.3;
     }
-
     .ak-fcard-desc {
         font-size: 0.85rem;
         color: var(--muted-slate);
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
+        margin-bottom: 1.25rem;
+        line-height: 1.55;
         flex-grow: 1;
     }
-
     .ak-fcard-link {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         font-weight: 700;
         text-decoration: none;
         display: inline-flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.35rem;
+        color: var(--refined-brass);
+        transition: gap 0.2s ease;
     }
-    .ak-fcard-link.green { color: var(--refined-brass); }
-    .ak-fcard-link.purple { color: var(--refined-brass); }
-    .ak-fcard-link.blue { color: var(--refined-brass); }
-    .ak-fcard-link.orange { color: var(--refined-brass); }
+    .ak-fcard-link:hover { gap: 0.6rem; }
+    .ak-more-calcs-tip {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(140, 103, 52, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-size: 0.875rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+    }
+    .ak-more-calcs-tip .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+    .ak-more-calcs-tip a {
+        color: var(--refined-brass);
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .ak-more-calcs-tip a:hover { text-decoration: underline; }
 
     /* True Cost Section */
     .ak-true-cost-strip {
@@ -1410,6 +1458,70 @@
 
     </main>
 
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your purchase with greater clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+                <a href="/calculators/home-affordability-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility Calculator</div>
+                <div class="ak-fcard-desc">Estimate how much home loan you could potentially get based on your income and profile.</div>
+                <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </div>
+                <div class="ak-fcard-title">Stamp Duty &amp; Registration Calculator</div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration charges and other applicable statutory fees.</div>
+                <a href="/calculators/stamp-duty-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost Calculator</div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+                <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+                <div class="ak-fcard-desc">Compare the long-term financial cost of renting vs buying a home in your city.</div>
+                <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+            <div class="ak-fcard">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">payments</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Prepayment Calculator</div>
+                <div class="ak-fcard-desc">See how prepayments can help you save on interest and reduce your loan tenure.</div>
+                <a href="/calculators/home-loan-prepayment-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
+            </div>
+        </div>
+
+        <div class="ak-more-calcs-tip">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <div><strong>Tip:</strong> These calculators help you plan your home purchase better. For expert guidance on buying the right property, talk to an <a href="/#footer">AcreNKey Home Buyer Concierge</a>.</div>
+        </div>
+    </section>
+
     <section class="ak-calc-article">
         <h2>What Your Home Loan EMI Really Costs</h2>
         <p>Your monthly EMI is only one part of the cost of a home loan. The total amount you repay depends on the loan amount, interest rate, and tenure you choose.</p>
@@ -1920,7 +2032,7 @@
     });
     </script>
 
-<script src="../../website.js?v=20260812_flush_cache_v57" defer></script>
-<script src="../../lead-form.min.js?v=20260812_flush_cache_v57" defer></script>
+<script src="../../website.js?v=20260812_flush_cache_v58" defer></script>
+<script src="../../lead-form.min.js?v=20260812_flush_cache_v58" defer></script>
 </body>
 </html>
