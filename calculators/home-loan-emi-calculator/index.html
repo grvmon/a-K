@@ -1018,21 +1018,15 @@
 
     .ak-3-stats-new {
         display: grid;
-        grid-template-columns: max-content max-content max-content;
-        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
         margin-bottom: 1.5rem;
-        position: relative;
     }
 
     .ak-stat-col {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
-        position: relative;
-    }
-    .ak-stat-col:not(:last-child) {
-        border-right: 1px solid rgba(255,255,255,0.15);
-        padding-right: 1rem;
     }
     .ak-stat-col .material-symbols-outlined {
         color: rgba(255,255,255,0.84);
@@ -1059,12 +1053,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        .ak-stat-col:not(:last-child) {
-            border-right: none;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            padding-right: 0;
-            padding-bottom: 0.75rem;
-        }
+
         .ak-stat-col .material-symbols-outlined {
             display: none;
         }
@@ -1647,17 +1636,14 @@
                 
                 <div class="ak-3-stats-new">
                     <div class="ak-stat-col">
-                        <span class="material-symbols-outlined">account_balance_wallet</span>
                         <div class="ak-stat-label">Loan Amount</div>
                         <div class="ak-stat-val" id="resultLoan">₹ 80,00,000</div>
                     </div>
                     <div class="ak-stat-col">
-                        <span class="material-symbols-outlined">percent</span>
                         <div class="ak-stat-label">Total Interest</div>
                         <div class="ak-stat-val" id="resultInterest">₹ 70,24,240</div>
                     </div>
                     <div class="ak-stat-col">
-                        <span class="material-symbols-outlined">description</span>
                         <div class="ak-stat-label">Total Repayment</div>
                         <div class="ak-stat-val" id="resultRepay">₹ 1,50,24,240</div>
                     </div>
@@ -1667,8 +1653,8 @@
                 <div class="ak-money-goes-section">
                     <div class="ak-stacked-bar-title-new">Where Your Money Goes</div>
                     <div class="ak-stacked-bar-new">
-                        <div class="ak-bar-principal-new" id="barPrincipal" style="width:53.2%">53.2%</div>
-                        <div class="ak-bar-interest-new" id="barInterest" style="width:46.8%">46.8%</div>
+                        <div class="ak-bar-principal-new" id="barPrincipal" style="width:53.2%"></div>
+                        <div class="ak-bar-interest-new" id="barInterest" style="width:46.8%"></div>
                     </div>
                     <div class="ak-legend-row-new">
                         <div class="ak-legend-item-inline">
@@ -2123,12 +2109,12 @@
         var iPct = total > 0 ? (totalInterest / total) * 100 : 50;
 
         document.getElementById('barPrincipal').style.width = pPct + "%";
-        document.getElementById('barPrincipal').innerText = pPct.toFixed(1) + "%";
+        document.getElementById('barPrincipal').innerText = "";
         document.getElementById('barInterest').style.width = iPct + "%";
-        document.getElementById('barInterest').innerText = iPct.toFixed(1) + "%";
+        document.getElementById('barInterest').innerText = "";
         
-        document.getElementById('legendPrincipalVal').innerText = "₹" + formatIndian(loanVal);
-        document.getElementById('legendInterestVal').innerText = "₹" + formatIndian(totalInterest);
+        document.getElementById('legendPrincipalVal').innerText = pPct.toFixed(1) + "% (₹" + formatIndian(loanVal) + ")";
+        document.getElementById('legendInterestVal').innerText = iPct.toFixed(1) + "% (₹" + formatIndian(totalInterest) + ")";
 
         // Update Insight Box
         document.getElementById('insightIntVal').innerText = "₹" + formatIndian(totalInterest);
