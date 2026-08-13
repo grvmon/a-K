@@ -146,16 +146,22 @@
     /* Main Grid */
     .ak-calc-main-grid {
         display: grid;
-        grid-template-columns: 550px max-content;
+        grid-template-columns: 550px 550px;
         justify-content: center;
         gap: 1rem;
         margin-bottom: 2rem;
         font-variant-numeric: tabular-nums;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 1150px) {
         .ak-calc-main-grid {
             grid-template-columns: 1fr;
+        }
+        .ak-calc-right-panel {
+            min-height: auto;
+        }
+        .ak-3-stats-new {
+            grid-template-columns: max-content max-content max-content;
         }
     }
 
