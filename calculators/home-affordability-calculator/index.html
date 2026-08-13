@@ -296,6 +296,7 @@
         font-size: 0.88rem;
         font-weight: 600;
         color: var(--deep-navy);
+        white-space: nowrap;
     }
     .ak-la-val {
         font-size: 1.05rem;
@@ -613,6 +614,8 @@
         flex-direction: column;
         justify-content: space-between;
         transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        text-decoration: none;
+        color: inherit;
     }
     .ak-fcard:hover {
         transform: translateY(-3px);
@@ -700,15 +703,40 @@
         .ak-calc-article h2:first-of-type {
             margin-top: 0;
         }
+    }
+    @media (max-width: 500px) {
         .ak-6-stats-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 0.75rem;
+        }
+        .ak-stat-col:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    @media (max-width: 450px) {
+        .ak-loan-amount-box {
+            padding: 0.75rem 0.75rem;
+        }
+        .ak-la-row {
+            font-size: 0.85rem;
+        }
+        .ak-la-val {
+            font-size: 0.95rem;
+        }
+        .ak-la-title {
+            font-size: 0.85rem;
         }
     }
     @media (max-width: 580px) {
         .ak-feature-cards {
-            grid-template-columns: 1fr;
-        }
-        .ak-6-stats-grid {
             grid-template-columns: 1fr;
         }
     }
@@ -804,7 +832,7 @@
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
-                            <input type="text" id="netIncomeInput" class="ak-new-input has-prefix" value="1,50,000" onchange="onNetIncomeChangeInput(this.value)">
+                            <input type="text" id="netIncomeInput" class="ak-new-input has-prefix" value="1,50,000" onchange="onNetIncomeChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                         </div>
                     </div>
                     <div class="ak-new-slider-container">
@@ -821,7 +849,7 @@
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
-                            <input type="text" id="existingEmiInput" class="ak-new-input has-prefix" value="0" onchange="onExistingEmiChangeInput(this.value)">
+                            <input type="text" id="existingEmiInput" class="ak-new-input has-prefix" value="0" onchange="onExistingEmiChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                         </div>
                     </div>
                     <div class="ak-new-slider-container">
@@ -838,7 +866,7 @@
                         </div>
                         <div class="ak-new-input-box-wrapper">
                             <span class="prefix">₹</span>
-                            <input type="text" id="downPayInput" class="ak-new-input has-prefix" value="25,00,000" onchange="onDownPayChangeInput(this.value)">
+                            <input type="text" id="downPayInput" class="ak-new-input has-prefix" value="25,00,000" onchange="onDownPayChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                         </div>
                     </div>
                     <div class="ak-new-slider-container">
@@ -862,7 +890,7 @@
                             Interest Rate (p.a.)
                         </div>
                         <div class="ak-new-input-box-wrapper">
-                            <input type="text" id="interestInput" class="ak-new-input has-suffix" value="8.50" onchange="onInterestChangeInput(this.value)">
+                            <input type="text" id="interestInput" class="ak-new-input has-suffix" value="8.50" onchange="onInterestChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                             <span class="suffix">%</span>
                         </div>
                     </div>
@@ -903,7 +931,7 @@
                             Max EMI-to-Income Ratio
                         </div>
                         <div class="ak-new-input-box-wrapper">
-                            <input type="text" id="emiRatioInput" class="ak-new-input has-suffix" value="50" onchange="onEmiRatioChangeInput(this.value)">
+                            <input type="text" id="emiRatioInput" class="ak-new-input has-suffix" value="50" onchange="onEmiRatioChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                             <span class="suffix">%</span>
                         </div>
                     </div>
@@ -924,7 +952,7 @@
                             LTV Ratio (Loan-to-Value)
                         </div>
                         <div class="ak-new-input-box-wrapper">
-                            <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="80" onchange="onLtvChangeInput(this.value)">
+                            <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="80" onchange="onLtvChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
                             <span class="suffix">%</span>
                         </div>
                     </div>
@@ -948,7 +976,7 @@
                     </div>
                     
                     <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
-                        <div class="ak-emi-huge" id="resultPropPrice" style="color: #FFFFFF;"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>1,07,93,205</div>
+                        <div class="ak-emi-huge" id="resultPropPrice" style="color: #FFFFFF;"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>1,08,02,891</div>
                     </div>
                     <div class="ak-emi-subtext" id="propPriceSubtext">Based on ₹75,000/mo EMI capacity • 8.50% p.a. • 20 years</div>
                 </div>
@@ -956,11 +984,11 @@
                 <div class="ak-6-stats-grid">
                     <div class="ak-stat-col">
                         <div class="ak-stat-label">Maximum Loan</div>
-                        <div class="ak-stat-val" id="resultMaxLoan">₹ 86,34,564</div>
+                        <div class="ak-stat-val" id="resultMaxLoan">₹ 86,42,313</div>
                     </div>
                     <div class="ak-stat-col">
                         <div class="ak-stat-label">Required Down Payment</div>
-                        <div class="ak-stat-val" id="resultReqDownPay">₹ 21,58,641</div>
+                        <div class="ak-stat-val" id="resultReqDownPay">₹ 21,60,578</div>
                     </div>
                     <div class="ak-stat-col">
                         <div class="ak-stat-label">Monthly EMI</div>
@@ -972,7 +1000,7 @@
                     </div>
                     <div class="ak-stat-col">
                         <div class="ak-stat-label">Total Interest</div>
-                        <div class="ak-stat-val" id="resultTotalInterest">₹ 93,65,436</div>
+                        <div class="ak-stat-val" id="resultTotalInterest">₹ 93,57,687</div>
                     </div>
                     <div class="ak-stat-col">
                         <div class="ak-stat-label">Total Repayment</div>
@@ -990,11 +1018,11 @@
                     <div class="ak-legend-row-new">
                         <div class="ak-legend-item-inline">
                             <div class="ak-legend-dot-new loan"></div>
-                            <span>Maximum Loan (<span id="legendLoanVal">₹86,34,564</span>)</span>
+                            <span>Maximum Loan (<span id="legendLoanVal">₹86,42,313</span>)</span>
                         </div>
                         <div class="ak-legend-item-inline">
                             <div class="ak-legend-dot-new down"></div>
-                            <span>Down Payment (<span id="legendDownVal">₹21,58,641</span>)</span>
+                            <span>Down Payment (<span id="legendDownVal">₹21,60,578</span>)</span>
                         </div>
                     </div>
                 </div>
@@ -1003,7 +1031,7 @@
                 <div class="ak-insight-box">
                     <span class="material-symbols-outlined">info</span>
                     <div id="insightText">
-                        Your affordability is limited by your <strong>Income Capacity</strong>. Your available cash (₹25,00,000) is more than sufficient for the required 20% down payment (₹21,58,641).
+                        Your affordability is primarily limited by your <strong>Income Capacity</strong>. Your available cash (₹25,00,000) is more than sufficient for the required 20% down payment (₹21,60,578).
                     </div>
                 </div>
 
@@ -1116,86 +1144,86 @@
         </div>
 
         <div class="ak-feature-cards">
-            <div class="ak-fcard">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
                     <div class="ak-fcard-title">Home Loan EMI Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Estimate monthly EMI, total interest, and repayment schedule for your home loan.</div>
-                <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">verified_user</span></div>
                     <div class="ak-fcard-title">Loan Eligibility Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Check your maximum loan eligibility based on age, income, and financial profile.</div>
-                <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
                     <div class="ak-fcard-title">Down Payment Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Plan savings required for your initial home down payment and upfront expenses.</div>
-                <a href="/calculators/down-payment-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/stamp-duty-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">gavel</span></div>
                     <div class="ak-fcard-title">Stamp Duty & Registration Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Calculate state stamp duty and property registration charges across India.</div>
-                <a href="/calculators/stamp-duty-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/total-cost-buying-home-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
                     <div class="ak-fcard-title">Total Cost of Buying a Home</div>
                 </div>
                 <div class="ak-fcard-desc">Uncover hidden costs including interior work, GST, legal fees, and maintenance.</div>
-                <a href="/calculators/total-cost-buying-home-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">balance</span></div>
                     <div class="ak-fcard-title">Rent vs Buy Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Compare the long-term financial impact of renting versus buying a home.</div>
-                <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/property-roi-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
                     <div class="ak-fcard-title">Property Investment ROI</div>
                 </div>
                 <div class="ak-fcard-desc">Calculate annualized returns and overall ROI on real estate investments.</div>
-                <a href="/calculators/property-roi-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/rental-yield-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">house_siding</span></div>
                     <div class="ak-fcard-title">Rental Yield Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Evaluate gross and net rental yield for residential properties.</div>
-                <a href="/calculators/rental-yield-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
 
-            <div class="ak-fcard">
+            <a href="/calculators/property-appreciation-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-symbols-outlined">show_chart</span></div>
                     <div class="ak-fcard-title">Property Appreciation Calculator</div>
                 </div>
                 <div class="ak-fcard-desc">Project future property valuation based on historical growth rates.</div>
-                <a href="/calculators/property-appreciation-calculator/" class="ak-fcard-link">Calculate &rarr;</a>
-            </div>
+                <span class="ak-fcard-link">Calculate &rarr;</span>
+            </a>
         </div>
     </section>
 
@@ -1347,13 +1375,13 @@
         // Update Dynamic Insight Box
         var insightEl = document.getElementById('insightText');
         if (state.netIncome === 0) {
-            insightEl.innerHTML = "Please enter your monthly net income to estimate your home affordability budget.";
+            insightEl.innerHTML = "Please enter your monthly net income to calculate your maximum home buying budget.";
         } else if (maxEmiCapacity === 0) {
-            insightEl.innerHTML = "Your existing EMIs (<strong>₹" + formatIndian(state.existingEmi) + "</strong>) equal or exceed your maximum EMI capacity. Clearing existing loans will unlock your home buying power.";
+            insightEl.innerHTML = "Your existing EMIs (<strong>₹" + formatIndian(state.existingEmi) + "</strong>) equal or exceed your maximum " + state.emiRatio + "% EMI threshold. Clearing existing debt will unlock your new home loan capacity.";
         } else if (propPriceCash < propPriceLTV) {
             insightEl.innerHTML = "Your affordability is limited by your <strong>Cash Capacity</strong> (Available Down Payment ₹" + formatIndian(state.downPay) + "). Adding ₹" + formatIndian(reqDownPay) + " more cash will unlock a property budget of ₹" + formatIndian(propPriceLTV) + ".";
         } else {
-            insightEl.innerHTML = "Your affordability is primary limited by your <strong>Income Capacity</strong>. Your available cash (₹" + formatIndian(state.downPay) + ") is more than sufficient for the required " + state.ltv + "% LTV down payment (₹" + formatIndian(reqDownPay) + ").";
+            insightEl.innerHTML = "Your affordability is primarily limited by your <strong>Income Capacity</strong>. Your available cash (₹" + formatIndian(state.downPay) + ") is more than sufficient for the required " + (100 - state.ltv) + "% down payment (₹" + formatIndian(reqDownPay) + ").";
         }
     }
 
