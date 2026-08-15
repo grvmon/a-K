@@ -51,6 +51,7 @@ def replace_colors(content):
     content = re.sub(r'30,\s*36,\s*50', '13, 27, 36', content)
     content = re.sub(r'33,\s*44,\s*58', '13, 27, 36', content)
     content = re.sub(r'184,\s*142,\s*82', '139, 90, 69', content)
+    content = re.sub(r'140,\s*103,\s*52', '139, 90, 69', content)
     content = re.sub(r'251,\s*246,\s*243', '244, 241, 234', content)
     content = re.sub(r'183,\s*175,\s*164', '213, 209, 200', content)
     content = re.sub(r'233,\s*226,\s*215', '213, 209, 200', content)
@@ -66,7 +67,7 @@ for root, dirs, files in os.walk('.'):
     if '.git' in root:
         continue
     for file in files:
-        if file.endswith('.css') or file.endswith('.html'):
+        if file.endswith('.css') or file.endswith('.html') or file.endswith('.js'):
             filepath = os.path.join(root, file)
             with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
