@@ -385,7 +385,6 @@ View pricing, floor plans and AcreNKey analysis:
   <div class="ak-lightbox-header">
     <div class="ak-lightbox-counter"><span id="akLbCurrent">1</span> / <span id="akLbTotal">4</span></div>
     <div class="ak-lightbox-actions">
-      <button class="ak-lb-action" onclick="toggleAkLightboxFullscreen()" aria-label="Toggle fullscreen"><i data-feather="maximize"></i></button>
       <button class="ak-lb-action" onclick="closeAkLightbox()" aria-label="Close gallery"><i data-feather="x"></i></button>
     </div>
   </div>
@@ -494,16 +493,6 @@ function generateLbThumbs() {
   });
 }
 
-function toggleAkLightboxFullscreen() {
-  const lb = document.getElementById('akLightbox');
-  if (!document.fullscreenElement) {
-    lb.requestFullscreen().catch(err => {
-      console.log(`Error attempting to enable fullscreen: ${err.message}`);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
 
 document.addEventListener('keydown', (e) => {
   if (!akLbIsOpen) return;
