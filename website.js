@@ -517,3 +517,66 @@ rootMargin: '0px 0px -40px 0px'
         }, { passive: true });
     }
 });
+/* ========================================= */
+/* PREMIUM PRECISION FRAME CURSOR SYSTEM     */
+/* ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Only init on desktop
+    if (window.innerWidth < 992) return;
+
+    const cursorDiv = document.createElement('div');
+    cursorDiv.id = 'custom-cursor';
+    cursorDiv.innerHTML = `
+        <div class="cursor-frame">
+            <div class="bracket tl"></div>
+            <div class="bracket tr"></div>
+            <div class="bracket bl"></div>
+            <div class="bracket br"></div>
+        </div>
+        <div class="cursor-dot"></div>
+        <div class="cursor-label" id="cursor-label"></div>
+    `;
+    document.body.appendChild(cursorDiv);
+
+    const cursor = cursorDiv;
+    const label = document.getElementById('cursor-label');
+    
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let cursorX = mouseX;
+    let cursorY = mouseY;
+    const speed = 0.2;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        cursorX += (mouseX - cursorX) * speed;
+        cursorY += (mouseY - cursorY) * speed;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Map elements to states automatically
+    const discoverSelectors = 'a, button, .sd-btn-gold, .premium-inline-cta, .nav-cta-btn';
+    const exploreSelectors = '.market-lens-card, .framework-card, .waw-story-card, .waw-founder-card';
+    const inspectSelectors = 'img, .hero-visual-card, .market-lens-image-wrapper';
+    
+    document.querySelectorAll(discoverSelectors).forEach(el => {
+        el.addEventListener('mouseenter', () => { label.textContent = 'Discover'; cursor.classList.add('hover-discover'); });
+        el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-discover'); });
+    });
+
+    document.querySelectorAll(exploreSelectors).forEach(el => {
+        el.addEventListener('mouseenter', () => { label.textContent = 'Explore'; cursor.classList.add('hover-explore'); });
+        el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-explore'); });
+    });
+    
+    document.querySelectorAll(inspectSelectors).forEach(el => {
+        el.addEventListener('mouseenter', () => { label.textContent = 'Inspect'; cursor.classList.add('hover-inspect'); });
+        el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-inspect'); });
+    });
+});
