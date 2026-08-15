@@ -4602,3 +4602,31 @@ body.property-page main {
   border-bottom-color: var(--prop-gold);
   opacity: 0.9;
 }
+
+/* sd-btn-outline */
+.sd-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  font-family: var(--font-heading), "Marcellus", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  background: transparent;
+  color: var(--prop-navy);
+  border: 1px solid var(--prop-gold);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sd-btn-outline i, .sd-btn-outline svg {
+  color: var(--prop-gold);
+  transition: color 0.3s ease;
+}
+.sd-btn-outline:hover {
+  background: rgba(184, 142, 82, 0.08); /* slight gold tint */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 142, 82, 0.15);
+}
