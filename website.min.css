@@ -56,3 +56,11 @@
 .hero-section.premium-dark-hero .trust-label {
     color: rgba(244, 241, 234, 0.7) !important;
 }
+.hero-section.premium-dark-hero::before {
+    background: linear-gradient(to right, rgba(13, 27, 36, 0.92) 0%, rgba(13, 27, 36, 0.85) 30%, rgba(13, 27, 36, 0.2) 70%, rgba(13, 27, 36, 0) 100%) !important;
+}
+@media (max-width:991px) {
+    .hero-section.premium-dark-hero::before {
+        background: linear-gradient(to bottom, rgba(13, 27, 36, 0.92) 0%, rgba(13, 27, 36, 0.85) 40%, rgba(13, 27, 36, 0.4) 100%) !important;
+    }
+}
