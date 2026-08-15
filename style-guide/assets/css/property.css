@@ -4079,14 +4079,14 @@ body.property-page main {
   padding: 0;
   margin: 0;
   background: none;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
   width: 60px;
   height: 45px;
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .ak-thumb-btn img {
@@ -4095,8 +4095,9 @@ body.property-page main {
   object-fit: cover;
 }
 
-.ak-thumb-btn.active {
-  border-color: var(--refined-brass, #8C6734); /* Muted gold */
+.ak-thumb-btn.active, .ak-thumb-btn:hover {
+  border-color: #FFFFFF;
+  transform: scale(1.05);
 }
 
 /* Minimal CTA */
