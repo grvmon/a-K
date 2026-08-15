@@ -62,12 +62,15 @@
   <div class="ak-info-header">
     <h1 class="ak-info-title">SUMADHURA SOLACE</h1>
     <div class="ak-info-location">
-      <i data-feather="map-pin" class="ak-loc-icon"></i>
-      <span>Whitefield, Bengaluru &nbsp;&middot;&nbsp; <a href="#location-intel" class="ak-loc-link">View on Map</a></span>
+      <svg class="ak-loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <span>Whitefield, Bengaluru <span style="color:var(--prop-gold); font-weight:800; margin:0 0.15rem;">&middot;</span> <a href="#location-intel" class="ak-loc-link">View on Map</a></span>
     </div>
     <div class="ak-info-developer">
       By <strong style="color:var(--prop-navy); font-weight:700;">Sumadhura Developers</strong> 
-      <svg class="ak-dev-verified" viewBox="0 0 24 24" fill="#B88E52" xmlns="http://www.w3.org/2000/svg">
+      <svg class="ak-dev-verified" viewBox="0 0 24 24" fill="#B88E52" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;">
         <path d="M12 2l2.4 2.4 3.2-.8.8 3.2 2.4 2.4-2.4 2.4-.8 3.2-3.2-.8-2.4 2.4-2.4-2.4-3.2.8-.8-3.2-2.4-2.4 2.4-2.4.8-3.2 3.2.8L12 2z"/>
         <path d="M10 15.5l-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4L10 15.5z" fill="#FFF"/>
       </svg>
@@ -87,31 +90,39 @@
   </div>
 
   <div class="ak-info-pricing">
-    <div class="ak-price-main">₹2.81 Cr &ndash; ₹4.50 Cr*</div>
-    <div class="ak-price-sub">₹14.6K &ndash; ₹16.05K / sq.ft.</div>
+    <div class="ak-price-main">&#8377;2.81 Cr &ndash; &#8377;4.50 Cr*</div>
+    <div class="ak-price-sub">&#8377;14.6K &ndash; &#8377;16.05K / sq.ft.</div>
     <div class="ak-price-disc">*Excl. applicable charges</div>
   </div>
 
   <div class="ak-info-facts">
     <div class="ak-fact-item">
       <svg class="ak-fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 8v11m18-11v11M3 14h18M4 8h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2z"></path>
-        <path d="M7 11v-1a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1"></path>
+        <path d="M4 6h16v12H4z"></path>
+        <path d="M4 14h16"></path>
+        <path d="M8 14v4"></path>
+        <path d="M16 14v4"></path>
+        <path d="M4 10h16"></path>
       </svg>
       <span class="ak-fact-val">3 &amp; 4 BHK</span>
     </div>
     <div class="ak-fact-divider"></div>
     <div class="ak-fact-item">
-      <i data-feather="maximize-2" class="ak-fact-icon"></i>
+      <svg class="ak-fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <line x1="9" y1="15" x2="21" y2="3"></line>
+        <polyline points="9 21 3 21 3 15"></polyline>
+        <line x1="15" y1="9" x2="3" y2="21"></line>
+      </svg>
       <span class="ak-fact-val">1,060 &ndash; 2,810 sq.ft.</span>
     </div>
     <div class="ak-fact-divider"></div>
-    <div class="ak-fact-item" style="flex-direction:column; align-items:flex-start; gap:0;">
-      <div style="display:flex; align-items:center; gap:0.4rem;">
-        <i data-feather="calendar" class="ak-fact-icon"></i>
-        <span class="ak-fact-val">Dec 2029</span>
+    <div class="ak-fact-item">
+      <i data-feather="calendar" class="ak-fact-icon"></i>
+      <div style="display:flex; flex-direction:column; align-items:flex-start;">
+        <span class="ak-fact-val" style="line-height:1.2;">Dec 2029</span>
+        <span class="ak-fact-sub" style="font-size:0.75rem; color:#6B7280; line-height:1;">Possession</span>
       </div>
-      <span class="ak-fact-sub" style="font-size:0.75rem; color:#6B7280; padding-left:1.5rem; line-height:1;">Possession</span>
     </div>
   </div>
 
@@ -134,7 +145,11 @@
           <i data-feather="check-circle" style="width:16px;height:16px;"></i>
           Why we like it
         </div>
-        <div class="ak-judge-desc">81% open space &bull; Lower density &bull; Strong ITPL access</div>
+        <div class="ak-judge-desc" style="display:flex; flex-wrap:wrap; gap:0.25rem;">
+          <span>81% open space</span> <span style="opacity:0.5;">&bull;</span>
+          <span>Lower density</span> <span style="opacity:0.5;">&bull;</span>
+          <span>Strong ITPL access</span>
+        </div>
       </div>
       <div class="ak-judge-divider"></div>
       <div class="ak-judge-col">
@@ -142,7 +157,10 @@
           <i data-feather="alert-triangle" style="width:16px;height:16px;"></i>
           Watch
         </div>
-        <div class="ak-judge-desc">Peak-hour congestion &bull; Dec 2029 delivery</div>
+        <div class="ak-judge-desc" style="display:flex; flex-wrap:wrap; gap:0.25rem;">
+          <span>Peak-hour congestion</span> <span style="opacity:0.5;">&bull;</span>
+          <span>Dec 2029 delivery</span>
+        </div>
       </div>
     </div>
   </div>
