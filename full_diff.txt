@@ -1,0 +1,65 @@
+commit a2cef53322733e81c1000fd9bf139347d30dab43
+Author: Gaurav Mongia <gauravmongia@MacBook-Air-3.local>
+Date:   Sun Aug 16 15:13:46 2026 +0530
+
+    perf: optimize window scroll listeners using requestAnimationFrame
+
+diff --git a/website.js b/website.js
+index 5656f0a..25901dc 100644
+--- a/website.js
++++ b/website.js
+@@ -5,15 +5,20 @@ feather.replace();
+ const headerNav = document.getElementById('header-nav');
+ const hasHero = document.querySelector('.hero-section');
+ 
++let headerScrollTicking = false;
+ window.addEventListener('scroll', function () {
+-    if (headerNav) {
+-        if (window.scrollY > 30) {
+-            headerNav.classList.add('scrolled');
+-        } else {
+-            headerNav.classList.remove('scrolled');
+-        }
++    if (!headerScrollTicking && headerNav) {
++        window.requestAnimationFrame(function() {
++            if (window.scrollY > 30) {
++                headerNav.classList.add('scrolled');
++            } else {
++                headerNav.classList.remove('scrolled');
++            }
++            headerScrollTicking = false;
++        });
++        headerScrollTicking = true;
+     }
+-});
++}, { passive: true });
+ const mobileBtn = document.getElementById('mobile-toggle-btn');
+ const mobileDrawer = document.getElementById('mobile-drawer');
+ const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+@@ -508,11 +513,22 @@ rootMargin: '0px 0px -40px 0px'
+             document.body.appendChild(track);
+         }
+         const fill = track.querySelector('.reading-progress-fill');
++        let progressScrollTicking = false;
++        let cachedTotalHeight = document.documentElement.scrollHeight - window.innerHeight;
++        window.addEventListener('resize', () => {
++            cachedTotalHeight = document.documentElement.scrollHeight - window.innerHeight;
++        }, { passive: true });
++        
+         window.addEventListener('scroll', function () {
+-            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+-            if (totalHeight > 0 && fill) {
+-                const progress = (window.scrollY / totalHeight) * 100;
+-                fill.style.width = Math.min(100, Math.max(0, progress)) + '%';
++            if (!progressScrollTicking && fill) {
++                window.requestAnimationFrame(function() {
++                    if (cachedTotalHeight > 0) {
++                        const progress = (window.scrollY / cachedTotalHeight) * 100;
++                        fill.style.width = Math.min(100, Math.max(0, progress)) + '%';
++                    }
++                    progressScrollTicking = false;
++                });
++                progressScrollTicking = true;
+             }
+         }, { passive: true });
+     }
