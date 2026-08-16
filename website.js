@@ -5,20 +5,15 @@ feather.replace();
 const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');
 
-let headerScrollTicking = false;
 window.addEventListener('scroll', function () {
-    if (!headerScrollTicking && headerNav) {
-        window.requestAnimationFrame(function() {
-            if (window.scrollY > 30) {
-                headerNav.classList.add('scrolled');
-            } else {
-                headerNav.classList.remove('scrolled');
-            }
-            headerScrollTicking = false;
-        });
-        headerScrollTicking = true;
+    if (headerNav) {
+        if (window.scrollY > 30) {
+            headerNav.classList.add('scrolled');
+        } else {
+            headerNav.classList.remove('scrolled');
+        }
     }
-}, { passive: true });
+});
 const mobileBtn = document.getElementById('mobile-toggle-btn');
 const mobileDrawer = document.getElementById('mobile-drawer');
 const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -513,22 +508,11 @@ rootMargin: '0px 0px -40px 0px'
             document.body.appendChild(track);
         }
         const fill = track.querySelector('.reading-progress-fill');
-        let progressScrollTicking = false;
-        let cachedTotalHeight = document.documentElement.scrollHeight - window.innerHeight;
-        window.addEventListener('resize', () => {
-            cachedTotalHeight = document.documentElement.scrollHeight - window.innerHeight;
-        }, { passive: true });
-        
         window.addEventListener('scroll', function () {
-            if (!progressScrollTicking && fill) {
-                window.requestAnimationFrame(function() {
-                    if (cachedTotalHeight > 0) {
-                        const progress = (window.scrollY / cachedTotalHeight) * 100;
-                        fill.style.width = Math.min(100, Math.max(0, progress)) + '%';
-                    }
-                    progressScrollTicking = false;
-                });
-                progressScrollTicking = true;
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (totalHeight > 0 && fill) {
+                const progress = (window.scrollY / totalHeight) * 100;
+                fill.style.width = Math.min(100, Math.max(0, progress)) + '%';
             }
         }, { passive: true });
     }
