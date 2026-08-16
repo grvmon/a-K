@@ -547,6 +547,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cursorY = mouseY;
     const speed = 0.2;
 
+    const heroImage = document.querySelector('.hero-visual-card img');
+
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -556,6 +558,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorX += (mouseX - cursorX) * speed;
         cursorY += (mouseY - cursorY) * speed;
         cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+        
+        if (heroImage) {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            const offsetX = ((cursorX - centerX) / centerX) * -16; 
+            const offsetY = ((cursorY - centerY) / centerY) * -16;
+            heroImage.style.transform = `scale(0.75) translate(${offsetX}px, ${offsetY}px)`;
+        }
+        
         requestAnimationFrame(animate);
     }
     animate();
@@ -566,17 +577,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const inspectSelectors = 'img, .hero-visual-card, .market-lens-image-wrapper';
     
     document.querySelectorAll(discoverSelectors).forEach(el => {
-        el.addEventListener('mouseenter', () => { label.textContent = 'Discover'; cursor.classList.add('hover-discover'); });
+        el.addEventListener('mouseenter', () => { cursor.classList.add('hover-discover'); });
         el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-discover'); });
     });
 
     document.querySelectorAll(exploreSelectors).forEach(el => {
-        el.addEventListener('mouseenter', () => { label.textContent = 'Explore'; cursor.classList.add('hover-explore'); });
+        el.addEventListener('mouseenter', () => { cursor.classList.add('hover-explore'); });
         el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-explore'); });
     });
     
     document.querySelectorAll(inspectSelectors).forEach(el => {
-        el.addEventListener('mouseenter', () => { label.textContent = 'Inspect'; cursor.classList.add('hover-inspect'); });
+        el.addEventListener('mouseenter', () => { cursor.classList.add('hover-inspect'); });
         el.addEventListener('mouseleave', () => { cursor.classList.remove('hover-inspect'); });
     });
 });
