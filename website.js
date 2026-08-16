@@ -562,9 +562,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroImage) {
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
-            // Max movement of 16px
-            const offsetX = ((cursorX - centerX) / centerX) * -16; 
-            const offsetY = ((cursorY - centerY) / centerY) * -16;
+            // Max movement of 40px for a more pronounced "video-like" parallax
+            const offsetX = ((cursorX - centerX) / centerX) * -40; 
+            const offsetY = ((cursorY - centerY) / centerY) * -40;
             // Use setProperty with 'important' to override the !important in website.css
             heroImage.style.setProperty('transform', `scale(1.05) translate(${offsetX}px, ${offsetY}px)`, 'important');
         }
