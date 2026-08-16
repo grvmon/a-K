@@ -554,9 +554,24 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseY = e.clientY;
     });
 
+    let lastDrawX = 0;
+    let lastDrawY = 0;
+    
     function animate() {
         cursorX += (mouseX - cursorX) * speed;
         cursorY += (mouseY - cursorY) * speed;
+        
+        // Idle optimization: don't repaint if barely moved
+        const dx = cursorX - lastDrawX;
+        const dy = cursorY - lastDrawY;
+        if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
+            requestAnimationFrame(animate);
+            return;
+        }
+        
+        lastDrawX = cursorX;
+        lastDrawY = cursorY;
+        
         cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
         
         if (heroImage) {
