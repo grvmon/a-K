@@ -119,10 +119,6 @@ html { scroll-behavior: smooth; }
   transition: all 0.2s ease;
   position: relative;
 }
-@media (min-width: 1025px) {
-  .prop-nav-inner { justify-content: space-between !important; gap: 0 !important; }
-  .local-nav-link { padding: 1rem 0.5rem !important; }
-}
 .local-nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: #8B5A45; transform: scaleX(0); transform-origin: center; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .local-nav-link:hover::after, .local-nav-link.active::after { transform: scaleX(1); }
 .local-nav-link:hover, .local-nav-link.active { color: #0F1F3D !important; }
