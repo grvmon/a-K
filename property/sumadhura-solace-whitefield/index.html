@@ -92,6 +92,8 @@
 <link rel="shortcut icon" href="../../favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="../../style-guide/assets/apple-touch-icon.png">
 <style>
+/* Enable native smooth scrolling */
+html { scroll-behavior: smooth; }
 /* Local override for Snapshot Grid to match Homepage */
 .prop-snapshot-strip-v2 { border-radius: 8px !important; }
 .prop-snap-num-v2 { font-weight: 600 !important; }
@@ -693,6 +695,17 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeAkLightbox();
   if (e.key === 'ArrowRight') akLbNext();
   if (e.key === 'ArrowLeft') akLbPrev();
+});
+
+// Strip global scroll listener from property.js to respect native CSS scroll-margin-top
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    var links = document.querySelectorAll('.prop-nav-link');
+    links.forEach(function(link) {
+      var newLink = link.cloneNode(true);
+      link.parentNode.replaceChild(newLink, link);
+    });
+  }, 100);
 });
 </script>
 </body></html>
