@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-  // Unified Single-Source FAQ Accordion Handler
+    // Unified Single-Source FAQ Accordion Handler
   window.toggleFaqItem = function(qEl) {
     if (!qEl) return;
     var item = qEl.closest ? qEl.closest('.prop-faq-item') : qEl.parentElement;
@@ -429,13 +429,30 @@ document.addEventListener('DOMContentLoaded', function() {
     var allItems = document.querySelectorAll('.prop-faq-item');
     for (var i = 0; i < allItems.length; i++) {
       allItems[i].classList.remove('active');
+      var ans = allItems[i].querySelector('.prop-faq-a');
+      if (ans) {
+        ans.style.removeProperty('display');
+      }
     }
 
     // Toggle current item
     if (!isOpen) {
       item.classList.add('active');
+      var targetAns = item.querySelector('.prop-faq-a');
+      if (targetAns) {
+        targetAns.style.display = 'block';
+      }
     }
   };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', function(e) {
+      var q = e.target.closest('.prop-faq-q');
+      if (q) {
+        window.toggleFaqItem(q);
+      }
+    });
+  });
 
 
   
