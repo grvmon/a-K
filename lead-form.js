@@ -535,7 +535,6 @@
         context: contextObj
       };
 
-      console.log("[HubSpot Submission Request]", url, hsBody);
 
       var response = await fetch(url, {
         method: "POST",
@@ -552,7 +551,6 @@
       }
 
       var resJson = await response.json().catch(function() { return { inlineMessage: "Success" }; });
-      console.log("[HubSpot Submission Success]", resJson);
       return resJson;
     }
   };
