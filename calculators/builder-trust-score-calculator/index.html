@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder Trust Score Calculator | Evaluate Builder Reliability | acreNkey</title>
+
+    <meta name="description" content="Assess a builder's experience, delivery record, quality, compliance, customer satisfaction and financial strength with acreNkey's Builder Trust Score Calculator.">
+    <meta name="keywords" content="builder trust score calculator, developer reliability calculator, real estate builder rating, RERA compliance score, construction quality rating, acrenkey builder score">
+    <link rel="canonical" href="https://acrenkey.com/calculators/builder-trust-score-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Builder Trust Score Calculator | acreNkey">
+    <meta property="og:description" content="Assess a builder's experience, delivery record, quality, compliance, customer satisfaction and financial strength.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/builder-trust-score-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Builder Trust Score Calculator | acreNkey">
+    <meta name="twitter:description" content="Assess a builder's experience, delivery record, quality, compliance, customer satisfaction and financial strength.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Builder Trust Score Calculator","description":"Educational screening calculator to evaluate real estate developers based on experience, delivery track record, quality, compliance, financial strength, and litigation history.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/builder-trust-score-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Builder Trust Score Calculator","item":"https://acrenkey.com/calculators/builder-trust-score-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Builder Trust Score calculated?","acceptedAnswer":{"@type":"Answer","text":"The Builder Trust Score (out of 100) evaluates nine weighted parameters: Experience (10%), Track Record (10%), On-Time Delivery (15%), Construction Quality (15%), Customer Satisfaction (15%), Legal Compliance (10%), Financial Strength (10%), After-Sales Service (10%), and Litigation Risk Adjustment (5%)."}},{"@type":"Question","name":"What do the Trust Classifications mean?","acceptedAnswer":{"@type":"Answer","text":"Scores between 80-100 indicate EXCELLENT trust, 65-79 indicate STRONG trust, 50-64 indicate MODERATE trust, and 0-49 indicate HIGHER RISK builder profile."}},{"@type":"Question","name":"Does acreNkey independently verify builder quality or legal litigation?","acceptedAnswer":{"@type":"Answer","text":"No. The inputs in this calculator are user-provided screening values. The tool provides a structured framework to evaluate developer reliability and does not replace professional legal or technical due diligence."}},{"@type":"Question","name":"What red flags trigger automatic warnings?","acceptedAnswer":{"@type":"Answer","text":"Automatic warning banners are displayed for Litigation Risk > 70, On-Time Delivery < 50%, Customer Satisfaction < 50, Compliance Score < 50, or Financial Strength < 40."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles (0 = Lowest Trust, 100 = Highest Trust) */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.excellent { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.strong { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.moderate { background: #F59E0B; color: #FFFFFF; }
+    .ak-verdict-badge.risk { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Red Flag Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* Financial & Risk Snapshot 4-Card Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* 9 Factors Scores Progress Section */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.55rem;
+    }
+    .ak-factor-row:last-child { margin-bottom: 0; }
+
+    .ak-factor-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+    }
+
+    .ak-factor-bar-bg {
+        height: 6px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .ak-factor-bar-fill {
+        height: 100%;
+        background: var(--refined-brass);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+    }
+
+    /* Strengths, Concerns & Recommendations Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Builder Trust Score Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Builder Trust Score Calculator</h1>
+                <p class="ak-calc-sub-text">Evaluate a builder's experience, delivery track record, construction quality, compliance, financial strength and customer satisfaction before making a property purchase decision.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Builder Evaluation Inputs</h2>
+                </div>
+
+                <!-- Section 1: Experience & Track Record -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Experience &amp; Track Record</div>
+
+                <!-- Years of Experience -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">history_edu</span>
+                            Years of Experience
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="expYearsInput" class="ak-new-input has-suffix" value="15" oninput="onExpYearsInput(this.value)" onchange="onExpYearsInput(this.value)">
+                            <span class="suffix">Years</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 yrs</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="expYearsSlider" class="ak-new-slider" min="0" max="50" step="1" value="15" oninput="onExpYearsSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">50 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Number of Completed Projects -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">domain</span>
+                            Completed Projects
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="projectsInput" class="ak-new-input has-suffix" value="25" oninput="onProjectsInput(this.value)" onchange="onProjectsInput(this.value)">
+                            <span class="suffix">Projects</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="projectsSlider" class="ak-new-slider" min="0" max="100" step="1" value="25" oninput="onProjectsSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100+</span>
+                    </div>
+                </div>
+
+                <!-- Section 2: Delivery Performance -->
+                <div class="ak-section-divider-title">2. Delivery Performance</div>
+
+                <!-- On-Time Delivery Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">event_available</span>
+                            On-Time Delivery Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="deliveryInput" class="ak-new-input has-suffix" value="85" oninput="onDeliveryInput(this.value)" onchange="onDeliveryInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="deliverySlider" class="ak-new-slider" min="0" max="100" step="1" value="85" oninput="onDeliverySlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100%</span>
+                    </div>
+                    <div class="ak-input-helper">Percentage of projects delivered on or before committed timelines.</div>
+                </div>
+
+                <!-- Section 3: Quality & Customer Experience -->
+                <div class="ak-section-divider-title">3. Quality &amp; Customer Experience</div>
+
+                <!-- Construction Quality Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">foundation</span>
+                            Construction Quality Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="qualityInput" class="ak-new-input has-suffix" value="80" oninput="onQualityInput(this.value)" onchange="onQualityInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="qualitySlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onQualitySlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                    <div class="ak-input-helper">Based on construction quality, finishing standards and defect rates.</div>
+                </div>
+
+                <!-- Customer Satisfaction Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">sentiment_satisfied</span>
+                            Customer Satisfaction Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="customerInput" class="ak-new-input has-suffix" value="75" oninput="onCustomerInput(this.value)" onchange="onCustomerInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="customerSlider" class="ak-new-slider" min="0" max="100" step="1" value="75" oninput="onCustomerSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                    <div class="ak-input-helper">Based on customer reviews, referrals and buyer satisfaction.</div>
+                </div>
+
+                <!-- Section 4: Compliance, Financials & Governance -->
+                <div class="ak-section-divider-title">4. Compliance, Financials &amp; Governance</div>
+
+                <!-- RERA / Legal Compliance Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">verified</span>
+                            RERA / Legal Compliance Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="complianceInput" class="ak-new-input has-suffix" value="90" oninput="onComplianceInput(this.value)" onchange="onComplianceInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="complianceSlider" class="ak-new-slider" min="0" max="100" step="1" value="90" oninput="onComplianceSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                    <div class="ak-input-helper">Represents compliance with approvals, regulations and disclosure requirements.</div>
+                </div>
+
+                <!-- Financial Strength Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance</span>
+                            Financial Strength Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="financialInput" class="ak-new-input has-suffix" value="75" oninput="onFinancialInput(this.value)" onchange="onFinancialInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="financialSlider" class="ak-new-slider" min="0" max="100" step="1" value="75" oninput="onFinancialSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                    <div class="ak-input-helper">Represents perceived financial stability and project execution capability.</div>
+                </div>
+
+                <!-- After-Sales Service Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">support_agent</span>
+                            After-Sales Service Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="afterSalesInput" class="ak-new-input has-suffix" value="70" oninput="onAfterSalesInput(this.value)" onchange="onAfterSalesInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="afterSalesSlider" class="ak-new-slider" min="0" max="100" step="1" value="70" oninput="onAfterSalesSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                    <div class="ak-input-helper">Measures responsiveness after possession and issue resolution quality.</div>
+                </div>
+
+                <!-- Litigation / Regulatory Risk Score (INVERSE) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" style="color:#F87171;">gavel</span>
+                            Litigation / Regulatory Risk
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="litigationInput" class="ak-new-input has-suffix" value="20" oninput="onLitigationInput(this.value)" onchange="onLitigationInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Low Risk)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="litigationSlider" class="ak-new-slider" min="0" max="100" step="1" value="20" oninput="onLitigationSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (High Risk)</span>
+                    </div>
+                    <div class="ak-input-helper" style="color:#EF4444; font-weight:600;">Higher value = Higher Litigation Risk (reduces trust score).</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Builder Trust Score</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Builder Trust Score</div>
+                    <div class="ak-verdict-badge excellent" id="resVerdictBadge">EXCELLENT</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resScoreVal">78 <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span></div>
+                <div class="ak-emi-subtext" id="resSubtext">Based on the inputs provided, the builder demonstrates a strong track record across delivery, quality, compliance and customer experience.</div>
+
+                <!-- Red Flag Alert Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">WARNING:</strong>
+                    <div id="redFlagDesc">High litigation risk detected.</div>
+                </div>
+
+                <!-- Track Record Snapshot 4-Card Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Experience</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapExpVal">15 Years</div>
+                        <div class="ak-snap-sub" id="snapExpScore">Score: 75 / 100</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Completed Projects</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapProjVal">25 Projects</div>
+                        <div class="ak-snap-sub" id="snapProjScore">Score: 50 / 100</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">On-Time Delivery</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapDelivVal">85%</div>
+                        <div class="ak-snap-sub">Track Record</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">RERA Compliance</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapCompVal">90 / 100</div>
+                        <div class="ak-snap-sub">Legal Standard</div>
+                    </div>
+                </div>
+
+                <!-- 9 Normalized Factors Progress Section -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        9 Component Factor Scores (0=Low, 100=High)
+                    </div>
+                    
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>1. Experience (10%)</span>
+                            <span id="fScoreExp">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarExp" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>2. Track Record (10%)</span>
+                            <span id="fScoreTrack">50 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarTrack" style="width: 50%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>3. On-Time Delivery (15%)</span>
+                            <span id="fScoreDeliv">85 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarDeliv" style="width: 85%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>4. Construction Quality (15%)</span>
+                            <span id="fScoreQual">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarQual" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>5. Customer Satisfaction (15%)</span>
+                            <span id="fScoreCust">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarCust" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>6. Legal Compliance (10%)</span>
+                            <span id="fScoreComp">90 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarComp" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>7. Financial Strength (10%)</span>
+                            <span id="fScoreFin">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarFin" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>8. After-Sales Service (10%)</span>
+                            <span id="fScoreAfter">70 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarAfter" style="width: 70%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>9. Litigation Risk Adj (5%)</span>
+                            <span id="fScoreLit">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarLit" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Strengths, Concerns & Recommendations Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Top Strengths &amp; Actionable Guidance</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>✓ <strong>Top Strength:</strong> Legal Compliance (90/100) &amp; On-Time Delivery (85%).</li>
+                        <li>⚠️ <strong>Area of Concern:</strong> Track Record (50/100) based on 25 completed projects.</li>
+                        <li>ℹ️ <strong>Recommendation:</strong> Verify delivery history across completed developments.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Educational Screening Disclaimer:</strong> This calculator is an educational screening tool. The scores are based on assumptions and user-provided inputs. acreNkey does not independently verify builder quality, legal compliance, financial health, customer satisfaction or litigation status through this calculator. Buyers should conduct independent legal, technical and financial due diligence before making a purchase decision.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Estimates are illustrative and based on the assumptions entered by you. This calculator is intended for decision support and does not constitute a legal, technical, or financial recommendation.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>What is a Builder Trust Score?</h2>
+        <p>The Builder Trust Score evaluates multiple dimensions of a real estate developer's track record to help prospective homebuyers look beyond marketing promises. Evaluating experience, execution speed, finishing quality, RERA compliance, financial health, and litigation history provides a holistic view of builder reliability.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Track Record &amp; Delivery</div>
+                <div class="ak-step-desc">Evaluates years in business, total completed projects, and historic on-time delivery rates.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Build Quality &amp; Feedback</div>
+                <div class="ak-step-desc">Assesses structural finishing standards, defect rates, and verified customer review scores.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Legal &amp; Financial Governance</div>
+                <div class="ak-step-desc">Checks RERA compliance, financial stability, after-sales service, and active litigation risk.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Due-Diligence Guidance</div>
+                <div class="ak-step-desc">Generates actionable recommendations and flags critical risk areas for independent verification.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How is the Builder Trust Score calculated?</h3>
+                <p>The Builder Trust Score (out of 100) evaluates nine weighted parameters: Experience (10%), Track Record (10%), On-Time Delivery (15%), Construction Quality (15%), Customer Satisfaction (15%), Legal Compliance (10%), Financial Strength (10%), After-Sales Service (10%), and Litigation Risk Adjustment (5%).</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What do the Trust Classifications mean?</h3>
+                <p>Scores between 80-100 indicate EXCELLENT trust, 65-79 indicate STRONG trust, 50-64 indicate MODERATE trust, and 0-49 indicate HIGHER RISK builder profile.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Does acreNkey independently verify builder quality or legal litigation?</h3>
+                <p>No. The inputs in this calculator are user-provided screening values. The tool provides a structured framework to evaluate developer reliability and does not replace professional legal or technical due diligence.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What red flags trigger automatic warnings?</h3>
+                <p>Automatic warning banners are displayed for Litigation Risk > 70, On-Time Delivery < 50%, Customer Satisfaction < 50, Compliance Score < 50, or Financial Strength < 40.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/property-risk-assessment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">warning</span>
+                </div>
+                <div class="ak-fcard-title">Property Risk Assessment</div>
+                </div>
+                <div class="ak-fcard-desc">Assess financial, leverage, investment, project, legal and builder risks before buying.</div>
+            </a>
+
+            <a href="/calculators/should-i-buy-this-property-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Should I Buy This Property?</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate property affordability, EMI burden, ownership costs, and overall Financial Buy Score.</div>
+            </a>
+
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate how much home loan you may be eligible for based on your income and profile.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+
+            <a href="/calculators/property-negotiation-savings-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">price_check</span>
+                </div>
+                <div class="ak-fcard-title">Property Negotiation Savings</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate total financial benefit from price discounts and home loan interest savings.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        expYears: 15,
+        projects: 25,
+        delivery: 85,
+        quality: 80,
+        customer: 75,
+        compliance: 90,
+        financial: 75,
+        afterSales: 70,
+        litigation: 20
+    };
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onExpYearsInput(val) { state.expYears = Math.min(100, Math.max(0, parseInt(val)||0)); syncUI(); }
+    function onExpYearsSlider(val) { state.expYears = parseInt(val); syncUI(); }
+
+    function onProjectsInput(val) { state.projects = Math.min(200, Math.max(0, parseInt(val)||0)); syncUI(); }
+    function onProjectsSlider(val) { state.projects = parseInt(val); syncUI(); }
+
+    function onDeliveryInput(val) { state.delivery = Math.min(100, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onDeliverySlider(val) { state.delivery = parseFloat(val); syncUI(); }
+
+    function onQualityInput(val) { state.quality = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onQualitySlider(val) { state.quality = parseFloat(val); syncUI(); }
+
+    function onCustomerInput(val) { state.customer = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onCustomerSlider(val) { state.customer = parseFloat(val); syncUI(); }
+
+    function onComplianceInput(val) { state.compliance = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onComplianceSlider(val) { state.compliance = parseFloat(val); syncUI(); }
+
+    function onFinancialInput(val) { state.financial = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onFinancialSlider(val) { state.financial = parseFloat(val); syncUI(); }
+
+    function onAfterSalesInput(val) { state.afterSales = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onAfterSalesSlider(val) { state.afterSales = parseFloat(val); syncUI(); }
+
+    function onLitigationInput(val) { state.litigation = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onLitigationSlider(val) { state.litigation = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        // --- 9 COMPONENT FORMULAS ---
+        var sExp = Math.min(100, (state.expYears / 20.0) * 100.0);
+        var sTrack = Math.min(100, (state.projects / 50.0) * 100.0);
+        var sDeliv = state.delivery;
+        var sQual = state.quality;
+        var sCust = state.customer;
+        var sComp = state.compliance;
+        var sFin = state.financial;
+        var sAfter = state.afterSales;
+        var sLitAdj = 100.0 - state.litigation; // Litigation Risk Adjustment
+
+        // Weighted Overall Score Formula
+        var rawTrust = (sExp * 0.10) + (sTrack * 0.10) + (sDeliv * 0.15) + (sQual * 0.15) + (sCust * 0.15) + (sComp * 0.10) + (sFin * 0.10) + (sAfter * 0.10) + (sLitAdj * 0.05);
+        var finalTrustScore = Math.round(rawTrust);
+
+        // Sync Input Controls
+        document.getElementById('expYearsInput').value = state.expYears;
+        document.getElementById('expYearsSlider').value = state.expYears;
+        updateSliderFill('expYearsSlider');
+
+        document.getElementById('projectsInput').value = state.projects;
+        document.getElementById('projectsSlider').value = state.projects;
+        updateSliderFill('projectsSlider');
+
+        document.getElementById('deliveryInput').value = state.delivery.toFixed(0);
+        document.getElementById('deliverySlider').value = state.delivery;
+        updateSliderFill('deliverySlider');
+
+        document.getElementById('qualityInput').value = state.quality.toFixed(0);
+        document.getElementById('qualitySlider').value = state.quality;
+        updateSliderFill('qualitySlider');
+
+        document.getElementById('customerInput').value = state.customer.toFixed(0);
+        document.getElementById('customerSlider').value = state.customer;
+        updateSliderFill('customerSlider');
+
+        document.getElementById('complianceInput').value = state.compliance.toFixed(0);
+        document.getElementById('complianceSlider').value = state.compliance;
+        updateSliderFill('complianceSlider');
+
+        document.getElementById('financialInput').value = state.financial.toFixed(0);
+        document.getElementById('financialSlider').value = state.financial;
+        updateSliderFill('financialSlider');
+
+        document.getElementById('afterSalesInput').value = state.afterSales.toFixed(0);
+        document.getElementById('afterSalesSlider').value = state.afterSales;
+        updateSliderFill('afterSalesSlider');
+
+        document.getElementById('litigationInput').value = state.litigation.toFixed(0);
+        document.getElementById('litigationSlider').value = state.litigation;
+        updateSliderFill('litigationSlider');
+
+        // Sync Dashboard Outputs
+        document.getElementById('resScoreVal').innerHTML = finalTrustScore + ' <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span>';
+        
+        var badge = document.getElementById('resVerdictBadge');
+        var subtext = document.getElementById('resSubtext');
+
+        if (finalTrustScore >= 80) {
+            badge.className = 'ak-verdict-badge excellent';
+            badge.innerText = 'EXCELLENT';
+            subtext.innerText = 'Based on the inputs provided, the builder demonstrates an excellent track record across delivery, quality, compliance and customer experience.';
+        } else if (finalTrustScore >= 65) {
+            badge.className = 'ak-verdict-badge strong';
+            badge.innerText = 'STRONG';
+            subtext.innerText = 'Based on the inputs provided, the builder demonstrates a strong track record across delivery, quality, compliance and customer experience.';
+        } else if (finalTrustScore >= 50) {
+            badge.className = 'ak-verdict-badge moderate';
+            badge.innerText = 'MODERATE';
+            subtext.innerText = 'The builder shows a moderate profile. Several factors such as delivery speed, financial stability or after-sales deserve closer verification.';
+        } else {
+            badge.className = 'ak-verdict-badge risk';
+            badge.innerText = 'HIGHER RISK';
+            subtext.innerText = 'The builder profile indicates higher execution risk. Thorough independent due diligence is strongly recommended.';
+        }
+
+        // Red-Flag Warnings
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfTitle = document.getElementById('redFlagTitle');
+        var rfDesc = document.getElementById('redFlagDesc');
+        var hasRedFlag = false;
+
+        if (state.litigation > 70) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ HIGH LITIGATION / REGULATORY RISK:';
+            rfDesc.innerText = 'Active litigation risk (' + state.litigation + '/100) is high. Conduct an independent legal review before purchase.';
+        } else if (state.delivery < 50) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ POOR DELIVERY TRACK RECORD:';
+            rfDesc.innerText = 'On-time delivery rate (' + state.delivery + '%) is below 50%. Investigate project completion histories.';
+        } else if (state.customer < 50) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ WEAK CUSTOMER EXPERIENCE:';
+            rfDesc.innerText = 'Customer satisfaction score (' + state.customer + '/100) indicates buyer friction or complaint backlogs.';
+        } else if (state.compliance < 50) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ COMPLIANCE CONCERNS:';
+            rfDesc.innerText = 'RERA/Legal compliance score (' + state.compliance + '/100) is weak. Verify RERA filings and approvals.';
+        } else if (state.financial < 40) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ FINANCIAL STABILITY RISK:';
+            rfDesc.innerText = 'Perceived financial strength (' + state.financial + '/100) is low. Assess liquidity and debt structure.';
+        }
+
+        redFlagBox.style.display = hasRedFlag ? 'block' : 'none';
+
+        // Financial Snapshot Cards
+        document.getElementById('snapExpVal').innerText = state.expYears + " Years";
+        document.getElementById('snapExpScore').innerText = "Score: " + Math.round(sExp) + " / 100";
+
+        document.getElementById('snapProjVal').innerText = state.projects + " Projects";
+        document.getElementById('snapProjScore').innerText = "Score: " + Math.round(sTrack) + " / 100";
+
+        document.getElementById('snapDelivVal').innerText = Math.round(sDeliv) + "%";
+        document.getElementById('snapCompVal').innerText = Math.round(sComp) + " / 100";
+
+        // Score Factors Progress Bars
+        document.getElementById('fScoreExp').innerText = Math.round(sExp) + " / 100";
+        document.getElementById('fBarExp').style.width = Math.round(sExp) + "%";
+
+        document.getElementById('fScoreTrack').innerText = Math.round(sTrack) + " / 100";
+        document.getElementById('fBarTrack').style.width = Math.round(sTrack) + "%";
+
+        document.getElementById('fScoreDeliv').innerText = Math.round(sDeliv) + " / 100";
+        document.getElementById('fBarDeliv').style.width = Math.round(sDeliv) + "%";
+
+        document.getElementById('fScoreQual').innerText = Math.round(sQual) + " / 100";
+        document.getElementById('fBarQual').style.width = Math.round(sQual) + "%";
+
+        document.getElementById('fScoreCust').innerText = Math.round(sCust) + " / 100";
+        document.getElementById('fBarCust').style.width = Math.round(sCust) + "%";
+
+        document.getElementById('fScoreComp').innerText = Math.round(sComp) + " / 100";
+        document.getElementById('fBarComp').style.width = Math.round(sComp) + "%";
+
+        document.getElementById('fScoreFin').innerText = Math.round(sFin) + " / 100";
+        document.getElementById('fBarFin').style.width = Math.round(sFin) + "%";
+
+        document.getElementById('fScoreAfter').innerText = Math.round(sAfter) + " / 100";
+        document.getElementById('fBarAfter').style.width = Math.round(sAfter) + "%";
+
+        document.getElementById('fScoreLit').innerText = Math.round(sLitAdj) + " / 100";
+        document.getElementById('fBarLit').style.width = Math.round(sLitAdj) + "%";
+
+        // Dynamic Strengths & Areas of Concern (Sorted)
+        var factorsArr = [
+            { name: 'Legal Compliance', score: sComp, recip: 'Verify RERA filings & legal documentation.' },
+            { name: 'On-Time Delivery', score: sDeliv, recip: 'Investigate project completion histories.' },
+            { name: 'Construction Quality', score: sQual, recip: 'Inspect completed projects & finish quality.' },
+            { name: 'Customer Satisfaction', score: sCust, recip: 'Speak to existing residents & review feedback.' },
+            { name: 'Financial Strength', score: sFin, recip: 'Assess builder financial stability & liquidity.' },
+            { name: 'Experience', score: sExp, recip: 'Review delivery history across completed projects.' },
+            { name: 'After-Sales Service', score: sAfter, recip: 'Review post-possession service & maintenance support.' },
+            { name: 'Litigation Risk Adj', score: sLitAdj, recip: 'Conduct an independent legal review before purchase.' },
+            { name: 'Track Record', score: sTrack, recip: 'Verify execution capability through completed developments.' }
+        ];
+
+        factorsArr.sort(function(a, b) { return b.score - a.score; });
+
+        var topStr1 = factorsArr[0];
+        var topStr2 = factorsArr[1];
+        var lowConc1 = factorsArr[factorsArr.length - 1];
+
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>✓ <strong>Top Strength:</strong> ' + topStr1.name + ' (' + Math.round(topStr1.score) + '/100) &amp; ' + topStr2.name + ' (' + Math.round(topStr2.score) + '/100).</li>';
+        rHtml += '<li>⚠️ <strong>Area of Concern:</strong> ' + lowConc1.name + ' (' + Math.round(lowConc1.score) + '/100).</li>';
+        rHtml += '<li>ℹ️ <strong>Recommendation:</strong> ' + lowConc1.recip + '</li>';
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
