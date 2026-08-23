@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Quality Score Calculator – Evaluate Apartment Quality | acreNkey</title>
+
+    <meta name="description" content="Evaluate apartment quality based on carpet efficiency, floor plan, natural light, ventilation, privacy, noise, construction and finishing quality with acreNkey.">
+    <meta name="keywords" content="apartment quality score calculator, carpet area efficiency calculator, floor plan rating, apartment livability score, construction finishing score, acrenkey quality calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/apartment-quality-score-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Apartment Quality Score Calculator | acreNkey">
+    <meta property="og:description" content="Evaluate apartment quality based on carpet efficiency, floor plan, natural light, ventilation, privacy, noise, construction and finishing quality.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/apartment-quality-score-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apartment Quality Score Calculator | acreNkey">
+    <meta name="twitter:description" content="Evaluate apartment quality based on carpet efficiency, floor plan, natural light, ventilation, privacy, noise, construction and finishing quality.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Apartment Quality Score Calculator","description":"Livability screening tool to evaluate apartment space efficiency, floor plan usability, daylight, ventilation, noise exposure, and build finish quality.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/apartment-quality-score-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Apartment Quality Score Calculator","item":"https://acrenkey.com/calculators/apartment-quality-score-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Apartment Quality Score calculated?","acceptedAnswer":{"@type":"Answer","text":"The Quality Score (0-100) evaluates 10 weighted parameters: Space Efficiency (15%), Floor Plan Usability (15%), Natural Light (10%), Ventilation (10%), Room Dimensions (10%), Privacy (10%), Noise Levels (10%), Construction Execution (10%), View/Floor Height (5%), and Finishing Quality (5%)."}},{"@type":"Question","name":"What is Carpet-to-Saleable Efficiency?","acceptedAnswer":{"@type":"Answer","text":"Carpet-to-Saleable Efficiency is the ratio of usable carpet area to total quoted super built-up area. Higher efficiency means a greater percentage of the purchased space converts into usable living area."}},{"@type":"Question","name":"What do the Quality Classifications mean?","acceptedAnswer":{"@type":"Answer","text":"Scores between 85-100 indicate EXCELLENT quality, 70-84 indicate VERY GOOD quality, 55-69 indicate GOOD quality, 40-54 indicate AVERAGE quality, and 0-39 indicate POOR quality."}},{"@type":"Question","name":"Does this tool replace a physical technical snagging inspection?","acceptedAnswer":{"@type":"Answer","text":"No. Construction and finishing scores are user-entered screening ratings. For a final purchase decision, we recommend an independent technical snagging inspection to verify structural work, plumbing, and electrical safety."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles (0 = Poor, 100 = Excellent) */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.excellent { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.vgood { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.good { background: #60A5FA; color: #FFFFFF; }
+    .ak-verdict-badge.average { background: #F59E0B; color: #FFFFFF; }
+    .ak-verdict-badge.poor { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Financial & Quality Snapshot 4-Card Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* 10 Factors Scores Progress Section */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.55rem;
+    }
+    .ak-factor-row:last-child { margin-bottom: 0; }
+
+    .ak-factor-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+    }
+
+    .ak-factor-bar-bg {
+        height: 6px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .ak-factor-bar-fill {
+        height: 100%;
+        background: var(--refined-brass);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+    }
+
+    /* Strengths, Concerns & Recommendations Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Apartment Quality Score Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Apartment Quality Score Calculator</h1>
+                <p class="ak-calc-sub-text">Evaluate an apartment's space efficiency, floor plan, light, ventilation, privacy, views, noise, construction and finishing quality.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Apartment Quality Inputs</h2>
+                </div>
+
+                <!-- Section 1: Space & Area -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Space &amp; Carpet Efficiency</div>
+
+                <!-- Carpet Area -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Carpet Area
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="carpetInput" class="ak-new-input has-suffix" value="1,100" oninput="onCarpetInput(this.value)" onchange="onCarpetInput(this.value)">
+                            <span class="suffix">sq. ft.</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="carpetSlider" class="ak-new-slider" min="100" max="5000" step="25" value="1100" oninput="onCarpetSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Usable internal carpet area of the apartment.</div>
+                </div>
+
+                <!-- Super Built-up Area -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">straighten</span>
+                            Super Built-up Area
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="superInput" class="ak-new-input has-suffix" value="1,500" oninput="onSuperInput(this.value)" onchange="onSuperInput(this.value)">
+                            <span class="suffix">sq. ft.</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="superSlider" class="ak-new-slider" min="100" max="7500" step="25" value="1500" oninput="onSuperSlider(this.value)">
+                    </div>
+                    <div id="areaValidationMsg" style="font-size:0.75rem; color:#F87171; font-weight:700; margin-top:0.3rem; display:none;">
+                        Carpet area cannot be greater than super built-up area.
+                    </div>
+                </div>
+
+                <!-- Target Efficiency Benchmark -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Target Carpet-to-Saleable Ratio
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="targetEffInput" class="ak-new-input has-suffix" value="75" oninput="onTargetEffInput(this.value)" onchange="onTargetEffInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">50%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="targetEffSlider" class="ak-new-slider" min="50" max="90" step="1" value="75" oninput="onTargetEffSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">90%</span>
+                    </div>
+                    <div class="ak-input-helper">Benchmark used to evaluate how efficiently saleable area converts to carpet area.</div>
+                </div>
+
+                <!-- Section 2: Livability Ratings -->
+                <div class="ak-section-divider-title">2. Physical Livability</div>
+
+                <!-- Natural Light Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">wb_sunny</span>
+                            Natural Light Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="lightInput" class="ak-new-input has-suffix" value="80" oninput="onLightInput(this.value)" onchange="onLightInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="lightSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onLightSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Daylight availability across living room, bedrooms &amp; kitchen.</div>
+                </div>
+
+                <!-- Ventilation Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">air</span>
+                            Ventilation Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="ventInput" class="ak-new-input has-suffix" value="80" oninput="onVentInput(this.value)" onchange="onVentInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="ventSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onVentSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Cross-ventilation, window placement &amp; airflow.</div>
+                </div>
+
+                <!-- Privacy Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">visibility_off</span>
+                            Privacy Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="privacyInput" class="ak-new-input has-suffix" value="75" oninput="onPrivacyInput(this.value)" onchange="onPrivacyInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="privacySlider" class="ak-new-slider" min="0" max="100" step="1" value="75" oninput="onPrivacySlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Entrance visibility, bedroom privacy &amp; corridor exposure.</div>
+                </div>
+
+                <!-- View / Floor Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">landscape</span>
+                            View / Floor Height Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="viewInput" class="ak-new-input has-suffix" value="75" oninput="onViewInput(this.value)" onchange="onViewInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="viewSlider" class="ak-new-slider" min="0" max="100" step="1" value="75" oninput="onViewSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Floor elevation, open views, orientation &amp; surrounding obstructions.</div>
+                </div>
+
+                <!-- Noise Score (100 = Quiet) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">volume_off</span>
+                            Noise Insulation Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="noiseInput" class="ak-new-input has-suffix" value="70" oninput="onNoiseInput(this.value)" onchange="onNoiseInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Noisy)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="noiseSlider" class="ak-new-slider" min="0" max="100" step="1" value="70" oninput="onNoiseSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Quiet)</span>
+                    </div>
+                    <div class="ak-input-helper">100 = Very quiet · 0 = High noise exposure from roads/lifts.</div>
+                </div>
+
+                <!-- Section 3: Apartment Layout & Design -->
+                <div class="ak-section-divider-title">3. Layout &amp; Space Usability</div>
+
+                <!-- Floor Plan Efficiency Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">floor_lamp</span>
+                            Floor Plan Efficiency Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="floorPlanInput" class="ak-new-input has-suffix" value="80" oninput="onFloorPlanInput(this.value)" onchange="onFloorPlanInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="floorPlanSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onFloorPlanSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Circulation space, passage wastage &amp; layout usability.</div>
+                </div>
+
+                <!-- Room Size Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">aspect_ratio</span>
+                            Room Dimensions &amp; Size Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="roomSizeInput" class="ak-new-input has-suffix" value="80" oninput="onRoomSizeInput(this.value)" onchange="onRoomSizeInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="roomSizeSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onRoomSizeSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Practical room dimensions for bedrooms, living room &amp; kitchen.</div>
+                </div>
+
+                <!-- Section 4: Construction & Finishing -->
+                <div class="ak-section-divider-title">4. Construction &amp; Finishing Execution</div>
+
+                <!-- Construction Quality Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">foundation</span>
+                            Construction Quality Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="constructionInput" class="ak-new-input has-suffix" value="80" oninput="onConstructionInput(this.value)" onchange="onConstructionInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="constructionSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onConstructionSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Structural execution, walls, doors, windows &amp; damp-proofing.</div>
+                </div>
+
+                <!-- Finishing Quality Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">palette</span>
+                            Finishing Quality Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="finishingInput" class="ak-new-input has-suffix" value="75" oninput="onFinishingInput(this.value)" onchange="onFinishingInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Poor)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="finishingSlider" class="ak-new-slider" min="0" max="100" step="1" value="75" oninput="onFinishingSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (Exc)</span>
+                    </div>
+                    <div class="ak-input-helper">Flooring, paint, sanitaryware, kitchen fittings &amp; hardware.</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Quality Score</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Apartment Quality Score</div>
+                    <div class="ak-verdict-badge vgood" id="resVerdictBadge">VERY GOOD</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resScoreVal">82 <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span></div>
+                <div class="ak-emi-subtext" id="resSubtext">Based on the inputs provided, the apartment demonstrates strong space efficiency, floor plan usability and overall livability.</div>
+
+                <!-- 5 Diagnostic Category Cards Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Carpet Efficiency</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapEffPct">73.3%</div>
+                        <div class="ak-snap-sub" id="snapEffScore">Score: 98 / 100</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Light &amp; Air</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapLightAir">80 / 100</div>
+                        <div class="ak-snap-sub">Daylight &amp; Airflow</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Layout &amp; Dimensions</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapLayout">80 / 100</div>
+                        <div class="ak-snap-sub">Plan &amp; Room Sizes</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Build &amp; Finish</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapBuild">78 / 100</div>
+                        <div class="ak-snap-sub">Execution Standard</div>
+                    </div>
+                </div>
+
+                <!-- 10 Factors Scores Progress Section -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        10 Weighted Quality Factors (0=Poor, 100=Exc)
+                    </div>
+                    
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>1. Space Efficiency (15%)</span>
+                            <span id="fScoreSpace">98 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarSpace" style="width: 98%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>2. Floor Plan Efficiency (15%)</span>
+                            <span id="fScoreFloor">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarFloor" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>3. Natural Light (10%)</span>
+                            <span id="fScoreLight">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarLight" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>4. Ventilation (10%)</span>
+                            <span id="fScoreVent">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarVent" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>5. Room Dimensions (10%)</span>
+                            <span id="fScoreRoom">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarRoom" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>6. Privacy (10%)</span>
+                            <span id="fScorePriv">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarPriv" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>7. Construction Quality (10%)</span>
+                            <span id="fScoreConst">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarConst" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>8. Noise Insulation (10%)</span>
+                            <span id="fScoreNoise">70 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarNoise" style="width: 70%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>9. View / Floor Height (5%)</span>
+                            <span id="fScoreView">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarView" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>10. Finishing Quality (5%)</span>
+                            <span id="fScoreFin">75 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarFin" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Strengths & Areas to Investigate Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Top Strengths &amp; Areas to Investigate</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>✓ <strong>Top Strength:</strong> Space Efficiency (98/100) &amp; Floor Plan (80/100).</li>
+                        <li>⚠️ <strong>Area to Investigate:</strong> Noise Insulation (70/100). Check road-facing exposure &amp; lifts.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Technical Due Diligence Note:</strong> Construction and finishing quality scores are user-entered screening assessments. acreNkey does not independently inspect building structures, waterproofing, plumbing, electrical wiring or material grades. For a purchase decision, consider an independent technical snagging inspection.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Quality scores are illustrative and based on the assumptions entered by you. This calculator is intended for livability screening and does not constitute a formal technical certification.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>Why Carpet-to-Saleable Ratio &amp; Livability Matter</h2>
+        <p>A larger super built-up area does not automatically mean more usable living space. Evaluating carpet efficiency alongside natural light, cross-ventilation, floor plan usability, privacy, and noise levels helps buyers evaluate physical livability before booking an apartment.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Carpet Efficiency</div>
+                <div class="ak-step-desc">Calculates what percentage of your total purchased super built-up area converts into usable carpet space.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Daylight &amp; Airflow</div>
+                <div class="ak-step-desc">Evaluates window placements, orientation, cross-ventilation, and natural light across key living spaces.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Layout &amp; Usability</div>
+                <div class="ak-step-desc">Assesses circulation wastage, room proportions, wall placement, entrance privacy, and noise insulation.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Build &amp; Finish Quality</div>
+                <div class="ak-step-desc">Screening user-rated structural construction execution, damp-proofing, paint, and fixture standards.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How is the Apartment Quality Score calculated?</h3>
+                <p>The Quality Score (0-100) evaluates 10 weighted parameters: Space Efficiency (15%), Floor Plan Usability (15%), Natural Light (10%), Ventilation (10%), Room Dimensions (10%), Privacy (10%), Noise Levels (10%), Construction Execution (10%), View/Floor Height (5%), and Finishing Quality (5%).</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is Carpet-to-Saleable Efficiency?</h3>
+                <p>Carpet-to-Saleable Efficiency is the ratio of usable carpet area to total quoted super built-up area. Higher efficiency means a greater percentage of the purchased space converts into usable living area.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What do the Quality Classifications mean?</h3>
+                <p>Scores between 85-100 indicate EXCELLENT quality, 70-84 indicate VERY GOOD quality, 55-69 indicate GOOD quality, 40-54 indicate AVERAGE quality, and 0-39 indicate POOR quality.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Does this tool replace a physical technical snagging inspection?</h3>
+                <p>No. Construction and finishing scores are user-entered screening ratings. For a final purchase decision, we recommend an independent technical snagging inspection to verify structural work, plumbing, and electrical safety.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/builder-trust-score-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="ak-fcard-title">Builder Trust Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate developer experience, delivery record, RERA compliance, and builder trust.</div>
+            </a>
+
+            <a href="/calculators/property-risk-assessment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">warning</span>
+                </div>
+                <div class="ak-fcard-title">Property Risk Assessment</div>
+                </div>
+                <div class="ak-fcard-desc">Assess financial, leverage, investment, project, legal and builder risks before buying.</div>
+            </a>
+
+            <a href="/calculators/should-i-buy-this-property-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Should I Buy This Property?</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate property affordability, EMI burden, ownership costs, and overall Financial Buy Score.</div>
+            </a>
+
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/interior-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">design_services</span>
+                </div>
+                <div class="ak-fcard-title">Interior Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate total home interior budget including modular kitchen, wardrobes, and civil work.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+
+            <a href="/calculators/property-negotiation-savings-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">price_check</span>
+                </div>
+                <div class="ak-fcard-title">Property Negotiation Savings</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate total financial benefit from price discounts and home loan interest savings.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        carpetArea: 1100,
+        superArea: 1500,
+        targetEff: 75.0,
+        light: 80,
+        vent: 80,
+        privacy: 75,
+        view: 75,
+        noise: 70,
+        floorPlan: 80,
+        roomSize: 80,
+        construction: 80,
+        finishing: 75
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onCarpetInput(val) { state.carpetArea = parseRupees(val); syncUI(); }
+    function onCarpetSlider(val) { state.carpetArea = parseFloat(val); syncUI(); }
+
+    function onSuperInput(val) { state.superArea = parseRupees(val); syncUI(); }
+    function onSuperSlider(val) { state.superArea = parseFloat(val); syncUI(); }
+
+    function onTargetEffInput(val) { state.targetEff = Math.min(90, Math.max(50, parseFloat(val.replace('%',''))||75)); syncUI(); }
+    function onTargetEffSlider(val) { state.targetEff = parseFloat(val); syncUI(); }
+
+    function onLightInput(val) { state.light = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onLightSlider(val) { state.light = parseFloat(val); syncUI(); }
+
+    function onVentInput(val) { state.vent = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onVentSlider(val) { state.vent = parseFloat(val); syncUI(); }
+
+    function onPrivacyInput(val) { state.privacy = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onPrivacySlider(val) { state.privacy = parseFloat(val); syncUI(); }
+
+    function onViewInput(val) { state.view = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onViewSlider(val) { state.view = parseFloat(val); syncUI(); }
+
+    function onNoiseInput(val) { state.noise = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onNoiseSlider(val) { state.noise = parseFloat(val); syncUI(); }
+
+    function onFloorPlanInput(val) { state.floorPlan = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onFloorPlanSlider(val) { state.floorPlan = parseFloat(val); syncUI(); }
+
+    function onRoomSizeInput(val) { state.roomSize = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onRoomSizeSlider(val) { state.roomSize = parseFloat(val); syncUI(); }
+
+    function onConstructionInput(val) { state.construction = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onConstructionSlider(val) { state.construction = parseFloat(val); syncUI(); }
+
+    function onFinishingInput(val) { state.finishing = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onFinishingSlider(val) { state.finishing = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var carpet = state.carpetArea;
+        var superBuilt = state.superArea;
+        var areaMsg = document.getElementById('areaValidationMsg');
+
+        var isAreaInvalid = carpet > superBuilt || carpet <= 0 || superBuilt <= 0;
+        if (isAreaInvalid) {
+            areaMsg.style.display = 'block';
+        } else {
+            areaMsg.style.display = 'none';
+        }
+
+        var actualEffPct = (superBuilt > 0 && carpet <= superBuilt) ? (carpet / superBuilt) * 100.0 : 0;
+        var targetEff = state.targetEff;
+        var spaceEffScore = targetEff > 0 ? Math.min(100.0, (actualEffPct / targetEff) * 100.0) : 0;
+
+        var sFloorPlan = state.floorPlan;
+        var sLight = state.light;
+        var sVent = state.vent;
+        var sRoom = state.roomSize;
+        var sPriv = state.privacy;
+        var sConst = state.construction;
+        var sNoise = state.noise;
+        var sView = state.view;
+        var sFin = state.finishing;
+
+        // Weighted Overall Score Formula
+        var rawQuality = (spaceEffScore * 0.15) + (sLight * 0.10) + (sVent * 0.10) + (sFloorPlan * 0.15) + (sRoom * 0.10) + (sPriv * 0.10) + (sView * 0.05) + (sNoise * 0.10) + (sConst * 0.10) + (sFin * 0.05);
+        var finalQualityScore = isAreaInvalid ? 0 : Math.round(rawQuality);
+
+        // 5 Diagnostic Category Scores
+        var catLightAir = Math.round((sLight + sVent) / 2.0);
+        var catLayout = Math.round((sFloorPlan + sRoom) / 2.0);
+        var catBuild = Math.round((sConst + sFin) / 2.0);
+
+        // Sync Input Controls
+        document.getElementById('carpetInput').value = formatIndian(carpet);
+        document.getElementById('carpetSlider').value = carpet;
+        updateSliderFill('carpetSlider');
+
+        document.getElementById('superInput').value = formatIndian(superBuilt);
+        document.getElementById('superSlider').value = superBuilt;
+        updateSliderFill('superSlider');
+
+        document.getElementById('targetEffInput').value = targetEff.toFixed(0);
+        document.getElementById('targetEffSlider').value = targetEff;
+        updateSliderFill('targetEffSlider');
+
+        document.getElementById('lightInput').value = sLight.toFixed(0);
+        document.getElementById('lightSlider').value = sLight;
+        updateSliderFill('lightSlider');
+
+        document.getElementById('ventInput').value = sVent.toFixed(0);
+        document.getElementById('ventSlider').value = sVent;
+        updateSliderFill('ventSlider');
+
+        document.getElementById('privacyInput').value = sPriv.toFixed(0);
+        document.getElementById('privacySlider').value = sPriv;
+        updateSliderFill('privacySlider');
+
+        document.getElementById('viewInput').value = sView.toFixed(0);
+        document.getElementById('viewSlider').value = sView;
+        updateSliderFill('viewSlider');
+
+        document.getElementById('noiseInput').value = sNoise.toFixed(0);
+        document.getElementById('noiseSlider').value = sNoise;
+        updateSliderFill('noiseSlider');
+
+        document.getElementById('floorPlanInput').value = sFloorPlan.toFixed(0);
+        document.getElementById('floorPlanSlider').value = sFloorPlan;
+        updateSliderFill('floorPlanSlider');
+
+        document.getElementById('roomSizeInput').value = sRoom.toFixed(0);
+        document.getElementById('roomSizeSlider').value = sRoom;
+        updateSliderFill('roomSizeSlider');
+
+        document.getElementById('constructionInput').value = sConst.toFixed(0);
+        document.getElementById('constructionSlider').value = sConst;
+        updateSliderFill('constructionSlider');
+
+        document.getElementById('finishingInput').value = sFin.toFixed(0);
+        document.getElementById('finishingSlider').value = sFin;
+        updateSliderFill('finishingSlider');
+
+        // Sync Dashboard Outputs
+        if (isAreaInvalid) {
+            document.getElementById('resScoreVal').innerHTML = '—';
+            document.getElementById('resVerdictBadge').className = 'ak-verdict-badge poor';
+            document.getElementById('resVerdictBadge').innerText = 'INVALID AREA';
+            document.getElementById('resSubtext').innerText = 'Carpet area cannot be greater than super built-up area.';
+            return;
+        }
+
+        document.getElementById('resScoreVal').innerHTML = finalQualityScore + ' <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span>';
+        
+        var badge = document.getElementById('resVerdictBadge');
+        var subtext = document.getElementById('resSubtext');
+
+        if (finalQualityScore >= 85) {
+            badge.className = 'ak-verdict-badge excellent';
+            badge.innerText = 'EXCELLENT';
+            subtext.innerText = 'Based on the inputs provided, the apartment demonstrates excellent carpet efficiency, floor plan usability and overall livability.';
+        } else if (finalQualityScore >= 70) {
+            badge.className = 'ak-verdict-badge vgood';
+            badge.innerText = 'VERY GOOD';
+            subtext.innerText = 'Based on the inputs provided, the apartment demonstrates strong space efficiency, floor plan usability and overall livability.';
+        } else if (finalQualityScore >= 55) {
+            badge.className = 'ak-verdict-badge good';
+            badge.innerText = 'GOOD';
+            subtext.innerText = 'The apartment shows a good quality profile. Several factors such as noise, daylight or room sizes deserve closer inspection.';
+        } else if (finalQualityScore >= 40) {
+            badge.className = 'ak-verdict-badge average';
+            badge.innerText = 'AVERAGE';
+            subtext.innerText = 'The apartment scores in the average range. Space efficiency or physical livability aspects require careful evaluation.';
+        } else {
+            badge.className = 'ak-verdict-badge poor';
+            badge.innerText = 'POOR';
+            subtext.innerText = 'The apartment profile indicates lower physical quality or space efficiency. Thorough physical site verification is recommended.';
+        }
+
+        // Financial & Diagnostic Snapshot Cards
+        document.getElementById('snapEffPct').innerText = actualEffPct.toFixed(1) + "%";
+        document.getElementById('snapEffScore').innerText = "Score: " + Math.round(spaceEffScore) + " / 100";
+
+        document.getElementById('snapLightAir').innerText = catLightAir + " / 100";
+        document.getElementById('snapLayout').innerText = catLayout + " / 100";
+        document.getElementById('snapBuild').innerText = catBuild + " / 100";
+
+        // Score Factors Progress Bars
+        document.getElementById('fScoreSpace').innerText = Math.round(spaceEffScore) + " / 100";
+        document.getElementById('fBarSpace').style.width = Math.round(spaceEffScore) + "%";
+
+        document.getElementById('fScoreFloor').innerText = Math.round(sFloorPlan) + " / 100";
+        document.getElementById('fBarFloor').style.width = Math.round(sFloorPlan) + "%";
+
+        document.getElementById('fScoreLight').innerText = Math.round(sLight) + " / 100";
+        document.getElementById('fBarLight').style.width = Math.round(sLight) + "%";
+
+        document.getElementById('fScoreVent').innerText = Math.round(sVent) + " / 100";
+        document.getElementById('fBarVent').style.width = Math.round(sVent) + "%";
+
+        document.getElementById('fScoreRoom').innerText = Math.round(sRoom) + " / 100";
+        document.getElementById('fBarRoom').style.width = Math.round(sRoom) + "%";
+
+        document.getElementById('fScorePriv').innerText = Math.round(sPriv) + " / 100";
+        document.getElementById('fBarPriv').style.width = Math.round(sPriv) + "%";
+
+        document.getElementById('fScoreConst').innerText = Math.round(sConst) + " / 100";
+        document.getElementById('fBarConst').style.width = Math.round(sConst) + "%";
+
+        document.getElementById('fScoreNoise').innerText = Math.round(sNoise) + " / 100";
+        document.getElementById('fBarNoise').style.width = Math.round(sNoise) + "%";
+
+        document.getElementById('fScoreView').innerText = Math.round(sView) + " / 100";
+        document.getElementById('fBarView').style.width = Math.round(sView) + "%";
+
+        document.getElementById('fScoreFin').innerText = Math.round(sFin) + " / 100";
+        document.getElementById('fBarFin').style.width = Math.round(sFin) + "%";
+
+        // Dynamic Strengths & Areas to Investigate (Sorted)
+        var factorsArr = [
+            { name: 'Space Efficiency', score: spaceEffScore, recip: 'Carpet-to-saleable ratio is ' + actualEffPct.toFixed(1) + '%.' },
+            { name: 'Floor Plan Usability', score: sFloorPlan, recip: 'Test furniture placement & circulation on actual layout.' },
+            { name: 'Natural Light', score: sLight, recip: 'Check daylight availability at different times of the day.' },
+            { name: 'Ventilation', score: sVent, recip: 'Inspect cross-ventilation between living & bedrooms.' },
+            { name: 'Room Dimensions', score: sRoom, recip: 'Verify usable wall lengths for wardrobes & king beds.' },
+            { name: 'Privacy', score: sPriv, recip: 'Review entrance corridor exposure & neighboring unit doors.' },
+            { name: 'Construction Quality', score: sConst, recip: 'Inspect wall finishes, damp-proofing & door frames.' },
+            { name: 'Noise Insulation', score: sNoise, recip: 'Check road-facing exposure, lifts, generators & amenities.' },
+            { name: 'View / Floor Height', score: sView, recip: 'Check floor height, open views & window orientation.' },
+            { name: 'Finishing Quality', score: sFin, recip: 'Inspect tile joints, paint execution, sanitaryware & fittings.' }
+        ];
+
+        factorsArr.sort(function(a, b) { return b.score - a.score; });
+
+        var topStr1 = factorsArr[0];
+        var topStr2 = factorsArr[1];
+        var lowConc1 = factorsArr[factorsArr.length - 1];
+
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>✓ <strong>Top Strength:</strong> ' + topStr1.name + ' (' + Math.round(topStr1.score) + '/100) &amp; ' + topStr2.name + ' (' + Math.round(topStr2.score) + '/100).</li>';
+        rHtml += '<li>⚠️ <strong>Area to Investigate:</strong> ' + lowConc1.name + ' (' + Math.round(lowConc1.score) + '/100).</li>';
+        rHtml += '<li>ℹ️ <strong>Recommendation:</strong> ' + lowConc1.recip + '</li>';
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
