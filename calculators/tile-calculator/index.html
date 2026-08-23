@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Calculator – Calculate Tiles Required &amp; Cost | acreNkey</title>
+
+    <meta name="description" content="Calculate the number of tiles, boxes and estimated tile cost required for a floor or room based on dimensions, tile size and wastage with acreNkey.">
+    <meta name="keywords" content="tile calculator, floor tile calculator, tiles required calculator, how many tiles do i need, tile box calculator, tile cost calculator sq ft, acrenkey tile calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/tile-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tile Calculator | acreNkey">
+    <meta property="og:description" content="Calculate the tiles, boxes and budget required for your floor or room based on its dimensions, tile size and expected wastage.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/tile-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tile Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate the tiles, boxes and budget required for your floor or room based on its dimensions, tile size and expected wastage.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Tile Calculator","description":"Building material calculator for estimating floor tile counts, required boxes, wastage buffer, and total tile installation cost.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/tile-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Tile Calculator","item":"https://acrenkey.com/calculators/tile-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many tiles do I need for my room?","acceptedAnswer":{"@type":"Answer","text":"To calculate tile count, multiply room length by width to find floor area, add 10% for cutting wastage, and divide by the individual tile area. Always round up to the nearest whole tile and full box."}},{"@type":"Question","name":"Why should I include a 10% wastage buffer when buying tiles?","acceptedAnswer":{"@type":"Answer","text":"Wastage accounts for edge cuts, corner trims, diagonal layouts, handling breakage, and future tile replacement reserves."}},{"@type":"Question","name":"How many tiles are in a standard tile box?","acceptedAnswer":{"@type":"Answer","text":"Standard 2x2 ft (600x600 mm) tile boxes usually contain 4 tiles covering 16 sq. ft. Larger 4x2 ft tiles typically come in boxes of 2 or 3 tiles."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* 6-Card Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Tile Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Tile Calculator</h1>
+                <p class="ak-calc-sub-text">Calculate the tiles, boxes and budget required for your floor or room based on its dimensions, tile size and expected wastage.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Floor &amp; Tile Inputs</h2>
+                </div>
+
+                <!-- Section 1: Room / Floor Dimensions -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Room / Floor Dimensions</div>
+
+                <!-- Room Length -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">straighten</span>
+                            Room / Floor Length
+                        </div>
+                        <div style="display:flex; gap:0.4rem; width: 220px;">
+                            <input type="text" id="roomLengthInput" class="ak-new-input" value="20" oninput="onRoomLengthInput(this.value)" onchange="onRoomLengthInput(this.value)">
+                            <select id="roomLengthUnit" class="ak-new-select" style="width:75px;" onchange="onRoomLengthUnitChange(this.value)">
+                                <option value="ft" selected>ft</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                                <option value="cm">cm</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Total length of the floor or wall surface.</div>
+                </div>
+
+                <!-- Room Width -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Room / Floor Width
+                        </div>
+                        <div style="display:flex; gap:0.4rem; width: 220px;">
+                            <input type="text" id="roomWidthInput" class="ak-new-input" value="15" oninput="onRoomWidthInput(this.value)" onchange="onRoomWidthInput(this.value)">
+                            <select id="roomWidthUnit" class="ak-new-select" style="width:75px;" onchange="onRoomWidthUnitChange(this.value)">
+                                <option value="ft" selected>ft</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                                <option value="cm">cm</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Total width of the floor or wall surface.</div>
+                </div>
+
+                <!-- Section 2: Tile Size & Packaging -->
+                <div class="ak-section-divider-title">2. Tile Dimensions &amp; Presets</div>
+
+                <!-- Tile Size Preset -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">grid_view</span>
+                            Common Tile Size Preset
+                        </div>
+                        <div style="width: 220px;">
+                            <select id="tilePresetSelect" class="ak-new-select" onchange="onTilePresetChange(this.value)">
+                                <option value="Custom">Custom Size</option>
+                                <option value="1ft x 1ft">1 ft × 1 ft (300×300 mm)</option>
+                                <option value="2ft x 2ft" selected>2 ft × 2 ft (600×600 mm)</option>
+                                <option value="4ft x 2ft">4 ft × 2 ft (1200×600 mm)</option>
+                                <option value="600mm x 600mm">600 mm × 600 mm</option>
+                                <option value="600mm x 1200mm">600 mm × 1200 mm</option>
+                                <option value="800mm x 1600mm">800 mm × 1600 mm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tile Length -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">aspect_ratio</span>
+                            Tile Length
+                        </div>
+                        <div style="display:flex; gap:0.4rem; width: 220px;">
+                            <input type="text" id="tileLengthInput" class="ak-new-input" value="2" oninput="onTileLengthInput(this.value)" onchange="onTileLengthInput(this.value)">
+                            <select id="tileLengthUnit" class="ak-new-select" style="width:75px;" onchange="onTileLengthUnitChange(this.value)">
+                                <option value="ft" selected>ft</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tile Width -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">aspect_ratio</span>
+                            Tile Width
+                        </div>
+                        <div style="display:flex; gap:0.4rem; width: 220px;">
+                            <input type="text" id="tileWidthInput" class="ak-new-input" value="2" oninput="onTileWidthInput(this.value)" onchange="onTileWidthInput(this.value)">
+                            <select id="tileWidthUnit" class="ak-new-select" style="width:75px;" onchange="onTileWidthUnitChange(this.value)">
+                                <option value="ft" selected>ft</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                                <option value="cm">cm</option>
+                                <option value="mm">mm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiles per Box -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">inventory_2</span>
+                            Tiles per Box
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tilesPerBoxInput" class="ak-new-input has-suffix" value="4" oninput="onTilesPerBoxInput(this.value)" onchange="onTilesPerBoxInput(this.value)">
+                            <span class="suffix">tiles</span>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Number of tiles contained in one box.</div>
+                </div>
+
+                <!-- Section 3: Wastage & Pricing -->
+                <div class="ak-section-divider-title">3. Wastage Buffer &amp; Tile Pricing</div>
+
+                <!-- Wastage Rate % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Wastage &amp; Cutting Allowance
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="wastageInput" class="ak-new-input has-suffix" value="10.0" oninput="onWastageInput(this.value)" onchange="onWastageInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="wastageSlider" class="ak-new-slider" min="0.0" max="25.0" step="1.0" value="10.0" oninput="onWastageSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">25%</span>
+                    </div>
+                    <div class="ak-input-helper">Allowance for edge cuts, diagonal layouts &amp; handling breakage (Default 10%).</div>
+                </div>
+
+                <!-- Pricing Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Pricing Mode
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="pricingModeSelect" class="ak-new-select" onchange="onPricingModeChange(this.value)">
+                                <option value="₹ / Sq. Ft." selected>₹ / Sq. Ft.</option>
+                                <option value="₹ / Tile">₹ / Tile</option>
+                                <option value="₹ / Box">₹ / Box</option>
+                                <option value="₹ / Sq. M.">₹ / Sq. M.</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tile Unit Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label" id="priceLabel">
+                            <span class="material-symbols-outlined">sell</span>
+                            Tile Price (₹ / Sq. Ft.)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="tilePriceInput" class="ak-new-input has-prefix" value="100" oninput="onTilePriceInput(this.value)" onchange="onTilePriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="tilePriceSlider" class="ak-new-slider" min="20" max="500" step="10" value="100" oninput="onTilePriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Section 4: Optional Adhesive & Installation -->
+                <div class="ak-section-divider-title">4. Optional Installation Materials &amp; Labour</div>
+
+                <!-- Adhesive & Grout Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">format_color_fill</span>
+                            Tile Adhesive &amp; Grout
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="adhesiveInput" class="ak-new-input has-prefix" value="0" oninput="onAdhesiveInput(this.value)" onchange="onAdhesiveInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation Labour Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">engineering</span>
+                            Tile Fixing Labour Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="labourInput" class="ak-new-input has-prefix" value="0" oninput="onLabourInput(this.value)" onchange="onLabourInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Tiles &amp; Cost Summary</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Tiles Required</div>
+                    <div class="ak-verdict-badge breakeven" id="resVerdictBadge">21 BOXES REQUIRED</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTilesReqVal">83 Tiles</div>
+                <div class="ak-emi-subtext" id="resSubtext">Boxes Required: <strong>21 Boxes</strong> (84 Tiles Purchased). Estimated Tile Cost: <strong>₹ 33,000</strong> (Effective Rate: ₹ 110 / sq.ft on 300 sq.ft floor).</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">NOTE:</strong>
+                    <div id="redFlagDesc">Single tile dimensions are larger than room dimensions. Please check layout cuts.</div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Tiles Required</div>
+                        <div class="ak-snap-val" style="color:#FFF;" id="snapTilesReq">83 Tiles</div>
+                        <div class="ak-snap-sub" id="snapCoverageSub">Coverage: 332 sq.ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Boxes Required</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapBoxesReq">21 Boxes</div>
+                        <div class="ak-snap-sub" id="snapPurchasedSub">Purchased: 84 Tiles</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Estimated Tile Cost</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapTileCost">₹ 33,000</div>
+                        <div class="ak-snap-sub" id="snapPriceModeSub">Mode: ₹ / Sq. Ft.</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Net Floor Area</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapFloorArea">300 sq.ft</div>
+                        <div class="ak-snap-sub" id="snapRoomDimsSub">20 × 15 ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Required Tiling Area</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapReqArea">330 sq.ft</div>
+                        <div class="ak-snap-sub" id="snapWastageSub">Wastage Buffer: 10.0%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Wastage</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapEffectiveWastage">10.67%</div>
+                        <div class="ak-snap-sub" id="snapWastageCostSub">Wastage Cost: ₹ 3,000</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Itemized Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Waterfall &amp; Quantity Calculation
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>1. Base Floor Area (20 × 15 ft)</span>
+                        <strong id="cardFloorArea">300 sq.ft</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>2. Wastage &amp; Cutting Allowance (10%)</span>
+                        <span id="cardWastageArea" style="color:#E5C178;">+30 sq.ft</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>3. Required Tiling Area</span>
+                        <strong id="cardReqArea" style="color:#E5C178;">330 sq.ft</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>4. Single Tile Size (2 × 2 ft)</span>
+                        <span id="cardTileArea">4 sq.ft / tile</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>5. Exact Tiles Required (Ceiling)</span>
+                        <span id="cardTilesReq" style="color:#FFF;">83 Tiles</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>6. Full Boxes Required (4 tiles/box)</span>
+                        <span id="cardBoxesReq" style="color:#FDE68A;">21 Boxes (84 Tiles)</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>7. Estimated Tile Material Cost</span>
+                        <span id="cardTileCost" style="color:#60A5FA;">₹ 33,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>8. Total Installed Tile Cost</span>
+                        <strong id="cardInstalledCost" style="color:#A7F3D0;">₹ 33,000</strong>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Tile Quantity &amp; Ordering Insights</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>ℹ️ <strong>Wastage Buffer Impact:</strong> A 10.0% wastage allowance adds 30 sq.ft (+8 tiles) to cover cutting, edge trim, and corner fitting.</li>
+                        <li>ℹ️ <strong>Box Rounding Effect:</strong> Tiles are sold in boxes of 4. Ordering 21 full boxes (84 tiles) provides 336 sq.ft total coverage.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Always Order From the Same Batch:</strong> Purchase all required tile boxes in a single order from the same production batch/shade code. Slight color variations and calibration differences occur between manufacturing batches.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator provides an estimate based on the dimensions, tile size, wastage and pricing information entered. Actual tile requirements can vary based on room shape, tile layout, pattern, cuts, joints, breakage and installation conditions. Always verify measurements and coverage information on the tile manufacturer's packaging before purchasing.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How Many Tiles Do I Need?</h2>
+        <p>Calculating the exact number of tiles required involves measuring net floor area, adding a cutting wastage buffer, converting tile dimensions, and rounding up to whole boxes.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Measure Floor Area</div>
+                <div class="ak-step-desc">Multiply room length by width (Length × Width) to get the net floor area in square feet or square meters.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Add Cutting Wastage</div>
+                <div class="ak-step-desc">Add 10% wastage for straight layouts or 15% for diagonal patterns to cover edge cuts, trims, and breakage.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Divide by Tile Area</div>
+                <div class="ak-step-desc">Divide the total required area by the area of a single tile to find the exact minimum number of tiles needed.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Round Up to Full Boxes</div>
+                <div class="ak-step-desc">Divide tiles required by tiles per box and round up to the nearest whole box to avoid shortage on site.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Before Ordering Tiles Checklist</h2>
+        <div style="background:#FFF; border:1px solid #EAEFF5; border-radius:12px; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; color:var(--deep-slate); line-height:1.7;">
+                <li>✓ Double check room length and width in feet or meters.</li>
+                <li>✓ Confirm single tile dimensions (e.g., 600×600 mm, 1200×600 mm).</li>
+                <li>✓ Check how many tiles are packed in a single box (usually 4 tiles for 2×2 ft).</li>
+                <li>✓ Add 10% wastage for straight laying or 15% for herringbone/diagonal laying.</li>
+                <li>✓ Keep 1 full extra box of spare tiles for future plumbing or electrical repair work.</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How many tiles do I need for my room?</h3>
+                <p>To calculate tile count, multiply room length by width to find floor area, add 10% for cutting wastage, and divide by the individual tile area. Always round up to the nearest whole tile and full box.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Why should I include a 10% wastage buffer when buying tiles?</h3>
+                <p>Wastage accounts for edge cuts, corner trims, diagonal layouts, handling breakage, and future tile replacement reserves.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How many tiles are in a standard tile box?</h3>
+                <p>Standard 2x2 ft (600x600 mm) tile boxes usually contain 4 tiles covering 16 sq. ft. Larger 4x2 ft tiles typically come in boxes of 2 or 3 tiles.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/construction-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">engineering</span>
+                </div>
+                <div class="ak-fcard-title">Construction Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate total house construction cost based on built-up area &amp; materials.</div>
+            </a>
+
+            <a href="/calculators/cost-per-sq-ft-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">aspect_ratio</span>
+                </div>
+                <div class="ak-fcard-title">Cost per Sq. Ft. Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate true effective cost per sq. ft. on carpet vs saleable area.</div>
+            </a>
+
+            <a href="/calculators/bangalore-property-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">location_city</span>
+                </div>
+                <div class="ak-fcard-title">Bangalore Property Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration fees, GST &amp; legal charges in Bangalore.</div>
+            </a>
+
+            <a href="/calculators/whitefield-property-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">domain</span>
+                </div>
+                <div class="ak-fcard-title">Whitefield Property Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate true cost of buying in Whitefield including deposits &amp; interiors.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/property-cash-flow-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                </div>
+                <div class="ak-fcard-title">Property Cash Flow Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate rental cash flow after vacancy, maintenance, taxes &amp; loan payments.</div>
+            </a>
+
+            <a href="/calculators/break-even-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">hourglass_bottom</span>
+                </div>
+                <div class="ak-fcard-title">Property Break-even Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate cash flow &amp; economic appreciation break-even periods.</div>
+            </a>
+
+            <a href="/calculators/north-bangalore-investment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">North Bangalore Investment</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate ROI, CAGR, appreciation, and rental yields in North Bangalore.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    // Centralized Config Architecture
+    var TILE_CALCULATOR_CONFIG = {
+        defaultRoomLength: 20,
+        defaultRoomWidth: 15,
+        defaultTileLength: 2,
+        defaultTileWidth: 2,
+        defaultTilesPerBox: 4,
+        defaultWastage: 10.0,
+        defaultTilePrice: 100
+    };
+
+    var state = {
+        roomLength: TILE_CALCULATOR_CONFIG.defaultRoomLength,
+        roomLengthUnit: 'ft',
+        roomWidth: TILE_CALCULATOR_CONFIG.defaultRoomWidth,
+        roomWidthUnit: 'ft',
+        tilePreset: '2ft x 2ft',
+        tileLength: TILE_CALCULATOR_CONFIG.defaultTileLength,
+        tileLengthUnit: 'ft',
+        tileWidth: TILE_CALCULATOR_CONFIG.defaultTileWidth,
+        tileWidthUnit: 'ft',
+        tilesPerBox: TILE_CALCULATOR_CONFIG.defaultTilesPerBox,
+        wastageRate: TILE_CALCULATOR_CONFIG.defaultWastage,
+        pricingMode: '₹ / Sq. Ft.',
+        tilePrice: TILE_CALCULATOR_CONFIG.defaultTilePrice,
+        adhesiveCost: 0,
+        labourCost: 0
+    };
+
+    function convertToFeet(val, unit) {
+        var num = parseFloat(val);
+        if (isNaN(num) || num <= 0) return 0;
+        if (unit === 'ft') return num;
+        if (unit === 'in') return num / 12.0;
+        if (unit === 'm') return num * 3.28084;
+        if (unit === 'cm') return num * 0.0328084;
+        if (unit === 'mm') return num * 0.00328084;
+        return num;
+    }
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onRoomLengthInput(val) { state.roomLength = parseRupees(val); syncUI(); }
+    function onRoomLengthUnitChange(val) { state.roomLengthUnit = val; syncUI(); }
+
+    function onRoomWidthInput(val) { state.roomWidth = parseRupees(val); syncUI(); }
+    function onRoomWidthUnitChange(val) { state.roomWidthUnit = val; syncUI(); }
+
+    function onTilePresetChange(val) {
+        state.tilePreset = val;
+        if (val === '1ft x 1ft') {
+            state.tileLength = 1; state.tileLengthUnit = 'ft';
+            state.tileWidth = 1; state.tileWidthUnit = 'ft';
+            state.tilesPerBox = 10;
+        } else if (val === '2ft x 2ft') {
+            state.tileLength = 2; state.tileLengthUnit = 'ft';
+            state.tileWidth = 2; state.tileWidthUnit = 'ft';
+            state.tilesPerBox = 4;
+        } else if (val === '4ft x 2ft') {
+            state.tileLength = 4; state.tileLengthUnit = 'ft';
+            state.tileWidth = 2; state.tileWidthUnit = 'ft';
+            state.tilesPerBox = 2;
+        } else if (val === '600mm x 600mm') {
+            state.tileLength = 600; state.tileLengthUnit = 'mm';
+            state.tileWidth = 600; state.tileWidthUnit = 'mm';
+            state.tilesPerBox = 4;
+        } else if (val === '600mm x 1200mm') {
+            state.tileLength = 1200; state.tileLengthUnit = 'mm';
+            state.tileWidth = 600; state.tileWidthUnit = 'mm';
+            state.tilesPerBox = 2;
+        } else if (val === '800mm x 1600mm') {
+            state.tileLength = 1600; state.tileLengthUnit = 'mm';
+            state.tileWidth = 800; state.tileWidthUnit = 'mm';
+            state.tilesPerBox = 2;
+        }
+        syncUI();
+    }
+
+    function onTileLengthInput(val) { state.tileLength = parseRupees(val); state.tilePreset = 'Custom'; syncUI(); }
+    function onTileLengthUnitChange(val) { state.tileLengthUnit = val; state.tilePreset = 'Custom'; syncUI(); }
+
+    function onTileWidthInput(val) { state.tileWidth = parseRupees(val); state.tilePreset = 'Custom'; syncUI(); }
+    function onTileWidthUnitChange(val) { state.tileWidthUnit = val; state.tilePreset = 'Custom'; syncUI(); }
+
+    function onTilesPerBoxInput(val) { state.tilesPerBox = Math.max(1, parseRupees(val)); syncUI(); }
+
+    function onWastageInput(val) { state.wastageRate = Math.min(50, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onWastageSlider(val) { state.wastageRate = parseFloat(val); syncUI(); }
+
+    function onPricingModeChange(val) {
+        state.pricingMode = val;
+        var pLbl = document.getElementById('priceLabel');
+        if (pLbl) pLbl.innerHTML = '<span class="material-symbols-outlined">sell</span> Tile Price (' + val + ')';
+        syncUI();
+    }
+
+    function onTilePriceInput(val) { state.tilePrice = parseRupees(val); syncUI(); }
+    function onTilePriceSlider(val) { state.tilePrice = parseFloat(val); syncUI(); }
+
+    function onAdhesiveInput(val) { state.adhesiveCost = parseRupees(val); syncUI(); }
+    function onLabourInput(val) { state.labourCost = parseRupees(val); syncUI(); }
+
+    function syncUI() {
+        var rL_ft = convertToFeet(state.roomLength, state.roomLengthUnit);
+        var rW_ft = convertToFeet(state.roomWidth, state.roomWidthUnit);
+        var floorArea = rL_ft * rW_ft;
+
+        var tL_ft = convertToFeet(state.tileLength, state.tileLengthUnit);
+        var tW_ft = convertToFeet(state.tileWidth, state.tileWidthUnit);
+        var tileArea = tL_ft * tW_ft;
+
+        var reqArea = floorArea * (1.0 + (state.wastageRate / 100.0));
+        var wastageArea = reqArea - floorArea;
+
+        var tilesReq = tileArea > 0 ? Math.ceil(reqArea / tileArea) : 0;
+        var actualTileCoverage = tilesReq * tileArea;
+        var effectiveWastagePct = floorArea > 0 ? ((actualTileCoverage - floorArea) / floorArea) * 100.0 : 0;
+
+        var tilesPerBox = state.tilesPerBox > 0 ? state.tilesPerBox : 1;
+        var boxesReq = tilesReq > 0 ? Math.ceil(tilesReq / tilesPerBox) : 0;
+        var actualTilesPurchased = boxesReq * tilesPerBox;
+        var totalBoxCoverage = actualTilesPurchased * tileArea;
+
+        // Pricing Calculation
+        var tileMaterialCost = 0;
+        if (state.pricingMode === '₹ / Sq. Ft.') {
+            tileMaterialCost = Math.round(reqArea * state.tilePrice);
+        } else if (state.pricingMode === '₹ / Tile') {
+            tileMaterialCost = Math.round(actualTilesPurchased * state.tilePrice);
+        } else if (state.pricingMode === '₹ / Box') {
+            tileMaterialCost = Math.round(boxesReq * state.tilePrice);
+        } else if (state.pricingMode === '₹ / Sq. M.') {
+            var reqArea_sqm = reqArea / 10.7639;
+            tileMaterialCost = Math.round(reqArea_sqm * state.tilePrice);
+        }
+
+        var totalInstalledCost = tileMaterialCost + state.adhesiveCost + state.labourCost;
+        var effectiveCostPerSqFt = floorArea > 0 ? Math.round(totalInstalledCost / floorArea) : 0;
+        var wastageCostEst = Math.round(wastageArea * (tileArea > 0 ? (tileMaterialCost / reqArea) : 0));
+
+        var isTileLargerThanRoom = (tL_ft > rL_ft || tW_ft > rW_ft);
+
+        // Control Inputs Display
+        document.getElementById('roomLengthInput').value = formatIndian(state.roomLength);
+        document.getElementById('roomLengthUnit').value = state.roomLengthUnit;
+        document.getElementById('roomWidthInput').value = formatIndian(state.roomWidth);
+        document.getElementById('roomWidthUnit').value = state.roomWidthUnit;
+
+        document.getElementById('tilePresetSelect').value = state.tilePreset;
+        document.getElementById('tileLengthInput').value = formatIndian(state.tileLength);
+        document.getElementById('tileLengthUnit').value = state.tileLengthUnit;
+        document.getElementById('tileWidthInput').value = formatIndian(state.tileWidth);
+        document.getElementById('tileWidthUnit').value = state.tileWidthUnit;
+
+        document.getElementById('tilesPerBoxInput').value = formatIndian(state.tilesPerBox);
+
+        document.getElementById('wastageInput').value = state.wastageRate.toFixed(1);
+        document.getElementById('wastageSlider').value = state.wastageRate;
+        updateSliderFill('wastageSlider');
+
+        document.getElementById('pricingModeSelect').value = state.pricingMode;
+        document.getElementById('tilePriceInput').value = formatIndian(state.tilePrice);
+        document.getElementById('tilePriceSlider').value = state.tilePrice;
+        updateSliderFill('tilePriceSlider');
+
+        document.getElementById('adhesiveInput').value = formatIndian(state.adhesiveCost);
+        document.getElementById('labourInput').value = formatIndian(state.labourCost);
+
+        // Dashboard Hero Outputs
+        document.getElementById('resTilesReqVal').innerText = formatIndian(tilesReq) + " Tiles";
+        document.getElementById('resVerdictBadge').innerText = formatIndian(boxesReq) + " BOXES REQUIRED";
+
+        document.getElementById('resSubtext').innerHTML = 'Boxes Required: <strong>' + formatIndian(boxesReq) + ' Boxes</strong> (' + formatIndian(actualTilesPurchased) + ' Tiles Purchased). Estimated Tile Cost: <strong>₹ ' + formatShortIndian(tileMaterialCost) + '</strong> (Effective Rate: ₹ ' + formatIndian(effectiveCostPerSqFt) + ' / sq.ft on ' + formatIndian(Math.round(floorArea)) + ' sq.ft floor).';
+
+        // Red Flag Warning Box
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfDesc = document.getElementById('redFlagDesc');
+        if (isTileLargerThanRoom) {
+            redFlagBox.style.display = 'block';
+            rfDesc.innerText = "Single tile dimensions (" + state.tileLength + state.tileLengthUnit + " × " + state.tileWidth + state.tileWidthUnit + ") are larger than room dimensions. Verify cutting layout.";
+        } else {
+            redFlagBox.style.display = 'none';
+        }
+
+        // Snapshot Grid Cards
+        document.getElementById('snapTilesReq').innerText = formatIndian(tilesReq) + " Tiles";
+        document.getElementById('snapCoverageSub').innerText = "Coverage: " + Math.round(actualTileCoverage) + " sq.ft";
+
+        document.getElementById('snapBoxesReq').innerText = formatIndian(boxesReq) + " Boxes";
+        document.getElementById('snapPurchasedSub').innerText = "Purchased: " + formatIndian(actualTilesPurchased) + " Tiles";
+
+        document.getElementById('snapTileCost').innerText = "₹ " + formatShortIndian(tileMaterialCost);
+        document.getElementById('snapPriceModeSub').innerText = "Mode: " + state.pricingMode;
+
+        document.getElementById('snapFloorArea').innerText = formatIndian(Math.round(floorArea)) + " sq.ft";
+        document.getElementById('snapRoomDimsSub').innerText = state.roomLength + state.roomLengthUnit + " × " + state.roomWidth + state.roomWidthUnit;
+
+        document.getElementById('snapReqArea').innerText = formatIndian(Math.round(reqArea)) + " sq.ft";
+        document.getElementById('snapWastageSub').innerText = "Wastage Buffer: " + state.wastageRate.toFixed(1) + "%";
+
+        document.getElementById('snapEffectiveWastage').innerText = effectiveWastagePct.toFixed(2) + "%";
+        document.getElementById('snapWastageCostSub').innerText = "Wastage Cost: ₹ " + formatShortIndian(wastageCostEst);
+
+        // Waterfall Card
+        document.getElementById('cardFloorArea').innerText = formatIndian(Math.round(floorArea)) + " sq.ft";
+        document.getElementById('cardWastageArea').innerText = "+" + formatIndian(Math.round(wastageArea)) + " sq.ft";
+        document.getElementById('cardReqArea').innerText = formatIndian(Math.round(reqArea)) + " sq.ft";
+        document.getElementById('cardTileArea').innerText = tileArea.toFixed(2) + " sq.ft / tile";
+        document.getElementById('cardTilesReq').innerText = formatIndian(tilesReq) + " Tiles";
+        document.getElementById('cardBoxesReq').innerText = formatIndian(boxesReq) + " Boxes (" + formatIndian(actualTilesPurchased) + " Tiles)";
+        document.getElementById('cardTileCost').innerText = "₹ " + formatIndian(tileMaterialCost);
+        document.getElementById('cardInstalledCost').innerText = "₹ " + formatIndian(totalInstalledCost);
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>ℹ️ <strong>Wastage Allowance Impact:</strong> A ' + state.wastageRate.toFixed(1) + '% wastage allowance adds ' + formatIndian(Math.round(wastageArea)) + ' sq.ft (+' + (tilesReq - Math.ceil(floorArea/tileArea)) + ' tiles) to cover cutting, edge trims &amp; corner fitting.</li>';
+        rHtml += '<li>ℹ️ <strong>Full Box Rounding:</strong> Tiles are sold in boxes of ' + tilesPerBox + '. Ordering ' + formatIndian(boxesReq) + ' full boxes (' + formatIndian(actualTilesPurchased) + ' tiles) provides ' + formatIndian(Math.round(totalBoxCoverage)) + ' sq.ft total coverage.</li>';
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
