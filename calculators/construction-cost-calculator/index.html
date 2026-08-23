@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Cost Calculator – Estimate House Construction Cost | acreNkey</title>
+
+    <meta name="description" content="Calculate house construction costs based on built-up area, construction rate, materials, finishing, professional fees and contingency with acreNkey.">
+    <meta name="keywords" content="construction cost calculator, house construction cost bangalore, cost per sq ft building house, civil work cost calculator, architect approval fees calculator, acrenkey construction calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/construction-cost-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Construction Cost Calculator | acreNkey">
+    <meta property="og:description" content="Estimate the total cost of constructing a house based on built-up area, construction rate, materials, finishes, professional fees and contingency.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/construction-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Construction Cost Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate the total cost of constructing a house based on built-up area, construction rate, materials, finishes, professional fees and contingency.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Construction Cost Calculator","description":"Real estate building cost calculator for estimating residential house construction costs, effective rate per sq ft, professional fees, and contingency reserves.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/construction-cost-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Construction Cost Calculator","item":"https://acrenkey.com/calculators/construction-cost-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between Base Rate and Effective Construction Cost per sq. ft.?","acceptedAnswer":{"@type":"Answer","text":"Base Rate is the raw contractor quote per sq. ft. Effective Construction Cost per sq. ft. includes all additional component upgrades, architect fees, plan approval fees, and contingency reserves divided by total built-up area."}},{"@type":"Question","name":"Why is a contingency reserve important in home construction?","acceptedAnswer":{"@type":"Answer","text":"A contingency reserve (typically 10%) absorbs material price inflation, structural modifications, and unforeseen site conditions without stalling construction."}},{"@type":"Question","name":"How do I prevent double-counting component costs in the calculator?","acceptedAnswer":{"@type":"Answer","text":"Select 'Yes — Already Included' if your contractor's quote includes civil, electrical, plumbing, and finishing work."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* 6-Card Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Construction Cost Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Construction Cost Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate the total cost of constructing a house based on built-up area, construction rate, materials, finishes, professional fees and contingency.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Construction Project Inputs</h2>
+                </div>
+
+                <!-- Section 1: Base Project Details -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Base Construction &amp; Area</div>
+
+                <!-- Built-up Area -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Total Built-up Area
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="builtUpAreaInput" class="ak-new-input has-suffix" value="2,000" oninput="onBuiltUpAreaInput(this.value)" onchange="onBuiltUpAreaInput(this.value)">
+                            <span class="suffix">sq.ft</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="builtUpAreaSlider" class="ak-new-slider" min="500" max="20000" step="250" value="2000" oninput="onBuiltUpAreaSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Total built-up floor area across all floors planned.</div>
+                </div>
+
+                <!-- Base Construction Cost per Sq. Ft. -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Base Rate per Sq. Ft.
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="baseRateInput" class="ak-new-input has-prefix" value="2,500" oninput="onBaseRateInput(this.value)" onchange="onBaseRateInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="baseRateSlider" class="ak-new-slider" min="1200" max="8000" step="100" value="2500" oninput="onBaseRateSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Contractor base rate per sq. ft. for basic civil construction.</div>
+                </div>
+
+                <!-- Construction Specification & Component Treatment -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">construction</span>
+                            Specification Quality
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="specSelect" class="ak-new-select" onchange="onSpecChange(this.value)">
+                                <option value="Basic">Basic</option>
+                                <option value="Standard" selected>Standard</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Luxury">Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">alt_route</span>
+                            Component Cost Treatment
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="compTreatmentSelect" class="ak-new-select" onchange="onCompTreatmentChange(this.value)">
+                                <option value="No — Add Separately" selected>Add Separately</option>
+                                <option value="Yes — Already Included">Already Included</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Prevent double-counting if contractor rate already includes electrical, plumbing &amp; finishing.</div>
+                </div>
+
+                <!-- Section 2: Construction Components -->
+                <div class="ak-section-divider-title">2. Separate Construction Components</div>
+
+                <!-- Civil / Structural Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">foundation</span>
+                            Civil / Structural Work
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="civilInput" class="ak-new-input has-prefix" value="0" oninput="onCivilInput(this.value)" onchange="onCivilInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electrical Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">electric_bolt</span>
+                            Electrical Wiring &amp; Fittings
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="electricalInput" class="ak-new-input has-prefix" value="0" oninput="onElectricalInput(this.value)" onchange="onElectricalInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plumbing Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">plumbing</span>
+                            Plumbing &amp; Sanitary Piping
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="plumbingInput" class="ak-new-input has-prefix" value="0" oninput="onPlumbingInput(this.value)" onchange="onPlumbingInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flooring & Finishing Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">texture</span>
+                            Flooring, Tiling &amp; Painting
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="flooringInput" class="ak-new-input has-prefix" value="0" oninput="onFlooringInput(this.value)" onchange="onFlooringInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doors & Windows -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">door_front</span>
+                            Doors, Frames &amp; Windows
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="doorsWindowsInput" class="ak-new-input has-prefix" value="0" oninput="onDoorsWindowsInput(this.value)" onchange="onDoorsWindowsInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchen & Bathroom -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">countertops</span>
+                            Kitchen Counter &amp; Bath Fixtures
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="kitchenBathInput" class="ak-new-input has-prefix" value="0" oninput="onKitchenBathInput(this.value)" onchange="onKitchenBathInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Construction Costs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">engineering</span>
+                            Compound Wall &amp; External Works
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherConstInput" class="ak-new-input has-prefix" value="0" oninput="onOtherConstInput(this.value)" onchange="onOtherConstInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Professional, Approval & Contingency -->
+                <div class="ak-section-divider-title">3. Professional Fees &amp; Contingency</div>
+
+                <!-- Architect Fees -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">architecture</span>
+                            Architect &amp; Structural Design Fees
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="architectInput" class="ak-new-input has-prefix" value="1,00,000" oninput="onArchitectInput(this.value)" onchange="onArchitectInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Approval / Permit Fees -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Plan Sanction &amp; Permit Fees
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="approvalInput" class="ak-new-input has-prefix" value="50,000" oninput="onApprovalInput(this.value)" onchange="onApprovalInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contingency Rate % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Contingency Reserve Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="contingencyRateInput" class="ak-new-input has-suffix" value="10.0" oninput="onContingencyRateInput(this.value)" onchange="onContingencyRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="contingencyRateSlider" class="ak-new-slider" min="0.0" max="25.0" step="1.0" value="10.0" oninput="onContingencyRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">25%</span>
+                    </div>
+                    <div class="ak-input-helper">Buffer for material price fluctuations &amp; scope changes (Default 10%).</div>
+                </div>
+
+                <!-- Section 4: Optional Land & Interiors Scope -->
+                <div class="ak-section-divider-title">4. Optional Land &amp; Interior Scope</div>
+
+                <!-- Land Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">landscape</span>
+                            Plot / Land Purchase Cost
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="landCostInput" class="ak-new-input has-prefix" value="0" oninput="onLandCostInput(this.value)" onchange="onLandCostInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Optional. Calculated separately under Total Project Cost.</div>
+                </div>
+
+                <!-- Interior Budget -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">chair</span>
+                            Interiors &amp; Furnishing Budget
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="interiorCostInput" class="ak-new-input has-prefix" value="0" oninput="onInteriorCostInput(this.value)" onchange="onInteriorCostInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Optional. Calculated separately under Total Move-in Cost.</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Total Construction Cost</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Total Construction Cost</div>
+                    <div class="ak-verdict-badge breakeven" id="resVerdictBadge">+13.3% OVER BASE</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTotalConstVal">₹ 56.65 Lakh</div>
+                <div class="ak-emi-subtext" id="resSubtext">Effective Rate: <strong>₹ 2,833 / sq.ft</strong> (vs Base ₹ 2,500 / sq.ft). Contingency Reserve: <strong>₹ 5.15 Lakh</strong> (10%).</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">NOTE:</strong>
+                    <div id="redFlagDesc">Component costs are marked as 'Already Included' in contractor base rate.</div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Construction Cost</div>
+                        <div class="ak-snap-val" style="color:#FFF;" id="snapTotalConst">₹ 56.65 Lakh</div>
+                        <div class="ak-snap-sub" id="snapCostIncrease">+13.3% Rate Increase</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Cost / Sq. Ft.</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapEffectiveRate">₹ 2,833 / sq.ft</div>
+                        <div class="ak-snap-sub" id="snapBaseRateSub">Base: ₹ 2,500 / sq.ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Base Construction Cost</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapBaseCost">₹ 50.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapAreaSub">2,000 sq.ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Separate Components</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapComponentCosts">₹ 0</div>
+                        <div class="ak-snap-sub" id="snapCompTreatmentSub">Treatment: Add Separately</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Professional &amp; Permits</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapProfessionalCosts">₹ 1.50 Lakh</div>
+                        <div class="ak-snap-sub" id="snapArchitectSub">Architect: ₹ 1.00L</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Contingency Reserve</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapContingency">₹ 5.15 Lakh</div>
+                        <div class="ak-snap-sub" id="snapContingencyRateSub">Rate: 10.0%</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Itemized Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Itemized Construction Cost Waterfall
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>1. Base Construction (2,000 sq.ft @ ₹2,500)</span>
+                        <strong id="cardBaseCost">₹ 50,00,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>2. Civil / Structural Work</span>
+                        <span id="cardCivil">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>3. Electrical Wiring &amp; Fittings</span>
+                        <span id="cardElectrical">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>4. Plumbing &amp; Sanitary Piping</span>
+                        <span id="cardPlumbing">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>5. Flooring, Tiling &amp; Painting</span>
+                        <span id="cardFlooring">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>6. Doors, Frames &amp; Windows</span>
+                        <span id="cardDoorsWindows">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>7. Kitchen &amp; Bathroom Work</span>
+                        <span id="cardKitchenBath">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>8. Compound Wall &amp; External Works</span>
+                        <span id="cardOtherConst">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>9. Architect &amp; Sanction Permit Fees</span>
+                        <span id="cardProfessional" style="color:#FDE68A;">+₹ 1,50,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>10. Construction Subtotal</span>
+                        <span id="cardSubtotal" style="color:#FFF;">₹ 51,50,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>11. Contingency Reserve Buffer (10%)</span>
+                        <span id="cardContingency" style="color:#A7F3D0;">+₹ 5,15,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>Total Construction Cost</span>
+                        <strong id="cardTotalConst" style="color:#E5C178;">₹ 56,65,000</strong>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Construction Analysis &amp; Guidance</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>ℹ️ <strong>Effective Rate Impact:</strong> Professional fees and contingency add +₹ 333 / sq.ft (+13.3%) over the base contractor rate of ₹ 2,500 / sq.ft.</li>
+                        <li>ℹ️ <strong>Scope Check:</strong> Component costs are set to 'Add Separately'. Confirm contractor scope excludes electrical &amp; finishing before finalizing budget.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Verify Contractor Scope Before Agreement:</strong> A contractor quoting ₹2,200/sq.ft may exclude doors, windows, and painting, while a ₹2,800/sq.ft quote includes teak wood doors and premium tile finishes. Always compare all-in effective construction costs per sq. ft.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator provides an estimate based on the inputs and assumptions entered. Actual construction costs can vary significantly based on location, site conditions, design, structural requirements, materials, specifications, labour rates, contractor scope and market conditions. Always obtain a detailed project estimate and verify what is included in the quoted construction rate. This calculator is for informational purposes and does not constitute a construction, financial or professional cost estimate.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>What Does It Cost to Build a House?</h2>
+        <p>The contractor's quoted rate per sq. ft. is only the starting point. Professional fees, structural modifications, finishing choices, and a mandatory contingency buffer determine your true all-in construction budget.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Cost 1</div>
+                <div class="ak-step-title">Base Civil Construction</div>
+                <div class="ak-step-desc">Core foundation, RCC columns, beams, brickwork, and plastering calculated per sq. ft.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Cost 2</div>
+                <div class="ak-step-title">Finishing &amp; Fixtures</div>
+                <div class="ak-step-desc">Flooring tiles, electrical wiring, sanitaryware, doors, windows, painting, and kitchen counters.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Cost 3</div>
+                <div class="ak-step-title">Professional &amp; Permit Fees</div>
+                <div class="ak-step-desc">Architect fees, structural engineer design charges, soil testing, and municipal plan sanction fees.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Cost 4</div>
+                <div class="ak-step-title">Contingency Reserve</div>
+                <div class="ak-step-desc">A 10% reserve buffer to absorb steel/cement price inflation, design modifications, and unexpected site conditions.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Before Starting Construction Checklist</h2>
+        <div style="background:#FFF; border:1px solid #EAEFF5; border-radius:12px; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; color:var(--deep-slate); line-height:1.7;">
+                <li>✓ Obtain a detailed itemized Schedule of Quantities (BOQ) from your architect before signing contractor contracts.</li>
+                <li>✓ Verify whether compound wall, borewell, underground sump, and electrical meter connections are included in contractor scope.</li>
+                <li>✓ Confirm steel brand (TMT 550D), cement grade (53 Grade OPC/PPC), and sand specification (M-sand vs P-sand).</li>
+                <li>✓ Ensure plan sanction approval from BBMP / BDA / local municipal authority is obtained prior to excavation.</li>
+                <li>✓ Maintain a 10% cash contingency reserve strictly earmarked for unbudgeted expenses.</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>What is the difference between Base Rate and Effective Construction Cost per sq. ft.?</h3>
+                <p>Base Rate is the raw contractor quote per sq. ft. Effective Construction Cost per sq. ft. includes all additional component upgrades, architect fees, plan approval fees, and contingency reserves divided by total built-up area.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Why is a contingency reserve important in home construction?</h3>
+                <p>A contingency reserve (typically 10%) absorbs material price inflation, structural modifications, and unforeseen site conditions without stalling construction.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How do I prevent double-counting component costs in the calculator?</h3>
+                <p>Select 'Yes — Already Included' if your contractor's quote includes civil, electrical, plumbing, and finishing work.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/bangalore-property-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">location_city</span>
+                </div>
+                <div class="ak-fcard-title">Bangalore Property Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration fees, GST &amp; legal charges in Bangalore.</div>
+            </a>
+
+            <a href="/calculators/whitefield-property-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">domain</span>
+                </div>
+                <div class="ak-fcard-title">Whitefield Property Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate true cost of buying in Whitefield including deposits &amp; interiors.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-buying-readiness-score/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Home Buying Readiness Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate savings, down payment, emergency fund, and credit history before buying.</div>
+            </a>
+
+            <a href="/calculators/property-cash-flow-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                </div>
+                <div class="ak-fcard-title">Property Cash Flow Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate rental cash flow after vacancy, maintenance, taxes &amp; loan payments.</div>
+            </a>
+
+            <a href="/calculators/break-even-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">hourglass_bottom</span>
+                </div>
+                <div class="ak-fcard-title">Property Break-even Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate cash flow &amp; economic appreciation break-even periods.</div>
+            </a>
+
+            <a href="/calculators/north-bangalore-investment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">North Bangalore Investment</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate ROI, CAGR, appreciation, and rental yields in North Bangalore.</div>
+            </a>
+
+            <a href="/calculators/property-comparison-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Property Comparison</div>
+                </div>
+                <div class="ak-fcard-desc">Compare 2 or 3 properties side-by-side across price, quality, location and risk.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    // Centralized Config Architecture
+    var CONSTRUCTION_COST_CONFIG = {
+        defaultArea: 2000,
+        defaultBaseRate: 2500,
+        defaultArchitectFee: 100000,
+        defaultApprovalFee: 50000,
+        defaultContingencyRate: 10.0
+    };
+
+    var state = {
+        builtUpArea: CONSTRUCTION_COST_CONFIG.defaultArea,
+        baseRate: CONSTRUCTION_COST_CONFIG.defaultBaseRate,
+        specQuality: 'Standard',
+        compTreatment: 'No — Add Separately',
+        civil: 0,
+        electrical: 0,
+        plumbing: 0,
+        flooring: 0,
+        doorsWindows: 0,
+        kitchenBath: 0,
+        otherConst: 0,
+        architect: CONSTRUCTION_COST_CONFIG.defaultArchitectFee,
+        approval: CONSTRUCTION_COST_CONFIG.defaultApprovalFee,
+        otherProf: 0,
+        contingencyRate: CONSTRUCTION_COST_CONFIG.defaultContingencyRate,
+        landCost: 0,
+        interiorCost: 0
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onBuiltUpAreaInput(val) { state.builtUpArea = parseRupees(val); syncUI(); }
+    function onBuiltUpAreaSlider(val) { state.builtUpArea = parseFloat(val); syncUI(); }
+
+    function onBaseRateInput(val) { state.baseRate = parseRupees(val); syncUI(); }
+    function onBaseRateSlider(val) { state.baseRate = parseFloat(val); syncUI(); }
+
+    function onSpecChange(val) { state.specQuality = val; syncUI(); }
+    function onCompTreatmentChange(val) { state.compTreatment = val; syncUI(); }
+
+    function onCivilInput(val) { state.civil = parseRupees(val); syncUI(); }
+    function onElectricalInput(val) { state.electrical = parseRupees(val); syncUI(); }
+    function onPlumbingInput(val) { state.plumbing = parseRupees(val); syncUI(); }
+    function onFlooringInput(val) { state.flooring = parseRupees(val); syncUI(); }
+    function onDoorsWindowsInput(val) { state.doorsWindows = parseRupees(val); syncUI(); }
+    function onKitchenBathInput(val) { state.kitchenBath = parseRupees(val); syncUI(); }
+    function onOtherConstInput(val) { state.otherConst = parseRupees(val); syncUI(); }
+
+    function onArchitectInput(val) { state.architect = parseRupees(val); syncUI(); }
+    function onApprovalInput(val) { state.approval = parseRupees(val); syncUI(); }
+
+    function onContingencyRateInput(val) { state.contingencyRate = Math.min(50, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onContingencyRateSlider(val) { state.contingencyRate = parseFloat(val); syncUI(); }
+
+    function onLandCostInput(val) { state.landCost = parseRupees(val); syncUI(); }
+    function onInteriorCostInput(val) { state.interiorCost = parseRupees(val); syncUI(); }
+
+    function syncUI() {
+        var area = state.builtUpArea;
+        var baseRate = state.baseRate;
+        var baseCost = Math.round(area * baseRate);
+
+        var compSum = state.civil + state.electrical + state.plumbing + state.flooring + state.doorsWindows + state.kitchenBath + state.otherConst;
+        var isCompAdded = state.compTreatment === 'No — Add Separately';
+        var effectiveCompCosts = isCompAdded ? compSum : 0;
+
+        var profCosts = state.architect + state.approval + state.otherProf;
+        var subtotal = baseCost + effectiveCompCosts + profCosts;
+
+        var contRateFrac = state.contingencyRate / 100.0;
+        var contingencyVal = Math.round(subtotal * contRateFrac);
+        var totalConstCost = subtotal + contingencyVal;
+
+        var effectiveRate = area > 0 ? Math.round(totalConstCost / area) : 0;
+        var rateIncreasePct = baseRate > 0 ? ((effectiveRate - baseRate) / baseRate) * 100.0 : 0;
+
+        var totalProjectCost = state.landCost + totalConstCost;
+        var totalMoveInCost = totalConstCost + state.interiorCost;
+
+        // Control Inputs Display
+        document.getElementById('builtUpAreaInput').value = formatIndian(area);
+        document.getElementById('builtUpAreaSlider').value = area;
+        updateSliderFill('builtUpAreaSlider');
+
+        document.getElementById('baseRateInput').value = formatIndian(baseRate);
+        document.getElementById('baseRateSlider').value = baseRate;
+        updateSliderFill('baseRateSlider');
+
+        document.getElementById('civilInput').value = formatIndian(state.civil);
+        document.getElementById('electricalInput').value = formatIndian(state.electrical);
+        document.getElementById('plumbingInput').value = formatIndian(state.plumbing);
+        document.getElementById('flooringInput').value = formatIndian(state.flooring);
+        document.getElementById('doorsWindowsInput').value = formatIndian(state.doorsWindows);
+        document.getElementById('kitchenBathInput').value = formatIndian(state.kitchenBath);
+        document.getElementById('otherConstInput').value = formatIndian(state.otherConst);
+
+        document.getElementById('architectInput').value = formatIndian(state.architect);
+        document.getElementById('approvalInput').value = formatIndian(state.approval);
+
+        document.getElementById('contingencyRateInput').value = state.contingencyRate.toFixed(1);
+        document.getElementById('contingencyRateSlider').value = state.contingencyRate;
+        updateSliderFill('contingencyRateSlider');
+
+        document.getElementById('landCostInput').value = formatIndian(state.landCost);
+        document.getElementById('interiorCostInput').value = formatIndian(state.interiorCost);
+
+        // Dashboard Hero Outputs
+        document.getElementById('resTotalConstVal').innerText = "₹ " + formatShortIndian(totalConstCost);
+        document.getElementById('resVerdictBadge').innerText = "+" + rateIncreasePct.toFixed(1) + "% OVER BASE";
+
+        document.getElementById('resSubtext').innerHTML = 'Effective Rate: <strong>₹ ' + formatIndian(effectiveRate) + ' / sq.ft</strong> (vs Base ₹ ' + formatIndian(baseRate) + ' / sq.ft). Contingency Reserve: <strong>₹ ' + formatShortIndian(contingencyVal) + '</strong> (' + state.contingencyRate.toFixed(1) + '%).';
+
+        // Red Flag Warning
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfDesc = document.getElementById('redFlagDesc');
+        if (!isCompAdded && compSum > 0) {
+            redFlagBox.style.display = 'block';
+            rfDesc.innerText = "Component costs (₹ " + formatShortIndian(compSum) + ") are set to 'Already Included'. They are shown for reference but NOT added to base cost.";
+        } else {
+            redFlagBox.style.display = 'none';
+        }
+
+        // Snapshot Grid Cards
+        document.getElementById('snapTotalConst').innerText = "₹ " + formatShortIndian(totalConstCost);
+        document.getElementById('snapCostIncrease').innerText = "+" + rateIncreasePct.toFixed(1) + "% Rate Increase";
+
+        document.getElementById('snapEffectiveRate').innerText = "₹ " + formatIndian(effectiveRate) + " / sq.ft";
+        document.getElementById('snapBaseRateSub').innerText = "Base: ₹ " + formatIndian(baseRate) + " / sq.ft";
+
+        document.getElementById('snapBaseCost').innerText = "₹ " + formatShortIndian(baseCost);
+        document.getElementById('snapAreaSub').innerText = formatIndian(area) + " sq.ft";
+
+        document.getElementById('snapComponentCosts').innerText = isCompAdded ? "₹ " + formatShortIndian(compSum) : "₹ 0 (Included)";
+        document.getElementById('snapCompTreatmentSub').innerText = isCompAdded ? "Treatment: Add Separately" : "Treatment: Included";
+
+        document.getElementById('snapProfessionalCosts').innerText = "₹ " + formatShortIndian(profCosts);
+        document.getElementById('snapArchitectSub').innerText = "Architect: ₹ " + formatShortIndian(state.architect);
+
+        document.getElementById('snapContingency').innerText = "₹ " + formatShortIndian(contingencyVal);
+        document.getElementById('snapContingencyRateSub').innerText = "Rate: " + state.contingencyRate.toFixed(1) + "%";
+
+        // Waterfall Card
+        document.getElementById('cardBaseCost').innerText = "₹ " + formatIndian(baseCost);
+        document.getElementById('cardCivil').innerText = "+₹ " + formatIndian(state.civil);
+        document.getElementById('cardElectrical').innerText = "+₹ " + formatIndian(state.electrical);
+        document.getElementById('cardPlumbing').innerText = "+₹ " + formatIndian(state.plumbing);
+        document.getElementById('cardFlooring').innerText = "+₹ " + formatIndian(state.flooring);
+        document.getElementById('cardDoorsWindows').innerText = "+₹ " + formatIndian(state.doorsWindows);
+        document.getElementById('cardKitchenBath').innerText = "+₹ " + formatIndian(state.kitchenBath);
+        document.getElementById('cardOtherConst').innerText = "+₹ " + formatIndian(state.otherConst);
+        document.getElementById('cardProfessional').innerText = "+₹ " + formatIndian(profCosts);
+        document.getElementById('cardSubtotal').innerText = "₹ " + formatIndian(subtotal);
+        document.getElementById('cardContingency').innerText = "+₹ " + formatIndian(contingencyVal);
+        document.getElementById('cardTotalConst').innerText = "₹ " + formatIndian(totalConstCost);
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>ℹ️ <strong>Effective Rate Impact:</strong> Additional components, professional fees and contingency add +₹ ' + formatIndian(effectiveRate - baseRate) + ' / sq.ft (+' + rateIncreasePct.toFixed(1) + '%) over base contractor rate.</li>';
+
+        if (isCompAdded && compSum > 0) {
+            rHtml += '<li>ℹ️ <strong>Separate Components Added:</strong> ₹ ' + formatShortIndian(compSum) + ' in separate component upgrades are added to the construction budget.</li>';
+        } else if (!isCompAdded && compSum > 0) {
+            rHtml += '<li>✓ <strong>No Double-Counting:</strong> Separate component inputs (₹ ' + formatShortIndian(compSum) + ') are marked as included in base contractor quote.</li>';
+        }
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
