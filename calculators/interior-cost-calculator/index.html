@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Cost Calculator – Estimate Home Interior Cost | acreNkey</title>
+
+    <meta name="description" content="Estimate your home interior cost based on property size, interior cost per sq. ft., modular kitchen, wardrobes, electrical, flooring, furniture and contingency.">
+    <meta name="keywords" content="interior cost calculator, home interior budget calculator, modular kitchen cost calculator, wardrobe interior cost, cost per sq ft interiors, acrenkey interior calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/interior-cost-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Interior Cost Calculator | acreNkey">
+    <meta property="og:description" content="Estimate your home interior cost based on property size, interior cost per sq. ft., modular kitchen, wardrobes, electrical, flooring, furniture and contingency.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/interior-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interior Cost Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate your home interior cost based on property size, interior cost per sq. ft., modular kitchen, wardrobes, electrical, flooring, furniture and contingency.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Interior Cost Calculator","description":"Calculator to estimate total home interior costs based on property size, base rate per sq ft, fixed components, furniture, and contingency buffer.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/interior-cost-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Interior Cost Calculator","item":"https://acrenkey.com/calculators/interior-cost-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is effective cost per sq ft higher than quoted base rate?","acceptedAnswer":{"@type":"Answer","text":"Quoted base rates per sq ft typically cover basic woodwork and laminates. Adding modular kitchens, wardrobes, electrical work, false ceiling, furniture, and a contingency buffer increases your effective cost per sq ft."}},{"@type":"Question","name":"What contingency percentage should I budget for home interiors?","acceptedAnswer":{"@type":"Answer","text":"A 10% to 15% contingency buffer is recommended to account for design modifications, site variations, material upgrades, and unforeseen structural or electrical adjustments during execution."}},{"@type":"Question","name":"How much does a modular kitchen usually cost?","acceptedAnswer":{"@type":"Answer","text":"A standard modular kitchen for a 2BHK or 3BHK home typically ranges between ₹2.5 Lakhs and ₹6 Lakhs depending on carcass material (HDF/PLY), finish (acrylic, laminate, PU), hardware fittings, and appliances."}},{"@type":"Question","name":"Is false ceiling included in base interior packages?","acceptedAnswer":{"@type":"Answer","text":"Not usually. Most basic interior contractors quote false ceiling separately on a per-square-foot basis of ceiling area, ranging between ₹90 and ₹150 per sq ft."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+    .ak-benefit-badge { background: var(--refined-brass); color: #FFFFFF; padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Breakdown List */
+    .ak-breakdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-bd-item {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+        padding: 0.55rem 0.85rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+    }
+
+    .ak-bd-label-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: rgba(255,255,255,0.85);
+        font-weight: 600;
+    }
+
+    .ak-bd-val {
+        font-weight: 800;
+        color: #FFFFFF;
+    }
+
+    /* Stacked Ownership Cost Bar */
+    .ak-cost-bar-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-cb-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-cb-bar {
+        display: flex;
+        height: 14px;
+        border-radius: 7px;
+        overflow: hidden;
+        margin-bottom: 0.75rem;
+    }
+
+    .ak-cb-seg { height: 100%; transition: width 0.3s ease; }
+    .ak-cb-seg.base { background: #E5C178; }
+    .ak-cb-seg.fixed { background: #6EE7B7; }
+    .ak-cb-seg.buffer { background: #F472B6; }
+
+    /* Insight Card */
+    .ak-insight-card {
+        background: rgba(229, 193, 120, 0.08);
+        border: 1px solid rgba(229, 193, 120, 0.25);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-ic-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.35rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-ic-desc {
+        font-size: 0.85rem;
+        color: #FFFFFF;
+        line-height: 1.5;
+    }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-emi-huge { font-size: 1.6rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Interior Cost Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Interior Cost Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate your total home interior cost based on property size, interior rates, modular components, furniture and contingency.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Interior Design Inputs</h2>
+                </div>
+
+                <!-- Section 1: Property Size & Base Rate -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Base Property &amp; Interior Rate</div>
+
+                <!-- Property Size -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Property Size
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="propSizeInput" class="ak-new-input has-suffix" value="1,500" oninput="onPropSizeInput(this.value)" onchange="onPropSizeInput(this.value)">
+                            <span class="suffix">sq. ft.</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propSizeSlider" class="ak-new-slider" min="100" max="10000" step="50" value="1500" oninput="onPropSizeSlider(this.value)">
+                    </div>
+                    <div id="sizeValidationMsg" style="font-size:0.75rem; color:#F87171; font-weight:700; margin-top:0.3rem; display:none;">
+                        Enter a property size to calculate the interior budget.
+                    </div>
+                </div>
+
+                <!-- Interior Cost per Sq. Ft. -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">design_services</span>
+                            Interior Cost per Sq. Ft.
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="baseRateInput" class="ak-new-input has-prefix" value="1,500" oninput="onBaseRateInput(this.value)" onchange="onBaseRateInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="baseRateSlider" class="ak-new-slider" min="0" max="10000" step="100" value="1500" oninput="onBaseRateSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Section 2: Modular Components & Add-ons -->
+                <div class="ak-section-divider-title">2. Fixed Components &amp; Upgrades</div>
+
+                <!-- Modular Kitchen Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">countertops</span>
+                            Modular Kitchen Cost
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="kitchenInput" class="ak-new-input has-prefix" value="3,00,000" oninput="onKitchenInput(this.value)" onchange="onKitchenInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="kitchenSlider" class="ak-new-slider" min="0" max="1500000" step="25000" value="300000" oninput="onKitchenSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Wardrobe Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">door_sliding</span>
+                            Wardrobe Cost
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="wardrobeInput" class="ak-new-input has-prefix" value="2,50,000" oninput="onWardrobeInput(this.value)" onchange="onWardrobeInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="wardrobeSlider" class="ak-new-slider" min="0" max="1500000" step="25000" value="250000" oninput="onWardrobeSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Electrical & Lighting Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">light</span>
+                            Electrical &amp; Lighting Cost
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="elecInput" class="ak-new-input has-prefix" value="1,50,000" oninput="onElecInput(this.value)" onchange="onElecInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="elecSlider" class="ak-new-slider" min="0" max="1000000" step="25000" value="150000" oninput="onElecSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- False Ceiling Cost -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">grid_view</span>
+                            False Ceiling Cost
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="ceilingInput" class="ak-new-input has-prefix" value="1,00,000" oninput="onCeilingInput(this.value)" onchange="onCeilingInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="ceilingSlider" class="ak-new-slider" min="0" max="500000" step="10000" value="100000" oninput="onCeilingSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Flooring / Other Civil Work -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">texture</span>
+                            Flooring / Other Civil Work
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="civilInput" class="ak-new-input has-prefix" value="1,50,000" oninput="onCivilInput(this.value)" onchange="onCivilInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="civilSlider" class="ak-new-slider" min="0" max="1000000" step="25000" value="150000" oninput="onCivilSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Furniture & Décor -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">chair</span>
+                            Furniture &amp; Décor
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="furnitureInput" class="ak-new-input has-prefix" value="2,00,000" oninput="onFurnitureInput(this.value)" onchange="onFurnitureInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="furnitureSlider" class="ak-new-slider" min="0" max="1500000" step="25000" value="200000" oninput="onFurnitureSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Section 3: Buffer & Contingency -->
+                <div class="ak-section-divider-title">3. Contingency Buffer</div>
+
+                <!-- Contingency % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Contingency Buffer
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="contingencyInput" class="ak-new-input has-suffix" value="10" oninput="onContingencyInput(this.value)" onchange="onContingencyInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="contingencySlider" class="ak-new-slider" min="0" max="30" step="1" value="10" oninput="onContingencySlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30%</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Total Interior Budget</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Result Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Estimated Interior Budget</div>
+                    <div class="ak-benefit-badge" id="resEffectiveBadge">₹ 2,493 / sq. ft.</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTotalCost">₹ 37,40,000</div>
+                <div class="ak-emi-subtext" id="resSubtext">Total estimated interior expenditure including base rate, components &amp; contingency.</div>
+
+                <!-- Stacked Breakdown Cards List -->
+                <div class="ak-breakdown-list">
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#E5C178;">design_services</span>
+                            <span>Base Interior Work (1,500 sq ft × ₹1,500)</span>
+                        </div>
+                        <div class="ak-bd-val" style="color:#E5C178;" id="bdBaseVal">₹ 22,50,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#6EE7B7;">countertops</span>
+                            <span>Modular Kitchen</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdKitchenVal">₹ 3,00,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#60A5FA;">door_sliding</span>
+                            <span>Wardrobes</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdWardrobeVal">₹ 2,50,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#F472B6;">light</span>
+                            <span>Electrical &amp; Lighting</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdElecVal">₹ 1,50,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#FBBF24;">grid_view</span>
+                            <span>False Ceiling</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdCeilingVal">₹ 1,00,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#A7F3D0;">texture</span>
+                            <span>Flooring / Other Civil Work</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdCivilVal">₹ 1,50,000</div>
+                    </div>
+                    <div class="ak-bd-item">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#C084FC;">chair</span>
+                            <span>Furniture &amp; Décor</span>
+                        </div>
+                        <div class="ak-bd-val" id="bdFurnitureVal">₹ 2,00,000</div>
+                    </div>
+                    <div class="ak-bd-item" style="background:rgba(255,255,255,0.08); border-top:1px solid rgba(255,255,255,0.15);">
+                        <div class="ak-bd-label-flex">
+                            <span class="material-symbols-outlined" style="font-size:18px; color:#F87171;">shield</span>
+                            <span>Contingency Buffer (10%)</span>
+                        </div>
+                        <div class="ak-bd-val" style="color:#F87171;" id="bdContingencyVal">₹ 3,40,000</div>
+                    </div>
+                </div>
+
+                <!-- Stacked Cost Contribution Bar -->
+                <div class="ak-cost-bar-card">
+                    <div class="ak-cb-title">
+                        <span class="material-symbols-outlined" style="font-size:18px;">pie_chart</span>
+                        <span>Budget Allocation Split</span>
+                    </div>
+                    <div class="ak-cb-bar">
+                        <div class="ak-cb-seg base" id="barSegBase" style="width: 60.2%;"></div>
+                        <div class="ak-cb-seg fixed" id="barSegFixed" style="width: 30.7%;"></div>
+                        <div class="ak-cb-seg buffer" id="barSegBuffer" style="width: 9.1%;"></div>
+                    </div>
+                    <div style="font-size:0.75rem; color:rgba(255,255,255,0.7); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.3rem;">
+                        <span><strong style="color:#E5C178;">Base Work:</strong> <span id="legBasePct">60.2%</span></span>
+                        <span><strong style="color:#6EE7B7;">Components:</strong> <span id="legFixedPct">30.7%</span></span>
+                        <span><strong style="color:#F472B6;">Contingency:</strong> <span id="legBufferPct">9.1%</span></span>
+                    </div>
+                </div>
+
+                <!-- Insight Card (Base vs Effective Rate) -->
+                <div class="ak-insight-card">
+                    <div class="ak-ic-title">
+                        <span class="material-symbols-outlined" style="font-size:18px;">lightbulb</span>
+                        <span>Base Rate vs Effective Rate Insight</span>
+                    </div>
+                    <div class="ak-ic-desc" id="insightDesc">
+                        Your initial quoted interior rate is <strong>₹1,500 / sq. ft.</strong> After including fixed components (₹11.50L) and 10% contingency buffer (₹3.40L), your effective cost per sq. ft. is <strong>₹2,493 / sq. ft.</strong> (+66% over base rate).
+                    </div>
+                </div>
+
+                <!-- Subtotal Highlight -->
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:0.85rem 1rem; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.85rem; color:rgba(255,255,255,0.8); font-weight:600;">Subtotal Before Contingency:</span>
+                    <strong style="font-size:1.05rem; color:#FFF;" id="resSubtotalVal">₹ 34,00,000</strong>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Project Scope Note:</strong> This calculator estimates interior costs based on the components entered. Actual costs may vary based on materials, finishes, design complexity, brand selections, labour rates and project scope.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Estimates are illustrative and based on the assumptions entered by you. Actual material prices, contractor quotations, vendor charges and taxes may differ. This calculator is intended for decision support and does not constitute a formal contractor quote.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How is Home Interior Cost Calculated?</h2>
+        <p>The quoted interior rate per sq. ft. rarely represents your final interior budget. Component upgrades, modular kitchen fittings, wardrobes, false ceiling, furniture, and contingency buffers materially increase the effective cost per sq. ft.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Base Interior Work</div>
+                <div class="ak-step-desc">Property Size × Base Quoted Interior Rate per Sq. Ft.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Fixed Component Upgrades</div>
+                <div class="ak-step-desc">Modular kitchen, wardrobes, electrical fittings, false ceiling, civil work, and loose furniture.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Contingency Buffer</div>
+                <div class="ak-step-desc">A 10% to 15% safety buffer on the subtotal for unexpected design modifications or site variations.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Effective Cost per Sq. Ft.</div>
+                <div class="ak-step-desc">Total Interior Budget divided by total property sq. ft. area.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>Why is effective cost per sq ft higher than quoted base rate?</h3>
+                <p>Quoted base rates per sq ft typically cover basic woodwork and laminates. Adding modular kitchens, wardrobes, electrical work, false ceiling, furniture, and a contingency buffer increases your effective cost per sq ft.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What contingency percentage should I budget for home interiors?</h3>
+                <p>A 10% to 15% contingency buffer is recommended to account for design modifications, site variations, material upgrades, and unforeseen structural or electrical adjustments during execution.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How much does a modular kitchen usually cost?</h3>
+                <p>A standard modular kitchen for a 2BHK or 3BHK home typically ranges between ₹2.5 Lakhs and ₹6 Lakhs depending on carcass material (HDF/PLY), finish (acrylic, laminate, PU), hardware fittings, and appliances.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Is false ceiling included in base interior packages?</h3>
+                <p>Not usually. Most basic interior contractors quote false ceiling separately on a per-square-foot basis of ceiling area, ranging between ₹90 and ₹150 per sq ft.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate how much home loan you may be eligible for based on your income and profile.</div>
+            </a>
+
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">payments</span>
+                </div>
+                <div class="ak-fcard-title">Down Payment Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Determine the down payment required and plan your upfront savings for property purchase.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/monthly-home-ownership-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </div>
+                <div class="ak-fcard-title">Monthly Home Ownership Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate true monthly cost of home ownership including EMI, maintenance, taxes, and insurance.</div>
+            </a>
+
+            <a href="/calculators/property-negotiation-savings-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">price_check</span>
+                </div>
+                <div class="ak-fcard-title">Property Negotiation Savings</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate total financial benefit from price discounts and home loan interest savings.</div>
+            </a>
+
+            <a href="/calculators/ready-to-move-vs-under-construction-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">domain</span>
+                </div>
+                <div class="ak-fcard-title">Ready-to-Move vs Under-Construction</div>
+                </div>
+                <div class="ak-fcard-desc">Compare total outgoings, pre-EMI interest, rent, and appreciation for property options.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        propSize: 1500,
+        baseRate: 1500,
+        kitchen: 300000,
+        wardrobe: 250000,
+        elec: 150000,
+        ceiling: 100000,
+        civil: 150000,
+        furniture: 200000,
+        contingencyPct: 10.0
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + 'L';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onPropSizeInput(val) { state.propSize = parseRupees(val); syncUI(); }
+    function onPropSizeSlider(val) { state.propSize = parseFloat(val); syncUI(); }
+
+    function onBaseRateInput(val) { state.baseRate = parseRupees(val); syncUI(); }
+    function onBaseRateSlider(val) { state.baseRate = parseFloat(val); syncUI(); }
+
+    function onKitchenInput(val) { state.kitchen = parseRupees(val); syncUI(); }
+    function onKitchenSlider(val) { state.kitchen = parseFloat(val); syncUI(); }
+
+    function onWardrobeInput(val) { state.wardrobe = parseRupees(val); syncUI(); }
+    function onWardrobeSlider(val) { state.wardrobe = parseFloat(val); syncUI(); }
+
+    function onElecInput(val) { state.elec = parseRupees(val); syncUI(); }
+    function onElecSlider(val) { state.elec = parseFloat(val); syncUI(); }
+
+    function onCeilingInput(val) { state.ceiling = parseRupees(val); syncUI(); }
+    function onCeilingSlider(val) { state.ceiling = parseFloat(val); syncUI(); }
+
+    function onCivilInput(val) { state.civil = parseRupees(val); syncUI(); }
+    function onCivilSlider(val) { state.civil = parseFloat(val); syncUI(); }
+
+    function onFurnitureInput(val) { state.furniture = parseRupees(val); syncUI(); }
+    function onFurnitureSlider(val) { state.furniture = parseFloat(val); syncUI(); }
+
+    function onContingencyInput(val) { state.contingencyPct = Math.min(100, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onContingencySlider(val) { state.contingencyPct = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var size = state.propSize;
+        var sizeMsg = document.getElementById('sizeValidationMsg');
+
+        if (size <= 0) {
+            sizeMsg.style.display = 'block';
+        } else {
+            sizeMsg.style.display = 'none';
+        }
+
+        var baseRate = state.baseRate;
+        var baseCost = size * baseRate;
+
+        var kitchen = state.kitchen;
+        var wardrobe = state.wardrobe;
+        var elec = state.elec;
+        var ceiling = state.ceiling;
+        var civil = state.civil;
+        var furniture = state.furniture;
+
+        var fixedComponents = kitchen + wardrobe + elec + ceiling + civil + furniture;
+        var subtotal = baseCost + fixedComponents;
+
+        var contingencyPct = state.contingencyPct;
+        var contingencyVal = subtotal * (contingencyPct / 100.0);
+
+        var totalCost = subtotal + contingencyVal;
+        var effectiveRate = size > 0 ? (totalCost / size) : 0;
+
+        // Input Displays Sync
+        document.getElementById('propSizeInput').value = formatIndian(size);
+        document.getElementById('propSizeSlider').value = size;
+        updateSliderFill('propSizeSlider');
+
+        document.getElementById('baseRateInput').value = formatIndian(baseRate);
+        document.getElementById('baseRateSlider').value = baseRate;
+        updateSliderFill('baseRateSlider');
+
+        document.getElementById('kitchenInput').value = formatIndian(kitchen);
+        document.getElementById('kitchenSlider').value = kitchen;
+        updateSliderFill('kitchenSlider');
+
+        document.getElementById('wardrobeInput').value = formatIndian(wardrobe);
+        document.getElementById('wardrobeSlider').value = wardrobe;
+        updateSliderFill('wardrobeSlider');
+
+        document.getElementById('elecInput').value = formatIndian(elec);
+        document.getElementById('elecSlider').value = elec;
+        updateSliderFill('elecSlider');
+
+        document.getElementById('ceilingInput').value = formatIndian(ceiling);
+        document.getElementById('ceilingSlider').value = ceiling;
+        updateSliderFill('ceilingSlider');
+
+        document.getElementById('civilInput').value = formatIndian(civil);
+        document.getElementById('civilSlider').value = civil;
+        updateSliderFill('civilSlider');
+
+        document.getElementById('furnitureInput').value = formatIndian(furniture);
+        document.getElementById('furnitureSlider').value = furniture;
+        updateSliderFill('furnitureSlider');
+
+        document.getElementById('contingencyInput').value = contingencyPct.toFixed(0);
+        document.getElementById('contingencySlider').value = contingencyPct;
+        updateSliderFill('contingencySlider');
+
+        // Results Dashboard Updates
+        document.getElementById('resTotalCost').innerText = "₹ " + formatIndian(totalCost);
+        document.getElementById('resEffectiveBadge').innerText = size > 0 ? ("₹ " + formatIndian(effectiveRate) + " / sq. ft.") : "—";
+
+        document.getElementById('bdBaseVal').innerText = "₹ " + formatIndian(baseCost);
+        document.getElementById('bdKitchenVal').innerText = "₹ " + formatIndian(kitchen);
+        document.getElementById('bdWardrobeVal').innerText = "₹ " + formatIndian(wardrobe);
+        document.getElementById('bdElecVal').innerText = "₹ " + formatIndian(elec);
+        document.getElementById('bdCeilingVal').innerText = "₹ " + formatIndian(ceiling);
+        document.getElementById('bdCivilVal').innerText = "₹ " + formatIndian(civil);
+        document.getElementById('bdFurnitureVal').innerText = "₹ " + formatIndian(furniture);
+        document.getElementById('bdContingencyVal').innerText = "₹ " + formatIndian(contingencyVal);
+        document.getElementById('resSubtotalVal').innerText = "₹ " + formatIndian(subtotal);
+
+        // Stacked Bar Percentages
+        var basePct = totalCost > 0 ? (baseCost / totalCost) * 100 : 0;
+        var fixedPct = totalCost > 0 ? (fixedComponents / totalCost) * 100 : 0;
+        var bufferPct = totalCost > 0 ? (contingencyVal / totalCost) * 100 : 0;
+
+        document.getElementById('barSegBase').style.width = basePct + "%";
+        document.getElementById('barSegFixed').style.width = fixedPct + "%";
+        document.getElementById('barSegBuffer').style.width = bufferPct + "%";
+
+        document.getElementById('legBasePct').innerText = basePct.toFixed(1) + "%";
+        document.getElementById('legFixedPct').innerText = fixedPct.toFixed(1) + "%";
+        document.getElementById('legBufferPct').innerText = bufferPct.toFixed(1) + "%";
+
+        // Insight Card
+        var rateDiffPct = baseRate > 0 ? (((effectiveRate - baseRate) / baseRate) * 100.0) : 0;
+        var rateDiffText = rateDiffPct >= 0 ? ("+" + Math.round(rateDiffPct) + "% over base rate") : ("under base rate");
+        
+        document.getElementById('insightDesc').innerHTML = 'Your initial quoted interior rate is <strong>₹' + formatIndian(baseRate) + ' / sq. ft.</strong> After including fixed components (₹' + formatShortIndian(fixedComponents) + ') and ' + contingencyPct.toFixed(0) + '% contingency buffer (₹' + formatShortIndian(contingencyVal) + '), your effective cost per sq. ft. is <strong>₹' + formatIndian(effectiveRate) + ' / sq. ft.</strong> (' + rateDiffText + ').';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
