@@ -772,7 +772,78 @@
         line-height: 1.55;
         flex-grow: 1;
     }
-    </style>
+    
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper {
+            padding: 0 1rem;
+            margin-top: 100px;
+        }
+        .ak-calc-left-panel,
+        .ak-calc-right-panel {
+            padding: 1.25rem 1rem;
+        }
+        .ak-calc-header-left .ak-calc-h1 {
+            font-size: 22px;
+        }
+        .ak-panel-header h2 {
+            font-size: 20px;
+        }
+        .ak-calc-article {
+            padding: 0 1rem;
+            margin: 2rem auto 3rem auto;
+        }
+        .ak-calc-article h2 {
+            font-size: 22px;
+        }
+        .ak-more-calcs-section {
+            padding: 2rem 1rem;
+        }
+        .ak-more-calcs-title {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .ak-3-stats-new {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ak-fi-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-fi-item style[grid-column] {
+            grid-column: auto !important;
+        }
+        .ak-emi-huge {
+            font-size: 1.75rem;
+        }
+        .ak-new-input-box-wrapper {
+            width: 145px;
+        }
+        .ak-new-input {
+            font-size: 0.85rem;
+            padding: 0.5rem 0.6rem;
+        }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label {
+            font-size: 0.82rem;
+        }
+        .ak-steps-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
 
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
 </head>
