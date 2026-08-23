@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Negotiation Savings Calculator – Calculate Your Negotiation Savings | acreNkey</title>
+
+    <meta name="description" content="Calculate how much you can save by negotiating a lower property price, including potential EMI and home loan interest savings with acreNkey's Property Negotiation Savings Calculator.">
+    <meta name="keywords" content="property negotiation calculator, real estate negotiation savings, property price discount calculator, home loan interest savings calculator, acrenkey negotiation calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/property-negotiation-savings-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Property Negotiation Savings Calculator | acreNkey">
+    <meta property="og:description" content="See how much you could save by negotiating a lower property price — including potential savings on your home loan interest.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/property-negotiation-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Negotiation Savings Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate how much you can save by negotiating a lower property price, including potential EMI and home loan interest savings.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Property Negotiation Savings Calculator","description":"Independent calculator to estimate total financial savings from property price negotiation, including immediate price discount and home loan interest savings.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/property-negotiation-savings-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Property Negotiation Savings Calculator","item":"https://acrenkey.com/calculators/property-negotiation-savings-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does property price negotiation save money on home loan interest?","acceptedAnswer":{"@type":"Answer","text":"When you negotiate a lower purchase price, your required loan amount decreases proportionately (based on your LTV). Borrowing less money reduces both your monthly EMI and the total interest charged by the lender over the loan tenure."}},{"@type":"Question","name":"What is Total Financial Benefit in property negotiation?","acceptedAnswer":{"@type":"Answer","text":"Total Financial Benefit is the combined value of your immediate price reduction plus the long-term interest savings on your home loan. For example, a ₹5 Lakh price discount can create over ₹9 Lakh in total financial benefit over a 20-year loan."}},{"@type":"Question","name":"Can I calculate savings if I am buying with 100% cash (no loan)?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can disable the Home Loan Impact toggle or set LTV to 0%. In that case, your Total Financial Benefit equals your immediate price savings."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    /* Header Row */
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 26px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0 0 0.25rem 0;
+        font-weight: 200;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .ak-calc-sub-text {
+            line-height: 1.45;
+            letter-spacing: -0.015em;
+        }
+    }
+
+    /* Main Grid */
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 550px 550px;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1150px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+        .ak-calc-right-panel {
+            min-height: auto;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0;
+    }
+
+    /* Toggle Control for Input Mode & Loan Impact */
+    .ak-mode-toggle-group {
+        display: flex;
+        align-items: center;
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.2);
+        border-radius: 8px;
+        padding: 4px;
+        margin-bottom: 1.25rem;
+        gap: 4px;
+    }
+
+    .ak-mode-toggle-btn {
+        flex: 1;
+        background: transparent;
+        border: none;
+        border-radius: 6px;
+        padding: 0.5rem 0.75rem;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-navy);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+    }
+
+    .ak-mode-toggle-btn.active {
+        background: var(--deep-navy-100);
+        color: #FFFFFF;
+        box-shadow: 0 2px 8px rgba(24, 42, 61, 0.15);
+    }
+
+    /* Section Subheaders */
+    .ak-section-divider-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Input Rows */
+    .ak-new-input-row {
+        margin-bottom: 1rem;
+    }
+
+    .ak-new-input-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.6rem;
+    }
+
+    .ak-new-input-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input-label .material-symbols-outlined {
+        font-size: 20px;
+        color: var(--deep-navy-100);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ak-new-input-box-wrapper {
+        position: relative;
+        width: 185px;
+    }
+
+    .ak-new-input-box-wrapper .prefix {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input-box-wrapper .suffix {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+
+    .ak-new-input:focus {
+        outline: none;
+        border-color: var(--refined-brass);
+        box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1);
+    }
+
+    .ak-new-input.readonly {
+        background: #F8F9FA;
+        border-color: #D5D1C8;
+        color: var(--muted-slate);
+        cursor: not-allowed;
+    }
+
+    /* Validation Warning */
+    .ak-input-validation-msg {
+        font-size: 0.75rem;
+        color: #D97706;
+        font-weight: 700;
+        margin-top: 0.3rem;
+        display: none;
+    }
+
+    /* Slider styling */
+    .ak-new-slider-container {
+        position: relative;
+        padding: 0 8px;
+    }
+
+    .ak-new-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: #8C9BB1;
+        outline: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--refined-brass);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    .ak-slider-with-labels {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 0.25rem;
+    }
+    .ak-slider-with-labels .ak-new-slider-container {
+        flex: 1;
+    }
+    .ak-slider-labels-inline {
+        font-size: 0.85rem;
+        color: var(--deep-navy);
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* Auto-Calculated Highlight Box */
+    .ak-loan-amount-box {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.2);
+        border-radius: 8px;
+        padding: 0.75rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .ak-la-content { width: 100%; }
+    .ak-la-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ak-la-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-navy);
+    }
+    .ak-la-val {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--refined-brass);
+    }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+
+    .ak-right-header {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-benefit-badge {
+        background: var(--refined-brass);
+        color: #FFFFFF;
+        padding: 0.25rem 0.65rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .ak-emi-huge {
+        font-family: var(--font-heading);
+        font-size: 2.1rem;
+        font-weight: 400;
+        color: #E5C178;
+        line-height: 1.1;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-emi-subtext {
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.75);
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+
+    /* 3-Stats Grid */
+    .ak-3-stats-new {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.85rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 1.25rem 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-stat-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .ak-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.7);
+        font-weight: 600;
+    }
+
+    .ak-stat-val {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #FFF;
+    }
+
+    /* Financing Impact Grid */
+    .ak-financing-impact-box {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-fi-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #E5C178;
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-fi-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+    }
+
+    .ak-fi-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-fi-lbl {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.65);
+    }
+
+    .ak-fi-val {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #FFFFFF;
+    }
+
+    /* Stacked Benefit Bar */
+    .ak-money-goes-section {
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-stacked-bar-title-new {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #FFF;
+        margin-bottom: 0.75rem;
+    }
+
+    .ak-stacked-bar-new {
+        display: flex;
+        height: 32px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 0.85rem;
+    }
+
+    .ak-bar-principal-new {
+        background: #DDA24A;
+        color: #000;
+        font-weight: 800;
+        font-size: 0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ak-bar-interest-new {
+        background: rgba(255,255,255,0.2);
+        color: #FFF;
+        font-weight: 800;
+        font-size: 0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ak-legend-row-new {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.9);
+        gap: 0.5rem;
+    }
+
+    .ak-legend-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-legend-dot-new.price-save { background: #DDA24A; }
+    .ak-legend-dot-new.int-save { background: rgba(255,255,255,0.4); }
+
+    /* Insight Box */
+    .ak-insight-box {
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(255,255,255,0.03);
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.9);
+        line-height: 1.5;
+    }
+
+    .ak-insight-box .material-symbols-outlined {
+        color: #E5C178;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    /* Tip & Disclaimer Box below Grid */
+    .ak-post-widget-unit {
+        margin-top: 1.5rem;
+    }
+
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    /* Article & Educational Guide */
+    .ak-calc-article {
+        max-width: 1140px;
+        margin: 3rem auto 4rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+        color: var(--deep-navy);
+        line-height: 1.6;
+    }
+
+    .ak-calc-article h2 {
+        font-family: var(--font-heading);
+        font-size: 26px;
+        font-weight: 400;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+    }
+
+    .ak-calc-article p {
+        color: var(--deep-slate);
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .ak-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.25rem;
+        margin: 2rem 0;
+    }
+
+    .ak-step-card {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 12px;
+        padding: 1.35rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .ak-step-num {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        color: var(--refined-brass);
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-step-title {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin-bottom: 0.5rem;
+    }
+
+    .ak-step-desc {
+        font-size: 0.9rem;
+        color: var(--deep-slate);
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    .ak-step-formula {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.18);
+        border-radius: 6px;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--deep-navy);
+        margin-top: 0.6rem;
+        font-family: monospace;
+    }
+
+    /* More Calculators Grid */
+    .ak-more-calcs-section {
+        max-width: 1140px;
+        margin: 0 auto 2rem auto;
+        padding: 3rem 2rem;
+    }
+    .ak-more-calcs-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .ak-more-calcs-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-more-calcs-sub {
+        font-size: 0.95rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
+    .ak-feature-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 900px) {
+        .ak-feature-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+        .ak-feature-cards { grid-template-columns: 1fr; }
+    }
+    .ak-fcard {
+        background: #FFFFFF;
+        border: none;
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .ak-fcard:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12);
+    }
+    .ak-fcard-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .ak-fcard-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .ak-fcard-icon .material-symbols-outlined {
+        font-size: 24px;
+        color: var(--refined-brass);
+    }
+    .ak-fcard-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        line-height: 1.2;
+    }
+    .ak-fcard-desc {
+        font-size: 0.85rem;
+        color: var(--muted-slate);
+        margin-bottom: 0;
+        line-height: 1.55;
+        flex-grow: 1;
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Property Negotiation Savings Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Property Negotiation Savings Calculator</h1>
+                <p class="ak-calc-sub-text">See how much you could save by negotiating a lower property price — including the potential savings on your home loan interest.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property Negotiation Inputs</h2>
+                </div>
+
+                <!-- Input Mode Toggle -->
+                <div style="font-size:0.8rem; font-weight:700; color:var(--deep-navy-100); margin-bottom:0.35rem;">Calculate By:</div>
+                <div class="ak-mode-toggle-group">
+                    <button type="button" id="btnModeDiscount" class="ak-mode-toggle-btn active" onclick="setCalcMode('discount')">Discount %</button>
+                    <button type="button" id="btnModePrice" class="ak-mode-toggle-btn" onclick="setCalcMode('price')">Negotiated Price</button>
+                </div>
+
+                <!-- Input: Quoted Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></span>
+                            Quoted Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="quotedPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" onchange="onQuotedPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="quotedPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onQuotedPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Input: Negotiation Discount % (Mode = discount) -->
+                <div class="ak-new-input-row" id="rowDiscount">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-icon-svg-wrapper" title="Expected percentage reduction from quoted price." style="cursor:help;"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-444 80-56-56 584-584 56 56-584 584Z"/></svg></span>
+                            Negotiation Discount
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="discountPctInput" class="ak-new-input has-suffix" value="5.0" onchange="onDiscountPctInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="discountPctSlider" class="ak-new-slider" min="0" max="30" step="0.5" value="5" oninput="onDiscountPctSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30%</span>
+                    </div>
+                </div>
+
+                <!-- Input: Negotiated Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg></span>
+                            Negotiated Price <span id="negPriceAutoLabel" style="font-weight:400; opacity:0.7;">(Auto-calculated)</span>
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="negPriceInput" class="ak-new-input has-prefix readonly" value="95,00,000" readonly onchange="onNegPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-input-validation-msg" id="negPriceValidationMsg">
+                        Negotiated price cannot be higher than the quoted price.
+                    </div>
+                </div>
+
+                <!-- Section: Home Loan Impact -->
+                <div class="ak-section-divider-title">
+                    <span>Include Home Loan Impact</span>
+                    <div class="ak-mode-toggle-group" style="margin-bottom:0; width:130px;">
+                        <button type="button" id="btnLoanYes" class="ak-mode-toggle-btn active" onclick="setLoanImpact(true)">Yes</button>
+                        <button type="button" id="btnLoanNo" class="ak-mode-toggle-btn" onclick="setLoanImpact(false)">No</button>
+                    </div>
+                </div>
+
+                <div id="loanInputsSection">
+                    <!-- Input: LTV % -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-icon-svg-wrapper" title="Percentage of property value financed via bank loan." style="cursor:help;"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M200-200v-560 560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v100h-80v-100H200v560h560v-100h80v100q0 33-23.5 56.5T760-120H200Zm320-160q-33 0-56.5-23.5T440-360v-240q0-33 23.5-56.5T520-680h280q33 0 56.5 23.5T880-600v240q0 33-23.5 56.5T800-280H520Zm280-80v-240H520v240h280Zm-160-60q25 0 42.5-17.5T700-480q0-25-17.5-42.5T640-540q-25 0-42.5 17.5T580-480q0 25 17.5 42.5T640-420Z"/></svg></span>
+                                Loan-to-Value (LTV)
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="80" onchange="onLtvInput(this.value)">
+                                <span class="suffix">%</span>
+                            </div>
+                        </div>
+                        <div class="ak-slider-with-labels">
+                            <span class="ak-slider-labels-inline">0%</span>
+                            <div class="ak-new-slider-container">
+                                <input type="range" id="ltvSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onLtvSlider(this.value)">
+                            </div>
+                            <span class="ak-slider-labels-inline">100%</span>
+                        </div>
+                    </div>
+
+                    <!-- Informational Down Payment Box -->
+                    <div class="ak-loan-amount-box">
+                        <div class="ak-la-content">
+                            <div class="ak-la-row">
+                                <span class="ak-la-title">Down Payment Required <span style="font-weight:400; opacity:0.7;">(20% Equity)</span></span>
+                                <span class="ak-la-val" id="downPayVal">₹ 19,00,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input: Loan Interest Rate -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-icon-svg-wrapper" title="Annual interest rate charged by the bank." style="cursor:help;"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-444 80-56-56 584-584 56 56-584 584Z"/></svg></span>
+                                Loan Interest Rate
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <input type="text" id="rateInput" class="ak-new-input has-suffix" value="8.50" onchange="onRateInput(this.value)">
+                                <span class="suffix">%</span>
+                            </div>
+                        </div>
+                        <div class="ak-slider-with-labels">
+                            <span class="ak-slider-labels-inline">0%</span>
+                            <div class="ak-new-slider-container">
+                                <input type="range" id="rateSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.1" value="8.5" oninput="onRateSlider(this.value)">
+                            </div>
+                            <span class="ak-slider-labels-inline">15%</span>
+                        </div>
+                    </div>
+
+                    <!-- Input: Loan Tenure -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg></span>
+                                Loan Tenure
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <input type="text" id="tenureInput" class="ak-new-input readonly" value="20 Years" readonly>
+                            </div>
+                        </div>
+                        <div class="ak-slider-with-labels">
+                            <span class="ak-slider-labels-inline">1 yr</span>
+                            <div class="ak-new-slider-container">
+                                <input type="range" id="tenureSlider" class="ak-new-slider" min="1" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+                            </div>
+                            <span class="ak-slider-labels-inline">30 yrs</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Dark) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Primary Outcome</div>
+                    <div class="ak-benefit-badge">Total Financial Benefit</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTotalBenefit"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>9,33,040</div>
+                <div class="ak-emi-subtext" id="resBenefitSubtext">Price Savings (₹5,00,000) + Interest Savings (₹4,33,040)</div>
+                
+                <!-- 3-Stats Grid -->
+                <div class="ak-3-stats-new">
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Negotiated Price</div>
+                        <div class="ak-stat-val" id="resNegPrice">₹ 95,00,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Immediate Savings</div>
+                        <div class="ak-stat-val" id="resPriceSavings">₹ 5,00,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Savings %</div>
+                        <div class="ak-stat-val" id="resSavingsPct">5.0%</div>
+                    </div>
+                </div>
+
+                <!-- Financing Impact Grid -->
+                <div class="ak-financing-impact-box" id="resFinancingBox">
+                    <div class="ak-fi-title">
+                        <span class="material-symbols-outlined" style="font-size:18px;">account_balance</span>
+                        <span>Home Loan Impact (80% LTV • 8.5% • 20 yrs)</span>
+                    </div>
+                    <div class="ak-fi-grid">
+                        <div class="ak-fi-item">
+                            <div class="ak-fi-lbl">Loan Amount Reduced</div>
+                            <div class="ak-fi-val" id="resLoanReduced">₹ 4,00,000</div>
+                        </div>
+                        <div class="ak-fi-item">
+                            <div class="ak-fi-lbl">Monthly EMI Reduced</div>
+                            <div class="ak-fi-val" id="resEmiReduced">₹ 3,471 / mo</div>
+                        </div>
+                        <div class="ak-fi-item" style="grid-column: span 2;">
+                            <div class="ak-fi-lbl">Total Interest Saved</div>
+                            <div class="ak-fi-val" style="color:#E5C178;" id="resInterestSaved">₹ 4,33,040</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stacked Breakdown Bar -->
+                <div class="ak-money-goes-section">
+                    <div class="ak-stacked-bar-title-new">Savings Breakdown</div>
+                    <div class="ak-stacked-bar-new">
+                        <div class="ak-bar-principal-new" id="barPriceSave" style="width:53.6%">Price</div>
+                        <div class="ak-bar-interest-new" id="barIntSave" style="width:46.4%">Interest</div>
+                    </div>
+                    <div class="ak-legend-row-new">
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new price-save"></div>
+                            <span>Price Savings (<span id="legendPriceSaveVal">₹5,00,000</span>)</span>
+                        </div>
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new int-save"></div>
+                            <span>Interest Savings (<span id="legendIntSaveVal">₹4,33,040</span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insight Box -->
+                <div class="ak-insight-box">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <div id="insightText">
+                        Negotiating <strong id="insPriceVal">₹5,00,000</strong> off the property price creates <strong id="insTotalVal">₹9,33,040</strong> of total financial benefit when including <strong id="insIntVal">₹4,33,040</strong> of home loan interest savings.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Post Calculator Tip & Disclaimer -->
+        <div class="ak-post-widget-unit">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Negotiation Insight:</strong> A negotiated price can save you more than the amount discounted from the property price. If you finance the purchase, borrowing less can also reduce your total interest cost over the loan tenure.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Estimated savings depend on the negotiated price, loan-to-value ratio, interest rate and loan tenure entered. Actual loan terms, lender policies, taxes and transaction costs may differ. The calculator does not account for changes in property taxes, stamp duty, registration or other charges that may vary with the negotiated price.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How Much Can Negotiation Really Save?</h2>
+        <p>Most home buyers measure negotiation success purely by the immediate discount on the quoted property price. However, when you finance your purchase with a home loan, every rupee saved on the purchase price also reduces the principal amount you borrow — creating compounding interest savings over your loan tenure.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Reduce Property Price</div>
+                <div class="ak-step-desc">Negotiate a discount from the seller or builder's quoted price.</div>
+                <div class="ak-step-formula">Negotiated Price = Quoted Price × (1 − Discount %)</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Calculate Immediate Savings</div>
+                <div class="ak-step-desc">Determine your direct cash savings on the acquisition cost.</div>
+                <div class="ak-step-formula">Price Savings = Quoted Price − Negotiated Price</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Calculate Loan Reduction</div>
+                <div class="ak-step-desc">Borrowing less money lowers your principal loan requirement.</div>
+                <div class="ak-step-formula">Loan Reduction = Price Savings × LTV %</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Calculate EMI Savings</div>
+                <div class="ak-step-desc">Enjoy lower monthly instalments for the entire tenure.</div>
+                <div class="ak-step-formula">EMI Savings = Original EMI − New EMI</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 5</div>
+                <div class="ak-step-title">Calculate Interest Savings</div>
+                <div class="ak-step-desc">Save tens of lakhs in cumulative interest payable to the bank.</div>
+                <div class="ak-step-formula">Interest Savings = Original Interest − New Interest</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 6</div>
+                <div class="ak-step-title">Calculate Total Financial Benefit</div>
+                <div class="ak-step-desc">Combine immediate price savings with long-term interest savings.</div>
+                <div class="ak-step-formula">Total Benefit = Price Savings + Interest Savings</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate how much home loan you may be eligible for based on your income and profile.</div>
+            </a>
+
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">payments</span>
+                </div>
+                <div class="ak-fcard-title">Down Payment Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Determine the down payment required and plan your upfront savings for property purchase.</div>
+            </a>
+
+            <a href="/calculators/stamp-duty-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </div>
+                <div class="ak-fcard-title">Stamp Duty &amp; Registration</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration charges and other applicable statutory fees.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Compare the long-term wealth impact of renting versus buying a home in India.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Logic -->
+    <script>
+    var state = {
+        mode: 'discount', // 'discount' or 'price'
+        quotedPrice: 10000000,
+        discountPct: 5.0,
+        negPrice: 9500000,
+        includeLoan: true,
+        ltvPct: 80,
+        rate: 8.5,
+        tenure: 20
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function setCalcMode(mode) {
+        state.mode = mode;
+        var btnDisc = document.getElementById('btnModeDiscount');
+        var btnPrice = document.getElementById('btnModePrice');
+        var rowDiscount = document.getElementById('rowDiscount');
+        var negPriceInput = document.getElementById('negPriceInput');
+        var negPriceAutoLabel = document.getElementById('negPriceAutoLabel');
+
+        if (mode === 'discount') {
+            btnDisc.classList.add('active');
+            btnPrice.classList.remove('active');
+            rowDiscount.style.display = 'block';
+            negPriceInput.readOnly = true;
+            negPriceInput.classList.add('readonly');
+            negPriceAutoLabel.style.display = 'inline';
+        } else {
+            btnPrice.classList.add('active');
+            btnDisc.classList.remove('active');
+            rowDiscount.style.display = 'none';
+            negPriceInput.readOnly = false;
+            negPriceInput.classList.remove('readonly');
+            negPriceAutoLabel.style.display = 'none';
+        }
+        syncUI();
+    }
+
+    function setLoanImpact(include) {
+        state.includeLoan = include;
+        var btnYes = document.getElementById('btnLoanYes');
+        var btnNo = document.getElementById('btnLoanNo');
+        var loanInputsSection = document.getElementById('loanInputsSection');
+
+        if (include) {
+            btnYes.classList.add('active');
+            btnNo.classList.remove('active');
+            loanInputsSection.style.display = 'block';
+        } else {
+            btnNo.classList.add('active');
+            btnYes.classList.remove('active');
+            loanInputsSection.style.display = 'none';
+        }
+        syncUI();
+    }
+
+    function onQuotedPriceInput(val) {
+        var num = parseRupees(val);
+        if (num < 100000) num = 100000;
+        if (num > 1000000000) num = 1000000000;
+        state.quotedPrice = num;
+        syncUI();
+    }
+
+    function onQuotedPriceSlider(val) {
+        state.quotedPrice = parseFloat(val);
+        syncUI();
+    }
+
+    function onDiscountPctInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        if (isNaN(num)) num = 0;
+        if (num < 0) num = 0;
+        if (num >= 100) num = 99.9;
+        state.discountPct = num;
+        syncUI();
+    }
+
+    function onDiscountPctSlider(val) {
+        state.discountPct = parseFloat(val);
+        syncUI();
+    }
+
+    function onNegPriceInput(val) {
+        var num = parseRupees(val);
+        if (num < 0) num = 0;
+        state.negPrice = num;
+        syncUI();
+    }
+
+    function onLtvInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        if (isNaN(num)) num = 80;
+        if (num < 0) num = 0;
+        if (num > 100) num = 100;
+        state.ltvPct = num;
+        syncUI();
+    }
+
+    function onLtvSlider(val) {
+        state.ltvPct = parseFloat(val);
+        syncUI();
+    }
+
+    function onRateInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        if (isNaN(num)) num = 8.5;
+        if (num < 0) num = 0;
+        if (num > 25) num = 25;
+        state.rate = num;
+        syncUI();
+    }
+
+    function onRateSlider(val) {
+        state.rate = parseFloat(val);
+        syncUI();
+    }
+
+    function onTenureSlider(val) {
+        state.tenure = parseInt(val);
+        syncUI();
+    }
+
+    function syncUI() {
+        var quoted = state.quotedPrice;
+        var discountPct = state.discountPct;
+        var negPrice = state.negPrice;
+        var valMsg = document.getElementById('negPriceValidationMsg');
+
+        // Mode specific calculations
+        if (state.mode === 'discount') {
+            valMsg.style.display = 'none';
+            negPrice = quoted * (1 - (discountPct / 100));
+            state.negPrice = negPrice;
+        } else {
+            // Price mode
+            if (negPrice > quoted) {
+                valMsg.style.display = 'block';
+                discountPct = 0;
+            } else {
+                valMsg.style.display = 'none';
+                discountPct = quoted > 0 ? ((quoted - negPrice) / quoted) * 100 : 0;
+            }
+            state.discountPct = discountPct;
+        }
+
+        // Clamp negative values
+        var priceSavings = Math.max(0, quoted - negPrice);
+        var actualSavingsPct = quoted > 0 ? (priceSavings / quoted) * 100 : 0;
+
+        // Update Inputs UI
+        document.getElementById('quotedPriceInput').value = formatIndian(quoted);
+        document.getElementById('quotedPriceSlider').value = quoted;
+        updateSliderFill('quotedPriceSlider');
+
+        document.getElementById('discountPctInput').value = discountPct.toFixed(1);
+        document.getElementById('discountPctSlider').value = discountPct;
+        updateSliderFill('discountPctSlider');
+
+        document.getElementById('negPriceInput').value = formatIndian(negPrice);
+
+        // Home Loan & Financing Calculations
+        var ltv = state.ltvPct;
+        var origLoan = quoted * (ltv / 100);
+        var newLoan = negPrice * (ltv / 100);
+        var loanReduction = Math.max(0, origLoan - newLoan);
+        var downPaymentVal = negPrice * (1 - (ltv / 100));
+
+        document.getElementById('ltvInput').value = ltv.toFixed(0);
+        document.getElementById('ltvSlider').value = ltv;
+        updateSliderFill('ltvSlider');
+
+        document.getElementById('downPayVal').innerText = '₹ ' + formatIndian(downPaymentVal);
+
+        document.getElementById('rateInput').value = state.rate.toFixed(2);
+        document.getElementById('rateSlider').value = state.rate;
+        updateSliderFill('rateSlider');
+
+        document.getElementById('tenureInput').value = state.tenure + ' Years';
+        document.getElementById('tenureSlider').value = state.tenure;
+        updateSliderFill('tenureSlider');
+
+        // EMI Calculations
+        var monthlyRate = state.rate / 12 / 100;
+        var totalMonths = state.tenure * 12;
+
+        var origEmi = 0;
+        var newEmi = 0;
+
+        if (state.includeLoan && ltv > 0 && totalMonths > 0) {
+            if (monthlyRate > 0) {
+                var factor = Math.pow(1 + monthlyRate, totalMonths);
+                origEmi = (origLoan * monthlyRate * factor) / (factor - 1);
+                newEmi = (newLoan * monthlyRate * factor) / (factor - 1);
+            } else {
+                origEmi = origLoan / totalMonths;
+                newEmi = newLoan / totalMonths;
+            }
+        }
+
+        var emiReduction = Math.max(0, origEmi - newEmi);
+
+        var origTotalRepay = origEmi * totalMonths;
+        var newTotalRepay = newEmi * totalMonths;
+
+        var origTotalInterest = Math.max(0, origTotalRepay - origLoan);
+        var newTotalInterest = Math.max(0, newTotalRepay - newLoan);
+
+        var interestSaved = (state.includeLoan && ltv > 0 && state.rate > 0) ? Math.max(0, origTotalInterest - newTotalInterest) : 0;
+
+        var totalFinancialBenefit = priceSavings + interestSaved;
+
+        // Update Right Panel UI
+        document.getElementById('resTotalBenefit').innerHTML = "<span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>" + formatIndian(totalFinancialBenefit);
+        
+        if (state.includeLoan && ltv > 0 && interestSaved > 0) {
+            document.getElementById('resBenefitSubtext').innerText = "Price Savings (₹" + formatIndian(priceSavings) + ") + Interest Savings (₹" + formatIndian(interestSaved) + ")";
+        } else {
+            document.getElementById('resBenefitSubtext').innerText = "Price Savings (₹" + formatIndian(priceSavings) + ")";
+        }
+
+        document.getElementById('resNegPrice').innerText = "₹ " + formatIndian(negPrice);
+        document.getElementById('resPriceSavings').innerText = "₹ " + formatIndian(priceSavings);
+        document.getElementById('resSavingsPct').innerText = actualSavingsPct.toFixed(1) + "%";
+
+        // Financing Box Visibility & Values
+        var finBox = document.getElementById('resFinancingBox');
+        if (state.includeLoan && ltv > 0) {
+            finBox.style.display = 'block';
+            document.getElementById('resLoanReduced').innerText = "₹ " + formatIndian(loanReduction);
+            document.getElementById('resEmiReduced').innerText = "₹ " + formatIndian(emiReduction) + " / mo";
+            document.getElementById('resInterestSaved').innerText = "₹ " + formatIndian(interestSaved);
+        } else {
+            finBox.style.display = 'none';
+        }
+
+        // Stacked Bar UI
+        var totalB = totalFinancialBenefit;
+        var pPct = totalB > 0 ? (priceSavings / totalB) * 100 : 100;
+        var iPct = totalB > 0 ? (interestSaved / totalB) * 100 : 0;
+
+        var barP = document.getElementById('barPriceSave');
+        var barI = document.getElementById('barIntSave');
+        barP.style.width = pPct + "%";
+        barI.style.width = iPct + "%";
+
+        if (pPct > 15) barP.innerText = "Price (" + pPct.toFixed(0) + "%)";
+        else barP.innerText = "";
+
+        if (iPct > 15) barI.innerText = "Interest (" + iPct.toFixed(0) + "%)";
+        else barI.innerText = "";
+
+        document.getElementById('legendPriceSaveVal').innerText = "₹" + formatIndian(priceSavings);
+        document.getElementById('legendIntSaveVal').innerText = "₹" + formatIndian(interestSaved);
+
+        // Insight Box Text
+        var insEl = document.getElementById('insightText');
+        if (state.includeLoan && ltv > 0 && interestSaved > 0) {
+            insEl.innerHTML = 'Negotiating <strong>₹' + formatIndian(priceSavings) + '</strong> off the property price creates <strong>₹' + formatIndian(totalFinancialBenefit) + '</strong> of total financial benefit when including <strong>₹' + formatIndian(interestSaved) + '</strong> of home loan interest savings.';
+        } else {
+            insEl.innerHTML = 'Negotiating <strong>₹' + formatIndian(priceSavings) + '</strong> off the property price provides an immediate cash savings of <strong>₹' + formatIndian(priceSavings) + '</strong> on your acquisition cost.';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
