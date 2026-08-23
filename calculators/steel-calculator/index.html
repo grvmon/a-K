@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Calculator – Calculate Steel Quantity &amp; Cost | acreNkey</title>
+
+    <meta name="description" content="Calculate steel quantity, weight and tonnes for construction using concrete volume or built-up area, steel consumption rate and wastage. Includes steel bar weight calculation with acreNkey.">
+    <meta name="keywords" content="steel calculator, rebar weight calculator, steel quantity calculator for concrete, TMT bar weight calculator, steel tonnes estimator, acrenkey steel calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/steel-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Steel Calculator | acreNkey">
+    <meta property="og:description" content="Estimate the steel quantity, weight, tonnes and cost required for construction based on concrete volume, built-up area or steel consumption rate.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/steel-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Steel Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate the steel quantity, weight, tonnes and cost required for construction based on concrete volume, built-up area or steel consumption rate.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Steel Calculator","description":"Construction reinforcement estimator to calculate required steel weight in kilograms, metric tonnes, wastage allowance, and TMT bar unit weights.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/steel-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Steel Calculator","item":"https://acrenkey.com/calculators/steel-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much steel is required for 1 cu.m. of concrete?","acceptedAnswer":{"@type":"Answer","text":"Standard residential RCC construction uses approximately 80 to 120 kg of steel per cubic metre of concrete depending on structural load."}},{"@type":"Question","name":"How do you calculate the weight of a steel rebar?","acceptedAnswer":{"@type":"Answer","text":"Steel rebar weight is calculated using the formula Weight (kg/m) = D²/162, where D is the bar diameter in millimetres."}},{"@type":"Question","name":"What is the weight of a 12mm steel bar per metre?","acceptedAnswer":{"@type":"Answer","text":"A 12mm TMT steel bar weighs approximately 0.889 kg per metre (12² / 162 = 0.8889 kg/m)."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* 6-Card Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Steel Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Steel Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate the steel quantity, weight, tonnes and cost required for construction based on concrete volume, built-up area or steel consumption rate.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Project &amp; Steel Inputs</h2>
+                </div>
+
+                <!-- Section 1: Estimation Basis -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Estimation Method</div>
+
+                <!-- Method Selector -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calculate</span>
+                            Calculate Steel Based On
+                        </div>
+                        <div style="width: 220px;">
+                            <select id="methodSelect" class="ak-new-select" onchange="onMethodChange(this.value)">
+                                <option value="Concrete Volume" selected>Concrete Volume (m³ / cu.ft)</option>
+                                <option value="Built-up Area">Built-up Area (sq.ft / sq.m)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concrete Volume Method Inputs -->
+                <div id="volumeInputsGroup">
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">straighten</span>
+                                Concrete Length
+                            </div>
+                            <div style="display:flex; gap:0.4rem; width: 220px;">
+                                <input type="text" id="lenInput" class="ak-new-input" value="20" oninput="onLenInput(this.value)" onchange="onLenInput(this.value)">
+                                <select id="lenUnit" class="ak-new-select" style="width:75px;" onchange="onLenUnitChange(this.value)">
+                                    <option value="ft" selected>ft</option>
+                                    <option value="m">m</option>
+                                    <option value="in">in</option>
+                                    <option value="cm">cm</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">square_foot</span>
+                                Concrete Width
+                            </div>
+                            <div style="display:flex; gap:0.4rem; width: 220px;">
+                                <input type="text" id="widthInput" class="ak-new-input" value="10" oninput="onWidthInput(this.value)" onchange="onWidthInput(this.value)">
+                                <select id="widthUnit" class="ak-new-select" style="width:75px;" onchange="onWidthUnitChange(this.value)">
+                                    <option value="ft" selected>ft</option>
+                                    <option value="m">m</option>
+                                    <option value="in">in</option>
+                                    <option value="cm">cm</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">height</span>
+                                Height / Depth / Thickness
+                            </div>
+                            <div style="display:flex; gap:0.4rem; width: 220px;">
+                                <input type="text" id="thickInput" class="ak-new-input" value="0.5" oninput="onThickInput(this.value)" onchange="onThickInput(this.value)">
+                                <select id="thickUnit" class="ak-new-select" style="width:75px;" onchange="onThickUnitChange(this.value)">
+                                    <option value="ft" selected>ft</option>
+                                    <option value="m">m</option>
+                                    <option value="in">in</option>
+                                    <option value="cm">cm</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Built-up Area Method Inputs (Hidden by default) -->
+                <div id="areaInputsGroup" style="display:none;">
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">domain</span>
+                                Total Built-up Area
+                            </div>
+                            <div style="display:flex; gap:0.4rem; width: 220px;">
+                                <input type="text" id="areaInput" class="ak-new-input" value="2000" oninput="onAreaInput(this.value)" onchange="onAreaInput(this.value)">
+                                <select id="areaUnit" class="ak-new-select" style="width:85px;" onchange="onAreaUnitChange(this.value)">
+                                    <option value="sq.ft" selected>sq.ft</option>
+                                    <option value="sq.m">sq.m</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Steel Rate & Specifications -->
+                <div class="ak-section-divider-title">2. Consumption Rate &amp; Grade</div>
+
+                <!-- Steel Consumption Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">fitness_center</span>
+                            Steel Consumption Rate
+                        </div>
+                        <div style="display:flex; gap:0.4rem; width: 220px;">
+                            <input type="text" id="steelRateInput" class="ak-new-input" value="100" oninput="onSteelRateInput(this.value)" onchange="onSteelRateInput(this.value)">
+                            <select id="steelRateUnit" class="ak-new-select" style="width:95px;" onchange="onSteelRateUnitChange(this.value)">
+                                <option value="kg/m³" selected>kg/m³</option>
+                                <option value="kg/sq.ft">kg/sq.ft</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper" id="steelRateHelper">Standard residential RCC concrete uses ~80-120 kg/m³.</div>
+                </div>
+
+                <!-- Steel Grade -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">verified</span>
+                            Rebar Steel Grade
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="gradeSelect" class="ak-new-select" onchange="onGradeChange(this.value)">
+                                <option value="Fe 500" selected>Fe 500 (Standard TMT)</option>
+                                <option value="Fe 500D">Fe 500D (Ductile)</option>
+                                <option value="Fe 550">Fe 550 (High Strength)</option>
+                                <option value="Fe 415">Fe 415</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wastage Rate % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Cutting &amp; Lap Wastage
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="wastageInput" class="ak-new-input has-suffix" value="5.0" oninput="onWastageInput(this.value)" onchange="onWastageInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="wastageSlider" class="ak-new-slider" min="0.0" max="15.0" step="1.0" value="5.0" oninput="onWastageSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Section 3: Pricing & Bar Weight Sub-calculator -->
+                <div class="ak-section-divider-title">3. Pricing &amp; Individual Bar Calculator</div>
+
+                <!-- Steel Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Steel Price per KG
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="priceInput" class="ak-new-input has-prefix" value="65" oninput="onPriceInput(this.value)" onchange="onPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="priceSlider" class="ak-new-slider" min="40" max="120" step="2" value="65" oninput="onPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Sub-calculator: Individual Bar Weight (D²/162) -->
+                <div style="background:#FBF6F3; border:1px solid rgba(106,66,50,0.2); border-radius:10px; padding:1rem; margin-top:1rem;">
+                    <div style="font-size:0.85rem; font-weight:800; color:var(--refined-brass); margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.04em; display:flex; align-items:center; gap:0.4rem;">
+                        <span class="material-symbols-outlined" style="font-size:18px;">reorder</span>
+                        Single Rebar Weight Engine (D²/162)
+                    </div>
+
+                    <div class="ak-new-input-row" style="margin-bottom:0.6rem;">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label" style="font-size:0.82rem;">Bar Diameter</div>
+                            <div style="width:140px;">
+                                <select id="barDiaSelect" class="ak-new-select" style="padding:0.4rem 0.6rem; font-size:0.85rem;" onchange="onBarDiaChange(this.value)">
+                                    <option value="8">8 mm</option>
+                                    <option value="10">10 mm</option>
+                                    <option value="12" selected>12 mm</option>
+                                    <option value="16">16 mm</option>
+                                    <option value="20">20 mm</option>
+                                    <option value="25">25 mm</option>
+                                    <option value="32">32 mm</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ak-new-input-row" style="margin-bottom:0.6rem;">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label" style="font-size:0.82rem;">Total Bar Length</div>
+                            <div style="display:flex; gap:0.4rem; width: 140px;">
+                                <input type="text" id="barLenInput" class="ak-new-input" value="100" style="padding:0.4rem 0.6rem; font-size:0.85rem;" oninput="onBarLenInput(this.value)" onchange="onBarLenInput(this.value)">
+                                <select id="barLenUnit" class="ak-new-select" style="width:55px; padding:0.4rem 0.4rem; font-size:0.85rem;" onchange="onBarLenUnitChange(this.value)">
+                                    <option value="m" selected>m</option>
+                                    <option value="ft">ft</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="font-size:0.82rem; color:var(--deep-navy); font-weight:700; margin-top:0.4rem; background:#FFF; padding:0.5rem; border-radius:6px; display:flex; justify-content:space-between;">
+                        <span>Unit Weight: <strong id="barUnitWeightVal">0.889 kg/m</strong></span>
+                        <span>Total Bar Wt: <strong id="barTotalWeightVal" style="color:var(--refined-brass);">88.89 kg</strong></span>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Steel Tonnes &amp; Cost</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Steel Required</div>
+                    <div class="ak-verdict-badge breakeven" id="resVerdictBadge">WEIGHT: 297.3 KG</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resSteelTonnesVal">0.30 Tonnes</div>
+                <div class="ak-emi-subtext" id="resSubtext">Total Steel Weight: <strong>297.3 kg</strong> (0.30 Metric Tonnes). Estimated Steel Cost: <strong>₹ 19,326</strong> (Priced at ₹ 65 / kg).</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox" style="display:block;">
+                    <strong id="redFlagTitle">IMPORTANT STRUCTURAL NOTICE:</strong>
+                    <div id="redFlagDesc">This is an estimation tool. Actual reinforcement steel procurement must strictly follow the structural engineer's approved drawings and Bar Bending Schedule (BBS).</div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Steel Required (Tonnes)</div>
+                        <div class="ak-snap-val" style="color:#FFF;" id="snapTonnes">0.30 Tonnes</div>
+                        <div class="ak-snap-sub" id="snapGradeSub">Grade: Fe 500</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Steel Required (KG)</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapWeightKg">297.3 kg</div>
+                        <div class="ak-snap-sub" id="snapBaseSub">Base: 283.2 kg</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Estimated Steel Cost</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapSteelCost">₹ 19,326</div>
+                        <div class="ak-snap-sub" id="snapRateSub">Rate: ₹ 65 / kg</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Construction Volume</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapWorkVolume">2.83 m³</div>
+                        <div class="ak-snap-sub" id="snapCuftSub">100.0 cu.ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Consumption Rate</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapRateValue">100 kg/m³</div>
+                        <div class="ak-snap-sub" id="snapMethodSub">Method: Volume</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Wastage Buffer</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapWastageKg">+14.2 kg</div>
+                        <div class="ak-snap-sub" id="snapWastagePctSub">Allowance: 5.0%</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Itemized Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Waterfall &amp; Quantity Calculation
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>1. Construction Work Volume</span>
+                        <strong id="cardWorkVol">2.83 m³ (100 cu.ft)</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>2. Steel Consumption Rate</span>
+                        <span id="cardRate">100 kg/m³</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>3. Base Reinforcement Weight</span>
+                        <strong id="cardBaseWeight" style="color:#E5C178;">283.2 kg (0.283 Tonnes)</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>4. Cutting &amp; Lap Wastage (5%)</span>
+                        <span id="cardWastageVal" style="color:#A7F3D0;">+14.2 kg (+0.014 Tonnes)</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>5. Final Required Steel Weight</span>
+                        <span id="cardFinalKg" style="color:#FFF;">297.3 kg</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>Final Steel Quantity Required</span>
+                        <strong id="cardFinalTonnes" style="color:#E5C178;">0.30 Tonnes (297.3 kg)</strong>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Steel Estimation Insights</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>ℹ️ <strong>Consumption Rate:</strong> Using a steel rate of 100 kg/m³ across 2.83 m³ concrete produces a base steel weight of 283.2 kg.</li>
+                        <li>ℹ️ <strong>Wastage &amp; Tonnage:</strong> Adding 5.0% wastage (+14.2 kg) results in 297.3 kg (0.30 Metric Tonnes) total requirement.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Verify Bar Bending Schedule (BBS):</strong> Preliminary estimates using kg/m³ or kg/sq.ft provide quick budgeting figures. For site ordering, always obtain the structural engineer's detailed Bar Bending Schedule (BBS) specifying bar diameters, cut lengths, overlaps, and hook bends.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator provides an indicative estimate based on the construction volume or area, steel consumption rate, wastage and other inputs provided. Actual reinforcement requirements depend on structural design, loads, spans, detailing, bar bending schedules and project specifications. For structural work, always follow the approved structural drawings and engineer's specifications.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How to Calculate Steel Quantity</h2>
+        <p>Estimating steel reinforcement involves determining concrete volume or built-up area, applying a steel consumption rate, and adding a cutting wastage buffer.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Calculate Concrete Volume</div>
+                <div class="ak-step-desc">Multiply Length × Width × Thickness to get concrete volume in cubic metres (or built-up area in sq.ft).</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Apply Consumption Rate</div>
+                <div class="ak-step-desc">Multiply volume by the structural consumption rate (e.g. 100 kg/m³ for slabs/beams, 3.5 to 4.5 kg/sq.ft for built-up area).</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Add Cutting Wastage</div>
+                <div class="ak-step-desc">Add 5% to 10% wastage for cutting losses, lap splices, and hook bends.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Convert to Tonnes</div>
+                <div class="ak-step-desc">Divide final weight in kilograms by 1,000 to convert to metric tonnes for supplier ordering.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">How to Calculate Steel Bar Weight (D²/162)</h2>
+        <p>Unit weight per metre of round steel rebar is calculated using the formula <strong>Weight (kg/m) = D² / 162</strong>, where D is the diameter in millimetres.</p>
+        <div style="background:#FFF; border:1px solid #EAEFF5; border-radius:12px; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; color:var(--deep-slate); line-height:1.7;">
+                <li>• 8 mm Bar: 8² / 162 = 0.395 kg/m</li>
+                <li>• 10 mm Bar: 10² / 162 = 0.617 kg/m</li>
+                <li>• 12 mm Bar: 12² / 162 = 0.889 kg/m</li>
+                <li>• 16 mm Bar: 16² / 162 = 1.580 kg/m</li>
+                <li>• 20 mm Bar: 20² / 162 = 2.469 kg/m</li>
+                <li>• 25 mm Bar: 25² / 162 = 3.858 kg/m</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How much steel is required for 1 cu.m. of concrete?</h3>
+                <p>Standard residential RCC construction uses approximately 80 to 120 kg of steel per cubic metre of concrete depending on structural load.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How do you calculate the weight of a steel rebar?</h3>
+                <p>Steel rebar weight is calculated using the formula Weight (kg/m) = D²/162, where D is the bar diameter in millimetres.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is the weight of a 12mm steel bar per metre?</h3>
+                <p>A 12mm TMT steel bar weighs approximately 0.889 kg per metre (12² / 162 = 0.8889 kg/m).</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/construction-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">engineering</span>
+                </div>
+                <div class="ak-fcard-title">Construction Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate total house construction cost based on built-up area &amp; materials.</div>
+            </a>
+
+            <a href="/calculators/cement-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                </div>
+                <div class="ak-fcard-title">Cement Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate cement volume, weight and bags for concrete, plaster &amp; brickwork.</div>
+            </a>
+
+            <a href="/calculators/tile-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">grid_view</span>
+                </div>
+                <div class="ak-fcard-title">Tile Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate floor &amp; wall tiles, required boxes and estimated budget.</div>
+            </a>
+
+            <a href="/calculators/paint-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">format_paint</span>
+                </div>
+                <div class="ak-fcard-title">Paint Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate litres of paint required for walls &amp; ceilings.</div>
+            </a>
+
+            <a href="/calculators/cost-per-sq-ft-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">aspect_ratio</span>
+                </div>
+                <div class="ak-fcard-title">Cost per Sq. Ft. Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate true effective cost per sq. ft. on carpet vs saleable area.</div>
+            </a>
+
+            <a href="/calculators/bangalore-property-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">location_city</span>
+                </div>
+                <div class="ak-fcard-title">Bangalore Property Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration fees, GST &amp; legal charges in Bangalore.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    // Centralized Config Architecture
+    var STEEL_CALCULATOR_CONFIG = {
+        defaultMethod: 'Concrete Volume',
+        defaultLength: 20,
+        defaultWidth: 10,
+        defaultThickness: 0.5,
+        defaultArea: 2000,
+        defaultSteelRate: 100, // kg/m3 for volume, or 4 for sq.ft
+        defaultGrade: 'Fe 500',
+        defaultWastage: 5.0,
+        defaultPrice: 65,
+        defaultBarDia: 12,
+        defaultBarLen: 100
+    };
+
+    var state = {
+        method: STEEL_CALCULATOR_CONFIG.defaultMethod,
+        length: STEEL_CALCULATOR_CONFIG.defaultLength,
+        lenUnit: 'ft',
+        width: STEEL_CALCULATOR_CONFIG.defaultWidth,
+        widthUnit: 'ft',
+        thickness: STEEL_CALCULATOR_CONFIG.defaultThickness,
+        thickUnit: 'ft',
+        area: STEEL_CALCULATOR_CONFIG.defaultArea,
+        areaUnit: 'sq.ft',
+        steelRate: STEEL_CALCULATOR_CONFIG.defaultSteelRate,
+        steelRateUnit: 'kg/m³',
+        grade: STEEL_CALCULATOR_CONFIG.defaultGrade,
+        wastageRate: STEEL_CALCULATOR_CONFIG.defaultWastage,
+        pricePerKg: STEEL_CALCULATOR_CONFIG.defaultPrice,
+        barDia: STEEL_CALCULATOR_CONFIG.defaultBarDia,
+        barLen: STEEL_CALCULATOR_CONFIG.defaultBarLen,
+        barLenUnit: 'm'
+    };
+
+    function convertToFeet(val, unit) {
+        var num = parseFloat(val);
+        if (isNaN(num) || num <= 0) return 0;
+        if (unit === 'ft') return num;
+        if (unit === 'in') return num / 12.0;
+        if (unit === 'm') return num * 3.28084;
+        if (unit === 'cm') return num * 0.0328084;
+        return num;
+    }
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onMethodChange(val) {
+        state.method = val;
+        var volGrp = document.getElementById('volumeInputsGroup');
+        var areaGrp = document.getElementById('areaInputsGroup');
+        var rateSelect = document.getElementById('steelRateUnit');
+        var rateHelper = document.getElementById('steelRateHelper');
+
+        if (val === 'Concrete Volume') {
+            volGrp.style.display = 'block';
+            areaGrp.style.display = 'none';
+            rateSelect.innerHTML = '<option value="kg/m³" selected>kg/m³</option>';
+            state.steelRateUnit = 'kg/m³';
+            state.steelRate = 100;
+            rateHelper.innerText = 'Standard residential RCC concrete uses ~80-120 kg/m³.';
+        } else {
+            volGrp.style.display = 'none';
+            areaGrp.style.display = 'block';
+            rateSelect.innerHTML = '<option value="kg/sq.ft" selected>kg/sq.ft</option><option value="kg/sq.m">kg/sq.m</option>';
+            state.steelRateUnit = 'kg/sq.ft';
+            state.steelRate = 4;
+            rateHelper.innerText = 'Standard residential built-up area uses ~3.5-4.5 kg/sq.ft.';
+        }
+        syncUI();
+    }
+
+    function onLenInput(val) { state.length = parseRupees(val); syncUI(); }
+    function onLenUnitChange(val) { state.lenUnit = val; syncUI(); }
+
+    function onWidthInput(val) { state.width = parseRupees(val); syncUI(); }
+    function onWidthUnitChange(val) { state.widthUnit = val; syncUI(); }
+
+    function onThickInput(val) { state.thickness = parseRupees(val); syncUI(); }
+    function onThickUnitChange(val) { state.thickUnit = val; syncUI(); }
+
+    function onAreaInput(val) { state.area = parseRupees(val); syncUI(); }
+    function onAreaUnitChange(val) { state.areaUnit = val; syncUI(); }
+
+    function onSteelRateInput(val) { state.steelRate = parseRupees(val); syncUI(); }
+    function onSteelRateUnitChange(val) { state.steelRateUnit = val; syncUI(); }
+
+    function onGradeChange(val) { state.grade = val; syncUI(); }
+
+    function onWastageInput(val) { state.wastageRate = Math.min(50, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onWastageSlider(val) { state.wastageRate = parseFloat(val); syncUI(); }
+
+    function onPriceInput(val) { state.pricePerKg = parseRupees(val); syncUI(); }
+    function onPriceSlider(val) { state.pricePerKg = parseFloat(val); syncUI(); }
+
+    function onBarDiaChange(val) { state.barDia = parseFloat(val); syncUI(); }
+    function onBarLenInput(val) { state.barLen = parseRupees(val); syncUI(); }
+    function onBarLenUnitChange(val) { state.barLenUnit = val; syncUI(); }
+
+    function syncUI() {
+        var baseSteelKg = 0;
+        var workVol_cuft = 0;
+        var workVol_cum = 0;
+        var activeScopeText = '';
+
+        if (state.method === 'Concrete Volume') {
+            var l_ft = convertToFeet(state.length, state.lenUnit);
+            var w_ft = convertToFeet(state.width, state.widthUnit);
+            var t_ft = convertToFeet(state.thickness, state.thickUnit);
+
+            workVol_cuft = l_ft * w_ft * t_ft;
+            workVol_cum = workVol_cuft * 0.0283168;
+
+            baseSteelKg = workVol_cum * state.steelRate;
+            activeScopeText = workVol_cum.toFixed(2) + " m³ (" + Math.round(workVol_cuft) + " cu.ft)";
+        } else {
+            var activeAreaSqft = state.area;
+            if (state.areaUnit === 'sq.m') {
+                activeAreaSqft = state.area * 10.7639;
+            }
+
+            if (state.steelRateUnit === 'kg/sq.m') {
+                var areaSqm = activeAreaSqft / 10.7639;
+                baseSteelKg = areaSqm * state.steelRate;
+            } else {
+                baseSteelKg = activeAreaSqft * state.steelRate;
+            }
+            activeScopeText = formatIndian(state.area) + " " + state.areaUnit;
+        }
+
+        var wastageKg = baseSteelKg * (state.wastageRate / 100.0);
+        var finalSteelKg = baseSteelKg + wastageKg;
+        var finalSteelTonnes = finalSteelKg / 1000.0;
+        var baseSteelTonnes = baseSteelKg / 1000.0;
+
+        var totalSteelCost = Math.round(finalSteelKg * state.pricePerKg);
+
+        // Sub-calculator: Bar Weight D²/162
+        var barUnitWeightKgM = (state.barDia * state.barDia) / 162.0;
+        var barLenM = state.barLenUnit === 'ft' ? (state.barLen * 0.3048) : state.barLen;
+        var barTotalWeightKg = barUnitWeightKgM * barLenM;
+
+        // Control Inputs Display
+        document.getElementById('methodSelect').value = state.method;
+
+        document.getElementById('lenInput').value = formatIndian(state.length);
+        document.getElementById('lenUnit').value = state.lenUnit;
+        document.getElementById('widthInput').value = formatIndian(state.width);
+        document.getElementById('widthUnit').value = state.widthUnit;
+        document.getElementById('thickInput').value = formatIndian(state.thickness);
+        document.getElementById('thickUnit').value = state.thickUnit;
+
+        document.getElementById('areaInput').value = formatIndian(state.area);
+        document.getElementById('areaUnit').value = state.areaUnit;
+
+        document.getElementById('steelRateInput').value = formatIndian(state.steelRate);
+        document.getElementById('gradeSelect').value = state.grade;
+
+        document.getElementById('wastageInput').value = state.wastageRate.toFixed(1);
+        document.getElementById('wastageSlider').value = state.wastageRate;
+        updateSliderFill('wastageSlider');
+
+        document.getElementById('priceInput').value = formatIndian(state.pricePerKg);
+        document.getElementById('priceSlider').value = state.pricePerKg;
+        updateSliderFill('priceSlider');
+
+        document.getElementById('barDiaSelect').value = state.barDia;
+        document.getElementById('barLenInput').value = formatIndian(state.barLen);
+        document.getElementById('barLenUnit').value = state.barLenUnit;
+
+        document.getElementById('barUnitWeightVal').innerText = barUnitWeightKgM.toFixed(3) + " kg/m";
+        document.getElementById('barTotalWeightVal').innerText = barTotalWeightKg.toFixed(2) + " kg";
+
+        // Dashboard Hero Outputs
+        document.getElementById('resSteelTonnesVal').innerText = finalSteelTonnes.toFixed(2) + " Tonnes";
+        document.getElementById('resVerdictBadge').innerText = "WEIGHT: " + finalSteelKg.toFixed(1) + " KG";
+
+        document.getElementById('resSubtext').innerHTML = 'Total Steel Weight: <strong>' + finalSteelKg.toFixed(1) + ' kg</strong> (' + finalSteelTonnes.toFixed(2) + ' Metric Tonnes). Estimated Steel Cost: <strong>₹ ' + formatShortIndian(totalSteelCost) + '</strong> (Priced at ₹ ' + formatIndian(state.pricePerKg) + ' / kg).';
+
+        // Snapshot Grid Cards
+        document.getElementById('snapTonnes').innerText = finalSteelTonnes.toFixed(2) + " Tonnes";
+        document.getElementById('snapGradeSub').innerText = "Grade: " + state.grade;
+
+        document.getElementById('snapWeightKg').innerText = finalSteelKg.toFixed(1) + " kg";
+        document.getElementById('snapBaseSub').innerText = "Base: " + baseSteelKg.toFixed(1) + " kg";
+
+        document.getElementById('snapSteelCost').innerText = "₹ " + formatShortIndian(totalSteelCost);
+        document.getElementById('snapRateSub').innerText = "Rate: ₹ " + formatIndian(state.pricePerKg) + " / kg";
+
+        document.getElementById('snapWorkVolume').innerText = activeScopeText;
+        document.getElementById('snapCuftSub').innerText = state.method === 'Concrete Volume' ? (Math.round(workVol_cuft) + " cu.ft") : ("Scope: Built-up");
+
+        document.getElementById('snapRateValue').innerText = state.steelRate + " " + state.steelRateUnit;
+        document.getElementById('snapMethodSub').innerText = "Method: " + (state.method === 'Concrete Volume' ? 'Volume' : 'Area');
+
+        document.getElementById('snapWastageKg').innerText = "+" + wastageKg.toFixed(1) + " kg";
+        document.getElementById('snapWastagePctSub').innerText = "Allowance: " + state.wastageRate.toFixed(1) + "%";
+
+        // Waterfall Card
+        document.getElementById('cardWorkVol').innerText = activeScopeText;
+        document.getElementById('cardRate').innerText = state.steelRate + " " + state.steelRateUnit;
+        document.getElementById('cardBaseWeight').innerText = baseSteelKg.toFixed(1) + " kg (" + baseSteelTonnes.toFixed(3) + " Tonnes)";
+        document.getElementById('cardWastageVal').innerText = "+" + wastageKg.toFixed(1) + " kg (+" + (wastageKg/1000.0).toFixed(3) + " Tonnes)";
+        document.getElementById('cardFinalKg').innerText = finalSteelKg.toFixed(1) + " kg";
+        document.getElementById('cardFinalTonnes').innerText = finalSteelTonnes.toFixed(2) + " Tonnes (" + finalSteelKg.toFixed(1) + " kg)";
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>ℹ️ <strong>Consumption Rate:</strong> Using a steel rate of ' + state.steelRate + ' ' + state.steelRateUnit + ' across ' + activeScopeText + ' produces a base steel weight of ' + baseSteelKg.toFixed(1) + ' kg.</li>';
+        rHtml += '<li>ℹ️ <strong>Wastage &amp; Tonnage:</strong> Adding ' + state.wastageRate.toFixed(1) + '% wastage (+' + wastageKg.toFixed(1) + ' kg) results in ' + finalSteelKg.toFixed(1) + ' kg (' + finalSteelTonnes.toFixed(2) + ' Metric Tonnes) total requirement.</li>';
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
