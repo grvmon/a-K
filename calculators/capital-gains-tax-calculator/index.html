@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Gains Tax Calculator – Property Sale Tax Estimate | acreNkey</title>
+
+    <meta name="description" content="Estimate capital gains tax on property sale using purchase price, sale price, expenses, improvements, holding period, indexation and applicable tax rules.">
+    <meta name="keywords" content="capital gains tax calculator, property sale tax calculator india, ltcg property calculator 12.5%, stcg property tax calculator, indexation benefit calculator, acrenkey tax calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/capital-gains-tax-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Capital Gains Tax Calculator | acreNkey">
+    <meta property="og:description" content="Estimate capital gains, applicable tax, indexation impact and net sale proceeds when selling a property in India.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/capital-gains-tax-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capital Gains Tax Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate capital gains, applicable tax, indexation impact and net sale proceeds when selling a property in India.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Capital Gains Tax Calculator","description":"Configurable Indian property capital gains tax calculator computing LTCG, STCG, indexation, health & education cess, surcharge and net sale proceeds.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/capital-gains-tax-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Capital Gains Tax Calculator","item":"https://acrenkey.com/calculators/capital-gains-tax-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current LTCG tax rate on property in India?","acceptedAnswer":{"@type":"Answer","text":"Under Union Budget 2024 changes, long-term capital gains (LTCG) on property transfers post 23 July 2024 are taxed at 12.5% without indexation (or 20% with indexation for properties acquired prior to 23 July 2024 by resident individuals)."}},{"@type":"Question","name":"How is holding period calculated for property capital gains?","acceptedAnswer":{"@type":"Answer","text":"Holding period is the exact duration between property acquisition date and transfer date. Properties held for over 24 months qualify as Long-Term Capital Assets."}},{"@type":"Question","name":"What costs can be deducted from sale price for capital gains?","acceptedAnswer":{"@type":"Answer","text":"Deductible costs include purchase price, stamp duty, registration fees, legal expenses, eligible capital improvement costs, and brokerage paid on purchase and sale."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* 6-Card Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Capital Gains Tax Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Capital Gains Tax Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate capital gains, applicable tax, indexation impact and net sale proceeds when selling a property in India.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Transaction Inputs</h2>
+                </div>
+
+                <!-- Section 1: Purchase Details -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Purchase Details &amp; Date</div>
+
+                <!-- Property Purchase Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Property Purchase Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="purchasePriceInput" class="ak-new-input has-prefix" value="50,00,000" oninput="onPurchasePriceInput(this.value)" onchange="onPurchasePriceInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Date -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            Purchase Date
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="date" id="purchaseDateInput" class="ak-new-input" value="2015-06-15" style="text-align:left; font-size:0.85rem;" onchange="onPurchaseDateChange(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Expenses -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            Purchase Expenses (Stamp Duty, Reg)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="purchaseExpensesInput" class="ak-new-input has-prefix" value="2,00,000" oninput="onPurchaseExpensesInput(this.value)" onchange="onPurchaseExpensesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Improvement / Renovation Costs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home_repair_service</span>
+                            Capital Improvements / Renovation
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="improvementsInput" class="ak-new-input has-prefix" value="3,00,000" oninput="onImprovementsInput(this.value)" onchange="onImprovementsInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-input-top" style="margin-top:0.4rem;">
+                        <span style="font-size:0.8rem; color:var(--deep-navy);">Improvement Date / FY</span>
+                        <div class="ak-new-input-box-wrapper" style="width:140px;">
+                            <input type="date" id="improvementDateInput" class="ak-new-input" value="2018-08-10" style="text-align:left; font-size:0.8rem;" onchange="onImprovementDateChange(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Sale Details -->
+                <div class="ak-section-divider-title">2. Sale Details &amp; Date</div>
+
+                <!-- Sale Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">sell</span>
+                            Property Sale Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="salePriceInput" class="ak-new-input has-prefix" value="90,00,000" oninput="onSalePriceInput(this.value)" onchange="onSalePriceInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Date -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">event_available</span>
+                            Sale Date
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="date" id="saleDateInput" class="ak-new-input" value="2024-10-01" style="text-align:left; font-size:0.85rem;" onchange="onSaleDateChange(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selling Expenses -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">handshake</span>
+                            Selling Expenses (Brokerage, Legal)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="sellingExpensesInput" class="ak-new-input has-prefix" value="2,00,000" oninput="onSellingExpensesInput(this.value)" onchange="onSellingExpensesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Tax Rules & Indexation Selection -->
+                <div class="ak-section-divider-title">3. Tax Rules &amp; Indexation</div>
+
+                <!-- Taxpayer Type -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">person</span>
+                            Taxpayer Category
+                        </div>
+                        <div style="width: 200px;">
+                            <select id="taxpayerSelect" class="ak-new-select" onchange="onTaxpayerChange(this.value)">
+                                <option value="Resident Individual" selected>Resident Individual</option>
+                                <option value="NRI">Non-Resident Individual (NRI)</option>
+                                <option value="HUF">HUF / Firm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tax Calculation Regime Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance</span>
+                            Tax Regime / Rule Set
+                        </div>
+                        <div style="width: 200px;">
+                            <select id="regimeSelect" class="ak-new-select" onchange="onRegimeChange(this.value)">
+                                <option value="Current Rules (Post July 2024)" selected>Current Rules (Post July 2024)</option>
+                                <option value="Grandfathered (20% with Indexation)">Grandfathered (20% with Indexation)</option>
+                                <option value="Manual Rate Override">Manual Rate Override</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indexation Selection -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Apply Indexation Benefit (CII)
+                        </div>
+                        <div style="width: 200px;">
+                            <select id="indexationSelect" class="ak-new-select" onchange="onIndexationChange(this.value)">
+                                <option value="No" selected>No (12.5% Rate)</option>
+                                <option value="Yes">Yes (20% Rate + CII)</option>
+                                <option value="Auto">Automatic (Rule Based)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Tax Rate Override (Shown only if manual selected) -->
+                <div class="ak-new-input-row" id="manualTaxGroup" style="display:none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">edit_note</span>
+                            Manual Tax Rate %
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="manualTaxRateInput" class="ak-new-input has-suffix" value="12.5" oninput="onManualTaxRateInput(this.value)" onchange="onManualTaxRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cess & Surcharge -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calculate</span>
+                            Health &amp; Education Cess
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="cessInput" class="ak-new-input has-suffix" value="4.0" oninput="onCessInput(this.value)" onchange="onCessInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Total Capital Gains Tax</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Total Capital Gains Tax</div>
+                    <div class="ak-verdict-badge breakeven" id="resVerdictBadge">LTCG (12.5%)</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTotalTaxVal">₹ 4.13 Lakh</div>
+                <div class="ak-emi-subtext" id="resSubtext">Taxable Capital Gain: <strong>₹ 33.00 Lakh</strong>. Holding Period: <strong>9 yrs 3 mos</strong> (LTCG). Net Proceeds After Tax: <strong>₹ 83.88 Lakh</strong>.</div>
+
+                <!-- Red Flag / Alert Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">NOTE:</strong>
+                    <div id="redFlagDesc">Verify the final tax computation with official IT Department guidance.</div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Tax Payable</div>
+                        <div class="ak-snap-val" style="color:#FFF;" id="snapTotalTax">₹ 4.13 Lakh</div>
+                        <div class="ak-snap-sub" id="snapTaxRateSub">Effective Rate: 12.50%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Net Sale Proceeds</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapNetProceeds">₹ 83.88 Lakh</div>
+                        <div class="ak-snap-sub" id="snapProceedsSub">After Tax &amp; Expenses</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Taxable Capital Gain</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapTaxableGain">₹ 33.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapGainSub">Net Gain</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Net Sale Value</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapNetSaleValue">₹ 88.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapSaleSub">Price less selling costs</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Cost of Acquisition</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapAcquisitionCost">₹ 55.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapCostSub">Purchase + Expenses</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Holding Period</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapHoldingPeriod">9.3 Yrs</div>
+                        <div class="ak-snap-sub" id="snapClassSub">Long-Term (LTCG)</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Itemized Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Tax Computation Breakdown
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>Property Sale Price</span>
+                        <strong id="cardSalePrice">₹ 90,00,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Less: Selling Expenses (Brokerage / Legal)</span>
+                        <span id="cardSellingExpenses" style="color:#FCA5A5;">-₹ 2,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>Net Sale Consideration</span>
+                        <strong id="cardNetSaleValue" style="color:#A7F3D0;">₹ 88,00,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Less: Cost of Acquisition (Purchase + Reg)</span>
+                        <span id="cardAcquisitionCost" style="color:#FFF;">-₹ 52,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Less: Capital Improvement Costs</span>
+                        <span id="cardImprovements" style="color:#FFF;">-₹ 3,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step" id="cardIndexedCostRow" style="display:none;">
+                        <span>Indexation Adjustment (CII Benefit)</span>
+                        <span id="cardIndexedCostVal" style="color:#60A5FA;">Indexed Cost: ₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>Taxable Capital Gain</span>
+                        <strong id="cardTaxableGain" style="color:#E5C178;">₹ 33,00,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Base Capital Gains Tax (<span id="cardTaxRateLbl">12.5%</span>)</span>
+                        <span id="cardBaseTax" style="color:#FFF;">₹ 4,12,500</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Add: Health &amp; Education Cess (<span id="cardCessLbl">4%</span>)</span>
+                        <span id="cardCessVal" style="color:#FDE68A;">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>Total Tax Payable</span>
+                        <strong id="cardTotalTax" style="color:#E5C178;">₹ 4,12,500</strong>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Capital Gains Insights</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>ℹ️ <strong>Rule Applied:</strong> Long-Term Capital Gain (LTCG) evaluated post 23 July 2024 budget amendment.</li>
+                        <li>ℹ️ <strong>Net Proceeds:</strong> After paying ₹ 2.00 Lakh in selling expenses and ₹ 4.13 Lakh tax, your net bank payout is ₹ 83.88 Lakh.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Important Tax Disclaimer:</strong> This calculator provides an indicative estimate based on the inputs and tax rules configured. Capital gains taxation depends on the asset, acquisition and transfer dates, taxpayer status, applicable law, exemptions, surcharge, cess and other facts. Verify the final computation with official <a href="https://www.incometax.gov.in/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style="color:var(--refined-brass); font-weight:700; text-decoration:underline;">Income Tax Department</a> guidance or a qualified tax professional.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator is an indicative planning tool and is not a substitute for tax advice or tax filing. Capital gains taxation depends on the asset, acquisition and transfer dates, taxpayer status, applicable provisions, eligible costs, indexation rules, exemptions, surcharge and cess. Tax rules can change. Verify the applicable provisions and final computation with the Income Tax Department or a qualified tax professional before relying on the result.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How Capital Gains Tax on Property Is Calculated</h2>
+        <p>Calculating capital gains on real estate involves computing net sale consideration, subtracting acquisition and improvement costs, evaluating holding period eligibility, and applying the applicable statutory tax rate.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Calculate Net Sale Value</div>
+                <div class="ak-step-desc">Deduct brokerage, legal, and documentation expenses from the full property sale price.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Determine Cost of Acquisition</div>
+                <div class="ak-step-desc">Combine original purchase price, stamp duty, registration fees, and capital renovation costs.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Evaluate Holding Period &amp; CII</div>
+                <div class="ak-step-desc">Holding over 24 months qualifies as LTCG. Check indexation eligibility under current or grandfathered provisions.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Compute Tax &amp; Net Proceeds</div>
+                <div class="ak-step-desc">Apply the applicable tax rate, add cess/surcharge, and compute net sale proceeds left in hand.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>What is the current LTCG tax rate on property in India?</h3>
+                <p>Under Union Budget 2024 changes, long-term capital gains (LTCG) on property transfers post 23 July 2024 are taxed at 12.5% without indexation (or 20% with indexation for properties acquired prior to 23 July 2024 by resident individuals).</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How is holding period calculated for property capital gains?</h3>
+                <p>Holding period is the exact duration between property acquisition date and transfer date. Properties held for over 24 months qualify as Long-Term Capital Assets.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What costs can be deducted from sale price for capital gains?</h3>
+                <p>Deductible costs include purchase price, stamp duty, registration fees, legal expenses, eligible capital improvement costs, and brokerage paid on purchase and sale.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Property Financial Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your real estate investments with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/cost-per-sq-ft-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">aspect_ratio</span>
+                </div>
+                <div class="ak-fcard-title">Cost per Sq. Ft. Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate true effective cost per sq. ft. on carpet vs saleable area.</div>
+            </a>
+
+            <a href="/calculators/interior-budget-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">chair</span>
+                </div>
+                <div class="ak-fcard-title">Interior Budget Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate complete home interior costs across kitchen, wardrobes &amp; furniture.</div>
+            </a>
+
+            <a href="/calculators/construction-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">engineering</span>
+                </div>
+                <div class="ak-fcard-title">Construction Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate total house construction cost based on built-up area &amp; materials.</div>
+            </a>
+
+            <a href="/calculators/modular-kitchen-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">countertops</span>
+                </div>
+                <div class="ak-fcard-title">Modular Kitchen Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate kitchen cabinets, acrylic/laminate shutters &amp; countertop budget.</div>
+            </a>
+
+            <a href="/calculators/flooring-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">space_dashboard</span>
+                </div>
+                <div class="ak-fcard-title">Flooring Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate flooring material, installation, skirting &amp; wastage.</div>
+            </a>
+
+            <a href="/calculators/tile-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">grid_view</span>
+                </div>
+                <div class="ak-fcard-title">Tile Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate floor &amp; wall tiles, required boxes and estimated budget.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    // CII Table Architecture
+    var CII_TABLE = {
+        "2001-02": 100, "2002-03": 105, "2003-04": 109, "2004-05": 113, "2005-06": 117,
+        "2006-07": 122, "2007-08": 129, "2008-09": 137, "2009-10": 148, "2010-11": 167,
+        "2011-12": 184, "2012-13": 200, "2013-14": 220, "2014-15": 240, "2015-16": 254,
+        "2016-17": 264, "2017-18": 272, "2018-19": 280, "2019-20": 289, "2020-21": 301,
+        "2021-22": 317, "2022-23": 331, "2023-24": 348, "2024-25": 363
+    };
+
+    function getCIIForDate(dateStr) {
+        if (!dateStr) return null;
+        var dt = new Date(dateStr);
+        if (isNaN(dt.getTime())) return null;
+        var yr = dt.getFullYear();
+        var mo = dt.getMonth() + 1; // 1-12
+        var fyStart = mo >= 4 ? yr : yr - 1;
+        var fyStr = fyStart + "-" + (fyStart + 1).toString().slice(-2);
+        return CII_TABLE[fyStr] ? { fy: fyStr, cii: CII_TABLE[fyStr] } : null;
+    }
+
+    // Centralized Config Architecture
+    var CAPITAL_GAINS_TAX_CONFIG = {
+        defaultPurchasePrice: 5000000,
+        defaultPurchaseDate: '2015-06-15',
+        defaultPurchaseExpenses: 200000,
+        defaultImprovements: 300000,
+        defaultImprovementDate: '2018-08-10',
+        defaultSalePrice: 9000000,
+        defaultSaleDate: '2024-10-01',
+        defaultSellingExpenses: 200000,
+        defaultTaxpayer: 'Resident Individual',
+        defaultRegime: 'Current Rules (Post July 2024)',
+        defaultIndexation: 'No',
+        defaultManualTaxRate: 12.5,
+        defaultCessRate: 4.0
+    };
+
+    var state = {
+        purchasePrice: CAPITAL_GAINS_TAX_CONFIG.defaultPurchasePrice,
+        purchaseDate: CAPITAL_GAINS_TAX_CONFIG.defaultPurchaseDate,
+        purchaseExpenses: CAPITAL_GAINS_TAX_CONFIG.defaultPurchaseExpenses,
+        improvements: CAPITAL_GAINS_TAX_CONFIG.defaultImprovements,
+        improvementDate: CAPITAL_GAINS_TAX_CONFIG.defaultImprovementDate,
+        salePrice: CAPITAL_GAINS_TAX_CONFIG.defaultSalePrice,
+        saleDate: CAPITAL_GAINS_TAX_CONFIG.defaultSaleDate,
+        sellingExpenses: CAPITAL_GAINS_TAX_CONFIG.defaultSellingExpenses,
+        taxpayer: CAPITAL_GAINS_TAX_CONFIG.defaultTaxpayer,
+        regime: CAPITAL_GAINS_TAX_CONFIG.defaultRegime,
+        indexation: CAPITAL_GAINS_TAX_CONFIG.defaultIndexation,
+        manualTaxRate: CAPITAL_GAINS_TAX_CONFIG.defaultManualTaxRate,
+        cessRate: CAPITAL_GAINS_TAX_CONFIG.defaultCessRate
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function calculateHoldingPeriod(purchDateStr, saleDateStr) {
+        var d1 = new Date(purchDateStr);
+        var d2 = new Date(saleDateStr);
+        if (isNaN(d1.getTime()) || isNaN(d2.getTime()) || d2 <= d1) {
+            return { totalDays: 0, years: 0, months: 0, days: 0, isLTCG: false, label: "0 yrs" };
+        }
+        var diffTime = d2.getTime() - d1.getTime();
+        var totalDays = Math.floor(diffTime / (1000 * 3600 * 24));
+        var yrs = Math.floor(totalDays / 365.25);
+        var remDays = totalDays % 365.25;
+        var mos = Math.floor(remDays / 30.4375);
+        var isLTCG = (totalDays >= 730); // 24 months threshold for property
+        var label = yrs + " yrs " + mos + " mos";
+        return { totalDays: totalDays, years: yrs, months: mos, days: Math.round(remDays % 30.4375), isLTCG: isLTCG, label: label };
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onPurchasePriceInput(val) { state.purchasePrice = parseRupees(val); syncUI(); }
+    function onPurchaseDateChange(val) { state.purchaseDate = val; syncUI(); }
+    function onPurchaseExpensesInput(val) { state.purchaseExpenses = parseRupees(val); syncUI(); }
+    function onImprovementsInput(val) { state.improvements = parseRupees(val); syncUI(); }
+    function onImprovementDateChange(val) { state.improvementDate = val; syncUI(); }
+
+    function onSalePriceInput(val) { state.salePrice = parseRupees(val); syncUI(); }
+    function onSaleDateChange(val) { state.saleDate = val; syncUI(); }
+    function onSellingExpensesInput(val) { state.sellingExpenses = parseRupees(val); syncUI(); }
+
+    function onTaxpayerChange(val) { state.taxpayer = val; syncUI(); }
+    function onRegimeChange(val) {
+        state.regime = val;
+        document.getElementById('manualTaxGroup').style.display = (val === 'Manual Rate Override') ? 'block' : 'none';
+        syncUI();
+    }
+    function onIndexationChange(val) { state.indexation = val; syncUI(); }
+    function onManualTaxRateInput(val) { state.manualTaxRate = parseFloat(val) || 0; syncUI(); }
+    function onCessInput(val) { state.cessRate = parseFloat(val) || 0; syncUI(); }
+
+    function syncUI() {
+        var hp = calculateHoldingPeriod(state.purchaseDate, state.saleDate);
+        var netSaleValue = state.salePrice - state.sellingExpenses;
+        var acquisitionCost = state.purchasePrice + state.purchaseExpenses + state.improvements;
+
+        // Indexation Logic
+        var ciiPurch = getCIIForDate(state.purchaseDate);
+        var ciiSale = getCIIForDate(state.saleDate);
+        var ciiImpr = getCIIForDate(state.improvementDate);
+
+        var isIndexationApplied = false;
+        if (state.indexation === 'Yes' || (state.indexation === 'Auto' && hp.isLTCG && state.regime === 'Grandfathered (20% with Indexation)')) {
+            isIndexationApplied = true;
+        }
+
+        var indexedPurchCost = (state.purchasePrice + state.purchaseExpenses);
+        var indexedImprCost = state.improvements;
+        var totalIndexedCost = acquisitionCost;
+
+        if (isIndexationApplied && ciiPurch && ciiSale) {
+            indexedPurchCost = Math.round((state.purchasePrice + state.purchaseExpenses) * (ciiSale.cii / ciiPurch.cii));
+            if (ciiImpr) {
+                indexedImprCost = Math.round(state.improvements * (ciiSale.cii / ciiImpr.cii));
+            }
+            totalIndexedCost = indexedPurchCost + indexedImprCost;
+        }
+
+        var applicableCost = isIndexationApplied ? totalIndexedCost : acquisitionCost;
+        var grossGain = netSaleValue - applicableCost;
+        var isLoss = grossGain < 0;
+        var taxableGain = isLoss ? 0 : grossGain;
+
+        // Tax Rate Determination
+        var taxRate = 12.5; // Default current LTCG rate
+        if (state.regime === 'Manual Rate Override') {
+            taxRate = state.manualTaxRate;
+        } else if (!hp.isLTCG) {
+            taxRate = 30.0; // STCG slab rate
+        } else if (isIndexationApplied || state.regime === 'Grandfathered (20% with Indexation)') {
+            taxRate = 20.0;
+        } else {
+            taxRate = 12.5;
+        }
+
+        var baseTax = Math.round(taxableGain * (taxRate / 100.0));
+        var cessVal = Math.round(baseTax * (state.cessRate / 100.0));
+        var totalTax = baseTax + cessVal;
+
+        var netProceeds = state.salePrice - state.sellingExpenses - totalTax;
+
+        // Control Inputs Display
+        document.getElementById('purchasePriceInput').value = formatIndian(state.purchasePrice);
+        document.getElementById('purchaseDateInput').value = state.purchaseDate;
+        document.getElementById('purchaseExpensesInput').value = formatIndian(state.purchaseExpenses);
+        document.getElementById('improvementsInput').value = formatIndian(state.improvements);
+        document.getElementById('improvementDateInput').value = state.improvementDate;
+
+        document.getElementById('salePriceInput').value = formatIndian(state.salePrice);
+        document.getElementById('saleDateInput').value = state.saleDate;
+        document.getElementById('sellingExpensesInput').value = formatIndian(state.sellingExpenses);
+
+        document.getElementById('taxpayerSelect').value = state.taxpayer;
+        document.getElementById('regimeSelect').value = state.regime;
+        document.getElementById('indexationSelect').value = state.indexation;
+        document.getElementById('manualTaxRateInput').value = state.manualTaxRate.toFixed(1);
+        document.getElementById('cessInput').value = state.cessRate.toFixed(1);
+
+        // Dashboard Hero Outputs
+        document.getElementById('resTotalTaxVal').innerText = "₹ " + formatShortIndian(totalTax);
+        document.getElementById('resVerdictBadge').innerText = hp.isLTCG ? ("LTCG (" + taxRate.toFixed(1) + "%)") : "STCG (Slab Rate)";
+        document.getElementById('resVerdictBadge').className = isLoss ? "ak-verdict-badge positive" : "ak-verdict-badge breakeven";
+
+        document.getElementById('resSubtext').innerHTML = isLoss ?
+            'Calculated <strong>Capital Loss of ₹ ' + formatShortIndian(-grossGain) + '</strong>. Estimated Tax Payable: <strong>₹ 0</strong>.' :
+            'Taxable Capital Gain: <strong>₹ ' + formatShortIndian(taxableGain) + '</strong>. Holding Period: <strong>' + hp.label + '</strong>. Net Proceeds After Tax: <strong>₹ ' + formatShortIndian(netProceeds) + '</strong>.';
+
+        // Snapshot Grid Cards
+        document.getElementById('snapTotalTax').innerText = "₹ " + formatShortIndian(totalTax);
+        document.getElementById('snapTaxRateSub').innerText = "Effective Rate: " + taxRate.toFixed(2) + "%";
+
+        document.getElementById('snapNetProceeds').innerText = "₹ " + formatShortIndian(netProceeds);
+        document.getElementById('snapProceedsSub').innerText = "After Tax & Expenses";
+
+        document.getElementById('snapTaxableGain').innerText = isLoss ? ("-₹ " + formatShortIndian(-grossGain)) : ("₹ " + formatShortIndian(taxableGain));
+        document.getElementById('snapGainSub').innerText = isLoss ? "Capital Loss" : "Taxable Gain";
+
+        document.getElementById('snapNetSaleValue').innerText = "₹ " + formatShortIndian(netSaleValue);
+        document.getElementById('snapSaleSub').innerText = "Price less selling costs";
+
+        document.getElementById('snapAcquisitionCost').innerText = isIndexationApplied ? ("₹ " + formatShortIndian(totalIndexedCost)) : ("₹ " + formatShortIndian(acquisitionCost));
+        document.getElementById('snapCostSub').innerText = isIndexationApplied ? "Indexed Cost (CII)" : "Purchase + Expenses";
+
+        document.getElementById('snapHoldingPeriod').innerText = hp.label;
+        document.getElementById('snapClassSub').innerText = hp.isLTCG ? "Long-Term (LTCG)" : "Short-Term (STCG)";
+
+        // Waterfall Breakdown Card
+        document.getElementById('cardSalePrice').innerText = "₹ " + formatIndian(state.salePrice);
+        document.getElementById('cardSellingExpenses').innerText = "-₹ " + formatIndian(state.sellingExpenses);
+        document.getElementById('cardNetSaleValue').innerText = "₹ " + formatIndian(netSaleValue);
+        document.getElementById('cardAcquisitionCost').innerText = "-₹ " + formatIndian(state.purchasePrice + state.purchaseExpenses);
+        document.getElementById('cardImprovements').innerText = "-₹ " + formatIndian(state.improvements);
+
+        var indexRow = document.getElementById('cardIndexedCostRow');
+        if (isIndexationApplied) {
+            indexRow.style.display = 'flex';
+            document.getElementById('cardIndexedCostVal').innerText = "Indexed Total Cost: ₹ " + formatIndian(totalIndexedCost);
+        } else {
+            indexRow.style.display = 'none';
+        }
+
+        document.getElementById('cardTaxableGain').innerText = isLoss ? ("-₹ " + formatIndian(-grossGain) + " (Loss)") : ("₹ " + formatIndian(taxableGain));
+        document.getElementById('cardTaxRateLbl').innerText = taxRate.toFixed(1) + "%";
+        document.getElementById('cardBaseTax').innerText = "₹ " + formatIndian(baseTax);
+        document.getElementById('cardCessLbl').innerText = state.cessRate.toFixed(1) + "%";
+        document.getElementById('cardCessVal').innerText = "+₹ " + formatIndian(cessVal);
+        document.getElementById('cardTotalTax').innerText = "₹ " + formatIndian(totalTax);
+
+        // Warning Alerts
+        var redFlag = document.getElementById('redFlagBox');
+        if (isLoss) {
+            redFlag.style.display = 'block';
+            document.getElementById('redFlagTitle').innerText = "CAPITAL LOSS INDICATED:";
+            document.getElementById('redFlagDesc').innerText = "The entered values indicate a capital loss of ₹ " + formatIndian(-grossGain) + ". Estimated tax is ₹0. Set-off & carry-forward rules apply under IT Act.";
+        } else if (state.sellingExpenses > state.salePrice) {
+            redFlag.style.display = 'block';
+            document.getElementById('redFlagTitle').innerText = "CHECK SELLING EXPENSES:";
+            document.getElementById('redFlagDesc').innerText = "Selling expenses cannot exceed the entered property sale price.";
+        } else {
+            redFlag.style.display = 'none';
+        }
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>ℹ️ <strong>Holding Classification:</strong> Held for ' + hp.label + ' (' + (hp.isLTCG ? 'LTCG' : 'STCG') + ').</li>';
+        if (isIndexationApplied) {
+            rHtml += '<li>ℹ️ <strong>Indexation Benefit:</strong> Original cost of ₹ ' + formatShortIndian(acquisitionCost) + ' indexed to ₹ ' + formatShortIndian(totalIndexedCost) + ' using CII tables.</li>';
+        } else {
+            rHtml += '<li>ℹ️ <strong>Tax Rate:</strong> ' + taxRate.toFixed(1) + '% tax rate applied under selected regime.</li>';
+        }
+        rHtml += '<li>ℹ️ <strong>Net Proceeds:</strong> Estimated bank payout after tax &amp; selling costs is ₹ ' + formatShortIndian(netProceeds) + '.</li>';
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
