@@ -919,6 +919,15 @@
                     </div>
                 </div>
 
+                
+                <!-- Informational Down Payment Box -->
+                <div class="ak-loan-amount-box" style="background:var(--warm-ivory); border:1px solid rgba(106, 66, 50, 0.2); border-radius:8px; padding:0.75rem 1.25rem; margin-bottom:1rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.85rem; font-weight:700; color:var(--deep-navy);">
+                        <span>UC Down Payment Required <span style="font-weight:400; opacity:0.75;" id="equityPctLabel">(20% Equity)</span></span>
+                        <span style="font-size:1.05rem; font-weight:800; color:var(--refined-brass);" id="downPayVal">₹ 18,00,000</span>
+                    </div>
+                </div>
+
                 <!-- Interest Rate -->
                 <div class="ak-new-input-row">
                     <div class="ak-new-input-top">
@@ -1068,7 +1077,7 @@
                     </div>
                     <div class="ak-fi-grid">
                         <div class="ak-fi-item">
-                            <div class="ak-fi-lbl">Rent Paid (24 mos)</div>
+                            <div class="ak-fi-lbl" id="resRentLabel">Rent Paid (24 mos)</div>
                             <div class="ak-fi-val" id="resRentCost">₹ 7,20,000</div>
                         </div>
                         <div class="ak-fi-item">
@@ -1314,6 +1323,16 @@
         return isNaN(num) ? 0 : num;
     }
 
+    
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' L';
+        }
+        return formatIndian(amount);
+    }
+
     function formatIndian(amount) {
         if (isNaN(amount) || amount === null || amount === undefined) return '0';
         var isNegative = amount < 0;
@@ -1502,13 +1521,33 @@
         document.getElementById('resConstInterest').innerText = "₹ " + formatIndian(constInterest);
         document.getElementById('resTotalWaitingCost').innerText = "₹ " + formatIndian(rentCost + constInterest);
 
+        // Dynamic Down Payment & Equity
+        var equityPct = Math.max(0, 100 - state.ltvPct);
+        var ucDownPay = state.ucPrice * (equityPct / 100);
+        var eqLabel = document.getElementById('equityPctLabel');
+        var dpVal = document.getElementById('downPayVal');
+        if (eqLabel) eqLabel.innerText = '(' + equityPct.toFixed(0) + '% Equity)';
+        if (dpVal) dpVal.innerText = '₹ ' + formatIndian(ucDownPay);
+
+        // Dynamic Rent Label
+        var rentLbl = document.getElementById('resRentLabel');
+        if (rentLbl) rentLbl.innerText = 'Rent Paid (' + state.constMonths + ' mos)';
+
         // Update Stacked Bar
         var maxC = Math.max(rtmCost, ucCost);
         var rtmBarPct = maxC > 0 ? (rtmCost / maxC) * 100 : 50;
         var ucBarPct = maxC > 0 ? (ucCost / maxC) * 100 : 50;
 
-        document.getElementById('barRtm').style.width = rtmBarPct + "%";
-        document.getElementById('barUc').style.width = ucBarPct + "%";
+        var barR = document.getElementById('barRtm');
+        var barU = document.getElementById('barUc');
+        barR.style.width = rtmBarPct + "%";
+        barU.style.width = ucBarPct + "%";
+
+        if (rtmBarPct > 15) barR.innerText = "RTM (₹" + formatShortIndian(rtmCost) + ")";
+        else barR.innerText = "";
+
+        if (ucBarPct > 15) barU.innerText = "UC (₹" + formatShortIndian(ucCost) + ")";
+        else barU.innerText = "";
 
         document.getElementById('legendRtmVal').innerText = "₹" + formatIndian(rtmCost);
         document.getElementById('legendUcVal').innerText = "₹" + formatIndian(ucCost);
