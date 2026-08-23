@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Comparison Calculator – Compare Properties &amp; Find the Best Match | acreNkey</title>
+
+    <meta name="description" content="Compare properties based on price per sq. ft., monthly cost, investment potential, apartment quality, location, builder trust and risk to find your best match with acreNkey.">
+    <meta name="keywords" content="property comparison calculator, real estate comparison tool, compare 3 properties side by side, price per sq ft comparison, apartment quality comparison, acrenkey comparison calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/property-comparison-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Property Comparison Calculator | acreNkey">
+    <meta property="og:description" content="Compare properties based on price per sq. ft., monthly cost, investment potential, apartment quality, location, builder trust and risk.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/property-comparison-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Comparison Calculator | acreNkey">
+    <meta name="twitter:description" content="Compare properties based on price per sq. ft., monthly cost, investment potential, apartment quality, location, builder trust and risk.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Property Comparison Calculator","description":"Side-by-side decision tool to compare 2 or 3 real estate properties across price efficiency, monthly cost, quality, location, builder trust, and risk.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/property-comparison-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Property Comparison Calculator","item":"https://acrenkey.com/calculators/property-comparison-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the Property Comparison Calculator rank properties?","acceptedAnswer":{"@type":"Answer","text":"Properties are evaluated on a 100-point weighted score combining Affordability (20%), Investment Potential (20%), Apartment Quality (20%), Location & Connectivity (15%), Builder Trust (10%), Risk-Adjusted Score (10%), and Amenities (5%). The property with the highest score is ranked #1 as your Best Match."}},{"@type":"Question","name":"Can I compare 2 properties instead of 3?","acceptedAnswer":{"@type":"Answer","text":"Yes. Property C is optional and can be toggled on or off depending on whether you are comparing 2 or 3 real estate options."}},{"@type":"Question","name":"Why is price per carpet sq ft more important than total property price?","acceptedAnswer":{"@type":"Answer","text":"Comparing price per usable carpet square foot reveals true space efficiency, helping you identify whether an expensive property offers more usable room or simply larger un-usable common areas."}},{"@type":"Question","name":"Are the subjective scores independently verified by acreNkey?","acceptedAnswer":{"@type":"Answer","text":"No. Subjective ratings (Location, Builder Trust, Quality, Risk) are user-entered screening scores. The calculator provides structured comparison logic based on your inputs."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Tabs Styling for Property Selection */
+    .ak-prop-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+        background: #F1F5F9;
+        padding: 0.35rem;
+        border-radius: 10px;
+    }
+
+    .ak-prop-tab-btn {
+        flex: 1;
+        background: transparent;
+        border: none;
+        padding: 0.6rem 0.5rem;
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-slate);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+    }
+
+    .ak-prop-tab-btn.active {
+        background: #FFFFFF;
+        color: var(--deep-navy-100);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Winner Rank Badge */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: #10B981; color: #FFFFFF;
+    }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Property Cards Comparison Grid in Dark Panel */
+    .ak-compare-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.65rem;
+        margin-bottom: 1.25rem;
+    }
+    @media (max-width: 500px) { .ak-compare-cards-grid { grid-template-columns: 1fr; } }
+
+    .ak-pcard {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.65rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        position: relative;
+    }
+    .ak-pcard.winner {
+        border-color: #E5C178;
+        background: rgba(229, 193, 120, 0.08);
+    }
+    .ak-pcard-rank { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #E5C178; }
+    .ak-pcard-title { font-size: 0.95rem; font-weight: 800; color: #FFF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ak-pcard-score { font-family: var(--font-heading); font-size: 1.4rem; color: #E5C178; font-weight: 400; }
+    .ak-pcard-stat { font-size: 0.75rem; color: rgba(255,255,255,0.75); }
+
+    /* Comparison Table Container */
+    .ak-comp-table-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 0.85rem;
+        margin-bottom: 1.25rem;
+        overflow-x: auto;
+    }
+
+    .ak-comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.78rem;
+    }
+
+    .ak-comp-table th {
+        text-align: left;
+        padding: 0.5rem 0.4rem;
+        color: #E5C178;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .ak-comp-table td {
+        padding: 0.45rem 0.4rem;
+        color: rgba(255,255,255,0.85);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .ak-comp-table tr:last-child td { border-bottom: none; }
+    .ak-comp-table .winner-cell { font-weight: 800; color: #6EE7B7; }
+
+    /* Strengths & Tradeoffs Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Property Comparison Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Property Comparison Calculator</h1>
+                <p class="ak-calc-sub-text">Compare properties across price, affordability, location, quality, builder trust, investment potential and risk to find the best overall match.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs with Property Tabs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>Property Inputs</h2>
+                    <label style="font-size:0.8rem; font-weight:700; color:var(--deep-navy); display:flex; align-items:center; gap:0.35rem; cursor:pointer;">
+                        <input type="checkbox" id="enablePropCCheck" checked onchange="togglePropC(this.checked)">
+                        Include 3rd Property (C)
+                    </label>
+                </div>
+
+                <!-- Property Selector Tabs -->
+                <div class="ak-prop-tabs">
+                    <button type="button" class="ak-prop-tab-btn active" id="tabBtnA" onclick="selectTab('A')">
+                        <span class="material-symbols-outlined" style="font-size:18px;">domain</span>
+                        <span id="tabLabelA">Property A</span>
+                    </button>
+                    <button type="button" class="ak-prop-tab-btn" id="tabBtnB" onclick="selectTab('B')">
+                        <span class="material-symbols-outlined" style="font-size:18px;">domain</span>
+                        <span id="tabLabelB">Property B</span>
+                    </button>
+                    <button type="button" class="ak-prop-tab-btn" id="tabBtnC" onclick="selectTab('C')">
+                        <span class="material-symbols-outlined" style="font-size:18px;">domain</span>
+                        <span id="tabLabelC">Property C</span>
+                    </button>
+                </div>
+
+                <!-- Property Name Input -->
+                <div class="ak-new-input-row" style="margin-bottom: 1.5rem;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">edit_note</span>
+                            Property Name
+                        </div>
+                        <div class="ak-new-input-box-wrapper" style="width: 220px;">
+                            <input type="text" id="propNameInput" class="ak-new-input" value="Property A" style="text-align: left;" oninput="onPropNameChange(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 1: Financial & Area -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Financial &amp; Area Specifications</div>
+
+                <!-- Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="onPropPriceInput(this.value)" onchange="onPropPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Carpet Area -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Carpet Area
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="carpetInput" class="ak-new-input has-suffix" value="1,100" oninput="onCarpetInput(this.value)" onchange="onCarpetInput(this.value)">
+                            <span class="suffix">sq. ft.</span>
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="carpetSlider" class="ak-new-slider" min="100" max="5000" step="25" value="1100" oninput="onCarpetSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Configuration Dropdown -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">bed</span>
+                            Configuration
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <select id="configSelect" class="ak-new-input" style="text-align: right;" onchange="onConfigChange(this.value)">
+                                <option value="1 BHK">1 BHK</option>
+                                <option value="2 BHK">2 BHK</option>
+                                <option value="2.5 BHK">2.5 BHK</option>
+                                <option value="3 BHK" selected>3 BHK</option>
+                                <option value="3.5 BHK">3.5 BHK</option>
+                                <option value="4 BHK">4 BHK</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Row House">Row House</option>
+                                <option value="Plot">Plot</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly EMI & Maintenance -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">credit_score</span>
+                            Monthly EMI
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="emiInput" class="ak-new-input has-prefix" value="70,000" oninput="onEmiInput(this.value)" onchange="onEmiInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">build</span>
+                            Monthly Maintenance
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="maintInput" class="ak-new-input has-prefix" value="5,000" oninput="onMaintInput(this.value)" onchange="onMaintInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Ratings & Quality -->
+                <div class="ak-section-divider-title">2. Quality, Location &amp; Builder Ratings</div>
+
+                <!-- Location Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">location_on</span>
+                            Location / Connectivity
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="locationInput" class="ak-new-input has-suffix" value="80" oninput="onLocationInput(this.value)" onchange="onLocationInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="locationSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onLocationSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                </div>
+
+                <!-- Apartment Quality Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            Apartment Quality Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="qualityInput" class="ak-new-input has-suffix" value="82" oninput="onQualityInput(this.value)" onchange="onQualityInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="qualitySlider" class="ak-new-slider" min="0" max="100" step="1" value="82" oninput="onQualitySlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                </div>
+
+                <!-- Builder Trust Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">verified</span>
+                            Builder Trust Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="builderInput" class="ak-new-input has-suffix" value="85" oninput="onBuilderInput(this.value)" onchange="onBuilderInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="builderSlider" class="ak-new-slider" min="0" max="100" step="1" value="85" oninput="onBuilderSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                </div>
+
+                <!-- Amenities Score -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">pool</span>
+                            Amenities Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="amenitiesInput" class="ak-new-input has-suffix" value="80" oninput="onAmenitiesInput(this.value)" onchange="onAmenitiesInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="amenitiesSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onAmenitiesSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100</span>
+                    </div>
+                </div>
+
+                <!-- Section 3: Investment & Risk -->
+                <div class="ak-section-divider-title">3. Investment Assumptions &amp; Risk</div>
+
+                <!-- Expected Appreciation -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Expected Annual Appreciation
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="appreciationInput" class="ak-new-input has-suffix" value="6.0" oninput="onAppreciationInput(this.value)" onchange="onAppreciationInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="appreciationSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.5" value="6" oninput="onAppreciationSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Expected Rental Yield -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            Expected Rental Yield
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="yieldInput" class="ak-new-input has-suffix" value="2.50" oninput="onYieldInput(this.value)" onchange="onYieldInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="yieldSlider" class="ak-new-slider" min="0.0" max="10.0" step="0.25" value="2.5" oninput="onYieldSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">10%</span>
+                    </div>
+                </div>
+
+                <!-- Project / Legal Risk Score (INVERSE) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" style="color:#F87171;">warning</span>
+                            Project / Legal Risk Score
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="riskInput" class="ak-new-input has-suffix" value="20" oninput="onRiskInput(this.value)" onchange="onRiskInput(this.value)">
+                            <span class="suffix">/100</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0 (Low Risk)</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="riskSlider" class="ak-new-slider" min="0" max="100" step="1" value="20" oninput="onRiskSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100 (High Risk)</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Property Comparison</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Winner Announcement -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Best Match Property</div>
+                    <div class="ak-verdict-badge" id="resWinnerBadge">RANK #1</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resWinnerName">Property B</div>
+                <div class="ak-emi-subtext" id="resWinnerSubtext">Scores 82 / 100 under current comparison weights — offering the strongest combination of price efficiency, quality and builder trust.</div>
+
+                <!-- Side-by-Side 3-Property Score Cards -->
+                <div class="ak-compare-cards-grid">
+                    <div class="ak-pcard" id="pcardA">
+                        <div class="ak-pcard-rank" id="rankBadgeA">Rank #2</div>
+                        <div class="ak-pcard-title" id="titleA">Property A</div>
+                        <div class="ak-pcard-score" id="scoreA">76 <span style="font-size:0.8rem; color:rgba(255,255,255,0.6);">/ 100</span></div>
+                        <div class="ak-pcard-stat" id="psftA">₹ 9,091 / sq ft</div>
+                        <div class="ak-pcard-stat" id="pcostA">₹ 75K / month</div>
+                    </div>
+
+                    <div class="ak-pcard winner" id="pcardB">
+                        <div class="ak-pcard-rank" id="rankBadgeB">Rank #1</div>
+                        <div class="ak-pcard-title" id="titleB">Property B</div>
+                        <div class="ak-pcard-score" id="scoreB">82 <span style="font-size:0.8rem; color:rgba(255,255,255,0.6);">/ 100</span></div>
+                        <div class="ak-pcard-stat" id="psftB">₹ 8,261 / sq ft</div>
+                        <div class="ak-pcard-stat" id="pcostB">₹ 72.5K / month</div>
+                    </div>
+
+                    <div class="ak-pcard" id="pcardC">
+                        <div class="ak-pcard-rank" id="rankBadgeC">Rank #3</div>
+                        <div class="ak-pcard-title" id="titleC">Property C</div>
+                        <div class="ak-pcard-score" id="scoreC">71 <span style="font-size:0.8rem; color:rgba(255,255,255,0.6);">/ 100</span></div>
+                        <div class="ak-pcard-stat" id="psftC">₹ 8,571 / sq ft</div>
+                        <div class="ak-pcard-stat" id="pcostC">₹ 69.5K / month</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Comparison Matrix Table -->
+                <div class="ak-comp-table-card">
+                    <div style="font-size:0.78rem; font-weight:800; color:#E5C178; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Side-by-Side Comparison Matrix
+                    </div>
+                    <table class="ak-comp-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th id="thNameA">Prop A</th>
+                                <th id="thNameB">Prop B</th>
+                                <th id="thNameC">Prop C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Property Price</td>
+                                <td id="tdPriceA">₹1.00 Cr</td>
+                                <td id="tdPriceB">₹95.0L</td>
+                                <td id="tdPriceC">₹90.0L</td>
+                            </tr>
+                            <tr>
+                                <td>Carpet Area</td>
+                                <td id="tdAreaA">1,100 sq ft</td>
+                                <td id="tdAreaB">1,150 sq ft</td>
+                                <td id="tdAreaC">1,050 sq ft</td>
+                            </tr>
+                            <tr>
+                                <td>Price / Carpet Sq. Ft.</td>
+                                <td id="tdPsftA">₹9,091</td>
+                                <td id="tdPsftB" class="winner-cell">₹8,261 ★</td>
+                                <td id="tdPsftC">₹8,571</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Outgoing</td>
+                                <td id="tdCostA">₹75,000</td>
+                                <td id="tdCostB">₹72,500</td>
+                                <td id="tdCostC" class="winner-cell">₹69,500 ★</td>
+                            </tr>
+                            <tr>
+                                <td>Apartment Quality</td>
+                                <td id="tdQualA">82 / 100</td>
+                                <td id="tdQualB" class="winner-cell">88 / 100 ★</td>
+                                <td id="tdQualC">78 / 100</td>
+                            </tr>
+                            <tr>
+                                <td>Location / Connectivity</td>
+                                <td id="tdLocA">80 / 100</td>
+                                <td id="tdLocB" class="winner-cell">85 / 100 ★</td>
+                                <td id="tdLocC">75 / 100</td>
+                            </tr>
+                            <tr>
+                                <td>Builder Trust Score</td>
+                                <td id="tdBldA">85 / 100</td>
+                                <td id="tdBldB" class="winner-cell">90 / 100 ★</td>
+                                <td id="tdBldC">75 / 100</td>
+                            </tr>
+                            <tr>
+                                <td>Project / Legal Risk</td>
+                                <td id="tdRiskA">20 (Low)</td>
+                                <td id="tdRiskB" class="winner-cell">15 (Low) ★</td>
+                                <td id="tdRiskC">30 (Mod)</td>
+                            </tr>
+                            <tr style="background:rgba(255,255,255,0.08); font-weight:800;">
+                                <td style="color:#E5C178;">Overall Score</td>
+                                <td id="tdScoreA">76</td>
+                                <td id="tdScoreB" style="color:#6EE7B7;">82 ★</td>
+                                <td id="tdScoreC">71</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Strengths & Trade-offs Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Why the Winner Won &amp; Trade-offs</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>✓ <strong>Why Property B Won:</strong> Superior price efficiency (₹8,261/sq ft), higher builder trust (90/100) and strongest apartment quality (88/100).</li>
+                        <li>⚠️ <strong>Trade-offs:</strong> Property C has a lower total monthly outgoing (₹69,500/mo) than Property B.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Scoring Transparency Note:</strong> Overall scores are weighted: 20% Affordability, 20% Investment Potential, 20% Apartment Quality, 15% Location, 10% Builder Trust, 10% Risk-Adjusted Score, and 5% Amenities. All subjective ratings are user-entered screening values.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator ranks properties using the information and assumptions entered by the user. It does not independently verify property prices, market values, builder claims, legal status, or project risks. The ranking is a decision-support tool and should not be treated as a definitive recommendation. Conduct independent financial, legal and technical due diligence before purchasing.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How to Compare Properties Beyond Price</h2>
+        <p>Choosing between two or three properties requires evaluating usable space efficiency, monthly cash flow burden, builder track record, physical layout quality, and legal risk exposure alongside quoted property prices.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Dimension 1</div>
+                <div class="ak-step-title">Price per Carpet Sq. Ft.</div>
+                <div class="ak-step-desc">Evaluates true space efficiency by comparing usable internal carpet square footage against total property cost.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Dimension 2</div>
+                <div class="ak-step-title">Monthly Cash Outflow</div>
+                <div class="ak-step-desc">Combines loan EMI obligations with monthly society maintenance charges to reveal real cash burden.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Dimension 3</div>
+                <div class="ak-step-title">Quality &amp; Builder Reliability</div>
+                <div class="ak-step-desc">Incorporates developer delivery history, RERA compliance, layout usability, and amenities.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Dimension 4</div>
+                <div class="ak-step-title">Investment &amp; Legal Risk</div>
+                <div class="ak-step-desc">Factors in expected appreciation rates, rental yields, and active legal/regulatory risk scores.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How does the Property Comparison Calculator rank properties?</h3>
+                <p>Properties are evaluated on a 100-point weighted score combining Affordability (20%), Investment Potential (20%), Apartment Quality (20%), Location &amp; Connectivity (15%), Builder Trust (10%), Risk-Adjusted Score (10%), and Amenities (5%). The property with the highest score is ranked #1 as your Best Match.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Can I compare 2 properties instead of 3?</h3>
+                <p>Yes. Property C is optional and can be toggled on or off depending on whether you are comparing 2 or 3 real estate options.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Why is price per carpet sq ft more important than total property price?</h3>
+                <p>Comparing price per usable carpet square foot reveals true space efficiency, helping you identify whether an expensive property offers more usable room or simply larger un-usable common areas.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Are the subjective scores independently verified by acreNkey?</h3>
+                <p>No. Subjective ratings (Location, Builder Trust, Quality, Risk) are user-entered screening scores. The calculator provides structured comparison logic based on your inputs.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/apartment-quality-score-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Apartment Quality Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate carpet efficiency, floor plan usability, daylight, ventilation and finishing quality.</div>
+            </a>
+
+            <a href="/calculators/builder-trust-score-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="ak-fcard-title">Builder Trust Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate developer experience, delivery record, RERA compliance, and builder trust.</div>
+            </a>
+
+            <a href="/calculators/property-risk-assessment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">warning</span>
+                </div>
+                <div class="ak-fcard-title">Property Risk Assessment</div>
+                </div>
+                <div class="ak-fcard-desc">Assess financial, leverage, investment, project, legal and builder risks before buying.</div>
+            </a>
+
+            <a href="/calculators/should-i-buy-this-property-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Should I Buy This Property?</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate property affordability, EMI burden, ownership costs, and overall Financial Buy Score.</div>
+            </a>
+
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">house</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/interior-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">design_services</span>
+                </div>
+                <div class="ak-fcard-title">Interior Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate total home interior budget including modular kitchen, wardrobes, and civil work.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var currentTab = 'A';
+    var isPropCEnabled = true;
+
+    var properties = {
+        A: {
+            name: "Property A",
+            price: 10000000,
+            carpet: 1100,
+            config: "3 BHK",
+            location: 80,
+            amenities: 80,
+            quality: 82,
+            builder: 85,
+            appreciation: 6.0,
+            yield: 2.5,
+            maint: 5000,
+            emi: 70000,
+            risk: 20
+        },
+        B: {
+            name: "Property B",
+            price: 9500000,
+            carpet: 1150,
+            config: "3 BHK",
+            location: 85,
+            amenities: 85,
+            quality: 88,
+            builder: 90,
+            appreciation: 6.5,
+            yield: 2.8,
+            maint: 5500,
+            emi: 67000,
+            risk: 15
+        },
+        C: {
+            name: "Property C",
+            price: 9000000,
+            carpet: 1050,
+            config: "3 BHK",
+            location: 75,
+            amenities: 90,
+            quality: 78,
+            builder: 75,
+            appreciation: 7.0,
+            yield: 3.0,
+            maint: 4500,
+            emi: 65000,
+            risk: 30
+        }
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + 'L';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function selectTab(key) {
+        if (key === 'C' && !isPropCEnabled) return;
+        currentTab = key;
+        
+        document.getElementById('tabBtnA').className = 'ak-prop-tab-btn' + (key === 'A' ? ' active' : '');
+        document.getElementById('tabBtnB').className = 'ak-prop-tab-btn' + (key === 'B' ? ' active' : '');
+        document.getElementById('tabBtnC').className = 'ak-prop-tab-btn' + (key === 'C' ? ' active' : '');
+
+        loadTabInputs(key);
+    }
+
+    function togglePropC(enabled) {
+        isPropCEnabled = enabled;
+        var tabC = document.getElementById('tabBtnC');
+        var cardC = document.getElementById('pcardC');
+        var thC = document.getElementById('thNameC');
+        
+        if (enabled) {
+            tabC.style.display = 'flex';
+            cardC.style.display = 'flex';
+            thC.style.display = '';
+            document.querySelectorAll('.ak-comp-table td:nth-child(4)').forEach(function(td){ td.style.display = ''; });
+        } else {
+            tabC.style.display = 'none';
+            cardC.style.display = 'none';
+            thC.style.display = 'none';
+            document.querySelectorAll('.ak-comp-table td:nth-child(4)').forEach(function(td){ td.style.display = 'none'; });
+            if (currentTab === 'C') selectTab('A');
+        }
+        syncUI();
+    }
+
+    function loadTabInputs(key) {
+        var p = properties[key];
+        document.getElementById('propNameInput').value = p.name;
+        document.getElementById('propPriceInput').value = formatIndian(p.price);
+        document.getElementById('propPriceSlider').value = p.price;
+        updateSliderFill('propPriceSlider');
+
+        document.getElementById('carpetInput').value = formatIndian(p.carpet);
+        document.getElementById('carpetSlider').value = p.carpet;
+        updateSliderFill('carpetSlider');
+
+        document.getElementById('configSelect').value = p.config;
+
+        document.getElementById('emiInput').value = formatIndian(p.emi);
+        document.getElementById('maintInput').value = formatIndian(p.maint);
+
+        document.getElementById('locationInput').value = p.location;
+        document.getElementById('locationSlider').value = p.location;
+        updateSliderFill('locationSlider');
+
+        document.getElementById('qualityInput').value = p.quality;
+        document.getElementById('qualitySlider').value = p.quality;
+        updateSliderFill('qualitySlider');
+
+        document.getElementById('builderInput').value = p.builder;
+        document.getElementById('builderSlider').value = p.builder;
+        updateSliderFill('builderSlider');
+
+        document.getElementById('amenitiesInput').value = p.amenities;
+        document.getElementById('amenitiesSlider').value = p.amenities;
+        updateSliderFill('amenitiesSlider');
+
+        document.getElementById('appreciationInput').value = p.appreciation.toFixed(1);
+        document.getElementById('appreciationSlider').value = p.appreciation;
+        updateSliderFill('appreciationSlider');
+
+        document.getElementById('yieldInput').value = p.yield.toFixed(2);
+        document.getElementById('yieldSlider').value = p.yield;
+        updateSliderFill('yieldSlider');
+
+        document.getElementById('riskInput').value = p.risk;
+        document.getElementById('riskSlider').value = p.risk;
+        updateSliderFill('riskSlider');
+    }
+
+    // Input Change Binding for Current Tab
+    function onPropNameChange(val) {
+        properties[currentTab].name = val || ("Property " + currentTab);
+        document.getElementById('tabLabel' + currentTab).innerText = properties[currentTab].name;
+        syncUI();
+    }
+
+    function onPropPriceInput(val) { properties[currentTab].price = parseRupees(val); syncUI(); }
+    function onPropPriceSlider(val) { properties[currentTab].price = parseFloat(val); syncUI(); }
+
+    function onCarpetInput(val) { properties[currentTab].carpet = parseRupees(val); syncUI(); }
+    function onCarpetSlider(val) { properties[currentTab].carpet = parseFloat(val); syncUI(); }
+
+    function onConfigChange(val) { properties[currentTab].config = val; syncUI(); }
+
+    function onEmiInput(val) { properties[currentTab].emi = parseRupees(val); syncUI(); }
+    function onMaintInput(val) { properties[currentTab].maint = parseRupees(val); syncUI(); }
+
+    function onLocationInput(val) { properties[currentTab].location = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onLocationSlider(val) { properties[currentTab].location = parseFloat(val); syncUI(); }
+
+    function onQualityInput(val) { properties[currentTab].quality = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onQualitySlider(val) { properties[currentTab].quality = parseFloat(val); syncUI(); }
+
+    function onBuilderInput(val) { properties[currentTab].builder = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onBuilderSlider(val) { properties[currentTab].builder = parseFloat(val); syncUI(); }
+
+    function onAmenitiesInput(val) { properties[currentTab].amenities = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onAmenitiesSlider(val) { properties[currentTab].amenities = parseFloat(val); syncUI(); }
+
+    function onAppreciationInput(val) { properties[currentTab].appreciation = Math.min(30, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onAppreciationSlider(val) { properties[currentTab].appreciation = parseFloat(val); syncUI(); }
+
+    function onYieldInput(val) { properties[currentTab].yield = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onYieldSlider(val) { properties[currentTab].yield = parseFloat(val); syncUI(); }
+
+    function onRiskInput(val) { properties[currentTab].risk = Math.min(100, Math.max(0, parseFloat(val)||0)); syncUI(); }
+    function onRiskSlider(val) { properties[currentTab].risk = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var activeKeys = isPropCEnabled ? ['A', 'B', 'C'] : ['A', 'B'];
+
+        // 1. Calculate Intermediate Derived Specs for Active Props
+        var specs = {};
+        var minMonthlyCost = Infinity;
+        var maxAppreciation = 0;
+        var maxYield = 0;
+        var minPsft = Infinity;
+
+        activeKeys.forEach(function(k) {
+            var p = properties[k];
+            var psft = p.carpet > 0 ? (p.price / p.carpet) : 0;
+            var monthlyCost = p.emi + p.maint;
+
+            if (monthlyCost < minMonthlyCost && monthlyCost > 0) minMonthlyCost = monthlyCost;
+            if (p.appreciation > maxAppreciation) maxAppreciation = p.appreciation;
+            if (p.yield > maxYield) maxYield = p.yield;
+            if (psft < minPsft && psft > 0) minPsft = psft;
+
+            specs[k] = { psft: psft, monthlyCost: monthlyCost };
+        });
+
+        // Fallback for uniform edge cases
+        if (minMonthlyCost === Infinity) minMonthlyCost = 1;
+        if (minPsft === Infinity) minPsft = 1;
+
+        // 2. Calculate Normalized Factor Scores & Overall Property Scores
+        var results = {};
+        activeKeys.forEach(function(k) {
+            var p = properties[k];
+            var sp = specs[k];
+
+            // Affordability Score (20%)
+            var sAfford = sp.monthlyCost > 0 ? Math.min(100.0, (minMonthlyCost / sp.monthlyCost) * 100.0) : 100.0;
+
+            // Investment Score (20%): Appr(40%), Yield(30%), PriceVal(30%)
+            var sApprNorm = maxAppreciation > 0 ? (p.appreciation / maxAppreciation) * 100.0 : 100.0;
+            var sYieldNorm = maxYield > 0 ? (p.yield / maxYield) * 100.0 : 100.0;
+            var sPriceValNorm = sp.psft > 0 ? Math.min(100.0, (minPsft / sp.psft) * 100.0) : 100.0;
+            var sInvest = (sApprNorm * 0.40) + (sYieldNorm * 0.30) + (sPriceValNorm * 0.30);
+
+            // Risk Adjusted Score (10%)
+            var sRiskAdj = Math.max(0, 100.0 - p.risk);
+
+            // Weighted Overall Score Formula
+            var rawScore = (sAfford * 0.20) + (sInvest * 0.20) + (p.quality * 0.20) + (p.location * 0.15) + (p.builder * 0.10) + (p.amenities * 0.05) + (sRiskAdj * 0.10);
+            var finalScore = Math.round(rawScore);
+
+            results[k] = {
+                key: k,
+                name: p.name,
+                psft: sp.psft,
+                monthlyCost: sp.monthlyCost,
+                score: finalScore,
+                sAfford: sAfford,
+                sInvest: sInvest,
+                sRiskAdj: sRiskAdj
+            };
+        });
+
+        // 3. Rank Properties
+        var sortedList = activeKeys.map(function(k) { return results[k]; });
+        sortedList.sort(function(a, b) { return b.score - a.score; });
+
+        var winner = sortedList[0];
+        sortedList.forEach(function(item, idx) {
+            var rankNum = idx + 1;
+            if (idx > 0 && item.score === sortedList[idx - 1].score) {
+                item.rankText = 'Tie (Rank #' + idx + ')';
+            } else {
+                item.rankText = 'Rank #' + rankNum;
+            }
+        });
+
+        // Sync Winner Hero Display
+        document.getElementById('resWinnerName').innerText = winner.name;
+        document.getElementById('resWinnerBadge').innerText = winner.rankText.toUpperCase() + (winner.key === sortedList[0].key ? ' — BEST MATCH' : '');
+        document.getElementById('resWinnerSubtext').innerText = winner.name + ' scores ' + winner.score + ' / 100 under current comparison weights — offering the strongest combination of price efficiency, quality and builder trust.';
+
+        // Sync Property Cards
+        activeKeys.forEach(function(k) {
+            var r = results[k];
+            var p = properties[k];
+            var card = document.getElementById('pcard' + k);
+            
+            document.getElementById('rankBadge' + k).innerText = r.rankText;
+            document.getElementById('title' + k).innerText = p.name;
+            document.getElementById('score' + k).innerHTML = r.score + ' <span style="font-size:0.8rem; color:rgba(255,255,255,0.6);">/ 100</span>';
+            document.getElementById('psft' + k).innerText = '₹ ' + formatIndian(r.psft) + ' / sq ft';
+            document.getElementById('pcost' + k).innerText = '₹ ' + formatShortIndian(r.monthlyCost) + ' / month';
+
+            if (r.key === winner.key) {
+                card.className = 'ak-pcard winner';
+            } else {
+                card.className = 'ak-pcard';
+            }
+        });
+
+        // Sync Comparison Table Matrix
+        document.getElementById('thNameA').innerText = properties.A.name;
+        document.getElementById('thNameB').innerText = properties.B.name;
+        if (isPropCEnabled) document.getElementById('thNameC').innerText = properties.C.name;
+
+        activeKeys.forEach(function(k) {
+            var p = properties[k];
+            var r = results[k];
+
+            document.getElementById('tdPrice' + k).innerText = "₹ " + formatShortIndian(p.price);
+            document.getElementById('tdArea' + k).innerText = formatIndian(p.carpet) + " sq ft";
+            document.getElementById('tdPsft' + k).innerText = "₹ " + formatIndian(r.psft);
+            document.getElementById('tdCost' + k).innerText = "₹ " + formatIndian(r.monthlyCost);
+            document.getElementById('tdQual' + k).innerText = p.quality + " / 100";
+            document.getElementById('tdLoc' + k).innerText = p.location + " / 100";
+            document.getElementById('tdBld' + k).innerText = p.builder + " / 100";
+            document.getElementById('tdRisk' + k).innerText = p.risk + " (" + (p.risk <= 20 ? 'Low' : (p.risk <= 50 ? 'Mod' : 'High')) + ")";
+            document.getElementById('tdScore' + k).innerText = r.score;
+        });
+
+        // Sync Reasons (Winner Strengths vs Trade-offs)
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        var winnerP = properties[winner.key];
+        var runnerUp = sortedList[1];
+
+        rHtml += '<li>✓ <strong>Why ' + winner.name + ' Won:</strong> Scores ' + winner.score + '/100. Offers price per carpet sq ft of ₹' + formatIndian(winner.psft) + ', builder trust of ' + winnerP.builder + '/100, and apartment quality of ' + winnerP.quality + '/100.</li>';
+        
+        if (runnerUp) {
+            var runnerP = properties[runnerUp.key];
+            if (runnerUp.psft < winner.psft) {
+                rHtml += '<li>⚠️ <strong>Trade-off:</strong> ' + runnerUp.name + ' has a lower price per sq ft (₹' + formatIndian(runnerUp.psft) + ') than ' + winner.name + '.</li>';
+            } else if (runnerUp.monthlyCost < winner.monthlyCost) {
+                rHtml += '<li>⚠️ <strong>Trade-off:</strong> ' + runnerUp.name + ' has a lower total monthly outgoing (₹' + formatIndian(runnerUp.monthlyCost) + '/mo) than ' + winner.name + '.</li>';
+            } else {
+                rHtml += '<li>⚠️ <strong>Trade-off:</strong> Review minor individual factor differences in location or amenities.</li>';
+            }
+        }
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadTabInputs('A');
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
