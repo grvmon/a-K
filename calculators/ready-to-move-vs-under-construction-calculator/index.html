@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready-to-Move vs Under-Construction Calculator – Compare Property Costs | acreNkey</title>
+
+    <meta name="description" content="Compare the total cost of buying a ready-to-move versus under-construction property, including rent, construction interest, taxes, charges and expected appreciation.">
+    <meta name="keywords" content="ready to move vs under construction calculator, property cost comparison calculator, pre EMI interest calculator, rent during construction calculator, acrenkey property calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/ready-to-move-vs-under-construction-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ready-to-Move vs Under-Construction Calculator | acreNkey">
+    <meta property="og:description" content="Compare the true cost of buying a ready-to-move home versus an under-construction property, including rent, construction interest and expected appreciation.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/ready-to-move-vs-under-construction-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ready-to-Move vs Under-Construction Calculator | acreNkey">
+    <meta name="twitter:description" content="Compare the true cost of buying a ready-to-move home versus an under-construction property, including rent, construction interest and expected appreciation.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Ready-to-Move vs Under-Construction Calculator","description":"Independent calculator to compare total financial outgoings and future property appreciation between ready-to-move and under-construction properties.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/ready-to-move-vs-under-construction-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Ready-to-Move vs Under-Construction Calculator","item":"https://acrenkey.com/calculators/ready-to-move-vs-under-construction-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does an under-construction property cost more than just its purchase price?","acceptedAnswer":{"@type":"Answer","text":"While under-construction properties often carry a lower headline price, buyers must also pay rent for their current accommodation and progressive pre-EMI construction interest during the construction period before possession."}},{"@type":"Question","name":"How is construction interest (pre-EMI) calculated?","acceptedAnswer":{"@type":"Answer","text":"Construction interest is calculated progressively as the bank disburses funds in stages. This calculator assumes equal monthly disbursements over the construction period to estimate total pre-EMI interest accurately."}},{"@type":"Question","name":"When does Ready-to-Move make more financial sense?","acceptedAnswer":{"@type":"Answer","text":"Ready-to-Move is generally better when the total waiting costs (rent + pre-EMI interest) exceed the price discount of the under-construction property, or when immediate occupation eliminates rent expense immediately."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    /* Header Row */
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 26px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0 0 0.25rem 0;
+        font-weight: 200;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .ak-calc-sub-text {
+            line-height: 1.45;
+            letter-spacing: -0.015em;
+        }
+    }
+
+    /* Main Grid */
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 550px 550px;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1150px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+        .ak-calc-right-panel {
+            min-height: auto;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0;
+    }
+
+    /* Section Subheaders */
+    .ak-section-divider-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Input Rows */
+    .ak-new-input-row {
+        margin-bottom: 1rem;
+    }
+
+    .ak-new-input-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.6rem;
+    }
+
+    .ak-new-input-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input-label .material-symbols-outlined {
+        font-size: 20px;
+        color: var(--deep-navy-100);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ak-new-input-box-wrapper {
+        position: relative;
+        width: 185px;
+    }
+
+    .ak-new-input-box-wrapper .prefix {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input-box-wrapper .suffix {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        color: var(--deep-navy-100);
+    }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+
+    .ak-new-input:focus {
+        outline: none;
+        border-color: var(--refined-brass);
+        box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1);
+    }
+
+    .ak-new-input.readonly {
+        background: #F8F9FA;
+        border-color: #D5D1C8;
+        color: var(--muted-slate);
+        cursor: not-allowed;
+    }
+
+    /* Validation Warning */
+    .ak-input-validation-msg {
+        font-size: 0.75rem;
+        color: #D97706;
+        font-weight: 700;
+        margin-top: 0.3rem;
+        display: none;
+    }
+
+    /* Slider styling */
+    .ak-new-slider-container {
+        position: relative;
+        padding: 0 8px;
+    }
+
+    .ak-new-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: #8C9BB1;
+        outline: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--refined-brass);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    .ak-slider-with-labels {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 0.25rem;
+    }
+    .ak-slider-with-labels .ak-new-slider-container {
+        flex: 1;
+    }
+    .ak-slider-labels-inline {
+        font-size: 0.85rem;
+        color: var(--deep-navy);
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* Mobile Quick Scroll Button */
+    .ak-calc-emi-btn {
+        width: 100%;
+        background: var(--deep-navy-100);
+        color: #FFF;
+        border: none;
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+        transition: background 0.2s;
+    }
+    .ak-calc-emi-btn:hover {
+        background: #0F1F3D;
+    }
+
+    @media (min-width: 1151px) {
+        .ak-calc-emi-btn { display: none; }
+    }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+
+    .ak-right-header {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-benefit-badge {
+        background: var(--refined-brass);
+        color: #FFFFFF;
+        padding: 0.25rem 0.65rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .ak-emi-huge {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #E5C178;
+        line-height: 1.1;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-emi-subtext {
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.75);
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+
+    /* 3-Stats Grid */
+    .ak-3-stats-new {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.85rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 1.25rem 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-stat-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .ak-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.7);
+        font-weight: 600;
+    }
+
+    .ak-stat-val {
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #FFF;
+    }
+
+    /* Financing Impact Grid */
+    .ak-financing-impact-box {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ak-fi-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #E5C178;
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-fi-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+    }
+
+    .ak-fi-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-fi-lbl {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.65);
+    }
+
+    .ak-fi-val {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #FFFFFF;
+    }
+
+    /* Stacked Benefit Bar */
+    .ak-money-goes-section {
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-stacked-bar-title-new {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #FFF;
+        margin-bottom: 0.75rem;
+    }
+
+    .ak-stacked-bar-new {
+        display: flex;
+        height: 32px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 0.85rem;
+    }
+
+    .ak-bar-principal-new {
+        background: #DDA24A;
+        color: #000;
+        font-weight: 800;
+        font-size: 0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ak-bar-interest-new {
+        background: rgba(255,255,255,0.2);
+        color: #FFF;
+        font-weight: 800;
+        font-size: 0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 0.3s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ak-legend-row-new {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.9);
+        gap: 0.5rem;
+    }
+
+    .ak-legend-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .ak-legend-dot-new.price-save { background: #DDA24A; }
+    .ak-legend-dot-new.int-save { background: rgba(255,255,255,0.4); }
+
+    /* Insight Box */
+    .ak-insight-box {
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(255,255,255,0.03);
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.9);
+        line-height: 1.5;
+    }
+
+    .ak-insight-box .material-symbols-outlined {
+        color: #E5C178;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    /* Tip & Disclaimer Box below Grid */
+    .ak-post-widget-unit {
+        margin-top: 1.5rem;
+    }
+
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    /* Article & Educational Guide */
+    .ak-calc-article {
+        max-width: 1140px;
+        margin: 3rem auto 4rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+        color: var(--deep-navy);
+        line-height: 1.6;
+    }
+
+    .ak-calc-article h2 {
+        font-family: var(--font-heading);
+        font-size: 26px;
+        font-weight: 400;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+    }
+
+    .ak-calc-article p {
+        color: var(--deep-slate);
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .ak-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.25rem;
+        margin: 2rem 0;
+    }
+
+    .ak-step-card {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 12px;
+        padding: 1.35rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .ak-step-num {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        color: var(--refined-brass);
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+    }
+
+    .ak-step-title {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin-bottom: 0.5rem;
+    }
+
+    .ak-step-desc {
+        font-size: 0.9rem;
+        color: var(--deep-slate);
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    /* FAQ Accordion Styling */
+    .ak-faq-item {
+        border-bottom: 1px solid #E2E8F0;
+        padding: 1.25rem 0;
+    }
+    .ak-faq-item:last-child {
+        border-bottom: none;
+    }
+    .ak-faq-item h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--deep-navy);
+        margin-bottom: 0.4rem;
+        margin-top: 0;
+    }
+    .ak-faq-item p {
+        margin-bottom: 0;
+        color: var(--deep-slate);
+        font-size: 0.95rem;
+    }
+
+    /* More Calculators Grid */
+    .ak-more-calcs-section {
+        max-width: 1140px;
+        margin: 0 auto 2rem auto;
+        padding: 3rem 2rem;
+    }
+    .ak-more-calcs-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .ak-more-calcs-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--deep-navy);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+    }
+    .ak-more-calcs-sub {
+        font-size: 0.95rem;
+        color: var(--muted-slate);
+        font-weight: 400;
+    }
+    .ak-feature-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 900px) {
+        .ak-feature-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+        .ak-feature-cards { grid-template-columns: 1fr; }
+    }
+    .ak-fcard {
+        background: #FFFFFF;
+        border: none;
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .ak-fcard:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12);
+    }
+    .ak-fcard-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    .ak-fcard-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .ak-fcard-icon .material-symbols-outlined {
+        font-size: 24px;
+        color: var(--refined-brass);
+    }
+    .ak-fcard-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        line-height: 1.2;
+    }
+    .ak-fcard-desc {
+        font-size: 0.85rem;
+        color: var(--muted-slate);
+        margin-bottom: 0;
+        line-height: 1.55;
+        flex-grow: 1;
+    }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper {
+            padding: 0 1rem;
+            margin-top: 100px;
+        }
+        .ak-calc-left-panel,
+        .ak-calc-right-panel {
+            padding: 1.25rem 1rem;
+        }
+        .ak-calc-header-left .ak-calc-h1 {
+            font-size: 22px;
+        }
+        .ak-panel-header h2 {
+            font-size: 20px;
+        }
+        .ak-calc-article {
+            padding: 0 1rem;
+            margin: 2rem auto 3rem auto;
+        }
+        .ak-calc-article h2 {
+            font-size: 22px;
+        }
+        .ak-more-calcs-section {
+            padding: 2rem 1rem;
+        }
+        .ak-more-calcs-title {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .ak-3-stats-new {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-stat-col {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ak-fi-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        .ak-emi-huge {
+            font-size: 1.6rem;
+        }
+        .ak-new-input-box-wrapper {
+            width: 145px;
+        }
+        .ak-new-input {
+            font-size: 0.85rem;
+            padding: 0.5rem 0.6rem;
+        }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label {
+            font-size: 0.82rem;
+        }
+        .ak-steps-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Ready-to-Move vs Under-Construction Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Ready-to-Move vs Under-Construction Calculator</h1>
+                <p class="ak-calc-sub-text">Compare the true cost of buying a ready-to-move home versus an under-construction property, including rent, construction interest and expected appreciation.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property &amp; Financial Inputs</h2>
+                </div>
+
+                <!-- Section: Ready-to-Move Property -->
+                <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:var(--refined-brass); margin-bottom:0.85rem;">1. Ready-to-Move Property</div>
+                
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            RTM Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rtmPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" onchange="onRtmPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="rtmPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onRtmPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            RTM Taxes &amp; GST
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rtmTaxesInput" class="ak-new-input has-prefix" value="0" onchange="onRtmTaxesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row" style="margin-bottom:1.5rem;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">description</span>
+                            RTM Registration &amp; Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rtmChargesInput" class="ak-new-input has-prefix" value="1,00,000" onchange="onRtmChargesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Under-Construction Property -->
+                <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:var(--refined-brass); margin:1.5rem 0 0.85rem 0; padding-top:1rem; border-top:1px solid #EAEFF5;">2. Under-Construction Property</div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">domain</span>
+                            UC Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="ucPriceInput" class="ak-new-input has-prefix" value="90,00,000" onchange="onUcPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="ucPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="9000000" oninput="onUcPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            UC Taxes &amp; GST
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="ucTaxesInput" class="ak-new-input has-prefix" value="0" onchange="onUcTaxesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row" style="margin-bottom:1.5rem;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">description</span>
+                            UC Registration &amp; Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="ucChargesInput" class="ak-new-input has-prefix" value="1,00,000" onchange="onUcChargesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Financing & Waiting Inputs -->
+                <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:var(--refined-brass); margin:1.5rem 0 0.85rem 0; padding-top:1rem; border-top:1px solid #EAEFF5;">3. Financing &amp; Waiting Costs</div>
+
+                <!-- LTV % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined" title="Percentage of property value financed via bank loan." style="cursor:help;">account_balance</span>
+                            Loan-to-Value (LTV)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="80" onchange="onLtvInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="ltvSlider" class="ak-new-slider" min="0" max="100" step="1" value="80" oninput="onLtvSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">100%</span>
+                    </div>
+                </div>
+
+                <!-- Interest Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Loan Interest Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="rateInput" class="ak-new-input has-suffix" value="8.50" onchange="onRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rateSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.1" value="8.5" oninput="onRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Loan Tenure -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            Loan Tenure
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tenureInput" class="ak-new-input readonly" value="20 Years" readonly>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 yr</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="tenureSlider" class="ak-new-slider" min="1" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Construction Period -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">hourglass_empty</span>
+                            Construction Period
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="constMonthsInput" class="ak-new-input has-suffix" value="24" onchange="onConstMonthsInput(this.value)">
+                            <span class="suffix">mos</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 mo</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="constMonthsSlider" class="ak-new-slider" min="1" max="60" step="1" value="24" oninput="onConstMonthsSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">60 mos</span>
+                    </div>
+                    <div class="ak-input-validation-msg" id="constMonthsValidationMsg">
+                        Construction / possession period must be greater than 0 months.
+                    </div>
+                </div>
+
+                <!-- Monthly Rent -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">key</span>
+                            Monthly Rent (Waiting)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rentInput" class="ak-new-input has-prefix" value="30,000" onchange="onRentInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">₹0</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rentSlider" class="ak-new-slider" min="0" max="200000" step="2500" value="30000" oninput="onRentSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">₹2L</span>
+                    </div>
+                </div>
+
+                <!-- Expected Appreciation -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Annual Appreciation
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="appreciationInput" class="ak-new-input has-suffix" value="6.0" onchange="onAppreciationInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="appreciationSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.5" value="6" oninput="onAppreciationSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Financial Comparison</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Financial Verdict</div>
+                    <div class="ak-benefit-badge" id="resRecBadge">Ready-to-Move</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resRecTitle" style="font-size:1.6rem; color:#E5C178;">Ready-to-Move</div>
+                <div class="ak-emi-subtext" id="resRecSubtext">Lower estimated total cost by ₹3,57,500 by eliminating rent &amp; pre-EMI interest.</div>
+                
+                <!-- 3-Stats Grid -->
+                <div class="ak-3-stats-new">
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Total RTM Cost</div>
+                        <div class="ak-stat-val" id="resRtmCost">₹ 1,01,00,000</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">Total UC Cost</div>
+                        <div class="ak-stat-val" id="resUcCost">₹ 1,04,57,500</div>
+                    </div>
+                    <div class="ak-stat-col">
+                        <div class="ak-stat-label">UC Future Value</div>
+                        <div class="ak-stat-val" style="color:#E5C178;" id="resUcFutureVal">₹ 1,01,12,400</div>
+                    </div>
+                </div>
+
+                <!-- Waiting Costs Breakdown Box -->
+                <div class="ak-financing-impact-box">
+                    <div class="ak-fi-title">
+                        <span class="material-symbols-outlined" style="font-size:18px;">hourglass_bottom</span>
+                        <span>Under-Construction Waiting Penalty</span>
+                    </div>
+                    <div class="ak-fi-grid">
+                        <div class="ak-fi-item">
+                            <div class="ak-fi-lbl">Rent Paid (24 mos)</div>
+                            <div class="ak-fi-val" id="resRentCost">₹ 7,20,000</div>
+                        </div>
+                        <div class="ak-fi-item">
+                            <div class="ak-fi-lbl">Pre-EMI Interest</div>
+                            <div class="ak-fi-val" id="resConstInterest">₹ 6,37,500</div>
+                        </div>
+                        <div class="ak-fi-item" style="grid-column: span 2;">
+                            <div class="ak-fi-lbl">Total Waiting Penalty Added</div>
+                            <div class="ak-fi-val" style="color:#F87171;" id="resTotalWaitingCost">₹ 13,57,500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stacked Breakdown Bar -->
+                <div class="ak-money-goes-section">
+                    <div class="ak-stacked-bar-title-new">Total Cost Comparison</div>
+                    <div class="ak-stacked-bar-new">
+                        <div class="ak-bar-principal-new" id="barRtm" style="width:49.1%">RTM (101L)</div>
+                        <div class="ak-bar-interest-new" id="barUc" style="width:50.9%">UC (104.5L)</div>
+                    </div>
+                    <div class="ak-legend-row-new">
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new price-save"></div>
+                            <span>RTM Cost (<span id="legendRtmVal">₹1,01,00,000</span>)</span>
+                        </div>
+                        <div class="ak-legend-item-inline">
+                            <div class="ak-legend-dot-new int-save"></div>
+                            <span>UC Cost (<span id="legendUcVal">₹1,04,57,500</span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insight Box -->
+                <div class="ak-insight-box">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <div id="insightText">
+                        Ready-to-Move has a lower estimated total cost by <strong>₹3,57,500</strong>, while also avoiding 24 months of waiting and construction risk.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Post Calculator Tip & Disclaimer -->
+        <div class="ak-post-widget-unit">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Evaluation Rule:</strong> Don't compare only the property prices. Compare the total cost of waiting, pre-EMI financing and rent against the potential appreciation created during the construction period.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Construction interest is estimated assuming the loan is disbursed evenly over the construction period. Actual pre-EMI interest depends on the lender's construction-linked disbursement schedule and may differ. Expected property value at possession is based on the assumed annual appreciation rate and is not guaranteed. Enter the taxes and charges applicable to each property as actual amounts may vary.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>Ready-to-Move vs Under-Construction: What Are You Really Comparing?</h2>
+        <p>Choosing between a ready-to-move (RTM) home and an under-construction (UC) property is one of the most critical decisions for Indian property buyers. While under-construction properties often advertise lower base prices, buyers frequently overlook the hidden cost of waiting — including monthly rent and progressive pre-EMI loan interest.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 1</div>
+                <div class="ak-step-title">Property Purchase Price</div>
+                <div class="ak-step-desc">Under-construction properties usually offer a 5% to 15% discount over ready homes in the same locality.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 2</div>
+                <div class="ak-step-title">Rent Paid During Construction</div>
+                <div class="ak-step-desc">If you rent while waiting for possession, every month's rent is an unrecoverable cash outflow added to your total cost.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 3</div>
+                <div class="ak-step-title">Pre-EMI Construction Interest</div>
+                <div class="ak-step-desc">Bank disbursements occur in stages. You pay monthly pre-EMI interest to the bank on disbursed funds without building home equity.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 4</div>
+                <div class="ak-step-title">Capital Appreciation Upside</div>
+                <div class="ak-step-desc">An under-construction property may appreciate in market value between booking and handover, building early equity.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>Why does an under-construction property cost more than just its purchase price?</h3>
+                <p>While under-construction properties often carry a lower headline price, buyers must also pay rent for their current accommodation and progressive pre-EMI construction interest during the construction period before possession.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How is construction interest (pre-EMI) calculated?</h3>
+                <p>Construction interest is calculated progressively as the bank disburses funds in stages. This calculator assumes equal monthly disbursements over the construction period to estimate total pre-EMI interest accurately.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>When does Ready-to-Move make more financial sense?</h3>
+                <p>Ready-to-Move is generally better when the total waiting costs (rent + pre-EMI interest) exceed the price discount of the under-construction property, or when immediate occupation eliminates rent expense immediately.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate how much home loan you may be eligible for based on your income and profile.</div>
+            </a>
+
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">payments</span>
+                </div>
+                <div class="ak-fcard-title">Down Payment Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Determine the down payment required and plan your upfront savings for property purchase.</div>
+            </a>
+
+            <a href="/calculators/stamp-duty-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </div>
+                <div class="ak-fcard-title">Stamp Duty &amp; Registration</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration charges and other applicable statutory fees.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Compare the long-term wealth impact of renting versus buying a home in India.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+
+            <a href="/calculators/property-negotiation-savings-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">price_check</span>
+                </div>
+                <div class="ak-fcard-title">Property Negotiation Savings</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate total financial benefit from price discounts and home loan interest savings.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Logic -->
+    <script>
+    var state = {
+        rtmPrice: 10000000,
+        rtmTaxes: 0,
+        rtmCharges: 100000,
+        ucPrice: 9000000,
+        ucTaxes: 0,
+        ucCharges: 100000,
+        ltvPct: 80,
+        rate: 8.5,
+        tenure: 20,
+        constMonths: 24,
+        monthlyRent: 30000,
+        appreciationPct: 6.0
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1150) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Handlers
+    function onRtmPriceInput(val) { state.rtmPrice = parseRupees(val); syncUI(); }
+    function onRtmPriceSlider(val) { state.rtmPrice = parseFloat(val); syncUI(); }
+    function onRtmTaxesInput(val) { state.rtmTaxes = parseRupees(val); syncUI(); }
+    function onRtmChargesInput(val) { state.rtmCharges = parseRupees(val); syncUI(); }
+
+    function onUcPriceInput(val) { state.ucPrice = parseRupees(val); syncUI(); }
+    function onUcPriceSlider(val) { state.ucPrice = parseFloat(val); syncUI(); }
+    function onUcTaxesInput(val) { state.ucTaxes = parseRupees(val); syncUI(); }
+    function onUcChargesInput(val) { state.ucCharges = parseRupees(val); syncUI(); }
+
+    function onLtvInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        state.ltvPct = isNaN(num) ? 80 : Math.min(100, Math.max(0, num));
+        syncUI();
+    }
+    function onLtvSlider(val) { state.ltvPct = parseFloat(val); syncUI(); }
+
+    function onRateInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        state.rate = isNaN(num) ? 8.5 : Math.min(25, Math.max(0, num));
+        syncUI();
+    }
+    function onRateSlider(val) { state.rate = parseFloat(val); syncUI(); }
+
+    function onTenureSlider(val) { state.tenure = parseInt(val); syncUI(); }
+
+    function onConstMonthsInput(val) {
+        var num = parseInt(val);
+        state.constMonths = isNaN(num) ? 24 : num;
+        syncUI();
+    }
+    function onConstMonthsSlider(val) { state.constMonths = parseInt(val); syncUI(); }
+
+    function onRentInput(val) { state.monthlyRent = parseRupees(val); syncUI(); }
+    function onRentSlider(val) { state.monthlyRent = parseFloat(val); syncUI(); }
+
+    function onAppreciationInput(val) {
+        var num = parseFloat(val.replace('%', ''));
+        state.appreciationPct = isNaN(num) ? 6 : Math.min(30, Math.max(0, num));
+        syncUI();
+    }
+    function onAppreciationSlider(val) { state.appreciationPct = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var valMsg = document.getElementById('constMonthsValidationMsg');
+        if (state.constMonths <= 0) {
+            valMsg.style.display = 'block';
+            state.constMonths = 1;
+        } else {
+            valMsg.style.display = 'none';
+        }
+
+        // 1. Ready-to-Move Costs
+        var rtmCost = state.rtmPrice + state.rtmTaxes + state.rtmCharges;
+
+        // 2. Under-Construction Base Costs
+        var ucBaseCost = state.ucPrice + state.ucTaxes + state.ucCharges;
+
+        // 3. Rent During Construction
+        var rentCost = state.monthlyRent * state.constMonths;
+
+        // 4. Progressive Construction Interest (Pre-EMI)
+        var ucLoan = state.ucPrice * (state.ltvPct / 100);
+        var constInterest = 0;
+
+        if (ucLoan > 0 && state.rate > 0 && state.constMonths > 0) {
+            var monthlyRate = state.rate / 12 / 100;
+            var monthlyDisbursement = ucLoan / state.constMonths;
+            for (var t = 1; t <= state.constMonths; t++) {
+                var disbursed_t = monthlyDisbursement * t;
+                constInterest += disbursed_t * monthlyRate;
+            }
+        }
+
+        // 5. Total UC Cost
+        var ucCost = ucBaseCost + rentCost + constInterest;
+
+        // 6. Expected Property Value at Possession
+        var constYears = state.constMonths / 12;
+        var futureValue = state.ucPrice * Math.pow(1 + (state.appreciationPct / 100), constYears);
+        var expectedAppreciation = Math.max(0, futureValue - state.ucPrice);
+
+        // 7. Cost Difference & Recommendation Logic
+        var diff = ucCost - rtmCost;
+        var recBadge = document.getElementById('resRecBadge');
+        var recTitle = document.getElementById('resRecTitle');
+        var recSubtext = document.getElementById('resRecSubtext');
+        var insText = document.getElementById('insightText');
+
+        if (Math.abs(diff) < 100000) {
+            recBadge.innerText = "Marginal Difference";
+            recTitle.innerText = "Similar Total Outlay";
+            recSubtext.innerText = "The estimated total cost difference between RTM (₹" + formatIndian(rtmCost) + ") and UC (₹" + formatIndian(ucCost) + ") is under ₹1 Lakh. Base your decision on possession urgency.";
+            insText.innerHTML = 'The estimated cost difference is negligible. Ready-to-Move gives immediate occupation, while Under-Construction offers potential appreciation upside of <strong>₹' + formatIndian(expectedAppreciation) + '</strong>.';
+        } else if (ucCost < rtmCost && futureValue >= state.rtmPrice) {
+            var ucAdvantage = rtmCost - ucCost;
+            recBadge.innerText = "Under-Construction";
+            recTitle.innerText = "Under-Construction Saves ₹" + formatIndian(ucAdvantage);
+            recSubtext.innerText = "Lower total cost of ₹" + formatIndian(ucCost) + " (vs RTM ₹" + formatIndian(rtmCost) + ") plus ₹" + formatIndian(expectedAppreciation) + " expected appreciation upside.";
+            insText.innerHTML = 'Under-construction offers a lower estimated total cost by <strong>₹' + formatIndian(ucAdvantage) + '</strong> and an estimated property value of <strong>₹' + formatIndian(futureValue) + '</strong> at possession.';
+        } else {
+            var rtmAdvantage = ucCost - rtmCost;
+            recBadge.innerText = "Ready-to-Move";
+            recTitle.innerText = "Ready-to-Move Saves ₹" + formatIndian(rtmAdvantage);
+            recSubtext.innerText = "Lower estimated total cost of ₹" + formatIndian(rtmCost) + " (vs UC ₹" + formatIndian(ucCost) + ") by eliminating rent &amp; pre-EMI interest.";
+            insText.innerHTML = 'Ready-to-Move has a lower estimated total cost by <strong>₹' + formatIndian(rtmAdvantage) + '</strong>, while eliminating <strong>₹' + formatIndian(rentCost) + '</strong> in rent and <strong>₹' + formatIndian(constInterest) + '</strong> in pre-EMI interest.';
+        }
+
+        // Update Input Fields & Sliders
+        document.getElementById('rtmPriceInput').value = formatIndian(state.rtmPrice);
+        document.getElementById('rtmPriceSlider').value = state.rtmPrice;
+        updateSliderFill('rtmPriceSlider');
+
+        document.getElementById('rtmTaxesInput').value = formatIndian(state.rtmTaxes);
+        document.getElementById('rtmChargesInput').value = formatIndian(state.rtmCharges);
+
+        document.getElementById('ucPriceInput').value = formatIndian(state.ucPrice);
+        document.getElementById('ucPriceSlider').value = state.ucPrice;
+        updateSliderFill('ucPriceSlider');
+
+        document.getElementById('ucTaxesInput').value = formatIndian(state.ucTaxes);
+        document.getElementById('ucChargesInput').value = formatIndian(state.ucCharges);
+
+        document.getElementById('ltvInput').value = state.ltvPct.toFixed(0);
+        document.getElementById('ltvSlider').value = state.ltvPct;
+        updateSliderFill('ltvSlider');
+
+        document.getElementById('rateInput').value = state.rate.toFixed(2);
+        document.getElementById('rateSlider').value = state.rate;
+        updateSliderFill('rateSlider');
+
+        document.getElementById('tenureInput').value = state.tenure + " Years";
+        document.getElementById('tenureSlider').value = state.tenure;
+        updateSliderFill('tenureSlider');
+
+        document.getElementById('constMonthsInput').value = state.constMonths;
+        document.getElementById('constMonthsSlider').value = state.constMonths;
+        updateSliderFill('constMonthsSlider');
+
+        document.getElementById('rentInput').value = formatIndian(state.monthlyRent);
+        document.getElementById('rentSlider').value = state.monthlyRent;
+        updateSliderFill('rentSlider');
+
+        document.getElementById('appreciationInput').value = state.appreciationPct.toFixed(1);
+        document.getElementById('appreciationSlider').value = state.appreciationPct;
+        updateSliderFill('appreciationSlider');
+
+        // Update Results Panel Numbers
+        document.getElementById('resRtmCost').innerText = "₹ " + formatIndian(rtmCost);
+        document.getElementById('resUcCost').innerText = "₹ " + formatIndian(ucCost);
+        document.getElementById('resUcFutureVal').innerText = "₹ " + formatIndian(futureValue);
+
+        document.getElementById('resRentCost').innerText = "₹ " + formatIndian(rentCost);
+        document.getElementById('resConstInterest').innerText = "₹ " + formatIndian(constInterest);
+        document.getElementById('resTotalWaitingCost').innerText = "₹ " + formatIndian(rentCost + constInterest);
+
+        // Update Stacked Bar
+        var maxC = Math.max(rtmCost, ucCost);
+        var rtmBarPct = maxC > 0 ? (rtmCost / maxC) * 100 : 50;
+        var ucBarPct = maxC > 0 ? (ucCost / maxC) * 100 : 50;
+
+        document.getElementById('barRtm').style.width = rtmBarPct + "%";
+        document.getElementById('barUc').style.width = ucBarPct + "%";
+
+        document.getElementById('legendRtmVal').innerText = "₹" + formatIndian(rtmCost);
+        document.getElementById('legendUcVal').innerText = "₹" + formatIndian(ucCost);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
