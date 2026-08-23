@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Cash Flow Calculator – Rental Property Cash Flow &amp; ROI | acreNkey</title>
+
+    <meta name="description" content="Calculate property cash flow after rent, vacancy, maintenance, property tax, insurance and loan payments. See monthly cash flow, NOI and cash-on-cash return with acreNkey.">
+    <meta name="keywords" content="property cash flow calculator, rental cash flow calculator, net operating income calculator, cash on cash return real estate, break even rent calculator, acrenkey rental cash flow">
+    <link rel="canonical" href="https://acrenkey.com/calculators/property-cash-flow-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Property Cash Flow Calculator | acreNkey">
+    <meta property="og:description" content="Calculate rental cash flow after vacancy, maintenance, property expenses and loan payments to see whether your property generates positive or negative cash flow.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/property-cash-flow-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Cash Flow Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate rental cash flow after vacancy, maintenance, property expenses and loan payments to see whether your property generates positive or negative cash flow.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Property Cash Flow Calculator","description":"Real estate financial tool to evaluate monthly rental cash flow, Net Operating Income (NOI), cash-on-cash return, and break-even rent after vacancy and debt service.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/property-cash-flow-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Property Cash Flow Calculator","item":"https://acrenkey.com/calculators/property-cash-flow-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is monthly property cash flow calculated?","acceptedAnswer":{"@type":"Answer","text":"Monthly cash flow equals Effective Rental Income (gross rent minus vacancy) minus Operating Expenses (maintenance, taxes, insurance) minus Monthly Mortgage EMI."}},{"@type":"Question","name":"What is the difference between Net Operating Income (NOI) and Cash Flow?","acceptedAnswer":{"@type":"Answer","text":"NOI evaluates property operating profitability before mortgage debt payments. Investor Cash Flow evaluates actual net cash remaining after paying annual debt service."}},{"@type":"Question","name":"What is Cash-on-Cash Return?","acceptedAnswer":{"@type":"Answer","text":"Cash-on-Cash Return measures your annual cash flow as a percentage of the total cash invested upfront (down payment plus buying transaction costs)."}},{"@type":"Question","name":"What is Break-Even Monthly Rent?","acceptedAnswer":{"@type":"Answer","text":"Break-Even Rent is the minimum gross monthly rent required to cover operating expenses, vacancy loss, and loan EMI payments with exactly ₹0 cash flow shortfall."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Red Flag Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* Cash Flow Snapshot 6-Card Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Waterfall Steps Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Property Cash Flow Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Property Cash Flow Calculator</h1>
+                <p class="ak-calc-sub-text">Calculate rental cash flow after vacancy, maintenance, property expenses and loan payments to see whether your property generates positive or negative cash flow.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Financial Inputs</h2>
+                </div>
+
+                <!-- Section 1: Property & Financing -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Property &amp; Financing</div>
+
+                <!-- Property Purchase Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">domain</span>
+                            Property Purchase Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="onPropPriceInput(this.value)" onchange="onPropPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Down Payment -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            Down Payment
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="downPaymentInput" class="ak-new-input has-prefix" value="25,00,000" oninput="onDownPaymentInput(this.value)" onchange="onDownPaymentInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="downPaymentSlider" class="ak-new-slider" min="0" max="80000000" step="500000" value="2500000" oninput="onDownPaymentSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Upfront equity contribution toward the property.</div>
+                </div>
+
+                <!-- Loan Amount (Calculated / Editable) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance</span>
+                            Loan Amount
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="loanAmtInput" class="ak-new-input has-prefix" value="75,00,000" oninput="onLoanAmtInput(this.value)" onchange="onLoanAmtInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="loanAmtSlider" class="ak-new-slider" min="0" max="100000000" step="500000" value="7500000" oninput="onLoanAmtSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Loan amount used for EMI calculations (Default: Property Price − Down Payment).</div>
+                </div>
+
+                <!-- Interest Rate & Tenure -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Interest Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="rateInput" class="ak-new-input has-suffix" value="8.50" oninput="onRateInput(this.value)" onchange="onRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rateSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.1" value="8.5" oninput="onRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            Loan Tenure
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tenureInput" class="ak-new-input has-suffix" value="20" oninput="onTenureInput(this.value)" onchange="onTenureInput(this.value)">
+                            <span class="suffix">Yrs</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 yr</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="tenureSlider" class="ak-new-slider" min="1" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Section 2: Rental Income & Growth -->
+                <div class="ak-section-divider-title">2. Rental Income &amp; Rent Growth</div>
+
+                <!-- Monthly Rent -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            Monthly Rent
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="monthlyRentInput" class="ak-new-input has-prefix" value="30,000" oninput="onMonthlyRentInput(this.value)" onchange="onMonthlyRentInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="monthlyRentSlider" class="ak-new-slider" min="0" max="300000" step="2500" value="30000" oninput="onMonthlyRentSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Expected gross monthly rent before vacancy.</div>
+                </div>
+
+                <!-- Vacancy Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">event_busy</span>
+                            Vacancy Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="vacancyRateInput" class="ak-new-input has-suffix" value="5" oninput="onVacancyRateInput(this.value)" onchange="onVacancyRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="vacancyRateSlider" class="ak-new-slider" min="0" max="30" step="1" value="5" oninput="onVacancyRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30%</span>
+                    </div>
+                    <div class="ak-input-helper">Estimated percentage of the year property remains unrented.</div>
+                </div>
+
+                <!-- Annual Rent Growth % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Annual Rent Growth (For Projections)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="rentGrowthInput" class="ak-new-input has-suffix" value="5" oninput="onRentGrowthInput(this.value)" onchange="onRentGrowthInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rentGrowthSlider" class="ak-new-slider" min="0" max="15" step="1" value="5" oninput="onRentGrowthSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                    <div class="ak-input-helper">Used for long-term projection view (Current cash flow uses current rent).</div>
+                </div>
+
+                <!-- Section 3: Operating Expenses & Acquisition Costs -->
+                <div class="ak-section-divider-title">3. Operating Expenses &amp; Upfront Costs</div>
+
+                <!-- Monthly Maintenance -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">build</span>
+                            Monthly Maintenance
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="maintInput" class="ak-new-input has-prefix" value="5,000" oninput="onMaintInput(this.value)" onchange="onMaintInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="maintSlider" class="ak-new-slider" min="0" max="50000" step="500" value="5000" oninput="onMaintSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Annual Property Tax -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Annual Property Tax
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="taxInput" class="ak-new-input has-prefix" value="20,000" oninput="onTaxInput(this.value)" onchange="onTaxInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="taxSlider" class="ak-new-slider" min="0" max="200000" step="2500" value="20000" oninput="onTaxSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Annual Insurance -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Annual Insurance
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="insuranceInput" class="ak-new-input has-prefix" value="10,000" oninput="onInsuranceInput(this.value)" onchange="onInsuranceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="insuranceSlider" class="ak-new-slider" min="0" max="100000" step="1000" value="10000" oninput="onInsuranceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Other Annual Expenses -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            Other Annual Expenses
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherExpInput" class="ak-new-input has-prefix" value="20,000" oninput="onOtherExpInput(this.value)" onchange="onOtherExpInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="otherExpSlider" class="ak-new-slider" min="0" max="200000" step="2500" value="20000" oninput="onOtherExpSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Repairs reserve, property management &amp; leasing costs.</div>
+                </div>
+
+                <!-- Buying Costs (For Cash-on-Cash denominator) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                            Buying Costs (Stamp &amp; Registration)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="buyingCostsInput" class="ak-new-input has-prefix" value="8,00,000" oninput="onBuyingCostsInput(this.value)" onchange="onBuyingCostsInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="buyingCostsSlider" class="ak-new-slider" min="0" max="2000000" step="50000" value="800000" oninput="onBuyingCostsSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Required to compute Total Cash Invested (Down Payment + Buying Costs).</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Monthly Cash Flow</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Net Monthly Cash Flow</div>
+                    <div class="ak-verdict-badge negative" id="resVerdictBadge">NEGATIVE CASH FLOW</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resMonthlyCashVal">-₹ 45,667 <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ mo</span></div>
+                <div class="ak-emi-subtext" id="resSubtext">Annual Net Cash Flow: -₹ 5.48 Lakh. Rental income does not cover operating costs and monthly EMI payments under current assumptions.</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">WARNING:</strong>
+                    <div id="redFlagDesc">Financing burden is driving negative cash flow.</div>
+                </div>
+
+                <!-- Financial Cash Flow Snapshot 6-Card Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Net Operating Income (NOI)</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapNoi">₹ 2.32 Lakh</div>
+                        <div class="ak-snap-sub" id="snapNoiMargin">NOI Margin: 67.8%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Annual Debt Service</div>
+                        <div class="ak-snap-val" style="color:#FCA5A5;" id="snapDebtService">₹ 7.81 Lakh</div>
+                        <div class="ak-snap-sub" id="snapEmiVal">EMI: ₹ 65,081 / mo</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Annual Rent</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapEffectiveRent">₹ 3.42 Lakh</div>
+                        <div class="ak-snap-sub" id="snapVacancyLoss">Vacancy: -₹ 18,000</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Cash-on-Cash Return</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapCocReturn">-16.63%</div>
+                        <div class="ak-snap-sub" id="snapInitialCash">Cash Inv: ₹ 33.0 Lakh</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Break-Even Monthly Rent</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapBreakEvenRent">₹ 78,158 / mo</div>
+                        <div class="ak-snap-sub" id="snapRentGap">Rent Gap: +₹ 48.16K</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Max Vacancy Tolerance</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapMaxVacancy">0.0%</div>
+                        <div class="ak-snap-sub" id="snapLtv">LTV: 75.0%</div>
+                    </div>
+                </div>
+
+                <!-- Step-by-Step Cash Flow Waterfall -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Cash Flow Waterfall (Annualized)
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>1. Gross Annual Rent (₹30k × 12)</span>
+                        <span id="wfGrossRent">₹ 3,60,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>2. Less Vacancy Loss (5%)</span>
+                        <span id="wfVacancy" style="color:#FCA5A5;">-₹ 18,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>3. Effective Annual Rent</span>
+                        <span id="wfEffectiveRent">₹ 3,42,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>4. Less Operating Expenses (Tax, Maint, Ins)</span>
+                        <span id="wfExpenses" style="color:#FCA5A5;">-₹ 1,10,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>5. Net Operating Income (NOI)</span>
+                        <span id="wfNoi">₹ 2,32,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>6. Less Annual Debt Service (EMI × 12)</span>
+                        <span id="wfDebtService" style="color:#FCA5A5;">-₹ 7,80,972</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>Net Annual Cash Flow</span>
+                        <span id="wfAnnualCashFlow" style="color:#FCA5A5;">-₹ 5,48,972</span>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Cash Flow Analysis</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>⚠️ <strong>Financing Impact:</strong> Property produces positive NOI (₹ 2.32 Lakh), but loan payments (₹ 7.81 Lakh) drive cash flow negative.</li>
+                        <li>ℹ️ <strong>Break-Even Requirement:</strong> Gross rent must increase by ₹ 48,158/mo (to ₹ 78,158/mo) to break even at 8.5% interest.</li>
+                    </ul>
+                </div>
+
+                <!-- 5-Year & 10-Year Long Term Projection Box -->
+                <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:0.85rem 1rem; font-size:0.78rem; color:rgba(255,255,255,0.9); line-height:1.5;">
+                    <div style="font-weight:800; color:#E5C178; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.4rem;">
+                        Long-Term Cash Flow Projections (at 5% Annual Rent Growth)
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem;">
+                        <span>Year 1 (Today):</span>
+                        <strong id="projY1">-₹ 45,667 / mo</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem;">
+                        <span>Year 5:</span>
+                        <strong id="projY5">-₹ 36,929 / mo</strong>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+                        <span>Year 10:</span>
+                        <strong id="projY10">-₹ 24,013 / mo</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Property Performance ≠ Investor Cash Flow:</strong> A property can be operationally profitable (positive NOI) yet generate negative cash flow for the investor due to high leverage or short loan tenures. Evaluating NOI separately from debt service prevents misjudging core asset quality.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator evaluates property cash flow based on user-entered rental income, vacancy rates, operating expenses, and loan terms. Future rent growth projections are illustrative and do not guarantee future rental income or asset performance. Consider independent financial advice before acquiring investment properties.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>Understanding Property Cash Flow Mechanics</h2>
+        <p>Rental property cash flow measures the actual money left in your pocket each month after collecting rent, accounting for vacancy, paying property taxes and maintenance, and servicing the mortgage loan.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Effective Gross Income</div>
+                <div class="ak-step-desc">Adjusts scheduled gross rent for realistic annual vacancy rates to determine true top-line rental receipts.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Net Operating Income (NOI)</div>
+                <div class="ak-step-desc">Deducts recurring property tax, building maintenance, insurance, and repairs from effective rent before mortgage debt.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Annual Debt Service</div>
+                <div class="ak-step-desc">Subtracts annual mortgage principal and interest EMI payments to arrive at net investor cash flow.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Cash-on-Cash Return</div>
+                <div class="ak-step-desc">Measures net annual cash flow as a percentage of your initial cash investment (down payment + buying costs).</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How is monthly property cash flow calculated?</h3>
+                <p>Monthly cash flow equals Effective Rental Income (gross rent minus vacancy) minus Operating Expenses (maintenance, taxes, insurance) minus Monthly Mortgage EMI.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is the difference between Net Operating Income (NOI) and Cash Flow?</h3>
+                <p>NOI evaluates property operating profitability before mortgage debt payments. Investor Cash Flow evaluates actual net cash remaining after paying annual debt service.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is Cash-on-Cash Return?</h3>
+                <p>Cash-on-Cash Return measures your annual cash flow as a percentage of the total cash invested upfront (down payment plus buying transaction costs).</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is Break-Even Monthly Rent?</h3>
+                <p>Break-Even Rent is the minimum gross monthly rent required to cover operating expenses, vacancy loss, and loan EMI payments with exactly ₹0 cash flow shortfall.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/property-investment-score-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate real estate investment potential based on yield, ROI, CAGR &amp; holding period.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+
+            <a href="/calculators/home-buying-readiness-score/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Home Buying Readiness Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate savings, down payment, emergency fund, and credit history before buying.</div>
+            </a>
+
+            <a href="/calculators/luxury-home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">diamond</span>
+                </div>
+                <div class="ak-fcard-title">Luxury Home Affordability</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate maximum luxury home affordability factoring taxes, down payment &amp; liquidity.</div>
+            </a>
+
+            <a href="/calculators/property-comparison-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Property Comparison</div>
+                </div>
+                <div class="ak-fcard-desc">Compare 2 or 3 properties side-by-side across price, quality, location and risk.</div>
+            </a>
+
+            <a href="/calculators/property-risk-assessment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">warning</span>
+                </div>
+                <div class="ak-fcard-title">Property Risk Assessment</div>
+                </div>
+                <div class="ak-fcard-desc">Assess financial, leverage, investment, project, legal and builder risks before buying.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        propPrice: 10000000,
+        downPayment: 2500000,
+        loanAmt: 7500000,
+        rate: 8.5,
+        tenure: 20,
+        monthlyRent: 30000,
+        vacancyRate: 5.0,
+        rentGrowth: 5.0,
+        maint: 5000,
+        tax: 20000,
+        insurance: 10000,
+        otherExp: 20000,
+        buyingCosts: 800000,
+        isManualLoan: false
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onPropPriceInput(val) {
+        state.propPrice = parseRupees(val);
+        if (!state.isManualLoan) {
+            state.loanAmt = Math.max(0, state.propPrice - state.downPayment);
+        }
+        syncUI();
+    }
+    function onPropPriceSlider(val) {
+        state.propPrice = parseFloat(val);
+        if (!state.isManualLoan) {
+            state.loanAmt = Math.max(0, state.propPrice - state.downPayment);
+        }
+        syncUI();
+    }
+
+    function onDownPaymentInput(val) {
+        state.downPayment = parseRupees(val);
+        if (!state.isManualLoan) {
+            state.loanAmt = Math.max(0, state.propPrice - state.downPayment);
+        }
+        syncUI();
+    }
+    function onDownPaymentSlider(val) {
+        state.downPayment = parseFloat(val);
+        if (!state.isManualLoan) {
+            state.loanAmt = Math.max(0, state.propPrice - state.downPayment);
+        }
+        syncUI();
+    }
+
+    function onLoanAmtInput(val) {
+        state.loanAmt = parseRupees(val);
+        state.isManualLoan = true;
+        syncUI();
+    }
+    function onLoanAmtSlider(val) {
+        state.loanAmt = parseFloat(val);
+        state.isManualLoan = true;
+        syncUI();
+    }
+
+    function onRateInput(val) { state.rate = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onRateSlider(val) { state.rate = parseFloat(val); syncUI(); }
+
+    function onTenureInput(val) { state.tenure = Math.min(30, Math.max(1, parseInt(val)||20)); syncUI(); }
+    function onTenureSlider(val) { state.tenure = parseInt(val); syncUI(); }
+
+    function onMonthlyRentInput(val) { state.monthlyRent = parseRupees(val); syncUI(); }
+    function onMonthlyRentSlider(val) { state.monthlyRent = parseFloat(val); syncUI(); }
+
+    function onVacancyRateInput(val) { state.vacancyRate = Math.min(100, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onVacancyRateSlider(val) { state.vacancyRate = parseFloat(val); syncUI(); }
+
+    function onRentGrowthInput(val) { state.rentGrowth = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onRentGrowthSlider(val) { state.rentGrowth = parseFloat(val); syncUI(); }
+
+    function onMaintInput(val) { state.maint = parseRupees(val); syncUI(); }
+    function onMaintSlider(val) { state.maint = parseFloat(val); syncUI(); }
+
+    function onTaxInput(val) { state.tax = parseRupees(val); syncUI(); }
+    function onTaxSlider(val) { state.tax = parseFloat(val); syncUI(); }
+
+    function onInsuranceInput(val) { state.insurance = parseRupees(val); syncUI(); }
+    function onInsuranceSlider(val) { state.insurance = parseFloat(val); syncUI(); }
+
+    function onOtherExpInput(val) { state.otherExp = parseRupees(val); syncUI(); }
+    function onOtherExpSlider(val) { state.otherExp = parseFloat(val); syncUI(); }
+
+    function onBuyingCostsInput(val) { state.buyingCosts = parseRupees(val); syncUI(); }
+    function onBuyingCostsSlider(val) { state.buyingCosts = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var price = state.propPrice;
+        var down = state.downPayment;
+        var loan = state.loanAmt;
+        var rate = state.rate;
+        var tenure = state.tenure;
+        var mRent = state.monthlyRent;
+        var vacRateFrac = state.vacancyRate / 100.0;
+        var rGrowthFrac = state.rentGrowth / 100.0;
+        var maint = state.maint;
+        var tax = state.tax;
+        var ins = state.insurance;
+        var oExp = state.otherExp;
+        var buyCosts = state.buyingCosts;
+
+        // 1. EMI & Debt Service Calculations
+        var emi = 0;
+        if (loan > 0) {
+            var r = rate > 0 ? (rate / 12.0 / 100.0) : 0;
+            var n = tenure * 12;
+            if (r > 0) {
+                emi = Math.round(loan * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1));
+            } else {
+                emi = Math.round(loan / n);
+            }
+        }
+        var annualDebtService = emi * 12;
+        var ltvPct = price > 0 ? (loan / price) * 100.0 : 0;
+
+        // 2. Revenue & Operating Expenses
+        var grossAnnualRent = mRent * 12;
+        var vacancyLoss = Math.round(grossAnnualRent * vacRateFrac);
+        var effectiveAnnualRent = grossAnnualRent - vacancyLoss;
+
+        var annualMaint = maint * 12;
+        var totalOperatingExpenses = annualMaint + tax + ins + oExp;
+
+        // 3. NOI & Cash Flow Calculations
+        var noi = effectiveAnnualRent - totalOperatingExpenses;
+        var annualCashFlow = noi - annualDebtService;
+        var monthlyCashFlow = Math.round(annualCashFlow / 12.0);
+
+        // 4. Cash-on-Cash Return
+        var initialCashInvested = down + buyCosts;
+        var cocReturnPct = initialCashInvested > 0 ? (annualCashFlow / initialCashInvested) * 100.0 : null;
+
+        // 5. Break-Even Metrics
+        var reqEffRent = totalOperatingExpenses + annualDebtService;
+        var reqGrossAnnualRent = vacRateFrac < 1.0 ? (reqEffRent / (1.0 - vacRateFrac)) : 0;
+        var breakEvenMonthlyRent = Math.round(reqGrossAnnualRent / 12.0);
+        var rentGap = breakEvenMonthlyRent - mRent;
+
+        var breakEvenVacPct = 0;
+        if (grossAnnualRent > 0) {
+            var rawVac = 1.0 - (reqEffRent / grossAnnualRent);
+            breakEvenVacPct = Math.min(100.0, rawVac * 100.0);
+        }
+
+        var noiMarginPct = effectiveAnnualRent > 0 ? (noi / effectiveAnnualRent) * 100.0 : null;
+
+        // 6. Projections
+        var rentY5 = mRent * Math.pow(1 + rGrowthFrac, 4);
+        var effRentY5 = (rentY5 * 12) * (1 - vacRateFrac);
+        var monthlyCashY5 = Math.round((effRentY5 - totalOperatingExpenses - annualDebtService) / 12.0);
+
+        var rentY10 = mRent * Math.pow(1 + rGrowthFrac, 9);
+        var effRentY10 = (rentY10 * 12) * (1 - vacRateFrac);
+        var monthlyCashY10 = Math.round((effRentY10 - totalOperatingExpenses - annualDebtService) / 12.0);
+
+        // Sync Input Controls
+        document.getElementById('propPriceInput').value = formatIndian(price);
+        document.getElementById('propPriceSlider').value = price;
+        updateSliderFill('propPriceSlider');
+
+        document.getElementById('downPaymentInput').value = formatIndian(down);
+        document.getElementById('downPaymentSlider').value = down;
+        updateSliderFill('downPaymentSlider');
+
+        document.getElementById('loanAmtInput').value = formatIndian(loan);
+        document.getElementById('loanAmtSlider').value = loan;
+        updateSliderFill('loanAmtSlider');
+
+        document.getElementById('rateInput').value = rate.toFixed(2);
+        document.getElementById('rateSlider').value = rate;
+        updateSliderFill('rateSlider');
+
+        document.getElementById('tenureInput').value = tenure;
+        document.getElementById('tenureSlider').value = tenure;
+        updateSliderFill('tenureSlider');
+
+        document.getElementById('monthlyRentInput').value = formatIndian(mRent);
+        document.getElementById('monthlyRentSlider').value = mRent;
+        updateSliderFill('monthlyRentSlider');
+
+        document.getElementById('vacancyRateInput').value = state.vacancyRate.toFixed(0);
+        document.getElementById('vacancyRateSlider').value = state.vacancyRate;
+        updateSliderFill('vacancyRateSlider');
+
+        document.getElementById('rentGrowthInput').value = state.rentGrowth.toFixed(0);
+        document.getElementById('rentGrowthSlider').value = state.rentGrowth;
+        updateSliderFill('rentGrowthSlider');
+
+        document.getElementById('maintInput').value = formatIndian(maint);
+        document.getElementById('maintSlider').value = maint;
+        updateSliderFill('maintSlider');
+
+        document.getElementById('taxInput').value = formatIndian(tax);
+        document.getElementById('taxSlider').value = tax;
+        updateSliderFill('taxSlider');
+
+        document.getElementById('insuranceInput').value = formatIndian(ins);
+        document.getElementById('insuranceSlider').value = ins;
+        updateSliderFill('insuranceSlider');
+
+        document.getElementById('otherExpInput').value = formatIndian(oExp);
+        document.getElementById('otherExpSlider').value = oExp;
+        updateSliderFill('otherExpSlider');
+
+        document.getElementById('buyingCostsInput').value = formatIndian(buyCosts);
+        document.getElementById('buyingCostsSlider').value = buyCosts;
+        updateSliderFill('buyingCostsSlider');
+
+        // Sync Dashboard Outputs
+        var monthlyStr = (monthlyCashFlow >= 0 ? "₹ " + formatIndian(monthlyCashFlow) : "-₹ " + formatIndian(Math.abs(monthlyCashFlow)));
+        document.getElementById('resMonthlyCashVal').innerHTML = monthlyStr + ' <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ mo</span>';
+
+        var badge = document.getElementById('resVerdictBadge');
+        var subtext = document.getElementById('resSubtext');
+
+        var annStr = (annualCashFlow >= 0 ? "₹ " + formatShortIndian(annualCashFlow) : "-₹ " + formatShortIndian(Math.abs(annualCashFlow)));
+
+        if (monthlyCashFlow > 0) {
+            badge.className = 'ak-verdict-badge positive';
+            badge.innerText = 'POSITIVE CASH FLOW';
+            subtext.innerText = 'Annual Net Cash Flow: ' + annStr + '. The property generates positive monthly cash flow after operating costs and loan payments under entered assumptions.';
+        } else if (monthlyCashFlow === 0) {
+            badge.className = 'ak-verdict-badge breakeven';
+            badge.innerText = 'BREAK-EVEN';
+            subtext.innerText = 'Annual Net Cash Flow: ₹ 0. Rental income exactly covers operating expenses and annual loan payments under current assumptions.';
+        } else {
+            badge.className = 'ak-verdict-badge negative';
+            badge.innerText = 'NEGATIVE CASH FLOW';
+            subtext.innerText = 'Annual Net Cash Flow: ' + annStr + '. Rental income does not cover operating costs and monthly EMI payments under current assumptions.';
+        }
+
+        // Red-Flag Warnings
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfTitle = document.getElementById('redFlagTitle');
+        var rfDesc = document.getElementById('redFlagDesc');
+        var hasRedFlag = false;
+
+        if (noi < 0) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ OPERATING CASH FLOW WARNING:';
+            rfDesc.innerText = 'Rental income does not cover the property's operating expenses (-₹ ' + formatShortIndian(Math.abs(noi)) + '/yr), even before loan payments.';
+        } else if (noi > 0 && annualCashFlow < 0) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ FINANCING DRIVING CASH SHORTFALL:';
+            rfDesc.innerText = 'Property generates positive NOI (₹ ' + formatShortIndian(noi) + '/yr), but annual loan payments (₹ ' + formatShortIndian(annualDebtService) + '/yr) exceed available NOI.';
+        }
+
+        redFlagBox.style.display = hasRedFlag ? 'block' : 'none';
+
+        // Snapshot Cards
+        document.getElementById('snapNoi').innerText = "₹ " + formatShortIndian(noi);
+        document.getElementById('snapNoiMargin').innerText = noiMarginPct !== null ? "NOI Margin: " + noiMarginPct.toFixed(1) + "%" : "NOI Margin: N/A";
+
+        document.getElementById('snapDebtService').innerText = "₹ " + formatShortIndian(annualDebtService);
+        document.getElementById('snapEmiVal').innerText = "EMI: ₹ " + formatShortIndian(emi) + " / mo";
+
+        document.getElementById('snapEffectiveRent').innerText = "₹ " + formatShortIndian(effectiveAnnualRent);
+        document.getElementById('snapVacancyLoss').innerText = "Vacancy: -₹ " + formatShortIndian(vacancyLoss);
+
+        document.getElementById('snapCocReturn').innerText = cocReturnPct !== null ? cocReturnPct.toFixed(2) + "%" : "N/A";
+        document.getElementById('snapInitialCash').innerText = "Cash Inv: ₹ " + formatShortIndian(initialCashInvested);
+
+        document.getElementById('snapBreakEvenRent').innerText = "₹ " + formatIndian(breakEvenMonthlyRent) + " / mo";
+        document.getElementById('snapRentGap').innerText = (rentGap > 0 ? "Need: +₹ " + formatShortIndian(rentGap) + "/mo" : "Buffer: ₹ " + formatShortIndian(Math.abs(rentGap)) + "/mo");
+
+        document.getElementById('snapMaxVacancy').innerText = breakEvenVacPct >= 0 ? breakEvenVacPct.toFixed(1) + "%" : "No tolerance";
+        document.getElementById('snapLtv').innerText = "LTV: " + ltvPct.toFixed(1) + "%";
+
+        // Waterfall Section
+        document.getElementById('wfGrossRent').innerText = "₹ " + formatIndian(grossAnnualRent);
+        document.getElementById('wfVacancy').innerText = "-₹ " + formatIndian(vacancyLoss);
+        document.getElementById('wfEffectiveRent').innerText = "₹ " + formatIndian(effectiveAnnualRent);
+        document.getElementById('wfExpenses').innerText = "-₹ " + formatIndian(totalOperatingExpenses);
+        document.getElementById('wfNoi').innerText = (noi >= 0 ? "₹ " + formatIndian(noi) : "-₹ " + formatIndian(Math.abs(noi)));
+        document.getElementById('wfDebtService').innerText = "-₹ " + formatIndian(annualDebtService);
+
+        var annCashStr = (annualCashFlow >= 0 ? "₹ " + formatIndian(annualCashFlow) : "-₹ " + formatIndian(Math.abs(annualCashFlow)));
+        document.getElementById('wfAnnualCashFlow').innerText = annCashStr;
+        document.getElementById('wfAnnualCashFlow').style.color = annualCashFlow >= 0 ? '#6EE7B7' : '#FCA5A5';
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        if (noi > 0 && annualCashFlow < 0) {
+            diagTitle.innerText = 'Financing Impact Analysis';
+            rHtml += '<li>⚠️ <strong>Financing Impact:</strong> Property produces positive NOI (₹ ' + formatShortIndian(noi) + '), but loan payments (₹ ' + formatShortIndian(annualDebtService) + ') drive cash flow negative.</li>';
+        } else if (noi < 0) {
+            diagTitle.innerText = 'Operating Deficit Analysis';
+            rHtml += '<li>⚠️ <strong>Operating Deficit:</strong> Annual operating expenses exceed effective rent by ₹ ' + formatShortIndian(Math.abs(noi)) + '.</li>';
+        } else {
+            diagTitle.innerText = 'Positive Performance Analysis';
+            rHtml += '<li>✓ <strong>Positive Cash Flow:</strong> Property generates ₹ ' + formatShortIndian(annualCashFlow) + ' net cash surplus annually.</li>';
+        }
+
+        if (rentGap > 0) {
+            rHtml += '<li>ℹ️ <strong>Break-Even Requirement:</strong> Gross rent must increase by ₹ ' + formatShortIndian(rentGap) + '/mo (to ₹ ' + formatIndian(breakEvenMonthlyRent) + '/mo) to break even.</li>';
+        } else {
+            rHtml += '<li>✓ <strong>Rent Surplus:</strong> Current rent provides a safety buffer of ₹ ' + formatShortIndian(Math.abs(rentGap)) + '/mo above break-even rent.</li>';
+        }
+
+        reasonsEl.innerHTML = rHtml;
+
+        // Projections
+        document.getElementById('projY1').innerText = (monthlyCashFlow >= 0 ? "₹ " + formatIndian(monthlyCashFlow) : "-₹ " + formatIndian(Math.abs(monthlyCashFlow))) + " / mo";
+        document.getElementById('projY5').innerText = (monthlyCashY5 >= 0 ? "₹ " + formatIndian(monthlyCashY5) : "-₹ " + formatIndian(Math.abs(monthlyCashY5))) + " / mo";
+        document.getElementById('projY10').innerText = (monthlyCashY10 >= 0 ? "₹ " + formatIndian(monthlyCashY10) : "-₹ " + formatIndian(Math.abs(monthlyCashY10))) + " / mo";
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
