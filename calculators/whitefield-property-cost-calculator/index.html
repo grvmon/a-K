@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitefield Property Cost Calculator – Calculate Total Buying Cost | acreNkey</title>
+
+    <meta name="description" content="Calculate the true cost of buying a property in Whitefield including stamp duty, registration, GST, brokerage, deposits, builder charges and interiors with acreNkey.">
+    <meta name="keywords" content="whitefield property cost calculator, total home buying cost whitefield, price per sq ft calculator whitefield, stamp duty whitefield bangalore, builder charges whitefield, acrenkey whitefield calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/whitefield-property-cost-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Whitefield Property Cost Calculator | acreNkey">
+    <meta property="og:description" content="Estimate the true cost of buying a property in Whitefield, including stamp duty, registration, GST, brokerage, deposits, project charges and interiors.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/whitefield-property-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Whitefield Property Cost Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate the true cost of buying a property in Whitefield, including stamp duty, registration, GST, brokerage, deposits, project charges and interiors.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Whitefield Property Cost Calculator","description":"Real estate financial tool to evaluate total acquisition and move-in costs for residential properties in Whitefield, Bangalore.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/whitefield-property-cost-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Whitefield Property Cost Calculator","item":"https://acrenkey.com/calculators/whitefield-property-cost-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much extra does it cost to buy an apartment in Whitefield over the quoted price?","acceptedAnswer":{"@type":"Answer","text":"Additional acquisition charges (stamp duty, registration, GST, legal fees, clubhouse, parking, and maintenance deposits) typically add 6% to 15% over the quoted base property price in Whitefield."}},{"@type":"Question","name":"What is the difference between Quoted Price per sq. ft. and Effective Price per sq. ft.?","acceptedAnswer":{"@type":"Answer","text":"Quoted Price per sq. ft. is base property price divided by area. Effective Price per sq. ft. includes all government taxes, builder charges, and registration fees divided by the selected area."}},{"@type":"Question","name":"Are interiors included in the Total Acquisition Cost?","acceptedAnswer":{"@type":"Answer","text":"No. Total Acquisition Cost includes only property purchase price, government taxes, legal fees, and builder deposits. Interior fitout costs are calculated separately under Total Move-in Cost."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.positive { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.breakeven { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.negative { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* 6-Card Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Strengths & Actionable Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Whitefield Property Cost Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Whitefield Property Cost Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate the true cost of buying a property in Whitefield, including stamp duty, registration, GST, brokerage, deposits, project charges and interiors.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property &amp; Financial Inputs</h2>
+                </div>
+
+                <!-- Section 1: Property Details -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Property Details &amp; Quoted Price</div>
+
+                <!-- Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">domain</span>
+                            Quoted Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="1,50,00,000" oninput="onPropPriceInput(this.value)" onchange="onPropPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="2000000" max="150000000" step="1000000" value="15000000" oninput="onPropPriceSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Quoted base property price before taxes &amp; project charges.</div>
+                </div>
+
+                <!-- Property Type & Status -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home_work</span>
+                            Property Type
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="propTypeSelect" class="ak-new-select" onchange="onPropTypeChange(this.value)">
+                                <option value="Apartment" selected>Apartment</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Plot">Plot</option>
+                                <option value="Resale Apartment">Resale Apartment</option>
+                                <option value="Resale Villa">Resale Villa</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">engineering</span>
+                            Property Status
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="propStatusSelect" class="ak-new-select" onchange="onPropStatusChange(this.value)">
+                                <option value="Ready to Move" selected>Ready to Move</option>
+                                <option value="Under Construction">Under Construction</option>
+                                <option value="Resale">Resale</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Area Inputs & Basis -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Saleable Area (Super Built-up)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="saleableAreaInput" class="ak-new-input has-suffix" value="1,600" oninput="onSaleableAreaInput(this.value)" onchange="onSaleableAreaInput(this.value)">
+                            <span class="suffix">sq.ft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">crop_square</span>
+                            Carpet Area
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="carpetAreaInput" class="ak-new-input has-suffix" value="1,200" oninput="onCarpetAreaInput(this.value)" onchange="onCarpetAreaInput(this.value)">
+                            <span class="suffix">sq.ft</span>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper">Usable inner carpet area (Used to check carpet efficiency ratio).</div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">straighten</span>
+                            Price / Sq. Ft. Based On
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="areaBasisSelect" class="ak-new-select" onchange="onAreaBasisChange(this.value)">
+                                <option value="Saleable Area" selected>Saleable Area</option>
+                                <option value="Carpet Area">Carpet Area</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Government & Taxes -->
+                <div class="ak-section-divider-title">2. Government &amp; Tax Charges</div>
+
+                <!-- Stamp Duty Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">description</span>
+                            Stamp Duty Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="stampRateInput" class="ak-new-input has-suffix" value="5.0" oninput="onStampRateInput(this.value)" onchange="onStampRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration Fee Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">how_to_reg</span>
+                            Registration Fee Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="regRateInput" class="ak-new-input has-suffix" value="1.0" oninput="onRegRateInput(this.value)" onchange="onRegRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GST Applicable Toggle -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt</span>
+                            GST Applicable?
+                        </div>
+                        <div style="width: 185px;">
+                            <select id="gstApplicableSelect" class="ak-new-select" onchange="onGstApplicableChange(this.value)">
+                                <option value="No" selected>No (Ready / Resale / OC)</option>
+                                <option value="Yes">Yes (Under Construction)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row" id="gstRateRow" style="display:none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            GST Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="gstRateInput" class="ak-new-input has-suffix" value="5.0" oninput="onGstRateInput(this.value)" onchange="onGstRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Builder, Project & Professional Charges -->
+                <div class="ak-section-divider-title">3. Builder, Project &amp; Professional Charges</div>
+
+                <!-- Legal / Documentation Fees -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Legal / Documentation Fees
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="legalInput" class="ak-new-input has-prefix" value="25,000" oninput="onLegalInput(this.value)" onchange="onLegalInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brokerage Amount -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            Brokerage Amount
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="brokerageInput" class="ak-new-input has-prefix" value="0" oninput="onBrokerageInput(this.value)" onchange="onBrokerageInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance Deposit -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Maintenance Deposit (1-2 Yrs Upfront)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="maintDepInput" class="ak-new-input has-prefix" value="0" oninput="onMaintDepInput(this.value)" onchange="onMaintDepInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corpus / Sinking Fund -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Corpus / Sinking Fund
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="corpusInput" class="ak-new-input has-prefix" value="0" oninput="onCorpusInput(this.value)" onchange="onCorpusInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parking Charges -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">directions_car</span>
+                            Covered Parking Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="parkingInput" class="ak-new-input has-prefix" value="0" oninput="onParkingInput(this.value)" onchange="onParkingInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clubhouse / Amenities -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">pool</span>
+                            Clubhouse &amp; Amenities Fee
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="clubhouseInput" class="ak-new-input has-prefix" value="0" oninput="onClubhouseInput(this.value)" onchange="onClubhouseInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Builder Charges -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            Other Builder / Admin Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherChargesInput" class="ak-new-input has-prefix" value="0" oninput="onOtherChargesInput(this.value)" onchange="onOtherChargesInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Move-in & Interiors -->
+                <div class="ak-section-divider-title">4. Interior Budget &amp; Move-in</div>
+
+                <!-- Interior Budget -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">countertops</span>
+                            Interior Fitout &amp; Woodwork Budget
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="interiorInput" class="ak-new-input has-prefix" value="10,00,000" oninput="onInteriorInput(this.value)" onchange="onInteriorInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="interiorSlider" class="ak-new-slider" min="0" max="5000000" step="100000" value="1000000" oninput="onInteriorSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Estimated interior woodwork, modular kitchen, electricals &amp; move-in costs.</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Total Move-in Cost</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Total Acquisition Cost</div>
+                    <div class="ak-verdict-badge breakeven" id="resVerdictBadge">+6.17% OVER PRICE</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resTotalAcquisitionVal">₹ 1.59 Cr</div>
+                <div class="ak-emi-subtext" id="resSubtext">Total Move-in Cost (with Interiors): <strong>₹ 1.69 Cr</strong>. Effective Rate: <strong>₹ 9,953 / sq.ft</strong> (vs Quoted ₹ 9,375 / sq.ft).</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">NOTE:</strong>
+                    <div id="redFlagDesc">Carpet area exceeds saleable area. Please check area inputs.</div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Acquisition Cost</div>
+                        <div class="ak-snap-val" style="color:#FFF;" id="snapTotalAcquisition">₹ 1.59 Cr</div>
+                        <div class="ak-snap-sub" id="snapAddCostPct">Add Cost: +6.17%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Move-in Cost</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapTotalMoveIn">₹ 1.69 Cr</div>
+                        <div class="ak-snap-sub" id="snapInteriorVal">Interiors: ₹ 10.0 Lakh</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Price / Sq. Ft.</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapEffectiveRate">₹ 9,953 / sq.ft</div>
+                        <div class="ak-snap-sub" id="snapRateIncrease">Quoted: ₹ 9,375 / sq.ft</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Stamp Duty &amp; Reg Fee</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapGovtCharges">₹ 9.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapGovtSub">Stamp 5% + Reg 1%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">GST / Applicable Taxes</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapGstVal">Not Included</div>
+                        <div class="ak-snap-sub" id="snapGstSub">Ready / Resale</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Carpet Efficiency</div>
+                        <div class="ak-snap-val" style="color:#FDE68A;" id="snapCarpetEff">75.0%</div>
+                        <div class="ak-snap-sub" id="snapCarpetSub">1,200 / 1,600 sq.ft</div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Itemized Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Step-by-Step Acquisition Waterfall
+                    </div>
+                    
+                    <div class="ak-waterfall-step">
+                        <span>1. Quoted Base Property Price</span>
+                        <strong id="cardPropPrice">₹ 1,50,00,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>2. Stamp Duty &amp; Registration (6.0%)</span>
+                        <span id="cardGovtCharges" style="color:#60A5FA;">+₹ 9,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>3. GST / Taxes</span>
+                        <span id="cardGst" style="color:#6EE7B7;">Not Included</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>4. Legal, Brokerage &amp; Admin Fees</span>
+                        <span id="cardLegal">+₹ 25,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>5. Deposits, Parking &amp; Project Charges</span>
+                        <span id="cardProjectCharges">+₹ 0</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>6. Total Property Acquisition Cost</span>
+                        <strong id="cardTotalAcquisition" style="color:#E5C178;">₹ 1,59,25,000</strong>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>7. Interior Fitout &amp; Woodwork</span>
+                        <span id="cardInteriors" style="color:#A7F3D0;">+₹ 10,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="font-size:0.95rem; border-top:1px solid #E5C178; margin-top:0.3rem; padding-top:0.5rem;">
+                        <span>Total Move-in Ready Budget</span>
+                        <strong id="cardTotalMoveIn" style="color:#A7F3D0;">₹ 1,69,25,000</strong>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="diagTitle">Whitefield Cost Analysis &amp; Insights</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>ℹ️ <strong>Effective Rate Impact:</strong> Additional costs add +₹ 578 / sq.ft (+6.17%) over the quoted base price of ₹ 9,375 / sq.ft.</li>
+                        <li>✓ <strong>Moderate Carpet Efficiency:</strong> Carpet-to-saleable area ratio is 75.0% (1,200 sq.ft usable carpet).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Always VET Whitefield Builder Cost Sheets:</strong> Quoted price per sq. ft. often excludes car parking (₹3L–₹5L), clubhouse membership (₹2L–₹4L), 1-2 years advance maintenance deposits, and legal fees. Comparing all-in acquisition costs ensures accurate project comparison.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator provides an estimate based on the assumptions entered. Actual property acquisition costs may vary by project, builder, property type, transaction structure and applicable government rules. GST and other taxes may or may not apply depending on the transaction. Builder-specific charges should always be verified against the latest cost sheet. This calculator is for informational purposes and does not constitute legal, tax or financial advice.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>What Does It Really Cost to Buy a Home in Whitefield?</h2>
+        <p>The quoted apartment price in Whitefield micro-markets (EPIP Zone, ITPL Main Road, Varthur Road, Hope Farm) is only the base starting point. Government taxes, builder deposits, and interior fitouts materially expand your required capital budget.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Layer 1</div>
+                <div class="ak-step-title">Quoted Base Price</div>
+                <div class="ak-step-desc">The basic rate per sq. ft. multiplied by super built-up saleable area.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Layer 2</div>
+                <div class="ak-step-title">Government &amp; Tax Charges</div>
+                <div class="ak-step-desc">Karnataka Stamp Duty (~5%), Registration Fee (~1%), and GST (5% for under-construction).</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Layer 3</div>
+                <div class="ak-step-title">Project &amp; Builder Charges</div>
+                <div class="ak-step-desc">Covered parking, clubhouse membership, sinking fund corpus, legal fees, and advance maintenance.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Layer 4</div>
+                <div class="ak-step-title">Interior &amp; Move-in Budget</div>
+                <div class="ak-step-desc">Modular kitchen, wardrobes, lighting, false ceiling, and electrical appliances needed to make the property liveable.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Whitefield Project Cost Checklist Before Booking</h2>
+        <div style="background:#FFF; border:1px solid #EAEFF5; border-radius:12px; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; color:var(--deep-slate); line-height:1.7;">
+                <li>✓ Demand an itemized all-in cost sheet from the builder before paying any booking token.</li>
+                <li>✓ Verify whether parking (covered basement/open) is included in the base price or billed separately.</li>
+                <li>✓ Confirm if GST is applicable and check whether the property has received an Occupancy Certificate (OC).</li>
+                <li>✓ Check carpet area vs saleable area ratio to verify actual usable living space.</li>
+                <li>✓ Verify current Karnataka stamp duty and Kaveri registration fees on <a href="https://kaverionline.karnataka.gov.in" target="_blank" rel="noopener noreferrer" style="color:var(--refined-brass); font-weight:700; text-decoration:underline;">Kaveri Online Services Portal</a>.</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How much extra does it cost to buy an apartment in Whitefield over the quoted price?</h3>
+                <p>Additional acquisition charges (stamp duty, registration, GST, legal fees, clubhouse, parking, and maintenance deposits) typically add 6% to 15% over the quoted base property price in Whitefield.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is the difference between Quoted Price per sq. ft. and Effective Price per sq. ft.?</h3>
+                <p>Quoted Price per sq. ft. is base property price divided by area. Effective Price per sq. ft. includes all government taxes, builder charges, and registration fees divided by the selected area.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Are interiors included in the Total Acquisition Cost?</h3>
+                <p>No. Total Acquisition Cost includes only property purchase price, government taxes, legal fees, and builder deposits. Interior fitout costs are calculated separately under Total Move-in Cost.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/bangalore-property-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">location_city</span>
+                </div>
+                <div class="ak-fcard-title">Bangalore Property Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate stamp duty, registration fees, GST &amp; legal charges in Bangalore.</div>
+            </a>
+
+            <a href="/calculators/property-cash-flow-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>
+                </div>
+                <div class="ak-fcard-title">Property Cash Flow Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate rental cash flow after vacancy, maintenance, taxes &amp; loan payments.</div>
+            </a>
+
+            <a href="/calculators/break-even-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">hourglass_bottom</span>
+                </div>
+                <div class="ak-fcard-title">Property Break-even Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate cash flow &amp; economic appreciation break-even periods.</div>
+            </a>
+
+            <a href="/calculators/property-investment-score-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate real estate investment potential based on yield, ROI, CAGR &amp; holding period.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+
+            <a href="/calculators/home-buying-readiness-score/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Home Buying Readiness Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate savings, down payment, emergency fund, and credit history before buying.</div>
+            </a>
+
+            <a href="/calculators/property-comparison-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Property Comparison</div>
+                </div>
+                <div class="ak-fcard-desc">Compare 2 or 3 properties side-by-side across price, quality, location and risk.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    // Centralized Config Architecture
+    var WHITEFIELD_PROPERTY_COST_CONFIG = {
+        stampDutyRate: 5.0,
+        registrationRate: 1.0,
+        registrationFeeCap: 0,
+        cessRate: 0.0,
+        gstRate: 5.0,
+        legalFees: 25000,
+        maintDeposit: 0,
+        corpus: 0,
+        parking: 0,
+        clubhouse: 0,
+        otherCharges: 0,
+        interiorBudget: 1000000
+    };
+
+    var state = {
+        propPrice: 15000000,
+        propType: 'Apartment',
+        propStatus: 'Ready to Move',
+        saleableArea: 1600,
+        carpetArea: 1200,
+        areaBasis: 'Saleable Area',
+        stampRate: WHITEFIELD_PROPERTY_COST_CONFIG.stampDutyRate,
+        regRate: WHITEFIELD_PROPERTY_COST_CONFIG.registrationRate,
+        regCap: WHITEFIELD_PROPERTY_COST_CONFIG.registrationFeeCap,
+        cessRate: WHITEFIELD_PROPERTY_COST_CONFIG.cessRate,
+        gstApplicable: 'No',
+        gstRate: WHITEFIELD_PROPERTY_COST_CONFIG.gstRate,
+        legal: WHITEFIELD_PROPERTY_COST_CONFIG.legalFees,
+        brokerage: 0,
+        maintDep: WHITEFIELD_PROPERTY_COST_CONFIG.maintDeposit,
+        corpus: WHITEFIELD_PROPERTY_COST_CONFIG.corpus,
+        parking: WHITEFIELD_PROPERTY_COST_CONFIG.parking,
+        clubhouse: WHITEFIELD_PROPERTY_COST_CONFIG.clubhouse,
+        otherCharges: WHITEFIELD_PROPERTY_COST_CONFIG.otherCharges,
+        interiors: WHITEFIELD_PROPERTY_COST_CONFIG.interiorBudget
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onPropPriceInput(val) { state.propPrice = parseRupees(val); syncUI(); }
+    function onPropPriceSlider(val) { state.propPrice = parseFloat(val); syncUI(); }
+
+    function onPropTypeChange(val) { state.propType = val; syncUI(); }
+    function onPropStatusChange(val) {
+        state.propStatus = val;
+        if (val === 'Under Construction') {
+            state.gstApplicable = 'Yes';
+            document.getElementById('gstApplicableSelect').value = 'Yes';
+        } else {
+            state.gstApplicable = 'No';
+            document.getElementById('gstApplicableSelect').value = 'No';
+        }
+        syncUI();
+    }
+
+    function onSaleableAreaInput(val) { state.saleableArea = parseRupees(val); syncUI(); }
+    function onCarpetAreaInput(val) { state.carpetArea = parseRupees(val); syncUI(); }
+    function onAreaBasisChange(val) { state.areaBasis = val; syncUI(); }
+
+    function onStampRateInput(val) { state.stampRate = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onRegRateInput(val) { state.regRate = Math.min(10, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+
+    function onGstApplicableChange(val) { state.gstApplicable = val; syncUI(); }
+    function onGstRateInput(val) { state.gstRate = Math.min(28, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+
+    function onLegalInput(val) { state.legal = parseRupees(val); syncUI(); }
+    function onBrokerageInput(val) { state.brokerage = parseRupees(val); syncUI(); }
+    function onMaintDepInput(val) { state.maintDep = parseRupees(val); syncUI(); }
+    function onCorpusInput(val) { state.corpus = parseRupees(val); syncUI(); }
+    function onParkingInput(val) { state.parking = parseRupees(val); syncUI(); }
+    function onClubhouseInput(val) { state.clubhouse = parseRupees(val); syncUI(); }
+    function onOtherChargesInput(val) { state.otherCharges = parseRupees(val); syncUI(); }
+
+    function onInteriorInput(val) { state.interiors = parseRupees(val); syncUI(); }
+    function onInteriorSlider(val) { state.interiors = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var price = state.propPrice;
+        var sArea = state.saleableArea;
+        var cArea = state.carpetArea;
+
+        var stampDuty = Math.round(price * (state.stampRate / 100.0));
+        var regFeeRaw = price * (state.regRate / 100.0);
+        var regFee = (state.regCap > 0 && regFeeRaw > state.regCap) ? state.regCap : Math.round(regFeeRaw);
+        var cess = Math.round(stampDuty * (state.cessRate / 100.0));
+        var totalGovtCharges = stampDuty + regFee + cess;
+
+        var isGst = state.gstApplicable === 'Yes';
+        var gstVal = isGst ? Math.round(price * (state.gstRate / 100.0)) : 0;
+
+        var projectCharges = state.maintDep + state.corpus + state.parking + state.clubhouse + state.otherCharges;
+        var professionalCharges = state.legal + state.brokerage;
+
+        var totalAdditionalCosts = totalGovtCharges + gstVal + projectCharges + professionalCharges;
+        var totalAcquisitionCost = price + totalAdditionalCosts;
+        var totalMoveInCost = totalAcquisitionCost + state.interiors;
+        var additionalCostPct = price > 0 ? (totalAdditionalCosts / price) * 100.0 : 0;
+
+        // Area & Rate Calculations
+        var selectedArea = (state.areaBasis === 'Carpet Area' && cArea > 0) ? cArea : sArea;
+        var quotedRatePerSqFt = selectedArea > 0 ? Math.round(price / selectedArea) : 0;
+        var effectiveRatePerSqFt = selectedArea > 0 ? Math.round(totalAcquisitionCost / selectedArea) : 0;
+        var rateIncreasePerSqFt = effectiveRatePerSqFt - quotedRatePerSqFt;
+
+        var carpetEffPct = (sArea > 0 && cArea > 0) ? ((cArea / sArea) * 100.0) : null;
+        var isCarpetExceeds = (sArea > 0 && cArea > 0 && cArea > sArea);
+
+        // Control Displays & Values
+        document.getElementById('propPriceInput').value = formatIndian(price);
+        document.getElementById('propPriceSlider').value = price;
+        updateSliderFill('propPriceSlider');
+
+        document.getElementById('saleableAreaInput').value = formatIndian(sArea);
+        document.getElementById('carpetAreaInput').value = formatIndian(cArea);
+
+        document.getElementById('stampRateInput').value = state.stampRate.toFixed(1);
+        document.getElementById('regRateInput').value = state.regRate.toFixed(1);
+
+        document.getElementById('gstRateRow').style.display = isGst ? 'block' : 'none';
+        document.getElementById('gstRateInput').value = state.gstRate.toFixed(1);
+
+        document.getElementById('legalInput').value = formatIndian(state.legal);
+        document.getElementById('brokerageInput').value = formatIndian(state.brokerage);
+        document.getElementById('maintDepInput').value = formatIndian(state.maintDep);
+        document.getElementById('corpusInput').value = formatIndian(state.corpus);
+        document.getElementById('parkingInput').value = formatIndian(state.parking);
+        document.getElementById('clubhouseInput').value = formatIndian(state.clubhouse);
+        document.getElementById('otherChargesInput').value = formatIndian(state.otherCharges);
+
+        document.getElementById('interiorInput').value = formatIndian(state.interiors);
+        document.getElementById('interiorSlider').value = state.interiors;
+        updateSliderFill('interiorSlider');
+
+        // Dashboard Hero Outputs
+        document.getElementById('resTotalAcquisitionVal').innerText = "₹ " + formatShortIndian(totalAcquisitionCost);
+        document.getElementById('resVerdictBadge').innerText = "+" + additionalCostPct.toFixed(2) + "% OVER PRICE";
+
+        document.getElementById('resSubtext').innerHTML = 'Total Move-in Cost (with Interiors): <strong>₹ ' + formatShortIndian(totalMoveInCost) + '</strong>. Effective Rate: <strong>₹ ' + formatIndian(effectiveRatePerSqFt) + ' / sq.ft</strong> (vs Quoted ₹ ' + formatIndian(quotedRatePerSqFt) + ' / sq.ft).';
+
+        // Red Flag Warning
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfDesc = document.getElementById('redFlagDesc');
+        if (isCarpetExceeds) {
+            redFlagBox.style.display = 'block';
+            rfDesc.innerText = 'Carpet area (' + formatIndian(cArea) + ' sq.ft) exceeds saleable area (' + formatIndian(sArea) + ' sq.ft). Please check inputs.';
+        } else {
+            redFlagBox.style.display = 'none';
+        }
+
+        // Snapshot Grid Cards
+        document.getElementById('snapTotalAcquisition').innerText = "₹ " + formatShortIndian(totalAcquisitionCost);
+        document.getElementById('snapAddCostPct').innerText = "Add Cost: +" + additionalCostPct.toFixed(2) + "%";
+
+        document.getElementById('snapTotalMoveIn').innerText = "₹ " + formatShortIndian(totalMoveInCost);
+        document.getElementById('snapInteriorVal').innerText = "Interiors: ₹ " + formatShortIndian(state.interiors);
+
+        document.getElementById('snapEffectiveRate').innerText = "₹ " + formatIndian(effectiveRatePerSqFt) + " / sq.ft";
+        document.getElementById('snapRateIncrease').innerText = "Quoted: ₹ " + formatIndian(quotedRatePerSqFt) + " / sq.ft";
+
+        document.getElementById('snapGovtCharges').innerText = "₹ " + formatShortIndian(totalGovtCharges);
+        document.getElementById('snapGovtSub').innerText = "Stamp 5% + Reg 1%";
+
+        document.getElementById('snapGstVal').innerText = isGst ? "₹ " + formatShortIndian(gstVal) : "Not Included";
+        document.getElementById('snapGstSub').innerText = "Status: " + state.propStatus;
+
+        document.getElementById('snapCarpetEff').innerText = carpetEffPct !== null ? carpetEffPct.toFixed(1) + "%" : "N/A";
+        document.getElementById('snapCarpetSub').innerText = formatIndian(cArea) + " / " + formatIndian(sArea) + " sq.ft";
+
+        // Waterfall Card
+        document.getElementById('cardPropPrice').innerText = "₹ " + formatIndian(price);
+        document.getElementById('cardGovtCharges').innerText = "+₹ " + formatIndian(totalGovtCharges);
+        document.getElementById('cardGst').innerText = isGst ? "+₹ " + formatIndian(gstVal) : "Not Included";
+        document.getElementById('cardLegal').innerText = "+₹ " + formatIndian(professionalCharges);
+        document.getElementById('cardProjectCharges').innerText = "+₹ " + formatIndian(projectCharges);
+        document.getElementById('cardTotalAcquisition').innerText = "₹ " + formatIndian(totalAcquisitionCost);
+        document.getElementById('cardInteriors').innerText = "+₹ " + formatIndian(state.interiors);
+        document.getElementById('cardTotalMoveIn').innerText = "₹ " + formatIndian(totalMoveInCost);
+
+        // Diagnostic Insights
+        var diagTitle = document.getElementById('diagTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        rHtml += '<li>ℹ️ <strong>Effective Rate Impact:</strong> Additional costs add +₹ ' + formatIndian(rateIncreasePerSqFt) + ' / sq.ft (+' + additionalCostPct.toFixed(2) + '%) over quoted base price of ₹ ' + formatIndian(quotedRatePerSqFt) + ' / sq.ft.</li>';
+
+        if (carpetEffPct !== null) {
+            if (carpetEffPct < 65.0) {
+                rHtml += '<li>⚠️ <strong>Lower Carpet Efficiency:</strong> Usable carpet efficiency is ' + carpetEffPct.toFixed(1) + '%. A significant portion of saleable area is non-usable loading.</li>';
+            } else if (carpetEffPct <= 75.0) {
+                rHtml += '<li>✓ <strong>Moderate Carpet Efficiency:</strong> Usable carpet ratio is ' + carpetEffPct.toFixed(1) + '% (' + formatIndian(cArea) + ' sq.ft living area).</li>';
+            } else {
+                rHtml += '<li>✓ <strong>High Carpet Efficiency:</strong> Usable carpet ratio is ' + carpetEffPct.toFixed(1) + '% relative to saleable area.</li>';
+            }
+        }
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
