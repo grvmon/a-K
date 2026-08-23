@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Home Affordability Calculator – How Much Luxury Home Can You Afford? | acreNkey</title>
+
+    <meta name="description" content="Calculate the luxury home price you can comfortably afford based on income, existing EMIs, savings, loan capacity, down payment and additional property costs with acreNkey.">
+    <meta name="keywords" content="luxury home affordability calculator, premium property affordability, maximum luxury house price, luxury real estate calculator, luxury home loan capacity, acrenkey luxury calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/luxury-home-affordability-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luxury Home Affordability Calculator | acreNkey">
+    <meta property="og:description" content="Calculate the luxury home price you can comfortably afford based on income, existing EMIs, savings, loan capacity, down payment and additional property costs.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/luxury-home-affordability-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luxury Home Affordability Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate the luxury home price you can comfortably afford based on income, existing EMIs, savings, loan capacity, down payment and additional property costs.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Luxury Home Affordability Calculator","description":"Financial decision tool to evaluate maximum luxury property affordability based on monthly income, liquid reserves, LTV limits, and additional luxury acquisition costs.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/luxury-home-affordability-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Luxury Home Affordability Calculator","item":"https://acrenkey.com/calculators/luxury-home-affordability-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is Luxury Home Affordability different from standard home affordability?","acceptedAnswer":{"@type":"Answer","text":"Luxury home affordability factors in substantial additional acquisition costs—such as stamp duty, registration, interior design, club memberships, and maintenance deposits—alongside income and liquid post-purchase cash reserves."}},{"@type":"Question","name":"How does the calculator determine maximum affordable property price?","acceptedAnswer":{"@type":"Answer","text":"The calculator evaluates both your Income-Based Loan Limit and your Cash/Liquidity Capacity. Your maximum affordable property price is constrained by whichever limit is lower."}},{"@type":"Question","name":"What do the Luxury Affordability Classifications mean?","acceptedAnswer":{"@type":"Answer","text":"Scores of 80-100 indicate AFFORDABLE, 60-79 indicate STRETCH, and 0-59 indicate NOT AFFORDABLE based on conservative debt and liquidity buffers."}},{"@type":"Question","name":"What is the default Maximum EMI-to-Income ratio for luxury homes?","acceptedAnswer":{"@type":"Answer","text":"The calculator defaults to a conservative 40% EMI-to-income ratio (rather than 50%) to ensure high-net-worth buyers preserve significant disposable cash flow post-purchase."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-input-helper { font-size: 0.75rem; color: var(--muted-slate); margin-top: 0.3rem; line-height: 1.4; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.affordable { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.stretch { background: #E5C178; color: #182A3D; }
+    .ak-verdict-badge.notaffordable { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Red Flag Warning Box */
+    .ak-red-flag-box {
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        color: #FCA5A5;
+        line-height: 1.45;
+        display: none;
+    }
+
+    /* Financial & Loan Snapshot 4-Card Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* 4 Factors Scores Progress Section */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.55rem;
+    }
+    .ak-factor-row:last-child { margin-bottom: 0; }
+
+    .ak-factor-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+    }
+
+    .ak-factor-bar-bg {
+        height: 6px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .ak-factor-bar-fill {
+        height: 100%;
+        background: var(--refined-brass);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+    }
+
+    /* Strengths & Actionable Gaps Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Luxury Home Affordability Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Luxury Home Affordability Calculator</h1>
+                <p class="ak-calc-sub-text">Find the luxury home price you can comfortably afford based on your income, liquidity, debt obligations, down payment and additional acquisition costs.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Luxury Financial Inputs</h2>
+                </div>
+
+                <!-- Section 1: Income & Existing Debt -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Income &amp; Debt Obligations</div>
+
+                <!-- Monthly Net Income -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Monthly Net Income
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="incomeInput" class="ak-new-input has-prefix" value="5,00,000" oninput="onIncomeInput(this.value)" onchange="onIncomeInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="incomeSlider" class="ak-new-slider" min="100000" max="5000000" step="25000" value="500000" oninput="onIncomeSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Monthly take-home income available to support household &amp; loan obligations.</div>
+                </div>
+
+                <!-- Existing Monthly EMIs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">credit_score</span>
+                            Existing Monthly EMIs
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="existingEmiInput" class="ak-new-input has-prefix" value="50,000" oninput="onExistingEmiInput(this.value)" onchange="onExistingEmiInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="existingEmiSlider" class="ak-new-slider" min="0" max="1000000" step="10000" value="50000" oninput="onExistingEmiSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Existing home loans, car loans, personal loans &amp; recurring EMIs.</div>
+                </div>
+
+                <!-- Section 2: Savings & Liquidity -->
+                <div class="ak-section-divider-title">2. Savings &amp; Available Liquidity</div>
+
+                <!-- Available Savings / Liquid Assets -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Available Savings / Liquid Assets
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="savingsInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="onSavingsInput(this.value)" onchange="onSavingsInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="savingsSlider" class="ak-new-slider" min="1000000" max="200000000" step="1000000" value="10000000" oninput="onSavingsSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Liquid funds available for property purchase. Exclude illiquid assets.</div>
+                </div>
+
+                <!-- Down Payment Intended -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            Down Payment Intended
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="downPaymentInput" class="ak-new-input has-prefix" value="60,00,000" oninput="onDownPaymentInput(this.value)" onchange="onDownPaymentInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="downPaymentSlider" class="ak-new-slider" min="0" max="150000000" step="1000000" value="6000000" oninput="onDownPaymentSlider(this.value)">
+                    </div>
+                    <div class="ak-input-helper">Amount you intend to pay upfront toward the property price.</div>
+                    <div id="downValidationMsg" style="font-size:0.75rem; color:#F87171; font-weight:700; margin-top:0.3rem; display:none;">
+                        ⚠️ Down payment cannot exceed target property price.
+                    </div>
+                </div>
+
+                <!-- Section 3: Target Property & Loan Structuring -->
+                <div class="ak-section-divider-title">3. Target Property &amp; Loan Structuring</div>
+
+                <!-- Target Luxury Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">domain</span>
+                            Target Luxury Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="3,00,00,000" oninput="onPropPriceInput(this.value)" onchange="onPropPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="5000000" max="300000000" step="2500000" value="30000000" oninput="onPropPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Maximum Assumed LTV % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">pie_chart</span>
+                            Maximum Assumed Loan-to-Value (LTV)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="75" oninput="onLtvInput(this.value)" onchange="onLtvInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">50%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="ltvSlider" class="ak-new-slider" min="50" max="90" step="1" value="75" oninput="onLtvSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">90%</span>
+                    </div>
+                    <div class="ak-input-helper">Maximum assumed loan percentage of the property's value.</div>
+                </div>
+
+                <!-- Interest Rate & Tenure -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Interest Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="rateInput" class="ak-new-input has-suffix" value="8.50" oninput="onRateInput(this.value)" onchange="onRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">5%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rateSlider" class="ak-new-slider" min="5.0" max="15.0" step="0.1" value="8.5" oninput="onRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            Loan Tenure
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tenureInput" class="ak-new-input has-suffix" value="20" oninput="onTenureInput(this.value)" onchange="onTenureInput(this.value)">
+                            <span class="suffix">Yrs</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 yr</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="tenureSlider" class="ak-new-slider" min="1" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Section 4: Safety & Luxury Cost Factors -->
+                <div class="ak-section-divider-title">4. Safety &amp; Luxury Acquisition Costs</div>
+
+                <!-- Max EMI Ratio Limit -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Maximum Target EMI Ratio
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="maxEmiRatioInput" class="ak-new-input has-suffix" value="40" oninput="onMaxEmiRatioInput(this.value)" onchange="onMaxEmiRatioInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">20%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="maxEmiRatioSlider" class="ak-new-slider" min="20" max="60" step="1" value="40" oninput="onMaxEmiRatioSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">60%</span>
+                    </div>
+                    <div class="ak-input-helper">Maximum share of net monthly income comfortable for total EMIs (Default: 40%).</div>
+                </div>
+
+                <!-- Additional Acquisition Costs Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            Estimated Additional Acquisition Costs
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="addCostRateInput" class="ak-new-input has-suffix" value="8" oninput="onAddCostRateInput(this.value)" onchange="onAddCostRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="addCostRateSlider" class="ak-new-slider" min="0" max="20" step="1" value="8" oninput="onAddCostRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">20%</span>
+                    </div>
+                    <div class="ak-input-helper">Taxes, registration, brokerage, interiors, club membership &amp; deposits.</div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Luxury Affordability</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Max Affordable Luxury Property</div>
+                    <div class="ak-verdict-badge stretch" id="resVerdictBadge">STRETCH</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resMaxPriceVal">₹ 2.85 Cr</div>
+                <div class="ak-emi-subtext" id="resSubtext">Target Property Price (₹ 3.00 Cr) is ₹ 15.0 Lakh above your comfortable affordability limit under current income &amp; liquidity buffers.</div>
+
+                <!-- Red Flag Warning Box -->
+                <div class="ak-red-flag-box" id="redFlagBox">
+                    <strong id="redFlagTitle">WARNING:</strong>
+                    <div id="redFlagDesc">Affordability constraint warning.</div>
+                </div>
+
+                <!-- Financial & Loan Snapshot 4-Card Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Income Loan Capacity</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapIncomePrice">₹ 2.85 Cr</div>
+                        <div class="ak-snap-sub" id="snapMaxLoan">Max Loan: ₹ 2.14 Cr</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Cash / Liquidity Capacity</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapCashPrice">₹ 3.03 Cr</div>
+                        <div class="ak-snap-sub" id="snapAvailSav">Savings: ₹ 1.00 Cr</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Acquisition Cost</div>
+                        <div class="ak-snap-val" style="color:#60A5FA;" id="snapTotalAcq">₹ 3.24 Cr</div>
+                        <div class="ak-snap-sub" id="snapAddCost">Addl Costs: ₹ 24.0 Lakh</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Post-Purchase Liquidity</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapRemLiquidity">₹ 1.00 Lakh</div>
+                        <div class="ak-snap-sub" id="snapEmiBurden">EMI: ₹ 2.13L / mo</div>
+                    </div>
+                </div>
+
+                <!-- 4 Factor Score Progress Section -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Luxury Affordability Diagnostics (0=Low, 100=High)
+                    </div>
+                    
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>1. EMI Affordability (35%)</span>
+                            <span id="fScoreEmi">80 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarEmi" style="width: 80%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>2. Post-Purchase Liquidity (25%)</span>
+                            <span id="fScoreLiq">2 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarLiq" style="width: 2%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>3. Existing Debt Capacity (20%)</span>
+                            <span id="fScoreDebt">100 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarDebt" style="width: 100%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>4. Down Payment Capacity (20%)</span>
+                            <span id="fScoreDown">100 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarDown" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Main Binding Constraint & Dynamic Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title" id="constraintTitle">Main Affordability Constraint</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>⚠️ <strong>Primary Constraint:</strong> Income &amp; EMI capacity limits your property price to ₹ 2.85 Cr.</li>
+                        <li>ℹ️ <strong>Liquidity Warning:</strong> Upfront cash requirement (₹ 99.0 Lakh) leaves only ₹ 1.00 Lakh liquid reserve.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Loan Eligibility ≠ Luxury Affordability:</strong> A bank may approve a mortgage based on debt-to-income caps. However, true luxury affordability requires funding taxes, stamp duty, interiors, and maintenance deposits while retaining a comfortable liquid safety reserve post-purchase.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                This calculator evaluates luxury property affordability based on user-entered income, savings, LTV assumptions, and estimated acquisition cost rates. It does not constitute a guaranteed loan pre-approval or formal financial advice. Always consult an independent financial advisor before committing to a major real estate acquisition.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>Why Luxury Home Affordability Is Different</h2>
+        <p>Acquiring a luxury home involves financial commitments beyond the base property cost. Additional costs like stamp duty, registration fees, interiors, parking, club memberships, and maintenance deposits require substantial upfront liquid reserves.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 1</div>
+                <div class="ak-step-title">Income &amp; EMI Limit</div>
+                <div class="ak-step-desc">Calculates your maximum monthly EMI capacity after existing debt commitments using a conservative 40% income cap.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 2</div>
+                <div class="ak-step-title">Total Acquisition Cost</div>
+                <div class="ak-step-desc">Adds estimated taxes, registration, brokerage, interiors, and developer deposits (typically 8%) to the base property price.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 3</div>
+                <div class="ak-step-title">Cash &amp; Liquidity Buffer</div>
+                <div class="ak-step-desc">Verifies that liquid savings cover the required down payment and additional costs without draining emergency reserves.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 4</div>
+                <div class="ak-step-title">Binding Constraint Check</div>
+                <div class="ak-step-desc">Identifies whether monthly income or upfront cash reserves are the main limiting factor on your maximum property price.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How is Luxury Home Affordability different from standard home affordability?</h3>
+                <p>Luxury home affordability factors in substantial additional acquisition costs—such as stamp duty, registration, interior design, club memberships, and maintenance deposits—alongside income and liquid post-purchase cash reserves.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How does the calculator determine maximum affordable property price?</h3>
+                <p>The calculator evaluates both your Income-Based Loan Limit and your Cash/Liquidity Capacity. Your maximum affordable property price is constrained by whichever limit is lower.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What do the Luxury Affordability Classifications mean?</h3>
+                <p>Scores of 80-100 indicate AFFORDABLE, 60-79 indicate STRETCH, and 0-59 indicate NOT AFFORDABLE based on conservative debt and liquidity buffers.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is the default Maximum EMI-to-Income ratio for luxury homes?</h3>
+                <p>The calculator defaults to a conservative 40% EMI-to-income ratio (rather than 50%) to ensure high-net-worth buyers preserve significant disposable cash flow post-purchase.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-buying-readiness-score/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">fact_check</span>
+                </div>
+                <div class="ak-fcard-title">Home Buying Readiness Score</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate savings, down payment, emergency fund, and credit history before buying.</div>
+            </a>
+
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/property-comparison-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">compare_arrows</span>
+                </div>
+                <div class="ak-fcard-title">Property Comparison</div>
+                </div>
+                <div class="ak-fcard-desc">Compare 2 or 3 properties side-by-side across price, quality, location and risk.</div>
+            </a>
+
+            <a href="/calculators/property-risk-assessment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">warning</span>
+                </div>
+                <div class="ak-fcard-title">Property Risk Assessment</div>
+                </div>
+                <div class="ak-fcard-desc">Assess financial, leverage, investment, project, legal and builder risks before buying.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        income: 500000,
+        existingEmi: 50000,
+        savings: 10000000,
+        downPayment: 6000000,
+        targetPrice: 30000000,
+        ltv: 75.0,
+        rate: 8.5,
+        tenure: 20,
+        maxEmiRatio: 40.0,
+        addCostRate: 8.0
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + ' Lakh';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onIncomeInput(val) { state.income = parseRupees(val); syncUI(); }
+    function onIncomeSlider(val) { state.income = parseFloat(val); syncUI(); }
+
+    function onExistingEmiInput(val) { state.existingEmi = parseRupees(val); syncUI(); }
+    function onExistingEmiSlider(val) { state.existingEmi = parseFloat(val); syncUI(); }
+
+    function onSavingsInput(val) { state.savings = parseRupees(val); syncUI(); }
+    function onSavingsSlider(val) { state.savings = parseFloat(val); syncUI(); }
+
+    function onDownPaymentInput(val) { state.downPayment = parseRupees(val); syncUI(); }
+    function onDownPaymentSlider(val) { state.downPayment = parseFloat(val); syncUI(); }
+
+    function onPropPriceInput(val) { state.targetPrice = parseRupees(val); syncUI(); }
+    function onPropPriceSlider(val) { state.targetPrice = parseFloat(val); syncUI(); }
+
+    function onLtvInput(val) { state.ltv = Math.min(100, Math.max(10, parseFloat(val.replace('%',''))||75)); syncUI(); }
+    function onLtvSlider(val) { state.ltv = parseFloat(val); syncUI(); }
+
+    function onRateInput(val) { state.rate = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onRateSlider(val) { state.rate = parseFloat(val); syncUI(); }
+
+    function onTenureInput(val) { state.tenure = Math.min(30, Math.max(1, parseInt(val)||20)); syncUI(); }
+    function onTenureSlider(val) { state.tenure = parseInt(val); syncUI(); }
+
+    function onMaxEmiRatioInput(val) { state.maxEmiRatio = Math.min(60, Math.max(20, parseFloat(val.replace('%',''))||40)); syncUI(); }
+    function onMaxEmiRatioSlider(val) { state.maxEmiRatio = parseFloat(val); syncUI(); }
+
+    function onAddCostRateInput(val) { state.addCostRate = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||8)); syncUI(); }
+    function onAddCostRateSlider(val) { state.addCostRate = parseFloat(val); syncUI(); }
+
+    function syncUI() {
+        var inc = state.income;
+        var exEmi = state.existingEmi;
+        var sav = state.savings;
+        var targetP = state.targetPrice;
+        var ltvFrac = state.ltv / 100.0;
+        var addCostFrac = state.addCostRate / 100.0;
+
+        // Down Payment Validation
+        var downMsg = document.getElementById('downValidationMsg');
+        downMsg.style.display = (state.downPayment > targetP) ? 'block' : 'none';
+
+        // 1. Affordable Monthly EMI & Loan Capacity
+        var affordableEmi = Math.max(0, (inc * (state.maxEmiRatio / 100.0)) - exEmi);
+        var maxAffordableLoan = 0;
+
+        if (affordableEmi > 0) {
+            var r = state.rate > 0 ? (state.rate / 12.0 / 100.0) : 0;
+            var n = state.tenure * 12;
+            if (r > 0) {
+                maxAffordableLoan = Math.round(affordableEmi * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)));
+            } else {
+                maxAffordableLoan = Math.round(affordableEmi * n);
+            }
+        }
+
+        // 2. Dual-Capacity Constraints
+        var incomeBasedPrice = ltvFrac > 0 ? Math.round(maxAffordableLoan / ltvFrac) : 0;
+        var cashDenominator = (1.0 - ltvFrac) + addCostFrac;
+        var cashBasedPrice = cashDenominator > 0 ? Math.round(sav / cashDenominator) : 0;
+
+        var maxAffordablePropertyPrice = Math.min(incomeBasedPrice, cashBasedPrice);
+
+        // 3. Target Property Financing Analysis
+        var reqDownPayment = Math.round(targetP * (1.0 - ltvFrac));
+        var addAcqCosts = Math.round(targetP * addCostFrac);
+        var totalAcqCost = targetP + addAcqCosts;
+        var reqUpfrontCash = reqDownPayment + addAcqCosts;
+        var remLiquidity = sav - reqUpfrontCash;
+
+        var targetLoan = Math.round(targetP * ltvFrac);
+        var targetEmi = 0;
+        if (targetLoan > 0) {
+            var rTarget = state.rate > 0 ? (state.rate / 12.0 / 100.0) : 0;
+            var nTarget = state.tenure * 12;
+            if (rTarget > 0) {
+                targetEmi = Math.round(targetLoan * rTarget * Math.pow(1 + rTarget, nTarget) / (Math.pow(1 + rTarget, nTarget) - 1));
+            } else {
+                targetEmi = Math.round(targetLoan / nTarget);
+            }
+        }
+        var targetTotalEmi = targetEmi + exEmi;
+        var targetEmiRatio = inc > 0 ? (targetTotalEmi / inc) * 100.0 : 0;
+
+        // 4. Luxury Affordability Component Scores (0-100)
+        var sEmi = state.maxEmiRatio > 0 ? Math.min(100.0, (state.maxEmiRatio / Math.max(0.1, targetEmiRatio)) * 100.0) : 100.0;
+        var annualInc = inc * 12.0;
+        var sLiq = (remLiquidity > 0 && annualInc > 0) ? Math.min(100.0, (remLiquidity / annualInc) * 100.0) : 0.0;
+
+        var exDebtRatio = inc > 0 ? (exEmi / inc) * 100.0 : 0;
+        var sDebt = 100.0;
+        if (exDebtRatio > 50.0) sDebt = 0.0;
+        else if (exDebtRatio > 40.0) sDebt = 20.0;
+        else if (exDebtRatio > 30.0) sDebt = 40.0;
+        else if (exDebtRatio > 20.0) sDebt = 60.0;
+        else if (exDebtRatio > 10.0) sDebt = 80.0;
+
+        var sDown = reqUpfrontCash > 0 ? Math.min(100.0, (sav / reqUpfrontCash) * 100.0) : 100.0;
+
+        // Overall Weighted Score
+        var rawAffordScore = (sEmi * 0.35) + (sLiq * 0.25) + (sDebt * 0.20) + (sDown * 0.20);
+        var finalAffordabilityScore = Math.round(rawAffordScore);
+
+        // Sync Input Controls
+        document.getElementById('incomeInput').value = formatIndian(inc);
+        document.getElementById('incomeSlider').value = inc;
+        updateSliderFill('incomeSlider');
+
+        document.getElementById('existingEmiInput').value = formatIndian(exEmi);
+        document.getElementById('existingEmiSlider').value = exEmi;
+        updateSliderFill('existingEmiSlider');
+
+        document.getElementById('savingsInput').value = formatIndian(sav);
+        document.getElementById('savingsSlider').value = sav;
+        updateSliderFill('savingsSlider');
+
+        document.getElementById('downPaymentInput').value = formatIndian(state.downPayment);
+        document.getElementById('downPaymentSlider').value = state.downPayment;
+        updateSliderFill('downPaymentSlider');
+
+        document.getElementById('propPriceInput').value = formatIndian(targetP);
+        document.getElementById('propPriceSlider').value = targetP;
+        updateSliderFill('propPriceSlider');
+
+        document.getElementById('ltvInput').value = state.ltv.toFixed(0);
+        document.getElementById('ltvSlider').value = state.ltv;
+        updateSliderFill('ltvSlider');
+
+        document.getElementById('rateInput').value = state.rate.toFixed(2);
+        document.getElementById('rateSlider').value = state.rate;
+        updateSliderFill('rateSlider');
+
+        document.getElementById('tenureInput').value = state.tenure;
+        document.getElementById('tenureSlider').value = state.tenure;
+        updateSliderFill('tenureSlider');
+
+        document.getElementById('maxEmiRatioInput').value = state.maxEmiRatio.toFixed(0);
+        document.getElementById('maxEmiRatioSlider').value = state.maxEmiRatio;
+        updateSliderFill('maxEmiRatioSlider');
+
+        document.getElementById('addCostRateInput').value = state.addCostRate.toFixed(0);
+        document.getElementById('addCostRateSlider').value = state.addCostRate;
+        updateSliderFill('addCostRateSlider');
+
+        // Sync Dashboard Hero Outputs
+        document.getElementById('resMaxPriceVal').innerText = "₹ " + formatShortIndian(maxAffordablePropertyPrice);
+
+        var badge = document.getElementById('resVerdictBadge');
+        var subtext = document.getElementById('resSubtext');
+
+        var isExceedingAffordability = targetP > maxAffordablePropertyPrice;
+        var diffAmt = Math.abs(targetP - maxAffordablePropertyPrice);
+
+        if (isExceedingAffordability || finalAffordabilityScore < 60) {
+            badge.className = 'ak-verdict-badge notaffordable';
+            badge.innerText = 'NOT AFFORDABLE';
+            subtext.innerText = 'Target Property Price (₹ ' + formatShortIndian(targetP) + ') is ₹ ' + formatShortIndian(diffAmt) + ' above your comfortable affordability limit.';
+        } else if (finalAffordabilityScore < 80) {
+            badge.className = 'ak-verdict-badge stretch';
+            badge.innerText = 'STRETCH';
+            subtext.innerText = 'Target Property Price (₹ ' + formatShortIndian(targetP) + ') is within stretch range, but consumes a significant portion of liquid reserves or monthly cash flow.';
+        } else {
+            badge.className = 'ak-verdict-badge affordable';
+            badge.innerText = 'AFFORDABLE';
+            subtext.innerText = 'Target Property Price (₹ ' + formatShortIndian(targetP) + ') is comfortably within your modeled income loan capacity and cash liquidity buffer.';
+        }
+
+        // Red-Flag Warnings
+        var redFlagBox = document.getElementById('redFlagBox');
+        var rfTitle = document.getElementById('redFlagTitle');
+        var rfDesc = document.getElementById('redFlagDesc');
+        var hasRedFlag = false;
+
+        if (affordableEmi <= 0) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ NO ADDITIONAL EMI CAPACITY:';
+            rfDesc.innerText = 'Existing EMI obligations (₹ ' + formatShortIndian(exEmi) + ') already consume your selected ' + state.maxEmiRatio + '% debt capacity.';
+        } else if (reqUpfrontCash > sav) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ LIQUIDITY SHORTFALL:';
+            rfDesc.innerText = 'Required upfront cash (₹ ' + formatShortIndian(reqUpfrontCash) + ') exceeds available liquid savings by ₹ ' + formatShortIndian(reqUpfrontCash - sav) + '.';
+        } else if (isExceedingAffordability) {
+            hasRedFlag = true;
+            rfTitle.innerText = '⚠️ ABOVE COMFORTABLE AFFORDABILITY:';
+            rfDesc.innerText = 'Target property price exceeds maximum comfortable price by ₹ ' + formatShortIndian(diffAmt) + '.';
+        }
+
+        redFlagBox.style.display = hasRedFlag ? 'block' : 'none';
+
+        // Snapshot Grid Cards
+        document.getElementById('snapIncomePrice').innerText = "₹ " + formatShortIndian(incomeBasedPrice);
+        document.getElementById('snapMaxLoan').innerText = "Max Loan: ₹ " + formatShortIndian(maxAffordableLoan);
+
+        document.getElementById('snapCashPrice').innerText = "₹ " + formatShortIndian(cashBasedPrice);
+        document.getElementById('snapAvailSav').innerText = "Savings: ₹ " + formatShortIndian(sav);
+
+        document.getElementById('snapTotalAcq').innerText = "₹ " + formatShortIndian(totalAcqCost);
+        document.getElementById('snapAddCost').innerText = "Addl Costs: ₹ " + formatShortIndian(addAcqCosts);
+
+        document.getElementById('snapRemLiquidity').innerText = (remLiquidity >= 0 ? "₹ " + formatShortIndian(remLiquidity) : "Shortfall: ₹ " + formatShortIndian(-remLiquidity));
+        document.getElementById('snapEmiBurden').innerText = "EMI: ₹ " + formatShortIndian(targetEmi) + " / mo";
+
+        // Score Factors Progress Bars
+        document.getElementById('fScoreEmi').innerText = Math.round(sEmi) + " / 100";
+        document.getElementById('fBarEmi').style.width = Math.round(sEmi) + "%";
+
+        document.getElementById('fScoreLiq').innerText = Math.round(sLiq) + " / 100";
+        document.getElementById('fBarLiq').style.width = Math.round(sLiq) + "%";
+
+        document.getElementById('fScoreDebt').innerText = Math.round(sDebt) + " / 100";
+        document.getElementById('fBarDebt').style.width = Math.round(sDebt) + "%";
+
+        document.getElementById('fScoreDown').innerText = Math.round(sDown) + " / 100";
+        document.getElementById('fBarDown').style.width = Math.round(sDown) + "%";
+
+        // Binding Constraint Explanation
+        var constraintTitle = document.getElementById('constraintTitle');
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        if (incomeBasedPrice < cashBasedPrice) {
+            constraintTitle.innerText = 'Main Constraint: Income & EMI Capacity';
+            rHtml += '<li>⚠️ <strong>Income Constraint:</strong> Your income-based affordability limit (₹ ' + formatShortIndian(incomeBasedPrice) + ') is lower than your cash-based limit (₹ ' + formatShortIndian(cashBasedPrice) + ').</li>';
+        } else {
+            constraintTitle.innerText = 'Main Constraint: Liquid Savings & Cash';
+            rHtml += '<li>⚠️ <strong>Liquidity Constraint:</strong> Your available liquid savings (₹ ' + formatShortIndian(sav) + ') limit property price to ₹ ' + formatShortIndian(cashBasedPrice) + '.</li>';
+        }
+
+        if (remLiquidity < (inc * 6)) {
+            rHtml += '<li>ℹ️ <strong>Liquidity Warning:</strong> Upfront cash requirement (₹ ' + formatShortIndian(reqUpfrontCash) + ') leaves ' + (remLiquidity > 0 ? 'only ₹ ' + formatShortIndian(remLiquidity) : 'a shortfall') + ' in liquid reserves.</li>';
+        } else {
+            rHtml += '<li>✓ <strong>Liquidity Buffer:</strong> Post-purchase liquid reserve remains healthy at ₹ ' + formatShortIndian(remLiquidity) + '.</li>';
+        }
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
