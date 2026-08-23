@@ -34,7 +34,7 @@
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Property Negotiation Savings Calculator","description":"Independent calculator to estimate total financial savings from property price negotiation, including immediate price discount and home loan interest savings.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/property-negotiation-savings-calculator/"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Property Negotiation Savings Calculator","item":"https://acrenkey.com/calculators/property-negotiation-savings-calculator/"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does property price negotiation save money on home loan interest?","acceptedAnswer":{"@type":"Answer","text":"When you negotiate a lower purchase price, your required loan amount decreases proportionately (based on your LTV). Borrowing less money reduces both your monthly EMI and the total interest charged by the lender over the loan tenure."}},{"@type":"Question","name":"What is Total Financial Benefit in property negotiation?","acceptedAnswer":{"@type":"Answer","text":"Total Financial Benefit is the combined value of your immediate price reduction plus the long-term interest savings on your home loan. For example, a ₹5 Lakh price discount can create over ₹9 Lakh in total financial benefit over a 20-year loan."}},{"@type":"Question","name":"Can I calculate savings if I am buying with 100% cash (no loan)?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can disable the Home Loan Impact toggle or set LTV to 0%. In that case, your Total Financial Benefit equals your immediate price savings."}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does property price negotiation save money on home loan interest?","acceptedAnswer":{"@type":"Answer","text":"When you negotiate a lower purchase price, your required loan amount decreases proportionately (based on your LTV). Borrowing less money reduces both your monthly EMI and the total interest charged by the lender over the loan tenure."}},{"@type":"Question","name":"What is Total Financial Benefit in property negotiation?","acceptedAnswer":{"@type":"Answer","text":"Total Financial Benefit is the combined value of your immediate price reduction plus the long-term interest savings on your home loan. For example, a ₹5 Lakh price discount can create over ₹9 Lakh in total financial benefit over a 20-year loan."}},{"@type":"Question","name":"Can I calculate savings if I am buying with 100% cash (no loan)?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can disable the Home Loan Impact toggle or set LTV to 0%. In that case, your Total Financial Benefit equals your immediate price savings."}},{"@type":"Question","name":"Does negotiating price affect down payment?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under a fixed Loan-to-Value (LTV) ratio, a lower purchase price reduces both the required loan principal and your out-of-pocket down payment requirement."}}]}</script>
 
     <style>
     @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
@@ -334,6 +334,33 @@
         font-size: 1.05rem;
         font-weight: 800;
         color: var(--refined-brass);
+    }
+
+    /* Mobile Results Scroll Button */
+    .ak-calc-emi-btn {
+        width: 100%;
+        background: var(--deep-navy-100);
+        color: #FFF;
+        border: none;
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+        transition: background 0.2s;
+    }
+    .ak-calc-emi-btn:hover {
+        background: #0F1F3D;
+    }
+
+    @media (min-width: 1151px) {
+        .ak-calc-emi-btn { display: none; }
     }
 
     /* Right Panel (Dark) */
@@ -641,6 +668,27 @@
         font-family: monospace;
     }
 
+    /* FAQ Accordion Styling */
+    .ak-faq-item {
+        border-bottom: 1px solid #E2E8F0;
+        padding: 1.25rem 0;
+    }
+    .ak-faq-item:last-child {
+        border-bottom: none;
+    }
+    .ak-faq-item h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--deep-navy);
+        margin-bottom: 0.4rem;
+        margin-top: 0;
+    }
+    .ak-faq-item p {
+        margin-bottom: 0;
+        color: var(--deep-slate);
+        font-size: 0.95rem;
+    }
+
     /* More Calculators Grid */
     .ak-more-calcs-section {
         max-width: 1140px;
@@ -856,11 +904,11 @@
                         </div>
                     </div>
 
-                    <!-- Informational Down Payment Box -->
+                    <!-- Informational Down Payment Box with Editable Input Option -->
                     <div class="ak-loan-amount-box">
                         <div class="ak-la-content">
                             <div class="ak-la-row">
-                                <span class="ak-la-title">Down Payment Required <span style="font-weight:400; opacity:0.7;">(20% Equity)</span></span>
+                                <span class="ak-la-title">Down Payment Required <span style="font-weight:400; opacity:0.75;" id="equityPctLabel">(20% Equity)</span></span>
                                 <span class="ak-la-val" id="downPayVal">₹ 19,00,000</span>
                             </div>
                         </div>
@@ -908,6 +956,12 @@
                     </div>
                 </div>
 
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Total Financial Savings</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
             </div>
 
             <!-- Right Panel (Dark) -->
@@ -938,7 +992,7 @@
 
                 <!-- Financing Impact Grid -->
                 <div class="ak-financing-impact-box" id="resFinancingBox">
-                    <div class="ak-fi-title">
+                    <div class="ak-fi-title" id="resFinancingTitle">
                         <span class="material-symbols-outlined" style="font-size:18px;">account_balance</span>
                         <span>Home Loan Impact (80% LTV • 8.5% • 20 yrs)</span>
                     </div>
@@ -1048,6 +1102,26 @@
                 <div class="ak-step-title">Calculate Total Financial Benefit</div>
                 <div class="ak-step-desc">Combine immediate price savings with long-term interest savings.</div>
                 <div class="ak-step-formula">Total Benefit = Price Savings + Interest Savings</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How does property price negotiation save money on home loan interest?</h3>
+                <p>When you negotiate a lower purchase price, your required loan amount decreases proportionately (based on your LTV). Borrowing less money reduces both your monthly EMI and the total interest charged by the lender over the loan tenure.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What is Total Financial Benefit in property negotiation?</h3>
+                <p>Total Financial Benefit is the combined value of your immediate price reduction plus the long-term interest savings on your home loan. For example, a ₹5 Lakh price discount can create over ₹9 Lakh in total financial benefit over a 20-year loan.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Can I calculate savings if I am buying with 100% cash (no loan)?</h3>
+                <p>Yes. You can disable the Home Loan Impact toggle or set LTV to 0%. In that case, your Total Financial Benefit equals your immediate price savings.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Does negotiating price affect down payment?</h3>
+                <p>Yes. Under a fixed Loan-to-Value (LTV) ratio, a lower purchase price reduces both the required loan principal and your out-of-pocket down payment requirement.</p>
             </div>
         </div>
     </article>
@@ -1202,6 +1276,13 @@
         el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
     }
 
+    function scrollToResults() {
+        if (window.innerWidth <= 1150) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     function setCalcMode(mode) {
         state.mode = mode;
         var btnDisc = document.getElementById('btnModeDiscount');
@@ -1353,6 +1434,7 @@
 
         // Home Loan & Financing Calculations
         var ltv = state.ltvPct;
+        var equityPct = Math.max(0, 100 - ltv);
         var origLoan = quoted * (ltv / 100);
         var newLoan = negPrice * (ltv / 100);
         var loanReduction = Math.max(0, origLoan - newLoan);
@@ -1362,6 +1444,7 @@
         document.getElementById('ltvSlider').value = ltv;
         updateSliderFill('ltvSlider');
 
+        document.getElementById('equityPctLabel').innerText = '(' + equityPct.toFixed(0) + '% Equity)';
         document.getElementById('downPayVal').innerText = '₹ ' + formatIndian(downPaymentVal);
 
         document.getElementById('rateInput').value = state.rate.toFixed(2);
@@ -1371,6 +1454,12 @@
         document.getElementById('tenureInput').value = state.tenure + ' Years';
         document.getElementById('tenureSlider').value = state.tenure;
         updateSliderFill('tenureSlider');
+
+        // Dynamic Header for Financing Box
+        var finTitleEl = document.getElementById('resFinancingTitle');
+        if (finTitleEl) {
+            finTitleEl.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">account_balance</span><span>Home Loan Impact (' + ltv.toFixed(0) + '% LTV • ' + state.rate.toFixed(1) + '% • ' + state.tenure + ' yrs)</span>';
+        }
 
         // EMI Calculations
         var monthlyRate = state.rate / 12 / 100;
