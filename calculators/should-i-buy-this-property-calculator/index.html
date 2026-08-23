@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should I Buy This Property? – Property Buying Decision Calculator | acreNkey</title>
+
+    <meta name="description" content="Evaluate property affordability, EMI burden, ownership costs, appreciation, rental yield and estimated returns to see whether a property may be worth buying with acreNkey.">
+    <meta name="keywords" content="should I buy this property calculator, property decision calculator, home buying evaluation, EMI to income ratio calculator, property ROI screening tool, acrenkey property decision">
+    <link rel="canonical" href="https://acrenkey.com/calculators/should-i-buy-this-property-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Should I Buy This Property? | acreNkey">
+    <meta property="og:description" content="Evaluate property affordability, EMI burden, ownership costs, appreciation, rental yield and estimated returns to see whether a property may be worth buying.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/should-i-buy-this-property-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Should I Buy This Property? | acreNkey">
+    <meta name="twitter:description" content="Evaluate property affordability, EMI burden, ownership costs, appreciation, rental yield and estimated returns to see whether a property may be worth buying.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Should I Buy This Property? Calculator","description":"Financial decision screening tool to evaluate property affordability, total monthly cost, capital appreciation, rental yield, and overall Buy Score.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/should-i-buy-this-property-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Should I Buy This Property? Calculator","item":"https://acrenkey.com/calculators/should-i-buy-this-property-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Financial Buy Score calculated?","acceptedAnswer":{"@type":"Answer","text":"The Buy Score (out of 100) evaluates six weighted factors: Affordability (30%), Price/Value (20%), Expected Appreciation (15%), Rental Yield (10%), Estimated Investment Return (15%), and Holding Period (10%)."}},{"@type":"Question","name":"What does BUY, CONSIDER, or AVOID mean?","acceptedAnswer":{"@type":"Answer","text":"A score of 75-100 indicates BUY (financially comfortable), 55-74 indicates CONSIDER (worth evaluating closely), and below 55 indicates AVOID (high financial or affordability risk). An EMI-to-income ratio exceeding 60% automatically triggers an AVOID override."}},{"@type":"Question","name":"Does a high score guarantee a profitable property purchase?","acceptedAnswer":{"@type":"Answer","text":"No. The Buy Score is a financial screening tool based solely on your inputs. It does not evaluate legal title, construction quality, builder reputation, neighborhood risks, or un-modeled market factors."}},{"@type":"Question","name":"How is initial cash required calculated?","acceptedAnswer":{"@type":"Answer","text":"Initial Cash Required equals your Down Payment plus Total Acquisition Buying Costs (stamp duty, registration, legal fees, brokerage)."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-new-input-box-wrapper { position: relative; width: 185px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(106, 66, 50, 0.1); }
+    .ak-new-input.readonly { background: #F8F9FA; border-color: #D5D1C8; color: var(--muted-slate); cursor: not-allowed; }
+
+    .ak-new-slider-container { position: relative; padding: 0 8px; }
+    .ak-new-slider {
+        -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: #8C9BB1; outline: none; cursor: pointer; display: block;
+    }
+    .ak-new-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--refined-brass); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+    }
+
+    .ak-slider-with-labels { display: flex; align-items: center; gap: 4px; margin-top: 0.25rem; }
+    .ak-slider-with-labels .ak-new-slider-container { flex: 1; }
+    .ak-slider-labels-inline { font-size: 0.85rem; color: var(--deep-navy); font-weight: 600; white-space: nowrap; }
+
+    .ak-calc-emi-btn {
+        width: 100%; background: var(--deep-navy-100); color: #FFF; border: none; border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; transition: background 0.2s;
+    }
+    @media (min-width: 1181px) { .ak-calc-emi-btn { display: none; } }
+
+    /* Right Panel (Dark) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100); border-radius: 16px; padding: 1.8rem; color: #FFF; display: flex; flex-direction: column; position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    /* Verdict Badge Styles */
+    .ak-verdict-badge {
+        padding: 0.35rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+    .ak-verdict-badge.buy { background: #10B981; color: #FFFFFF; }
+    .ak-verdict-badge.consider { background: #F59E0B; color: #FFFFFF; }
+    .ak-verdict-badge.avoid { background: #EF4444; color: #FFFFFF; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.45; }
+
+    /* Financial Snapshot 4-Card Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Factor Scores Progress Section */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.6rem;
+    }
+    .ak-factor-row:last-child { margin-bottom: 0; }
+
+    .ak-factor-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.9);
+        font-weight: 600;
+    }
+
+    .ak-factor-bar-bg {
+        height: 6px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .ak-factor-bar-fill {
+        height: 100%;
+        background: var(--refined-brass);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+    }
+
+    /* Why This Score (Strengths vs Watchouts) */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.3rem; }
+
+    /* Tip Box & Disclaimer */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* --- MOBILE RESPONSIVE QC STYLES --- */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 145px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class=header-nav id=header-nav><div class="container nav-container"><a href=/ class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href=/#buyers-checklist>Our Approach</a></li><li><a href=/#framework>Decision Framework</a></li><li><a href=/#core>CORE</a></li><li><a href=/#testimonials>Testimonials</a></li><li><a href=/#about-us>About Us</a></li></ul><a href=/#footer class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href=/ class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=#0D1B24 stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href=/#buyers-checklist class=mobile-nav-item><span class=mobile-nav-label>Our Approach</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#framework class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#core class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#testimonials class=mobile-nav-item><span class=mobile-nav-label>Testimonials</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href=/#about-us class=mobile-nav-item><span class=mobile-nav-label>About Us</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><a href=/#footer class=mobile-drawer-cta><span>Talk to an Advisor</span></a><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Page Section -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Should I Buy This Property?</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Should I Buy This Property?</h1>
+                <p class="ak-calc-sub-text">Evaluate a property's affordability, ownership cost, potential appreciation and investment return before deciding whether to buy.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+            
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property Evaluation Inputs</h2>
+                </div>
+
+                <!-- Section 1: Property & Purchase -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Property &amp; Purchase Costs</div>
+
+                <!-- Property Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="onPropPriceInput(this.value)" onchange="onPropPriceInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Down Payment -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Down Payment
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="downPaymentInput" class="ak-new-input has-prefix" value="20,00,000" oninput="onDownPaymentInput(this.value)" onchange="onDownPaymentInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="downPaymentSlider" class="ak-new-slider" min="0" max="10000000" step="100000" value="2000000" oninput="onDownPaymentSlider(this.value)">
+                    </div>
+                    <div id="dpValidationMsg" style="font-size:0.75rem; color:#F87171; font-weight:700; margin-top:0.3rem; display:none;">
+                        Down payment cannot be greater than the property price.
+                    </div>
+                </div>
+
+                <!-- Total Acquisition Buying Costs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            Total Buying Costs (Stamp Duty, Reg, Fees)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="buyingCostsInput" class="ak-new-input has-prefix" value="8,00,000" oninput="onBuyingCostsInput(this.value)" onchange="onBuyingCostsInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="buyingCostsSlider" class="ak-new-slider" min="0" max="2000000" step="25000" value="800000" oninput="onBuyingCostsSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Estimated Fair Value (Optional) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Estimated Fair Market Value (Optional)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="fairValueInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="onFairValueInput(this.value)" onchange="onFairValueInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Financing -->
+                <div class="ak-section-divider-title">2. Home Loan Financing Terms</div>
+
+                <!-- Interest Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Loan Interest Rate
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="rateInput" class="ak-new-input has-suffix" value="8.50" oninput="onRateInput(this.value)" onchange="onRateInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="rateSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.1" value="8.5" oninput="onRateSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Tenure -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">schedule</span>
+                            Loan Tenure
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="tenureInput" class="ak-new-input readonly" value="20 Years" readonly>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 yr</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="tenureSlider" class="ak-new-slider" min="1" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Section 3: Personal Finances -->
+                <div class="ak-section-divider-title">3. Personal Finance &amp; Affordability</div>
+
+                <!-- Monthly Net Income -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Monthly Net Take-Home Income
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="incomeInput" class="ak-new-input has-prefix" value="2,00,000" oninput="onIncomeInput(this.value)" onchange="onIncomeInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="incomeSlider" class="ak-new-slider" min="20000" max="1000000" step="10000" value="200000" oninput="onIncomeSlider(this.value)">
+                    </div>
+                    <div id="incomeValidationMsg" style="font-size:0.75rem; color:#F87171; font-weight:700; margin-top:0.3rem; display:none;">
+                        Enter a valid monthly income to calculate EMI ratio.
+                    </div>
+                </div>
+
+                <!-- Existing Monthly EMIs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">credit_score</span>
+                            Existing Monthly EMIs
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="existingEmiInput" class="ak-new-input has-prefix" value="20,000" oninput="onExistingEmiInput(this.value)" onchange="onExistingEmiInput(this.value)">
+                        </div>
+                    </div>
+                    <div class="ak-new-slider-container">
+                        <input type="range" id="existingEmiSlider" class="ak-new-slider" min="0" max="200000" step="5000" value="20000" oninput="onExistingEmiSlider(this.value)">
+                    </div>
+                </div>
+
+                <!-- Current Monthly Rent (Contextual) -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">key</span>
+                            Current Monthly Rent (Contextual)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rentInput" class="ak-new-input has-prefix" value="30,000" oninput="onRentInput(this.value)" onchange="onRentInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Max Comfortable EMI Ratio % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Max Comfortable EMI-to-Income Ratio
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="maxEmiRatioInput" class="ak-new-input has-suffix" value="40" oninput="onMaxEmiRatioInput(this.value)" onchange="onMaxEmiRatioInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">20%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="maxEmiRatioSlider" class="ak-new-slider" min="20" max="60" step="1" value="40" oninput="onMaxEmiRatioSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">60%</span>
+                    </div>
+                </div>
+
+                <!-- Section 4: Investment Assumptions -->
+                <div class="ak-section-divider-title">4. Investment &amp; Holding Period</div>
+
+                <!-- Expected Annual Property Appreciation -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Expected Annual Appreciation
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="appreciationInput" class="ak-new-input has-suffix" value="6.0" oninput="onAppreciationInput(this.value)" onchange="onAppreciationInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="appreciationSlider" class="ak-new-slider" min="0.0" max="15.0" step="0.5" value="6" oninput="onAppreciationSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">15%</span>
+                    </div>
+                </div>
+
+                <!-- Expected Rental Yield -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            Expected Rental Yield
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="yieldInput" class="ak-new-input has-suffix" value="2.50" oninput="onYieldInput(this.value)" onchange="onYieldInput(this.value)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">0%</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="yieldSlider" class="ak-new-slider" min="0.0" max="10.0" step="0.25" value="2.5" oninput="onYieldSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">10%</span>
+                    </div>
+                </div>
+
+                <!-- Holding Period -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">hourglass_bottom</span>
+                            Holding Period
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="holdingInput" class="ak-new-input readonly" value="10 Years" readonly>
+                        </div>
+                    </div>
+                    <div class="ak-slider-with-labels">
+                        <span class="ak-slider-labels-inline">1 yr</span>
+                        <div class="ak-new-slider-container">
+                            <input type="range" id="holdingSlider" class="ak-new-slider" min="1" max="30" step="1" value="10" oninput="onHoldingSlider(this.value)">
+                        </div>
+                        <span class="ak-slider-labels-inline">30 yrs</span>
+                    </div>
+                </div>
+
+                <!-- Section 5: Recurring Monthly Ownership Costs -->
+                <div class="ak-section-divider-title">5. Recurring Monthly Ownership Expenses</div>
+
+                <!-- Monthly Maintenance -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">Monthly Maintenance</div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="maintInput" class="ak-new-input has-prefix" value="5,000" oninput="onMaintInput(this.value)" onchange="onMaintInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Property Tax -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">Monthly Property Tax</div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="taxInput" class="ak-new-input has-prefix" value="1,000" oninput="onTaxInput(this.value)" onchange="onTaxInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Insurance -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">Monthly Insurance</div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="insInput" class="ak-new-input has-prefix" value="500" oninput="onInsInput(this.value)" onchange="onInsInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Monthly Costs -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">Other Monthly Costs</div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherInput" class="ak-new-input has-prefix" value="2,000" oninput="onOtherInput(this.value)" onchange="onOtherInput(this.value)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Quick Scroll Button -->
+                <button type="button" class="ak-calc-emi-btn" onclick="scrollToResults()">
+                    <span>View Financial Buy Score</span>
+                    <span class="material-symbols-outlined" style="font-size:18px;">arrow_downward</span>
+                </button>
+
+            </div>
+
+            <!-- Right Panel (Dark Results Dashboard) -->
+            <div class="ak-calc-right-panel" id="resultsPanel">
+                
+                <!-- Hero Score & Verdict Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="ak-right-header">Financial Buy Score</div>
+                    <div class="ak-verdict-badge buy" id="resVerdictBadge">BUY</div>
+                </div>
+                
+                <div class="ak-emi-huge" id="resScoreVal">78 <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span></div>
+                <div class="ak-emi-subtext" id="resSubtext">The property looks financially reasonable under the assumptions you entered.</div>
+
+                <!-- Financial Snapshot 4-Card Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Upfront Initial Cash</div>
+                        <div class="ak-snap-val" style="color:#6EE7B7;" id="snapCash">₹ 28.0L</div>
+                        <div class="ak-snap-sub">DP + Buying Costs</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Monthly Outgoings</div>
+                        <div class="ak-snap-val" style="color:#E5C178;" id="snapMonthlyCost">₹ 77.9K</div>
+                        <div class="ak-snap-sub" id="snapEmiRatio">EMI Ratio: 44.5%</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">10-Yr Property Value</div>
+                        <div class="ak-snap-val" id="snapFutureVal">₹ 1.79 Cr</div>
+                        <div class="ak-snap-sub" id="snapCapGain">+₹79.1L Gain</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Estimated ROI</div>
+                        <div class="ak-snap-val" style="color:#A7F3D0;" id="snapRoi">+271%</div>
+                        <div class="ak-snap-sub">Equity + Rent Return</div>
+                    </div>
+                </div>
+
+                <!-- Weighted Factors Score Breakdown -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; color:#E5C178; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.04em;">
+                        Score Factor Breakdown (Weighted 100%)
+                    </div>
+                    
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>1. Affordability (30%)</span>
+                            <span id="fScoreAfford">85 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarAfford" style="width: 85%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>2. Price / Value (20%)</span>
+                            <span id="fScoreValue">85 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarValue" style="width: 85%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>3. Appreciation (15%)</span>
+                            <span id="fScoreAppr">85 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarAppr" style="width: 85%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>4. Rental Yield (10%)</span>
+                            <span id="fScoreYield">70 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarYield" style="width: 70%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>5. Investment Return (15%)</span>
+                            <span id="fScoreReturn">100 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarReturn" style="width: 100%;"></div></div>
+                    </div>
+
+                    <div class="ak-factor-row">
+                        <div class="ak-factor-top">
+                            <span>6. Holding Period (10%)</span>
+                            <span id="fScoreHolding">100 / 100</span>
+                        </div>
+                        <div class="ak-factor-bar-bg"><div class="ak-factor-bar-fill" id="fBarHolding" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Strengths & Watch-outs List -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Why this score?</div>
+                    <ul class="ak-reasons-list" id="reasonsList">
+                        <li>✓ Total EMI burden is 44.5% of net monthly income.</li>
+                        <li>✓ 10-year holding period provides adequate time to absorb market cycles.</li>
+                        <li>⚠ Initial cash required is ₹28.0 Lakh before interiors.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tip Box & Disclaimer -->
+        <div class="ak-post-widget-unit" style="margin-top: 1.75rem;">
+            <div class="ak-tip-box-new">
+                <span class="material-symbols-outlined">tips_and_updates</span>
+                <div><strong>Financial Screening Disclaimer:</strong> This calculator provides a financial screening based on the assumptions you enter. It does not assess legal title, construction quality, builder reliability, location risk, or market valuation. Verify all property details before making a purchase decision.</div>
+            </div>
+
+            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.55; max-width: 900px; margin: 0 auto;">
+                Estimates are illustrative and based on the assumptions entered by you. Property appreciation, rental income and investment returns are not guaranteed. This calculator is intended for decision support and does not constitute financial, tax or legal advice.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Educational Buyer Guide Section -->
+    <article class="ak-calc-article">
+        <h2>How Does the Financial Buy Score Work?</h2>
+        <p>Before purchasing a home, evaluating only the purchase price or loan EMI is insufficient. A complete financial decision requires assessing total upfront cash outgoings, debt-to-income ratios, monthly recurring maintenance, expected capital appreciation, and long-term investment equity creation.</p>
+
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 1</div>
+                <div class="ak-step-title">Affordability (30%)</div>
+                <div class="ak-step-desc">Evaluates your total monthly loan EMI burden relative to your net take-home income.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 2</div>
+                <div class="ak-step-title">Price / Value (20%)</div>
+                <div class="ak-step-desc">Compares the quoted property price against your estimated fair market value.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 3</div>
+                <div class="ak-step-title">Capital Appreciation (15%)</div>
+                <div class="ak-step-desc">Factors in expected annual property appreciation over your holding tenure.</div>
+            </div>
+
+            <div class="ak-step-card">
+                <div class="ak-step-num">Factor 4</div>
+                <div class="ak-step-title">Rental Yield &amp; Return (25%)</div>
+                <div class="ak-step-desc">Measures annual rental income and projected equity buildup at sale.</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Frequently Asked Questions</h2>
+        <div style="margin-bottom: 2rem;">
+            <div class="ak-faq-item">
+                <h3>How is the Financial Buy Score calculated?</h3>
+                <p>The Buy Score (out of 100) evaluates six weighted factors: Affordability (30%), Price/Value (20%), Expected Appreciation (15%), Rental Yield (10%), Estimated Investment Return (15%), and Holding Period (10%).</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>What does BUY, CONSIDER, or AVOID mean?</h3>
+                <p>A score of 75-100 indicates BUY (financially comfortable), 55-74 indicates CONSIDER (worth evaluating closely), and below 55 indicates AVOID (high financial or affordability risk). An EMI-to-income ratio exceeding 60% automatically triggers an AVOID override.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>Does a high score guarantee a profitable property purchase?</h3>
+                <p>No. The Buy Score is a financial screening tool based solely on your inputs. It does not evaluate legal title, construction quality, builder reputation, neighborhood risks, or un-modeled market factors.</p>
+            </div>
+            <div class="ak-faq-item">
+                <h3>How is initial cash required calculated?</h3>
+                <p>Initial Cash Required equals your Down Payment plus Total Acquisition Buying Costs (stamp duty, registration, legal fees, brokerage).</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- More Home Buying Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">More Home Buying Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your home purchase with complete financial clarity.</p>
+        </div>
+
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and repayment schedule for your home loan.</div>
+            </a>
+
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Find out how much home you can comfortably afford based on your income and savings.</div>
+            </a>
+
+            <a href="/calculators/home-loan-eligibility-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div class="ak-fcard-title">Home Loan Eligibility</div>
+                </div>
+                <div class="ak-fcard-desc">Estimate how much home loan you may be eligible for based on your income and profile.</div>
+            </a>
+
+            <a href="/calculators/down-payment-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">payments</span>
+                </div>
+                <div class="ak-fcard-title">Down Payment Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Determine the down payment required and plan your upfront savings for property purchase.</div>
+            </a>
+
+            <a href="/calculators/home-buying-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <div class="ak-fcard-title">Total Home Buying Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Know the total cash you'll need to buy your home, beyond just the property price.</div>
+            </a>
+
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">visibility_off</span>
+                </div>
+                <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <div class="ak-fcard-desc">Uncover unexpected maintenance, club, GST, and developer charges before booking.</div>
+            </a>
+
+            <a href="/calculators/monthly-home-ownership-cost-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                </div>
+                <div class="ak-fcard-title">Monthly Home Ownership Cost</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate true monthly cost of home ownership including EMI, maintenance, taxes, and insurance.</div>
+            </a>
+
+            <a href="/calculators/property-negotiation-savings-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">price_check</span>
+                </div>
+                <div class="ak-fcard-title">Property Negotiation Savings</div>
+                </div>
+                <div class="ak-fcard-desc">Calculate total financial benefit from price discounts and home loan interest savings.</div>
+            </a>
+
+            <a href="/calculators/ready-to-move-vs-under-construction-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">domain</span>
+                </div>
+                <div class="ak-fcard-title">Ready-to-Move vs Under-Construction</div>
+                </div>
+                <div class="ak-fcard-desc">Compare total outgoings, pre-EMI interest, rent, and appreciation for property options.</div>
+            </a>
+
+            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard" style="text-decoration: none; color: inherit; cursor: pointer;">
+                <div class="ak-fcard-header-flex">
+                <div class="ak-fcard-icon">
+                    <span class="material-symbols-outlined">trending_up</span>
+                </div>
+                <div class="ak-fcard-title">Property Investment ROI</div>
+                </div>
+                <div class="ak-fcard-desc">Evaluate internal rate of return, capital growth, and rental yields for real estate.</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=site-footer id=footer><div class=container><div class=footer-bottom-bar style="border-top: none; padding-top: 10px;"><div class=footer-bottom-left><span>© 2026 Acrenkey Realty LLP. All rights reserved.</span><span style="display:block; margin-top: 6px; color: rgba(255, 255, 255, 0.45); font-size: 0.85em; line-height: 1.5; max-width: 340px;">Innov8 Prestige Tech Platina, 11th Floor, No. 32/2, 34/1, Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560087</span></div><div class=footer-social-icons style="margin-top: 0;"><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><i class="fa-brands fa-facebook-f"></i></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><i class="fa-brands fa-instagram"></i></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><i class="fa-brands fa-youtube"></i></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter><i class="fa-brands fa-twitter"></i></a><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><i class="fa-brands fa-linkedin-in"></i></a><a href=https://www.reddit.com/user/acreNkey/ target=_blank rel="noopener noreferrer" aria-label=Reddit><i class="fa-brands fa-reddit-alien"></i></a><a href=https://www.quora.com/profile/AcreNkey target=_blank rel="noopener noreferrer" aria-label=Quora><i class="fa-brands fa-quora"></i></a><a href=https://pin.it/58qQo3rsD target=_blank rel="noopener noreferrer" aria-label=Pinterest><i class="fa-brands fa-pinterest-p"></i></a></div><div class=footer-bottom-right style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;"><span style="color: rgba(255, 255, 255, 0.45); font-size: 0.85em; text-align: right;">Karnataka RERA Registration No.:<br>PRM/KA/RERA/1251/446/AG/260814/007659</span><ul class=footer-legal-links style="margin:0;"><li><a href=/careers>Careers</a></li><li><a href=/privacy-policy/ >Privacy Policy</a></li><li><a href=/terms-of-service/ >Terms of Service</a></li><li><a href=/rera-disclaimer/ >RERA Disclaimer</a></li></ul></div></div></div></footer>
+
+    <!-- Lead Form Modal -->
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Book Free Consultation</span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+    var state = {
+        propPrice: 10000000,
+        downPayment: 2000000,
+        buyingCosts: 800000,
+        fairValue: 10000000,
+        rate: 8.5,
+        tenure: 20,
+        income: 200000,
+        existingEmi: 2000,
+        monthlyRent: 30000,
+        maxEmiRatio: 40,
+        appreciationPct: 6.0,
+        rentalYieldPct: 2.5,
+        holdingYears: 10,
+        maint: 5000,
+        tax: 1000,
+        ins: 500,
+        other: 2000
+    };
+
+    function parseRupees(val) {
+        if (!val) return 0;
+        var clean = val.toString().replace(/[^0-9.]/g, '');
+        var num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === undefined) return '0';
+        var isNegative = amount < 0;
+        var x = Math.abs(Math.round(amount)).toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+        return isNegative ? '-' + res : res;
+    }
+
+    function formatShortIndian(amount) {
+        if (amount >= 10000000) {
+            return (amount / 10000000).toFixed(2) + ' Cr';
+        } else if (amount >= 100000) {
+            return (amount / 100000).toFixed(2) + 'L';
+        }
+        return formatIndian(amount);
+    }
+
+    function updateSliderFill(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var min = parseFloat(el.min || 0);
+        var max = parseFloat(el.max || 100);
+        var val = parseFloat(el.value || 0);
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        
+        var thumbWidth = 18;
+        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
+        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+    }
+
+    function scrollToResults() {
+        if (window.innerWidth <= 1180) {
+            var panel = document.getElementById('resultsPanel');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Input Handlers
+    function onPropPriceInput(val) { state.propPrice = parseRupees(val); syncDpSliderMax(); syncUI(); }
+    function onPropPriceSlider(val) { state.propPrice = parseFloat(val); syncDpSliderMax(); syncUI(); }
+
+    function onDownPaymentInput(val) { state.downPayment = parseRupees(val); syncUI(); }
+    function onDownPaymentSlider(val) { state.downPayment = parseFloat(val); syncUI(); }
+
+    function syncDpSliderMax() {
+        var slider = document.getElementById('downPaymentSlider');
+        if (slider) {
+            slider.max = state.propPrice;
+            if (state.downPayment > state.propPrice) state.downPayment = state.propPrice;
+        }
+    }
+
+    function onBuyingCostsInput(val) { state.buyingCosts = parseRupees(val); syncUI(); }
+    function onBuyingCostsSlider(val) { state.buyingCosts = parseFloat(val); syncUI(); }
+
+    function onFairValueInput(val) { state.fairValue = parseRupees(val); syncUI(); }
+
+    function onRateInput(val) { state.rate = Math.min(25, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onRateSlider(val) { state.rate = parseFloat(val); syncUI(); }
+    function onTenureSlider(val) { state.tenure = parseInt(val); syncUI(); }
+
+    function onIncomeInput(val) { state.income = parseRupees(val); syncUI(); }
+    function onIncomeSlider(val) { state.income = parseFloat(val); syncUI(); }
+
+    function onExistingEmiInput(val) { state.existingEmi = parseRupees(val); syncUI(); }
+    function onExistingEmiSlider(val) { state.existingEmi = parseFloat(val); syncUI(); }
+
+    function onRentInput(val) { state.monthlyRent = parseRupees(val); syncUI(); }
+
+    function onMaxEmiRatioInput(val) { state.maxEmiRatio = Math.min(60, Math.max(20, parseFloat(val.replace('%',''))||40)); syncUI(); }
+    function onMaxEmiRatioSlider(val) { state.maxEmiRatio = parseFloat(val); syncUI(); }
+
+    function onAppreciationInput(val) { state.appreciationPct = Math.min(30, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onAppreciationSlider(val) { state.appreciationPct = parseFloat(val); syncUI(); }
+
+    function onYieldInput(val) { state.yieldPct = Math.min(20, Math.max(0, parseFloat(val.replace('%',''))||0)); syncUI(); }
+    function onYieldSlider(val) { state.yieldPct = parseFloat(val); syncUI(); }
+
+    function onHoldingSlider(val) { state.holdingYears = parseInt(val); syncUI(); }
+
+    function onMaintInput(val) { state.maint = parseRupees(val); syncUI(); }
+    function onTaxInput(val) { state.tax = parseRupees(val); syncUI(); }
+    function onInsInput(val) { state.ins = parseRupees(val); syncUI(); }
+    function onOtherInput(val) { state.other = parseRupees(val); syncUI(); }
+
+    function calcEmi(principal, annualRate, tenureYears) {
+        if (principal <= 0 || tenureYears <= 0) return 0;
+        if (annualRate <= 0) return principal / (tenureYears * 12);
+        var r = annualRate / 12 / 100;
+        var n = tenureYears * 12;
+        var factor = Math.pow(1 + r, n);
+        return (principal * r * factor) / (factor - 1);
+    }
+
+    function calcOutstandingLoan(p, annualRate, tenureYears, holdingYears) {
+        if (p <= 0 || holdingYears >= tenureYears) return 0;
+        if (annualRate <= 0) {
+            var paidRatio = holdingYears / tenureYears;
+            return Math.max(0, p * (1 - paidRatio));
+        }
+        var r = annualRate / 12 / 100;
+        var n = tenureYears * 12;
+        var h = holdingYears * 12;
+        var emi = calcEmi(p, annualRate, tenureYears);
+        var factorH = Math.pow(1 + r, h);
+        var bal = (p * factorH) - (emi * (factorH - 1) / r);
+        return Math.max(0, bal);
+    }
+
+    function syncUI() {
+        var price = state.propPrice;
+        var dp = state.downPayment;
+        var dpMsg = document.getElementById('dpValidationMsg');
+
+        if (dp > price) {
+            dpMsg.style.display = 'block';
+            dp = price;
+        } else {
+            dpMsg.style.display = 'none';
+        }
+
+        var loan = Math.max(0, price - dp);
+        var buyingCosts = state.buyingCosts;
+        var initialCash = dp + buyingCosts;
+
+        var rate = state.rate;
+        var tenure = state.tenure;
+        var emi = calcEmi(loan, rate, tenure);
+
+        var maint = state.maint;
+        var tax = state.tax;
+        var ins = state.ins;
+        var other = state.other;
+
+        var monthlyOwnership = emi + maint + tax + ins + other;
+
+        var income = state.income;
+        var incMsg = document.getElementById('incomeValidationMsg');
+        if (income <= 0) {
+            incMsg.style.display = 'block';
+        } else {
+            incMsg.style.display = 'none';
+        }
+
+        var totalEmiBurden = emi + state.existingEmi;
+        var emiRatio = income > 0 ? (totalEmiBurden / income) * 100.0 : 0;
+
+        var holdingYears = state.holdingYears;
+        var appPct = state.appreciationPct;
+        var yieldPct = state.yieldPct;
+
+        var futureVal = price * Math.pow(1 + (appPct / 100.0), holdingYears);
+        var capGain = futureVal - price;
+
+        var outstandingLoan = calcOutstandingLoan(loan, rate, tenure, holdingYears);
+        var propEquity = futureVal - outstandingLoan;
+
+        var annualRentalIncome = price * (yieldPct / 100.0);
+        var totalRentalIncome = annualRentalIncome * holdingYears;
+
+        var estTotalValueCreated = propEquity + totalRentalIncome;
+        var estReturn = estTotalValueCreated - initialCash;
+        var estRoi = initialCash > 0 ? (estReturn / initialCash) * 100.0 : 0;
+
+        // --- SCORES ENGINE ---
+        // 1. Affordability Score (30%)
+        var sAfford = 0;
+        if (emiRatio <= 30) sAfford = 100;
+        else if (emiRatio <= 40) sAfford = 85;
+        else if (emiRatio <= 50) sAfford = 60;
+        else if (emiRatio <= 60) sAfford = 30;
+        else sAfford = 0;
+
+        // 2. Price / Value Score (20%)
+        var sValue = 70;
+        if (state.fairValue > 0) {
+            var valRatio = (price / state.fairValue) * 100.0;
+            if (valRatio <= 90) sValue = 100;
+            else if (valRatio <= 100) sValue = 85;
+            else if (valRatio <= 110) sValue = 70;
+            else if (valRatio <= 120) sValue = 45;
+            else sValue = 20;
+        }
+
+        // 3. Appreciation Score (15%)
+        var sAppr = 30;
+        if (appPct >= 8) sAppr = 100;
+        else if (appPct >= 6) sAppr = 85;
+        else if (appPct >= 4) sAppr = 70;
+        else if (appPct >= 2) sAppr = 50;
+        else sAppr = 30;
+
+        // 4. Rental Yield Score (10%)
+        var sYield = 30;
+        if (yieldPct >= 4) sYield = 100;
+        else if (yieldPct >= 3) sYield = 85;
+        else if (yieldPct >= 2) sYield = 70;
+        else if (yieldPct >= 1) sYield = 50;
+        else sYield = 30;
+
+        // 5. Investment Return Score (15%)
+        var sReturn = 30;
+        if (estRoi >= 100) sReturn = 100;
+        else if (estRoi >= 75) sReturn = 85;
+        else if (estRoi >= 50) sReturn = 70;
+        else if (estRoi >= 25) sReturn = 50;
+        else sReturn = 30;
+
+        // 6. Holding Period Score (10%)
+        var sHolding = 30;
+        if (holdingYears >= 10) sHolding = 100;
+        else if (holdingYears >= 7) sHolding = 85;
+        else if (holdingYears >= 5) sHolding = 70;
+        else if (holdingYears >= 3) sHolding = 50;
+        else sHolding = 30;
+
+        var rawScore = (sAfford * 0.30) + (sValue * 0.20) + (sAppr * 0.15) + (sYield * 0.10) + (sReturn * 0.15) + (sHolding * 0.10);
+        var finalScore = Math.round(rawScore);
+
+        var isAffordOverride = emiRatio > 60;
+
+        // Sync Input Controls
+        document.getElementById('propPriceInput').value = formatIndian(price);
+        document.getElementById('propPriceSlider').value = price;
+        updateSliderFill('propPriceSlider');
+
+        document.getElementById('downPaymentInput').value = formatIndian(dp);
+        document.getElementById('downPaymentSlider').max = price;
+        document.getElementById('downPaymentSlider').value = dp;
+        updateSliderFill('downPaymentSlider');
+
+        document.getElementById('buyingCostsInput').value = formatIndian(buyingCosts);
+        document.getElementById('buyingCostsSlider').value = buyingCosts;
+        updateSliderFill('buyingCostsSlider');
+
+        document.getElementById('fairValueInput').value = formatIndian(state.fairValue);
+
+        document.getElementById('rateInput').value = rate.toFixed(2);
+        document.getElementById('rateSlider').value = rate;
+        updateSliderFill('rateSlider');
+
+        document.getElementById('tenureInput').value = tenure + " Years";
+        document.getElementById('tenureSlider').value = tenure;
+        updateSliderFill('tenureSlider');
+
+        document.getElementById('incomeInput').value = formatIndian(income);
+        document.getElementById('incomeSlider').value = income;
+        updateSliderFill('incomeSlider');
+
+        document.getElementById('existingEmiInput').value = formatIndian(state.existingEmi);
+        document.getElementById('existingEmiSlider').value = state.existingEmi;
+        updateSliderFill('existingEmiSlider');
+
+        document.getElementById('rentInput').value = formatIndian(state.monthlyRent);
+
+        document.getElementById('maxEmiRatioInput').value = state.maxEmiRatio.toFixed(0);
+        document.getElementById('maxEmiRatioSlider').value = state.maxEmiRatio;
+        updateSliderFill('maxEmiRatioSlider');
+
+        document.getElementById('appreciationInput').value = appPct.toFixed(1);
+        document.getElementById('appreciationSlider').value = appPct;
+        updateSliderFill('appreciationSlider');
+
+        document.getElementById('yieldInput').value = yieldPct.toFixed(2);
+        document.getElementById('yieldSlider').value = yieldPct;
+        updateSliderFill('yieldSlider');
+
+        document.getElementById('holdingInput').value = holdingYears + " Years";
+        document.getElementById('holdingSlider').value = holdingYears;
+        updateSliderFill('holdingSlider');
+
+        document.getElementById('maintInput').value = formatIndian(maint);
+        document.getElementById('taxInput').value = formatIndian(tax);
+        document.getElementById('insInput').value = formatIndian(ins);
+        document.getElementById('otherInput').value = formatIndian(other);
+
+        // Sync Dashboard Outputs
+        document.getElementById('resScoreVal').innerHTML = finalScore + ' <span style="font-size:1.2rem; color:rgba(255,255,255,0.7);">/ 100</span>';
+        
+        var badge = document.getElementById('resVerdictBadge');
+        var subtext = document.getElementById('resSubtext');
+
+        if (isAffordAffordOverride = isAffordOverride) {
+            badge.className = 'ak-verdict-badge avoid';
+            badge.innerText = 'AVOID — Affordability Risk';
+            subtext.innerText = 'The estimated EMI burden (' + emiRatio.toFixed(1) + '%) is very high relative to your monthly income.';
+        } else if (finalScore >= 75) {
+            badge.className = 'ak-verdict-badge buy';
+            badge.innerText = 'BUY';
+            subtext.innerText = 'The property looks financially reasonable under the assumptions you entered. Affordability and expected returns are comfortable.';
+        } else if (finalScore >= 55) {
+            badge.className = 'ak-verdict-badge consider';
+            badge.innerText = 'CONSIDER';
+            subtext.innerText = 'The property has some attractive factors, but one or more areas deserve closer review before committing.';
+        } else {
+            badge.className = 'ak-verdict-badge avoid';
+            badge.innerText = 'AVOID';
+            subtext.innerText = 'The financial assumptions indicate meaningful affordability, value or return concerns. Review price and financing carefully.';
+        }
+
+        // Financial Snapshot
+        document.getElementById('snapCash').innerText = "₹ " + formatShortIndian(initialCash);
+        document.getElementById('snapMonthlyCost').innerText = "₹ " + formatShortIndian(monthlyOwnership);
+        document.getElementById('snapEmiRatio').innerText = "EMI Ratio: " + emiRatio.toFixed(1) + "%";
+        document.getElementById('snapFutureVal').innerText = "₹ " + formatShortIndian(futureVal);
+        document.getElementById('snapCapGain').innerText = "+" + "₹" + formatShortIndian(capGain) + " Gain";
+        document.getElementById('snapRoi').innerText = (estRoi >= 0 ? "+" : "") + Math.round(estRoi) + "%";
+
+        // Score Factor Progress Bars
+        document.getElementById('fScoreAfford').innerText = sAfford + " / 100";
+        document.getElementById('fBarAfford').style.width = sAfford + "%";
+
+        document.getElementById('fScoreValue').innerText = sValue + " / 100";
+        document.getElementById('fBarValue').style.width = sValue + "%";
+
+        document.getElementById('fScoreAppr').innerText = sAppr + " / 100";
+        document.getElementById('fBarAppr').style.width = sAppr + "%";
+
+        document.getElementById('fScoreYield').innerText = sYield + " / 100";
+        document.getElementById('fBarYield').style.width = sYield + "%";
+
+        document.getElementById('fScoreReturn').innerText = sReturn + " / 100";
+        document.getElementById('fBarReturn').style.width = sReturn + "%";
+
+        document.getElementById('fScoreHolding').innerText = sHolding + " / 100";
+        document.getElementById('fBarHolding').style.width = sHolding + "%";
+
+        // Dynamic Reasons (Strengths & Watch-outs)
+        var reasonsEl = document.getElementById('reasonsList');
+        var rHtml = '';
+
+        if (emiRatio <= state.maxEmiRatio) {
+            rHtml += '<li>✓ Total EMI burden (' + emiRatio.toFixed(1) + '%) is within your ' + state.maxEmiRatio + '% comfort threshold.</li>';
+        } else {
+            rHtml += '<li>⚠ EMI burden (' + emiRatio.toFixed(1) + '%) exceeds your ' + state.maxEmiRatio + '% comfort threshold.</li>';
+        }
+
+        if (holdingYears >= 7) {
+            rHtml += '<li>✓ ' + holdingYears + '-year holding period provides adequate time to absorb market cycles.</li>';
+        } else {
+            rHtml += '<li>⚠ Short holding period (' + holdingYears + ' yrs) increases exposure to transaction costs &amp; market cycles.</li>';
+        }
+
+        rHtml += '<li>ℹ Initial cash required is ₹' + formatShortIndian(initialCash) + ' (DP + Buying Costs) before interiors.</li>';
+
+        if (appPct >= 6) {
+            rHtml += '<li>✓ Assumed appreciation rate of ' + appPct.toFixed(1) + '%/yr creates estimated ₹' + formatShortIndian(capGain) + ' capital gain in ' + holdingYears + ' years.</li>';
+        }
+
+        reasonsEl.innerHTML = rHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        syncUI();
+    });
+    </script>
+
+<script src="../../website.js?v=20260820_flush_v125" defer></script>
+<script src="../../lead-form.min.js?v=v135" defer></script>
+</body>
+</html>
