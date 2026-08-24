@@ -599,3 +599,49 @@ body.page-404 .error-404-section{
     object-position: right center;
     z-index: 0;
 }
+
+
+/* --- USER REQUESTED HEADER UPDATES --- */
+
+/* 1. Reduce header to 100px and add height transition */
+.header-nav {
+    height: 100px !important;
+    transition: height 300ms ease, background 300ms ease, box-shadow 300ms ease, border-color 300ms ease !important;
+}
+.nav-container {
+    height: 100px !important;
+    transition: height 300ms ease !important;
+}
+
+/* 5. Implement sticky compact header at ~74px on scroll */
+.header-nav.scrolled {
+    height: 74px !important;
+}
+.header-nav.scrolled .nav-container {
+    height: 74px !important;
+}
+
+/* 2. Tighten nav spacing to ~36px */
+/* The current nav links have padding + gap. Let's force gap to 36px and zero horizontal padding to be precise. */
+.nav-links {
+    gap: 36px !important;
+}
+.nav-links a {
+    padding: 6px 0 !important;
+}
+
+/* 4. Reduce CTA to ~230 x 54px in the header */
+.header-nav .nav-cta-btn {
+    width: 230px !important;
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+/* If they want it to scale down slightly when scrolled, we can do it, but let's stick to 54px */
+.header-nav.scrolled .nav-cta-btn {
+    height: 54px !important;
+    min-height: 54px !important;
+}
