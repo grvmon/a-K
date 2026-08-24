@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 80C Tax Savings Calculator – Calculate 80C Tax Benefit | acreNkey</title>
+
+    <meta name="description" content="Calculate your Section 80C deduction, remaining ₹1.5 lakh limit and estimated tax savings from LIC, EPF, PPF, ELSS, tuition, home-loan principal and other eligible investments.">
+    <meta name="keywords" content="section 80c tax savings calculator, 80c deduction calculator, old vs new tax regime 80c, 80c tax benefit calculator, elss tax savings calculator, home loan principal 80c deduction, acrenkey tax calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/section-80c-tax-savings-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Section 80C Tax Savings Calculator | acreNkey">
+    <meta property="og:description" content="Calculate your Section 80C deduction, remaining ₹1.5 lakh limit and estimated tax savings under the Old Tax Regime.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/section-80c-tax-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Section 80C Tax Savings Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate your Section 80C deduction, remaining ₹1.5 lakh limit and estimated tax savings under the Old Tax Regime.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Section 80C Tax Savings Calculator","description":"Calculate Section 80C deduction, remaining ₹1.5 lakh limit and estimated tax savings across LIC, EPF, PPF, ELSS, tuition fees and home loan principal.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/section-80c-tax-savings-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Section 80C Tax Savings Calculator","item":"https://acrenkey.com/calculators/section-80c-tax-savings-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Section 80C available under the New Tax Regime?","acceptedAnswer":{"@type":"Answer","text":"For AY 2026-27, Section 80C deductions are not available under the standard New Tax Regime calculation. Section 80C can only be claimed under the Old Tax Regime."}},{"@type":"Question","name":"Is the ₹1.5 Lakh Section 80C limit separate for each investment?","acceptedAnswer":{"@type":"Answer","text":"No. The ₹1.5 lakh limit is a combined ceiling across all eligible Section 80C investments (LIC, EPF, PPF, ELSS, tuition fees, NSC, home loan principal repayment, etc.)."}},{"@type":"Question","name":"Is tax deduction equal to actual tax saved?","acceptedAnswer":{"@type":"Answer","text":"No. A tax deduction reduces your total taxable income. Your actual tax saving equals the deduction multiplied by your applicable marginal tax rate (e.g., ₹1,50,000 deduction at a 30% slab rate = ₹45,000 tax saving)."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 195px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Expandable Accordion */
+    .ak-expandable-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Table */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Regime Comparison Table */
+    .ak-regime-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .ak-regime-table th { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); color: #E5C178; font-weight: 700; }
+    .ak-regime-table td { padding: 0.45rem 0.5rem; border-bottom: 1px dashed rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); }
+    .ak-regime-table tr:last-child td { border-bottom: none; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 155px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Section 80C Tax Savings Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Section 80C Tax Savings Calculator</h1>
+                <p class="ak-calc-sub-text">Calculate your eligible Section 80C deduction, remaining limit and estimated tax savings under the Old Tax Regime.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Tax &amp; Investment Inputs</h2>
+                </div>
+
+                <!-- Section 1: Assessment Year & Tax Regime -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Tax Regime &amp; Assessment Year</div>
+
+                <!-- Assessment Year -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            Assessment Year
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="aySelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="AY 2026-27" selected>AY 2026–27 (FY 2025-26)</option>
+                                <option value="AY 2025-26">AY 2025–26 (FY 2024-25)</option>
+                                <option value="AY 2024-25">AY 2024–25 (FY 2023-24)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tax Regime Toggle -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Tax Regime Selection
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="regimeSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="Compare Both" selected>Compare Both</option>
+                                <option value="Old Tax Regime">Old Tax Regime</option>
+                                <option value="New Tax Regime">New Tax Regime</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Section 80C deductions apply under the Old Tax Regime (excluded under standard New Regime rules).</div>
+                </div>
+
+                <!-- Section 2: Income & Marginal Tax Rate -->
+                <div class="ak-section-divider-title">2. Income &amp; Tax Rate</div>
+
+                <!-- Annual Taxable Income -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Annual Taxable Income
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="taxableIncomeInput" class="ak-new-input has-prefix" value="12,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter your estimated taxable income for the relevant assessment year.</div>
+                </div>
+
+                <!-- Tax Rate Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Tax Rate Mode
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="taxRateModeSelect" class="ak-new-select" onchange="onTaxRateModeChange(this.value)">
+                                <option value="Manual" selected>Manual Rate</option>
+                                <option value="Automatic">Automatic Slabs</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applicable Marginal Tax Rate -->
+                <div class="ak-new-input-row" id="marginalRateRow">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Applicable Marginal Tax Rate
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="marginalTaxRateSelect" class="ak-new-select" onchange="onMarginalRateSelectChange(this.value)">
+                                <option value="30" selected>30% Slab</option>
+                                <option value="25">25% Slab</option>
+                                <option value="20">20% Slab</option>
+                                <option value="15">15% Slab</option>
+                                <option value="10">10% Slab</option>
+                                <option value="5">5% Slab</option>
+                                <option value="0">0% Slab</option>
+                                <option value="Custom">Custom Rate...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Illustrative marginal rate — select the rate applicable to your taxable income.</div>
+                </div>
+
+                <!-- Custom Tax Rate Input (Hidden by default) -->
+                <div class="ak-new-input-row" id="customRateRow" style="display: none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">edit</span>
+                            Custom Tax Rate (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="customTaxRateInput" class="ak-new-input has-suffix" value="30" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Your 80C Investments -->
+                <div class="ak-section-divider-title ak-expandable-header">
+                    <span>3. Your 80C Investments</span>
+                    <span style="font-size:0.75rem; text-transform:none; font-weight:600; color:var(--deep-navy);">Combined Limit: ₹1.5 Lakh</span>
+                </div>
+
+                <!-- Life Insurance Premium -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">shield</span>
+                            Life Insurance Premium
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="licInput" class="ak-new-input has-prefix" value="20,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EPF Contribution -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">work</span>
+                            EPF Contribution
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="epfInput" class="ak-new-input has-prefix" value="40,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PPF Contribution -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            PPF Contribution
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="ppfInput" class="ak-new-input has-prefix" value="20,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ELSS Investment -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">show_chart</span>
+                            ELSS Investment
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="elssInput" class="ak-new-input has-prefix" value="30,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eligible Tuition Fees -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">school</span>
+                            Eligible Tuition Fees
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="tuitionInput" class="ak-new-input has-prefix" value="10,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter only tuition fees that qualify under Section 80C rules (max 2 children, full-time education).</div>
+                </div>
+
+                <!-- NSC Investment -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                            NSC Investment
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="nscInput" class="ak-new-input has-prefix" value="0" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Loan Principal Repaid -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            Home Loan Principal Repaid
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="homeLoanPrincipalInput" class="ak-new-input has-prefix" value="50,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter the principal portion repaid during the relevant financial year. Do not include interest.</div>
+                </div>
+
+                <!-- Other Eligible 80C Investments -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">add_card</span>
+                            Other Eligible 80C Investments
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherEligibleInput" class="ak-new-input has-prefix" value="0" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter SCSS, tax-saving FDs, stamp duty/registration fees or other qualifying 80C payments.</div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">ESTIMATED 80C TAX SAVINGS SUMMARY</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="primaryTaxSavingVal">₹45,000</div>
+                <div class="ak-emi-subtext" id="primaryTaxSavingSub">Estimated Annual Tax Saving (Old Tax Regime @ 30% Slab)</div>
+
+                <!-- Section 80C Combined Limit Utilization Progress Bar -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>Section 80C Limit (₹1,50,000)</span>
+                        <span id="limitUtilPercentage">100% Utilized</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="limitUtilFill" style="width: 100%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="limitUtilUsed">₹1,50,000 Claimed</span>
+                        <span id="limitUtilRemaining">₹0 Remaining Capacity</span>
+                    </div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Investments</div>
+                        <div class="ak-snap-val" id="snapTotalInvestments">₹1,70,000</div>
+                        <div class="ak-snap-sub">Sum of 80C entries</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Eligible Deduction</div>
+                        <div class="ak-snap-val" id="snapEligibleDeduction" style="color: #E5C178;">₹1,50,000</div>
+                        <div class="ak-snap-sub">Capped at ₹1.5 Lakh</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Remaining 80C Limit</div>
+                        <div class="ak-snap-val" id="snapRemainingLimit">₹0</div>
+                        <div class="ak-snap-sub">Unused capacity</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Above 80C Cap (Excess)</div>
+                        <div class="ak-snap-val" id="snapExcessInvestment">₹20,000</div>
+                        <div class="ak-snap-sub">No extra tax benefit</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Investment Cost</div>
+                        <div class="ak-snap-val" id="snapEffectiveCost">₹1,05,000</div>
+                        <div class="ak-snap-sub">After tax benefit</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Tax Saving Rate</div>
+                        <div class="ak-snap-val" id="snapSavingRate">30.0%</div>
+                        <div class="ak-snap-sub">At selected rate</div>
+                    </div>
+                </div>
+
+                <!-- Breakdown & Regime Comparison Card -->
+                <div class="ak-factors-card" id="regimeComparisonContainer">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Old vs New Regime 80C Comparison
+                    </div>
+                    <table class="ak-regime-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Old Regime</th>
+                                <th>New Regime</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Total 80C Investments</td>
+                                <td id="tblOldTotal">₹1,70,000</td>
+                                <td id="tblNewTotal">₹1,70,000</td>
+                            </tr>
+                            <tr>
+                                <td>Eligible 80C Deduction</td>
+                                <td id="tblOldDeduction" style="font-weight:700; color:#E5C178;">₹1,50,000</td>
+                                <td id="tblNewDeduction">₹0</td>
+                            </tr>
+                            <tr>
+                                <td>Remaining 80C Limit</td>
+                                <td id="tblOldRemaining">₹0</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Estimated Tax Saving</td>
+                                <td id="tblOldSaving" style="font-weight:700; color:#10B981;">₹45,000</td>
+                                <td id="tblNewSaving">₹0</td>
+                            </tr>
+                            <tr>
+                                <td>Effective Investment Cost</td>
+                                <td id="tblOldEffective">₹1,05,000</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="ak-waterfall-step highlight" style="margin-top:0.75rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.15);">
+                        <span>Additional 80C Benefit Under Old Regime:</span>
+                        <span id="tblDifferenceVal" style="font-size:1.05rem; color:#E5C178;">+₹45,000</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Insights & Dynamic Bullet List -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Key Insights &amp; Observations</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Tax Disclaimer Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Important Tax Disclaimer:</strong> This calculator provides an indicative estimate based on the inputs and applicable tax regime. Actual eligibility depends on the nature of the investment, taxpayer eligibility, payment conditions, assessment year and other provisions of the Income Tax Act. Verify your final deduction with the Income Tax Department or a qualified tax professional.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>What Is Section 80C?</h2>
+        <p>Section 80C of the Indian Income Tax Act allows eligible individual taxpayers and Hindu Undivided Families (HUFs) under the <strong>Old Tax Regime</strong> to claim tax deductions for specified investments, savings schemes, and eligible household payments. By reducing your total taxable income, Section 80C helps lower your final income tax liability.</p>
+
+        <h2>What Counts Toward the Combined Limit?</h2>
+        <p>The ₹1.5 lakh Section 80C allowance is a <strong>combined maximum limit</strong> across all eligible investment categories, not an isolated ₹1.5 lakh deduction for each separate category.</p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Investment / Payment Category</th>
+                    <th>Entered Amount</th>
+                    <th>Included in Section 80C Calculation</th>
+                </tr>
+            </thead>
+            <tbody id="educationalTableBody">
+                <tr><td>Life Insurance Premium</td><td id="edLicVal">₹20,000</td><td>Yes (Subject to policy terms &amp; capital sum assured limits)</td></tr>
+                <tr><td>Employees' Provident Fund (EPF)</td><td id="edEpfVal">₹40,000</td><td>Yes (Employee's contribution only)</td></tr>
+                <tr><td>Public Provident Fund (PPF)</td><td id="edPpfVal">₹20,000</td><td>Yes (Subject to annual deposit limits)</td></tr>
+                <tr><td>ELSS Mutual Funds</td><td id="edElssVal">₹30,000</td><td>Yes (3-year lock-in period applies)</td></tr>
+                <tr><td>Eligible Tuition Fees</td><td id="edTuitionVal">₹10,000</td><td>Yes (Tuition fees for up to 2 children for full-time education)</td></tr>
+                <tr><td>National Savings Certificate (NSC)</td><td id="edNscVal">₹0</td><td>Yes (Principal investment &amp; accrued interest reinvested)</td></tr>
+                <tr><td>Home Loan Principal Repaid</td><td id="edHomeLoanVal">₹50,000</td><td>Yes (Principal portion repaid on self-occupied or let-out property)</td></tr>
+                <tr><td>Other Eligible 80C Investments</td><td id="edOtherVal">₹0</td><td>Yes (SCSS, 5-Yr Tax-Saving FDs, Stamp Duty &amp; Registration fees)</td></tr>
+            </tbody>
+        </table>
+
+        <h2>The ₹1.5 Lakh Limit Is Combined</h2>
+        <p>A common misconception among taxpayers is believing that LIC, PPF, ELSS, and Home Loan Principal each receive their own separate ₹1.5 lakh deduction allowance. In reality, the Income Tax Department evaluates Sections 80C, 80CCC, and 80CCD(1) under a single combined cap of ₹1,50,000 per financial year.</p>
+        <p>For example, if you contribute ₹50,000 to PPF, pay ₹50,000 towards Life Insurance, and repay ₹50,000 in home-loan principal, your total eligible investment reaches ₹1,50,000. You have fully utilized your Section 80C limit. Investing further in ELSS or NSC in the same financial year will not produce any extra tax deduction under Section 80C.</p>
+
+        <h2>Tax Deduction vs. Actual Tax Saving</h2>
+        <p>It is vital to distinguish between a <strong>Tax Deduction</strong> and an <strong>Actual Tax Saving</strong>:</p>
+        <ul>
+            <li><strong>Tax Deduction (e.g. ₹1,50,000):</strong> This is the amount subtracted from your gross taxable income. It does <em>not</em> mean you get ₹1,50,000 refunded to your bank account.</li>
+            <li><strong>Actual Tax Saving:</strong> Your actual financial saving equals the eligible deduction multiplied by your applicable marginal tax rate. At a 30% tax slab, a ₹1,50,000 deduction saves you <code>₹1,50,000 × 30% = ₹45,000</code> in income tax (plus applicable health &amp; education cess).</li>
+        </ul>
+
+        <h2>Section 80C: Old vs New Tax Regime</h2>
+        <p>Under <strong>AY 2026–27 (FY 2025–26)</strong> validation guidelines issued by the Income Tax Department:</p>
+        <ul>
+            <li><strong>Old Tax Regime:</strong> Section 80C deductions remain available up to the combined limit of ₹1,50,000.</li>
+            <li><strong>New Tax Regime:</strong> Section 80C deductions are <strong>not allowed</strong> under the standard New Tax Regime calculation. The New Tax Regime offers lower concessional tax slab rates in exchange for foregoing most itemized deductions like Section 80C, 80D, and HRA.</li>
+        </ul>
+
+        <h2>7-Step Guide to Optimizing Your 80C Position</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 01</div>
+                <div class="ak-step-title">Audit Mandatory Deductions</div>
+                <p class="ak-step-desc">First account for mandatory contributions like Employee Provident Fund (EPF) deducted automatically from your monthly salary slip.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 02</div>
+                <div class="ak-step-title">Add Committed Payments</div>
+                <p class="ak-step-desc">Include existing recurring payments such as life insurance premiums, children's school tuition fees, and home loan principal EMIs.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 03</div>
+                <div class="ak-step-title">Calculate Existing Total</div>
+                <p class="ak-step-desc">Sum your mandatory EPF, committed premiums, tuition fees, and home loan principal to find your base 80C utilization.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 04</div>
+                <div class="ak-step-title">Identify Unused Capacity</div>
+                <p class="ak-step-desc">Subtract your existing total from ₹1,50,000 to determine how much unutilized capacity remains for voluntary investments.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 05</div>
+                <div class="ak-step-title">Evaluate Investment Options</div>
+                <p class="ak-step-desc">If capacity remains, choose suitable voluntary instruments like PPF (risk-free tax-exempt interest) or ELSS (equity growth with 3-year lock-in).</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 06</div>
+                <div class="ak-step-title">Estimate Net Tax Savings</div>
+                <p class="ak-step-desc">Multiply your eligible deduction by your marginal tax slab rate to measure exact cash tax relief.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 07</div>
+                <div class="ak-step-title">Compare Old vs New Regime</div>
+                <p class="ak-step-desc">Compare your overall tax liability under the Old Regime (with 80C, 24b, 80D) against the New Regime before filing your tax return.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Can I claim home loan principal under Section 80C if I have already invested ₹1.5 Lakh in PPF and ELSS?</h3>
+            <p>You can enter the home loan principal amount, but your total Section 80C deduction remains capped at ₹1,50,000. If PPF and ELSS already total ₹1,50,000, the home loan principal will fall into the excess investment category and will not generate additional tax savings under Section 80C.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>Are tuition fees paid for coaching classes or higher education eligible under Section 80C?</h3>
+            <p>No. Section 80C covers tuition fees paid to a school, college, university or educational institution situated in India for full-time education for up to two children. Development fees, donation amounts, coaching fees, or overseas education fees do not qualify under Section 80C.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>What happens to Section 80C if I switch to the New Tax Regime?</h3>
+            <p>Under the New Tax Regime (Section 115BAC), Section 80C deductions are dis-allowed. While your investments in PPF, ELSS or EPF will continue according to their respective rules, they will not reduce your taxable income under the New Tax Regime.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-tax-benefit-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">percent</span></div>
+                    <div class="ak-fcard-title">Home Loan Tax Benefit Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Estimate combined tax savings under Section 80C (principal) and Section 24(b) (interest) for Old vs New Regime.</p>
+            </a>
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
+                    <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and full loan amortization schedule.</p>
+            </a>
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">real_estate_agent</span></div>
+                    <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Determine maximum property purchase price based on gross household income and monthly liabilities.</p>
+            </a>
+            <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">approval</span></div>
+                    <div class="ak-fcard-title">Loan Eligibility Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Find your maximum housing loan borrowing capacity based on FOIR and banking norms.</p>
+            </a>
+            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <p class="ak-fcard-desc">Uncover registration fees, stamp duty, interior setup, and hidden initial property costs.</p>
+            </a>
+            <a href="/calculators/capital-gains-tax-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Capital Gains Tax Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate Short-Term and Long-Term Capital Gains (STCG/LTCG) tax on real estate sales.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/home-loan-tax-benefit-calculator/">Home Loan Tax Benefit Calculator</a></li><li><a href="/calculators/section-80c-tax-savings-calculator/">Section 80C Tax Calculator</a></li><li><a href="/calculators/home-affordability-calculator/">Home Affordability Calculator</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. TAX RULE ENGINE CONFIGURATION (SECTION_80C_CONFIG) ---
+    const SECTION_80C_CONFIG = {
+        defaultAY: "AY 2026-27",
+        rules: {
+            "AY 2026-27": {
+                limit: 150000,
+                oldRegimeEnabled: true,
+                newRegimeEnabled: false,
+                notes: "For AY 2026-27 (FY 2025-26), Section 80C deduction is capped at ₹1,50,000 under the Old Tax Regime and unavailable under the standard New Tax Regime."
+            },
+            "AY 2025-26": {
+                limit: 150000,
+                oldRegimeEnabled: true,
+                newRegimeEnabled: false,
+                notes: "For AY 2025-26 (FY 2024-25), Section 80C deduction is capped at ₹1,50,000 under the Old Tax Regime."
+            },
+            "AY 2024-25": {
+                limit: 150000,
+                oldRegimeEnabled: true,
+                newRegimeEnabled: false,
+                notes: "For AY 2024-25 (FY 2023-24), Section 80C deduction is capped at ₹1,50,000 under the Old Tax Regime."
+            }
+        }
+    };
+
+    // --- 2. PURE CALCULATION FUNCTIONS ---
+    function parseNumericValue(val) {
+        if (!val) return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : Math.max(0, val);
+        const str = String(val).replace(/[^0-9.]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : Math.max(0, num);
+    }
+
+    function formatCurrency(num) {
+        const clean = Math.round(parseNumericValue(num));
+        return '₹' + clean.toLocaleString('en-IN');
+    }
+
+    function calculateTotal80C(inputs) {
+        const lic = parseNumericValue(inputs.lic);
+        const epf = parseNumericValue(inputs.epf);
+        const ppf = parseNumericValue(inputs.ppf);
+        const elss = parseNumericValue(inputs.elss);
+        const tuition = parseNumericValue(inputs.tuition);
+        const nsc = parseNumericValue(inputs.nsc);
+        const homeLoan = parseNumericValue(inputs.homeLoan);
+        const other = parseNumericValue(inputs.other);
+        return lic + epf + ppf + elss + tuition + nsc + homeLoan + other;
+    }
+
+    function calculateEligible80C(total80C, limit = 150000, isOldRegime = true) {
+        if (!isOldRegime) return 0;
+        return Math.min(total80C, limit);
+    }
+
+    function calculateRemaining80CLimit(total80C, limit = 150000) {
+        return Math.max(0, limit - total80C);
+    }
+
+    function calculateExcess80C(total80C, limit = 150000) {
+        return Math.max(0, total80C - limit);
+    }
+
+    function calculate80CUtilization(total80C, limit = 150000) {
+        if (limit <= 0) return 0;
+        const util = (total80C / limit) * 100;
+        return Math.min(100, Math.max(0, util));
+    }
+
+    function calculateTaxSaving(eligibleDeduction, marginalTaxRateDecimal) {
+        const rate = Math.max(0, Math.min(1, parseNumericValue(marginalTaxRateDecimal)));
+        return eligibleDeduction * rate;
+    }
+
+    function calculateEffectiveInvestmentCost(eligibleDeduction, taxSaving) {
+        return Math.max(0, eligibleDeduction - taxSaving);
+    }
+
+    function compare80CBenefits(inputs, ay = "AY 2026-27", marginalRateDecimal = 0.30) {
+        const config = SECTION_80C_CONFIG.rules[ay] || SECTION_80C_CONFIG.rules["AY 2026-27"];
+        const limit = config.limit;
+        const total = calculateTotal80C(inputs);
+
+        // Old Regime
+        const oldEligible = calculateEligible80C(total, limit, true);
+        const oldRemaining = calculateRemaining80CLimit(total, limit);
+        const oldExcess = calculateExcess80C(total, limit);
+        const oldUtil = calculate80CUtilization(total, limit);
+        const oldTaxSaving = calculateTaxSaving(oldEligible, marginalRateDecimal);
+        const oldEffectiveCost = calculateEffectiveInvestmentCost(oldEligible, oldTaxSaving);
+
+        // New Regime
+        const newEligible = calculateEligible80C(total, limit, false); // ₹0
+        const newTaxSaving = 0;
+
+        const benefitDifference = oldTaxSaving - newTaxSaving;
+
+        return {
+            total,
+            limit,
+            old: {
+                eligible: oldEligible,
+                remaining: oldRemaining,
+                excess: oldExcess,
+                utilization: oldUtil,
+                taxSaving: oldTaxSaving,
+                effectiveCost: oldEffectiveCost
+            },
+            new: {
+                eligible: newEligible,
+                taxSaving: newTaxSaving
+            },
+            benefitDifference
+        };
+    }
+
+    // Automatic Tax Slab Helper for Old Regime
+    function getAutomaticMarginalRateOldRegime(income) {
+        if (income > 1000000) return 0.30;
+        if (income > 500000) return 0.20;
+        if (income > 250000) return 0.05;
+        return 0.00;
+    }
+
+    // --- 3. UI STATE & INTERACTION LOGIC ---
+    function getFormInputs() {
+        return {
+            ay: document.getElementById('aySelect').value,
+            regime: document.getElementById('regimeSelect').value,
+            income: parseNumericValue(document.getElementById('taxableIncomeInput').value),
+            rateMode: document.getElementById('taxRateModeSelect').value,
+            marginalRateSelect: document.getElementById('marginalTaxRateSelect').value,
+            customRateInput: parseNumericValue(document.getElementById('customTaxRateInput').value),
+            lic: parseNumericValue(document.getElementById('licInput').value),
+            epf: parseNumericValue(document.getElementById('epfInput').value),
+            ppf: parseNumericValue(document.getElementById('ppfInput').value),
+            elss: parseNumericValue(document.getElementById('elssInput').value),
+            tuition: parseNumericValue(document.getElementById('tuitionInput').value),
+            nsc: parseNumericValue(document.getElementById('nscInput').value),
+            homeLoan: parseNumericValue(document.getElementById('homeLoanPrincipalInput').value),
+            other: parseNumericValue(document.getElementById('otherEligibleInput').value)
+        };
+    }
+
+    function getActiveMarginalRateDecimal(inputs) {
+        if (inputs.rateMode === 'Automatic') {
+            return getAutomaticMarginalRateOldRegime(inputs.income);
+        }
+        if (inputs.marginalRateSelect === 'Custom') {
+            return Math.min(100, Math.max(0, inputs.customRateInput)) / 100;
+        }
+        return parseNumericValue(inputs.marginalRateSelect) / 100;
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            const cursorPosition = inputElem.selectionStart;
+            const originalLength = inputElem.value.length;
+            const rawVal = inputElem.value.replace(/[^0-9.]/g, '');
+            if (rawVal !== '') {
+                const num = parseFloat(rawVal);
+                if (!isNaN(num)) {
+                    inputElem.value = num.toLocaleString('en-IN');
+                }
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onInputChange() {
+        updateCalculatorResults();
+    }
+
+    function onTaxRateModeChange(mode) {
+        const marginalRateRow = document.getElementById('marginalRateRow');
+        const customRateRow = document.getElementById('customRateRow');
+        if (mode === 'Automatic') {
+            marginalRateRow.style.opacity = '0.5';
+            marginalRateRow.style.pointerEvents = 'none';
+            customRateRow.style.display = 'none';
+        } else {
+            marginalRateRow.style.opacity = '1';
+            marginalRateRow.style.pointerEvents = 'auto';
+            if (document.getElementById('marginalTaxRateSelect').value === 'Custom') {
+                customRateRow.style.display = 'block';
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onMarginalRateSelectChange(val) {
+        const customRateRow = document.getElementById('customRateRow');
+        if (val === 'Custom') {
+            customRateRow.style.display = 'block';
+        } else {
+            customRateRow.style.display = 'none';
+        }
+        updateCalculatorResults();
+    }
+
+    function updateCalculatorResults() {
+        const inputs = getFormInputs();
+        const rateDecimal = getActiveMarginalRateDecimal(inputs);
+        const ratePercent = (rateDecimal * 100).toFixed(1).replace('.0', '') + '%';
+
+        const result = compare80CBenefits(inputs, inputs.ay, rateDecimal);
+
+        // Update Primary Result Box
+        const primaryValElem = document.getElementById('primaryTaxSavingVal');
+        const primarySubElem = document.getElementById('primaryTaxSavingSub');
+        const regimeContainer = document.getElementById('regimeComparisonContainer');
+
+        if (inputs.regime === 'New Tax Regime') {
+            primaryValElem.innerText = '₹0';
+            primarySubElem.innerText = 'Estimated Section 80C Tax Saving (New Tax Regime rules disallow 80C deductions)';
+            regimeContainer.style.display = 'none';
+        } else if (inputs.regime === 'Old Tax Regime') {
+            primaryValElem.innerText = formatCurrency(result.old.taxSaving);
+            primarySubElem.innerText = `Estimated Annual Tax Saving (Old Tax Regime @ ${ratePercent} Marginal Rate)`;
+            regimeContainer.style.display = 'none';
+        } else { // Compare Both
+            primaryValElem.innerText = formatCurrency(result.old.taxSaving);
+            primarySubElem.innerText = `Estimated 80C Tax Saving — Old Regime (@ ${ratePercent} Slab) vs ₹0 under New Regime`;
+            regimeContainer.style.display = 'block';
+        }
+
+        // Limit Utilization Bar
+        const limitFill = document.getElementById('limitUtilFill');
+        const limitPctText = document.getElementById('limitUtilPercentage');
+        const limitUsedText = document.getElementById('limitUtilUsed');
+        const limitRemText = document.getElementById('limitUtilRemaining');
+
+        const utilVal = result.old.utilization;
+        limitFill.style.width = utilVal + '%';
+        limitPctText.innerText = utilVal.toFixed(0) + '% Utilized';
+        limitUsedText.innerText = formatCurrency(result.old.eligible) + ' Claimed';
+        limitRemText.innerText = formatCurrency(result.old.remaining) + ' Remaining Capacity';
+
+        // Snapshot Grid
+        document.getElementById('snapTotalInvestments').innerText = formatCurrency(result.total);
+        document.getElementById('snapEligibleDeduction').innerText = formatCurrency(inputs.regime === 'New Tax Regime' ? 0 : result.old.eligible);
+        document.getElementById('snapRemainingLimit').innerText = inputs.regime === 'New Tax Regime' ? 'N/A' : formatCurrency(result.old.remaining);
+        document.getElementById('snapExcessInvestment').innerText = formatCurrency(result.old.excess);
+        document.getElementById('snapEffectiveCost').innerText = inputs.regime === 'New Tax Regime' ? 'N/A' : formatCurrency(result.old.effectiveCost);
+        document.getElementById('snapSavingRate').innerText = inputs.regime === 'New Tax Regime' ? '0.0%' : ratePercent;
+
+        // Comparison Table (for Compare Both mode)
+        document.getElementById('tblOldTotal').innerText = formatCurrency(result.total);
+        document.getElementById('tblNewTotal').innerText = formatCurrency(result.total);
+        document.getElementById('tblOldDeduction').innerText = formatCurrency(result.old.eligible);
+        document.getElementById('tblNewDeduction').innerText = '₹0';
+        document.getElementById('tblOldRemaining').innerText = formatCurrency(result.old.remaining);
+        document.getElementById('tblOldSaving').innerText = formatCurrency(result.old.taxSaving);
+        document.getElementById('tblNewSaving').innerText = '₹0';
+        document.getElementById('tblOldEffective').innerText = formatCurrency(result.old.effectiveCost);
+        document.getElementById('tblDifferenceVal').innerText = '+' + formatCurrency(result.benefitDifference);
+
+        // Update Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        if (inputs.regime === 'New Tax Regime') {
+            insightsList.innerHTML += `<li><strong>New Tax Regime Selection:</strong> Section 80C deductions are excluded under the standard New Tax Regime calculation. Your investments exist, but yield ₹0 Section 80C tax deduction.</li>`;
+        }
+
+        if (result.total >= 150000) {
+            insightsList.innerHTML += `<li><strong>Full Limit Utilized:</strong> You have reached the ₹1.5 lakh combined Section 80C limit based on the investments entered. Additional eligible investments will not increase the Section 80C deduction beyond this cap.</li>`;
+        } else if (result.total > 0) {
+            insightsList.innerHTML += `<li><strong>Unused Capacity:</strong> You have approximately <strong>${formatCurrency(result.old.remaining)}</strong> of unused Section 80C capacity based on the amounts entered.</li>`;
+        } else {
+            insightsList.innerHTML += `<li><strong>Zero Investments Entered:</strong> You currently have the full ₹1.5 lakh Section 80C limit available based on the investments entered.</li>`;
+        }
+
+        if (inputs.homeLoan > 0) {
+            insightsList.innerHTML += `<li><strong>Home Loan Principal Note:</strong> Your home-loan principal repayment of ${formatCurrency(inputs.homeLoan)} is included within the combined Section 80C limit, rather than receiving a separate ₹1.5 lakh allowance.</li>`;
+        }
+
+        if (inputs.other >= 150000) {
+            insightsList.innerHTML += `<li><strong>Existing Investments Cap:</strong> Your existing eligible investments already use the full Section 80C limit, so additional home-loan principal or other 80C investments do not create additional Section 80C deduction in this calculation.</li>`;
+        }
+
+        if (rateDecimal === 0) {
+            insightsList.innerHTML += `<li><strong>0% Marginal Rate:</strong> The estimated tax saving is ₹0 because the selected marginal tax rate is 0%.</li>`;
+        } else {
+            insightsList.innerHTML += `<li><strong>Tax Saving vs Deduction:</strong> At an assumed marginal rate of ${ratePercent}, your eligible deduction of ${formatCurrency(result.old.eligible)} could reduce your income tax by approximately <strong>${formatCurrency(result.old.taxSaving)}</strong>.</li>`;
+        }
+
+        insightsList.innerHTML += `<li><strong>Regime Comparison Disclaimer:</strong> Based only on Section 80C deductions, the Old Regime provides ${formatCurrency(result.benefitDifference)} more estimated tax benefit. Your overall tax liability may differ after considering other deductions, exemptions, rebates, income sources and applicable tax rates.</li>`;
+
+        // Update Educational Table
+        document.getElementById('edLicVal').innerText = formatCurrency(inputs.lic);
+        document.getElementById('edEpfVal').innerText = formatCurrency(inputs.epf);
+        document.getElementById('edPpfVal').innerText = formatCurrency(inputs.ppf);
+        document.getElementById('edElssVal').innerText = formatCurrency(inputs.elss);
+        document.getElementById('edTuitionVal').innerText = formatCurrency(inputs.tuition);
+        document.getElementById('edNscVal').innerText = formatCurrency(inputs.nsc);
+        document.getElementById('edHomeLoanVal').innerText = formatCurrency(inputs.homeLoan);
+        document.getElementById('edOtherVal').innerText = formatCurrency(inputs.other);
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCalculatorResults();
+    });
+    </script>
+</body>
+</html>

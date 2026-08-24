@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflation-Adjusted Property Returns Calculator – Real Property Returns | acreNkey</title>
+
+    <meta name="description" content="Calculate your property's real returns after adjusting for inflation. Compare nominal appreciation, inflation-adjusted value, CAGR, rental income, expenses and net property returns.">
+    <meta name="keywords" content="inflation adjusted property returns calculator, real estate real cagr, property nominal vs real return, purchasing power real estate calculator, acrenkey investment calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/inflation-adjusted-property-returns-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inflation-Adjusted Property Returns Calculator | acreNkey">
+    <meta property="og:description" content="See how your property's value and returns change after adjusting for inflation, rental income, expenses and transaction costs.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/inflation-adjusted-property-returns-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inflation-Adjusted Property Returns Calculator | acreNkey">
+    <meta name="twitter:description" content="See how your property's value and returns change after adjusting for inflation, rental income, expenses and transaction costs.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Inflation-Adjusted Property Returns Calculator","description":"Calculate real property appreciation and net returns after adjusting future property values for inflation, rental income, and transaction costs.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/inflation-adjusted-property-returns-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Inflation-Adjusted Property Returns Calculator","item":"https://acrenkey.com/calculators/inflation-adjusted-property-returns-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate real property return after inflation?","acceptedAnswer":{"@type":"Answer","text":"Real property return is calculated using the Fisher equation: (1 + Nominal CAGR) / (1 + Inflation Rate) - 1. This converts future nominal rupee values into equivalent purchasing power in today's money."}},{"@type":"Question","name":"Why does nominal appreciation differ from real wealth growth?","acceptedAnswer":{"@type":"Answer","text":"Inflation reduces purchasing power over time. If a property appreciates at 7% annually while inflation averages 5%, the real annual purchasing power gain is approximately 1.90% p.a., not 2.00%."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Comparison Table Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Inflation-Adjusted Property Returns Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Inflation-Adjusted Property Returns Calculator</h1>
+                <p class="ak-calc-sub-text">See how your property's value and returns change after adjusting for inflation, rental income, expenses and transaction costs.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property &amp; Inflation Parameters</h2>
+                </div>
+
+                <!-- Section 1: Property Details -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Property Purchase Details</div>
+
+                <!-- Value Calculation Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Value Calculation Mode
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="valueModeSelect" class="ak-new-select" onchange="onValueModeChange(this.value)">
+                                <option value="Estimate" selected>Estimate via Appreciation %</option>
+                                <option value="Direct">Enter Known Future Value</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            Property Purchase Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="purchasePriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expected Appreciation % (Shown in Estimate Mode) -->
+                <div class="ak-new-input-row" id="appreciationRow">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Expected Annual Appreciation (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="appreciationInput" class="ak-new-input has-suffix" value="7.0" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Future Value (Hidden unless Direct Mode) -->
+                <div class="ak-new-input-row" id="directFutureValueRow" style="display: none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">sell</span>
+                            Direct Future Property Value
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="directFutureValueInput" class="ak-new-input has-prefix" value="1,96,71,514" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Holding Period -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">schedule</span>
+                            Holding Period (Years)
+                        </div>
+                        <div class="ak-new-input-box-wrapper" style="width:140px;">
+                            <input type="number" id="yearsInput" class="ak-new-input" value="10" min="1" max="50" oninput="onInputChange()">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Inflation Assumptions -->
+                <div class="ak-section-divider-title">2. Inflation Assumptions</div>
+
+                <!-- Annual Inflation Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">price_change</span>
+                            Annual Inflation Rate (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="inflationInput" class="ak-new-input has-suffix" value="5.0" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Assumed average annual inflation rate for discounting purchasing power.</div>
+                </div>
+
+                <!-- Section 3: Income & Cost Details (Optional) -->
+                <div class="ak-section-divider-title">3. Optional Rental Income &amp; Costs</div>
+
+                <!-- Include Rental Income Toggle -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            Include Rental Income &amp; Expenses?
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="includeRentalSelect" class="ak-new-select" onchange="onRentalToggleChange(this.value)">
+                                <option value="Yes" selected>Yes (Detailed Mode)</option>
+                                <option value="No">No (Capital Gain Only)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="rentalFieldsWrapper">
+                    <!-- Monthly Rent & Rent Growth -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">payments</span>
+                                Monthly Rent &amp; Rent Growth (%)
+                            </div>
+                            <div style="display:flex; gap:0.5rem; width:210px;">
+                                <input type="text" id="monthlyRentInput" class="ak-new-input has-prefix" style="width:115px;" value="35,000" oninput="formatAndCalculate(this)">
+                                <input type="text" id="rentGrowthInput" class="ak-new-input has-suffix" style="width:90px;" value="5.0" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Annual Property Expenses & Buying Costs -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">receipt_long</span>
+                                Annual Expenses &amp; Stamp Duty (₹)
+                            </div>
+                            <div style="display:flex; gap:0.5rem; width:210px;">
+                                <input type="text" id="annualExpensesInput" class="ak-new-input has-prefix" style="width:105px;" value="60,000" oninput="formatAndCalculate(this)">
+                                <input type="text" id="buyingCostsInput" class="ak-new-input has-prefix" style="width:100px;" value="7,00,000" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selling Cost Rate -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">sell</span>
+                                Selling Cost Rate (%)
+                            </div>
+                            <div class="ak-new-input-box-wrapper" style="width:140px;">
+                                <input type="text" id="sellingCostRateInput" class="ak-new-input has-suffix" value="2.0" oninput="formatAndCalculate(this)">
+                                <span class="suffix">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">REAL PURCHASING POWER SUMMARY</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="primaryRealCagrVal">1.90% p.a.</div>
+                <div class="ak-emi-subtext" id="primaryRealCagrSub">Real Inflation-Adjusted CAGR (After 5.0% Inflation)</div>
+
+                <!-- Wealth Payoff Bar -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>Purchasing Power Retention</span>
+                        <span id="verdictBadge" style="color: #10B981;">POSITIVE REAL RETURN</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="realFill" style="width: 61%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="nominalValText">Nominal FV: ₹1,96,71,514</span>
+                        <span id="realValText">Today's Rupees: ₹1,20,76,558</span>
+                    </div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Purchase Price</div>
+                        <div class="ak-snap-val" id="snapPurchasePrice">₹1,00,00,000</div>
+                        <div class="ak-snap-sub">Initial outlay</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Nominal Future Value</div>
+                        <div class="ak-snap-val" id="snapNominalFv">₹1,96,71,514</div>
+                        <div class="ak-snap-sub">@ 7.0% Appreciation</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Nominal CAGR</div>
+                        <div class="ak-snap-val" id="snapNominalCagr">7.00% p.a.</div>
+                        <div class="ak-snap-sub">Unadjusted annual rate</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Inflation-Adjusted Value</div>
+                        <div class="ak-snap-val" id="snapRealValue" style="color: #10B981;">₹1,20,76,558</div>
+                        <div class="ak-snap-sub">In today's purchasing power</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Real CAGR</div>
+                        <div class="ak-snap-val" id="snapRealCagr" style="color: #E5C178;">1.90% p.a.</div>
+                        <div class="ak-snap-sub">After inflation adjustment</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Purchasing Power Impact</div>
+                        <div class="ak-snap-val" id="snapInflationImpact" style="color: #EF4444;">-₹75,94,956</div>
+                        <div class="ak-snap-sub">Inflation erosion</div>
+                    </div>
+                </div>
+
+                <!-- Side-by-Side Comparison Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Nominal vs. Real Inflation-Adjusted Breakdown
+                    </div>
+                    <div class="ak-waterfall-step" style="font-weight:700; color:#E5C178;">
+                        <span>Return Metric</span>
+                        <span>Nominal Value</span>
+                        <span>Today's Purchasing Power</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Property Ending Asset Value:</span>
+                        <span id="tblNominalFv">₹1,96,71,514</span>
+                        <span id="tblRealFv">₹1,20,76,558</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Capital Appreciation Gain:</span>
+                        <span id="tblNominalGain">₹96,71,514</span>
+                        <span id="tblRealGain">₹20,76,558</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Net Rental Cash Flow:</span>
+                        <span id="tblNetRentalNominal">₹39,76,514</span>
+                        <span id="tblNetRentalReal">₹24,41,250</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Transaction Costs (Stamp/Sell):</span>
+                        <span id="tblCostsNominal" style="color:#EF4444;">-₹10,93,430</span>
+                        <span id="tblCostsReal" style="color:#EF4444;">-₹6,71,278</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight">
+                        <span>Net Annualized Return (CAGR):</span>
+                        <span id="tblNominalNetCagr" style="font-size:0.95rem; color:#FFF;">7.50% p.a.</span>
+                        <span id="tblRealNetCagr" style="font-size:0.95rem; color:#10B981;">2.38% p.a.</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Insights & Observations -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Key Insights &amp; Observations</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Tax Disclaimer Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Important Inflation Disclaimer:</strong> Property appreciation, rental yields, and future inflation rates are estimates based on your entered assumptions. Real estate values and purchasing power vary by location, micro-market conditions, and economic cycles. This calculator does not account for capital gains taxes unless explicitly included, and does not constitute financial advice.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>Why Inflation Matters When Evaluating Property Returns</h2>
+        <p>A property rising from ₹1.00 Crore to ₹1.96 Crore over 10 years represents a headline <strong>Nominal CAGR of 7.0%</strong>. However, if general consumer inflation averages 5.0% per year over the same decade, the actual increase in your purchasing power is significantly lower than 7%.</p>
+
+        <h2>The Exact Fisher Equation for Real Return</h2>
+        <p>In financial mathematics, simply subtracting inflation from nominal return ($7\% - 5\% = 2\%$) is an imprecise linear approximation. The true real return is calculated using the compound <strong>Fisher Equation</strong>:</p>
+        <p><code>Real CAGR = [(1 + Nominal CAGR) / (1 + Inflation Rate)] − 1</code></p>
+        <p>For a 7.0% nominal return and 5.0% inflation: <code>(1.07 / 1.05) − 1 = 1.9048% p.a.</code></p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Holding Period</th>
+                    <th>Nominal Property Value</th>
+                    <th>Inflation Discount Factor (@ 5%)</th>
+                    <th>Real Value in Today's Money</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Year 0 (Today)</strong></td>
+                    <td>₹1,00,00,000</td>
+                    <td>1.0000</td>
+                    <td>₹1,00,00,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Year 5</strong></td>
+                    <td>₹1,40,25,517</td>
+                    <td>1.2763</td>
+                    <td>₹1,09,89,325</td>
+                </tr>
+                <tr>
+                    <td><strong>Year 10</strong></td>
+                    <td>₹1,96,71,514</td>
+                    <td>1.6289</td>
+                    <td>₹1,20,76,558</td>
+                </tr>
+                <tr>
+                    <td><strong>Year 15</strong></td>
+                    <td>₹2,75,90,315</td>
+                    <td>2.0789</td>
+                    <td>₹1,32,71,532</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Why Rental Income and Costs Matter for Real Return</h2>
+        <p>Capital appreciation alone is only one component of property return. Including net rental income (which compounds with inflation) and deducting acquisition stamp duty, maintenance, and exit brokerage yields your true <strong>Real Net CAGR</strong>.</p>
+
+        <h2>5-Step Framework to Evaluate Real Property Wealth</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 01</div>
+                <div class="ak-step-title">Separate Nominal from Real</div>
+                <p class="ak-step-desc">Always convert future property sale proceeds into today's purchasing power using realistic inflation figures.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 02</div>
+                <div class="ak-step-title">Model Rent Escalation</div>
+                <p class="ak-step-desc">Factor annual rental growth (typically 5%–10% every 11–36 months) to capture inflation protection on cash flows.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 03</div>
+                <div class="ak-step-title">Deduct Upfront Transaction Costs</div>
+                <p class="ak-step-desc">Include 5%–7% stamp duty and registration fees in your initial investment base.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 04</div>
+                <div class="ak-step-title">Subtract Recurring Maintenance</div>
+                <p class="ak-step-desc">Deduct annual society maintenance, property tax, and vacancy periods from gross rental income.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 05</div>
+                <div class="ak-step-title">Evaluate Break-even Appreciation</div>
+                <p class="ak-step-desc">Determine the minimum property appreciation rate required to beat inflation and preserve real wealth.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Is real estate a good hedge against inflation in India?</h3>
+            <p>Generally yes. Land and residential real estate values, along with rental rates, historically tend to rise alongside general consumer price inflation over long holding periods (10+ years).</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>What is the difference between Simple Nominal Return and Real CAGR?</h3>
+            <p>Simple Nominal Return measures total absolute rupee gain without considering holding period or inflation. Real CAGR measures the exact annualized compound growth rate of your purchasing power after stripping out inflation.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/fd-vs-property-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">account_balance</span></div>
+                    <div class="ak-fcard-title">FD vs Property Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Compare guaranteed bank fixed deposit compounding (after tax) against real estate appreciation and rent.</p>
+            </a>
+            <a href="/calculators/sip-vs-real-estate-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">show_chart</span></div>
+                    <div class="ak-fcard-title">SIP vs Real Estate Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Compare mutual fund SIP compounding against real estate leverage and rental income.</p>
+            </a>
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
+                    <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate exact monthly EMI, total interest, and complete amortization schedule for home loans.</p>
+            </a>
+            <a href="/calculators/home-loan-balance-transfer-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">swap_horiz</span></div>
+                    <div class="ak-fcard-title">Balance Transfer Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Compare current home loan with a new lender's offer to see net interest savings after transfer costs.</p>
+            </a>
+            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <p class="ak-fcard-desc">Uncover registration fees, stamp duty, interior setup, and hidden initial property costs.</p>
+            </a>
+            <a href="/calculators/capital-gains-tax-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Capital Gains Tax Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate Short-Term and Long-Term Capital Gains (STCG/LTCG) tax on real estate sales.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/inflation-adjusted-property-returns-calculator/">Inflation-Adjusted Returns Calculator</a></li><li><a href="/calculators/fd-vs-property-calculator/">FD vs Property Calculator</a></li><li><a href="/calculators/sip-vs-real-estate-calculator/">SIP vs Real Estate Calculator</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. PURE CALCULATION FUNCTIONS ---
+    function parseNumericValue(val) {
+        if (!val) return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : Math.max(0, val);
+        const str = String(val).replace(/[^0-9.]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : Math.max(0, num);
+    }
+
+    function formatCurrency(num) {
+        const clean = Math.round(parseNumericValue(num));
+        return '₹' + clean.toLocaleString('en-IN');
+    }
+
+    function computeInflationAdjustedReturns(inputs) {
+        const price = parseNumericValue(inputs.purchasePrice);
+        const years = Math.max(1, parseNumericValue(inputs.years));
+        const appreciation = parseNumericValue(inputs.appreciation) / 100;
+        const inflation = parseNumericValue(inputs.inflation) / 100;
+
+        let nominalFutureVal = 0;
+        if (inputs.valueMode === 'Direct') {
+            nominalFutureVal = parseNumericValue(inputs.directFutureValue);
+        } else {
+            nominalFutureVal = price * Math.pow(1 + appreciation, years);
+        }
+
+        const nominalCapitalGain = nominalFutureVal - price;
+        const nominalAppreciationPct = price > 0 ? ((nominalFutureVal - price) / price) * 100 : 0;
+        const nominalCagr = price > 0 ? (Math.pow(nominalFutureVal / price, 1 / years) - 1) : 0;
+
+        // Inflation Discounting (Fisher Equation)
+        const inflationFactor = Math.pow(1 + inflation, years);
+        const realFutureVal = nominalFutureVal / inflationFactor;
+        const realCapitalGain = realFutureVal - price;
+        const realCagr = ((1 + nominalCagr) / (1 + inflation)) - 1;
+        const inflationImpact = nominalFutureVal - realFutureVal;
+
+        // Rental & Costs Handling
+        let totalRentalIncome = 0;
+        let totalExpenses = 0;
+        let netRentalIncome = 0;
+        let buyingCosts = 0;
+        let sellingCosts = 0;
+
+        if (inputs.includeRental === 'Yes') {
+            const monthlyRent = parseNumericValue(inputs.monthlyRent);
+            const rentGrowth = parseNumericValue(inputs.rentGrowth) / 100;
+            const annualExpenses = parseNumericValue(inputs.annualExpenses);
+            buyingCosts = parseNumericValue(inputs.buyingCosts);
+            const sellingCostRate = parseNumericValue(inputs.sellingCostRate) / 100;
+
+            for (let t = 1; t <= years; t++) {
+                totalRentalIncome += monthlyRent * 12 * Math.pow(1 + rentGrowth, t - 1);
+            }
+            totalExpenses = annualExpenses * years;
+            netRentalIncome = Math.max(0, totalRentalIncome - totalExpenses);
+            sellingCosts = nominalFutureVal * sellingCostRate;
+        }
+
+        const initialInvestmentOutflow = price + buyingCosts;
+        const netNominalEndingValue = nominalFutureVal + netRentalIncome - sellingCosts;
+        const netNominalReturn = netNominalEndingValue - initialInvestmentOutflow;
+        const netNominalCagr = initialInvestmentOutflow > 0 ? (Math.pow(netNominalEndingValue / initialInvestmentOutflow, 1 / years) - 1) : 0;
+
+        const realNetCagr = ((1 + netNominalCagr) / (1 + inflation)) - 1;
+        const realNetEndingValue = netNominalEndingValue / inflationFactor;
+
+        let verdict = "POSITIVE REAL RETURN";
+        if (Math.abs(realCagr) < 0.001) verdict = "INFLATION-MATCHED RETURN";
+        else if (realCagr < 0) verdict = "NEGATIVE REAL RETURN";
+
+        return {
+            price,
+            years,
+            appreciation,
+            inflation,
+            nominalFutureVal,
+            nominalCapitalGain,
+            nominalAppreciationPct,
+            nominalCagr,
+            realFutureVal,
+            realCapitalGain,
+            realCagr,
+            inflationImpact,
+            totalRentalIncome,
+            totalExpenses,
+            netRentalIncome,
+            buyingCosts,
+            sellingCosts,
+            initialInvestmentOutflow,
+            netNominalEndingValue,
+            netNominalReturn,
+            netNominalCagr,
+            realNetCagr,
+            realNetEndingValue,
+            verdict
+        };
+    }
+
+    // --- 2. UI STATE & INTERACTION LOGIC ---
+    function getFormInputs() {
+        return {
+            valueMode: document.getElementById('valueModeSelect').value,
+            purchasePrice: parseNumericValue(document.getElementById('purchasePriceInput').value),
+            appreciation: parseNumericValue(document.getElementById('appreciationInput').value),
+            directFutureValue: parseNumericValue(document.getElementById('directFutureValueInput').value),
+            years: parseInt(document.getElementById('yearsInput').value) || 10,
+            inflation: parseNumericValue(document.getElementById('inflationInput').value),
+            includeRental: document.getElementById('includeRentalSelect').value,
+            monthlyRent: parseNumericValue(document.getElementById('monthlyRentInput').value),
+            rentGrowth: parseNumericValue(document.getElementById('rentGrowthInput').value),
+            annualExpenses: parseNumericValue(document.getElementById('annualExpensesInput').value),
+            buyingCosts: parseNumericValue(document.getElementById('buyingCostsInput').value),
+            sellingCostRate: parseNumericValue(document.getElementById('sellingCostRateInput').value)
+        };
+    }
+
+    function onValueModeChange(val) {
+        const appreciationRow = document.getElementById('appreciationRow');
+        const directRow = document.getElementById('directFutureValueRow');
+
+        if (val === 'Direct') {
+            appreciationRow.style.display = 'none';
+            directRow.style.display = 'block';
+        } else {
+            appreciationRow.style.display = 'block';
+            directRow.style.display = 'none';
+        }
+        updateCalculatorResults();
+    }
+
+    function onRentalToggleChange(val) {
+        const wrapper = document.getElementById('rentalFieldsWrapper');
+        if (val === 'Yes') {
+            wrapper.style.display = 'block';
+        } else {
+            wrapper.style.display = 'none';
+        }
+        updateCalculatorResults();
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            const rawVal = inputElem.value.replace(/[^0-9.]/g, '');
+            if (rawVal !== '') {
+                const num = parseFloat(rawVal);
+                if (!isNaN(num)) {
+                    inputElem.value = num.toLocaleString('en-IN');
+                }
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onInputChange() {
+        updateCalculatorResults();
+    }
+
+    function updateCalculatorResults() {
+        const inputs = getFormInputs();
+        const res = computeInflationAdjustedReturns(inputs);
+
+        const primaryRealCagrVal = document.getElementById('primaryRealCagrVal');
+        const primaryRealCagrSub = document.getElementById('primaryRealCagrSub');
+        const verdictBadge = document.getElementById('verdictBadge');
+        const fill = document.getElementById('realFill');
+        const nominalValText = document.getElementById('nominalValText');
+        const realValText = document.getElementById('realValText');
+
+        primaryRealCagrVal.innerText = `${(res.realCagr * 100).toFixed(2)}% p.a.`;
+        primaryRealCagrSub.innerText = `Real Purchasing Power CAGR (After ${inputs.inflation.toFixed(1)}% Inflation)`;
+
+        verdictBadge.innerText = res.verdict;
+        if (res.realCagr > 0) verdictBadge.style.color = "#10B981";
+        else if (res.realCagr < 0) verdictBadge.style.color = "#EF4444";
+        else verdictBadge.style.color = "#E5C178";
+
+        const pct = res.nominalFutureVal > 0 ? Math.max(10, Math.round((res.realFutureVal / res.nominalFutureVal) * 100)) : 50;
+        fill.style.width = pct + "%";
+
+        nominalValText.innerText = `Nominal FV: ${formatCurrency(res.nominalFutureVal)}`;
+        realValText.innerText = `Today's Rupees: ${formatCurrency(res.realFutureVal)}`;
+
+        // Snapshot Grid
+        document.getElementById('snapPurchasePrice').innerText = formatCurrency(res.price);
+        document.getElementById('snapNominalFv').innerText = formatCurrency(res.nominalFutureVal);
+        document.getElementById('snapNominalCagr').innerText = `${(res.nominalCagr * 100).toFixed(2)}% p.a.`;
+        document.getElementById('snapRealValue').innerText = formatCurrency(res.realFutureVal);
+        document.getElementById('snapRealCagr').innerText = `${(res.realCagr * 100).toFixed(2)}% p.a.`;
+        document.getElementById('snapInflationImpact').innerText = `-${formatCurrency(res.inflationImpact)}`;
+
+        // Table Comparison
+        document.getElementById('tblNominalFv').innerText = formatCurrency(res.nominalFutureVal);
+        document.getElementById('tblRealFv').innerText = formatCurrency(res.realFutureVal);
+        document.getElementById('tblNominalGain').innerText = formatCurrency(res.nominalCapitalGain);
+        document.getElementById('tblRealGain').innerText = formatCurrency(res.realCapitalGain);
+        document.getElementById('tblNetRentalNominal').innerText = formatCurrency(res.netRentalIncome);
+        document.getElementById('tblNetRentalReal').innerText = formatCurrency(res.netRentalIncome / Math.pow(1 + (inputs.inflation / 100), inputs.years));
+        document.getElementById('tblCostsNominal').innerText = `-${formatCurrency(res.buyingCosts + res.sellingCosts)}`;
+        document.getElementById('tblCostsReal').innerText = `-${formatCurrency((res.buyingCosts + res.sellingCosts) / Math.pow(1 + (inputs.inflation / 100), inputs.years))}`;
+        document.getElementById('tblNominalNetCagr').innerText = `${(res.netNominalCagr * 100).toFixed(2)}% p.a.`;
+        document.getElementById('tblRealNetCagr').innerText = `${(res.realNetCagr * 100).toFixed(2)}% p.a.`;
+
+        // Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        insightsList.innerHTML += `<li><strong>Purchasing Power Erosion:</strong> While your property grows nominally from ${formatCurrency(res.price)} to ${formatCurrency(res.nominalFutureVal)}, inflation at ${inputs.inflation.toFixed(1)}% reduces its purchasing power value to <strong>${formatCurrency(res.realFutureVal)} in today's money</strong> (an erosion of ${formatCurrency(res.inflationImpact)}).</li>`;
+        
+        if (res.realCagr > 0) {
+            insightsList.innerHTML += `<li><strong>Positive Real Appreciation:</strong> Property appreciation (@ ${inputs.appreciation.toFixed(1)}%) beats annual inflation (${inputs.inflation.toFixed(1)}%) by an effective <strong>${(res.realCagr * 100).toFixed(2)}% p.a. real CAGR</strong>.</li>`;
+        } else if (res.realCagr < 0) {
+            insightsList.innerHTML += `<li><strong>Negative Real Purchasing Power:</strong> Because inflation (${inputs.inflation.toFixed(1)}%) exceeds property appreciation (${inputs.appreciation.toFixed(1)}%), the real purchasing power of the property declines by <strong>${Math.abs((res.realCagr * 100)).toFixed(2)}% p.a.</strong> over ${inputs.years} years.</li>`;
+        }
+
+        if (inputs.includeRental === 'Yes') {
+            insightsList.innerHTML += `<li><strong>Net Rental Contribution:</strong> Cumulative net rental cash flow over ${inputs.years} years adds ${formatCurrency(res.netRentalIncome)} to wealth, boosting real net CAGR to <strong>${(res.realNetCagr * 100).toFixed(2)}% p.a.</strong></li>`;
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCalculatorResults();
+    });
+    </script>
+</body>
+</html>

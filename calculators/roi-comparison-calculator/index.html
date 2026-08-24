@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Comparison Calculator – Compare Property Investment Returns | acreNkey</title>
+
+    <meta name="description" content="Compare multiple real estate or property investments side-by-side by initial equity, net rental income, exit costs, ROI and annualized CAGR.">
+    <meta name="keywords" content="roi comparison calculator, compare property investments, real estate cagr vs roi, net return calculator, acrenkey investment calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/roi-comparison-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ROI Comparison Calculator | acreNkey">
+    <meta property="og:description" content="Compare property investments by total return, ROI and annualized return to identify the stronger investment.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/roi-comparison-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROI Comparison Calculator | acreNkey">
+    <meta name="twitter:description" content="Compare property investments by total return, ROI and annualized return to identify the stronger investment.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey ROI Comparison Calculator","description":"Compare 2 to 4 real estate investments side-by-side by initial equity, rental income, operating expenses, selling brokerage, total return, ROI percentage, and annualized CAGR.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/roi-comparison-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"ROI Comparison Calculator","item":"https://acrenkey.com/calculators/roi-comparison-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why rank investments by CAGR instead of total ROI?","acceptedAnswer":{"@type":"Answer","text":"CAGR (Compound Annual Growth Rate) annualizes returns across different holding periods, making it the fairest comparison metric when investments take different amounts of time to generate profit."}},{"@type":"Question","name":"How is total return calculated in real estate ROI?","acceptedAnswer":{"@type":"Answer","text":"Total return equals Net Sale Proceeds (Future Price minus Selling Costs) plus Net Rental Income (Total Rent minus Expenses) minus Initial Investment (Purchase Price plus Buying Costs)."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1rem 0;
+    }
+
+    /* Investment Tab Switcher */
+    .ak-inv-tabs-bar {
+        display: flex;
+        gap: 0.4rem;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #EAEFF5;
+        padding-bottom: 0.75rem;
+    }
+
+    .ak-inv-tab-btn {
+        background: #F1F5F9;
+        border: 1px solid #CBD5E1;
+        border-radius: 8px;
+        padding: 0.4rem 0.85rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .ak-inv-tab-btn.active {
+        background: var(--deep-navy-100);
+        color: #FFF;
+        border-color: var(--deep-navy-100);
+    }
+
+    .ak-inv-tab-add {
+        background: var(--warm-ivory);
+        border: 1px dashed var(--refined-brass);
+        color: var(--refined-brass);
+    }
+    .ak-inv-tab-add:hover { background: rgba(140, 103, 52, 0.1); }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.25rem 0 1rem 0;
+        padding-top: 0.75rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Matrix Table Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+        overflow-x: auto;
+    }
+
+    .ak-matrix-tbl {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+    }
+    .ak-matrix-tbl th { background: rgba(255,255,255,0.08); color: #E5C178; padding: 0.5rem 0.6rem; text-align: right; font-weight: 700; }
+    .ak-matrix-tbl th:first-child { text-align: left; }
+    .ak-matrix-tbl td { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.5rem 0.6rem; text-align: right; color: rgba(255,255,255,0.9); }
+    .ak-matrix-tbl td:first-child { text-align: left; font-weight: 600; color: rgba(255,255,255,0.7); }
+    .ak-matrix-tbl tr.highlight-row td { background: rgba(229, 193, 120, 0.12); font-weight: 800; color: #FFF; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">ROI Comparison Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">ROI Comparison Calculator</h1>
+                <p class="ak-calc-sub-text">Compare property investments by total return, ROI and annualized return (CAGR) to identify the stronger investment.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>Investment Parameters</h2>
+                    <button type="button" id="removeInvBtn" style="display:none; font-size:0.78rem; color:#EF4444; background:none; border:none; cursor:pointer; font-weight:700;">Remove</button>
+                </div>
+
+                <!-- Investment Tab Switcher -->
+                <div class="ak-inv-tabs-bar" id="invTabsBar">
+                    <button class="ak-inv-tab-btn active" onclick="selectTab(0)">Investment 1</button>
+                    <button class="ak-inv-tab-btn" onclick="selectTab(1)">Investment 2</button>
+                    <button class="ak-inv-tab-btn ak-inv-tab-add" onclick="addInvestment()">+ Add Investment</button>
+                </div>
+
+                <!-- Active Form Controls Container -->
+                <div id="activeFormContainer">
+
+                    <!-- Section 1: Acquisition Costs & Name -->
+                    <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Purchase &amp; Acquisition</div>
+
+                    <!-- Investment Name -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">edit</span>
+                                Investment Name
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <input type="text" id="invNameInput" class="ak-new-input" style="text-align:left;" value="Property A" oninput="onInputChange()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Purchase Price & Buying Costs -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">payments</span>
+                                Purchase Price &amp; Buying Costs (₹)
+                            </div>
+                            <div style="display:flex; gap:0.5rem; width:210px;">
+                                <input type="text" id="purchasePriceInput" class="ak-new-input has-prefix" style="width:105px;" value="80,00,000" oninput="formatAndCalculate(this)">
+                                <input type="text" id="buyingCostsInput" class="ak-new-input has-prefix" style="width:100px;" value="5,00,000" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                        <div class="ak-input-helper-text">Purchase price (left) and stamp/acquisition costs (right).</div>
+                    </div>
+
+                    <!-- Section 2: Future Exit & Holding Horizon -->
+                    <div class="ak-section-divider-title">2. Exit Valuation &amp; Holding Period</div>
+
+                    <!-- Future Value & Holding Period -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">trending_up</span>
+                                Future Value &amp; Holding (Yrs)
+                            </div>
+                            <div style="display:flex; gap:0.5rem; width:210px;">
+                                <input type="text" id="futureValueInput" class="ak-new-input has-prefix" style="width:115px;" value="1,30,00,000" oninput="formatAndCalculate(this)">
+                                <input type="number" id="holdingYearsInput" class="ak-new-input" style="width:90px;" value="5" min="1" max="50" oninput="onInputChange()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selling Costs Rate -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">sell</span>
+                                Selling Brokerage / Costs (%)
+                            </div>
+                            <div class="ak-new-input-box-wrapper" style="width:140px;">
+                                <input type="text" id="sellingCostRateInput" class="ak-new-input has-suffix" value="2.0" oninput="formatAndCalculate(this)">
+                                <span class="suffix">%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Annual Cash Operations -->
+                    <div class="ak-section-divider-title">3. Annual Cash Operations</div>
+
+                    <!-- Annual Rent & Operating Expenses -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">real_estate_agent</span>
+                                Annual Rent &amp; Expenses (₹/yr)
+                            </div>
+                            <div style="display:flex; gap:0.5rem; width:210px;">
+                                <input type="text" id="annualIncomeInput" class="ak-new-input has-prefix" style="width:105px;" value="3,60,000" oninput="formatAndCalculate(this)">
+                                <input type="text" id="annualExpensesInput" class="ak-new-input has-prefix" style="width:100px;" value="60,000" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">ROI &amp; CAGR COMPARISON SUMMARY</div>
+                
+                <!-- Primary Huge Winner Result Value -->
+                <div class="ak-emi-huge" id="winnerTitle">🥇 Property A Wins</div>
+                <div class="ak-emi-subtext" id="winnerSub">Strongest Annualized Return (10.87% CAGR vs 7.85% CAGR)</div>
+
+                <!-- Progress Limit Bar -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>Annualized Return (CAGR) Benchmark</span>
+                        <span id="cagrMarginText" style="color: #E5C178;">+3.02% Points Advantage</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="cagrFill" style="width: 75%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="winnerBarSub">Winner: Property A (10.87% p.a.)</span>
+                        <span id="runnerUpBarSub">Runner Up: Property B (7.85% p.a.)</span>
+                    </div>
+                </div>
+
+                <!-- Side-by-Side Comparison Matrix Table -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Multi-Asset Comparison Matrix
+                    </div>
+                    <table class="ak-matrix-tbl">
+                        <thead>
+                            <tr id="matrixHeaderRow">
+                                <th>Metric</th>
+                                <th>Property A</th>
+                                <th>Property B</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matrixBody">
+                            <!-- Dynamically Populated -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Actionable Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Investment Decision Insights</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Disclaimer Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Important Investment Comparison Disclaimer:</strong> Returns are calculated based on the purchase price, holding period, cash flows, and exit assumptions entered. Taxes (capital gains or income tax), loan interest, and inflation are excluded unless explicitly factored into your inputs.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>ROI vs CAGR: What's the Difference?</h2>
+        <p><strong>Absolute Return on Investment (ROI)</strong> measures the total percentage gain relative to initial out-of-pocket cash invested, regardless of how many years the investment took to achieve. <strong>Compound Annual Growth Rate (CAGR)</strong> measures the equivalent annual compounding rate earned across the holding horizon.</p>
+
+        <h2>Why Annualized Return (CAGR) Matters Most</h2>
+        <p>When comparing two investments with different holding periods, absolute profit or total ROI can be misleading:</p>
+        <p><code>Investment A: ₹57.4 Lakh profit over 5 years (67.5% ROI) → 10.87% p.a. CAGR</code></p>
+        <p><code>Investment B: ₹73.9 Lakh profit over 7 years (69.7% ROI) → 7.85% p.a. CAGR</code></p>
+        <p>Although Investment B delivers a higher absolute rupee return, Investment A compounds your capital significantly faster each year.</p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Formula</th>
+                    <th>What It Evaluates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Total Return (₹)</strong></td>
+                    <td>(Net Sale Proceeds + Net Rental Cash Flow) − Initial Outlay</td>
+                    <td>Absolute Rupee Profit / Loss.</td>
+                </tr>
+                <tr>
+                    <td><strong>Absolute ROI (%)</strong></td>
+                    <td>(Total Return / Initial Investment) × 100</td>
+                    <td>Overall return relative to initial cash invested.</td>
+                </tr>
+                <tr>
+                    <td><strong>Annualized CAGR (%)</strong></td>
+                    <td>((Total Value Received / Initial Investment) ^ (1 / Years)) − 1</td>
+                    <td>Equivalent annual rate of return per year.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5-Step Real Estate ROI Comparison Framework</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 01</div>
+                <div class="ak-step-title">Sum Out-of-Pocket Outlay</div>
+                <p class="ak-step-desc">Include down payment, stamp duty, registration, and initial renovation fees to fix the initial equity base.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 02</div>
+                <div class="ak-step-title">Net Annual Operating Cash</div>
+                <p class="ak-step-desc">Deduct maintenance fees, property tax, and insurance from gross rent across the holding horizon.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 03</div>
+                <div class="ak-step-title">Deduct Brokerage Exit Fees</div>
+                <p class="ak-step-desc">Deduct 1% to 2% selling brokerage from the future resale value to find net sale proceeds.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 04</div>
+                <div class="ak-step-title">Calculate Total Value Received</div>
+                <p class="ak-step-desc">Sum net sale proceeds and total accumulated operating cash flow.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 05</div>
+                <div class="ak-step-title">Annualize and Rank</div>
+                <p class="ak-step-desc">Rank investments primarily by CAGR to identify which asset compounds capital most efficiently.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Why does CAGR take precedence over ROI in rankings?</h3>
+            <p>CAGR accounts for time efficiency. Money received sooner can be reinvested, so an investment compounding at 10.8% over 5 years is superior to one earning 7.8% over 7 years.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>Does this calculator include home loan financing?</h3>
+            <p>This calculator compares unleveraged asset returns based on total initial investment. For home loan leverage effects, use our Leveraged Property Return Calculator.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/leveraged-property-return-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Leveraged Return Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">See how a home loan amplifies return on equity compared to an all-cash purchase.</p>
+            </a>
+            <a href="/calculators/cagr-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">show_chart</span></div>
+                    <div class="ak-fcard-title">CAGR Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate compound annual growth rate for any lump-sum property investment.</p>
+            </a>
+            <a href="/calculators/cash-on-cash-return-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Cash-on-Cash Return Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate pre-tax cash flow and return on actual out-of-pocket equity invested.</p>
+            </a>
+            <a href="/calculators/net-rental-yield-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">real_estate_agent</span></div>
+                    <div class="ak-fcard-title">Net Rental Yield Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate net rental yield after vacancy, maintenance, property tax, and insurance.</p>
+            </a>
+            <a href="/calculators/fd-vs-property-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">account_balance</span></div>
+                    <div class="ak-fcard-title">FD vs Property Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Compare guaranteed bank fixed deposit compounding (after tax) against real estate appreciation and rent.</p>
+            </a>
+            <a href="/calculators/sip-vs-real-estate-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">donut_large</span></div>
+                    <div class="ak-fcard-title">SIP vs Real Estate Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Compare mutual fund equity SIP returns against property purchase and rental yields.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/roi-comparison-calculator/">ROI Comparison Calculator</a></li><li><a href="/calculators/cagr-calculator/">CAGR Calculator</a></li><li><a href="/calculators/cash-on-cash-return-calculator/">Cash-on-Cash Return Calculator</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. STATE MANAGEMENT & DEFAULT DATA ---
+    let activeTabIndex = 0;
+    let investments = [
+        {
+            name: "Property A",
+            purchasePrice: 8000000,
+            buyingCosts: 500000,
+            futureValue: 13000000,
+            years: 5,
+            sellingCostRate: 2.0,
+            annualIncome: 360000,
+            annualExpenses: 60000
+        },
+        {
+            name: "Property B",
+            purchasePrice: 10000000,
+            buyingCosts: 600000,
+            futureValue: 15500000,
+            years: 7,
+            sellingCostRate: 2.0,
+            annualIncome: 480000,
+            annualExpenses: 80000
+        }
+    ];
+
+    function parseNumericValue(val) {
+        if (!val) return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : val;
+        const str = String(val).replace(/[^0-9.-]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatCurrency(num) {
+        const val = parseNumericValue(num);
+        const sign = val < 0 ? '-' : '';
+        const clean = Math.round(Math.abs(val));
+        return sign + '₹' + clean.toLocaleString('en-IN');
+    }
+
+    // --- 2. PURE CALCULATION FUNCTIONS ---
+    function computeSingleInvestment(inv) {
+        const purchasePrice = Math.max(0, parseNumericValue(inv.purchasePrice));
+        const buyingCosts = Math.max(0, parseNumericValue(inv.buyingCosts));
+        const initialInvestment = purchasePrice + buyingCosts;
+
+        const futureValue = Math.max(0, parseNumericValue(inv.futureValue));
+        const years = Math.max(0.1, parseNumericValue(inv.years));
+        const sellingCostRate = Math.max(0, parseNumericValue(inv.sellingCostRate)) / 100;
+        const sellingCosts = futureValue * sellingCostRate;
+        const netExitValue = Math.max(0, futureValue - sellingCosts);
+
+        const annualIncome = Math.max(0, parseNumericValue(inv.annualIncome));
+        const annualExpenses = Math.max(0, parseNumericValue(inv.annualExpenses));
+        const totalIncome = annualIncome * years;
+        const totalExpenses = annualExpenses * years;
+        const netIncome = totalIncome - totalExpenses;
+
+        const totalValueReceived = netExitValue + netIncome;
+        const totalReturn = totalValueReceived - initialInvestment;
+
+        const roi = initialInvestment > 0 ? (totalReturn / initialInvestment) * 100 : 0;
+
+        let cagr = 0;
+        let validCagr = false;
+        if (initialInvestment > 0 && totalValueReceived > 0) {
+            cagr = (Math.pow(totalValueReceived / initialInvestment, 1 / years) - 1) * 100;
+            validCagr = true;
+        }
+
+        const multiple = initialInvestment > 0 ? totalValueReceived / initialInvestment : 0;
+
+        return {
+            name: inv.name || `Investment`,
+            purchasePrice,
+            buyingCosts,
+            initialInvestment,
+            futureValue,
+            years,
+            sellingCosts,
+            netExitValue,
+            annualIncome,
+            annualExpenses,
+            totalIncome,
+            totalExpenses,
+            netIncome,
+            totalValueReceived,
+            totalReturn,
+            roi,
+            cagr,
+            validCagr,
+            multiple
+        };
+    }
+
+    function computeRoiComparison(invList) {
+        const results = invList.map(inv => computeSingleInvestment(inv));
+
+        // Sort investments to determine rank
+        const sorted = [...results].sort((a, b) => {
+            if (a.validCagr && b.validCagr) {
+                if (Math.abs(a.cagr - b.cagr) > 0.01) return b.cagr - a.cagr;
+            }
+            if (Math.abs(a.roi - b.roi) > 0.01) return b.roi - a.roi;
+            return b.totalReturn - a.totalReturn;
+        });
+
+        // Assign ranks
+        results.forEach(res => {
+            const rankIndex = sorted.findIndex(s => s === res);
+            res.rank = rankIndex + 1;
+        });
+
+        const winner = sorted[0];
+        const runnerUp = sorted.length > 1 ? sorted[1] : null;
+
+        const cagrAdvantage = (winner && runnerUp && winner.validCagr && runnerUp.validCagr) ?
+            winner.cagr - runnerUp.cagr : 0;
+
+        return {
+            results,
+            sorted,
+            winner,
+            runnerUp,
+            cagrAdvantage
+        };
+    }
+
+    // --- 3. UI TAB CONTROLS & INTERACTION ---
+    function renderTabs() {
+        const bar = document.getElementById('invTabsBar');
+        bar.innerHTML = '';
+
+        investments.forEach((inv, index) => {
+            const btn = document.createElement('button');
+            btn.className = `ak-inv-tab-btn ${index === activeTabIndex ? 'active' : ''}`;
+            btn.innerText = inv.name || `Inv ${index + 1}`;
+            btn.onclick = () => selectTab(index);
+            bar.appendChild(btn);
+        });
+
+        if (investments.length < 4) {
+            const addBtn = document.createElement('button');
+            addBtn.className = 'ak-inv-tab-btn ak-inv-tab-add';
+            addBtn.innerText = '+ Add Investment';
+            addBtn.onclick = addInvestment;
+            bar.appendChild(addBtn);
+        }
+
+        document.getElementById('removeInvBtn').style.display = investments.length > 2 ? 'inline-block' : 'none';
+    }
+
+    function selectTab(index) {
+        saveActiveTabInputs();
+        activeTabIndex = index;
+        renderTabs();
+        loadActiveTabInputs();
+        updateCalculatorResults();
+    }
+
+    function addInvestment() {
+        if (investments.length >= 4) return;
+        saveActiveTabInputs();
+        const nextLetter = String.fromCharCode(65 + investments.length);
+        investments.push({
+            name: `Property ${nextLetter}`,
+            purchasePrice: 9000000,
+            buyingCosts: 500000,
+            futureValue: 14000000,
+            years: 6,
+            sellingCostRate: 2.0,
+            annualIncome: 400000,
+            annualExpenses: 70000
+        });
+        activeTabIndex = investments.length - 1;
+        renderTabs();
+        loadActiveTabInputs();
+        updateCalculatorResults();
+    }
+
+    function removeActiveInvestment() {
+        if (investments.length <= 2) return;
+        investments.splice(activeTabIndex, 1);
+        if (activeTabIndex >= investments.length) activeTabIndex = investments.length - 1;
+        renderTabs();
+        loadActiveTabInputs();
+        updateCalculatorResults();
+    }
+
+    function saveActiveTabInputs() {
+        const cur = investments[activeTabIndex];
+        cur.name = document.getElementById('invNameInput').value || `Inv ${activeTabIndex + 1}`;
+        cur.purchasePrice = parseNumericValue(document.getElementById('purchasePriceInput').value);
+        cur.buyingCosts = parseNumericValue(document.getElementById('buyingCostsInput').value);
+        cur.futureValue = parseNumericValue(document.getElementById('futureValueInput').value);
+        cur.years = parseNumericValue(document.getElementById('holdingYearsInput').value) || 5;
+        cur.sellingCostRate = parseNumericValue(document.getElementById('sellingCostRateInput').value);
+        cur.annualIncome = parseNumericValue(document.getElementById('annualIncomeInput').value);
+        cur.annualExpenses = parseNumericValue(document.getElementById('annualExpensesInput').value);
+    }
+
+    function loadActiveTabInputs() {
+        const cur = investments[activeTabIndex];
+        if (!cur) return;
+        document.getElementById('invNameInput').value = cur.name;
+        document.getElementById('purchasePriceInput').value = cur.purchasePrice.toLocaleString('en-IN');
+        document.getElementById('buyingCostsInput').value = cur.buyingCosts.toLocaleString('en-IN');
+        document.getElementById('futureValueInput').value = cur.futureValue.toLocaleString('en-IN');
+        document.getElementById('holdingYearsInput').value = cur.years;
+        document.getElementById('sellingCostRateInput').value = cur.sellingCostRate;
+        document.getElementById('annualIncomeInput').value = cur.annualIncome.toLocaleString('en-IN');
+        document.getElementById('annualExpensesInput').value = cur.annualExpenses.toLocaleString('en-IN');
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            const rawVal = inputElem.value.replace(/[^0-9.-]/g, '');
+            if (rawVal !== '' && !isNaN(parseFloat(rawVal))) {
+                const num = parseFloat(rawVal);
+                if (!inputElem.classList.contains('has-suffix') && inputElem.id !== 'holdingYearsInput') {
+                    inputElem.value = num.toLocaleString('en-IN');
+                }
+            }
+        }
+        onInputChange();
+    }
+
+    function onInputChange() {
+        saveActiveTabInputs();
+        renderTabs();
+        updateCalculatorResults();
+    }
+
+    // --- 4. RENDER RESULTS ---
+    function updateCalculatorResults() {
+        const comp = computeRoiComparison(investments);
+        const win = comp.winner;
+        const runner = comp.runnerUp;
+
+        // Primary Winner Header
+        document.getElementById('winnerTitle').innerText = `🥇 ${win.name} Wins`;
+        document.getElementById('winnerSub').innerText = `Highest Annualized Return (${win.cagr.toFixed(2)}% CAGR vs ${runner ? runner.cagr.toFixed(2) : 0}% CAGR)`;
+
+        // Progress Bar
+        const barFill = document.getElementById('cagrFill');
+        const pct = win.cagr > 0 ? Math.min(100, Math.max(15, Math.round((win.cagr / 25) * 100))) : 0;
+        barFill.style.width = pct + "%";
+
+        document.getElementById('cagrMarginText').innerText = comp.cagrAdvantage > 0 ?
+            `+${comp.cagrAdvantage.toFixed(2)}% Points Advantage` : `Best CAGR`;
+        document.getElementById('winnerBarSub').innerText = `Winner: ${win.name} (${win.cagr.toFixed(2)}% p.a.)`;
+        document.getElementById('runnerUpBarSub').innerText = runner ? `Runner Up: ${runner.name} (${runner.cagr.toFixed(2)}% p.a.)` : '';
+
+        // Render Matrix Table Header & Rows
+        const headerRow = document.getElementById('matrixHeaderRow');
+        headerRow.innerHTML = '<th>Metric</th>' + comp.results.map(r => `<th>${r.name}</th>`).join('');
+
+        const body = document.getElementById('matrixBody');
+        body.innerHTML = `
+            <tr><td>Initial Investment</td>${comp.results.map(r => `<td>${formatCurrency(r.initialInvestment)}</td>`).join('')}</tr>
+            <tr><td>Future Price Value</td>${comp.results.map(r => `<td>${formatCurrency(r.futureValue)}</td>`).join('')}</tr>
+            <tr><td>Selling Costs (${r => r.sellingCostRate}%)</td>${comp.results.map(r => `<td>-${formatCurrency(r.sellingCosts)}</td>`).join('')}</tr>
+            <tr><td>Net Exit Value</td>${comp.results.map(r => `<td>${formatCurrency(r.netExitValue)}</td>`).join('')}</tr>
+            <tr><td>Net Rental Income</td>${comp.results.map(r => `<td>${formatCurrency(r.netIncome)}</td>`).join('')}</tr>
+            <tr><td>Total Return (Profit)</td>${comp.results.map(r => `<td style="color:#10B981; font-weight:700;">${formatCurrency(r.totalReturn)}</td>`).join('')}</tr>
+            <tr><td>Absolute ROI (%)</td>${comp.results.map(r => `<td style="color:#E5C178; font-weight:700;">${r.roi.toFixed(2)}%</td>`).join('')}</tr>
+            <tr class="highlight-row"><td>Annualized CAGR (%)</td>${comp.results.map(r => `<td>${r.validCagr ? r.cagr.toFixed(2) + '%' : 'N/A'}</td>`).join('')}</tr>
+            <tr><td>Investment Rank</td>${comp.results.map(r => `<td><strong>#${r.rank}</strong></td>`).join('')}</tr>
+        `;
+
+        // Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        insightsList.innerHTML += `<li><strong>Winning Investment:</strong> <strong>${win.name}</strong> ranks #1 with an annualized return of <strong>${win.cagr.toFixed(2)}% CAGR</strong> over a ${win.years}-year holding period.</li>`;
+        
+        if (runner) {
+            if (win.totalReturn < runner.totalReturn && win.cagr > runner.cagr) {
+                insightsList.innerHTML += `<li><strong>Time Efficiency Advantage:</strong> ${runner.name} generated a higher absolute rupee return (${formatCurrency(runner.totalReturn)} vs ${formatCurrency(win.totalReturn)}), but ${win.name} compounded capital faster per year (${win.cagr.toFixed(2)}% vs ${runner.cagr.toFixed(2)}%).</li>`;
+            } else {
+                insightsList.innerHTML += `<li><strong>CAGR Premium:</strong> ${win.name} outperforms ${runner.name} by <strong>${comp.cagrAdvantage.toFixed(2)} percentage points</strong> in annual compounding.</li>`;
+            }
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        renderTabs();
+        loadActiveTabInputs();
+        updateCalculatorResults();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST on Property Calculator – Calculate GST on Property Purchase | acreNkey</title>
+
+    <meta name="description" content="Calculate GST on property purchases based on property status, residential or commercial type, affordable housing eligibility and applicable GST rates.">
+    <meta name="keywords" content="gst on property calculator, real estate gst calculator, under construction property gst rate, affordable housing 1 percent gst, ready to move property gst exemption, gst inclusive price extraction, acrenkey calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/gst-on-property-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GST on Property Calculator | acreNkey">
+    <meta property="og:description" content="Calculate GST on property purchases based on construction status, property type and affordable housing eligibility.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/gst-on-property-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GST on Property Calculator | acreNkey">
+    <meta name="twitter:description" content="Calculate GST on property purchases based on construction status, property type and affordable housing eligibility.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey GST on Property Calculator","description":"Calculate GST on property purchases based on property status, residential/commercial classification, and affordable housing rules.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/gst-on-property-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"GST on Property Calculator","item":"https://acrenkey.com/calculators/gst-on-property-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is GST applicable on ready-to-move-in property?","acceptedAnswer":{"@type":"Answer","text":"GST is NOT applicable on completed / ready-to-move-in residential properties where an Occupancy Certificate (OC) or Completion Certificate (CC) has been issued prior to entering into the sale agreement."}},{"@type":"Question","name":"What is the GST rate for under-construction residential apartments?","acceptedAnswer":{"@type":"Answer","text":"Under current GST rules for real estate, under-construction residential apartments attract an effective GST rate of 5% (without Input Tax Credit). For qualifying affordable housing properties, the effective GST rate is 1%."}},{"@type":"Question","name":"Is GST calculated on plot / land purchases?","acceptedAnswer":{"@type":"Answer","text":"No. Transfer of bare land or plots is exempt from GST as land sale is outside the purview of GST."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Table */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">GST on Property Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">GST on Property Calculator</h1>
+                <p class="ak-calc-sub-text">Calculate GST on property purchases based on construction status, property type, affordable-housing eligibility and applicable GST rate.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Property &amp; Construction Status</h2>
+                </div>
+
+                <!-- Section 1: Transaction Date & Construction Status -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Transaction Date &amp; Construction Status</div>
+
+                <!-- Transaction Date -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">event</span>
+                            Transaction / Payment Date
+                        </div>
+                        <div style="width: 210px;">
+                            <input type="date" id="transactionDateInput" class="ak-new-input" value="2026-08-24" onchange="onInputChange()">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Status -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">construction</span>
+                            Property Construction Status
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="propertyStatusSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="Under Construction" selected>Under Construction</option>
+                                <option value="Ready-to-Move">Ready-to-Move (With OC/CC)</option>
+                                <option value="Completed / Resale">Completed / Resale</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Ready-to-move properties with Occupancy Certificate (OC) prior to sale are exempt from GST.</div>
+                </div>
+
+                <!-- Section 2: Property Price & Quoted Terms -->
+                <div class="ak-section-divider-title">2. Property Price &amp; Quoted Terms</div>
+
+                <!-- Property Base Price -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Property Price
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="propertyPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter the agreed sale consideration / contract price.</div>
+                </div>
+
+                <!-- Price Inclusion Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">sell</span>
+                            Price Includes GST?
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="priceInclusionSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="No" selected>No — GST is Extra</option>
+                                <option value="Yes">Yes — GST Already Included</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Check if builder's quoted price is GST-inclusive to prevent double taxation.</div>
+                </div>
+
+                <!-- Other Taxable Charges -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">add_card</span>
+                            Other Taxable Charges
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="otherChargesInput" class="ak-new-input has-prefix" value="0" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Preferred location (PLC), car parking, or club membership charges subject to GST.</div>
+                </div>
+
+                <!-- Section 3: Property Type & Affordable Housing -->
+                <div class="ak-section-divider-title">3. Property Classification &amp; Rate</div>
+
+                <!-- Property Type -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home_work</span>
+                            Property Type
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="propertyTypeSelect" class="ak-new-select" onchange="onPropertyTypeChange(this.value)">
+                                <option value="Residential Apartment" selected>Residential Apartment</option>
+                                <option value="Villa / Row House">Villa / Row House</option>
+                                <option value="Affordable Residential Property">Affordable Residential</option>
+                                <option value="Commercial Property">Commercial Property</option>
+                                <option value="Plot / Land">Plot / Land (Exempt)</option>
+                                <option value="Other">Other / Custom</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Affordable Housing Toggle -->
+                <div class="ak-new-input-row" id="affordableHousingRow">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            Affordable Housing?
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="affordableHousingSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="No" selected>No (Standard 5% Rate)</option>
+                                <option value="Yes">Yes (Affordable 1% Rate)</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Affordable housing (carpet area &lt;= 60/90 sqm &amp; price &lt;= ₹45L) qualifies for 1% GST.</div>
+                </div>
+
+                <!-- Rate Mode Selection -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            GST Rate Mode
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="rateModeSelect" class="ak-new-select" onchange="onRateModeChange(this.value)">
+                                <option value="Statutory" selected>Statutory Auto Rate</option>
+                                <option value="Custom">Custom Rate...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Rate Input (Hidden by default) -->
+                <div class="ak-new-input-row" id="customRateRow" style="display: none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">edit</span>
+                            Custom Effective GST Rate (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="customRateInput" class="ak-new-input has-suffix" value="5.0" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">GST ON PROPERTY SUMMARY</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="primaryGstVal">₹5,00,000</div>
+                <div class="ak-emi-subtext" id="primaryGstSub">Estimated GST Amount (5.0% Effective GST Rate for Residential Construction)</div>
+
+                <!-- Status & Applicability Bar -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>GST Applicability Status</span>
+                        <span id="applicabilityStatusText">Under Construction (5.0% GST)</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="applicabilityFill" style="width: 100%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="taxableValueText">Taxable Value: ₹1,00,00,000</span>
+                        <span id="totalCostText">Total Cost: ₹1,05,00,000</span>
+                    </div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Base Property Price</div>
+                        <div class="ak-snap-val" id="snapBasePrice">₹1,00,00,000</div>
+                        <div class="ak-snap-sub">Contract consideration</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Other Taxable Charges</div>
+                        <div class="ak-snap-val" id="snapOtherCharges">₹0</div>
+                        <div class="ak-snap-sub">PLC / Parking charges</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">GST Taxable Value</div>
+                        <div class="ak-snap-val" id="snapTaxableValue" style="color: #E5C178;">₹1,00,00,000</div>
+                        <div class="ak-snap-sub">Base for GST calculation</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective GST Rate</div>
+                        <div class="ak-snap-val" id="snapGstRate">5.0%</div>
+                        <div class="ak-snap-sub" id="snapRateSub">No ITC Residential</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Estimated GST Amount</div>
+                        <div class="ak-snap-val" id="snapGstAmount" style="color: #10B981;">₹5,00,000</div>
+                        <div class="ak-snap-sub">Tax payable to builder</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Total Cost (With GST)</div>
+                        <div class="ak-snap-val" id="snapTotalCost">₹1,05,00,000</div>
+                        <div class="ak-snap-sub">Property + GST total</div>
+                    </div>
+                </div>
+
+                <!-- Waterfall Cost Breakdown Card -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        GST &amp; Property Cost Breakdown
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Base Property Consideration Price:</span>
+                        <span id="wfPrice" style="font-weight:700;">₹1,00,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Plus: Other Taxable Add-on Charges:</span>
+                        <span id="wfOther">+₹0</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Total Taxable Value:</span>
+                        <span id="wfTaxableVal" style="font-weight:700; color:#E5C178;">₹1,00,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step">
+                        <span>Estimated GST (@ <span id="wfRateText">5.0%</span>):</span>
+                        <span id="wfGstAmount" style="color:#E5C178; font-weight:700;">+₹5,00,000</span>
+                    </div>
+                    <div class="ak-waterfall-step highlight" style="margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.15);">
+                        <span>Total Property Cost Including GST:</span>
+                        <span id="wfTotalCost" style="font-size:1.05rem; color:#E5C178;">₹1,05,00,000</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Insights & Dynamic Bullet List -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Key Insights &amp; Observations</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Tax Disclaimer Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Important GST Disclaimer:</strong> GST treatment of property transactions depends on the nature of the transaction, construction status, property type, affordable-housing eligibility and applicable GST rules. This calculator provides an indicative estimate based on the selected inputs and configured rates. Verify the final GST treatment and invoice with the developer/seller or a qualified tax professional.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>Is GST Applicable on Property Purchase?</h2>
+        <p>Goods and Services Tax (GST) in Indian real estate applies primarily to the construction service component of <strong>under-construction properties</strong>. When you purchase an under-construction home from a developer, GST is levied on the construction service provided prior to completion.</p>
+
+        <h2>Residential Real Estate GST Rates (1% vs. 5%)</h2>
+        <p>Under the real estate GST regime effective since April 1, 2019:</p>
+        
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Property Category</th>
+                    <th>Statutory Rate (With 1/3 Land Abatement)</th>
+                    <th>Input Tax Credit (ITC) Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Qualifying Affordable Housing</strong></td>
+                    <td><strong>1% Effective GST Rate</strong></td>
+                    <td>No Input Tax Credit (ITC)</td>
+                </tr>
+                <tr>
+                    <td><strong>Standard Residential Housing</strong></td>
+                    <td><strong>5% Effective GST Rate</strong></td>
+                    <td>No Input Tax Credit (ITC)</td>
+                </tr>
+                <tr>
+                    <td><strong>Commercial Property (Shops/Offices)</strong></td>
+                    <td><strong>12% Effective GST Rate</strong></td>
+                    <td>Subject to specific ITC rules</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Does GST Apply to Ready-to-Move Properties?</h2>
+        <p><strong>No. Ready-to-move-in properties with an Occupancy Certificate (OC) or Completion Certificate (CC) are EXEMPT from GST.</strong></p>
+        <p>If the entire consideration is paid after the issuance of the Occupancy Certificate by the competent local authority, the transaction is treated as a sale of immovable property, which falls outside the scope of GST under Schedule III of the CGST Act. However, ready-to-move homes still attract state Stamp Duty and Registration charges.</p>
+
+        <h2>What Is Affordable Housing for GST Purposes?</h2>
+        <p>To qualify for the concessional 1% GST rate, a residential unit must satisfy specific statutory criteria set by the GST Council:</p>
+        <ul>
+            <li><strong>Metropolitan Cities (Bengaluru, Mumbai, Delhi-NCR, Chennai, Kolkata, Hyderabad):</strong> Carpet area up to <strong>60 sq. metres (approx. 645 sq. ft.)</strong> AND total property cost up to <strong>₹45 Lakhs</strong>.</li>
+            <li><strong>Non-Metropolitan Cities:</strong> Carpet area up to <strong>90 sq. metres (approx. 968 sq. ft.)</strong> AND total property cost up to <strong>₹45 Lakhs</strong>.</li>
+        </ul>
+
+        <h2>GST-Inclusive vs. GST-Exclusive Pricing</h2>
+        <p>A common pitfall for homebuyers is adding 5% GST to a builder's price quote that already includes GST. Always check your developer's demand letter or cost breakdown sheet:</p>
+        <ul>
+            <li><strong>GST-Exclusive Quote:</strong> Base price = ₹1.00 Crore. GST @ 5% = ₹5.00 Lakhs extra. Total paid = ₹1.05 Crore.</li>
+            <li><strong>GST-Inclusive Quote:</strong> Total quoted price = ₹1.05 Crore. Embedded base price = <code>₹1.05 Crore ÷ 1.05 = ₹1.00 Crore</code>. Embedded GST = ₹5.00 Lakhs. Do <em>not</em> add another 5% on top!</li>
+        </ul>
+
+        <h2>Builder Demand Letter Verification Checklist</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Check 01</div>
+                <div class="ak-step-title">Check OC Status</div>
+                <p class="ak-step-desc">Confirm whether the developer has received the Occupancy Certificate (OC/CC) before signing the agreement.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Check 02</div>
+                <div class="ak-step-title">Verify Inclusive vs Exclusive</div>
+                <p class="ak-step-desc">Ensure the cost sheet explicitly specifies whether the basic square-foot price is GST-inclusive or GST-extra.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Check 03</div>
+                <div class="ak-step-title">Verify Affordable Eligibility</div>
+                <p class="ak-step-desc">If carpet area is under 60 sqm and price is under ₹45L, ensure the builder charges 1% instead of 5%.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Check 04</div>
+                <div class="ak-step-title">Separate Stamp Duty</div>
+                <p class="ak-step-desc">Confirm that Stamp Duty and Registration fees are listed separately and not subjected to GST.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Do I have to pay GST on land or plot purchases?</h3>
+            <p>No. Transfer of bare land or plotted developments is exempt from GST, as land sale is not a supply of goods or services under the CGST Act.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>Can I claim Input Tax Credit (ITC) as a homebuyer?</h3>
+            <p>No. Under the current 1% and 5% GST schemes for residential real estate, developers are not permitted to claim Input Tax Credit, and homebuyers cannot claim ITC on residential purchases.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>Is GST applicable on resale flat purchases?</h3>
+            <p>No. Resale flats are completed properties being transferred from an existing owner to a new buyer. Since completion has already occurred, resale transactions are completely exempt from GST.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <p class="ak-fcard-desc">Uncover registration fees, stamp duty, interior setup, and hidden initial property costs.</p>
+            </a>
+            <a href="/calculators/stamp-duty-registration-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">description</span></div>
+                    <div class="ak-fcard-title">Stamp Duty &amp; Registration Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate state stamp duty, registration charges, and surcharge fees for property transfers.</p>
+            </a>
+            <a href="/calculators/registration-fee-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">gavel</span></div>
+                    <div class="ak-fcard-title">Registration Fee Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Estimate property registration fees, cap savings, and jurisdiction-specific charges.</p>
+            </a>
+            <a href="/calculators/bangalore-property-buying-cost-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">location_city</span></div>
+                    <div class="ak-fcard-title">Bangalore Property Buying Cost</div>
+                </div>
+                <p class="ak-fcard-desc">Estimate complete Bangalore home purchase budget including BBMP, BWSSB, and BESCOM charges.</p>
+            </a>
+            <a href="/calculators/tds-on-property-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
+                    <div class="ak-fcard-title">TDS on Property Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate TDS withholding on property purchases under Section 393 / Section 194-IA.</p>
+            </a>
+            <a href="/calculators/hidden-cost-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">visibility_off</span></div>
+                    <div class="ak-fcard-title">Hidden Cost Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Reveal hidden maintenance deposits, corpus funds, legal fees, and builder add-ons.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/gst-on-property-calculator/">GST on Property Calculator</a></li><li><a href="/calculators/registration-fee-calculator/">Registration Fee Calculator</a></li><li><a href="/calculators/tds-on-property-calculator/">TDS on Property Calculator</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. TAX RULE ENGINE CONFIGURATION (GST_PROPERTY_CONFIG) ---
+    const GST_PROPERTY_CONFIG = {
+        rates: {
+            affordableResidential: 0.01,   // 1% effective rate
+            standardResidential: 0.05,     // 5% effective rate
+            commercialProperty: 0.12,      // 12% effective rate
+            plotLand: 0.00,                 // 0% exempt
+            readyToMove: 0.00               // 0% exempt
+        }
+    };
+
+    // --- 2. PURE CALCULATION FUNCTIONS ---
+    function parseNumericValue(val) {
+        if (!val) return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : Math.max(0, val);
+        const str = String(val).replace(/[^0-9.]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : Math.max(0, num);
+    }
+
+    function formatCurrency(num) {
+        const clean = Math.round(parseNumericValue(num));
+        return '₹' + clean.toLocaleString('en-IN');
+    }
+
+    function determineGSTApplicability(propertyStatus, propertyType) {
+        if (propertyStatus === 'Ready-to-Move' || propertyStatus === 'Completed / Resale') {
+            return { applicable: false, reason: "Ready-to-move / completed property with Occupancy Certificate (OC) is exempt from GST." };
+        }
+        if (propertyType === 'Plot / Land') {
+            return { applicable: false, reason: "Bare land / plot purchases are exempt from GST." };
+        }
+        return { applicable: true, reason: "Under-construction property construction services attract GST." };
+    }
+
+    function determineGSTRate(propertyStatus, propertyType, affordableHousing, rateMode, customRate) {
+        if (rateMode === 'Custom') {
+            return Math.max(0, parseNumericValue(customRate)) / 100;
+        }
+
+        const app = determineGSTApplicability(propertyStatus, propertyType);
+        if (!app.applicable) return 0.00;
+
+        if (propertyType === 'Commercial Property') {
+            return GST_PROPERTY_CONFIG.rates.commercialProperty;
+        }
+
+        if (affordableHousing === 'Yes' || propertyType === 'Affordable Residential Property') {
+            return GST_PROPERTY_CONFIG.rates.affordableResidential;
+        }
+
+        return GST_PROPERTY_CONFIG.rates.standardResidential;
+    }
+
+    function calculateTaxableValue(propertyPrice, otherCharges) {
+        return parseNumericValue(propertyPrice) + parseNumericValue(otherCharges);
+    }
+
+    function computePropertyGST(inputs) {
+        const price = parseNumericValue(inputs.propertyPrice);
+        const other = parseNumericValue(inputs.otherCharges);
+        const taxableVal = calculateTaxableValue(price, other);
+
+        const appStatus = determineGSTApplicability(inputs.propertyStatus, inputs.propertyType);
+        const gstRateDecimal = determineGSTRate(
+            inputs.propertyStatus, 
+            inputs.propertyType, 
+            inputs.affordableHousing, 
+            inputs.rateMode, 
+            inputs.customRate
+        );
+
+        let gstAmount = 0;
+        let baseValueBeforeGst = taxableVal;
+        let totalCost = taxableVal;
+
+        if (appStatus.applicable && gstRateDecimal > 0) {
+            if (inputs.priceInclusion === 'Yes') {
+                // Inclusive extraction: GST = Total * (Rate / (1 + Rate))
+                gstAmount = taxableVal * (gstRateDecimal / (1 + gstRateDecimal));
+                baseValueBeforeGst = taxableVal - gstAmount;
+                totalCost = taxableVal; // No extra cost added
+            } else {
+                // Exclusive calculation: GST = Base * Rate
+                gstAmount = taxableVal * gstRateDecimal;
+                baseValueBeforeGst = taxableVal;
+                totalCost = taxableVal + gstAmount;
+            }
+        }
+
+        // Compare 1% vs 5% savings if applicable
+        let affordableSavings = 0;
+        if (appStatus.applicable && (inputs.affordableHousing === 'Yes' || inputs.propertyType === 'Affordable Residential Property')) {
+            const standardGst = taxableVal * 0.05;
+            affordableSavings = Math.max(0, standardGst - gstAmount);
+        }
+
+        const effectiveRate = price > 0 ? (gstAmount / price) * 100 : 0;
+
+        return {
+            price,
+            other,
+            taxableVal,
+            applicable: appStatus.applicable,
+            reason: appStatus.reason,
+            gstRateDecimal,
+            gstAmount,
+            baseValueBeforeGst,
+            totalCost,
+            affordableSavings,
+            effectiveRate
+        };
+    }
+
+    // --- 3. UI STATE & INTERACTION LOGIC ---
+    function getFormInputs() {
+        return {
+            transactionDate: document.getElementById('transactionDateInput').value,
+            propertyStatus: document.getElementById('propertyStatusSelect').value,
+            propertyPrice: parseNumericValue(document.getElementById('propertyPriceInput').value),
+            priceInclusion: document.getElementById('priceInclusionSelect').value,
+            otherCharges: parseNumericValue(document.getElementById('otherChargesInput').value),
+            propertyType: document.getElementById('propertyTypeSelect').value,
+            affordableHousing: document.getElementById('affordableHousingSelect').value,
+            rateMode: document.getElementById('rateModeSelect').value,
+            customRate: parseNumericValue(document.getElementById('customRateInput').value)
+        };
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            const rawVal = inputElem.value.replace(/[^0-9.]/g, '');
+            if (rawVal !== '') {
+                const num = parseFloat(rawVal);
+                if (!isNaN(num)) {
+                    inputElem.value = num.toLocaleString('en-IN');
+                }
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onPropertyTypeChange(type) {
+        const row = document.getElementById('affordableHousingRow');
+        if (type === 'Commercial Property' || type === 'Plot / Land') {
+            row.style.display = 'none';
+        } else {
+            row.style.display = 'block';
+        }
+        updateCalculatorResults();
+    }
+
+    function onRateModeChange(mode) {
+        const customRateRow = document.getElementById('customRateRow');
+        if (mode === 'Custom') {
+            customRateRow.style.display = 'block';
+        } else {
+            customRateRow.style.display = 'none';
+        }
+        updateCalculatorResults();
+    }
+
+    function onInputChange() {
+        updateCalculatorResults();
+    }
+
+    function updateCalculatorResults() {
+        const inputs = getFormInputs();
+        const res = computePropertyGST(inputs);
+
+        const primaryValElem = document.getElementById('primaryGstVal');
+        const primarySubElem = document.getElementById('primaryGstSub');
+        const statusText = document.getElementById('applicabilityStatusText');
+        const fill = document.getElementById('applicabilityFill');
+        const taxableValText = document.getElementById('taxableValueText');
+        const totalCostText = document.getElementById('totalCostText');
+
+        const pctRate = (res.gstRateDecimal * 100).toFixed(1).replace('.0', '') + '%';
+
+        if (!res.applicable) {
+            primaryValElem.innerText = "GST NOT APPLICABLE (₹0)";
+            primarySubElem.innerText = res.reason;
+            statusText.innerText = `${inputs.propertyStatus} — 0.0% GST`;
+            fill.style.width = "0%";
+            taxableValText.innerText = `Property Consideration: ${formatCurrency(res.taxableVal)}`;
+            totalCostText.innerText = `Total Cost: ${formatCurrency(res.totalCost)}`;
+        } else {
+            primaryValElem.innerText = formatCurrency(res.gstAmount);
+            primarySubElem.innerText = inputs.priceInclusion === 'Yes' 
+                ? `GST Embedded in Quoted Price (@ ${pctRate} Effective Rate)`
+                : `Estimated GST Amount (@ ${pctRate} Effective Rate for ${inputs.propertyType})`;
+            statusText.innerText = `${inputs.propertyStatus} — ${pctRate} GST`;
+            fill.style.width = "100%";
+            taxableValText.innerText = `Taxable Value: ${formatCurrency(res.taxableVal)}`;
+            totalCostText.innerText = `Total Cost: ${formatCurrency(res.totalCost)}`;
+        }
+
+        // Snapshot Grid
+        document.getElementById('snapBasePrice').innerText = formatCurrency(inputs.priceInclusion === 'Yes' ? res.baseValueBeforeGst : res.price);
+        document.getElementById('snapOtherCharges').innerText = formatCurrency(res.other);
+        document.getElementById('snapTaxableValue').innerText = formatCurrency(res.taxableVal);
+        document.getElementById('snapGstRate').innerText = pctRate;
+        document.getElementById('snapRateSub').innerText = inputs.priceInclusion === 'Yes' ? 'GST Included' : 'GST Extra';
+        document.getElementById('snapGstAmount').innerText = formatCurrency(res.gstAmount);
+        document.getElementById('snapTotalCost').innerText = formatCurrency(res.totalCost);
+
+        // Waterfall Card
+        document.getElementById('wfPrice').innerText = formatCurrency(inputs.priceInclusion === 'Yes' ? res.baseValueBeforeGst : res.price);
+        document.getElementById('wfOther').innerText = `+${formatCurrency(res.other)}`;
+        document.getElementById('wfTaxableVal').innerText = formatCurrency(res.taxableVal);
+        document.getElementById('wfRateText').innerText = pctRate;
+        document.getElementById('wfGstAmount').innerText = res.applicable ? `+${formatCurrency(res.gstAmount)}` : '₹0';
+        document.getElementById('wfTotalCost').innerText = formatCurrency(res.totalCost);
+
+        // Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        insightsList.innerHTML += `<li><strong>Construction Status:</strong> ${res.reason}</li>`;
+
+        if (inputs.priceInclusion === 'Yes' && res.applicable) {
+            insightsList.innerHTML += `<li><strong>GST-Inclusive Extraction:</strong> Quoted price of ${formatCurrency(res.price)} already includes GST. Embedded GST component is <strong>${formatCurrency(res.gstAmount)}</strong> (Base value: ${formatCurrency(res.baseValueBeforeGst)}). No additional GST is added on top.</li>`;
+        } else if (inputs.priceInclusion === 'Not Sure') {
+            insightsList.innerHTML += `<li><strong>Verify Builder Demand Letter:</strong> Always check your developer's cost sheet to confirm whether the quoted square-foot rate is GST-inclusive or GST-exclusive.</li>`;
+        }
+
+        if (res.affordableSavings > 0) {
+            insightsList.innerHTML += `<li><strong>Affordable Housing Concession:</strong> Qualifying for 1% affordable housing GST rate saves you <strong>${formatCurrency(res.affordableSavings)}</strong> compared to the standard 5% residential rate!</li>`;
+        }
+
+        if (res.applicable && res.gstAmount > 0) {
+            insightsList.innerHTML += `<li><strong>Effective Cost Outflow:</strong> GST adds <strong>${formatCurrency(res.gstAmount)}</strong> (${pctRate}) to your base consideration, bringing total property cost to <strong>${formatCurrency(res.totalCost)}</strong>.</li>`;
+        }
+
+        insightsList.innerHTML += `<li><strong>GST vs Stamp Duty Notice:</strong> GST is separate from State Stamp Duty (approx. 3–7%) and Registration fees (approx. 1%). Verify total government outgo before finalizing your home purchase budget.</li>`;
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCalculatorResults();
+    });
+    </script>
+</body>
+</html>

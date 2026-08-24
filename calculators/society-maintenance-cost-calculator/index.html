@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Maintenance Cost Calculator – True Monthly Apartment Maintenance | acreNkey</title>
+
+    <meta name="description" content="Calculate your true monthly and annual society maintenance cost in India, including area-based fees, fixed charges, parking, water, amenities, GST, and sinking fund contributions.">
+    <meta name="keywords" content="society maintenance cost calculator, apartment maintenance calculator bangalore, sinking fund corpus calculation, gst on society maintenance, acrenkey investment calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/society-maintenance-cost-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Society Maintenance Cost Calculator | acreNkey">
+    <meta property="og:description" content="Estimate your monthly and annual apartment maintenance cost, including maintenance, parking, amenities, water, taxes and corpus contributions.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/society-maintenance-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Society Maintenance Cost Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate your monthly and annual apartment maintenance cost, including maintenance, parking, amenities, water, taxes and corpus contributions.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Society Maintenance Cost Calculator","description":"Calculate true monthly and annual recurring society maintenance costs, including area-based charges, fixed fees, parking, amenities, water, GST, and sinking fund contributions.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/society-maintenance-cost-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Society Maintenance Cost Calculator","item":"https://acrenkey.com/calculators/society-maintenance-cost-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is society maintenance calculated in residential apartments?","acceptedAnswer":{"@type":"Answer","text":"Society maintenance typically consists of an area-based fee (₹/sq. ft.) plus fixed monthly charges for parking, amenities, water, taxes, and sinking fund contributions."}},{"@type":"Question","name":"Why is effective maintenance cost per sq. ft. higher than the headline rate?","acceptedAnswer":{"@type":"Answer","text":"Headline rates only reflect base area charges. Fixed amenity fees, parking, water, GST, and sinking funds increase your true monthly out-of-pocket expense."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1rem 0;
+    }
+
+    .ak-mode-toggle-bar {
+        display: flex;
+        background: #F1F5F9;
+        border-radius: 8px;
+        padding: 3px;
+        margin-bottom: 1.25rem;
+    }
+    .ak-mode-toggle-btn {
+        flex: 1;
+        padding: 0.45rem;
+        border: none;
+        background: none;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-slate);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .ak-mode-toggle-btn.active {
+        background: #FFF;
+        color: var(--deep-navy-100);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.25rem 0 1rem 0;
+        padding-top: 0.75rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+    }
+    .ak-snap-title { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 0.15rem; }
+
+    /* Factors Table Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factors-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+    }
+    .ak-factors-table th { background: rgba(255,255,255,0.08); color: #E5C178; padding: 0.45rem 0.6rem; text-align: left; font-weight: 700; }
+    .ak-factors-table th.right { text-align: right; }
+    .ak-factors-table td { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.45rem 0.6rem; color: rgba(255,255,255,0.9); }
+    .ak-factors-table td.right { text-align: right; font-weight: 700; }
+    .ak-factors-table tr.total-row td { background: rgba(229, 193, 120, 0.12); font-weight: 800; color: #FFF; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Society Maintenance Cost Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Society Maintenance Cost Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate your monthly and annual apartment maintenance cost, including maintenance, parking, amenities, water, taxes and corpus contributions.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Maintenance Inputs</h2>
+                </div>
+
+                <!-- Mode Switcher -->
+                <div class="ak-mode-toggle-bar">
+                    <button class="ak-mode-toggle-btn active" id="btnQuickMode" onclick="switchMode('quick')">Quick Estimate</button>
+                    <button class="ak-mode-toggle-btn" id="btnDetailedMode" onclick="switchMode('detailed')">Detailed Statement</button>
+                </div>
+
+                <!-- Section 1: Property Details & Base Maintenance -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Area &amp; Headline Rate</div>
+
+                <!-- Saleable Area -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">square_foot</span>
+                            Apartment Chargeable Area (sq. ft.)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="areaInput" class="ak-new-input" value="1,500" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter saleable or super built-up area used by society for maintenance billing.</div>
+                </div>
+
+                <!-- Monthly Maintenance Rate per Sq Ft -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">rate_review</span>
+                            Monthly Rate (₹ / sq. ft. / month)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="rateInput" class="ak-new-input has-prefix" value="5.00" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Fixed & Additional Monthly Charges -->
+                <div class="ak-section-divider-title">2. Fixed &amp; Recurring Charges</div>
+
+                <!-- Fixed Monthly Charges -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">receipt</span>
+                            Fixed Monthly Charges (₹ / mo)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="fixedChargesInput" class="ak-new-input has-prefix" value="500" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Mode Extra Fields -->
+                <div id="detailedFieldsContainer">
+                    <!-- Parking Charges -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">local_parking</span>
+                                Parking Charges (₹ / mo)
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <span class="prefix">₹</span>
+                                <input type="text" id="parkingChargesInput" class="ak-new-input has-prefix" value="500" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities Charges -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">pool</span>
+                                Clubhouse / Amenities (₹ / mo)
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <span class="prefix">₹</span>
+                                <input type="text" id="amenityChargesInput" class="ak-new-input has-prefix" value="300" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Water Charges -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">water_drop</span>
+                                Water Charges (₹ / mo)
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <span class="prefix">₹</span>
+                                <input type="text" id="waterChargesInput" class="ak-new-input has-prefix" value="400" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Charges -->
+                    <div class="ak-new-input-row">
+                        <div class="ak-new-input-top">
+                            <div class="ak-new-input-label">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                                Other Charges (₹ / mo)
+                            </div>
+                            <div class="ak-new-input-box-wrapper">
+                                <span class="prefix">₹</span>
+                                <input type="text" id="otherChargesInput" class="ak-new-input has-prefix" value="300" oninput="formatAndCalculate(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Taxes & Sinking Fund -->
+                <div class="ak-section-divider-title">3. Taxes &amp; Sinking Fund</div>
+
+                <!-- GST Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            GST / Applicable Tax Rate (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="taxRateInput" class="ak-new-input has-suffix" value="18.0" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Standard GST rate on society maintenance exceeding ₹7,500/month per member.</div>
+                </div>
+
+                <!-- Corpus / Sinking Fund Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            Corpus / Sinking Fund Mode
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <select id="corpusModeSelect" class="ak-new-select" onchange="onCorpusModeChange()">
+                                <option value="annual" selected>Annual Sinking Fund</option>
+                                <option value="monthly">Monthly Sinking Fund</option>
+                                <option value="onetime">One-Time Corpus Fund</option>
+                                <option value="none">Not Applicable</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corpus Fund Amount -->
+                <div class="ak-new-input-row" id="corpusAmountRow">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label" id="corpusAmountLabel">
+                            <span class="material-symbols-outlined">account_balance</span>
+                            Annual Corpus Amount (₹ / year)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="corpusAmountInput" class="ak-new-input has-prefix" value="12,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">ESTIMATED SOCIETY MAINTENANCE</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="monthlyMaintenanceRes">₹11,623 / mo</div>
+                <div class="ak-emi-subtext" id="monthlySubtext">Total out-of-pocket recurring monthly cost including taxes &amp; fixed fees.</div>
+
+                <!-- Progress Bar: Headline vs Effective Rate -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>Headline vs Effective Maintenance Rate</span>
+                        <span id="rateIncreaseText" style="color: #E5C178;">+55% Increase</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="rateFill" style="width: 75%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="headlineRateText">Headline: ₹5.00 / sq. ft.</span>
+                        <span id="effectiveRateText">Effective: ₹7.75 / sq. ft.</span>
+                    </div>
+                </div>
+
+                <!-- 4-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Area-Based Maintenance</div>
+                        <div class="ak-snap-val" id="areaMaintRes">₹7,500</div>
+                        <div class="ak-snap-sub">₹5.00 / sq. ft. base</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Additional Monthly Fees</div>
+                        <div class="ak-snap-val" id="additionalFeesRes">₹2,350</div>
+                        <div class="ak-snap-sub">Fixed, water &amp; amenities</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Estimated GST / Taxes</div>
+                        <div class="ak-snap-val" id="taxRes">₹1,773</div>
+                        <div class="ak-snap-sub">18.0% GST applicable</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Recurring Annual Cost</div>
+                        <div class="ak-snap-val" id="annualMaintRes">₹1,39,476</div>
+                        <div class="ak-snap-sub">12 months maintenance</div>
+                    </div>
+                </div>
+
+                <!-- Cost Composition Breakdown Table -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Monthly &amp; Annual Cost Breakdown
+                    </div>
+                    <table class="ak-factors-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th class="right">Monthly</th>
+                                <th class="right">Annual</th>
+                            </tr>
+                        </thead>
+                        <tbody id="breakdownTableBody">
+                            <!-- Dynamically Populated -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Actionable Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Key Maintenance Insights</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Data Integrity Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Maintenance Due Diligence Tip:</strong> Always ask the society association for their latest monthly maintenance statement and annual financial audit before booking. GST rules apply to maintenance exceeding ₹7,500/month per member.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>Maintenance is More Than the Headline Rate</h2>
+        <p>Homebuyers often make the mistake of evaluating society maintenance based solely on the advertised per-square-foot rate (e.g. ₹5/sq. ft.). However, fixed utility charges, parking fees, clubhouse maintenance, GST, and sinking funds can increase your actual monthly bill by 25% to 60%.</p>
+
+        <h2>Understanding the Maintenance Cost Formula</h2>
+        <p>Your true monthly society maintenance bill is calculated as:</p>
+        <p><code>Base Maintenance = (Saleable Area × Rate) + Fixed Fees + Parking + Amenities + Water</code></p>
+        <p><code>Monthly Maintenance = Base Maintenance + Applicable GST (18%)</code></p>
+        <p><code>Recurring Annual Outflow = (Monthly Maintenance × 12) + Sinking Fund Corpus</code></p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Billing Method</th>
+                    <th>Typical Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Area-Based Fee</strong></td>
+                    <td>₹ / sq. ft. / month</td>
+                    <td>Covers security, housekeeping, common lighting, and lift maintenance.</td>
+                </tr>
+                <tr>
+                    <td><strong>Fixed &amp; Amenity Fees</strong></td>
+                    <td>Flat ₹ per unit</td>
+                    <td>Clubhouse, gym, swimming pool upkeep, and administrative expenses.</td>
+                </tr>
+                <tr>
+                    <td><strong>Utilities (Water/Power)</strong></td>
+                    <td>Metered / Flat ₹</td>
+                    <td>Borewell, municipal water supply, tanker charges, and generator diesel backup.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sinking / Corpus Fund</strong></td>
+                    <td>Monthly / Annual / One-Time</td>
+                    <td>Long-term capital expenditure, building painting, and major structural repairs.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5-Step Society Maintenance Due Diligence Checklist</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 01</div>
+                <div class="ak-step-title">Request Maintenance Statement</div>
+                <p class="ak-step-desc">Obtain an actual maintenance bill issued to a current resident of the same flat size.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 02</div>
+                <div class="ak-step-title">Check Sinking Fund Balances</div>
+                <p class="ak-step-desc">Verify if the society association has adequate corpus reserves for elevator replacement and waterproofing.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 03</div>
+                <div class="ak-step-title">Verify Water Supply Source</div>
+                <p class="ak-step-desc">High water tanker dependency significantly increases monthly utility surcharges during summer months.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 04</div>
+                <div class="ak-step-title">Confirm GST Applicability</div>
+                <p class="ak-step-desc">Verify if individual flat maintenance exceeds ₹7,500/month, triggering 18% GST liability.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 05</div>
+                <div class="ak-step-title">Review Annual Fee Hikes</div>
+                <p class="ak-step-desc">Check historical AGM minutes for standard 5% to 10% annual escalation trends.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Is GST applicable on society maintenance?</h3>
+            <p>Yes. If your monthly maintenance bill exceeds ₹7,500 per month per flat and the RWA's annual turnover exceeds ₹20 Lakhs, 18% GST applies on the entire maintenance amount.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>What is a Corpus or Sinking Fund?</h3>
+            <p>A sinking fund is collected for long-term structural repairs, building repainting, and major equipment upgrades. It is distinct from routine operational maintenance.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/house-hunting-budget-planner/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">account_balance_wallet</span></div>
+                    <div class="ak-fcard-title">House Hunting Budget Planner</div>
+                </div>
+                <p class="ak-fcard-desc">Determine your maximum search budget based on borrowing limits, savings, interiors, and safety buffer.</p>
+            </a>
+            <a href="/calculators/net-rental-yield-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">real_estate_agent</span></div>
+                    <div class="ak-fcard-title">Net Rental Yield Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate net rental yield after vacancy, maintenance, property tax, and insurance.</p>
+            </a>
+            <a href="/calculators/leveraged-property-return-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Leveraged Return Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">See how a home loan amplifies return on equity compared to an all-cash purchase.</p>
+            </a>
+            <a href="/calculators/builder-comparison-tool/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">domain</span></div>
+                    <div class="ak-fcard-title">Builder Comparison Tool</div>
+                </div>
+                <p class="ak-fcard-desc">Compare real estate developers side-by-side on delivery, quality, compliance, and risk.</p>
+            </a>
+            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <p class="ak-fcard-desc">Uncover registration fees, stamp duty, interior setup, and hidden initial property costs.</p>
+            </a>
+            <a href="/calculators/registration-fee-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
+                    <div class="ak-fcard-title">Registration Fee Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate exact stamp duty and registration fee requirements by state and property value.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/society-maintenance-cost-calculator/">Society Maintenance Calculator</a></li><li><a href="/calculators/builder-comparison-tool/">Builder Comparison Tool</a></li><li><a href="/calculators/house-hunting-budget-planner/">House Hunting Planner</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. STATE & UTILITIES ---
+    let currentMode = 'detailed';
+
+    function parseNumericValue(val) {
+        if (val === null || val === undefined || val === '') return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : val;
+        const str = String(val).replace(/[^0-9.-]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatRupee(num) {
+        if (isNaN(num)) return "₹0";
+        return "₹" + Math.round(num).toLocaleString('en-IN');
+    }
+
+    // --- 2. PURE CALCULATION FUNCTION ---
+    function computeSocietyMaintenance(inputs) {
+        const area = Math.max(0, parseNumericValue(inputs.area));
+        const rate = Math.max(0, parseNumericValue(inputs.rate));
+        const fixed = Math.max(0, parseNumericValue(inputs.fixedCharges));
+        const parking = Math.max(0, parseNumericValue(inputs.parkingCharges));
+        const amenity = Math.max(0, parseNumericValue(inputs.amenityCharges));
+        const water = Math.max(0, parseNumericValue(inputs.waterCharges));
+        const other = Math.max(0, parseNumericValue(inputs.otherCharges));
+        const taxRate = Math.max(0, parseNumericValue(inputs.taxRate));
+
+        const corpusMode = inputs.corpusMode || 'annual';
+        const corpusAmt = Math.max(0, parseNumericValue(inputs.corpusAmount));
+
+        // Area-based maintenance
+        const areaMaintenance = area * rate;
+
+        // Monthly Base Maintenance
+        let additionalFees = fixed + parking + amenity + water + other;
+        let monthlyCorpusAdd = 0;
+
+        if (corpusMode === 'monthly') {
+            monthlyCorpusAdd = corpusAmt;
+        }
+
+        const baseMaintenance = areaMaintenance + additionalFees + monthlyCorpusAdd;
+
+        // GST Tax calculation
+        const tax = baseMaintenance * (taxRate / 100);
+
+        // Final Out-of-pocket Monthly Maintenance
+        const monthlyMaintenance = baseMaintenance + tax;
+
+        // Recurring Annual Maintenance
+        const annualMaintenance = monthlyMaintenance * 12;
+
+        // Corpus & Annual Impacts
+        let annualCorpusAmt = 0;
+        let oneTimeCorpusAmt = 0;
+        let totalAnnualCost = annualMaintenance;
+        let firstYearCost = annualMaintenance;
+
+        if (corpusMode === 'annual') {
+            annualCorpusAmt = corpusAmt;
+            totalAnnualCost += annualCorpusAmt;
+            firstYearCost += annualCorpusAmt;
+        } else if (corpusMode === 'monthly') {
+            annualCorpusAmt = corpusAmt * 12;
+            totalAnnualCost = annualMaintenance; // Already in monthly bill
+            firstYearCost = annualMaintenance;
+        } else if (corpusMode === 'onetime') {
+            oneTimeCorpusAmt = corpusAmt;
+            firstYearCost += oneTimeCorpusAmt;
+        }
+
+        // Effective Rates
+        const effectiveMonthlyRate = area > 0 ? (annualMaintenance / (area * 12)) : 0;
+
+        return {
+            area,
+            rate,
+            fixed,
+            parking,
+            amenity,
+            water,
+            other,
+            taxRate,
+            corpusMode,
+            corpusAmt,
+            areaMaintenance,
+            additionalFees,
+            baseMaintenance,
+            tax,
+            monthlyMaintenance,
+            annualMaintenance,
+            annualCorpusAmt,
+            oneTimeCorpusAmt,
+            totalAnnualCost,
+            firstYearCost,
+            effectiveMonthlyRate
+        };
+    }
+
+    // --- 3. UI CONTROLS & INTERACTION ---
+    function switchMode(mode) {
+        currentMode = mode;
+        const btnQuick = document.getElementById('btnQuickMode');
+        const btnDetailed = document.getElementById('btnDetailedMode');
+        const detailedFields = document.getElementById('detailedFieldsContainer');
+
+        if (mode === 'quick') {
+            btnQuick.classList.add('active');
+            btnDetailed.classList.remove('active');
+            detailedFields.style.display = 'none';
+        } else {
+            btnDetailed.classList.add('active');
+            btnQuick.classList.remove('active');
+            detailedFields.style.display = 'block';
+        }
+        updateCalculator();
+    }
+
+    function onCorpusModeChange() {
+        const mode = document.getElementById('corpusModeSelect').value;
+        const row = document.getElementById('corpusAmountRow');
+        const label = document.getElementById('corpusAmountLabel');
+
+        if (mode === 'none') {
+            row.style.display = 'none';
+        } else {
+            row.style.display = 'block';
+            if (mode === 'annual') label.innerHTML = `<span class="material-symbols-outlined">account_balance</span> Annual Corpus Amount (₹ / year)`;
+            else if (mode === 'monthly') label.innerHTML = `<span class="material-symbols-outlined">account_balance</span> Monthly Corpus Amount (₹ / month)`;
+            else if (mode === 'onetime') label.innerHTML = `<span class="material-symbols-outlined">account_balance</span> One-Time Corpus Amount (₹)`;
+        }
+        updateCalculator();
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            let cursor = inputElem.selectionStart;
+            let origLen = inputElem.value.length;
+            let val = inputElem.value.replace(/[^0-9.]/g, '');
+            let parts = val.split('.');
+            if (parts.length > 2) val = parts[0] + '.' + parts.slice(1).join('');
+
+            if (parts[0]) parts[0] = parseInt(parts[0], 10).toLocaleString('en-IN');
+            let formatted = parts.join('.');
+            if (formatted !== 'NaN') {
+                inputElem.value = formatted;
+                let newLen = formatted.length;
+                if (cursor) inputElem.setSelectionRange(cursor + (newLen - origLen), cursor + (newLen - origLen));
+            }
+        }
+        updateCalculator();
+    }
+
+    function collectInputs() {
+        return {
+            area: document.getElementById('areaInput').value,
+            rate: document.getElementById('rateInput').value,
+            fixedCharges: document.getElementById('fixedChargesInput').value,
+            parkingCharges: currentMode === 'detailed' ? document.getElementById('parkingChargesInput').value : 0,
+            amenityCharges: currentMode === 'detailed' ? document.getElementById('amenityChargesInput').value : 0,
+            waterCharges: currentMode === 'detailed' ? document.getElementById('waterChargesInput').value : 0,
+            otherCharges: currentMode === 'detailed' ? document.getElementById('otherChargesInput').value : 0,
+            taxRate: document.getElementById('taxRateInput').value,
+            corpusMode: document.getElementById('corpusModeSelect').value,
+            corpusAmount: document.getElementById('corpusAmountInput').value
+        };
+    }
+
+    // --- 4. RENDER RESULTS ---
+    function updateCalculator() {
+        const inputs = collectInputs();
+        const res = computeSocietyMaintenance(inputs);
+
+        // Huge Result Value
+        document.getElementById('monthlyMaintenanceRes').innerText = `${formatRupee(res.monthlyMaintenance)} / mo`;
+        document.getElementById('monthlySubtext').innerText = `Total recurring monthly maintenance cost for a ${res.area.toLocaleString()} sq. ft. flat.`;
+
+        // Progress Bar
+        const headline = res.rate;
+        const effective = res.effectiveMonthlyRate;
+        const pctIncrease = headline > 0 ? Math.round(((effective - headline) / headline) * 100) : 0;
+
+        document.getElementById('rateIncreaseText').innerText = pctIncrease > 0 ? `+${pctIncrease}% Increase` : `Base Rate`;
+        document.getElementById('rateFill').style.width = Math.min(100, Math.max(15, Math.round((effective / (headline * 1.6)) * 100))) + "%";
+        document.getElementById('headlineRateText').innerText = `Headline: ₹${headline.toFixed(2)} / sq. ft.`;
+        document.getElementById('effectiveRateText').innerText = `Effective: ₹${effective.toFixed(2)} / sq. ft.`;
+
+        // Snapshot Cards
+        document.getElementById('areaMaintRes').innerText = formatRupee(res.areaMaintenance);
+        document.getElementById('additionalFeesRes').innerText = formatRupee(res.additionalFees);
+        document.getElementById('taxRes').innerText = formatRupee(res.tax);
+        document.getElementById('annualMaintRes').innerText = formatRupee(res.annualMaintenance);
+
+        // Breakdown Table
+        const tbody = document.getElementById('breakdownTableBody');
+        tbody.innerHTML = `
+            <tr><td>Area Maintenance (${res.rate.toFixed(2)}/sq.ft.)</td><td class="right">${formatRupee(res.areaMaintenance)}</td><td class="right">${formatRupee(res.areaMaintenance * 12)}</td></tr>
+            <tr><td>Fixed Charges</td><td class="right">${formatRupee(res.fixed)}</td><td class="right">${formatRupee(res.fixed * 12)}</td></tr>
+            ${currentMode === 'detailed' ? `
+            <tr><td>Parking Fees</td><td class="right">${formatRupee(res.parking)}</td><td class="right">${formatRupee(res.parking * 12)}</td></tr>
+            <tr><td>Amenities / Clubhouse</td><td class="right">${formatRupee(res.amenity)}</td><td class="right">${formatRupee(res.amenity * 12)}</td></tr>
+            <tr><td>Water Charges</td><td class="right">${formatRupee(res.water)}</td><td class="right">${formatRupee(res.water * 12)}</td></tr>
+            <tr><td>Other Society Charges</td><td class="right">${formatRupee(res.other)}</td><td class="right">${formatRupee(res.other * 12)}</td></tr>
+            ` : ''}
+            <tr><td>GST / Taxes (${res.taxRate}%)</td><td class="right">${formatRupee(res.tax)}</td><td class="right">${formatRupee(res.tax * 12)}</td></tr>
+            <tr class="total-row"><td>Monthly Total Maintenance</td><td class="right">${formatRupee(res.monthlyMaintenance)}</td><td class="right">${formatRupee(res.annualMaintenance)}</td></tr>
+        `;
+
+        if (res.corpusMode === 'annual') {
+            tbody.innerHTML += `<tr><td>Annual Sinking Fund Corpus</td><td class="right">—</td><td class="right">${formatRupee(res.annualCorpusAmt)}</td></tr>`;
+            tbody.innerHTML += `<tr class="total-row"><td>Total Annual Outflow (Maint + Corpus)</td><td class="right">—</td><td class="right">${formatRupee(res.totalAnnualCost)}</td></tr>`;
+        } else if (res.corpusMode === 'onetime') {
+            tbody.innerHTML += `<tr><td>One-Time Corpus Contribution</td><td class="right">—</td><td class="right">${formatRupee(res.oneTimeCorpusAmt)}</td></tr>`;
+            tbody.innerHTML += `<tr class="total-row"><td>First-Year Total Cash Outflow</td><td class="right">—</td><td class="right">${formatRupee(res.firstYearCost)}</td></tr>`;
+        }
+
+        // Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        insightsList.innerHTML += `<li><strong>Effective Rate:</strong> Your true effective maintenance is <strong>₹${res.effectiveMonthlyRate.toFixed(2)}/sq. ft./month</strong> compared to headline ₹${res.rate.toFixed(2)}/sq. ft.</li>`;
+        
+        if (pctIncrease > 25) {
+            insightsList.innerHTML += `<li><strong>High Additional Fees:</strong> Fixed fees, utilities, and taxes add a <strong>${pctIncrease}% surcharge</strong> over the base area rate. Review the society's detailed bill schedule.</li>`;
+        }
+
+        if (res.corpusMode === 'onetime') {
+            insightsList.innerHTML += `<li><strong>First-Year Cash Outflow:</strong> Including your one-time corpus of ${formatRupee(res.oneTimeCorpusAmt)}, your total first-year society payment will be <strong>${formatRupee(res.firstYearCost)}</strong>.</li>`;
+        } else if (res.corpusMode === 'annual') {
+            insightsList.innerHTML += `<li><strong>Annual Sinking Fund:</strong> Your total recurring annual outflow including the ${formatRupee(res.annualCorpusAmt)} sinking fund is <strong>${formatRupee(res.totalAnnualCost)}/year</strong>.</li>`;
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        switchMode('detailed');
+    });
+    </script>
+</body>
+</html>

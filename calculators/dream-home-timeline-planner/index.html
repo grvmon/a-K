@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Home Timeline Planner – Estimate Home Purchase Date | acreNkey</title>
+
+    <meta name="description" content="Calculate when you can afford to buy your dream home in India. Model property appreciation, monthly savings capacity, down payment, stamp duty, future loan EMI, and financial readiness.">
+    <meta name="keywords" content="dream home timeline planner, when can I afford a home calculator India, property appreciation savings planner, home buying readiness calculator, acrenkey investment calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/dream-home-timeline-planner/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dream Home Timeline Planner | acreNkey">
+    <meta property="og:description" content="Find out when you could realistically afford your target home based on your savings, property appreciation, upfront costs and loan affordability.">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/dream-home-timeline-planner/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dream Home Timeline Planner | acreNkey">
+    <meta name="twitter:description" content="Find out when you could realistically afford your target home based on your savings, property appreciation, upfront costs and loan affordability.">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Dream Home Timeline Planner","description":"Estimate when you can realistically purchase your dream property by modeling real estate price appreciation, down payment accumulation, acquisition costs, and future home loan EMI affordability.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/dream-home-timeline-planner/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Dream Home Timeline Planner","item":"https://acrenkey.com/calculators/dream-home-timeline-planner/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a dream home purchase timeline calculated?","acceptedAnswer":{"@type":"Answer","text":"The planner simulates monthly property price appreciation against your monthly savings capacity to determine the exact month when your accumulated cash meets or exceeds down payment and registration requirements."}},{"@type":"Question","name":"Does having enough down payment guarantee loan affordability?","acceptedAnswer":{"@type":"Answer","text":"No. Accumulating down payment cash is step one; the planner also checks whether the future home loan EMI fits within your maximum EMI-to-income ratio."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1rem 0;
+    }
+
+    .ak-mode-toggle-bar {
+        display: flex;
+        background: #F1F5F9;
+        border-radius: 8px;
+        padding: 3px;
+        margin-bottom: 1.25rem;
+    }
+    .ak-mode-toggle-btn {
+        flex: 1;
+        padding: 0.45rem;
+        border: none;
+        background: none;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--deep-slate);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .ak-mode-toggle-btn.active {
+        background: #FFF;
+        color: var(--deep-navy-100);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.25rem 0 1rem 0;
+        padding-top: 0.75rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+    }
+    .ak-snap-title { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 0.15rem; }
+
+    /* Factors Table Card */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-factors-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+    }
+    .ak-factors-table th { background: rgba(255,255,255,0.08); color: #E5C178; padding: 0.45rem 0.6rem; text-align: left; font-weight: 700; }
+    .ak-factors-table th.right { text-align: right; }
+    .ak-factors-table td { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.45rem 0.6rem; color: rgba(255,255,255,0.9); }
+    .ak-factors-table td.right { text-align: right; font-weight: 700; }
+    .ak-factors-table tr.total-row td { background: rgba(229, 193, 120, 0.12); font-weight: 800; color: #FFF; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Dream Home Timeline Planner</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Dream Home Timeline Planner</h1>
+                <p class="ak-calc-sub-text">Find out when you could realistically afford your target home based on your savings, property appreciation, upfront costs and loan affordability.</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Target Home &amp; Savings Goal</h2>
+                </div>
+
+                <!-- Section 1: Target Property & Savings Goal -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Target Property &amp; Current Savings</div>
+
+                <!-- Target Property Price Today -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home</span>
+                            Target Property Price Today (₹)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="targetPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Savings -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">savings</span>
+                            Current Home Savings (₹)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="currentSavingsInput" class="ak-new-input has-prefix" value="10,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Savings Capacity -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Monthly Savings Capacity (₹ / mo)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="monthlySavingsInput" class="ak-new-input has-prefix" value="50,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Appreciation & Purchase Expenses -->
+                <div class="ak-section-divider-title">2. Appreciation &amp; Purchase Expenses</div>
+
+                <!-- Expected Annual Property Appreciation -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            Annual Property Appreciation (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="appreciationPctInput" class="ak-new-input has-suffix" value="5.0" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Down Payment % & Buying Costs % -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">payments</span>
+                            Down Payment (%) &amp; Buying Costs (%)
+                        </div>
+                        <div style="display:flex; gap:0.5rem; width:210px;">
+                            <input type="text" id="downPaymentPctInput" class="ak-new-input" style="width:105px;" value="20.0" placeholder="Down %" oninput="formatAndCalculate(this)">
+                            <input type="text" id="buyingCostsPctInput" class="ak-new-input" style="width:100px;" value="8.0" placeholder="Costs %" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Down payment (e.g. 20%) + Stamp Duty/Registration (e.g. 8%) = Total Upfront Cash %.</div>
+                </div>
+
+                <!-- Section 3: Loan & Income Affordability -->
+                <div class="ak-section-divider-title">3. Loan &amp; Income Affordability</div>
+
+                <!-- Net Monthly Income -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">work</span>
+                            Net Monthly Take-Home Income (₹)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="monthlyIncomeInput" class="ak-new-input has-prefix" value="2,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Max EMI Ratio & Interest Rate -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Max EMI Cap (%) &amp; Interest Rate (%)
+                        </div>
+                        <div style="display:flex; gap:0.5rem; width:210px;">
+                            <input type="text" id="maxEmiPctInput" class="ak-new-input" style="width:105px;" value="40.0" placeholder="EMI %" oninput="formatAndCalculate(this)">
+                            <input type="text" id="interestRateInput" class="ak-new-input" style="width:100px;" value="8.5" placeholder="Rate %" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loan Tenure -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            Target Loan Tenure (Years)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <select id="tenureSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="15">15 Years</option>
+                                <option value="20" selected>20 Years</option>
+                                <option value="25">25 Years</option>
+                                <option value="30">30 Years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">ESTIMATED PURCHASE TIMELINE</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="timelineRes">2 Years 10 Months</div>
+                <div class="ak-emi-subtext" id="estDateSubtext">Estimated Buy Date: June 2029 (at ₹50,000 / month savings).</div>
+
+                <!-- Progress Bar: Readiness Score -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span>Dream Home Readiness Score</span>
+                        <span id="readinessStatusText" style="color: #10B981;">On Track (88 / 100)</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="readinessFill" style="width: 88%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="emiAffordabilityBarText">EMI Affordability: Within Limit (39.9%)</span>
+                        <span id="cashReadinessBarText">Upfront Cash: On Track</span>
+                    </div>
+                </div>
+
+                <!-- 4-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Future Property Price</div>
+                        <div class="ak-snap-val" id="futurePriceRes">₹1,15,00,000</div>
+                        <div class="ak-snap-sub" id="appreciationSub">Appreciated @ 5.0% p.a.</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Upfront Cash Needed</div>
+                        <div class="ak-snap-val" id="upfrontCashRes">₹32,20,000</div>
+                        <div class="ak-snap-sub">Down Payment + Costs</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Estimated Home Loan</div>
+                        <div class="ak-snap-val" id="loanAmountRes">₹92,00,000</div>
+                        <div class="ak-snap-sub">80% LTV Financing</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-title">Future Monthly EMI</div>
+                        <div class="ak-snap-val" id="futureEmiRes">₹79,800</div>
+                        <div class="ak-snap-sub" id="emiRatioSub">39.9% of ₹2,00,000 income</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Breakdown Table -->
+                <div class="ak-factors-card">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Future Purchase Milestone Itemization
+                    </div>
+                    <table class="ak-factors-table">
+                        <thead>
+                            <tr>
+                                <th>Milestone Factor</th>
+                                <th class="right">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="breakdownTableBody">
+                            <!-- Dynamically Populated -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Actionable Insights Box -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Timeline &amp; Affordability Insights</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Data Integrity Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Appreciation Reality Rule:</strong> Property appreciation rates vary by locality. If real estate prices in your target location appreciate faster than your monthly savings capacity, consider accelerating your savings rate or starting with a stepping-stone property.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>How Does the Dream Home Timeline Planner Work?</h2>
+        <p>Purchasing a home requires solving two separate financial hurdles: accumulating upfront liquid cash (down payment + stamp duty/registration) and ensuring that the future home loan EMI remains affordable against your monthly income.</p>
+
+        <h2>Understanding the Timeline Calculation Formula</h2>
+        <p>The planner simulates month-by-month future asset growth and savings trajectory:</p>
+        <p><code>Future Property Price (t) = Today's Price × (1 + Annual Appreciation Rate)^(t / 12)</code></p>
+        <p><code>Required Upfront Cash (t) = Future Property Price (t) × (Down Payment % + Buying Costs %)</code></p>
+        <p><code>Accumulated Savings (t) = Current Savings + (Monthly Savings Capacity × t)</code></p>
+        <p>The earliest month <code>t</code> where <code>Accumulated Savings (t) ≥ Required Upfront Cash (t)</code> becomes your estimated purchase timeline.</p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Annual Appreciation</th>
+                    <th>Future Price (3 Yrs)</th>
+                    <th>Required Cash (28%)</th>
+                    <th>Timeline Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>0% (Flat Prices)</strong></td>
+                    <td>₹1.00 Cr</td>
+                    <td>₹28.0 Lakhs</td>
+                    <td>Fastest cash accumulation timeline.</td>
+                </tr>
+                <tr>
+                    <td><strong>5% (Moderate Growth)</strong></td>
+                    <td>₹1.15 Cr</td>
+                    <td>₹32.2 Lakhs</td>
+                    <td>Standard growth matching inflation.</td>
+                </tr>
+                <tr>
+                    <td><strong>8% (High Growth Corridor)</strong></td>
+                    <td>₹1.26 Cr</td>
+                    <td>₹35.2 Lakhs</td>
+                    <td>Requires higher monthly savings capacity.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5-Step Strategy to Accelerate Your Home Timeline</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 01</div>
+                <div class="ak-step-title">Separate Emergency Reserves</div>
+                <p class="ak-step-desc">Do not count your 6-month liquid emergency fund as part of your home purchase down payment.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 02</div>
+                <div class="ak-step-title">Automate Home Savings</div>
+                <p class="ak-step-desc">Set up an automated monthly SIP or recurring deposit on salary day to enforce disciplined savings.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 03</div>
+                <div class="ak-step-title">Include Acquisition Taxes</div>
+                <p class="ak-step-desc">Always factor in 6%-8% extra for stamp duty, registration fees, GST, legal, and brokerage costs.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 04</div>
+                <div class="ak-step-title">Pay Off High-Interest Debts</div>
+                <p class="ak-step-desc">Clear personal loans or credit card balances to maximize your home loan eligibility when ready to buy.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Step 05</div>
+                <div class="ak-step-title">Monitor Local Capital Rates</div>
+                <p class="ak-step-desc">Track micro-market appreciation in your target neighborhood every 6 months to recalibrate your target.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Why does my target home cost more in the future?</h3>
+            <p>Real estate prices generally appreciate over time. A 5% annual appreciation rate increases a ₹1 Crore property to ₹1.15 Crore over 3 years, increasing both the down payment and loan required.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>What if my current monthly savings capacity is ₹0?</h3>
+            <p>If your monthly savings capacity is zero and your current savings do not cover the upfront cash requirement, a future purchase date cannot be reached until savings capacity is created.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/house-hunting-budget-planner/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">account_balance_wallet</span></div>
+                    <div class="ak-fcard-title">House Hunting Budget Planner</div>
+                </div>
+                <p class="ak-fcard-desc">Determine your maximum search budget based on borrowing limits, savings, interiors, and safety buffer.</p>
+            </a>
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
+                    <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate home loan EMI, total interest payable, and annual amortization schedule.</p>
+            </a>
+            <a href="/calculators/emergency-fund-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
+                    <div class="ak-fcard-title">Emergency Fund Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate post-purchase emergency fund reserves for Indian home buyers across expenses and EMIs.</p>
+            </a>
+            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+                    <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+                </div>
+                <p class="ak-fcard-desc">Uncover registration fees, stamp duty, interior setup, and hidden initial property costs.</p>
+            </a>
+            <a href="/calculators/future-property-value-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Future Property Value Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Project property value growth over time based on compound annual appreciation rates.</p>
+            </a>
+            <a href="/calculators/net-rental-yield-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">real_estate_agent</span></div>
+                    <div class="ak-fcard-title">Net Rental Yield Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate net rental yield after vacancy, maintenance, property tax, and insurance.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/dream-home-timeline-planner/">Dream Home Timeline Planner</a></li><li><a href="/calculators/house-hunting-budget-planner/">House Hunting Planner</a></li><li><a href="/calculators/emergency-fund-calculator/">Emergency Fund Calculator</a></li><li><a href="/calculators/builder-comparison-tool/">Builder Comparison Tool</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. STATE & UTILITIES ---
+    function parseNumericValue(val) {
+        if (val === null || val === undefined || val === '') return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : val;
+        const str = String(val).replace(/[^0-9.-]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : num;
+    }
+
+    function formatRupee(num) {
+        if (isNaN(num)) return "₹0";
+        return "₹" + Math.round(num).toLocaleString('en-IN');
+    }
+
+    // --- 2. PURE CALCULATION FUNCTION ---
+    function computeDreamHomeTimeline(inputs) {
+        const targetPrice = Math.max(0, parseNumericValue(inputs.targetPrice));
+        const currentSavings = Math.max(0, parseNumericValue(inputs.currentSavings));
+        const monthlySavings = Math.max(0, parseNumericValue(inputs.monthlySavings));
+
+        const appreciationPct = Math.max(-50, parseNumericValue(inputs.appreciationPct));
+        const downPaymentPct = Math.max(0, parseNumericValue(inputs.downPaymentPct));
+        const buyingCostsPct = Math.max(0, parseNumericValue(inputs.buyingCostsPct));
+
+        const monthlyIncome = Math.max(0, parseNumericValue(inputs.monthlyIncome));
+        const maxEmiPct = Math.max(0, parseNumericValue(inputs.maxEmiPct));
+        const interestRate = Math.max(0, parseNumericValue(inputs.interestRate));
+        const tenureYears = Math.max(1, parseNumericValue(inputs.tenureYears));
+
+        const totalUpfrontPct = downPaymentPct + buyingCostsPct;
+        const todayRequiredCash = targetPrice * (totalUpfrontPct / 100);
+
+        let timelineMonths = 0;
+        let isReachable = true;
+
+        if (currentSavings >= todayRequiredCash) {
+            timelineMonths = 0;
+        } else if (monthlySavings <= 0) {
+            isReachable = false;
+            timelineMonths = 999;
+        } else {
+            // Month-by-month appreciation iteration
+            let found = false;
+            for (let m = 1; m <= 600; m++) {
+                const fPrice = targetPrice * Math.pow(1 + (appreciationPct / 100), m / 12);
+                const reqCash = fPrice * (totalUpfrontPct / 100);
+                const sav = currentSavings + (monthlySavings * m);
+
+                if (sav >= (reqCash - 0.01)) {
+                    timelineMonths = m;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                isReachable = false;
+                timelineMonths = 600;
+            }
+        }
+
+        // Timeline formatting
+        const yearsPart = Math.floor(timelineMonths / 12);
+        const monthsPart = timelineMonths % 12;
+        let timelineFormatted = `${yearsPart} Year${yearsPart !== 1 ? 's' : ''} ${monthsPart} Month${monthsPart !== 1 ? 's' : ''}`;
+        if (timelineMonths === 0) timelineFormatted = "0 Months (Cash Ready Today)";
+        if (!isReachable) timelineFormatted = "Unreachable at Current Savings Rate";
+
+        // Estimated Buy Date
+        const today = new Date(2026, 7, 24); // Aug 24, 2026
+        const buyDate = new Date(today.getFullYear(), today.getMonth() + timelineMonths, 1);
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const buyDateStr = `${monthNames[buyDate.getMonth()]} ${buyDate.getFullYear()}`;
+
+        // Future Financial Metrics at Purchase
+        const futurePropertyPrice = targetPrice * Math.pow(1 + (appreciationPct / 100), timelineMonths / 12);
+        const futureDownPayment = futurePropertyPrice * (downPaymentPct / 100);
+        const futureBuyingCosts = futurePropertyPrice * (buyingCostsPct / 100);
+        const futureRequiredCash = futureDownPayment + futureBuyingCosts;
+        const savingsAtPurchase = currentSavings + (monthlySavings * timelineMonths);
+        const savingsSurplus = savingsAtPurchase - futureRequiredCash;
+
+        const loanAmount = futurePropertyPrice - futureDownPayment;
+
+        // Loan EMI
+        let monthlyEmi = 0;
+        if (loanAmount > 0 && interestRate > 0 && tenureYears > 0) {
+            const r = interestRate / 1200;
+            const n = tenureYears * 12;
+            monthlyEmi = loanAmount * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        }
+
+        const emiRatio = monthlyIncome > 0 ? ((monthlyEmi / monthlyIncome) * 100) : 0;
+        const loanAffordable = (monthlyIncome > 0 && emiRatio <= maxEmiPct);
+
+        // Max Affordable EMI & Loan
+        const maxAffordableEmi = monthlyIncome * (maxEmiPct / 100);
+        let maxAffordableLoan = 0;
+        if (maxAffordableEmi > 0 && interestRate > 0 && tenureYears > 0) {
+            const r = interestRate / 1200;
+            const n = tenureYears * 12;
+            maxAffordableLoan = maxAffordableEmi * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n));
+        }
+
+        // Dream Home Readiness Score (0-100)
+        let cashReadiness = futureRequiredCash > 0 ? Math.min(100, (savingsAtPurchase / futureRequiredCash) * 100) : 100;
+        let emiReadiness = monthlyEmi > 0 ? Math.min(100, (maxAffordableEmi / monthlyEmi) * 100) : 100;
+        if (!isReachable) cashReadiness = 10;
+
+        const readinessScore = Math.round((0.50 * cashReadiness) + (0.50 * emiReadiness));
+
+        let readinessClassification = 'Longer-Term Goal';
+        if (readinessScore >= 80) readinessClassification = 'On Track';
+        else if (readinessScore >= 60) readinessClassification = 'Nearly Ready';
+        else if (readinessScore >= 40) readinessClassification = 'Needs More Planning';
+
+        return {
+            targetPrice,
+            currentSavings,
+            monthlySavings,
+            appreciationPct,
+            downPaymentPct,
+            buyingCostsPct,
+            timelineMonths,
+            timelineFormatted,
+            isReachable,
+            buyDateStr,
+            futurePropertyPrice,
+            futureDownPayment,
+            futureBuyingCosts,
+            futureRequiredCash,
+            savingsAtPurchase,
+            savingsSurplus,
+            loanAmount,
+            monthlyEmi,
+            monthlyIncome,
+            maxEmiPct,
+            emiRatio,
+            loanAffordable,
+            maxAffordableEmi,
+            maxAffordableLoan,
+            readinessScore,
+            readinessClassification
+        };
+    }
+
+    // --- 3. UI CONTROLS & INTERACTION ---
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            let cursor = inputElem.selectionStart;
+            let origLen = inputElem.value.length;
+            let val = inputElem.value.replace(/[^0-9.]/g, '');
+            let parts = val.split('.');
+            if (parts.length > 2) val = parts[0] + '.' + parts.slice(1).join('');
+
+            if (parts[0]) parts[0] = parseInt(parts[0], 10).toLocaleString('en-IN');
+            let formatted = parts.join('.');
+            if (formatted !== 'NaN') {
+                inputElem.value = formatted;
+                let newLen = formatted.length;
+                if (cursor) inputElem.setSelectionRange(cursor + (newLen - origLen), cursor + (newLen - origLen));
+            }
+        }
+        updateCalculator();
+    }
+
+    function onInputChange() {
+        updateCalculator();
+    }
+
+    function collectInputs() {
+        return {
+            targetPrice: document.getElementById('targetPriceInput').value,
+            currentSavings: document.getElementById('currentSavingsInput').value,
+            monthlySavings: document.getElementById('monthlySavingsInput').value,
+            appreciationPct: document.getElementById('appreciationPctInput').value,
+            downPaymentPct: document.getElementById('downPaymentPctInput').value,
+            buyingCostsPct: document.getElementById('buyingCostsPctInput').value,
+            monthlyIncome: document.getElementById('monthlyIncomeInput').value,
+            maxEmiPct: document.getElementById('maxEmiPctInput').value,
+            interestRate: document.getElementById('interestRateInput').value,
+            tenureYears: document.getElementById('tenureSelect').value
+        };
+    }
+
+    // --- 4. RENDER RESULTS ---
+    function updateCalculator() {
+        const inputs = collectInputs();
+        const res = computeDreamHomeTimeline(inputs);
+
+        // Huge Result Value
+        document.getElementById('timelineRes').innerText = res.timelineFormatted;
+        document.getElementById('estDateSubtext').innerText = res.isReachable ?
+            `Estimated Buy Date: ${res.buyDateStr} (at ${formatRupee(res.monthlySavings)} / month savings).` :
+            `Increase monthly savings capacity to establish a purchase timeline.`;
+
+        // Progress Bar
+        const barFill = document.getElementById('readinessFill');
+        const statusText = document.getElementById('readinessStatusText');
+
+        statusText.innerText = `${res.readinessClassification} (${res.readinessScore} / 100)`;
+        statusText.style.color = res.readinessScore >= 80 ? '#10B981' : (res.readinessScore >= 40 ? '#F59E0B' : '#EF4444');
+        barFill.style.width = Math.min(100, Math.round(res.readinessScore)) + "%";
+
+        document.getElementById('emiAffordabilityBarText').innerText = res.loanAffordable ?
+            `EMI Affordability: Within Limit (${res.emiRatio.toFixed(1)}%)` :
+            `EMI Affordability: Exceeds Limit (${res.emiRatio.toFixed(1)}%)`;
+
+        document.getElementById('cashReadinessBarText').innerText = res.isReachable ? `Upfront Cash: On Track` : `Upfront Cash: Needs Boost`;
+
+        // Snapshot Cards
+        document.getElementById('futurePriceRes').innerText = formatRupee(res.futurePropertyPrice);
+        document.getElementById('appreciationSub').innerText = `Appreciated @ ${res.appreciationPct}% p.a.`;
+
+        document.getElementById('upfrontCashRes').innerText = formatRupee(res.futureRequiredCash);
+        document.getElementById('loanAmountRes').innerText = formatRupee(res.loanAmount);
+
+        document.getElementById('futureEmiRes').innerText = formatRupee(res.monthlyEmi);
+        document.getElementById('emiRatioSub').innerText = `${res.emiRatio.toFixed(1)}% of ${formatRupee(res.monthlyIncome)} income`;
+
+        // Breakdown Table Body
+        const tbody = document.getElementById('breakdownTableBody');
+        tbody.innerHTML = `
+            <tr><td>Today's Base Property Value</td><td class="right">${formatRupee(res.targetPrice)}</td></tr>
+            <tr><td>Future Property Price at Purchase</td><td class="right">${formatRupee(res.futurePropertyPrice)}</td></tr>
+            <tr><td>Required Down Payment (${res.downPaymentPct}%)</td><td class="right">${formatRupee(res.futureDownPayment)}</td></tr>
+            <tr><td>Buying &amp; Registration Costs (${res.buyingCostsPct}%)</td><td class="right">${formatRupee(res.futureBuyingCosts)}</td></tr>
+            <tr class="total-row"><td>Total Required Upfront Cash</td><td class="right">${formatRupee(res.futureRequiredCash)}</td></tr>
+            <tr><td>Accumulated Savings at Purchase</td><td class="right">${formatRupee(res.savingsAtPurchase)}</td></tr>
+            <tr><td>Upfront Cash Buffer Surplus</td><td class="right" style="color:#10B981;">${formatRupee(res.savingsSurplus)}</td></tr>
+            <tr><td>Required Home Loan Amount</td><td class="right">${formatRupee(res.loanAmount)}</td></tr>
+            <tr class="total-row"><td>Estimated Monthly EMI</td><td class="right"><strong>${formatRupee(res.monthlyEmi)}</strong></td></tr>
+        `;
+
+        // Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        if (res.isReachable) {
+            insightsList.innerHTML += `<li><strong>Timeline Goal:</strong> At ${formatRupee(res.monthlySavings)}/mo, you will accumulate ${formatRupee(res.futureRequiredCash)} upfront cash in <strong>${res.timelineFormatted}</strong> (${res.buyDateStr}).</li>`;
+        } else {
+            insightsList.innerHTML += `<li><strong>Savings Boost Needed:</strong> Your current monthly savings capacity is insufficient to outpace ${res.appreciationPct}% annual property appreciation.</li>`;
+        }
+
+        if (res.loanAffordable) {
+            insightsList.innerHTML += `<li><strong>Loan Affordability Status:</strong> Your estimated EMI (${formatRupee(res.monthlyEmi)}) is <strong>within your ${res.maxEmiPct}% cap</strong> (${formatRupee(res.maxAffordableEmi)}).</li>`;
+        } else {
+            insightsList.innerHTML += `<li><strong>EMI Stretch Warning:</strong> Estimated EMI (${formatRupee(res.monthlyEmi)}) exceeds your ${res.maxEmiPct}% cap by ${formatRupee(res.monthlyEmi - res.maxAffordableEmi)}. Consider higher down payment.</li>`;
+        }
+
+        const add50k = res.monthlySavings + 20000;
+        insightsList.innerHTML += `<li><strong>Acceleration Tip:</strong> Increasing monthly savings by ₹20,000/mo (to ${formatRupee(add50k)}) will shorten your purchase timeline significantly.</li>`;
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCalculator();
+    });
+    </script>
+</body>
+</html>

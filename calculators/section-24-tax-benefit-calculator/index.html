@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 24 Tax Benefit Calculator – Home Loan Interest Tax Benefit | acreNkey</title>
+
+    <meta name="description" content="Calculate your Section 24(b) home-loan interest deduction and estimated tax savings for self-occupied and let-out properties under the Old and New Tax Regimes.">
+    <meta name="keywords" content="section 24 tax benefit calculator, section 24b home loan interest deduction, self-occupied home loan interest tax saving, old vs new tax regime section 24, let out property interest tax benefit, acrenkey tax calculator">
+    <link rel="canonical" href="https://acrenkey.com/calculators/section-24-tax-benefit-calculator/">
+
+    <!-- Open Graph (OG) Social Sharing Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Section 24 Tax Benefit Calculator | acreNkey">
+    <meta property="og:description" content="Estimate your home-loan interest deduction and potential tax savings under Section 24(b).">
+    <meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+    <meta property="og:url" content="https://acrenkey.com/calculators/section-24-tax-benefit-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Section 24 Tax Benefit Calculator | acreNkey">
+    <meta name="twitter:description" content="Estimate your home-loan interest deduction and potential tax savings under Section 24(b).">
+    <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp?v=20260820_flush_v125">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="../../website.css?v=20260822_flush_v133">
+    <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialProduct","name":"acreNkey Section 24 Tax Benefit Calculator","description":"Calculate home loan interest tax savings under Section 24(b) for self-occupied and let-out properties under Old vs New Tax Regimes.","provider":{"@type":"Organization","name":"acreNkey","url":"https://acrenkey.com/"},"url":"https://acrenkey.com/calculators/section-24-tax-benefit-calculator/"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Section 24 Tax Benefit Calculator","item":"https://acrenkey.com/calculators/section-24-tax-benefit-calculator/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the maximum Section 24(b) interest deduction for a self-occupied property?","acceptedAnswer":{"@type":"Answer","text":"Under the Old Tax Regime for AY 2026-27, the maximum Section 24(b) interest deduction for a self-occupied property purchased or constructed is ₹2,00,000 per financial year. For repair/renovation loans, the limit is ₹30,000."}},{"@type":"Question","name":"Can I claim Section 24(b) home loan interest deduction under the New Tax Regime?","acceptedAnswer":{"@type":"Answer","text":"For a self-occupied property, Section 24(b) interest deduction is NOT allowed under the New Tax Regime. For a let-out property, eligible interest can be deducted against rental income, but house property loss cannot be set off against salary or other heads of income."}},{"@type":"Question","name":"Is tax deduction equal to actual tax saved?","acceptedAnswer":{"@type":"Answer","text":"No. A tax deduction reduces your total taxable income. Your actual tax saving equals the deduction multiplied by your applicable marginal tax rate (e.g., ₹2,00,000 deduction at a 30% slab rate = ₹60,000 tax saving)."}}]}</script>
+
+    <style>
+    @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
+
+    /* --- CALCULATOR DESIGN SYSTEM --- */
+    .ak-calc-wrapper {
+        max-width: 1280px;
+        margin: 120px auto 1rem auto;
+        padding: 0 2rem;
+        font-family: var(--font-body);
+    }
+
+    .ak-calc-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ak-calc-header-left .ak-calc-h1 {
+        font-family: var(--font-heading);
+        line-height: 1.04em;
+        color: var(--deep-navy);
+        margin: 0 0 0.5rem 0;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-size: 28px;
+    }
+
+    .ak-calc-sub-text {
+        line-height: 1.85rem;
+        color: var(--deep-slate);
+        margin: 0;
+        font-weight: 200;
+        font-size: 0.95rem;
+        max-width: 900px;
+    }
+
+    .ak-calc-main-grid {
+        display: grid;
+        grid-template-columns: 570px 570px;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 0;
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1180px) {
+        .ak-calc-main-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Left Panel (White Input Panel) */
+    .ak-calc-left-panel {
+        background: #FFFFFF;
+        border: 1px solid #EAEFF5;
+        border-radius: 16px;
+        padding: 1.6rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .ak-panel-header h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--deep-navy-100);
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ak-section-divider-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--refined-brass);
+        margin: 1.5rem 0 1rem 0;
+        padding-top: 1rem;
+        border-top: 1px solid #EAEFF5;
+    }
+
+    .ak-new-input-row { margin-bottom: 1.1rem; }
+    .ak-new-input-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+    .ak-new-input-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--deep-navy-100); }
+    .ak-new-input-label .material-symbols-outlined { font-size: 20px; color: var(--deep-navy-100); }
+
+    .ak-input-helper-text {
+        font-size: 0.76rem;
+        color: var(--muted-slate);
+        margin-top: 0.2rem;
+        line-height: 1.35;
+    }
+
+    .ak-new-input-box-wrapper { position: relative; width: 210px; }
+    .ak-new-input-box-wrapper .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+    .ak-new-input-box-wrapper .suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--deep-navy-100); }
+
+    .ak-new-input, .ak-new-select {
+        width: 100%;
+        border: 1px solid #8C9BB1;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy-100);
+        box-sizing: border-box;
+        background: #FFF;
+    }
+    .ak-new-input { text-align: right; }
+    .ak-new-input.has-prefix { padding-left: 28px; }
+    .ak-new-input.has-suffix { padding-right: 28px; }
+    .ak-new-input:focus, .ak-new-select:focus { outline: none; border-color: var(--refined-brass); box-shadow: 0 0 0 3px rgba(140, 103, 52, 0.15); }
+
+    /* Right Panel (Dark Results Panel) */
+    .ak-calc-right-panel {
+        background: var(--deep-navy-100);
+        border-radius: 16px;
+        padding: 1.8rem;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+    }
+    .ak-right-header { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+
+    .ak-emi-huge { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; color: #E5C178; line-height: 1.15; margin-bottom: 0.35rem; }
+    .ak-emi-subtext { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.45; }
+
+    /* Progress Limit Bar Component */
+    .ak-limit-bar-wrapper {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .ak-limit-bar-top { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #FFF; margin-bottom: 0.4rem; }
+    .ak-limit-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.15); border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
+    .ak-limit-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #E5C178 0%, #8C6734 100%); border-radius: 5px; transition: width 0.3s ease; }
+    .ak-limit-bar-sub { font-size: 0.78rem; color: rgba(255,255,255,0.75); display: flex; justify-content: space-between; }
+
+    /* Snapshot Grid */
+    .ak-snapshot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-snap-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .ak-snap-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ak-snap-val { font-size: 1.05rem; font-weight: 800; color: #FFF; }
+    .ak-snap-sub { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+
+    /* Breakdown Comparison Table */
+    .ak-factors-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ak-waterfall-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.9);
+    }
+    .ak-waterfall-step:last-child { border-bottom: none; }
+    .ak-waterfall-step.highlight { font-weight: 800; color: #E5C178; font-size: 0.88rem; }
+
+    /* Regime Comparison Table */
+    .ak-regime-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .ak-regime-table th { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); color: #E5C178; font-weight: 700; }
+    .ak-regime-table td { padding: 0.45rem 0.5rem; border-bottom: 1px dashed rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); }
+    .ak-regime-table tr:last-child td { border-bottom: none; }
+
+    /* Insights Box */
+    .ak-reasons-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ak-reasons-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: #E5C178;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ak-reasons-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.82rem;
+        color: rgba(255,255,255,0.88);
+        line-height: 1.5;
+    }
+
+    .ak-reasons-list li { margin-bottom: 0.35rem; }
+
+    /* Tip Box & Article */
+    .ak-tip-box-new {
+        background: var(--warm-ivory);
+        border: 1px solid rgba(106, 66, 50, 0.22);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        color: var(--deep-navy);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+    }
+
+    .ak-tip-box-new .material-symbols-outlined {
+        color: var(--refined-brass);
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .ak-calc-article { max-width: 1140px; margin: 3rem auto 4rem auto; padding: 0 2rem; font-family: var(--font-body); color: var(--deep-navy); line-height: 1.6; }
+    .ak-calc-article h2 { font-family: var(--font-heading); font-size: 26px; font-weight: 400; margin-top: 2rem; margin-bottom: 1rem; color: var(--deep-navy); letter-spacing: -0.02em; }
+    .ak-calc-article p { color: var(--deep-slate); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+    
+    .ak-table-styled {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    .ak-table-styled th { background: var(--deep-navy-100); color: #FFF; text-align: left; padding: 0.75rem 1rem; font-weight: 700; }
+    .ak-table-styled td { border-bottom: 1px solid #EAEFF5; padding: 0.75rem 1rem; color: var(--deep-slate); }
+    .ak-table-styled tr:nth-child(even) td { background: #FDFBF9; }
+
+    .ak-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .ak-step-card { background: #FFFFFF; border: 1px solid #EAEFF5; border-radius: 12px; padding: 1.35rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .ak-step-num { font-family: var(--font-heading); font-size: 1.2rem; color: var(--refined-brass); font-weight: 700; margin-bottom: 0.35rem; }
+    .ak-step-title { font-size: 1.05rem; font-weight: 800; color: var(--deep-navy-100); margin-bottom: 0.5rem; }
+    .ak-step-desc { font-size: 0.9rem; color: var(--deep-slate); line-height: 1.55; margin: 0; }
+
+    .ak-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.25rem 0; }
+    .ak-faq-item:last-child { border-bottom: none; }
+    .ak-faq-item h3 { font-size: 18px; font-weight: 700; color: var(--deep-navy); margin-bottom: 0.4rem; margin-top: 0; }
+    .ak-faq-item p { margin-bottom: 0; color: var(--deep-slate); font-size: 0.95rem; }
+
+    .ak-more-calcs-section { max-width: 1140px; margin: 0 auto 2rem auto; padding: 3rem 2rem; }
+    .ak-more-calcs-header { text-align: center; margin-bottom: 2.5rem; }
+    .ak-more-calcs-title { font-family: var(--font-heading); font-size: 28px; font-weight: 400; color: var(--deep-navy); letter-spacing: -0.02em; margin: 0 0 0.5rem 0; }
+    .ak-more-calcs-sub { font-size: 0.95rem; color: var(--muted-slate); font-weight: 400; }
+    .ak-feature-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .ak-feature-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .ak-feature-cards { grid-template-columns: 1fr; } }
+    .ak-fcard { background: #FFFFFF; border: none; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 8px 32px rgba(13, 27, 36, 0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .ak-fcard:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 27, 36, 0.12); }
+    .ak-fcard-header-flex { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .ak-fcard-icon { width: 44px; height: 44px; background: var(--warm-ivory); border: 1px solid rgba(106, 66, 50, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ak-fcard-icon .material-symbols-outlined { font-size: 24px; color: var(--refined-brass); }
+    .ak-fcard-title { font-size: 1rem; font-weight: 800; color: var(--deep-navy-100); line-height: 1.2; }
+    .ak-fcard-desc { font-size: 0.85rem; color: var(--muted-slate); margin-bottom: 0; line-height: 1.55; flex-grow: 1; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .ak-calc-wrapper { padding: 0 1rem; margin-top: 100px; }
+        .ak-calc-left-panel, .ak-calc-right-panel { padding: 1.25rem 1rem; }
+        .ak-calc-header-left .ak-calc-h1 { font-size: 22px; }
+        .ak-calc-article { padding: 0 1rem; margin: 2rem auto 3rem auto; }
+        .ak-more-calcs-section { padding: 2rem 1rem; }
+    }
+    @media (max-width: 500px) {
+        .ak-snapshot-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+        .ak-emi-huge { font-size: 1.7rem; }
+        .ak-new-input-box-wrapper { width: 165px; }
+        .ak-new-input { font-size: 0.85rem; padding: 0.5rem 0.6rem; }
+        .ak-new-input.has-prefix { padding-left: 22px; }
+        .ak-new-input.has-suffix { padding-right: 22px; }
+        .ak-new-input-box-wrapper .prefix { left: 8px; font-size: 0.85rem; }
+        .ak-new-input-box-wrapper .suffix { right: 8px; font-size: 0.85rem; }
+        .ak-new-input-label { font-size: 0.82rem; }
+        .ak-steps-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="/#footer" class="sd-btn-gold nav-cta-btn"><span>Talk to an Advisor</span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#0D1B24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#buyers-checklist" class="mobile-nav-item"><span class="mobile-nav-label">Our Approach</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#footer" class="mobile-drawer-cta"><span>Talk to an Advisor</span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+
+    <!-- Main Calculator Wrapper -->
+    <main class="ak-calc-wrapper">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+            <ol class="page-breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><span class="separator">›</span></li>
+                <li><a href="/#core">Calculators</a></li>
+                <li><span class="separator">›</span></li>
+                <li class="current" aria-current="page">Section 24 Tax Benefit Calculator</li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="ak-calc-header-row">
+            <div class="ak-calc-header-left">
+                <h1 class="ak-calc-h1">Section 24 Tax Benefit Calculator</h1>
+                <p class="ak-calc-sub-text">Estimate your home-loan interest deduction and potential tax savings under Section 24(b).</p>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="ak-calc-main-grid">
+
+            <!-- Left Panel (Inputs) -->
+            <div class="ak-calc-left-panel">
+                <div class="ak-panel-header">
+                    <h2>Tax &amp; Loan Parameters</h2>
+                </div>
+
+                <!-- Section 1: Assessment Year & Tax Regime -->
+                <div class="ak-section-divider-title" style="margin-top:0; padding-top:0; border-top:none;">1. Tax Regime &amp; Assessment Year</div>
+
+                <!-- Assessment Year -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            Assessment Year
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="aySelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="AY 2026-27" selected>AY 2026–27 (FY 2025-26)</option>
+                                <option value="AY 2025-26">AY 2025–26 (FY 2024-25)</option>
+                                <option value="AY 2024-25">AY 2024–25 (FY 2023-24)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tax Regime Selection -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">gavel</span>
+                            Tax Regime Selection
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="regimeSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="Compare Both" selected>Compare Both</option>
+                                <option value="Old Tax Regime">Old Tax Regime</option>
+                                <option value="New Tax Regime">New Tax Regime</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Self-occupied property interest deduction is disallowed under the standard New Tax Regime.</div>
+                </div>
+
+                <!-- Section 2: Property & Loan Characteristics -->
+                <div class="ak-section-divider-title">2. Property &amp; Loan Characteristics</div>
+
+                <!-- Property Type -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">home_pin</span>
+                            Property Type
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="propertyTypeSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="Self-Occupied" selected>Self-Occupied</option>
+                                <option value="Let-Out">Let-Out / Rented</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Self-occupied property interest is capped (up to ₹2 Lakh), while let-out interest has separate rules.</div>
+                </div>
+
+                <!-- Loan Purpose -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">build</span>
+                            Loan Purpose
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="loanPurposeSelect" class="ak-new-select" onchange="onInputChange()">
+                                <option value="Purchase" selected>Purchase</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Repair / Renovation">Repair / Renovation</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Loans taken for repair/renovation have a lower Section 24(b) limit of ₹30,000.</div>
+                </div>
+
+                <!-- Section 3: Annual Interest & Marginal Tax Rate -->
+                <div class="ak-section-divider-title">3. Interest &amp; Tax Rate</div>
+
+                <!-- Annual Home Loan Interest Paid -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">percent</span>
+                            Annual Interest Paid
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="annualInterestInput" class="ak-new-input has-prefix" value="2,50,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Enter the interest paid during the relevant financial year, from your lender's annual interest certificate.</div>
+                </div>
+
+                <!-- Tax Rate Mode -->
+                <div class="ak-new-input-row">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">tune</span>
+                            Tax Rate Mode
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="taxRateModeSelect" class="ak-new-select" onchange="onTaxRateModeChange(this.value)">
+                                <option value="Manual" selected>Manual Rate</option>
+                                <option value="Automatic">Automatic Slabs</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxable Income Input (for Automatic mode) -->
+                <div class="ak-new-input-row" id="incomeRow" style="display: none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            Annual Taxable Income
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <span class="prefix">₹</span>
+                            <input type="text" id="taxableIncomeInput" class="ak-new-input has-prefix" value="12,00,000" oninput="formatAndCalculate(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applicable Marginal Tax Rate -->
+                <div class="ak-new-input-row" id="marginalRateRow">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">speed</span>
+                            Applicable Marginal Tax Rate
+                        </div>
+                        <div style="width: 210px;">
+                            <select id="marginalTaxRateSelect" class="ak-new-select" onchange="onMarginalRateSelectChange(this.value)">
+                                <option value="30" selected>30% Slab</option>
+                                <option value="25">25% Slab</option>
+                                <option value="20">20% Slab</option>
+                                <option value="15">15% Slab</option>
+                                <option value="10">10% Slab</option>
+                                <option value="5">5% Slab</option>
+                                <option value="0">0% Slab</option>
+                                <option value="Custom">Custom Rate...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ak-input-helper-text">Illustrative marginal rate — select the rate applicable to your income slab.</div>
+                </div>
+
+                <!-- Custom Tax Rate Input (Hidden by default) -->
+                <div class="ak-new-input-row" id="customRateRow" style="display: none;">
+                    <div class="ak-new-input-top">
+                        <div class="ak-new-input-label">
+                            <span class="material-symbols-outlined">edit</span>
+                            Custom Tax Rate (%)
+                        </div>
+                        <div class="ak-new-input-box-wrapper">
+                            <input type="text" id="customTaxRateInput" class="ak-new-input has-suffix" value="30" oninput="formatAndCalculate(this)">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel (Results) -->
+            <div class="ak-calc-right-panel">
+                <div class="ak-right-header">ESTIMATED SECTION 24(b) TAX BENEFIT SUMMARY</div>
+                
+                <!-- Primary Huge Result Value -->
+                <div class="ak-emi-huge" id="primaryTaxSavingVal">₹60,000</div>
+                <div class="ak-emi-subtext" id="primaryTaxSavingSub">Estimated Annual Tax Saving (Old Tax Regime @ 30% Slab)</div>
+
+                <!-- Section 24(b) Deduction Capacity / Progress Bar -->
+                <div class="ak-limit-bar-wrapper">
+                    <div class="ak-limit-bar-top">
+                        <span id="limitBarTitle">Section 24(b) Limit (₹2,00,000)</span>
+                        <span id="limitUtilPercentage">80.0% Eligible</span>
+                    </div>
+                    <div class="ak-limit-bar-bg">
+                        <div class="ak-limit-bar-fill" id="limitUtilFill" style="width: 80%;"></div>
+                    </div>
+                    <div class="ak-limit-bar-sub">
+                        <span id="limitUtilUsed">₹2,00,000 Eligible Deduction</span>
+                        <span id="limitUtilRemaining">₹50,000 Above Cap</span>
+                    </div>
+                </div>
+
+                <!-- 6-Card Snapshot Grid -->
+                <div class="ak-snapshot-grid">
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Annual Interest Paid</div>
+                        <div class="ak-snap-val" id="snapAnnualInterest">₹2,50,000</div>
+                        <div class="ak-snap-sub">From interest cert</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Eligible Deduction</div>
+                        <div class="ak-snap-val" id="snapEligibleInterest" style="color: #E5C178;">₹2,00,000</div>
+                        <div class="ak-snap-sub" id="snapCapSub">Capped at ₹2 Lakh</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Interest Above Cap</div>
+                        <div class="ak-snap-val" id="snapNonEligibleInterest">₹50,000</div>
+                        <div class="ak-snap-sub">No extra tax benefit</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Estimated Annual Tax Saving</div>
+                        <div class="ak-snap-val" id="snapTaxSaving" style="color: #10B981;">₹60,000</div>
+                        <div class="ak-snap-sub">Cash tax relief</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Effective Interest Cost</div>
+                        <div class="ak-snap-val" id="snapEffectiveCost">₹1,90,000</div>
+                        <div class="ak-snap-sub">After tax benefit</div>
+                    </div>
+                    <div class="ak-snap-card">
+                        <div class="ak-snap-lbl">Tax Benefit % of Interest</div>
+                        <div class="ak-snap-val" id="snapBenefitPct">24.0%</div>
+                        <div class="ak-snap-sub">Effective relief rate</div>
+                    </div>
+                </div>
+
+                <!-- Breakdown & Regime Comparison Card -->
+                <div class="ak-factors-card" id="regimeComparisonContainer">
+                    <div style="font-size:0.82rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; color:#E5C178; margin-bottom:0.6rem;">
+                        Old vs New Regime Section 24 Comparison
+                    </div>
+                    <table class="ak-regime-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Old Regime</th>
+                                <th>New Regime</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Annual Interest Paid</td>
+                                <td id="tblOldTotal">₹2,50,000</td>
+                                <td id="tblNewTotal">₹2,50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Eligible 24(b) Interest</td>
+                                <td id="tblOldDeduction" style="font-weight:700; color:#E5C178;">₹2,00,000</td>
+                                <td id="tblNewDeduction">₹0</td>
+                            </tr>
+                            <tr>
+                                <td>Interest Above Cap</td>
+                                <td id="tblOldNonEligible">₹50,000</td>
+                                <td id="tblNewNonEligible">₹2,50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Estimated Tax Saving</td>
+                                <td id="tblOldSaving" style="font-weight:700; color:#10B981;">₹60,000</td>
+                                <td id="tblNewSaving">₹0</td>
+                            </tr>
+                            <tr>
+                                <td>Effective Interest Cost</td>
+                                <td id="tblOldEffective">₹1,90,000</td>
+                                <td id="tblNewEffective">₹2,50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="ak-waterfall-step highlight" style="margin-top:0.75rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.15);">
+                        <span>Additional 24(b) Benefit Under Old Regime:</span>
+                        <span id="tblDifferenceVal" style="font-size:1.05rem; color:#E5C178;">+₹60,000</span>
+                    </div>
+                </div>
+
+                <!-- Actionable Insights & Dynamic Bullet List -->
+                <div class="ak-reasons-card">
+                    <div class="ak-reasons-title">Key Insights &amp; Observations</div>
+                    <ul class="ak-reasons-list" id="insightsList">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Important Tax Disclaimer Banner -->
+    <div style="max-width: 1140px; margin: 2rem auto 0 auto; padding: 0 2rem;">
+        <div class="ak-tip-box-new">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+                <strong>Important Tax Disclaimer:</strong> This calculator provides an indicative estimate based on the inputs and tax rules configured for the selected assessment year. Actual Section 24(b) eligibility can depend on property type, purpose of borrowing, acquisition/construction conditions, completion/possession status, ownership and house-property income/loss rules. Verify your final computation with the Income Tax Department or a qualified tax professional.
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Article Section -->
+    <article class="ak-calc-article">
+        <h2>What Is Section 24(b)?</h2>
+        <p>Section 24(b) of the Indian Income Tax Act allows homeowners to claim a tax deduction for interest paid on housing loans taken for purchasing, constructing, repairing, renewing, or reconstructing residential property. Subject to specific conditions and tax regimes, Section 24(b) reduces your taxable income, lowering your overall income tax liability.</p>
+
+        <h2>Indicative Section 24(b) Deduction Limits</h2>
+        <p>Section 24(b) tax treatment varies based on <strong>Property Type</strong> (Self-Occupied vs. Let-Out), <strong>Loan Purpose</strong> (Purchase/Construction vs. Repair), and <strong>Tax Regime</strong> (Old vs. New Regime):</p>
+
+        <table class="ak-table-styled">
+            <thead>
+                <tr>
+                    <th>Scenario &amp; Parameters</th>
+                    <th>Indicative Deduction Limit</th>
+                    <th>House Property Loss &amp; Set-Off Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Self-Occupied + Purchase / Construction (Old Regime)</strong></td>
+                    <td>Up to ₹2,00,000 / year</td>
+                    <td>Loss of up to ₹2 Lakh can be set off against salary and other income heads.</td>
+                </tr>
+                <tr>
+                    <td><strong>Self-Occupied + Repair / Renovation (Old Regime)</strong></td>
+                    <td>Up to ₹30,000 / year</td>
+                    <td>Loss of up to ₹30,000 can be set off against salary and other income.</td>
+                </tr>
+                <tr>
+                    <td><strong>Let-Out / Rented Property (Old Regime)</strong></td>
+                    <td>Actual eligible interest (No cap)</td>
+                    <td>House property loss set-off against other income heads capped at ₹2 Lakh/year; excess carried forward up to 8 years.</td>
+                </tr>
+                <tr>
+                    <td><strong>Self-Occupied Property (New Tax Regime)</strong></td>
+                    <td>₹0 (Disallowed)</td>
+                    <td>No interest deduction or loss set-off allowed under the New Tax Regime for self-occupied properties.</td>
+                </tr>
+                <tr>
+                    <td><strong>Let-Out / Rented Property (New Tax Regime)</strong></td>
+                    <td>Actual eligible interest against rent</td>
+                    <td>Interest deductible only against rental income; house property loss <strong>cannot</strong> be set off against salary/other heads.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tax Deduction vs. Actual Tax Saving</h2>
+        <p>It is crucial not to confuse a <strong>Tax Deduction</strong> with <strong>Actual Tax Savings</strong>:</p>
+        <ul>
+            <li><strong>Tax Deduction (e.g. ₹2,00,000):</strong> This is the eligible interest amount subtracted from your taxable income. It does <em>not</em> mean a ₹2,00,000 cash refund from the tax authority.</li>
+            <li><strong>Actual Tax Saving:</strong> Your actual cash tax relief equals the eligible interest deduction multiplied by your marginal tax slab rate. At a 30% tax slab, a ₹2,00,000 deduction reduces your cash tax outgo by <code>₹2,00,000 × 30% = ₹60,000</code> (plus cess).</li>
+        </ul>
+
+        <h2>Interest Paid vs. Eligible Interest</h2>
+        <p>Paying ₹3,50,000 in annual home-loan interest does not mean the entire ₹3.5 Lakh is deductible. For a self-occupied property under the Old Tax Regime:</p>
+        <ul>
+            <li><strong>Annual Interest Paid:</strong> ₹3,50,000</li>
+            <li><strong>Section 24(b) Statutory Cap:</strong> ₹2,00,000</li>
+            <li><strong>Eligible Section 24(b) Interest:</strong> <code>MIN(₹3,50,000, ₹2,00,000) = ₹2,00,000</code></li>
+            <li><strong>Non-Eligible Interest (Above Cap):</strong> <code>₹3,50,000 − ₹2,00,000 = ₹1,50,000</code></li>
+        </ul>
+
+        <h2>Section 24(b) Document Checklist for Tax Filing</h2>
+        <div class="ak-steps-grid">
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 01</div>
+                <div class="ak-step-title">Annual Interest Certificate</div>
+                <p class="ak-step-desc">Obtain the provisional/final interest certificate from your lending bank showing exact principal and interest split.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 02</div>
+                <div class="ak-step-title">Possession / Completion Cert</div>
+                <p class="ak-step-desc">Keep possession letter or completion certificate ready (construction must complete within 5 years for ₹2L limit).</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 03</div>
+                <div class="ak-step-title">Loan Sanction &amp; Agreement</div>
+                <p class="ak-step-desc">Retain your loan agreement showing loan purpose (purchase, construction, or renovation) and sanction date.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 04</div>
+                <div class="ak-step-title">Joint Ownership Records</div>
+                <p class="ak-step-desc">If co-borrowing, keep property deed and co-applicant agreement to establish respective ownership &amp; interest share.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 05</div>
+                <div class="ak-step-title">Rental Agreements (If Let-Out)</div>
+                <p class="ak-step-desc">Maintain rent agreements, municipal tax receipts, and tenant bank receipts if claiming let-out interest deductions.</p>
+            </div>
+            <div class="ak-step-card">
+                <div class="ak-step-num">Doc 06</div>
+                <div class="ak-step-title">Pre-Construction Interest Records</div>
+                <p class="ak-step-desc">If loan was taken before completion, track pre-construction interest (claimable in 5 equal annual installments).</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="ak-faq-item">
+            <h3>Can both husband and wife claim ₹2 Lakh Section 24(b) interest deduction on a joint home loan?</h3>
+            <p>Yes. If both spouses are joint owners of the house property and co-borrowers paying EMIs from their respective bank accounts, each spouse can individually claim up to ₹2,00,000 under Section 24(b) (total ₹4,00,000 per family) under the Old Tax Regime, subject to their actual interest payment share.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>What is pre-construction interest under Section 24(b)?</h3>
+            <p>Interest paid during the period prior to the financial year in which property construction or acquisition is completed is termed pre-construction interest. It can be claimed as a deduction in 5 equal annual installments starting from the year construction is completed, within the overall ₹2 Lakh annual limit for self-occupied properties.</p>
+        </div>
+        <div class="ak-faq-item">
+            <h3>Why is Section 24(b) interest deduction ₹0 under the New Tax Regime for self-occupied homes?</h3>
+            <p>Under Section 115BAC (New Tax Regime), statutory interest deductions for self-occupied properties under Section 24(b) are dis-allowed in exchange for lower concessional tax slab rates.</p>
+        </div>
+    </article>
+
+    <!-- Related Calculators Section -->
+    <section class="ak-more-calcs-section">
+        <div class="ak-more-calcs-header">
+            <h2 class="ak-more-calcs-title">Explore Related Calculators</h2>
+            <p class="ak-more-calcs-sub">Plan your property purchases and tax strategies with transparent financial tools.</p>
+        </div>
+        <div class="ak-feature-cards">
+            <a href="/calculators/home-loan-tax-benefit-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">percent</span></div>
+                    <div class="ak-fcard-title">Home Loan Tax Benefit Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Estimate combined tax savings under Section 80C (principal) and Section 24(b) (interest) for Old vs New Regime.</p>
+            </a>
+            <a href="/calculators/section-80c-tax-savings-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
+                    <div class="ak-fcard-title">Section 80C Tax Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate eligible 80C deduction, remaining ₹1.5 Lakh limit, and effective tax relief.</p>
+            </a>
+            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">calculate</span></div>
+                    <div class="ak-fcard-title">Home Loan EMI Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate your monthly EMI, total interest payable, and full loan amortization schedule.</p>
+            </a>
+            <a href="/calculators/home-affordability-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">real_estate_agent</span></div>
+                    <div class="ak-fcard-title">Home Affordability Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Determine maximum property purchase price based on gross household income and monthly liabilities.</p>
+            </a>
+            <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">approval</span></div>
+                    <div class="ak-fcard-title">Loan Eligibility Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Find your maximum housing loan borrowing capacity based on FOIR and banking norms.</p>
+            </a>
+            <a href="/calculators/capital-gains-tax-calculator/" class="ak-fcard">
+                <div class="ak-fcard-header-flex">
+                    <div class="ak-fcard-icon"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="ak-fcard-title">Capital Gains Tax Calculator</div>
+                </div>
+                <p class="ak-fcard-desc">Calculate Short-Term and Long-Term Capital Gains (STCG/LTCG) tax on real estate sales.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer"><div class="container footer-container"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><span class="brand-logo-text">acre&amp;key</span></a><p class="footer-tagline">Bengaluru's Premier Independent Home Buyer Concierge. 100% Buyer-Dedicated Representation.</p><div class="footer-contact-info"><p><i class="fa-solid fa-envelope"></i> hello@acrenkey.com</p><p><i class="fa-solid fa-location-dot"></i> Innov8 Prestige Tech Platina, 11th Floor, Kadubeesanahalli, Marathahalli, Bengaluru 560087</p></div></div><div class="footer-links-grid"><div class="footer-col"><h4>Navigation</h4><ul><li><a href="/#buyers-checklist">Our Approach</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE Services</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul></div><div class="footer-col"><h4>Calculators</h4><ul><li><a href="/calculators/home-loan-emi-calculator/">Home Loan EMI Calculator</a></li><li><a href="/calculators/home-loan-tax-benefit-calculator/">Home Loan Tax Benefit Calculator</a></li><li><a href="/calculators/section-24-tax-benefit-calculator/">Section 24 Tax Calculator</a></li><li><a href="/calculators/section-80c-tax-savings-calculator/">Section 80C Tax Calculator</a></li><li><a href="/calculators/capital-gains-tax-calculator/">Capital Gains Tax Calculator</a></li></ul></div><div class="footer-col"><h4>Legal &amp; Trust</h4><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-service/">Terms of Service</a></li><li><a href="/rera-disclaimer/">RERA Disclaimer</a></li><li><a href="/partners.html">Channel Partners</a></li></ul></div></div></div><div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Acrenkey Realty LLP. All rights reserved.</p></div></div></footer>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+    // --- 1. TAX RULE ENGINE CONFIGURATION (SECTION_24_CONFIG) ---
+    const SECTION_24_CONFIG = {
+        defaultAY: "AY 2026-27",
+        rules: {
+            "AY 2026-27": {
+                oldRegime: {
+                    selfOccupied: {
+                        "Purchase": { limit: 200000, label: "Self-Occupied Purchase Cap (₹2 Lakh)" },
+                        "Construction": { limit: 200000, label: "Self-Occupied Construction Cap (₹2 Lakh)" },
+                        "Repair / Renovation": { limit: 30000, label: "Self-Occupied Repair Cap (₹30,000)" }
+                    },
+                    letOut: {
+                        "Purchase": { limit: Infinity, label: "Actual Eligible Interest (No statutory limit)" },
+                        "Construction": { limit: Infinity, label: "Actual Eligible Interest (No statutory limit)" },
+                        "Repair / Renovation": { limit: Infinity, label: "Actual Eligible Interest (No statutory limit)" }
+                    }
+                },
+                newRegime: {
+                    selfOccupied: {
+                        "Purchase": { limit: 0, label: "Disallowed under New Regime (₹0)" },
+                        "Construction": { limit: 0, label: "Disallowed under New Regime (₹0)" },
+                        "Repair / Renovation": { limit: 0, label: "Disallowed under New Regime (₹0)" }
+                    },
+                    letOut: {
+                        "Purchase": { limit: Infinity, label: "Actual Interest (Set-off restricted)" },
+                        "Construction": { limit: Infinity, label: "Actual Interest (Set-off restricted)" },
+                        "Repair / Renovation": { limit: Infinity, label: "Actual Interest (Set-off restricted)" }
+                    }
+                }
+            }
+        }
+    };
+
+    // Copy rules for AY 2025-26 and AY 2024-25
+    SECTION_24_CONFIG.rules["AY 2025-26"] = SECTION_24_CONFIG.rules["AY 2026-27"];
+    SECTION_24_CONFIG.rules["AY 2024-25"] = SECTION_24_CONFIG.rules["AY 2026-27"];
+
+    // --- 2. PURE CALCULATION FUNCTIONS ---
+    function parseNumericValue(val) {
+        if (!val) return 0;
+        if (typeof val === 'number') return isNaN(val) ? 0 : Math.max(0, val);
+        const str = String(val).replace(/[^0-9.]/g, '');
+        const num = parseFloat(str);
+        return isNaN(num) ? 0 : Math.max(0, num);
+    }
+
+    function formatCurrency(num) {
+        if (num === Infinity) return "Actual Interest";
+        const clean = Math.round(parseNumericValue(num));
+        return '₹' + clean.toLocaleString('en-IN');
+    }
+
+    function calculateEligibleInterest(annualInterest, limit) {
+        const interest = parseNumericValue(annualInterest);
+        if (limit === 0) return 0;
+        if (limit === Infinity) return interest;
+        return Math.min(interest, limit);
+    }
+
+    function calculateNonEligibleInterest(annualInterest, eligibleInterest) {
+        const interest = parseNumericValue(annualInterest);
+        return Math.max(0, interest - eligibleInterest);
+    }
+
+    function calculateTaxSaving(eligibleInterest, marginalTaxRateDecimal) {
+        const rate = Math.max(0, Math.min(1, parseNumericValue(marginalTaxRateDecimal)));
+        return eligibleInterest * rate;
+    }
+
+    function calculateEffectiveInterestCost(annualInterest, taxSaving) {
+        const interest = parseNumericValue(annualInterest);
+        return Math.max(0, interest - taxSaving);
+    }
+
+    function calculateTaxBenefitPercentage(annualInterest, taxSaving) {
+        const interest = parseNumericValue(annualInterest);
+        if (interest <= 0) return 0;
+        return (taxSaving / interest) * 100;
+    }
+
+    function calculateInterestUtilization(annualInterest, eligibleInterest) {
+        const interest = parseNumericValue(annualInterest);
+        if (interest <= 0) return 0;
+        return (eligibleInterest / interest) * 100;
+    }
+
+    function compareSection24Benefits(inputs, ay = "AY 2026-27", marginalRateDecimal = 0.30) {
+        const ayConfig = SECTION_24_CONFIG.rules[ay] || SECTION_24_CONFIG.rules["AY 2026-27"];
+        const propKey = inputs.propertyType === 'Self-Occupied' ? 'selfOccupied' : 'letOut';
+        const purposeKey = inputs.loanPurpose || 'Purchase';
+
+        // Old Regime Rules
+        const oldRule = ayConfig.oldRegime[propKey][purposeKey];
+        const oldLimit = oldRule.limit;
+        const oldEligible = calculateEligibleInterest(inputs.annualInterest, oldLimit);
+        const oldNonEligible = calculateNonEligibleInterest(inputs.annualInterest, oldEligible);
+        const oldTaxSaving = calculateTaxSaving(oldEligible, marginalRateDecimal);
+        const oldEffectiveCost = calculateEffectiveInterestCost(inputs.annualInterest, oldTaxSaving);
+        const oldBenefitPct = calculateTaxBenefitPercentage(inputs.annualInterest, oldTaxSaving);
+        const oldUtilization = calculateInterestUtilization(inputs.annualInterest, oldEligible);
+
+        // New Regime Rules
+        const newRule = ayConfig.newRegime[propKey][purposeKey];
+        const newLimit = newRule.limit;
+        const newEligible = calculateEligibleInterest(inputs.annualInterest, newLimit);
+        const newNonEligible = calculateNonEligibleInterest(inputs.annualInterest, newEligible);
+        const newTaxSaving = calculateTaxSaving(newEligible, marginalRateDecimal);
+        const newEffectiveCost = calculateEffectiveInterestCost(inputs.annualInterest, newTaxSaving);
+        const newBenefitPct = calculateTaxBenefitPercentage(inputs.annualInterest, newTaxSaving);
+
+        const benefitDifference = oldTaxSaving - newTaxSaving;
+
+        return {
+            annualInterest: inputs.annualInterest,
+            propertyType: inputs.propertyType,
+            loanPurpose: inputs.loanPurpose,
+            old: {
+                limit: oldLimit,
+                label: oldRule.label,
+                eligible: oldEligible,
+                nonEligible: oldNonEligible,
+                taxSaving: oldTaxSaving,
+                effectiveCost: oldEffectiveCost,
+                benefitPct: oldBenefitPct,
+                utilization: oldUtilization
+            },
+            new: {
+                limit: newLimit,
+                label: newRule.label,
+                eligible: newEligible,
+                nonEligible: newNonEligible,
+                taxSaving: newTaxSaving,
+                effectiveCost: newEffectiveCost,
+                benefitPct: newBenefitPct
+            },
+            benefitDifference
+        };
+    }
+
+    // Automatic Tax Slab Helper for Old Regime
+    function getAutomaticMarginalRateOldRegime(income) {
+        if (income > 1000000) return 0.30;
+        if (income > 500000) return 0.20;
+        if (income > 250000) return 0.05;
+        return 0.00;
+    }
+
+    // --- 3. UI STATE & INTERACTION LOGIC ---
+    function getFormInputs() {
+        return {
+            ay: document.getElementById('aySelect').value,
+            regime: document.getElementById('regimeSelect').value,
+            propertyType: document.getElementById('propertyTypeSelect').value,
+            loanPurpose: document.getElementById('loanPurposeSelect').value,
+            annualInterest: parseNumericValue(document.getElementById('annualInterestInput').value),
+            rateMode: document.getElementById('taxRateModeSelect').value,
+            income: parseNumericValue(document.getElementById('taxableIncomeInput').value),
+            marginalRateSelect: document.getElementById('marginalTaxRateSelect').value,
+            customRateInput: parseNumericValue(document.getElementById('customTaxRateInput').value)
+        };
+    }
+
+    function getActiveMarginalRateDecimal(inputs) {
+        if (inputs.rateMode === 'Automatic') {
+            return getAutomaticMarginalRateOldRegime(inputs.income);
+        }
+        if (inputs.marginalRateSelect === 'Custom') {
+            return Math.min(100, Math.max(0, inputs.customRateInput)) / 100;
+        }
+        return parseNumericValue(inputs.marginalRateSelect) / 100;
+    }
+
+    function formatAndCalculate(inputElem) {
+        if (inputElem && inputElem.value) {
+            const rawVal = inputElem.value.replace(/[^0-9.]/g, '');
+            if (rawVal !== '') {
+                const num = parseFloat(rawVal);
+                if (!isNaN(num)) {
+                    inputElem.value = num.toLocaleString('en-IN');
+                }
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onInputChange() {
+        updateCalculatorResults();
+    }
+
+    function onTaxRateModeChange(mode) {
+        const marginalRateRow = document.getElementById('marginalRateRow');
+        const customRateRow = document.getElementById('customRateRow');
+        const incomeRow = document.getElementById('incomeRow');
+
+        if (mode === 'Automatic') {
+            incomeRow.style.display = 'block';
+            marginalRateRow.style.opacity = '0.5';
+            marginalRateRow.style.pointerEvents = 'none';
+            customRateRow.style.display = 'none';
+        } else {
+            incomeRow.style.display = 'none';
+            marginalRateRow.style.opacity = '1';
+            marginalRateRow.style.pointerEvents = 'auto';
+            if (document.getElementById('marginalTaxRateSelect').value === 'Custom') {
+                customRateRow.style.display = 'block';
+            }
+        }
+        updateCalculatorResults();
+    }
+
+    function onMarginalRateSelectChange(val) {
+        const customRateRow = document.getElementById('customRateRow');
+        if (val === 'Custom') {
+            customRateRow.style.display = 'block';
+        } else {
+            customRateRow.style.display = 'none';
+        }
+        updateCalculatorResults();
+    }
+
+    function updateCalculatorResults() {
+        const inputs = getFormInputs();
+        const rateDecimal = getActiveMarginalRateDecimal(inputs);
+        const ratePercent = (rateDecimal * 100).toFixed(1).replace('.0', '') + '%';
+
+        const result = compareSection24Benefits(inputs, inputs.ay, rateDecimal);
+
+        // Update Primary Result Box
+        const primaryValElem = document.getElementById('primaryTaxSavingVal');
+        const primarySubElem = document.getElementById('primaryTaxSavingSub');
+        const regimeContainer = document.getElementById('regimeComparisonContainer');
+
+        if (inputs.regime === 'New Tax Regime') {
+            primaryValElem.innerText = formatCurrency(result.new.taxSaving);
+            primarySubElem.innerText = inputs.propertyType === 'Self-Occupied' 
+                ? 'Estimated Section 24(b) Tax Saving (Disallowed under New Tax Regime)'
+                : `Estimated Annual Tax Saving (New Regime Let-Out @ ${ratePercent} Slab)`;
+            regimeContainer.style.display = 'none';
+        } else if (inputs.regime === 'Old Tax Regime') {
+            primaryValElem.innerText = formatCurrency(result.old.taxSaving);
+            primarySubElem.innerText = `Estimated Annual Tax Saving (Old Tax Regime @ ${ratePercent} Marginal Rate)`;
+            regimeContainer.style.display = 'none';
+        } else { // Compare Both
+            primaryValElem.innerText = formatCurrency(result.old.taxSaving);
+            primarySubElem.innerText = `Estimated 24(b) Tax Saving — Old Regime (@ ${ratePercent} Slab) vs ${formatCurrency(result.new.taxSaving)} under New Regime`;
+            regimeContainer.style.display = 'block';
+        }
+
+        // Limit Utilization Bar
+        const limitBarTitle = document.getElementById('limitBarTitle');
+        const limitFill = document.getElementById('limitUtilFill');
+        const limitPctText = document.getElementById('limitUtilPercentage');
+        const limitUsedText = document.getElementById('limitUtilUsed');
+        const limitRemText = document.getElementById('limitUtilRemaining');
+
+        const activeObj = (inputs.regime === 'New Tax Regime') ? result.new : result.old;
+
+        if (activeObj.limit === Infinity) {
+            limitBarTitle.innerText = "Section 24(b) Limit (No Statutory Cap)";
+            limitFill.style.width = "100%";
+            limitPctText.innerText = "100% Eligible";
+            limitUsedText.innerText = formatCurrency(activeObj.eligible) + " Eligible Deduction";
+            limitRemText.innerText = "₹0 Above Cap";
+        } else if (activeObj.limit === 0) {
+            limitBarTitle.innerText = "Section 24(b) Limit (₹0 - Disallowed)";
+            limitFill.style.width = "0%";
+            limitPctText.innerText = "0% Eligible";
+            limitUsedText.innerText = "₹0 Eligible Deduction";
+            limitRemText.innerText = formatCurrency(inputs.annualInterest) + " Non-Eligible";
+        } else {
+            limitBarTitle.innerText = `Section 24(b) Limit (${formatCurrency(activeObj.limit)})`;
+            const pct = Math.min(100, Math.max(0, activeObj.utilization));
+            limitFill.style.width = pct.toFixed(1) + '%';
+            limitPctText.innerText = pct.toFixed(1) + '% Eligible';
+            limitUsedText.innerText = formatCurrency(activeObj.eligible) + ' Eligible Deduction';
+            limitRemText.innerText = formatCurrency(activeObj.nonEligible) + ' Above Cap';
+        }
+
+        // Snapshot Grid
+        document.getElementById('snapAnnualInterest').innerText = formatCurrency(inputs.annualInterest);
+        document.getElementById('snapEligibleInterest').innerText = formatCurrency(activeObj.eligible);
+        document.getElementById('snapCapSub').innerText = activeObj.limit === Infinity ? 'No cap (Let-out)' : (activeObj.limit === 0 ? 'Disallowed (New Regime)' : `Capped at ${formatCurrency(activeObj.limit)}`);
+        document.getElementById('snapNonEligibleInterest').innerText = formatCurrency(activeObj.nonEligible);
+        document.getElementById('snapTaxSaving').innerText = formatCurrency(activeObj.taxSaving);
+        document.getElementById('snapEffectiveCost').innerText = formatCurrency(activeObj.effectiveCost);
+        document.getElementById('snapBenefitPct').innerText = activeObj.benefitPct.toFixed(1) + '%';
+
+        // Comparison Table (for Compare Both mode)
+        document.getElementById('tblOldTotal').innerText = formatCurrency(inputs.annualInterest);
+        document.getElementById('tblNewTotal').innerText = formatCurrency(inputs.annualInterest);
+        document.getElementById('tblOldDeduction').innerText = formatCurrency(result.old.eligible);
+        document.getElementById('tblNewDeduction').innerText = formatCurrency(result.new.eligible);
+        document.getElementById('tblOldNonEligible').innerText = formatCurrency(result.old.nonEligible);
+        document.getElementById('tblNewNonEligible').innerText = formatCurrency(result.new.nonEligible);
+        document.getElementById('tblOldSaving').innerText = formatCurrency(result.old.taxSaving);
+        document.getElementById('tblNewSaving').innerText = formatCurrency(result.new.taxSaving);
+        document.getElementById('tblOldEffective').innerText = formatCurrency(result.old.effectiveCost);
+        document.getElementById('tblNewEffective').innerText = formatCurrency(result.new.effectiveCost);
+        document.getElementById('tblDifferenceVal').innerText = (result.benefitDifference >= 0 ? '+' : '') + formatCurrency(result.benefitDifference);
+
+        // Update Dynamic Insights List
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+
+        insightsList.innerHTML += `<li><strong>Applicable Treatment:</strong> ${inputs.propertyType} property for <em>${inputs.loanPurpose}</em> purpose — Old Regime limit: <strong>${result.old.label}</strong>.</li>`;
+
+        if (inputs.propertyType === 'Self-Occupied' && inputs.loanPurpose === 'Repair / Renovation' && inputs.regime !== 'New Tax Regime') {
+            insightsList.innerHTML += `<li><strong>Repair Loan Limit:</strong> For self-occupied property repair or renovation loans under the Old Regime, Section 24(b) interest deduction is capped at <strong>₹30,000</strong> per year.</li>`;
+        }
+
+        if (inputs.propertyType === 'Self-Occupied' && inputs.annualInterest > 200000 && inputs.loanPurpose !== 'Repair / Renovation' && inputs.regime !== 'New Tax Regime') {
+            insightsList.innerHTML += `<li><strong>Statutory Cap Reached:</strong> Your annual interest is ${formatCurrency(inputs.annualInterest)}, but Section 24(b) deduction for self-occupied purchase/construction is capped at <strong>₹2,00,000</strong>. Approximately ${formatCurrency(result.old.nonEligible)} falls above the statutory limit.</li>`;
+        }
+
+        if (inputs.propertyType === 'Let-Out') {
+            insightsList.innerHTML += `<li><strong>Let-Out Property Rules:</strong> Actual eligible interest may be deducted against house property income. Under the Old Regime, net house property loss set-off against salary or other income is capped at <strong>₹2 Lakh</strong> per year (excess carried forward up to 8 years).</li>`;
+            if (inputs.regime === 'New Tax Regime' || inputs.regime === 'Compare Both') {
+                insightsList.innerHTML += `<li><strong>New Regime Let-Out Restriction:</strong> Under the New Tax Regime, eligible interest can reduce rental income, but any resulting net house property loss <strong>cannot be set off</strong> against salary or other heads of income.</li>`;
+            }
+        }
+
+        if (inputs.propertyType === 'Self-Occupied' && (inputs.regime === 'New Tax Regime' || inputs.regime === 'Compare Both')) {
+            insightsList.innerHTML += `<li><strong>New Regime Restriction:</strong> Section 24(b) home-loan interest deduction is <strong>not available</strong> for self-occupied properties under the New Tax Regime.</li>`;
+        }
+
+        if (rateDecimal === 0) {
+            insightsList.innerHTML += `<li><strong>0% Marginal Rate:</strong> The estimated tax saving is ₹0 because the selected marginal tax rate is 0%.</li>`;
+        } else if (activeObj.eligible > 0) {
+            insightsList.innerHTML += `<li><strong>Tax Saving vs Deduction:</strong> At an assumed marginal rate of ${ratePercent}, your eligible interest deduction of ${formatCurrency(activeObj.eligible)} could reduce your income tax by approximately <strong>${formatCurrency(activeObj.taxSaving)}</strong>.</li>`;
+        }
+
+        if (inputs.regime === 'Compare Both') {
+            if (result.benefitDifference > 0) {
+                insightsList.innerHTML += `<li><strong>Regime Comparison:</strong> Based only on Section 24(b) interest deduction, the Old Regime provides approximately <strong>${formatCurrency(result.benefitDifference)}</strong> more estimated tax benefit. Your overall tax liability depends on total income and other deductions.</li>`;
+            } else if (result.benefitDifference < 0) {
+                insightsList.innerHTML += `<li><strong>Regime Comparison:</strong> Based only on Section 24(b) interest deduction, the New Regime provides approximately <strong>${formatCurrency(Math.abs(result.benefitDifference))}</strong> more estimated tax benefit.</li>`;
+            } else {
+                insightsList.innerHTML += `<li><strong>Regime Comparison:</strong> Both regimes provide similar estimated Section 24(b) benefits based on the entered parameters.</li>`;
+            }
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCalculatorResults();
+    });
+    </script>
+</body>
+</html>
