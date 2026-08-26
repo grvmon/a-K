@@ -3287,12 +3287,6 @@ body.property-page main {
   pointer-events: none !important;
 }
 
-.prop-hero-score-badge:hover {
-  background: rgba(139, 90, 69, 0.22) !important;
-  border-color: #8B5A45 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(139, 90, 69, 0.2) !important;
-}
 
 .prop-score-star {
   font-weight: 800 !important;
@@ -4682,4 +4676,12 @@ body.property-page main {
 .ak-btn-secondary,
 .lf-page-cta-btn {
     font-family: var(--font-body), 'Manrope', sans-serif !important;
+}
+
+/* Force static display for score cards */
+.ak-info-score-card:hover, .prop-hero-score-badge:hover {
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(15, 31, 61, 0.04) !important;
+  background: #FFFFFF !important;
+  border-color: #EAE6DF !important;
 }
