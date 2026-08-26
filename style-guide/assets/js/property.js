@@ -418,7 +418,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
     // Unified Single-Source FAQ Accordion Handler
-  window.toggleFaqItem = function(qEl) {
+  window.toggleFaqItem = function(qEl, event) {
+    if (event) {
+      if (typeof event.stopPropagation === 'function') event.stopPropagation();
+    }
     if (!qEl) return;
     var item = qEl.closest ? qEl.closest('.prop-faq-item') : qEl.parentElement;
     if (!item) return;
@@ -449,7 +452,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.addEventListener('click', function(e) {
       var q = e.target.closest('.prop-faq-q');
       if (q) {
-        window.toggleFaqItem(q);
+        if (e._faqHandled) return;
+        e._faqHandled = true;
+        window.toggleFaqItem(q, e);
       }
     });
   });
