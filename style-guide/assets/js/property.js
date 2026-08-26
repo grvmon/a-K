@@ -417,66 +417,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-  // Robust, Semantic WAI-ARIA FAQ Accordion Component Handler
-  window.toggleFaqItem = function(targetItem) {
-    if (!targetItem) return;
+    // Unified Single-Source FAQ Accordion Handler
+  window.toggleFaqItem = function(qEl) {
+    if (!qEl) return;
+    var item = qEl.closest ? qEl.closest('.prop-faq-item') : qEl.parentElement;
+    if (!item) return;
 
-    var trigger = targetItem.querySelector('[data-faq-trigger], .prop-faq-trigger, .prop-faq-q');
-    var answer = targetItem.querySelector('[data-faq-answer], .prop-faq-answer, .prop-faq-a');
-    var isCurrentlyOpen = targetItem.classList.contains('active') || (trigger && trigger.getAttribute('aria-expanded') === 'true');
-
-    // Close all FAQ items in the same container cleanly
-    var parentList = targetItem.closest('.prop-faq-list, .ak-faq-container') || document;
-    var allItems = parentList.querySelectorAll('[data-faq-item], .prop-faq-item');
+    var isOpen = item.classList.contains('active');
+    
+    // Close all FAQ items cleanly
+    var allItems = document.querySelectorAll('.prop-faq-item');
     for (var i = 0; i < allItems.length; i++) {
-      var it = allItems[i];
-      it.classList.remove('active');
-      var tr = it.querySelector('[data-faq-trigger], .prop-faq-trigger, .prop-faq-q');
-      var an = it.querySelector('[data-faq-answer], .prop-faq-answer, .prop-faq-a');
-      var badge = it.querySelector('.prop-faq-badge');
-      
-      if (tr) tr.setAttribute('aria-expanded', 'false');
-      if (badge) badge.textContent = '+';
-      if (an) {
-        an.setAttribute('hidden', '');
-        an.style.display = 'none';
+      allItems[i].classList.remove('active');
+      var ans = allItems[i].querySelector('.prop-faq-a');
+      if (ans) {
+        ans.style.removeProperty('display');
       }
     }
 
-    // Toggle clicked item open
-    if (!isCurrentlyOpen) {
-      targetItem.classList.add('active');
-      var currBadge = targetItem.querySelector('.prop-faq-badge');
-      if (trigger) trigger.setAttribute('aria-expanded', 'true');
-      if (currBadge) currBadge.textContent = '−';
-      if (answer) {
-        answer.removeAttribute('hidden');
-        answer.style.display = 'block';
+    // Toggle current item
+    if (!isOpen) {
+      item.classList.add('active');
+      var targetAns = item.querySelector('.prop-faq-a');
+      if (targetAns) {
+        targetAns.style.display = 'block';
       }
     }
   };
 
-  // Event Delegation for Mouse, Touch, & Keyboard Navigation
   document.addEventListener('DOMContentLoaded', function() {
-    document.addEventListener('click', function(e) {
-      var trigger = e.target.closest('[data-faq-trigger], .prop-faq-trigger, .prop-faq-q');
-      if (!trigger) return;
-      var item = trigger.closest('[data-faq-item], .prop-faq-item');
-      if (!item) return;
-      e.preventDefault();
-      window.toggleFaqItem(item);
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        var trigger = e.target.closest('[data-faq-trigger], .prop-faq-trigger');
-        if (trigger) {
-          var item = trigger.closest('[data-faq-item], .prop-faq-item');
-          if (item) {
-            e.preventDefault();
-            window.toggleFaqItem(item);
-          }
-        }
+    document.body.addEventListener('click', function(e) {
+      var q = e.target.closest('.prop-faq-q');
+      if (q) {
+        window.toggleFaqItem(q);
       }
     });
   });

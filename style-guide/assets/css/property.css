@@ -3497,67 +3497,17 @@ body.property-page main {
   }
 }
 
-/* Semantic WAI-ARIA Accessible FAQ Accordion Styling */
-.prop-faq-item {
-  background: #FFFFFF !important;
-  border: 1px solid #DDD7CF !important;
-  border-radius: 8px !important;
-  margin-bottom: 0.75rem !important;
-  overflow: hidden !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
-}
-.prop-faq-item:hover, .prop-faq-item.active {
-  border-color: var(--refined-brass, #8C6734) !important;
-  box-shadow: 0 4px 12px rgba(13, 27, 36, 0.04) !important;
-}
-.prop-faq-trigger {
-  width: 100% !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 1.1rem 1.25rem !important;
-  font-family: var(--font-body, 'Manrope', sans-serif) !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  color: var(--deep-navy, #182A3D) !important;
-  text-align: left !important;
+/* Fail-Safe FAQ Accordion Styling */
+.prop-faq-q {
   cursor: pointer !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  gap: 1rem !important;
-  outline: none !important;
-  transition: background-color 0.2s ease !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
-.prop-faq-trigger:focus-visible {
-  outline: 2px solid var(--refined-brass, #8C6734) !important;
-  outline-offset: -2px !important;
-}
-.prop-faq-badge {
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  color: var(--refined-brass, #8C6734) !important;
-  flex-shrink: 0 !important;
-  line-height: 1 !important;
-  transition: transform 0.2s ease !important;
-}
-.prop-faq-answer {
-  padding: 1rem 1.25rem 1.25rem 1.25rem !important;
-  font-family: var(--font-body, 'Manrope', sans-serif) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.6 !important;
-  color: var(--deep-slate, #303F4F) !important;
-  border-top: 1px solid rgba(106, 66, 50, 0.1) !important;
-}
-.prop-faq-answer[hidden] {
-  display: none !important;
-}
-.prop-faq-item.active .prop-faq-answer {
+.prop-faq-item.active .prop-faq-a {
   display: block !important;
 }
-@media (prefers-reduced-motion: reduce) {
-  .prop-faq-badge, .prop-faq-item {
-    transition: none !important;
-  }
+.prop-faq-item:not(.active) .prop-faq-a {
+  display: none !important;
 }
 
 /* Reusable AcrenKey Assessment: Strengths & Risks Component */
