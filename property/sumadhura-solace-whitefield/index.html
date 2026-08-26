@@ -493,14 +493,14 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <div style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:1px solid #EAE6DF; border-radius:8px; box-shadow:0 2px 8px rgba(15,31,61,0.04);">
+  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:1px solid #EAE6DF; border-radius:8px; box-shadow:0 2px 8px rgba(15,31,61,0.04); cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(15,31,61,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(15,31,61,0.04)';">
     <div style="display:flex; align-items:baseline; gap:0.2rem;">
       <span style="font-size:1.75rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.9</span>
       <span style="font-size:0.9rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">/5</span>
     </div>
     <div style="width:1px; height:32px; background:#EAE6DF;"></div>
     <div style="display:flex; flex-direction:column; justify-content:center;">
-      <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65; margin-bottom:0.1rem; font-family:'Josefin Sans', sans-serif; text-transform:uppercase;">acre&amp;key SCORE</div>
+      <div style="display:flex; align-items:center; gap:0.35rem; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65; margin-bottom:0.1rem; font-family:'Josefin Sans', sans-serif; text-transform:uppercase;">acre&amp;key SCORE <i data-feather="info" style="width:12px; height:12px; opacity:0.8; margin-bottom:1px;"></i></div>
       <div style="font-family:'Cormorant Garamond',serif; font-size: 1.21rem; color:#6A4232; line-height:1;">Strong End-Use Pick</div>
     </div>
   </div>
