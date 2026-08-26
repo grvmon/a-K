@@ -29,7 +29,7 @@
     <!-- Google Fonts & FontAwesome -->
     <noscript></noscript>
 
-    <link rel="stylesheet" href="../../website.css?v=20260826_f6f2ec2">
+    <link rel="stylesheet" href="../../website.css?v=20260826_bulk_hex">
     <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
     <link rel="stylesheet" href="../../calculators/calculator-design-system.css?v=20260826_master_v1">
 
@@ -881,7 +881,7 @@
                     </div>
                     
                     <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
-                        <div class="ak-emi-huge" id="resultNetYield" style="color: #2ECC71;">2.80%</div>
+                        <div class="ak-emi-huge" id="resultNetYield" style="color: #1B5E20;">2.80%</div>
                     </div>
                     <div class="ak-emi-subtext" id="yieldSubtext">Gross Yield: <strong>3.60%</strong> | Impact of Annual Expenses: <strong>-0.80%</strong></div>
                 </div>
@@ -895,7 +895,7 @@
                     <div class="ak-cmp-divider">VS</div>
                     <div class="ak-cmp-col">
                         <div class="ak-cmp-title">Net Rental Yield</div>
-                        <div class="ak-cmp-val" id="cmpNetYield" style="color:#2ECC71;">2.80%</div>
+                        <div class="ak-cmp-val" id="cmpNetYield" style="color:#1B5E20;">2.80%</div>
                     </div>
                 </div>
                 
@@ -1212,14 +1212,14 @@
         // Update Right Panel Outputs
         var netYieldTextEl = document.getElementById('resultNetYield');
         netYieldTextEl.innerText = netYield.toFixed(2) + "%";
-        netYieldTextEl.style.color = netYield >= 0 ? "#2ECC71" : "#E74C3C";
+        netYieldTextEl.style.color = netYield >= 0 ? "#1B5E20" : "#DC2626";
 
         document.getElementById('yieldSubtext').innerHTML = "Gross Yield: <strong>" + grossYield.toFixed(2) + "%</strong> | Impact of Annual Expenses: <strong>-" + yieldImpact.toFixed(2) + "%</strong>";
 
         document.getElementById('cmpGrossYield').innerText = grossYield.toFixed(2) + "%";
         var cmpNetEl = document.getElementById('cmpNetYield');
         cmpNetEl.innerText = netYield.toFixed(2) + "%";
-        cmpNetEl.style.color = netYield >= 0 ? "#2ECC71" : "#E74C3C";
+        cmpNetEl.style.color = netYield >= 0 ? "#1B5E20" : "#DC2626";
 
         document.getElementById('resultStatNetYield').innerText = netYield.toFixed(2) + "%";
         document.getElementById('resultStatGrossYield').innerText = grossYield.toFixed(2) + "%";

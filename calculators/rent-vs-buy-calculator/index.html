@@ -29,7 +29,7 @@
     <!-- Google Fonts & FontAwesome -->
     <noscript></noscript>
 
-    <link rel="stylesheet" href="../../website.css?v=20260826_f6f2ec2">
+    <link rel="stylesheet" href="../../website.css?v=20260826_bulk_hex">
     <link rel="stylesheet" href="../../lead-form.css?v=20260822_flush_v133">
     <link rel="stylesheet" href="../../calculators/calculator-design-system.css?v=20260826_master_v1">
 
@@ -998,7 +998,7 @@
                     </div>
                     
                     <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
-                        <div class="ak-emi-huge" id="resultRecText" style="color: #2ECC71;">BUYING IS CHEAPER</div>
+                        <div class="ak-emi-huge" id="resultRecText" style="color: #1B5E20;">BUYING IS CHEAPER</div>
                     </div>
                     <div class="ak-emi-subtext" id="recSubtext">Buying saves an estimated ₹26,18,424 net over a 10-year holding period.</div>
                 </div>
@@ -1396,11 +1396,11 @@
             recSubtextEl.innerText = "Renting and buying have virtually identical net financial costs over your " + state.holding + "-year holding period.";
         } else if (netBuyCost < netRentCost) {
             recTextEl.innerText = "BUYING IS CHEAPER";
-            recTextEl.style.color = "#2ECC71";
+            recTextEl.style.color = "#1B5E20";
             recSubtextEl.innerText = "Buying saves an estimated ₹" + formatIndian(diff) + " net over your " + state.holding + "-year holding period.";
         } else {
             recTextEl.innerText = "RENTING IS CHEAPER";
-            recTextEl.style.color = "#E74C3C";
+            recTextEl.style.color = "#DC2626";
             recSubtextEl.innerText = "Renting saves an estimated ₹" + formatIndian(diff) + " net over your " + state.holding + "-year holding period.";
         }
 
