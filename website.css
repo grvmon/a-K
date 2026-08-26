@@ -687,3 +687,173 @@ body.page-404 .error-404-section{
 .testimonial-body { justify-content: flex-start !important; }
 .testimonial-quote-title { margin-bottom: 12px !important; min-height: 0 !important; flex: 0 0 auto !important; }
 .testimonial-quote-text { margin-top: 0 !important; flex: 1 1 auto !important; display: block !important; }
+
+/* --- LUXURY APPROACH SECTION --- */
+.luxury-approach-section {
+    background-color: #f8f6f1;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.luxury-approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.luxury-approach-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.luxury-approach-title {
+    font-family: var(--font-heading), 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+    font-weight: 400;
+    color: #0D1B24;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+}
+
+.luxury-approach-desc {
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 1.15rem;
+    color: #667085;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+.luxury-approach-img-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.luxury-approach-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.luxury-approach-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.luxury-approach-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13, 27, 36, 0.08);
+}
+.luxury-approach-item:first-child {
+    padding-top: 0;
+}
+.luxury-approach-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.luxury-approach-num {
+    font-family: var(--font-heading), 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #8B5A45;
+    position: relative;
+    padding-right: 28px;
+    margin-right: 28px;
+    min-width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.luxury-approach-num::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 1px;
+    background-color: rgba(13, 27, 36, 0.12);
+}
+
+.luxury-approach-num.active-line::after {
+    background-color: #8B5A45;
+    width: 2px;
+}
+
+.luxury-approach-content {
+    flex: 1;
+}
+
+.luxury-approach-heading {
+    font-family: var(--font-heading), 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: #0D1B24;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.luxury-approach-text {
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    color: #667085;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.luxury-approach-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.luxury-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 54px;
+    padding: 0 32px;
+    border: 1px solid rgba(139, 90, 69, 0.4);
+    background: transparent;
+    color: #303F4F;
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.luxury-btn-outline:hover {
+    border-color: #8B5A45;
+    color: #0D1B24;
+    background: rgba(139, 90, 69, 0.05);
+}
+
+.luxury-btn-outline svg {
+    width: 18px;
+    height: 18px;
+    stroke: #8B5A45;
+}
+
+@media (max-width: 991px) {
+    .luxury-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .luxury-approach-title {
+        font-size: 2.2rem;
+    }
+    .luxury-approach-item {
+        padding: 20px 0;
+    }
+}
