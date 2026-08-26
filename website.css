@@ -620,7 +620,7 @@ body.page-404 .error-404-section{
 /* 2. Tighten nav spacing to ~36px */
 /* The current nav links have padding + gap. Let's force gap to 36px and zero horizontal padding to be precise. */
 .nav-links {
-    gap: 48px !important;
+    gap: 32px !important;
 }
 .nav-links a {
     padding: 6px 0 !important;
@@ -860,3 +860,8 @@ body.page-404 .error-404-section{
 /* --- DATUM DIVIDER --- */
 .brand-divider { height: 1px !important; width: 85% !important; max-width: 1200px !important; margin: 100px auto !important; background: rgba(217, 214, 208, 0.55) !important; box-shadow: none !important; border: none !important; opacity: 0 !important; transition: opacity 1.5s ease-out !important; transform: none !important; filter: none !important; }
 .brand-divider.revealed { opacity: 1 !important; }
+/* Fix nav spacing for smaller desktops */
+.nav-links { gap: 28px !important; }
+.nav-links a { font-size: 0.82rem !important; letter-spacing: 0.1em !important; padding: 6px 0 !important; }
+.nav-brand { margin-right: 32px !important; }
+@media (max-width: 1200px) { .nav-links { gap: 16px !important; } .nav-brand { margin-right: 16px !important; } }
