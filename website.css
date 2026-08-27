@@ -941,3 +941,49 @@ body.page-404 .error-404-section{
 }
 
 .luxury-approach-kicker { color: #7d442a !important; }
+
+/* --- CINEMATIC DRIFT ANIMATION --- */
+.luxury-approach-img-wrapper {
+    /* Ensure overflow is hidden to not reveal edges */
+    overflow: hidden !important;
+}
+
+.luxury-approach-img-wrapper img.cinematic-drift {
+    will-change: transform;
+    /* CSS Scroll-driven animation for modern browsers */
+}
+
+@supports (animation-timeline: view()) {
+    .luxury-approach-img-wrapper img.cinematic-drift {
+        animation: cinematicDrift linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 80%;
+    }
+}
+
+@keyframes cinematicDrift {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1.035) translateY(-15px);
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes cinematicDrift {
+        0% {
+            transform: scale(1) translateY(0);
+        }
+        100% {
+            transform: scale(1.02) translateY(-8px);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .luxury-approach-img-wrapper img.cinematic-drift {
+        animation: none !important;
+        transform: none !important;
+    }
+}
