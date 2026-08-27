@@ -632,15 +632,7 @@ body.page-404 .error-404-section{
 }
 
 /* 4. Reduce CTA to ~230 x 54px in the header */
-.header-nav .nav-cta-btn {
-    width: auto !important;
-    height: 48px !important;
-    min-height: 48px !important;
-    padding: 0 24px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
+
 /* If they want it to scale down slightly when scrolled, we can do it, but let's stick to 54px */
 
 
@@ -676,9 +668,7 @@ body.page-404 .error-404-section{
 }
 
 /* --- REMOVE HEADER CTA SHADOW --- */
-.header-nav .nav-cta-btn {
-    box-shadow: none !important;
-}
+
 
 /* --- REMOVE HEADER BOTTOM BORDER --- */
 .header-nav, .header-nav.scrolled {
@@ -819,35 +809,11 @@ body.page-404 .error-404-section{
     margin-top: 60px;
 }
 
-.luxury-btn-outline {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    height: 54px;
-    padding: 0 32px;
-    border: 1px solid rgba(13, 27, 36, 0.4);
-    background: transparent;
-    color: #303F4F;
-    font-family: var(--font-body), 'Manrope', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
 
-.luxury-btn-outline:hover {
-    border-color: rgba(13, 27, 36, 0.8);
-    color: #0D1B24;
-    background: rgba(13, 27, 36, 0.05);
-}
 
-.luxury-btn-outline svg {
-    width: 18px;
-    height: 18px;
-    stroke: #0D1B24;
-}
+
+
+
 
 @media (max-width: 991px) {
     .luxury-approach-grid {
@@ -891,15 +857,8 @@ body.page-404 .error-404-section{
 
 @media (max-width: 768px) { .desktop-only { display: none; } }
 
-.header-nav .nav-cta-btn {
-    background: transparent !important;
-    border: 1px solid rgba(13,27,36,0.4) !important;
-    color: #0D1B24 !important;
-    box-shadow: none !important;
-}
-.header-nav .nav-cta-btn:hover {
-    background: rgba(13,27,36,0.05) !important;
-}
+
+
 .header-nav.transparent-header:not(.scrolled) .nav-cta-btn {
     background: transparent !important;
     border: 1px solid rgba(255,255,255,0.4) !important;
@@ -921,4 +880,46 @@ body.page-404 .error-404-section{
     background: transparent !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
+}
+
+.header-nav .nav-cta-btn {
+    background: transparent !important;
+    border: 1px solid rgba(125, 68, 42, 0.35) !important;
+    color: #0D1B24 !important;
+    box-shadow: none !important;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.header-nav .nav-cta-btn:hover {
+    border-color: rgba(125, 68, 42, 1) !important;
+    color: #7d442a !important;
+    background: rgba(125, 68, 42, 0.04) !important;
+}
+
+.luxury-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 54px;
+    padding: 0 32px;
+    border: 1px solid rgba(125, 68, 42, 0.35);
+    background: transparent;
+    color: #0D1B24;
+    font-family: var(--font-body), 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.luxury-btn-outline:hover {
+    border-color: rgba(125, 68, 42, 1);
+    color: #7d442a;
+    background: rgba(125, 68, 42, 0.04);
+}
+.luxury-btn-outline svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
