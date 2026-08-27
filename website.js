@@ -518,3 +518,16 @@ rootMargin: '0px 0px -40px 0px'
     }
 });
 
+
+
+// Fix for background video showing grey screen on tab switch
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        const videos = document.querySelectorAll('video[autoplay]');
+        videos.forEach(function(video) {
+            if (video.paused) {
+                video.play().catch(function(e) { console.log('Autoplay prevented:', e); });
+            }
+        });
+    }
+});
