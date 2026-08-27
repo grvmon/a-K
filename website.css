@@ -606,11 +606,11 @@ body.page-404 .error-404-section{
 
 /* 1. Reduce header to 100px and add height transition */
 .header-nav {
-    height: 104px !important;
+    height: 80px !important;
     transition: height 300ms ease, background 300ms ease, box-shadow 300ms ease, border-color 300ms ease !important;
 }
 .nav-container {
-    height: 104px !important;
+    height: 80px !important;
     transition: height 300ms ease !important;
 }
 
@@ -642,10 +642,7 @@ body.page-404 .error-404-section{
     justify-content: center !important;
 }
 /* If they want it to scale down slightly when scrolled, we can do it, but let's stick to 54px */
-.header-nav.scrolled .nav-cta-btn {
-    height: 48px !important;
-    min-height: 48px !important;
-}
+
 
 /* --- OVERRIDE ALL CTAs TO MANROPE --- */
 .sd-btn-gold,
@@ -891,3 +888,35 @@ body.page-404 .error-404-section{
 }
 
 @media (max-width: 768px) { .desktop-only { display: none; } }
+
+.header-nav .nav-cta-btn {
+    background: transparent !important;
+    border: 1px solid rgba(13,27,36,0.4) !important;
+    color: #0D1B24 !important;
+    box-shadow: none !important;
+}
+.header-nav .nav-cta-btn:hover {
+    background: rgba(13,27,36,0.05) !important;
+}
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn {
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,0.4) !important;
+    color: #FFFFFF !important;
+}
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn:hover {
+    background: rgba(255,255,255,0.1) !important;
+    color: #FFFFFF !important;
+}
+
+/* Standardize header across all pages */
+.header-nav {
+    background: #f8f6f1 !important;
+    border-bottom: 1px solid rgba(213, 209, 200, 0.3) !important;
+    box-shadow: 0 4px 20px rgba(13, 27, 36, 0.08) !important;
+}
+
+.header-nav.transparent-header:not(.scrolled) {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
+}
