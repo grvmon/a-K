@@ -910,23 +910,23 @@ html { scroll-behavior: smooth; }
 
           <!-- Zoom & Fullscreen Controls -->
           <div style="display:flex; align-items:center; gap:0.4rem;">
-            <button type="button" onclick="solaceZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+            <button type="button" onclick="window.solaceZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
               +
             </button>
-            <button type="button" onclick="solaceZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+            <button type="button" onclick="window.solaceZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
               −
             </button>
-            <button type="button" onclick="solaceResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+            <button type="button" onclick="window.solaceResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
               Reset
             </button>
-            <button type="button" onclick="solaceTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+            <button type="button" onclick="window.solaceTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
               <i data-feather="maximize-2" style="width:13px;height:13px;"></i> ⛶ View Fullscreen
             </button>
           </div>
         </div>
 
         <!-- Floor Plan Image Frame -->
-        <div id="solaceFpFrame" style="width:100%; height:480px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="solaceTriggerFullscreen()">
+        <div id="solaceFpFrame" style="width:100%; height:480px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.solaceTriggerFullscreen()">
           <img id="solaceFpMainImg" src="" alt="Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.5rem;">
         </div>
 
@@ -1505,7 +1505,7 @@ html { scroll-behavior: smooth; }
     if (modalImg && imgSrc) modalImg.src = imgSrc;
     if (modalTitle && title) modalTitle.textContent = title || 'Sumadhura Solace Floor Plan';
     if (modal) {
-      modal.style.setProperty('display', 'flex', 'important');
+      modal.style.display = 'flex';
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -1517,8 +1517,8 @@ html { scroll-behavior: smooth; }
     }
     var modal = document.getElementById('propFloorPlanModal');
     if (modal) {
-      modal.style.setProperty('display', 'none', 'important');
       modal.classList.remove('active');
+      modal.style.display = 'none';
       document.body.style.overflow = '';
     }
   };
@@ -1537,6 +1537,7 @@ html { scroll-behavior: smooth; }
     const img = document.getElementById('solaceFpMainImg');
     if (img) {
       img.style.transform = `scale(${zoomLevel})`;
+      img.style.transition = 'transform 0.2s ease-out';
     }
   }
 
