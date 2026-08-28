@@ -766,15 +766,15 @@ html { scroll-behavior: smooth; }
       color: #182A3D;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .solace-main-grid {
         grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
       }
+    }
+    @media (max-width: 768px) {
       #solaceFpFrame {
         height: 260px !important;
-      }
-      .prop-fp-section-v3 {
-        padding: 1.5rem 0 !important;
       }
     }
   </style>
@@ -815,8 +815,7 @@ html { scroll-behavior: smooth; }
       <!-- Populated dynamically via JS -->
     </div>
 
-    <!-- Main Decision Tool Layout (Two Columns) -->
-    <div class="solace-main-grid" style="display:grid; grid-template-columns: minmax(0, 68%) minmax(0, 32%); gap:1.75rem; align-items:start;">
+    <div class="solace-main-grid" style="display:grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap:1.5rem; align-items:start; width:100%; box-sizing:border-box;">
       
       <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
       <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
