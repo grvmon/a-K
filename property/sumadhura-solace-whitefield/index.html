@@ -782,230 +782,966 @@ html { scroll-behavior: smooth; }
   </div>
 </div>
 
-<section id="floor-plans" class="prop-section prop-fp-section-v3"><div class="prop-container">
-<!-- Mobile Floor Plans (<= 768px Only) -->
-<div class="ak-mobile-fp-v5">
-  <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#9B6248; text-transform:uppercase; margin-bottom:0.35rem;">OFFICIAL FLOOR PLANS &amp; LAYOUTS</div>
-  <h2 style="font-family:'Cormorant Garamond',serif; font-size: 1.67rem; font-weight:700; color:#182A3D; margin:0 0 0.85rem 0;">Tower Plans &amp; 3D Cutsections</h2>
-  
-  <div class="ak-mobile-fp-carousel">
-    <!-- Tower 1 LUMA Mobile Card -->
-    <div class="ak-mobile-fp-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size: 1.38rem; font-weight:700; color:#182A3D;">Tower 1 | LUMA</span>
-        <span style="font-size:0.85rem; font-weight:800; color:#684A20;">4 BHK Imperial</span>
+<section id="floor-plans" class="prop-section prop-fp-section-v3" style="background:#FAF8F5; padding: 3rem 0; border-top:1px solid #DDD7CF; border-bottom:1px solid #DDD7CF;">
+  <style>
+    .solace-tower-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #182A3D;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .solace-tower-btn:hover {
+      background: #FBF6F3;
+      border-color: #8C6734;
+    }
+    .solace-tower-btn.active {
+      background: #182A3D;
+      color: #FFFFFF;
+      border-color: #182A3D;
+    }
+    .solace-chip-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #303F4F;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.95rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .solace-chip-btn:hover {
+      border-color: #8C6734;
+      color: #182A3D;
+    }
+    .solace-chip-btn.active {
+      background: #8C6734;
+      color: #FFFFFF;
+      border-color: #8C6734;
+    }
+    .solace-mode-btn {
+      background: transparent;
+      border: none;
+      color: #667085;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .solace-mode-btn.active {
+      background: #FFFFFF;
+      color: #182A3D;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      .solace-main-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <div class="prop-container">
+    
+    <!-- Section Header -->
+    <div style="margin-bottom: 2rem;">
+      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.4rem;">
+        ACRE&amp;KEY PROPERTY DECISION TOOL
       </div>
-      <div style="width:100%; height:180px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1', 'Tower 1 LUMA - Typical Even Floor Plan');">
-        <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1" alt="Tower 1 LUMA Floor Plan" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:#182A3D; margin:0 0 0.5rem 0; line-height:1.2;">
+        Official Floor Plans &amp; Space Analysis
+      </h2>
+      <div style="font-size:1.02rem; color:#4A5568; font-weight:500;">
+        Compare official layouts, usable space and orientation across configurations.
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.82rem; margin-bottom:0.75rem;">
-        <div>
-          <div style="color:#9B6248; font-weight:600;">SBUA</div>
-          <div style="font-weight:800; color:#182A3D;">4,710–4,980 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Carpet Area</div>
-          <div style="font-weight:800; color:#182A3D;">2,689–2,810 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Balcony</div>
-          <div style="font-weight:800; color:#182A3D;">588–659 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Facing</div>
-          <div style="font-weight:800; color:#1B5E20;">East</div>
-        </div>
-      </div>
-      <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.75rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFF; border:none; cursor:pointer;">
-        Get Detailed Cost Sheet &rarr;
+    </div>
+
+    <!-- Primary Selector: Tower Tabs -->
+    <div class="solace-tower-selector-bar" style="display:flex; align-items:center; gap:0.6rem; overflow-x:auto; white-space:nowrap; padding-bottom:0.5rem; margin-bottom:1.25rem; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+      <button type="button" class="solace-tower-btn active" onclick="solaceSelectTower('t1', this)" id="solaceTowerBtn_t1">
+        Tower 1 · LUMA
+      </button>
+      <button type="button" class="solace-tower-btn" onclick="solaceSelectTower('t2', this)" id="solaceTowerBtn_t2">
+        Tower 2 · SORA
+      </button>
+      <button type="button" class="solace-tower-btn" onclick="solaceSelectTower('t3', this)" id="solaceTowerBtn_t3">
+        Tower 3 · VANA
+      </button>
+      <button type="button" class="solace-tower-btn" onclick="solaceSelectTower('t4t5', this)" id="solaceTowerBtn_t4t5">
+        Towers 4 &amp; 5 · NIRA &amp; KORA
       </button>
     </div>
 
-    <!-- Tower 2 SORA Mobile Card -->
-    <div class="ak-mobile-fp-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size: 1.38rem; font-weight:700; color:#182A3D;">Tower 2 | SORA</span>
-        <span style="font-size:0.85rem; font-weight:800; color:#684A20;">3 &amp; 4 BHK Regal</span>
-      </div>
-      <div style="width:100%; height:180px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1', 'Tower 2 SORA - Typical Even Floor Plan');">
-        <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1" alt="Tower 2 SORA Floor Plan" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.82rem; margin-bottom:0.75rem;">
-        <div>
-          <div style="color:#9B6248; font-weight:600;">SBUA</div>
-          <div style="font-weight:800; color:#182A3D;">2,220–2,730 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Carpet Area</div>
-          <div style="font-weight:800; color:#182A3D;">1,450–1,782 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Balcony</div>
-          <div style="font-weight:800; color:#182A3D;">60–102 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Facing</div>
-          <div style="font-weight:800; color:#1B5E20;">East / West</div>
-        </div>
-      </div>
-      <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.75rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFF; border:none; cursor:pointer;">
-        Get Detailed Cost Sheet &rarr;
-      </button>
+    <!-- Secondary Selector: Configuration Chips -->
+    <div id="solaceConfigChipsContainer" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; min-height:42px;">
+      <!-- Populated dynamically via JS -->
     </div>
 
-    <!-- Tower 3 VANA Mobile Card -->
-    <div class="ak-mobile-fp-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size: 1.38rem; font-weight:700; color:#182A3D;">Tower 3 | VANA</span>
-        <span style="font-size:0.85rem; font-weight:800; color:#684A20;">3 &amp; 4 BHK Elite</span>
+    <!-- Main Decision Tool Layout (Two Columns) -->
+    <div class="solace-main-grid" style="display:grid; grid-template-columns: minmax(0, 68%) minmax(0, 32%); gap:1.75rem; align-items:start;">
+      
+      <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
+        
+        <!-- Viewer Top Bar (2D/3D Toggle + Fullscreen Button) -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
+          
+          <!-- 2D / 3D Mode Toggle -->
+          <div id="solaceViewModeBox" style="display:flex; align-items:center; gap:0.35rem; background:#F3F4F6; padding:0.25rem; border-radius:6px;">
+            <button type="button" id="solaceBtn2D" class="solace-mode-btn active" onclick="solaceSetViewMode('2d')">
+              2D Floor Plan
+            </button>
+            <button type="button" id="solaceBtn3D" class="solace-mode-btn" onclick="solaceSetViewMode('3d')">
+              3D View
+            </button>
+          </div>
+
+          <!-- Zoom & Fullscreen Controls -->
+          <div style="display:flex; align-items:center; gap:0.4rem;">
+            <button type="button" onclick="solaceZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+              +
+            </button>
+            <button type="button" onclick="solaceZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+              −
+            </button>
+            <button type="button" onclick="solaceResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+              Reset
+            </button>
+            <button type="button" onclick="solaceTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+              <i data-feather="maximize-2" style="width:13px;height:13px;"></i> ⛶ View Fullscreen
+            </button>
+          </div>
+        </div>
+
+        <!-- Floor Plan Image Frame -->
+        <div id="solaceFpFrame" style="width:100%; height:480px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="solaceTriggerFullscreen()">
+          <img id="solaceFpMainImg" src="" alt="Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.5rem;">
+        </div>
+
+        <!-- Caption Bar -->
+        <div id="solaceFpCaption" style="font-size:0.85rem; color:#684A20; font-weight:700; margin-top:0.75rem; text-align:center;">
+          <!-- Populated via JS -->
+        </div>
       </div>
-      <div style="width:100%; height:180px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1', 'Tower 3 VANA - Typical Even Floor Plan');">
-        <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1" alt="Tower 3 VANA Floor Plan" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
+
+      <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.2rem;">
+            PLAN AT A GLANCE
+          </div>
+          <h3 id="solaceGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.65rem; font-weight:700; color:#182A3D; margin:0 0 0.15rem 0;">
+            4 BHK Imperial
+          </h3>
+          <div id="solaceGlanceSubtitle" style="font-size:0.88rem; color:#684A20; font-weight:700; margin-bottom:1.25rem;">
+            Tower 1 · LUMA — Unit 01
+          </div>
+
+          <!-- Key Metrics List -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1.25rem; padding-bottom:1.25rem; border-bottom:1px solid #E5E7EB;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
+              <div id="solaceGlanceSbua" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">4,710 sq.ft.</div>
+              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
+              <div id="solaceGlanceCarpet" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">2,689 sq.ft.</div>
+              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
+              <div id="solaceGlanceBalcony" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">588 sq.ft.</div>
+              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
+              <div id="solaceGlanceFacing" style="font-size:1.05rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East Facing</div>
+              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
+            </div>
+          </div>
+
+          <!-- Space Efficiency Block -->
+          <div style="background:#182A3D; color:#FFFFFF; border-radius:10px; padding:1rem 1.1rem; margin-bottom:1.25rem;">
+            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.6rem;">
+              SPACE EFFICIENCY
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <span style="font-size:0.88rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
+              <span id="solaceGlanceEff" style="font-size:1.2rem; font-weight:800; color:#FFFFFF;">57.1%</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.88rem; color:rgba(255,255,255,0.85);">Balcony Share</span>
+              <span id="solaceGlanceBalcShare" style="font-size:1.2rem; font-weight:800; color:#FFFFFF;">12.5%</span>
+            </div>
+          </div>
+
+          <!-- Flat Numbers -->
+          <div style="margin-bottom:1.25rem;">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#8C6734; margin-bottom:0.25rem;">
+              Flats in this configuration:
+            </div>
+            <div id="solaceGlanceFlats" style="font-size:0.85rem; color:#303F4F; font-weight:600; line-height:1.4;">
+              201, 401, 601, 801, 1001, 1201, 1401
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.85rem; font-size:0.92rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
+          Get Detailed Cost Sheet &rarr;
+        </button>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.82rem; margin-bottom:0.75rem;">
-        <div>
-          <div style="color:#9B6248; font-weight:600;">SBUA</div>
-          <div style="font-weight:800; color:#182A3D;">1,800–2,285 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Carpet Area</div>
-          <div style="font-weight:800; color:#182A3D;">1,176–1,474 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Balcony</div>
-          <div style="font-weight:800; color:#182A3D;">48–96 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Facing</div>
-          <div style="font-weight:800; color:#1B5E20;">East / West</div>
-        </div>
-      </div>
-      <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.75rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFF; border:none; cursor:pointer;">
-        Get Detailed Cost Sheet &rarr;
-      </button>
+
     </div>
 
-    <!-- Towers 4 & 5 NIRA & KORA Mobile Card -->
-    <div class="ak-mobile-fp-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size: 1.38rem; font-weight:700; color:#182A3D;">Towers 4 &amp; 5</span>
-        <span style="font-size:0.85rem; font-weight:800; color:#684A20;">NIRA &amp; KORA</span>
+    <!-- Space Breakdown Analytical Strip -->
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1rem 1.5rem; margin-top:1.75rem; margin-bottom:1.75rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div style="font-size:0.8rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase;">
+        SPACE BREAKDOWN
       </div>
-      <div style="width:100%; height:180px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1', 'Towers 4 & 5 NIRA & KORA - Typical Even Floor Plan');">
-        <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1" alt="Towers 4 & 5 NIRA & KORA Floor Plan" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
+      <div style="display:flex; align-items:center; gap:1.75rem; flex-wrap:wrap; font-size:0.9rem; color:#182A3D;">
+        <div>SBUA: <strong id="solaceStripSbua">4,710 sq.ft.</strong></div>
+        <div>Carpet: <strong id="solaceStripCarpet">2,689 sq.ft.</strong></div>
+        <div>Balcony: <strong id="solaceStripBalcony">588 sq.ft.</strong></div>
+        <div>Carpet Efficiency: <strong id="solaceStripEff">57.1%</strong></div>
+        <div>Balcony Share: <strong id="solaceStripBalcShare">12.5%</strong></div>
+        <div>Non-carpet share: <strong id="solaceStripNonCarpet">42.9%</strong></div>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.82rem; margin-bottom:0.75rem;">
-        <div>
-          <div style="color:#9B6248; font-weight:600;">SBUA</div>
-          <div style="font-weight:800; color:#182A3D;">1,705–2,120 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Carpet Area</div>
-          <div style="font-weight:800; color:#182A3D;">1,060–1,333 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Balcony</div>
-          <div style="font-weight:800; color:#182A3D;">90–108 sq.ft.</div>
-        </div>
-        <div>
-          <div style="color:#9B6248; font-weight:600;">Facing</div>
-          <div style="font-weight:800; color:#1B5E20;">East / West</div>
-        </div>
-      </div>
-      <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.75rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFF; border:none; cursor:pointer;">
-        Get Detailed Cost Sheet &rarr;
-      </button>
     </div>
+
+    <!-- Acre&Key Analysis Grid (3 Compact Cards) -->
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem; margin-bottom:2rem;">
+      
+      <!-- Card 1: Space Analysis -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
+        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
+          SPACE ANALYSIS
+        </div>
+        <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.92rem; color:#303F4F;">
+          <div style="display:flex; justify-content:space-between; padding-bottom:0.4rem; border-bottom:1px dashed #E5E7EB;">
+            <span>Carpet Efficiency</span>
+            <strong id="solaceCard1Eff" style="color:#182A3D;">57.1%</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding-bottom:0.4rem; border-bottom:1px dashed #E5E7EB;">
+            <span>Balcony Share</span>
+            <strong id="solaceCard1BalcShare" style="color:#182A3D;">12.5%</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between;">
+            <span>Non-carpet share</span>
+            <strong id="solaceCard1NonCarpet" style="color:#182A3D;">42.9%</strong>
+          </div>
+        </div>
+        <div style="font-size:0.78rem; color:#684A20; margin-top:0.85rem; line-height:1.4; background:#FBF6F3; padding:0.5rem 0.75rem; border-radius:6px;">
+          Note: Non-carpet share includes wall thickness, balconies, and proportional common area allocation.
+        </div>
+      </div>
+
+      <!-- Card 2: What Works -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
+        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
+          WHAT WORKS
+        </div>
+        <ul id="solaceCard2Works" style="list-style:none; padding:0; margin:0; font-size:0.9rem; color:#303F4F; display:flex; flex-direction:column; gap:0.5rem;">
+          <!-- Populated via JS -->
+        </ul>
+      </div>
+
+      <!-- Card 3: Check Before Booking -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
+        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
+          CHECK BEFORE BOOKING
+        </div>
+        <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.45rem;">
+          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
+            <span style="color:#8C6734; font-weight:800;">•</span> Verify exact unit orientation &amp; sun vector from master plan
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
+            <span style="color:#8C6734; font-weight:800;">•</span> Check actual view corridor &amp; setback distance for your floor
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
+            <span style="color:#8C6734; font-weight:800;">•</span> Check visual privacy from adjacent tower windows
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
+            <span style="color:#8C6734; font-weight:800;">•</span> Confirm floor-specific refuge terrace / service shaft placements
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
+            <span style="color:#8C6734; font-weight:800;">•</span> Confirm exact carpet area annexure in developer agreement
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- "WHICH UNIT SHOULD I PICK?" Comparison Layer -->
+    <div id="solaceCompareSection" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; margin-top:1.5rem;">
+      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.25rem;">
+        COMPARE THIS CONFIGURATION
+      </div>
+      <h3 id="solaceCompareTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 1rem 0;">
+        Compare Unit Variants
+      </h3>
+
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:1rem;">
+        <table id="solaceCompareTable" style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem;">
+          <!-- Populated via JS -->
+        </table>
+      </div>
+
+      <div style="font-size:0.85rem; color:#684A20; font-weight:600; font-style:italic;">
+        “Compare space, efficiency and unit-specific factors before deciding.”
+      </div>
+    </div>
+
   </div>
-</div>
-<!-- Desktop Floor Plans Container (min-width: 769px) -->
-<div class="ak-desktop-fp-v5"><div class=prop-fp-header-v3><h2 class=prop-fp-title-v3>Official Floor Plans &amp; Space Analysis</h2><div class=prop-fp-subtitle-v3>Compare official tower floor plan sheets and 3D isometric layout renderings across all configurations.</div></div><script>
-                function switchFpTab(targetTab, btnEl) {
-                    var allTabs = document.querySelectorAll('.prop-fp-tab-btn-v3');
-                    allTabs.forEach(function(t) { t.classList.remove('active'); });
-                    if (btnEl) btnEl.classList.add('active');
+</section>
 
-                    var allGrids = document.querySelectorAll('.prop-fp-main-grid-v3');
-                    allGrids.forEach(function(g) { g.style.setProperty('display', 'none', 'important'); });
+<script>
+(function() {
+  const solaceData = {
+    t1: {
+      name: 'Tower 1 · LUMA',
+      sheet: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1',
+      configs: [
+        {
+          id: 't1_u1',
+          title: '4 BHK Imperial · Unit 01',
+          name: '4 BHK Imperial',
+          tower: 'Tower 1 · LUMA',
+          unit: 'Unit 01',
+          facing: 'East Facing',
+          sbua: 4710,
+          carpet: 2689,
+          balcony: 588,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Generous living & dining zone extending to private balcony',
+            'Dedicated staff quarters with separate entry & drying yard',
+            'Walk-in wardrobe in Master & Bedroom 1',
+            'Private foyer / lift lobby entry'
+          ]
+        },
+        {
+          id: 't1_u2',
+          title: '4 BHK Imperial · Unit 02',
+          name: '4 BHK Imperial',
+          tower: 'Tower 1 · LUMA',
+          unit: 'Unit 02',
+          facing: 'East Facing',
+          sbua: 4980,
+          carpet: 2810,
+          balcony: 659,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Largest 4 BHK format in the project (4,980 sq.ft. SBUA)',
+            'Expansive 659 sq.ft. balcony & utility space',
+            'Dedicated staff quarters with separate entry',
+            'Walk-in wardrobes across multiple bedrooms'
+          ]
+        }
+      ],
+      compareTitle: 'Compare Tower 1 (LUMA) — Unit 01 vs Unit 02',
+      compareCols: ['Unit 01', 'Unit 02'],
+      compareRows: [
+        { metric: 'SBUA', u1: '4,710 sq.ft.', u2: '4,980 sq.ft.' },
+        { metric: 'Carpet Area', u1: '2,689 sq.ft.', u2: '2,810 sq.ft.' },
+        { metric: 'Balcony Area', u1: '588 sq.ft.', u2: '659 sq.ft.' },
+        { metric: 'Carpet Efficiency', u1: '57.1%', u2: '56.4%' },
+        { metric: 'Balcony Share', u1: '12.5%', u2: '13.2%' },
+        { metric: 'Facing', u1: 'East', u2: 'East' }
+      ]
+    },
+    t2: {
+      name: 'Tower 2 · SORA',
+      sheet: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+      configs: [
+        {
+          id: 't2_4bhk_e',
+          title: '4 BHK Regal · East',
+          name: '4 BHK Regal',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 2720,
+          carpet: 1771,
+          balcony: 102,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_regal.webp?v=20260827_v1',
+          works: [
+            'Dedicated staff quarters with private entrance',
+            'Well-lit open kitchen with optimal ventilation',
+            'Generous living and dining zones extending to balcony',
+            'Walk-in wardrobe & bay window seating in bedroom'
+          ]
+        },
+        {
+          id: 't2_3bhk_e',
+          title: '3 BHK Regal · East',
+          name: '3 BHK Regal',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 03 (East)',
+          facing: 'East Facing',
+          sbua: 2255,
+          carpet: 1450,
+          balcony: 99,
+          flats: '203, 403, 603, 803, 1003, 1203, 1403, 1603, 1803',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            'Spacious family layout with floor-to-ceiling windows',
+            'Walk-in wardrobe providing dedicated storage space',
+            'Well-lit open kitchen with separate utility area'
+          ]
+        },
+        {
+          id: 't2_4bhk_w',
+          title: '4 BHK Regal · West',
+          name: '4 BHK Regal',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 04 (West)',
+          facing: 'West Facing',
+          sbua: 2730,
+          carpet: 1782,
+          balcony: 100,
+          flats: '204, 404, 604, 804, 1004, 1204, 1404, 1604, 1804',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_regal.webp?v=20260827_v1',
+          works: [
+            '1,782 sq.ft. carpet area providing large bedroom dimensions',
+            'Dedicated staff quarters & private entry',
+            'Optimal cross-ventilation across living areas'
+          ]
+        },
+        {
+          id: 't2_3bhk_w',
+          title: '3 BHK Regal · West',
+          name: '3 BHK Regal',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 06 (West)',
+          facing: 'West Facing',
+          sbua: 2220,
+          carpet: 1461,
+          balcony: 60,
+          flats: '206, 406, 606, 806, 1006, 1206, 1406, 1606, 1806',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            'High 65.8% carpet efficiency',
+            'Compact balcony footprint prioritizing indoor living area',
+            'Thoughtful bedroom placement with privacy'
+          ]
+        },
+        {
+          id: 't2_1bhk_e',
+          title: '1 BHK Noble · East',
+          name: '1 BHK Noble',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 02 (East)',
+          facing: 'East Facing',
+          sbua: 373,
+          carpet: 245,
+          balcony: 0,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Compact single-occupancy layout with zero balcony waste',
+            'East orientation with direct morning light',
+            'Efficient carpet ratio (~65.7%)'
+          ]
+        },
+        {
+          id: 't2_1bhk_w',
+          title: '1 BHK Noble · West',
+          name: '1 BHK Noble',
+          tower: 'Tower 2 · SORA',
+          unit: 'Unit 05 (West)',
+          facing: 'West Facing',
+          sbua: 500,
+          carpet: 294,
+          balcony: 36,
+          flats: '205, 405, 605, 805, 1005, 1205, 1405, 1605, 1805',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Includes 36 sq.ft. utility/balcony area',
+            'West facing format with dedicated living/dining space'
+          ]
+        }
+      ],
+      compareTitle: 'Compare Tower 2 (SORA) — Key Configurations',
+      compareCols: ['4 BHK Regal (E)', '3 BHK Regal (E)', '4 BHK Regal (W)', '3 BHK Regal (W)'],
+      compareRows: [
+        { metric: 'SBUA', u1: '2,720 sq.ft.', u2: '2,255 sq.ft.', u3: '2,730 sq.ft.', u4: '2,220 sq.ft.' },
+        { metric: 'Carpet Area', u1: '1,771 sq.ft.', u2: '1,450 sq.ft.', u3: '1,782 sq.ft.', u4: '1,461 sq.ft.' },
+        { metric: 'Balcony Area', u1: '102 sq.ft.', u2: '99 sq.ft.', u3: '100 sq.ft.', u4: '60 sq.ft.' },
+        { metric: 'Carpet Efficiency', u1: '65.1%', u2: '64.3%', u3: '65.3%', u4: '65.8%' },
+        { metric: 'Facing', u1: 'East', u2: 'East', u3: 'West', u4: 'West' }
+      ]
+    },
+    t3: {
+      name: 'Tower 3 · VANA',
+      sheet: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+      configs: [
+        {
+          id: 't3_4bhk_e',
+          title: '4 BHK Elite · East',
+          name: '4 BHK Elite',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 2270,
+          carpet: 1468,
+          balcony: 92,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_elite.webp?v=20260827_v1',
+          works: [
+            'Convertible study / home theatre / entertainment room',
+            'Dedicated staff quarters with private entry',
+            'Large floor-to-ceiling windows for natural light',
+            'Walk-in wardrobe dedicated storage space'
+          ]
+        },
+        {
+          id: 't3_3bhk_e',
+          title: '3 BHK Regal · East',
+          name: '3 BHK Regal',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 03 (East)',
+          facing: 'East Facing',
+          sbua: 1995,
+          carpet: 1261,
+          balcony: 96,
+          flats: '203, 403, 603, 803, 1003, 1203, 1403, 1603, 1803',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            'Efficient 1,995 sq.ft. layout with 3 bedrooms & study',
+            '96 sq.ft. balcony extending from living room',
+            'East orientation for optimal morning sunlight'
+          ]
+        },
+        {
+          id: 't3_4bhk_w',
+          title: '4 BHK Elite · West',
+          name: '4 BHK Elite',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 04 (West)',
+          facing: 'West Facing',
+          sbua: 2285,
+          carpet: 1474,
+          balcony: 95,
+          flats: '204, 404, 604, 804, 1004, 1204, 1404, 1604, 1804',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_elite.webp?v=20260827_v1',
+          works: [
+            'Flexible study space adaptable for home office',
+            'Dedicated staff quarters & drying yard access',
+            'Generous master suite with walk-in wardrobe'
+          ]
+        },
+        {
+          id: 't3_3bhk_w',
+          title: '3 BHK Elite · West',
+          name: '3 BHK Elite',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 06 (West)',
+          facing: 'West Facing',
+          sbua: 1800,
+          carpet: 1176,
+          balcony: 48,
+          flats: '206, 406, 606, 806, 1006, 1206, 1406, 1606, 1806',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_elite.webp?v=20260827_v1',
+          works: [
+            'Compact 3 BHK Elite format with high spatial efficiency (~65.3%)',
+            'Well-lit open kitchen layout',
+            'Dedicated study room provision'
+          ]
+        },
+        {
+          id: 't3_1bhk_e',
+          title: '1 BHK Noble · East',
+          name: '1 BHK Noble',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 02 (East)',
+          facing: 'East Facing',
+          sbua: 347,
+          carpet: 228,
+          balcony: 0,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Ultra-compact studio unit layout',
+            'East facing orientation'
+          ]
+        },
+        {
+          id: 't3_1bhk_w',
+          title: '1 BHK Noble · West',
+          name: '1 BHK Noble',
+          tower: 'Tower 3 · VANA',
+          unit: 'Unit 05 (West)',
+          facing: 'West Facing',
+          sbua: 493,
+          carpet: 291,
+          balcony: 34,
+          flats: '205, 405, 605, 805, 1005, 1205, 1405, 1605, 1805',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1',
+          image3d: null,
+          works: [
+            'Includes 34 sq.ft. balcony space',
+            'West facing single bedroom layout'
+          ]
+        }
+      ],
+      compareTitle: 'Compare Tower 3 (VANA) — Key Configurations',
+      compareCols: ['4 BHK Elite (E)', '3 BHK Regal (E)', '4 BHK Elite (W)', '3 BHK Elite (W)'],
+      compareRows: [
+        { metric: 'SBUA', u1: '2,270 sq.ft.', u2: '1,995 sq.ft.', u3: '2,285 sq.ft.', u4: '1,800 sq.ft.' },
+        { metric: 'Carpet Area', u1: '1,468 sq.ft.', u2: '1,261 sq.ft.', u3: '1,474 sq.ft.', u4: '1,176 sq.ft.' },
+        { metric: 'Balcony Area', u1: '92 sq.ft.', u2: '96 sq.ft.', u3: '95 sq.ft.', u4: '48 sq.ft.' },
+        { metric: 'Carpet Efficiency', u1: '64.7%', u2: '63.2%', u3: '64.5%', u4: '65.3%' },
+        { metric: 'Facing', u1: 'East', u2: 'East', u3: 'West', u4: 'West' }
+      ]
+    },
+    t4t5: {
+      name: 'Towers 4 & 5 · NIRA & KORA',
+      sheet: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+      configs: [
+        {
+          id: 't45_3regal_e',
+          title: '3 BHK Regal · East (1,985 sq.ft.)',
+          name: '3 BHK Regal',
+          tower: 'Towers 4 & 5 · NIRA & KORA',
+          unit: 'Unit 01 & 04 (East)',
+          facing: 'East Facing',
+          sbua: 1985,
+          carpet: 1253,
+          balcony: 96,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801 / 204, 404, 604, 804, 1004, 1204, 1404, 1604, 1804',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            'East facing entry with direct morning illumination',
+            'Generous 1,253 sq.ft. carpet area for 3 bedrooms',
+            'Separate kitchen utility & living balcony space'
+          ]
+        },
+        {
+          id: 't45_3elite_e',
+          title: '3 BHK Elite · East (1,705 sq.ft.)',
+          name: '3 BHK Elite',
+          tower: 'Towers 4 & 5 · NIRA & KORA',
+          unit: 'Unit 02 & 03 (East)',
+          facing: 'East Facing',
+          sbua: 1705,
+          carpet: 1060,
+          balcony: 90,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802 / 203, 403, 603, 803, 1003, 1203, 1403, 1603, 1803',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_elite.webp?v=20260827_v1',
+          works: [
+            'Most accessible 3 BHK entry size (1,705 sq.ft. SBUA)',
+            '90 sq.ft. balcony space',
+            'Optimal cross-ventilation layout'
+          ]
+        },
+        {
+          id: 't45_3regal_w_2120',
+          title: '3 BHK Regal · West (2,120 sq.ft.)',
+          name: '3 BHK Regal',
+          tower: 'Towers 4 & 5 · NIRA & KORA',
+          unit: 'Unit 05 (West)',
+          facing: 'West Facing',
+          sbua: 2120,
+          carpet: 1333,
+          balcony: 108,
+          flats: '205, 405, 605, 805, 1005, 1205, 1405, 1605, 1805',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            'Largest balcony footprint in Towers 4 & 5 (108 sq.ft.)',
+            'Spacious 1,333 sq.ft. carpet area',
+            'West facing sunset views'
+          ]
+        },
+        {
+          id: 't45_3elite_w_1740',
+          title: '3 BHK Elite · West (1,740 sq.ft.)',
+          name: '3 BHK Elite',
+          tower: 'Towers 4 & 5 · NIRA & KORA',
+          unit: 'Unit 06 & 07 (West)',
+          facing: 'West Facing',
+          sbua: 1740,
+          carpet: 1069,
+          balcony: 104,
+          flats: '206, 406, 606, 806, 1006, 1206, 1406, 1606, 1806 / 207, 407, 607, 807, 1007, 1207, 1407, 1607, 1807',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_elite.webp?v=20260827_v1',
+          works: [
+            'Efficient 1,740 sq.ft. format with 104 sq.ft. balcony',
+            'West orientation with clear view corridor'
+          ]
+        },
+        {
+          id: 't45_3regal_w_2095',
+          title: '3 BHK Regal · West (2,095 sq.ft.)',
+          name: '3 BHK Regal',
+          tower: 'Towers 4 & 5 · NIRA & KORA',
+          unit: 'Unit 08 (West)',
+          facing: 'West Facing',
+          sbua: 2095,
+          carpet: 1316,
+          balcony: 107,
+          flats: '308, 508, 708, 908, 1108, 1308, 1508, 1708',
+          image2d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1',
+          image3d: '../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1',
+          works: [
+            '2,095 sq.ft. SBUA variant with 1,316 sq.ft. carpet area',
+            '107 sq.ft. balcony extending from living room'
+          ]
+        }
+      ],
+      compareTitle: 'Compare Towers 4 & 5 (NIRA & KORA) — Key Configurations',
+      compareCols: ['3 BHK Regal E (1985)', '3 BHK Elite E (1705)', '3 BHK Regal W (2120)', '3 BHK Elite W (1740)', '3 BHK Regal W (2095)'],
+      compareRows: [
+        { metric: 'SBUA', u1: '1,985 sq.ft.', u2: '1,705 sq.ft.', u3: '2,120 sq.ft.', u4: '1,740 sq.ft.', u5: '2,095 sq.ft.' },
+        { metric: 'Carpet Area', u1: '1,253 sq.ft.', u2: '1,060 sq.ft.', u3: '1,333 sq.ft.', u4: '1,069 sq.ft.', u5: '1,316 sq.ft.' },
+        { metric: 'Balcony Area', u1: '96 sq.ft.', u2: '90 sq.ft.', u3: '108 sq.ft.', u4: '104 sq.ft.', u5: '107 sq.ft.' },
+        { metric: 'Carpet Efficiency', u1: '63.1%', u2: '62.2%', u3: '62.9%', u4: '61.4%', u5: '62.8%' },
+        { metric: 'Facing', u1: 'East', u2: 'East', u3: 'West', u4: 'West', u5: 'West' }
+      ]
+    }
+  };
 
-                    var activeGrid = document.getElementById('fp-v3-' + targetTab);
-                    if (activeGrid) {
-                        activeGrid.style.setProperty('display', 'grid', 'important');
-                    }
-                }
+  let activeTowerKey = 't1';
+  let activeConfigIndex = 0;
+  let activeViewMode = '2d'; // '2d' or '3d'
+  let zoomLevel = 1;
 
-                function openFloorPlanModal(imgSrc, title) {
-                    var modal = document.getElementById('propFloorPlanModal');
-                    var modalImg = document.getElementById('propFpModalImg');
-                    var modalTitle = document.getElementById('propFpModalTitle');
+  window.solaceSelectTower = function(towerKey, btnEl) {
+    activeTowerKey = towerKey;
+    activeConfigIndex = 0;
+    activeViewMode = '2d';
 
-                    if (modalImg && imgSrc) modalImg.src = imgSrc;
-                    if (modalTitle && title) modalTitle.textContent = title;
-                    if (modal) {
-                        modal.style.setProperty('display', 'flex', 'important');
-                        modal.classList.add('active');
-                        document.body.style.overflow = 'hidden';
-                    }
-                }
+    document.querySelectorAll('.solace-tower-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
 
-                function closeFloorPlanModal(e) {
-                    if (e && e.target && e.target.closest && e.target.closest('.prop-fp-modal-content') && !e.target.classList.contains('prop-fp-modal-close')) {
-                        return;
-                    }
-                    var modal = document.getElementById('propFloorPlanModal');
-                    if (modal) {
-                        modal.style.setProperty('display', 'none', 'important');
-                        modal.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                }
-                </script><div class=prop-fp-tabs-v3 style="gap:0.5rem; flex-wrap:wrap;"><button type=button class="prop-fp-tab-btn-v3 active" data-tab="t1" onclick="switchFpTab('t1', this);"> Tower 1 (LUMA) <span class=price-tag>4 BHK Imperial (4,710–4,980 sq.ft.)</span></button><button type=button class=prop-fp-tab-btn-v3 data-tab="t2" onclick="switchFpTab('t2', this);"> Tower 2 (SORA) <span class=price-tag>3 &amp; 4 BHK Regal</span></button><button type=button class=prop-fp-tab-btn-v3 data-tab="t3" onclick="switchFpTab('t3', this);"> Tower 3 (VANA) <span class=price-tag>3 &amp; 4 BHK Elite</span></button><button type=button class=prop-fp-tab-btn-v3 data-tab="t4t5" onclick="switchFpTab('t4t5', this);"> Towers 4 &amp; 5 (NIRA &amp; KORA) <span class=price-tag>3 BHK</span></button><button type=button class=prop-fp-tab-btn-v3 data-tab="iso3d" onclick="switchFpTab('iso3d', this);"> 🎨 3D Unit Cutsections </button></div>
+    renderChips();
+    updateToolView();
+  };
 
-<!-- Tab 1: Tower 1 (LUMA) -->
-<div id="fp-v3-t1" class="prop-fp-main-grid-v3"><div><div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1', 'Tower 1 LUMA - Typical Even Floor Plan');" title="Click to enlarge Tower 1 Floor Plan"><div class="prop-fp-enlarge-badge"><i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge high-res plan </div><div class="prop-fp-image-wrapper-v3"><img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_1.webp?v=20260827_v1" alt="Tower 1 LUMA Typical Even Floor Plan"></div></div><div class="prop-fp-img-caption-bar"><span class="prop-fp-img-caption-title">Tower 1 | LUMA — Typical Even Floor Plan</span><span>Units 201–1401 &amp; 202–1402 · East Facing 4 BHK Imperial</span></div></div><div class="prop-fp-specs-col-v3"><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">4,710 – 4,980 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Super Built-up Area (SBUA)</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">2,689 – 2,810 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Carpet Area</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">588 – 659 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3 highlight">East Facing</span><span class="prop-fp-spec-lbl-v3">Primary Orientation</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">4 BHK Imperial</span><span class="prop-fp-spec-lbl-v3">Configuration Format</span></div><button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();"> Get Detailed Cost Sheet </button></div></div>
+  window.solaceSelectConfig = function(idx, chipEl) {
+    activeConfigIndex = idx;
+    activeViewMode = '2d';
 
-<!-- Tab 2: Tower 2 (SORA) -->
-<div id="fp-v3-t2" class="prop-fp-main-grid-v3" style="display:none !important;"><div><div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1', 'Tower 2 SORA - Typical Even Floor Plan');" title="Click to enlarge Tower 2 Floor Plan"><div class="prop-fp-enlarge-badge"><i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge high-res plan </div><div class="prop-fp-image-wrapper-v3"><img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_2.webp?v=20260827_v1" alt="Tower 2 SORA Typical Even Floor Plan"></div></div><div class="prop-fp-img-caption-bar"><span class="prop-fp-img-caption-title">Tower 2 | SORA — Typical Even Floor Plan</span><span>Units 201–1806 · 4 BHK Regal, 3 BHK Regal &amp; 1 BHK Noble</span></div></div><div class="prop-fp-specs-col-v3"><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">2,220 – 2,730 sq.ft.</span><span class="prop-fp-spec-lbl-v3">SBUA (3 &amp; 4 BHK Regal)</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">1,450 – 1,782 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Carpet Area</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">60 – 102 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3 highlight">East &amp; West</span><span class="prop-fp-spec-lbl-v3">Primary Orientations</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">3 &amp; 4 BHK Regal</span><span class="prop-fp-spec-lbl-v3">Configuration Formats</span></div><button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();"> Get Detailed Cost Sheet </button></div></div>
+    document.querySelectorAll('.solace-chip-btn').forEach(c => c.classList.remove('active'));
+    if (chipEl) chipEl.classList.add('active');
 
-<!-- Tab 3: Tower 3 (VANA) -->
-<div id="fp-v3-t3" class="prop-fp-main-grid-v3" style="display:none !important;"><div><div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1', 'Tower 3 VANA - Typical Even Floor Plan');" title="Click to enlarge Tower 3 Floor Plan"><div class="prop-fp-enlarge-badge"><i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge high-res plan </div><div class="prop-fp-image-wrapper-v3"><img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_3.webp?v=20260827_v1" alt="Tower 3 VANA Typical Even Floor Plan"></div></div><div class="prop-fp-img-caption-bar"><span class="prop-fp-img-caption-title">Tower 3 | VANA — Typical Even Floor Plan</span><span>Units 201–1806 · 4 BHK Elite, 3 BHK Regal &amp; 3 BHK Elite</span></div></div><div class="prop-fp-specs-col-v3"><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">1,800 – 2,285 sq.ft.</span><span class="prop-fp-spec-lbl-v3">SBUA (3 &amp; 4 BHK Elite/Regal)</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">1,176 – 1,474 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Carpet Area</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">48 – 96 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3 highlight">East &amp; West</span><span class="prop-fp-spec-lbl-v3">Primary Orientations</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">3 &amp; 4 BHK Elite</span><span class="prop-fp-spec-lbl-v3">Configuration Formats</span></div><button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();"> Get Detailed Cost Sheet </button></div></div>
+    updateToolView();
+  };
 
-<!-- Tab 4: Towers 4 & 5 (NIRA & KORA) -->
-<div id="fp-v3-t4t5" class="prop-fp-main-grid-v3" style="display:none !important;"><div><div class="prop-fp-image-container-v3" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1', 'Towers 4 & 5 NIRA & KORA - Typical Even Floor Plan');" title="Click to enlarge Towers 4 & 5 Floor Plan"><div class="prop-fp-enlarge-badge"><i data-feather="maximize-2" style="width:13px;height:13px;"></i> Click to enlarge high-res plan </div><div class="prop-fp-image-wrapper-v3"><img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_fp_page_4.webp?v=20260827_v1" alt="Towers 4 & 5 NIRA & KORA Typical Even Floor Plan"></div></div><div class="prop-fp-img-caption-bar"><span class="prop-fp-img-caption-title">Towers 4 &amp; 5 | NIRA &amp; KORA — Typical Even Floor Plan</span><span>Units 201–1808 · 3 BHK Regal &amp; 3 BHK Elite</span></div></div><div class="prop-fp-specs-col-v3"><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">1,705 – 2,120 sq.ft.</span><span class="prop-fp-spec-lbl-v3">SBUA (3 BHK Elite &amp; Regal)</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">1,060 – 1,333 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Carpet Area</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">90 – 108 sq.ft.</span><span class="prop-fp-spec-lbl-v3">Balcony &amp; Utility</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3 highlight">East &amp; West</span><span class="prop-fp-spec-lbl-v3">Primary Orientations</span></div><div class="prop-fp-spec-block-v3"><span class="prop-fp-spec-num-v3">3 BHK Elite &amp; Regal</span><span class="prop-fp-spec-lbl-v3">Configuration Formats</span></div><button type="button" class="prop-fp-cost-btn-v3" onclick="window.openModal();"> Get Detailed Cost Sheet </button></div></div>
+  window.solaceSetViewMode = function(mode) {
+    activeViewMode = mode;
+    const btn2d = document.getElementById('solaceBtn2D');
+    const btn3d = document.getElementById('solaceBtn3D');
 
-<!-- Tab 5: 3D Isometric Cutsections -->
-<div id="fp-v3-iso3d" class="prop-fp-main-grid-v3" style="display:none !important; grid-template-columns:1fr 1fr; gap:1.25rem;">
-  <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem; text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#182A3D; margin-bottom:0.5rem;">4 BHK Regal — 3D Cutsection</div>
-    <div style="width:100%; height:260px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_regal.webp?v=20260827_v1', '4 BHK Regal - 3D Isometric Layout');">
-      <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_regal.webp?v=20260827_v1" alt="4 BHK Regal 3D Layout" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
-    </div>
-    <div style="font-size:0.85rem; color:#684A20; font-weight:700;">Dedicated staff quarters + Walk-in wardrobe + Bay window</div>
-  </div>
-  <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem; text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#182A3D; margin-bottom:0.5rem;">4 BHK Elite — 3D Cutsection</div>
-    <div style="width:100%; height:260px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_elite.webp?v=20260827_v1', '4 BHK Elite - 3D Isometric Layout');">
-      <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_4bhk_elite.webp?v=20260827_v1" alt="4 BHK Elite 3D Layout" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
-    </div>
-    <div style="font-size:0.85rem; color:#684A20; font-weight:700;">Convertible study / home theatre + Staff quarters + Floor-to-ceiling windows</div>
-  </div>
-  <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem; text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#182A3D; margin-bottom:0.5rem;">3 BHK Regal — 3D Cutsection</div>
-    <div style="width:100%; height:260px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1', '3 BHK Regal - 3D Isometric Layout');">
-      <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_regal.webp?v=20260827_v1" alt="3 BHK Regal 3D Layout" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
-    </div>
-    <div style="font-size:0.85rem; color:#684A20; font-weight:700;">Spacious living/dining + Walk-in wardrobe + Open kitchen</div>
-  </div>
-  <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem; text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#182A3D; margin-bottom:0.5rem;">3 BHK Elite — 3D Cutsection</div>
-    <div style="width:100%; height:260px; background:#FBF6F3; border-radius:8px; overflow:hidden; margin-bottom:0.75rem; cursor:pointer;" onclick="openFloorPlanModal('../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_elite.webp?v=20260827_v1', '3 BHK Elite - 3D Isometric Layout');">
-      <img src="../../style-guide/assets/floorplans/solace/sumadhura_solace_3d_3bhk_elite.webp?v=20260827_v1" alt="3 BHK Elite 3D Layout" style="width:100%; height:100%; object-fit:contain; padding:0.5rem;">
-    </div>
-    <div style="font-size:0.85rem; color:#684A20; font-weight:700;">Refined layouts + Optimal ventilation + Generous balcony extension</div>
-  </div>
-</div>
+    if (mode === '2d') {
+      if (btn2d) btn2d.classList.add('active');
+      if (btn3d) btn3d.classList.remove('active');
+    } else {
+      if (btn3d) btn3d.classList.add('active');
+      if (btn2d) btn2d.classList.remove('active');
+    }
 
-</div></div></div></section><section id="true-cost" class="prop-section" style="margin-top: 3rem;">
+    updateImageOnly();
+  };
+
+  window.solaceZoom = function(delta) {
+    zoomLevel = Math.min(Math.max(0.8, zoomLevel + delta), 2.5);
+    applyZoom();
+  };
+
+  window.solaceResetZoom = function() {
+    zoomLevel = 1;
+    applyZoom();
+  };
+
+  function applyZoom() {
+    const img = document.getElementById('solaceFpMainImg');
+    if (img) {
+      img.style.transform = `scale(${zoomLevel})`;
+    }
+  }
+
+  window.solaceTriggerFullscreen = function() {
+    const tData = solaceData[activeTowerKey];
+    if (!tData) return;
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    let imgSrc = (activeViewMode === '3d' && cfg.image3d) ? cfg.image3d : cfg.image2d;
+    let title = `${cfg.name} (${cfg.tower} — ${cfg.unit})`;
+    if (activeViewMode === '3d') title += ' [3D View]';
+
+    if (typeof window.openFloorPlanModal === 'function') {
+      window.openFloorPlanModal(imgSrc, title);
+    }
+  };
+
+  function renderChips() {
+    const container = document.getElementById('solaceConfigChipsContainer');
+    if (!container) return;
+
+    const tData = solaceData[activeTowerKey];
+    if (!tData) return;
+
+    let html = '';
+    tData.configs.forEach((cfg, idx) => {
+      const activeClass = (idx === activeConfigIndex) ? 'active' : '';
+      html += `<button type="button" class="solace-chip-btn ${activeClass}" onclick="solaceSelectConfig(${idx}, this)">${cfg.title}</button>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function updateImageOnly() {
+    const tData = solaceData[activeTowerKey];
+    if (!tData) return;
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    const img = document.getElementById('solaceFpMainImg');
+    const cap = document.getElementById('solaceFpCaption');
+
+    let src = (activeViewMode === '3d' && cfg.image3d) ? cfg.image3d : cfg.image2d;
+    if (img) img.src = src;
+
+    if (cap) {
+      if (activeViewMode === '3d') {
+        cap.textContent = `${cfg.name} — 3D Isometric View (${cfg.facing})`;
+      } else {
+        cap.textContent = `${cfg.tower} — ${cfg.title} (${cfg.facing})`;
+      }
+    }
+
+    zoomLevel = 1;
+    applyZoom();
+  }
+
+  function updateToolView() {
+    const tData = solaceData[activeTowerKey];
+    if (!tData) return;
+
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    // 1. 2D / 3D Toggle visibility
+    const modeBox = document.getElementById('solaceViewModeBox');
+    if (modeBox) {
+      if (cfg.image3d) {
+        modeBox.style.display = 'flex';
+      } else {
+        modeBox.style.display = 'none';
+        activeViewMode = '2d';
+      }
+    }
+
+    // 2. Image & Caption
+    updateImageOnly();
+
+    // 3. Glance Card
+    const eff = ((cfg.carpet / cfg.sbua) * 100).toFixed(1);
+    const balcShare = ((cfg.balcony / cfg.sbua) * 100).toFixed(1);
+    const nonCarpet = (100 - parseFloat(eff)).toFixed(1);
+
+    document.getElementById('solaceGlanceTitle').textContent = cfg.name;
+    document.getElementById('solaceGlanceSubtitle').textContent = `${cfg.tower} — ${cfg.unit}`;
+    document.getElementById('solaceGlanceSbua').textContent = `${cfg.sbua.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceGlanceCarpet').textContent = `${cfg.carpet.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceGlanceBalcony').textContent = `${cfg.balcony.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceGlanceFacing').textContent = cfg.facing;
+    document.getElementById('solaceGlanceEff').textContent = `${eff}%`;
+    document.getElementById('solaceGlanceBalcShare').textContent = `${balcShare}%`;
+    document.getElementById('solaceGlanceFlats').textContent = cfg.flats;
+
+    // 4. Analytical Strip
+    document.getElementById('solaceStripSbua').textContent = `${cfg.sbua.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceStripCarpet').textContent = `${cfg.carpet.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceStripBalcony').textContent = `${cfg.balcony.toLocaleString()} sq.ft.`;
+    document.getElementById('solaceStripEff').textContent = `${eff}%`;
+    document.getElementById('solaceStripBalcShare').textContent = `${balcShare}%`;
+    document.getElementById('solaceStripNonCarpet').textContent = `${nonCarpet}%`;
+
+    // 5. Card 1 (Space Analysis)
+    document.getElementById('solaceCard1Eff').textContent = `${eff}%`;
+    document.getElementById('solaceCard1BalcShare').textContent = `${balcShare}%`;
+    document.getElementById('solaceCard1NonCarpet').textContent = `${nonCarpet}%`;
+
+    // 6. Card 2 (What Works)
+    const card2Ul = document.getElementById('solaceCard2Works');
+    if (card2Ul) {
+      let wHtml = '';
+      cfg.works.forEach(w => {
+        wHtml += `<li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> ${w}</li>`;
+      });
+      card2Ul.innerHTML = wHtml;
+    }
+
+    // 7. Comparison Layer Table
+    const compTitle = document.getElementById('solaceCompareTitle');
+    const compTable = document.getElementById('solaceCompareTable');
+
+    if (compTitle) compTitle.textContent = tData.compareTitle || 'Compare Unit Variants';
+
+    if (compTable && tData.compareCols && tData.compareRows) {
+      let tHtml = `<thead><tr style="border-bottom:2px solid #DDD7CF; background:#FBF6F3;">`;
+      tHtml += `<th style="padding:0.65rem 0.85rem; font-weight:700; color:#182A3D;">Metric</th>`;
+      tData.compareCols.forEach(col => {
+        tHtml += `<th style="padding:0.65rem 0.85rem; font-weight:700; color:#8C6734;">${col}</th>`;
+      });
+      tHtml += `</tr></thead><tbody>`;
+
+      tData.compareRows.forEach(row => {
+        tHtml += `<tr style="border-bottom:1px solid #E5E7EB;">`;
+        tHtml += `<td style="padding:0.6rem 0.85rem; font-weight:600; color:#303F4F;">${row.metric}</td>`;
+        for (let i = 1; i <= tData.compareCols.length; i++) {
+          let val = row[`u${i}`] || '-';
+          tHtml += `<td style="padding:0.6rem 0.85rem; font-weight:700; color:#182A3D;">${val}</td>`;
+        }
+        tHtml += `</tr>`;
+      });
+      tHtml += `</tbody>`;
+      compTable.innerHTML = tHtml;
+    }
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      renderChips();
+      updateToolView();
+    });
+  } else {
+    renderChips();
+    updateToolView();
+  }
+})();
+</script><section id="true-cost" class="prop-section" style="margin-top: 3rem;">
   <div class="prop-container">
 <!-- Mobile True Cost (<= 768px Only) -->
 <div class="ak-mobile-tc-v5" style="margin-bottom: 2rem;">
