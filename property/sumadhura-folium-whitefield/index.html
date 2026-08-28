@@ -1316,6 +1316,46 @@ html { scroll-behavior: smooth; }
         </p>
       </div>
 
+      <!-- Price Reality 3-Stage Visual Journey -->
+      <style>
+        .price-journey-grid {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr;
+          align-items: stretch;
+          gap: 0.75rem;
+          margin-bottom: 2.25rem;
+        }
+        .price-journey-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          padding: 1.25rem 1rem;
+          text-align: center;
+          box-sizing: border-box;
+        }
+        .price-journey-arrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #8C6734;
+          font-size: 1.35rem;
+          font-weight: 800;
+        }
+        .arrow-symbol::before {
+          content: "→";
+        }
+        @media (max-width: 768px) {
+          .price-journey-grid {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+          }
+          .arrow-symbol::before {
+            content: "↓";
+          }
+        }
+      </style>
       <div class="price-journey-grid">
         <div class="price-journey-card" style="background:#FBF6F3; border:1px solid #DDD7CF;">
           <div style="font-size:1.3rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹14,000/sq.ft.</div>
@@ -1336,8 +1376,9 @@ html { scroll-behavior: smooth; }
         </div>
 
         <div class="price-journey-card" style="background:#182A3D; border:1px solid #8C6734; box-shadow:0 4px 16px rgba(24, 42, 61, 0.14);">
-          <div style="font-size:1.4rem; font-weight:800; color:#9B6248; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹2.45–₹4.04 Cr</div>
-          <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.85); margin-top:0.35rem;">Estimated Property Cost</div><div style="font-size:0.62rem; color:#9B6248; font-weight:700;">+ Govt. Registration (7.6% Additional)</div>
+          <div style="font-size:1.4rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹2.45–₹4.04 Cr</div>
+          <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.85); margin-top:0.35rem;">Estimated Property Cost</div>
+          <div style="font-size:0.65rem; color:#D4AF37; font-weight:700; margin-top:0.25rem;">+ Govt. Registration (7.6% Additional)</div>
         </div>
       </div>
 
@@ -1372,11 +1413,11 @@ html { scroll-behavior: smooth; }
                 <td style="padding:0.85rem 1.25rem; text-align:right; font-weight:800; color:#182A3D; border-bottom:1px solid #EAE6DF;">₹3.34–₹3.55 Cr</td>
                 <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">₹15.9K–16.7K/sq.ft.</td>
               </tr>
-              <tr style="background:#FBF6F3;">
-                <td style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight:800; color:#684A20; border-bottom:1px solid #FEF3C7;">4 BHK</td>
-                <td style="padding:0.95rem 1.25rem; text-align:right; font-weight:700; color:#684A20; border-bottom:1px solid #FEF3C7;">2,420–2,435 sq.ft.</td>
-                <td style="padding:0.95rem 1.25rem; text-align:right; font-weight:800; color:#684A20; font-size:1.05rem; border-bottom:1px solid #FEF3C7;">₹3.85–₹4.04 Cr</td>
-                <td style="padding:0.95rem 1.5rem 0.95rem 1.25rem; text-align:right; font-weight:800; color:#684A20; font-size:1.02rem; border-bottom:1px solid #FEF3C7;">₹15.9K–16.7K/sq.ft.</td>
+              <tr>
+                <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#182A3D;">4 BHK</td>
+                <td style="padding:0.85rem 1.25rem; text-align:right;">2,420–2,435 sq.ft.</td>
+                <td style="padding:0.85rem 1.25rem; text-align:right; font-weight:800; color:#182A3D;">₹3.85–₹4.04 Cr</td>
+                <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right;">₹15.9K–16.7K/sq.ft.</td>
               </tr>
             </tbody>
           </table>
