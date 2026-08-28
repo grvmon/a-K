@@ -573,21 +573,28 @@ html { scroll-behavior: smooth; }
 </div>
 <div class=prop-snapshot-strip-v2><div class=prop-snapshot-grid-v2><div class=prop-snapshot-item-v2><div class=prop-snap-icon-v2><i data-feather=maximize-2 style=width:24px;height:24px;></i></div><div class=prop-snap-content-v2><span class=prop-snap-num-v2>11.66</span><span class=prop-snap-lbl-v2>Acres Land Parcel</span></div></div><div class=prop-snapshot-item-v2><div class=prop-snap-icon-v2><i data-feather=sun style=width:24px;height:24px;></i></div><div class=prop-snap-content-v2><span class=prop-snap-num-v2>81%</span><span class=prop-snap-lbl-v2>Open Space</span></div></div><div class=prop-snapshot-item-v2><div class=prop-snap-icon-v2><i data-feather=layers style=width:24px;height:24px;></i></div><div class=prop-snap-content-v2><span class=prop-snap-num-v2>7</span><span class=prop-snap-lbl-v2>Towers</span></div></div><div class=prop-snapshot-item-v2><div class=prop-snap-icon-v2><i data-feather=home style=width:24px;height:24px;></i></div><div class=prop-snap-content-v2><span class=prop-snap-num-v2>777</span><span class=prop-snap-lbl-v2>Units</span></div></div><div class=prop-snapshot-item-v2><div class=prop-snap-icon-v2><i data-feather=coffee style=width:24px;height:24px;></i></div><div class=prop-snap-content-v2><span class=prop-snap-num-v2>45,000</span><span class=prop-snap-lbl-v2>sq.ft. Clubhouse</span></div></div></div></div></div></section><div class=prop-section-nav-sticky><div class=prop-container>
 <div class="prop-nav-inner desktop-only-nav">
-<a href=#overview class="local-nav-link active">Overview</a>
-<a href=#verdict class="local-nav-link">Scorecard</a>
-<a href=#assessment class="local-nav-link">Assessment</a>
-<a href=#floor-plans class="local-nav-link">Floor Plans</a>
-<a href="#true-cost" class="local-nav-link">True Cost</a><a href="#location" class="local-nav-link">Location</a><a href="#locality" class="local-nav-link">Locality</a>
-<a href=#faqs class="local-nav-link">FAQs</a>
+<a href="#overview" class="local-nav-link active">Overview</a>
+<a href="#verdict" class="local-nav-link">Verdict</a>
+<a href="#assessment" class="local-nav-link">Assessment</a>
+<a href="#floor-plans" class="local-nav-link">Floor Plans</a>
+<a href="#true-cost" class="local-nav-link">True Cost</a>
+<a href="#appreciation" class="local-nav-link">Appreciation</a>
+<a href="#amenities" class="local-nav-link">Amenities</a>
+<a href="#rera-legal" class="local-nav-link">RERA</a>
+<a href="#location" class="local-nav-link">Location</a>
+<a href="#builder" class="local-nav-link">Builder</a>
+<a href="#faqs" class="local-nav-link">FAQs</a>
 </div>
 <div class="prop-nav-inner mobile-only-nav" style="display:flex; align-items:center; gap:0.35rem; overflow-x:auto; white-space:nowrap; padding:0.4rem 0.5rem; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
-<a href="#verdict" class="local-nav-link active" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Verdict</a>
+<a href="#overview" class="local-nav-link active" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Overview</a>
+<a href="#verdict" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Verdict</a>
+<a href="#assessment" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Assessment</a>
 <a href="#floor-plans" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Floor Plans</a>
 <a href="#true-cost" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">True Cost</a>
-<a href="#location" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Location</a>
-<a href="#why-like-suited" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Scorecard</a>
+<a href="#appreciation" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Appreciation</a>
 <a href="#amenities" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Amenities</a>
 <a href="#rera-legal" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">RERA</a>
+<a href="#location" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Location</a>
 <a href="#builder" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">Builder</a>
 <a href="#faqs" class="local-nav-link" style="font-size:0.82rem; padding:0.35rem 0.65rem; flex-shrink:0;">FAQs</a>
 </div>
@@ -1937,29 +1944,41 @@ document.addEventListener('keydown', (e) => {
 // Local Active State Tracking for Sticky Nav
 window.addEventListener('DOMContentLoaded', function() {
   const localNavLinks = document.querySelectorAll('.local-nav-link');
+  if (!localNavLinks.length) return;
+
   let isNavClicking = false;
 
   localNavLinks.forEach(link => {
     link.addEventListener('click', function() {
-      isNavClicking = true;
-      localNavLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-      setTimeout(() => { isNavClicking = false; }, 800);
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const sec = document.querySelector(href);
+        if (sec) {
+          isNavClicking = true;
+          localNavLinks.forEach(l => l.classList.remove('active'));
+          document.querySelectorAll(`.local-nav-link[href="${href}"]`).forEach(l => l.classList.add('active'));
+          setTimeout(() => { isNavClicking = false; }, 800);
+        }
+      }
     });
   });
 
-  window.addEventListener('scroll', function() {
+  function updateScrollSpy() {
     if (isNavClicking) return;
     const scrollPos = window.scrollY + 180;
-    let activeHref = '#overview';
 
-    localNavLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        const sec = document.querySelector(href);
-        if (sec && sec.offsetTop <= scrollPos) {
-          activeHref = href;
-        }
+    const sectionIds = [
+      '#overview', '#verdict', '#assessment', '#floor-plans',
+      '#true-cost', '#appreciation', '#amenities', '#rera-legal',
+      '#location', '#builder', '#faqs'
+    ];
+
+    let activeHref = sectionIds[0];
+
+    sectionIds.forEach(href => {
+      const sec = document.querySelector(href);
+      if (sec && sec.offsetTop <= scrollPos) {
+        activeHref = href;
       }
     });
 
@@ -1967,12 +1986,18 @@ window.addEventListener('DOMContentLoaded', function() {
       localNavLinks.forEach(link => {
         if (link.getAttribute('href') === activeHref) {
           link.classList.add('active');
+          if (link.offsetParent && link.offsetParent.classList.contains('mobile-only-nav')) {
+            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
         } else {
           link.classList.remove('active');
         }
       });
     }
-  });
+  }
+
+  window.addEventListener('scroll', updateScrollSpy, { passive: true });
+  updateScrollSpy();
 });
 </script>
 
