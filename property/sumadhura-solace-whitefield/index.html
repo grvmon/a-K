@@ -1496,6 +1496,33 @@ html { scroll-behavior: smooth; }
     updateImageOnly();
   };
 
+  // Global Lightbox Modal Functions
+  window.openFloorPlanModal = function(imgSrc, title) {
+    var modal = document.getElementById('propFloorPlanModal');
+    var modalImg = document.getElementById('propFpModalImg');
+    var modalTitle = document.getElementById('propFpModalTitle');
+
+    if (modalImg && imgSrc) modalImg.src = imgSrc;
+    if (modalTitle && title) modalTitle.textContent = title || 'Sumadhura Solace Floor Plan';
+    if (modal) {
+      modal.style.setProperty('display', 'flex', 'important');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeFloorPlanModal = function(e) {
+    if (e && e.target && e.target.closest && e.target.closest('.prop-fp-modal-content') && !e.target.classList.contains('prop-fp-modal-close')) {
+      return;
+    }
+    var modal = document.getElementById('propFloorPlanModal');
+    if (modal) {
+      modal.style.setProperty('display', 'none', 'important');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
   window.solaceZoom = function(delta) {
     zoomLevel = Math.min(Math.max(0.8, zoomLevel + delta), 2.5);
     applyZoom();
@@ -1523,9 +1550,7 @@ html { scroll-behavior: smooth; }
     let title = `${cfg.name} (${cfg.tower} — ${cfg.unit})`;
     if (activeViewMode === '3d') title += ' [3D View]';
 
-    if (typeof window.openFloorPlanModal === 'function') {
-      window.openFloorPlanModal(imgSrc, title);
-    }
+    window.openFloorPlanModal(imgSrc, title);
   };
 
   function renderChips() {
@@ -2052,82 +2077,7 @@ html { scroll-behavior: smooth; }
 
     </div>
 
-    <!-- Acre&Key Legal Check Card -->
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem; box-shadow:0 2px 10px rgba(24, 42, 61, 0.03);">
-      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.75rem;">
-        ACRE&amp;KEY LEGAL CHECK
-      </div>
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; font-size:0.9rem; color:#303F4F;">
-        <div style="display:flex; justify-content:space-between; align-items:center; background:#FBF6F3; padding:0.65rem 0.85rem; border-radius:6px; border:1px solid rgba(140, 103, 52, 0.15);">
-          <span style="font-weight:600;">RERA Registration</span>
-          <span style="font-weight:800; color:#1B5E20; display:flex; align-items:center; gap:0.35rem;">
-            <span style="display:inline-block; width:8px; height:8px; background:#1B5E20; border-radius:50%;"></span> Registered
-          </span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; background:#FBF6F3; padding:0.65rem 0.85rem; border-radius:6px; border:1px solid rgba(140, 103, 52, 0.15);">
-          <span style="font-weight:600;">Possession Timeline</span>
-          <span style="font-weight:800; color:#182A3D; display:flex; align-items:center; gap:0.35rem;">
-            <span style="display:inline-block; width:8px; height:8px; background:#8C6734; border-radius:50%;"></span> RERA date available
-          </span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; background:#FBF6F3; padding:0.65rem 0.85rem; border-radius:6px; border:1px solid rgba(140, 103, 52, 0.15);">
-          <span style="font-weight:600;">Independent Legal Due Diligence</span>
-          <span style="font-weight:800; color:#B76E00; display:flex; align-items:center; gap:0.35rem;">
-            <span style="display:inline-block; width:8px; height:8px; background:#B76E00; border-radius:50%;"></span> Recommended before booking
-          </span>
-        </div>
-      </div>
-    </div>
 
-    <!-- "What RERA Tells You" vs "What RERA Does Not Replace" Grid -->
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
-      <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.18); border-radius:10px; padding:1.1rem 1.35rem;">
-        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#1B5E20; text-transform:uppercase; margin-bottom:0.6rem;">
-          WHAT RERA TELLS YOU
-        </div>
-        <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.45rem;">
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#1B5E20; font-weight:800;">✓</span> The project/phase has a verified RERA registration number
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#1B5E20; font-weight:800;">✓</span> Registered project layout &amp; disclosures can be independently checked
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#1B5E20; font-weight:800;">✓</span> A stated regulatory completion timeline is declared by developer
-          </li>
-        </ul>
-      </div>
-
-      <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.18); border-radius:10px; padding:1.1rem 1.35rem;">
-        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.6rem;">
-          WHAT RERA DOES NOT REPLACE
-        </div>
-        <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.45rem;">
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Title deed &amp; encumbrance search verification
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Sanctioned building plan &amp; NOC compliance checks
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Independent review of Builder-Buyer Agreement terms
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Refined Buyer Advisory Card -->
-    <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:10px; padding:1.1rem 1.4rem; display:flex; align-items:flex-start; gap:0.75rem;">
-      <span style="font-size:1.2rem; flex-shrink:0; margin-top:0.05rem;" aria-hidden="true">⚠️</span>
-      <div>
-        <div style="font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#8C6734; margin-bottom:0.25rem;">
-          BUYER ADVISORY
-        </div>
-        <div style="font-size:0.92rem; line-height:1.55; color:#303F4F; font-weight:500;">
-          RERA registration is an important positive regulatory signal, but it does not by itself establish clear title, complete approvals, or eliminate the need for independent legal due diligence.
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
