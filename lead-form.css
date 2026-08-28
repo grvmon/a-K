@@ -10,12 +10,12 @@
   position: fixed; inset: 0;
   background: var(--deep-navy-84, rgba(13, 27, 36, 0.84));
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  z-index: 999999 !important;
+  z-index: 99999999 !important;
   display: flex; align-items: center; justify-content: center;
-  padding: 20px; opacity: 0; visibility: hidden;
+  padding: 20px; opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.lf-modal-overlay.lf-modal-open { opacity: 1; visibility: visible; }
+.lf-modal-overlay.lf-modal-open { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
 
 .lf-wrap {
   --lf-font-sans: 'Manrope', sans-serif;
@@ -28,7 +28,7 @@
   --lf-ok:    #2e7d52;
   --lf-bg-surface: #FFFFFF;
 
-  position: relative; z-index: 10; width: min(600px, 92vw); max-width: 600px;
+  position: relative; z-index: 100 !important; pointer-events: auto !important; width: min(600px, 92vw); max-width: 600px;
   background: var(--lf-bg-surface); border-radius:8px;
   padding: 44px 36px 40px 36px;
   box-shadow: 0 24px 60px var(--shadow-lux);
@@ -81,10 +81,10 @@
 
 .lf-modal-close-icon {
   position: absolute; top: 18px; right: 18px;
-  background: none; border: none; outline: none; cursor: pointer;
+  background: none; border: none; outline: none; cursor: pointer !important;
   color: var(--lf-muted); padding: 8px;
   display: flex; align-items: center; justify-content: center;
-  transition: color 0.15s, transform 0.15s; z-index: 10;
+  transition: color 0.15s, transform 0.15s; z-index: 200 !important; pointer-events: auto !important;
 }
 .lf-modal-close-icon svg { width: 15px; height: 15px; }
 .lf-modal-close-icon:hover { color: var(--lf-ink); transform: scale(1.08); }
@@ -221,7 +221,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     position: fixed !important;
     inset: 0 !important;
     background: var(--deep-navy-50, rgba(13, 27, 36, 0.5)) !important;
-    z-index: 9999998 !important;
+    z-index: 50 !important;
   }
   .lf-cc-backdrop.lf-cc-open { display: block !important; }
 

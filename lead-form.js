@@ -366,6 +366,33 @@
 
   var ModalController = {
     open: function () {
+      if (!modalOverlay) {
+        modalOverlay       = document.getElementById("lfModalOverlay");
+        modalTrigger       = document.getElementById("lfModalTrigger");
+        modalClose         = document.getElementById("lfModalClose");
+        modalContent       = document.getElementById("lfWrap");
+        mainFormContentBox = document.getElementById("lfModalFormContent");
+        form               = document.getElementById("lfForm");
+        nameInput          = document.getElementById("lfName");
+        phoneInput         = document.getElementById("lfPhone");
+        emailInput         = document.getElementById("lfEmail");
+        nameField          = document.getElementById("lfNameField");
+        phoneField         = document.getElementById("lfPhoneField");
+        emailField         = document.getElementById("lfEmailField");
+        nameErr            = document.getElementById("lfNameErr");
+        phoneErr           = document.getElementById("lfPhoneErr");
+        emailErr           = document.getElementById("lfEmailErr");
+        submitBtn          = document.getElementById("lfSubmitBtn");
+        btnText            = document.getElementById("lfBtnText");
+        ccTrigger          = document.getElementById("lfCcTrigger");
+        ccDisplay          = document.getElementById("lfCcDisplay");
+        ccPanel            = document.getElementById("lfCcPanel");
+        ccSearch           = document.getElementById("lfCcSearch");
+        ccList             = document.getElementById("lfCcList");
+        ccVal              = document.getElementById("lfCcVal");
+        globalErr          = document.getElementById("lfGlobalErr");
+        ccBackdrop         = document.getElementById("lfCcBackdrop");
+      }
       if (!modalOverlay) return;
       if (showingSuccess) exitSuccessState();
       lfFormOpenTime = Date.now();
