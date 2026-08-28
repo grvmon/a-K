@@ -36,7 +36,7 @@ const PROPERTY_DATA = {
     "towers": "11 Towers (2B+G+18)",
     "units": "~1,650 Residences (2 Phases)",
     "clubhouse": "66,000 sq.ft. (Reported)",
-    "amenitiesCount": "150+"
+    "amenitiesCount": "16+ Sports Courts"
   },
   "commuteCategories": {
     "education": [
