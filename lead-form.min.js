@@ -298,14 +298,18 @@
   }
 
   function setBackgroundA11y(hidden) {
-    var nodes = document.querySelectorAll("body > *:not(#lfModalOverlay)");
+    var nodes = document.querySelectorAll("body > *");
     for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
+      if (node === modalOverlay || (modalOverlay && node.contains(modalOverlay))) {
+        continue;
+      }
       if (hidden) {
-        nodes[i].setAttribute("aria-hidden", "true");
-        try { nodes[i].inert = true; } catch (e) {}
+        node.setAttribute("aria-hidden", "true");
+        try { node.inert = true; } catch (e) {}
       } else {
-        nodes[i].removeAttribute("aria-hidden");
-        try { nodes[i].inert = false; } catch (e) {}
+        node.removeAttribute("aria-hidden");
+        try { node.inert = false; } catch (e) {}
       }
     }
   }
