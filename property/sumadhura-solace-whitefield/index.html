@@ -1461,7 +1461,6 @@ html { scroll-behavior: smooth; }
   window.solaceSelectTower = function(towerKey, btnEl) {
     activeTowerKey = towerKey;
     activeConfigIndex = 0;
-    activeViewMode = '2d';
 
     document.querySelectorAll('.solace-tower-btn').forEach(b => b.classList.remove('active'));
     if (btnEl) btnEl.classList.add('active');
@@ -1472,7 +1471,6 @@ html { scroll-behavior: smooth; }
 
   window.solaceSelectConfig = function(idx, chipEl) {
     activeConfigIndex = idx;
-    activeViewMode = '2d';
 
     document.querySelectorAll('.solace-chip-btn').forEach(c => c.classList.remove('active'));
     if (chipEl) chipEl.classList.add('active');
@@ -1600,15 +1598,25 @@ html { scroll-behavior: smooth; }
     const cfg = tData.configs[activeConfigIndex];
     if (!cfg) return;
 
-    // 1. 2D / 3D Toggle visibility
+    // 1. 2D / 3D Toggle visibility and Active Button State Synchronization
     const modeBox = document.getElementById('solaceViewModeBox');
-    if (modeBox) {
-      if (cfg.image3d) {
-        modeBox.style.display = 'flex';
-      } else {
-        modeBox.style.display = 'none';
-        activeViewMode = '2d';
-      }
+    const btn2d = document.getElementById('solaceBtn2D');
+    const btn3d = document.getElementById('solaceBtn3D');
+
+    if (!cfg.image3d) {
+      activeViewMode = '2d';
+      if (modeBox) modeBox.style.display = 'none';
+    } else {
+      if (modeBox) modeBox.style.display = 'flex';
+    }
+
+    if (activeViewMode === '3d' && cfg.image3d) {
+      if (btn3d) btn3d.classList.add('active');
+      if (btn2d) btn2d.classList.remove('active');
+    } else {
+      activeViewMode = '2d';
+      if (btn2d) btn2d.classList.add('active');
+      if (btn3d) btn3d.classList.remove('active');
     }
 
     // 2. Image & Caption
