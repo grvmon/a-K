@@ -1002,83 +1002,7 @@ html { scroll-behavior: smooth; }
 
     </div>
 
-    <!-- Space Breakdown Analytical Strip -->
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:1rem 1.5rem; margin-top:1.75rem; margin-bottom:1.75rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-      <div style="font-size:0.8rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase;">
-        SPACE BREAKDOWN
-      </div>
-      <div style="display:flex; align-items:center; gap:1.75rem; flex-wrap:wrap; font-size:0.9rem; color:#182A3D;">
-        <div>SBUA: <strong id="solaceStripSbua">4,710 sq.ft.</strong></div>
-        <div>Carpet: <strong id="solaceStripCarpet">2,689 sq.ft.</strong></div>
-        <div>Balcony: <strong id="solaceStripBalcony">588 sq.ft.</strong></div>
-        <div>Carpet Efficiency: <strong id="solaceStripEff">57.1%</strong></div>
-        <div>Balcony Share: <strong id="solaceStripBalcShare">12.5%</strong></div>
-        <div>Non-carpet share: <strong id="solaceStripNonCarpet">42.9%</strong></div>
-      </div>
-    </div>
 
-    <!-- Acre&Key Analysis Grid (3 Compact Cards) -->
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem; margin-bottom:2rem;">
-      
-      <!-- Card 1: Space Analysis -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
-        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
-          SPACE ANALYSIS
-        </div>
-        <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.92rem; color:#303F4F;">
-          <div style="display:flex; justify-content:space-between; padding-bottom:0.4rem; border-bottom:1px dashed #E5E7EB;">
-            <span>Carpet Efficiency</span>
-            <strong id="solaceCard1Eff" style="color:#182A3D;">57.1%</strong>
-          </div>
-          <div style="display:flex; justify-content:space-between; padding-bottom:0.4rem; border-bottom:1px dashed #E5E7EB;">
-            <span>Balcony Share</span>
-            <strong id="solaceCard1BalcShare" style="color:#182A3D;">12.5%</strong>
-          </div>
-          <div style="display:flex; justify-content:space-between;">
-            <span>Non-carpet share</span>
-            <strong id="solaceCard1NonCarpet" style="color:#182A3D;">42.9%</strong>
-          </div>
-        </div>
-        <div style="font-size:0.78rem; color:#684A20; margin-top:0.85rem; line-height:1.4; background:#FBF6F3; padding:0.5rem 0.75rem; border-radius:6px;">
-          Note: Non-carpet share includes wall thickness, balconies, and proportional common area allocation.
-        </div>
-      </div>
-
-      <!-- Card 2: What Works -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
-        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
-          WHAT WORKS
-        </div>
-        <ul id="solaceCard2Works" style="list-style:none; padding:0; margin:0; font-size:0.9rem; color:#303F4F; display:flex; flex-direction:column; gap:0.5rem;">
-          <!-- Populated via JS -->
-        </ul>
-      </div>
-
-      <!-- Card 3: Check Before Booking -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem;">
-        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.5rem;">
-          CHECK BEFORE BOOKING
-        </div>
-        <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.45rem;">
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Verify exact unit orientation &amp; sun vector from master plan
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Check actual view corridor &amp; setback distance for your floor
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Check visual privacy from adjacent tower windows
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Confirm floor-specific refuge terrace / service shaft placements
-          </li>
-          <li style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="color:#8C6734; font-weight:800;">•</span> Confirm exact carpet area annexure in developer agreement
-          </li>
-        </ul>
-      </div>
-
-    </div>
 
     <!-- "WHICH UNIT SHOULD I PICK?" Comparison Layer -->
     <div id="solaceCompareSection" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; margin-top:1.5rem;">
@@ -1669,38 +1593,15 @@ html { scroll-behavior: smooth; }
     const balcShare = ((cfg.balcony / cfg.sbua) * 100).toFixed(1);
     const nonCarpet = (100 - parseFloat(eff)).toFixed(1);
 
-    document.getElementById('solaceGlanceTitle').textContent = cfg.name;
-    document.getElementById('solaceGlanceSubtitle').textContent = `${cfg.tower} — ${cfg.unit}`;
-    document.getElementById('solaceGlanceSbua').textContent = `${cfg.sbua.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceGlanceCarpet').textContent = `${cfg.carpet.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceGlanceBalcony').textContent = `${cfg.balcony.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceGlanceFacing').textContent = cfg.facing;
-    document.getElementById('solaceGlanceEff').textContent = `${eff}%`;
-    document.getElementById('solaceGlanceBalcShare').textContent = `${balcShare}%`;
-    document.getElementById('solaceGlanceFlats').textContent = cfg.flats;
-
-    // 4. Analytical Strip
-    document.getElementById('solaceStripSbua').textContent = `${cfg.sbua.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceStripCarpet').textContent = `${cfg.carpet.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceStripBalcony').textContent = `${cfg.balcony.toLocaleString()} sq.ft.`;
-    document.getElementById('solaceStripEff').textContent = `${eff}%`;
-    document.getElementById('solaceStripBalcShare').textContent = `${balcShare}%`;
-    document.getElementById('solaceStripNonCarpet').textContent = `${nonCarpet}%`;
-
-    // 5. Card 1 (Space Analysis)
-    document.getElementById('solaceCard1Eff').textContent = `${eff}%`;
-    document.getElementById('solaceCard1BalcShare').textContent = `${balcShare}%`;
-    document.getElementById('solaceCard1NonCarpet').textContent = `${nonCarpet}%`;
-
-    // 6. Card 2 (What Works)
-    const card2Ul = document.getElementById('solaceCard2Works');
-    if (card2Ul) {
-      let wHtml = '';
-      cfg.works.forEach(w => {
-        wHtml += `<li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> ${w}</li>`;
-      });
-      card2Ul.innerHTML = wHtml;
-    }
+    if (document.getElementById('solaceGlanceTitle')) document.getElementById('solaceGlanceTitle').textContent = cfg.name;
+    if (document.getElementById('solaceGlanceSubtitle')) document.getElementById('solaceGlanceSubtitle').textContent = `${cfg.tower} — ${cfg.unit}`;
+    if (document.getElementById('solaceGlanceSbua')) document.getElementById('solaceGlanceSbua').textContent = `${cfg.sbua.toLocaleString()} sq.ft.`;
+    if (document.getElementById('solaceGlanceCarpet')) document.getElementById('solaceGlanceCarpet').textContent = `${cfg.carpet.toLocaleString()} sq.ft.`;
+    if (document.getElementById('solaceGlanceBalcony')) document.getElementById('solaceGlanceBalcony').textContent = `${cfg.balcony.toLocaleString()} sq.ft.`;
+    if (document.getElementById('solaceGlanceFacing')) document.getElementById('solaceGlanceFacing').textContent = cfg.facing;
+    if (document.getElementById('solaceGlanceEff')) document.getElementById('solaceGlanceEff').textContent = `${eff}%`;
+    if (document.getElementById('solaceGlanceBalcShare')) document.getElementById('solaceGlanceBalcShare').textContent = `${balcShare}%`;
+    if (document.getElementById('solaceGlanceFlats')) document.getElementById('solaceGlanceFlats').textContent = cfg.flats;
 
     // 7. Comparison Layer Table
     const compTitle = document.getElementById('solaceCompareTitle');
