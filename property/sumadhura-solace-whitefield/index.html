@@ -494,7 +494,7 @@ html { scroll-behavior: smooth; }
 
         <!-- 10. Secondary CTA Link -->
         <div style="text-align:center; margin-bottom:0.85rem;">
-          <a href="#floor-plans" style="font-size:0.88rem; font-weight:700; color:#2B2B2B; text-decoration:none;">View Floor Plans &rarr;</a>
+          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" style="font-size:0.88rem; font-weight:700; color:#2B2B2B; text-decoration:none;">View Floor Plans &rarr;</a>
         </div>
 
         <!-- 11. Quick Decision Signals -->
@@ -560,7 +560,7 @@ html { scroll-behavior: smooth; }
     <a href="#" class="sd-btn-gold" onclick="window.openModal(); return false;" style="text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
       Get Analysis
     </a>
-    <a href="#floor-plans" class="sd-btn-gold" style="background: transparent !important; color: var(--prop-navy) !important; border: 1px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
+    <a href="#floor-plans" class="sd-btn-gold" onclick="window.scrollToFloorPlans(event);" style="background: transparent !important; color: var(--prop-navy) !important; border: 1px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
       View Floor Plans
     </a>
   </div>
@@ -2592,6 +2592,29 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') akLbNext();
   if (e.key === 'ArrowLeft') akLbPrev();
 });
+
+// Helper: Smooth Scroll to Floor Plans Section
+window.scrollToFloorPlans = function(e) {
+  if (e) e.preventDefault();
+  const sec = document.getElementById('floor-plans');
+  if (sec) {
+    const navBar = document.querySelector('.prop-nav-bar-v5') || document.querySelector('.header-nav');
+    const navHeight = navBar ? navBar.offsetHeight + 20 : 100;
+    const targetY = sec.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    window.scrollTo({ top: targetY, behavior: 'smooth' });
+
+    const localNavLinks = document.querySelectorAll('.local-nav-link');
+    if (localNavLinks.length) {
+      localNavLinks.forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.local-nav-link[href="#floor-plans"]').forEach(l => {
+        l.classList.add('active');
+        if (l.offsetParent && l.offsetParent.classList.contains('mobile-only-nav')) {
+          l.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
+  }
+};
 
 // Local Active State Tracking for Sticky Nav
 window.addEventListener('DOMContentLoaded', function() {
