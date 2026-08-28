@@ -851,102 +851,80 @@ html { scroll-behavior: smooth; }
         </div>
 
         <!-- Floor Plan Image Frame -->
-        <div id="solaceFpFrame" style="width:100%; height:480px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.solaceTriggerFullscreen()">
-          <img id="solaceFpMainImg" src="" alt="Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.5rem;">
+        <div id="solaceFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.solaceTriggerFullscreen()">
+          <img id="solaceFpMainImg" src="" alt="Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.4rem;">
         </div>
 
         <!-- Caption Bar -->
-        <div id="solaceFpCaption" style="font-size:0.85rem; color:#684A20; font-weight:700; margin-top:0.75rem; text-align:center;">
+        <div id="solaceFpCaption" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-top:0.5rem; text-align:center;">
           <!-- Populated via JS -->
         </div>
       </div>
 
       <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
         <div>
-          <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.2rem;">
+          <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.15rem;">
             PLAN AT A GLANCE
           </div>
-          <h3 id="solaceGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.65rem; font-weight:700; color:#182A3D; margin:0 0 0.15rem 0;">
+          <h3 id="solaceGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.1rem 0;">
             4 BHK Imperial
           </h3>
-          <div id="solaceGlanceSubtitle" style="font-size:0.88rem; color:#684A20; font-weight:700; margin-bottom:1.25rem;">
+          <div id="solaceGlanceSubtitle" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-bottom:0.85rem;">
             Tower 1 · LUMA — Unit 01
           </div>
 
-          <!-- Key Metrics List -->
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1.25rem; padding-bottom:1.25rem; border-bottom:1px solid #E5E7EB;">
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
-              <div id="solaceGlanceSbua" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">4,710 sq.ft.</div>
-              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
+          <!-- Key Metrics Grid -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.85rem; border-bottom:1px solid #E5E7EB;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="solaceGlanceSbua" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">4,710 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
-              <div id="solaceGlanceCarpet" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">2,689 sq.ft.</div>
-              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="solaceGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">2,689 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
-              <div id="solaceGlanceBalcony" style="font-size:1.2rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">588 sq.ft.</div>
-              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="solaceGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">588 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.65rem 0.85rem;">
-              <div id="solaceGlanceFacing" style="font-size:1.05rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East Facing</div>
-              <div style="font-size:0.72rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="solaceGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East Facing</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
             </div>
           </div>
 
           <!-- Space Efficiency Block -->
-          <div style="background:#182A3D; color:#FFFFFF; border-radius:10px; padding:1rem 1.1rem; margin-bottom:1.25rem;">
-            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.6rem;">
+          <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:0.85rem;">
+            <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
               SPACE EFFICIENCY
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-              <span style="font-size:0.88rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
-              <span id="solaceGlanceEff" style="font-size:1.2rem; font-weight:800; color:#FFFFFF;">57.1%</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
+              <span id="solaceGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">57.1%</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <span style="font-size:0.88rem; color:rgba(255,255,255,0.85);">Balcony Share</span>
-              <span id="solaceGlanceBalcShare" style="font-size:1.2rem; font-weight:800; color:#FFFFFF;">12.5%</span>
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Non-carpet Share</span>
+              <span id="solaceGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">42.9%</span>
             </div>
           </div>
 
           <!-- Flat Numbers -->
-          <div style="margin-bottom:1.25rem;">
-            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#8C6734; margin-bottom:0.25rem;">
+          <div style="margin-bottom:0.85rem;">
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8C6734; margin-bottom:0.2rem;">
               Flats in this configuration:
             </div>
-            <div id="solaceGlanceFlats" style="font-size:0.85rem; color:#303F4F; font-weight:600; line-height:1.4;">
+            <div id="solaceGlanceFlats" style="font-size:0.82rem; color:#303F4F; font-weight:600; line-height:1.35;">
               201, 401, 601, 801, 1001, 1201, 1401
             </div>
           </div>
         </div>
 
-        <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.85rem; font-size:0.92rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
+        <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="width:100%; padding:0.65rem 1rem; font-size:0.88rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
           Get Detailed Cost Sheet &rarr;
         </button>
       </div>
 
-    </div>
-
-
-
-    <!-- "WHICH UNIT SHOULD I PICK?" Comparison Layer -->
-    <div id="solaceCompareSection" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; margin-top:1.5rem;">
-      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.25rem;">
-        COMPARE THIS CONFIGURATION
-      </div>
-      <h3 id="solaceCompareTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 1rem 0;">
-        Compare Unit Variants
-      </h3>
-
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:1rem;">
-        <table id="solaceCompareTable" style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem;">
-          <!-- Populated via JS -->
-        </table>
-      </div>
-
-      <div style="font-size:0.85rem; color:#684A20; font-weight:600; font-style:italic;">
-        “Compare space, efficiency and unit-specific factors before deciding.”
-      </div>
     </div>
 
   </div>
@@ -1560,6 +1538,7 @@ html { scroll-behavior: smooth; }
     if (document.getElementById('solaceGlanceFacing')) document.getElementById('solaceGlanceFacing').textContent = cfg.facing;
     if (document.getElementById('solaceGlanceEff')) document.getElementById('solaceGlanceEff').textContent = `${eff}%`;
     if (document.getElementById('solaceGlanceBalcShare')) document.getElementById('solaceGlanceBalcShare').textContent = `${balcShare}%`;
+    if (document.getElementById('solaceGlanceNonCarpet')) document.getElementById('solaceGlanceNonCarpet').textContent = `${nonCarpet}%`;
     if (document.getElementById('solaceGlanceFlats')) document.getElementById('solaceGlanceFlats').textContent = cfg.flats;
 
     // 7. Comparison Layer Table
