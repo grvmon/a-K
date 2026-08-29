@@ -241,123 +241,18 @@ html { scroll-behavior: smooth; }
   .ak-mobile-final-cta-v5 { display: block !important; }
 }
 
-/* Redesigned Amenities & Lifestyle Section CSS */
-.ak-hotspot {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  cursor: pointer;
-}
-.ak-hotspot-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: #182A3D;
-  color: #FFFFFF;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 800;
-  border: 2px solid #8C6734;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease, border-color 0.2s ease;
-}
-.ak-hotspot:hover .ak-hotspot-btn,
-.ak-hotspot.active .ak-hotspot-btn {
-  transform: scale(1.2);
-  background: #8C6734;
-  border-color: #FFFFFF;
-}
-.ak-hotspot-tooltip {
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: rgba(24, 42, 61, 0.95);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #FFFFFF;
-  padding: 0.45rem 0.75rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.15);
-  z-index: 20;
-}
-.ak-hotspot-tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgba(24, 42, 61, 0.95) transparent transparent transparent;
-}
-.ak-hotspot:hover .ak-hotspot-tooltip,
-.ak-hotspot.active .ak-hotspot-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-.ak-tt-title {
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #FBF6F3;
-  font-size: 0.75rem;
-}
-.ak-tt-desc {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.85);
-  margin-top: 0.1rem;
-}
-
+/* Compact Category Amenities Section CSS */
 @media (max-width: 992px) {
-  .ak-amenity-hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .ak-stats-strip {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1.25rem 0.5rem !important;
-  }
-  .ak-stats-strip > div {
-    border-left: none !important;
-  }
-  .ak-lifestyle-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
+  .ak-amenities-cat-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
   }
 }
 
 @media (max-width: 640px) {
-  .ak-stats-strip {
-    grid-template-columns: repeat(2, 1fr) !important;
-    padding: 1.25rem 0.75rem !important;
-  }
-  .ak-lifestyle-grid {
-    display: flex !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    padding-bottom: 0.75rem !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-  .ak-lifestyle-card {
-    flex: 0 0 75% !important;
-    scroll-snap-align: start !important;
-  }
-  .ak-buyer-note-strip {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  .ak-buyer-note-strip button {
-    width: 100% !important;
-    justify-content: center !important;
+  .ak-amenities-cat-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
 }
 </style>
@@ -1096,263 +991,97 @@ html { scroll-behavior: smooth; }
   <div class="prop-container">
     <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       
-      <!-- 1. Section Intro -->
-      <div class="prop-section-header" style="margin-bottom:2.25rem;">
-        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#5E4119; margin-bottom:0.4rem;">AMENITIES &amp; LIFESTYLE</div>
-        <h2 style="font-family:'Marcellus', serif; font-size:clamp(1.9rem, 1.4rem + 1.2vw, 2.5rem); font-weight:400; color:#182A3D; margin:0 0 0.5rem 0; line-height:1.2;">A 24-acre lifestyle designed around everyday life.</h2>
-        <p style="font-size:1.05rem; line-height:1.6; color:#303F4F; margin:0; max-width:760px; font-weight:400;">Wellness, sport, social spaces and landscaped retreats come together across Evergreen.</p>
+      <!-- Section Heading -->
+      <div style="margin-bottom:2rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
+        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#5E4119; margin-bottom:0.35rem;">AMENITIES &amp; LIFESTYLE</div>
+        <h2 style="font-family:'Marcellus', serif; font-size:clamp(1.9rem, 1.4rem + 1.2vw, 2.4rem); font-weight:400; color:#182A3D; margin:0 0 0.35rem 0; line-height:1.2;">A 24-acre lifestyle designed around everyday life.</h2>
+        <div style="font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#684A20; margin-top:0.25rem;">WELLNESS, SPORT, SOCIAL SPACES &amp; LANDSCAPED RETREATS</div>
       </div>
 
-      <!-- 2 & 3. Hero Amenity / Master Plan + Clubhouse Composite Area -->
-      <div class="ak-amenity-hero-grid" style="display:grid; grid-template-columns: 1.45fr 1fr; gap:1.75rem; align-items:stretch; margin-bottom:2.25rem;">
+      <!-- 4 Category Cards in One Row (Desktop) -->
+      <div class="ak-amenities-cat-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1.25rem; margin-bottom:2rem;">
         
-        <!-- Left Column: Master Plan Visual with Interactive Hotspot Markers -->
-        <div class="ak-masterplan-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 2px 12px rgba(24, 42, 61, 0.03); display:flex; flex-direction:column; justify-content:space-between; position:relative;">
-          <div style="position:relative; width:100%; height:100%; min-height:380px; border-radius:8px; overflow:hidden; background:#182A3D;">
-            <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp?v=20260829_v2" alt="Prestige Evergreen 24-Acre Master Plan" style="width:100%; height:100%; object-fit:cover; display:block;">
-            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(24,42,61,0.15) 0%, rgba(24,42,61,0.35) 100%);"></div>
-
-            <!-- Hotspot 1: THE CLUBHOUSE -->
-            <div class="ak-hotspot" style="top:44%; left:48%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">01</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">THE CLUBHOUSE</div>
-                <div class="ak-tt-desc">~89,000 sq.ft. lifestyle hub</div>
-              </div>
-            </div>
-
-            <!-- Hotspot 2: THE LAGOON -->
-            <div class="ak-hotspot" style="top:65%; left:36%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">02</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">THE LAGOON</div>
-                <div class="ak-tt-desc">Water &amp; landscaped retreat</div>
-              </div>
-            </div>
-
-            <!-- Hotspot 3: ACTIVE ZONE -->
-            <div class="ak-hotspot" style="top:32%; left:25%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">03</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">ACTIVE ZONE</div>
-                <div class="ak-tt-desc">Sports &amp; fitness</div>
-              </div>
-            </div>
-
-            <!-- Hotspot 4: CENTRAL LAWN -->
-            <div class="ak-hotspot" style="top:55%; left:65%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">04</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">CENTRAL LAWN</div>
-                <div class="ak-tt-desc">Community &amp; leisure space</div>
-              </div>
-            </div>
-
-            <!-- Hotspot 5: RAINTREE GROVE -->
-            <div class="ak-hotspot" style="top:25%; left:72%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">05</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">RAINTREE GROVE</div>
-                <div class="ak-tt-desc">Walking &amp; green spaces</div>
-              </div>
-            </div>
-
-            <!-- Hotspot 6: KIDS’ ZONE -->
-            <div class="ak-hotspot" style="top:76%; left:54%;" onclick="this.classList.toggle('active');">
-              <span class="ak-hotspot-btn">06</span>
-              <div class="ak-hotspot-tooltip">
-                <div class="ak-tt-title">KIDS’ ZONE</div>
-                <div class="ak-tt-desc">Play &amp; activity spaces</div>
-              </div>
-            </div>
-          </div>
-
-          <div style="font-size:0.75rem; color:#667085; font-style:italic; margin-top:0.75rem; text-align:right;">
-            Master plan is illustrative. Final development may vary.
-          </div>
-        </div>
-
-        <!-- Right Column: Premium Clubhouse Feature Card -->
-        <div class="ak-clubhouse-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; box-shadow:0 2px 12px rgba(24, 42, 61, 0.03); display:flex; flex-direction:column; justify-content:space-between;">
+        <!-- Category 1: FITNESS & WELLNESS -->
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#5E4119; margin-bottom:0.25rem;">THE CLUBHOUSE</div>
-            <h3 style="font-family:'Marcellus', serif; font-size:1.6rem; font-weight:400; color:#182A3D; margin:0 0 0.35rem 0; line-height:1.25;">At the heart of it all.</h3>
-            <p style="font-size:0.9rem; color:#303F4F; margin:0 0 1.25rem 0; line-height:1.5;">~89,000 sq.ft. of spaces to gather, unwind and recharge.</p>
-
-            <div style="width:100%; aspect-ratio:16/9; border-radius:8px; overflow:hidden; margin-bottom:1.25rem;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" alt="Prestige Evergreen Clubhouse Rendering" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
+              <i data-feather="heart" style="width:16px; height:16px; color:#684A20;"></i>
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#182A3D; margin:0; font-family:'Manrope',sans-serif;">FITNESS &amp; WELLNESS</h3>
             </div>
+            <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.55rem; font-weight:500; line-height:1.45;">
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Gymnasium</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Yoga &amp; wellness spaces</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Spa / sauna</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Swimming pools</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Jogging / walking tracks</li>
+            </ul>
+          </div>
+        </div>
 
-            <div style="display:flex; flex-direction:column; gap:0.85rem;">
-              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-                <div style="width:32px; height:32px; border-radius:6px; background:#FFFFFF; border:1px solid #DDD7CF; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#182A3D;">
-                  <i data-feather="heart" style="width:16px; height:16px;"></i>
-                </div>
-                <div>
-                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; color:#182A3D;">WELLNESS</div>
-                  <div style="font-size:0.85rem; color:#303F4F; margin-top:0.1rem;">Gym &middot; Yoga &middot; Spa &middot; Indoor Pool</div>
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-                <div style="width:32px; height:32px; border-radius:6px; background:#FFFFFF; border:1px solid #DDD7CF; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#182A3D;">
-                  <i data-feather="users" style="width:16px; height:16px;"></i>
-                </div>
-                <div>
-                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; color:#182A3D;">SOCIAL</div>
-                  <div style="font-size:0.85rem; color:#303F4F; margin-top:0.1rem;">Mini Theatre &middot; Reading Room &middot; Social Spaces</div>
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-                <div style="width:32px; height:32px; border-radius:6px; background:#FFFFFF; border:1px solid #DDD7CF; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#182A3D;">
-                  <i data-feather="briefcase" style="width:16px; height:16px;"></i>
-                </div>
-                <div>
-                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; color:#182A3D;">WORK &amp; CONVENIENCE</div>
-                  <div style="font-size:0.85rem; color:#303F4F; margin-top:0.1rem;">Co-working &middot; Convenience Store &middot; Creche</div>
-                </div>
-              </div>
+        <!-- Category 2: SPORTS & RECREATION -->
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
+              <i data-feather="activity" style="width:16px; height:16px; color:#684A20;"></i>
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#182A3D; margin:0; font-family:'Manrope',sans-serif;">SPORTS &amp; RECREATION</h3>
             </div>
+            <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.55rem; font-weight:500; line-height:1.45;">
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Tennis / racquet sports</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Pickleball &amp; padel</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Basketball</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Cricket practice</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Indoor games</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 3: FAMILY & SOCIAL -->
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
+              <i data-feather="users" style="width:16px; height:16px; color:#684A20;"></i>
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#182A3D; margin:0; font-family:'Manrope',sans-serif;">FAMILY &amp; SOCIAL</h3>
+            </div>
+            <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.55rem; font-weight:500; line-height:1.45;">
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Clubhouse</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Children's play areas</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Kids' activity spaces</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Party / multipurpose spaces</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Mini theatre / reading room</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Category 4: OUTDOORS & CONVENIENCE -->
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
+              <i data-feather="sun" style="width:16px; height:16px; color:#684A20;"></i>
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#182A3D; margin:0; font-family:'Manrope',sans-serif;">OUTDOORS &amp; CONVENIENCE</h3>
+            </div>
+            <ul style="list-style:none; padding:0; margin:0; font-size:0.88rem; color:#303F4F; display:flex; flex-direction:column; gap:0.55rem; font-weight:500; line-height:1.45;">
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Rain Tree Grove Trail</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Central Lawn &amp; landscaped gardens</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Water features / The Lagoon</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Co-working space</li>
+              <li style="display:flex; align-items:flex-start; gap:0.4rem;"><span style="color:#684A20; font-weight:800;">&bull;</span> Convenience store / creche</li>
+            </ul>
           </div>
         </div>
 
       </div>
 
-      <!-- 4. Key Development Stats Strip -->
-      <div class="ak-stats-strip-container" style="margin-bottom:2.5rem;">
-        <div class="ak-stats-strip" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem 1.75rem; display:grid; grid-template-columns: repeat(5, 1fr); align-items:center; text-align:center;">
-          <div style="padding:0 0.5rem;">
-            <div style="font-family:'Manrope',sans-serif; font-size:1.6rem; font-weight:800; color:#182A3D; line-height:1.1;">24.7 ACRES</div>
-            <div style="font-size:0.78rem; font-weight:600; color:#5E4119; margin-top:0.25rem;">Phase 2 development</div>
-          </div>
-          <div style="border-left:1px solid #DDD7CF; padding:0 0.5rem;">
-            <div style="font-family:'Manrope',sans-serif; font-size:1.6rem; font-weight:800; color:#182A3D; line-height:1.1;">~2,000</div>
-            <div style="font-size:0.78rem; font-weight:600; color:#5E4119; margin-top:0.25rem;">Homes</div>
-          </div>
-          <div style="border-left:1px solid #DDD7CF; padding:0 0.5rem;">
-            <div style="font-family:'Manrope',sans-serif; font-size:1.6rem; font-weight:800; color:#182A3D; line-height:1.1;">14</div>
-            <div style="font-size:0.78rem; font-weight:600; color:#5E4119; margin-top:0.25rem;">Residential towers</div>
-          </div>
-          <div style="border-left:1px solid #DDD7CF; padding:0 0.5rem;">
-            <div style="font-family:'Manrope',sans-serif; font-size:1.6rem; font-weight:800; color:#182A3D; line-height:1.1;">70.2%</div>
-            <div style="font-size:0.78rem; font-weight:600; color:#5E4119; margin-top:0.25rem;">Open space*</div>
-          </div>
-          <div style="border-left:1px solid #DDD7CF; padding:0 0.5rem;">
-            <div style="font-family:'Manrope',sans-serif; font-size:1.6rem; font-weight:800; color:#182A3D; line-height:1.1;">~89,000 SQ.FT.</div>
-            <div style="font-size:0.78rem; font-weight:600; color:#5E4119; margin-top:0.25rem;">Clubhouse</div>
-          </div>
-        </div>
-        <div style="font-size:0.75rem; color:#667085; font-style:italic; margin-top:0.5rem; padding-left:0.25rem;">
-          *As per available project / statutory documentation. Verify final sanctioned plans and specifications before purchase.
+      <!-- ACRE&KEY VIEW Banner -->
+      <div style="background:#182A3D; border-radius:10px; padding:1.15rem 1.5rem; margin-bottom:1rem; box-shadow:0 4px 14px rgba(24, 42, 61, 0.1);">
+        <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.25rem;">ACRE&amp;KEY VIEW</div>
+        <div style="font-size:0.92rem; line-height:1.55; color:rgba(255,255,255,0.92); font-weight:500;">
+          &ldquo;The amenity proposition is strong, but Evergreen&rsquo;s larger differentiator is the scale of the overall 24-acre environment and how its landscaped open spaces are integrated into everyday living.&rdquo;
         </div>
       </div>
 
-      <!-- 5. Explore by Lifestyle -->
-      <div class="ak-lifestyle-section" style="margin-bottom:2.5rem;">
-        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#5E4119; margin-bottom:1rem;">EXPLORE BY LIFESTYLE</div>
-        
-        <div class="ak-lifestyle-grid" style="display:grid; grid-template-columns: repeat(5, 1fr); gap:1.1rem;">
-          
-          <!-- Category 1: WELLNESS -->
-          <div class="ak-lifestyle-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-            <div style="width:100%; aspect-ratio:4/3; overflow:hidden;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_lifestyle_wellness.webp?v=20260829_v1" alt="Wellness Amenities" style="width:100%; height:100%; object-fit:cover; display:block;">
-            </div>
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.35rem;">
-                  <span style="font-size:0.85rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">WELLNESS</span>
-                  <i data-feather="heart" style="width:14px; height:14px; color:#684A20;"></i>
-                </div>
-                <p style="font-size:0.8rem; color:#303F4F; margin:0; line-height:1.4;">Spaces for a healthier you</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 2: SPORT -->
-          <div class="ak-lifestyle-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-            <div style="width:100%; aspect-ratio:4/3; overflow:hidden;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_lifestyle_sport.webp?v=20260829_v1" alt="Sport Amenities" style="width:100%; height:100%; object-fit:cover; display:block;">
-            </div>
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.35rem;">
-                  <span style="font-size:0.85rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">SPORT</span>
-                  <i data-feather="activity" style="width:14px; height:14px; color:#684A20;"></i>
-                </div>
-                <p style="font-size:0.8rem; color:#303F4F; margin:0; line-height:1.4;">For every kind of player</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 3: FAMILY -->
-          <div class="ak-lifestyle-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-            <div style="width:100%; aspect-ratio:4/3; overflow:hidden;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_lifestyle_family.webp?v=20260829_v1" alt="Family Amenities" style="width:100%; height:100%; object-fit:cover; display:block;">
-            </div>
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.35rem;">
-                  <span style="font-size:0.85rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">FAMILY</span>
-                  <i data-feather="smile" style="width:14px; height:14px; color:#684A20;"></i>
-                </div>
-                <p style="font-size:0.8rem; color:#303F4F; margin:0; line-height:1.4;">Thoughtful spaces for every age</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 4: SOCIAL -->
-          <div class="ak-lifestyle-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-            <div style="width:100%; aspect-ratio:4/3; overflow:hidden;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_lifestyle_social.webp?v=20260829_v1" alt="Social Amenities" style="width:100%; height:100%; object-fit:cover; display:block;">
-            </div>
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.35rem;">
-                  <span style="font-size:0.85rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">SOCIAL</span>
-                  <i data-feather="users" style="width:14px; height:14px; color:#684A20;"></i>
-                </div>
-                <p style="font-size:0.8rem; color:#303F4F; margin:0; line-height:1.4;">Connect, celebrate and unwind</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 5: OUTDOORS -->
-          <div class="ak-lifestyle-card" style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-            <div style="width:100%; aspect-ratio:4/3; overflow:hidden;">
-              <img src="../../style-guide/assets/evergreen/prestige_evergreen_lifestyle_outdoors.webp?v=20260829_v1" alt="Outdoors Amenities" style="width:100%; height:100%; object-fit:cover; display:block;">
-            </div>
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.35rem;">
-                  <span style="font-size:0.85rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">OUTDOORS</span>
-                  <i data-feather="sun" style="width:14px; height:14px; color:#684A20;"></i>
-                </div>
-                <p style="font-size:0.8rem; color:#303F4F; margin:0; line-height:1.4;">Green escapes for everyday living</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 6. Buyer Note / Due Diligence Strip -->
-      <div class="ak-buyer-note-strip" style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:10px; padding:1.25rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;">
-        <div style="flex:1; min-width:280px;">
-          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
-            <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#5E4119; background:rgba(140, 103, 52, 0.12); padding:0.15rem 0.5rem; border-radius:4px;">BUYER NOTE</span>
-            <h4 style="font-size:0.95rem; font-weight:700; color:#182A3D; margin:0;">Amenity access &amp; township distinction</h4>
-          </div>
-          <p style="font-size:0.85rem; color:#303F4F; margin:0; line-height:1.5;">
-            Evergreen is part of the larger Prestige Raintree Park ecosystem. Verify which facilities are exclusive to Evergreen, which are shared, and the applicable usage and maintenance terms before purchase.
-          </p>
-        </div>
-        <div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="padding:0.6rem 1.25rem; font-size:0.85rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; white-space:nowrap;">
-            <span>DUE DILIGENCE CHECKLIST &rarr;</span>
-          </button>
-        </div>
+      <!-- Muted Buyer / Due-Diligence Note -->
+      <div style="font-size:0.8rem; color:#667085; line-height:1.45; font-style:italic;">
+        Buyer note: Verify Evergreen-exclusive vs shared amenities, applicable access rights and maintenance obligations against the final sanctioned plans and agreements.
       </div>
 
     </div>
