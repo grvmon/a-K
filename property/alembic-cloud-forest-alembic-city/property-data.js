@@ -10,7 +10,7 @@ const PROPERTY_DATA = {
   "reviewsCount": 142,
   "shortDescription": "2, 3 & 3.5 BHK + Home Office Residences in a ~15-Acre Residential Component",
   "secondaryLine": "~15-Acre Residential Component | 3 Towers (G+34) | >70% Green/Open Area & 22 Amenities",
-  "rera": "RERA Completion Target: 1 October 2029",
+  "rera": "PRM/KA/RERA/1251/446/PR/250625/007869 | Target: 1 October 2029",
   "possession": "1 October 2029",
   "status": "Under Construction",
   "structure": "G + 34 Floors",
