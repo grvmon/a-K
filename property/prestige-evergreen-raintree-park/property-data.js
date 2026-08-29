@@ -10,7 +10,7 @@ const PROPERTY_DATA = {
   "reviewsCount": 128,
   "shortDescription": "1, 2, 3, 3 BHK + Study & 4 BHK Residences in a 24-Acre Plan",
   "secondaryLine": "24-Acre Plan | 14 Towers | ~86,000 sq.ft. Clubhouse & 70% Open Area",
-  "rera": "RERA Completion Target: 30 June 2030",
+  "rera": "PRM/KA/RERA/1251/446/PR/010126/008374 | Target: 30 June 2030",
   "possession": "30 June 2030",
   "status": "Under Construction",
   "structure": "2B + G + 19 Floors",
