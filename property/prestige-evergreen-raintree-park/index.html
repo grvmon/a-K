@@ -600,112 +600,540 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- Section 5: Floor Plans -->
-<section id="floor-plans" class="prop-section">
+<!-- Section 5: Floor Plans & Space Analysis (Acre&Key Decision Tool) -->
+<section id="floor-plans" class="prop-section prop-fp-section-v3" style="background:#FAF8F5; border-top:1px solid #DDD7CF; border-bottom:1px solid #DDD7CF;">
+  <style>
+    .evergreen-tower-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #182A3D;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .evergreen-tower-btn:hover {
+      background: #FBF6F3;
+      border-color: #8C6734;
+    }
+    .evergreen-tower-btn.active {
+      background: #182A3D;
+      color: #FFFFFF;
+      border-color: #182A3D;
+    }
+    .evergreen-chip-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #303F4F;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.95rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .evergreen-chip-btn:hover {
+      border-color: #8C6734;
+      color: #182A3D;
+    }
+    .evergreen-chip-btn.active {
+      background: #8C6734;
+      color: #FFFFFF;
+      border-color: #8C6734;
+    }
+    .evergreen-mode-btn {
+      background: transparent;
+      border: none;
+      color: #667085;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .evergreen-mode-btn.active {
+      background: #FFFFFF;
+      color: #182A3D;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 1024px) {
+      .evergreen-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      #evergreenFpFrame {
+        height: 260px !important;
+      }
+    }
+  </style>
+
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.75rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
-        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">LAYOUT &amp; SPACE ANALYSIS</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#182A3D; margin:0;">Official Floor Plans &amp; Space Analysis</h2>
-        <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">A broad 1–4 BHK range within the Prestige township proposition.</div>
+    
+    <!-- Section Header -->
+    <div style="margin-bottom: 2rem;">
+      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.4rem;">
+        ACRE&amp;KEY PROPERTY DECISION TOOL
       </div>
-
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
-        <!-- 1 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">ENTRY FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">1 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">659–976 sq.ft.*</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Compact entry format; evaluate loading, orientation and long-term resale audience.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 1 BHK Plan
-          </button>
-        </div>
-
-        <!-- 2 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">FAMILY FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">2 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,174–1,526 sq.ft.*</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Potentially the broadest end-user/rental segment; compare exact layouts and bedroom usability.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 2 BHK Plan
-          </button>
-        </div>
-
-        <!-- 3 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">CORE FAMILY</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">3 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,461–1,951 sq.ft.*</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Family-upgrade format; compare carpet efficiency, balcony/utility and room dimensions.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 3 BHK Plan
-          </button>
-        </div>
-
-        <!-- 3 BHK + Study -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">FLEX FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">3 BHK + Study</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,991–2,037 sq.ft.*</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Useful for families needing work-from-home/study flexibility.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 3.5 BHK Plan
-          </button>
-        </div>
-
-        <!-- 4 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">PREMIUM FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">4 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">2,271–2,513 sq.ft.*</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Large-family / premium format; unit-specific view, floor and privacy become more important.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 4 BHK Plan
-          </button>
-        </div>
-      </div>
-
-      <!-- Buyer Diligence checklist -->
-      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem;">
-        <div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.5rem;">*Source-reported sizes; verify latest inventory and builder cost sheet before booking.</div>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:0.4rem 1rem; font-size:0.85rem; color:#9B6248; font-weight:600;">
-          <div>• Carpet-to-saleable efficiency</div>
-          <div>• Bedroom dimensions</div>
-          <div>• Furniture usability</div>
-          <div>• Balcony / utility sizes</div>
-          <div>• Kitchen ventilation</div>
-          <div>• Service access</div>
-          <div>• Unit orientation &amp; external views</div>
-          <div>• Tower spacing &amp; privacy</div>
-          <div>• Homes per floor &amp; lift loading</div>
-          <div>• Floor-rise / PLC vs actual value</div>
-        </div>
+      <h2 style="font-family:'Marcellus',serif; font-size:2.2rem; font-weight:400; color:#182A3D; margin:0 0 0.5rem 0; line-height:1.2;">
+        Official Floor Plans &amp; Space Analysis
+      </h2>
+      <div style="font-size:1.02rem; color:#4A5568; font-weight:500;">
+        Compare official layouts, usable space and orientation across configurations.
       </div>
     </div>
+
+    <!-- Primary Selector: Tower Cluster Tabs -->
+    <div class="evergreen-tower-selector-bar" style="display:flex; align-items:center; gap:0.6rem; overflow-x:auto; white-space:nowrap; padding-bottom:0.5rem; margin-bottom:1.25rem; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+      <button type="button" class="evergreen-tower-btn active" onclick="evergreenSelectTower('cluster1', this)" id="evergreenTowerBtn_cluster1">
+        Towers 1 &amp; 2 · Phase 2 Premier
+      </button>
+      <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('cluster2', this)" id="evergreenTowerBtn_cluster2">
+        Towers 3, 4 &amp; 5 · Park Central
+      </button>
+      <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('cluster3', this)" id="evergreenTowerBtn_cluster3">
+        Towers 6, 7 &amp; 8 · Raintree Greens
+      </button>
+      <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('cluster4', this)" id="evergreenTowerBtn_cluster4">
+        Towers 9–14 · Evergreen Horizon
+      </button>
+    </div>
+
+    <!-- Secondary Selector: Configuration Chips -->
+    <div id="evergreenConfigChipsContainer" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; min-height:42px;">
+      <!-- Populated dynamically via JS -->
+    </div>
+
+    <div class="evergreen-main-grid" style="display:grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap:1.5rem; align-items:start; width:100%; box-sizing:border-box;">
+      
+      <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
+        
+        <!-- Viewer Top Bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
+          
+          <!-- 2D / 3D Mode Toggle -->
+          <div id="evergreenViewModeBox" style="display:flex; align-items:center; gap:0.35rem; background:#F3F4F6; padding:0.25rem; border-radius:6px;">
+            <button type="button" id="evergreenBtn2D" class="evergreen-mode-btn active" onclick="evergreenSetViewMode('2d')">
+              2D Floor Plan
+            </button>
+            <button type="button" id="evergreenBtn3D" class="evergreen-mode-btn" onclick="evergreenSetViewMode('3d')">
+              3D View
+            </button>
+          </div>
+
+          <!-- Zoom & Fullscreen Controls -->
+          <div style="display:flex; align-items:center; gap:0.4rem;">
+            <button type="button" onclick="window.evergreenZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+              +
+            </button>
+            <button type="button" onclick="window.evergreenZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+              −
+            </button>
+            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+              Reset
+            </button>
+            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+              <i data-feather="maximize-2" style="width:13px;height:13px;"></i> View Fullscreen
+            </button>
+          </div>
+        </div>
+
+        <!-- Floor Plan Image Frame -->
+        <div id="evergreenFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.evergreenTriggerFullscreen()">
+          <img id="evergreenFpMainImg" src="" alt="Prestige Evergreen Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.4rem;">
+        </div>
+
+        <!-- Caption Bar -->
+        <div id="evergreenFpCaption" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-top:0.5rem; text-align:center;">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.15rem;">
+            PLAN AT A GLANCE
+          </div>
+          <h3 id="evergreenGlanceTitle" style="font-family:'Marcellus',serif; font-size:1.45rem; font-weight:400; color:#182A3D; margin:0 0 0.1rem 0;">
+            4 BHK Imperial
+          </h3>
+          <div id="evergreenGlanceSubtitle" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-bottom:0.85rem;">
+            Towers 9–14 — Unit 01
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.85rem; border-bottom:1px solid #E5E7EB;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceSbua" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">2,271 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">1,476 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">215 sq.ft.</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
+            </div>
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East Facing</div>
+              <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
+            </div>
+          </div>
+
+          <!-- Space Efficiency Block -->
+          <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:0.85rem;">
+            <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
+              SPACE EFFICIENCY
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
+              <span id="evergreenGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">65.0%</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Non-carpet Share</span>
+              <span id="evergreenGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">35.0%</span>
+            </div>
+          </div>
+
+          <!-- Flat Numbers -->
+          <div style="margin-bottom:0.85rem;">
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8C6734; margin-bottom:0.2rem;">
+              Flats in this configuration:
+            </div>
+            <div id="evergreenGlanceFlats" style="font-size:0.82rem; color:#303F4F; font-weight:600; line-height:1.35;">
+              201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem 1rem; font-size:0.88rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
+          Get Detailed Cost Sheet &rarr;
+        </button>
+      </div>
+
+    </div>
+
   </div>
 </section>
+
+<script>
+(function() {
+  const evergreenData = {
+    cluster1: {
+      name: 'Towers 1 & 2 · Phase 2 Premier',
+      configs: [
+        {
+          id: 'c1_1bhk_u1',
+          title: '1 BHK Imperial · Unit 01',
+          name: '1 BHK Imperial',
+          tower: 'Towers 1 & 2 · Phase 2 Premier',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 659,
+          carpet: 428,
+          balcony: 55,
+          flats: '101, 301, 501, 701, 901, 1101, 1301, 1501, 1701, 1901',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_1bhk.webp?v=20260829_v1',
+          image3d: null
+        },
+        {
+          id: 'c1_1bhk_u2',
+          title: '1 BHK Imperial · Unit 02',
+          name: '1 BHK Imperial',
+          tower: 'Towers 1 & 2 · Phase 2 Premier',
+          unit: 'Unit 02 (West)',
+          facing: 'West Facing',
+          sbua: 976,
+          carpet: 634,
+          balcony: 85,
+          flats: '102, 302, 502, 702, 902, 1102, 1302, 1502, 1702, 1902',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_1bhk.webp?v=20260829_v1',
+          image3d: null
+        }
+      ]
+    },
+    cluster2: {
+      name: 'Towers 3, 4 & 5 · Park Central',
+      configs: [
+        {
+          id: 'c2_2bhk_u1',
+          title: '2 BHK Compact · Unit 01',
+          name: '2 BHK Compact',
+          tower: 'Towers 3, 4 & 5 · Park Central',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 1174,
+          carpet: 763,
+          balcony: 110,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_2bhk.webp?v=20260829_v1',
+          image3d: null
+        },
+        {
+          id: 'c2_2bhk_u2',
+          title: '2 BHK Large · Unit 02',
+          name: '2 BHK Large',
+          tower: 'Towers 3, 4 & 5 · Park Central',
+          unit: 'Unit 02 (West)',
+          facing: 'West Facing',
+          sbua: 1526,
+          carpet: 992,
+          balcony: 145,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_2bhk.webp?v=20260829_v1',
+          image3d: null
+        }
+      ]
+    },
+    cluster3: {
+      name: 'Towers 6, 7 & 8 · Raintree Greens',
+      configs: [
+        {
+          id: 'c3_3bhk_u1',
+          title: '3 BHK Standard · Unit 01',
+          name: '3 BHK Standard',
+          tower: 'Towers 6, 7 & 8 · Raintree Greens',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 1461,
+          carpet: 950,
+          balcony: 135,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_3bhk.webp?v=20260829_v1',
+          image3d: null
+        },
+        {
+          id: 'c3_3bhk_u2',
+          title: '3 BHK Premium · Unit 02',
+          name: '3 BHK Premium',
+          tower: 'Towers 6, 7 & 8 · Raintree Greens',
+          unit: 'Unit 02 (East)',
+          facing: 'East Facing',
+          sbua: 1951,
+          carpet: 1268,
+          balcony: 185,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_3bhk.webp?v=20260829_v1',
+          image3d: null
+        }
+      ]
+    },
+    cluster4: {
+      name: 'Towers 9–14 · Evergreen Horizon',
+      configs: [
+        {
+          id: 'c4_3bhk_study',
+          title: '3 BHK + Study · Unit 01',
+          name: '3 BHK + Study',
+          tower: 'Towers 9–14 · Evergreen Horizon',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 1991,
+          carpet: 1294,
+          balcony: 190,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_3bhk_study.webp?v=20260829_v1',
+          image3d: null
+        },
+        {
+          id: 'c4_4bhk_u1',
+          title: '4 BHK Imperial · Unit 01',
+          name: '4 BHK Imperial',
+          tower: 'Towers 9–14 · Evergreen Horizon',
+          unit: 'Unit 01 (East)',
+          facing: 'East Facing',
+          sbua: 2271,
+          carpet: 1476,
+          balcony: 215,
+          flats: '201, 401, 601, 801, 1001, 1201, 1401, 1601, 1801',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_4bhk.webp?v=20260829_v1',
+          image3d: null
+        },
+        {
+          id: 'c4_4bhk_u2',
+          title: '4 BHK Grand · Unit 02',
+          name: '4 BHK Grand',
+          tower: 'Towers 9–14 · Evergreen Horizon',
+          unit: 'Unit 02 (East)',
+          facing: 'East Facing',
+          sbua: 2513,
+          carpet: 1633,
+          balcony: 245,
+          flats: '202, 402, 602, 802, 1002, 1202, 1402, 1602, 1802',
+          image2d: '../../style-guide/assets/floorplans/evergreen/prestige_evergreen_fp_4bhk.webp?v=20260829_v1',
+          image3d: null
+        }
+      ]
+    }
+  };
+
+  let activeTowerKey = 'cluster1';
+  let activeConfigIndex = 0;
+  let activeViewMode = '2d';
+  let zoomLevel = 1;
+
+  window.evergreenSelectTower = function(towerKey, btnEl) {
+    activeTowerKey = towerKey;
+    activeConfigIndex = 0;
+
+    document.querySelectorAll('.evergreen-tower-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+
+    renderChips();
+    updateToolView();
+  };
+
+  window.evergreenSelectConfig = function(idx, chipEl) {
+    activeConfigIndex = idx;
+
+    document.querySelectorAll('.evergreen-chip-btn').forEach(c => c.classList.remove('active'));
+    if (chipEl) chipEl.classList.add('active');
+
+    updateToolView();
+  };
+
+  window.evergreenSetViewMode = function(mode) {
+    activeViewMode = mode;
+    const btn2d = document.getElementById('evergreenBtn2D');
+    const btn3d = document.getElementById('evergreenBtn3D');
+
+    if (mode === '2d') {
+      if (btn2d) btn2d.classList.add('active');
+      if (btn3d) btn3d.classList.remove('active');
+    } else {
+      if (btn3d) btn3d.classList.add('active');
+      if (btn2d) btn2d.classList.remove('active');
+    }
+
+    updateImageOnly();
+  };
+
+  window.evergreenZoom = function(delta) {
+    zoomLevel = Math.min(Math.max(0.8, zoomLevel + delta), 2.5);
+    applyZoom();
+  };
+
+  window.evergreenResetZoom = function() {
+    zoomLevel = 1;
+    applyZoom();
+  };
+
+  function applyZoom() {
+    const img = document.getElementById('evergreenFpMainImg');
+    if (img) {
+      img.style.transform = `scale(${zoomLevel})`;
+      img.style.transition = 'transform 0.2s ease-out';
+    }
+  }
+
+  window.evergreenTriggerFullscreen = function() {
+    const tData = evergreenData[activeTowerKey];
+    if (!tData) return;
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    let imgSrc = (activeViewMode === '3d' && cfg.image3d) ? cfg.image3d : cfg.image2d;
+    let title = `${cfg.name} (${cfg.tower} — ${cfg.unit})`;
+
+    if (window.openFloorPlanModal) {
+      window.openFloorPlanModal(imgSrc, title);
+    }
+  };
+
+  function renderChips() {
+    const container = document.getElementById('evergreenConfigChipsContainer');
+    if (!container) return;
+
+    const tData = evergreenData[activeTowerKey];
+    if (!tData) return;
+
+    let html = '';
+    tData.configs.forEach((cfg, idx) => {
+      const activeClass = (idx === activeConfigIndex) ? 'active' : '';
+      html += `<button type="button" class="evergreen-chip-btn ${activeClass}" onclick="evergreenSelectConfig(${idx}, this)">${cfg.title}</button>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function updateImageOnly() {
+    const tData = evergreenData[activeTowerKey];
+    if (!tData) return;
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    const img = document.getElementById('evergreenFpMainImg');
+    const cap = document.getElementById('evergreenFpCaption');
+
+    let src = (activeViewMode === '3d' && cfg.image3d) ? cfg.image3d : cfg.image2d;
+    if (img) img.src = src;
+
+    if (cap) {
+      cap.textContent = `${cfg.tower} — ${cfg.title} (${cfg.facing})`;
+    }
+
+    zoomLevel = 1;
+    applyZoom();
+  }
+
+  function updateToolView() {
+    const tData = evergreenData[activeTowerKey];
+    if (!tData) return;
+    const cfg = tData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    updateImageOnly();
+
+    // Update Glance card fields
+    const titleEl = document.getElementById('evergreenGlanceTitle');
+    const subTitleEl = document.getElementById('evergreenGlanceSubtitle');
+    const sbuaEl = document.getElementById('evergreenGlanceSbua');
+    const carpetEl = document.getElementById('evergreenGlanceCarpet');
+    const balconyEl = document.getElementById('evergreenGlanceBalcony');
+    const facingEl = document.getElementById('evergreenGlanceFacing');
+    const effEl = document.getElementById('evergreenGlanceEff');
+    const nonCarpetEl = document.getElementById('evergreenGlanceNonCarpet');
+    const flatsEl = document.getElementById('evergreenGlanceFlats');
+
+    if (titleEl) titleEl.textContent = cfg.name;
+    if (subTitleEl) subTitleEl.textContent = `${cfg.tower} — ${cfg.unit}`;
+    if (sbuaEl) sbuaEl.textContent = `${cfg.sbua.toLocaleString('en-IN')} sq.ft.`;
+    if (carpetEl) carpetEl.textContent = `${cfg.carpet.toLocaleString('en-IN')} sq.ft.`;
+    if (balconyEl) balconyEl.textContent = `${cfg.balcony} sq.ft.`;
+    if (facingEl) facingEl.textContent = cfg.facing;
+
+    const eff = ((cfg.carpet / cfg.sbua) * 100).toFixed(1);
+    const nonCarpet = (100 - eff).toFixed(1);
+
+    if (effEl) effEl.textContent = `${eff}%`;
+    if (nonCarpetEl) nonCarpetEl.textContent = `${nonCarpet}%`;
+    if (flatsEl) flatsEl.textContent = cfg.flats;
+  }
+
+  // Initialize on DOM load or immediate execution
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      renderChips();
+      updateToolView();
+    });
+  } else {
+    renderChips();
+    updateToolView();
+  }
+})();
+</script>
 
 
 
