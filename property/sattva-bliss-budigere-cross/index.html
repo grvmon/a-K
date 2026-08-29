@@ -1307,6 +1307,85 @@ function akGallerySelect(idx) {
   window.akGalleryIndex = idx;
   updateAkGalleryUI();
 }
+
+(function() {
+  function initSubnavScrollspy() {
+    const navLinks = document.querySelectorAll('.local-nav-link');
+    if (!navLinks.length) return;
+
+    const linkSectionMap = [];
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const sec = document.querySelector(href);
+        if (sec) {
+          linkSectionMap.push({ link: link, section: sec, id: href });
+        }
+      }
+    });
+
+    if (!linkSectionMap.length) return;
+
+    function updateActiveState() {
+      const scrollPos = window.scrollY + 180;
+      let activeMapItem = null;
+
+      for (let i = 0; i < linkSectionMap.length; i++) {
+        const item = linkSectionMap[i];
+        const top = item.section.offsetTop;
+        const height = item.section.offsetHeight;
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          activeMapItem = item;
+        }
+      }
+
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60)) {
+        activeMapItem = linkSectionMap[linkSectionMap.length - 1];
+      }
+
+      if (activeMapItem) {
+        navLinks.forEach(l => {
+          if (l.getAttribute('href') === activeMapItem.id) {
+            l.classList.add('active');
+          } else {
+            l.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateActiveState, { passive: true });
+    updateActiveState();
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const targetTop = target.offsetTop - 140;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+            navLinks.forEach(l => {
+              if (l.getAttribute('href') === href) l.classList.add('active');
+              else l.classList.remove('active');
+            });
+            if (history.pushState) {
+              history.pushState(null, null, href);
+            }
+          }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSubnavScrollspy);
+  } else {
+    initSubnavScrollspy();
+  }
+})();
 </script>
 
 <!-- Score Breakdown Modal -->
