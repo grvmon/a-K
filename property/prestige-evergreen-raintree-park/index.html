@@ -720,18 +720,8 @@ html { scroll-behavior: smooth; }
       <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
         
         <!-- Viewer Top Bar -->
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
+        <div style="display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
           
-          <!-- 2D / 3D Mode Toggle -->
-          <div id="evergreenViewModeBox" style="display:flex; align-items:center; gap:0.35rem; background:#F3F4F6; padding:0.25rem; border-radius:6px;">
-            <button type="button" id="evergreenBtn2D" class="evergreen-mode-btn active" onclick="evergreenSetViewMode('2d')">
-              2D Floor Plan
-            </button>
-            <button type="button" id="evergreenBtn3D" class="evergreen-mode-btn" onclick="evergreenSetViewMode('3d')">
-              3D View
-            </button>
-          </div>
-
           <!-- Zoom & Fullscreen Controls -->
           <div style="display:flex; align-items:center; gap:0.4rem;">
             <button type="button" onclick="window.evergreenZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
@@ -770,7 +760,7 @@ html { scroll-behavior: smooth; }
             Unit Type-A (1BHK)
           </h3>
           <div id="evergreenGlanceSubtitle" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-bottom:0.85rem;">
-            Towers 1 &amp; 2 — Unit 01 (East)
+            Building 02 — Tower 05 (Level G–19)
           </div>
 
           <!-- Key Metrics Grid -->
@@ -780,11 +770,11 @@ html { scroll-behavior: smooth; }
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
             </div>
             <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
-              <div id="evergreenGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">428 sq.ft.</div>
+              <div id="evergreenGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">419 sq.ft.</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
             </div>
             <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
-              <div id="evergreenGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">55 sq.ft.</div>
+              <div id="evergreenGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">28 sq.ft.</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
             </div>
             <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
@@ -794,27 +784,17 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Space Efficiency Block -->
-          <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:0.85rem;">
+          <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:1.15rem;">
             <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
               SPACE EFFICIENCY
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
               <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
-              <span id="evergreenGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">64.9%</span>
+              <span id="evergreenGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">63.6%</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Non-carpet Share</span>
-              <span id="evergreenGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">35.1%</span>
-            </div>
-          </div>
-
-          <!-- Flat Numbers -->
-          <div style="margin-bottom:0.85rem;">
-            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8C6734; margin-bottom:0.2rem;">
-              Flats in this configuration:
-            </div>
-            <div id="evergreenGlanceFlats" style="font-size:0.82rem; color:#303F4F; font-weight:600; line-height:1.35;">
-              101, 301, 501, 701, 901, 1101, 1301, 1501, 1701, 1901
+              <span id="evergreenGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">36.4%</span>
             </div>
           </div>
         </div>
