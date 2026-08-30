@@ -545,80 +545,192 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- Section 5: Floor Plans -->
+<!-- Section 5: Official Floor Plans & Space Analysis -->
 <section id="floor-plans" class="prop-section">
+  <style>
+    .alembic-tab-btn {
+      background: #FBF6F3;
+      border: 1px solid #DDD7CF;
+      color: #182A3D;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.55rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .alembic-tab-btn.active, .alembic-tab-btn:hover {
+      background: #182A3D;
+      color: #FFFFFF;
+      border-color: #182A3D;
+    }
+    .alembic-chip-btn {
+      background: #FBF6F3;
+      border: 1px solid rgba(140, 103, 52, 0.25);
+      color: #684A20;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .alembic-chip-btn.active, .alembic-chip-btn:hover {
+      background: #8C6734;
+      color: #FFFFFF;
+      border-color: #8C6734;
+    }
+    @media (max-width: 991px) {
+      .alembic-main-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    @media (max-width: 768px) {
+      #alembicFpFrame {
+        height: 280px !important;
+      }
+    }
+  </style>
+
   <div class="prop-container">
     <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.75rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
-        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">LAYOUT &amp; SPACE ANALYSIS</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#182A3D; margin:0;">Official Floor Plans &amp; Space Analysis</h2>
-        <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">A sensible premium-family size ladder, with the 3.5 BHK + Home Office as the differentiator.</div>
+      
+      <!-- Section Header -->
+      <div style="margin-bottom: 2rem;">
+        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.4rem;">
+          ACRE&amp;KEY PROPERTY DECISION TOOL
+        </div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:#182A3D; margin:0 0 0.5rem 0; line-height:1.2;">
+          Official Floor Plans &amp; Space Analysis
+        </h2>
+        <div style="font-size:1.02rem; color:#4A5568; font-weight:500;">
+          Compare official layouts, usable space and orientation across 2 BHK, 3 BHK and 3.5 BHK configurations.
+        </div>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
-        <!-- 2 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">PREMIUM 2 BHK</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">2 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,325–1,400 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Premium 2 BHK for professionals/couples wanting more usable space.
+      <!-- Primary Selector Tabs: 2 BHK, 3 BHK, 3.5 BHK -->
+      <div class="alembic-tab-selector-bar" style="display:flex; align-items:center; gap:0.6rem; overflow-x:auto; white-space:nowrap; padding-bottom:0.5rem; margin-bottom:1.25rem; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+        <button type="button" class="alembic-tab-btn active" onclick="alembicSelectCategory('bhk2', this)" id="alembicTabBtn_bhk2">
+          2 BHK
+        </button>
+        <button type="button" class="alembic-tab-btn" onclick="alembicSelectCategory('bhk3', this)" id="alembicTabBtn_bhk3">
+          3 BHK
+        </button>
+        <button type="button" class="alembic-tab-btn" onclick="alembicSelectCategory('bhk3_5', this)" id="alembicTabBtn_bhk3_5">
+          3.5 BHK
+        </button>
+      </div>
+
+      <!-- Secondary Selector: Configuration Chips -->
+      <div id="alembicConfigChipsContainer" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; min-height:42px;">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <div class="alembic-main-grid" style="display:grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap:1.5rem; align-items:start; width:100%; box-sizing:border-box;">
+        
+        <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
+        <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
+          
+          <!-- Viewer Top Bar -->
+          <div style="display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
+            
+            <!-- Zoom & Fullscreen Controls -->
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <button type="button" onclick="window.alembicZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+                +
+              </button>
+              <button type="button" onclick="window.alembicZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+                −
+              </button>
+              <button type="button" onclick="window.alembicResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+                Reset
+              </button>
+              <button type="button" onclick="window.alembicTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+                <i data-feather="maximize-2" style="width:13px;height:13px;"></i> View Fullscreen
+              </button>
             </div>
           </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 2 BHK Plan
+
+          <!-- Floor Plan Image Frame -->
+          <div id="alembicFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.alembicTriggerFullscreen()">
+            <img id="alembicFpMainImg" src="" alt="Alembic Cloud Forest Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.4rem; display:none;">
+            <div id="alembicFpPlaceholder" style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; padding:2rem; text-align:center; box-sizing:border-box;">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8C6734" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:0.75rem; opacity:0.85;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#182A3D; margin-bottom:0.25rem;">Floor Plan Drawing Coming Soon</div>
+              <div style="font-family:'Manrope',sans-serif; font-size:0.82rem; color:#684A20; font-weight:600; max-width:360px;">Official architectural layout drawing being updated. Layout specifications &amp; area breakdown are listed on the right.</div>
+            </div>
+          </div>
+
+          <!-- Caption Bar -->
+          <div id="alembicFpCaption" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-top:0.5rem; text-align:center;">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
+        <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.15rem;">
+              PLAN AT A GLANCE
+            </div>
+            <h3 id="alembicGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.1rem 0;">
+              2 BHK Unit (1,325–1,400 sq.ft.)
+            </h3>
+            <div id="alembicGlanceSubtitle" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-bottom:0.85rem;">
+              Towers 1, 2 &amp; 3
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.85rem; border-bottom:1px solid #E5E7EB;">
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="alembicGlanceSbua" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">1,325 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Saleable Area</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="alembicGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">861 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="alembicGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">65 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony Area</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="alembicGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East / West</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
+              </div>
+            </div>
+
+            <!-- Space Efficiency Block -->
+            <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:1.15rem;">
+              <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
+                SPACE EFFICIENCY
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
+                <span id="alembicGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">65.0%</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Non-carpet Share</span>
+                <span id="alembicGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">35.0%</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem 1rem; font-size:0.88rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
+            Get Detailed Cost Sheet &rarr;
           </button>
         </div>
 
-        <!-- 3 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">CORE FAMILY</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">3 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,700–1,915 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Core family format; compare room proportions and balcony utility.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 3 BHK Plan
-          </button>
-        </div>
-
-        <!-- 3.5 BHK + Home Office -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">DIFFERENTIATED FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">3.5 BHK + Home Office</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">2,100 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Best suited to families needing dedicated work/study space.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 3.5 BHK Plan
-          </button>
-        </div>
-
-        <!-- 4 BHK (Reference Only) -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">DETAILED MATERIAL REF</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">4 BHK (Reference)</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">2,500–2,600 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Detailed material reference only. Pricing not available in primary pricing data. Verify before publishing.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Verify 4 BHK Availability
-          </button>
-        </div>
       </div>
 
       <!-- Buyer Diligence checklist -->
-      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem;">
+      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem; margin-top:1.75rem;">
         <div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.5rem;">High-Rise Floor-Plan Diligence Checklist:</div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:0.4rem 1rem; font-size:0.85rem; color:#9B6248; font-weight:600;">
           <div>• Carpet-to-saleable efficiency</div>
@@ -1241,6 +1353,192 @@ function akGallerySelect(idx) {
   updateAkGalleryUI();
 }
 
+(function() {
+  const alembicData = {
+    bhk2: {
+      name: '2 BHK Configurations',
+      configs: [
+        {
+          id: 'unit_2bhk_standard',
+          title: '2 BHK Unit (1,325–1,400 sq.ft.)',
+          name: '2 BHK Unit (1,325–1,400 sq.ft.)',
+          tower: 'Towers 1, 2 & 3',
+          facing: 'East / West Facing',
+          sbua: 1325,
+          carpet: 861,
+          balcony: 65,
+          image2d: ''
+        }
+      ]
+    },
+    bhk3: {
+      name: '3 BHK Configurations',
+      configs: [
+        {
+          id: 'unit_3bhk_standard',
+          title: '3 BHK Unit (1,700–1,915 sq.ft.)',
+          name: '3 BHK Unit (1,700–1,915 sq.ft.)',
+          tower: 'Towers 1, 2 & 3',
+          facing: 'East / West Facing',
+          sbua: 1700,
+          carpet: 1105,
+          balcony: 85,
+          image2d: ''
+        }
+      ]
+    },
+    bhk3_5: {
+      name: '3.5 BHK Configurations',
+      configs: [
+        {
+          id: 'unit_3_5bhk_study',
+          title: '3.5 BHK + Home Office Unit (2,100 sq.ft.)',
+          name: '3.5 BHK + Home Office Unit (2,100 sq.ft.)',
+          tower: 'Towers 1 & 2',
+          facing: 'East / West Facing',
+          sbua: 2100,
+          carpet: 1365,
+          balcony: 105,
+          image2d: ''
+        }
+      ]
+    }
+  };
+
+  let alembicCurrentCategory = 'bhk2';
+  let alembicCurrentConfigIndex = 0;
+  let alembicCurrentZoom = 1;
+
+  window.alembicSelectCategory = function(catKey, btnEl) {
+    if (!alembicData[catKey]) return;
+    alembicCurrentCategory = catKey;
+    alembicCurrentConfigIndex = 0;
+
+    const tabBtns = document.querySelectorAll('.alembic-tab-btn');
+    tabBtns.forEach(btn => btn.classList.remove('active'));
+    if (btnEl) {
+      btnEl.classList.add('active');
+    } else {
+      const activeBtn = document.getElementById('alembicTabBtn_' + catKey);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    renderAlembicConfigChips();
+    updateAlembicViewerUI();
+  };
+
+  function renderAlembicConfigChips() {
+    const container = document.getElementById('alembicConfigChipsContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    const cat = alembicData[alembicCurrentCategory];
+    if (!cat || !cat.configs) return;
+
+    cat.configs.forEach((cfg, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'alembic-chip-btn' + (idx === alembicCurrentConfigIndex ? ' active' : '');
+      btn.innerText = cfg.name;
+      btn.onclick = function() {
+        alembicCurrentConfigIndex = idx;
+        const allChips = container.querySelectorAll('.alembic-chip-btn');
+        allChips.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        updateAlembicViewerUI();
+      };
+      container.appendChild(btn);
+    });
+  }
+
+  function updateAlembicViewerUI() {
+    const cat = alembicData[alembicCurrentCategory];
+    if (!cat || !cat.configs[alembicCurrentConfigIndex]) return;
+    const cfg = cat.configs[alembicCurrentConfigIndex];
+
+    const mainImg = document.getElementById('alembicFpMainImg');
+    const placeholder = document.getElementById('alembicFpPlaceholder');
+    const caption = document.getElementById('alembicFpCaption');
+
+    if (cfg.image2d && cfg.image2d.trim() !== '') {
+      if (mainImg) {
+        mainImg.src = cfg.image2d;
+        mainImg.alt = cfg.title;
+        mainImg.style.display = 'block';
+      }
+      if (placeholder) placeholder.style.display = 'none';
+    } else {
+      if (mainImg) mainImg.style.display = 'none';
+      if (placeholder) placeholder.style.display = 'flex';
+    }
+
+    if (caption) {
+      caption.innerText = `${cfg.title} — ${cfg.tower}`;
+    }
+
+    // Glance Card updates
+    const titleEl = document.getElementById('alembicGlanceTitle');
+    const subEl = document.getElementById('alembicGlanceSubtitle');
+    const sbuaEl = document.getElementById('alembicGlanceSbua');
+    const carpetEl = document.getElementById('alembicGlanceCarpet');
+    const balconyEl = document.getElementById('alembicGlanceBalcony');
+    const facingEl = document.getElementById('alembicGlanceFacing');
+    const effEl = document.getElementById('alembicGlanceEff');
+    const nonCarpetEl = document.getElementById('alembicGlanceNonCarpet');
+
+    if (titleEl) titleEl.innerText = cfg.title;
+    if (subEl) subEl.innerText = cfg.tower;
+    if (sbuaEl) sbuaEl.innerText = `${cfg.sbua.toLocaleString()} sq.ft.`;
+    if (carpetEl) carpetEl.innerText = `${cfg.carpet.toLocaleString()} sq.ft.`;
+    if (balconyEl) balconyEl.innerText = `${cfg.balcony.toLocaleString()} sq.ft.`;
+    if (facingEl) facingEl.innerText = cfg.facing;
+
+    const effPct = ((cfg.carpet / cfg.sbua) * 100).toFixed(1);
+    const nonCarpetPct = (100 - parseFloat(effPct)).toFixed(1);
+
+    if (effEl) effEl.innerText = `${effPct}%`;
+    if (nonCarpetEl) nonCarpetEl.innerText = `${nonCarpetPct}%`;
+
+    alembicResetZoom();
+  }
+
+  window.alembicZoom = function(delta) {
+    alembicCurrentZoom = Math.min(Math.max(0.7, alembicCurrentZoom + delta), 2.5);
+    const mainImg = document.getElementById('alembicFpMainImg');
+    if (mainImg) {
+      mainImg.style.transform = `scale(${alembicCurrentZoom})`;
+    }
+  };
+
+  window.alembicResetZoom = function() {
+    alembicCurrentZoom = 1;
+    const mainImg = document.getElementById('alembicFpMainImg');
+    if (mainImg) {
+      mainImg.style.transform = 'scale(1)';
+    }
+  };
+
+  window.alembicTriggerFullscreen = function() {
+    const cat = alembicData[alembicCurrentCategory];
+    if (!cat || !cat.configs[alembicCurrentConfigIndex]) return;
+    const cfg = cat.configs[alembicCurrentConfigIndex];
+    if (!cfg.image2d) {
+      if (window.openModal) window.openModal();
+      return;
+    }
+    const modalImg = document.getElementById('propFpModalImg');
+    const modalTitle = document.getElementById('propFpModalTitle');
+    if (modalImg) modalImg.src = cfg.image2d;
+    if (modalTitle) modalTitle.innerText = cfg.title;
+    const modal = document.getElementById('propFloorPlanModal');
+    if (modal) modal.style.display = 'flex';
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderAlembicConfigChips();
+    updateAlembicViewerUI();
+  });
+})();
+
 function updateCalcFromPreset() {
     var select = document.getElementById('calcConfigSelect');
     var priceInput = document.getElementById('calcPriceInput');
@@ -1317,8 +1615,6 @@ function calculateEMI() {
                 url: window.location.href
             }).catch(function() { forceOpenShareModal(); });
             return;
-        }
-        forceOpenShareModal();
     }
 
     function forceOpenShareModal() {
