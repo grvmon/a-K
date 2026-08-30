@@ -539,112 +539,418 @@ html { scroll-behavior: smooth; }
 
 <!-- Section 5: Floor Plans -->
 <section id="floor-plans" class="prop-section">
+  <style>
+    .songbird-tab-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #182A3D;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .songbird-tab-btn:hover {
+      background: #FBF6F3;
+      border-color: #8C6734;
+    }
+    .songbird-tab-btn.active {
+      background: #182A3D;
+      color: #FFFFFF;
+      border-color: #182A3D;
+    }
+    .songbird-chip-btn {
+      background: #FFFFFF;
+      border: 1px solid #DDD7CF;
+      color: #303F4F;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.95rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .songbird-chip-btn:hover {
+      border-color: #8C6734;
+      color: #182A3D;
+    }
+    .songbird-chip-btn.active {
+      background: #8C6734;
+      color: #FFFFFF;
+      border-color: #8C6734;
+    }
+    @media (max-width: 1024px) {
+      .songbird-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      #songbirdFpFrame {
+        height: 260px !important;
+      }
+    }
+  </style>
+
   <div class="prop-container">
     <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.75rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
-        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">LAYOUT &amp; SPACE ANALYSIS</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#182A3D; margin:0;">Official Floor Plans &amp; Space Analysis</h2>
-        <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">Broad apartment choices from studios to large 3 BHKs.</div>
-      </div>
-
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
-        <!-- Studio -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">INVESTOR FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">Studio</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">468–480 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Entry/investor format; assess future rental depth in Budigere.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request Studio Plan
-          </button>
+      
+      <!-- Section Header -->
+      <div style="margin-bottom: 2rem;">
+        <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.4rem;">
+          ACRE&amp;KEY PROPERTY DECISION TOOL
         </div>
-
-        <!-- 1 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">COMPACT FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">1 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">753–756 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Compact household / investor format.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 1 BHK Plan
-          </button>
-        </div>
-
-        <!-- 2 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">FAMILY FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">2 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,268–1,280 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Family format; compare usable room dimensions and efficiency.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 2 BHK Plan
-          </button>
-        </div>
-
-        <!-- 2.5 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">FLEX FORMAT</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">2.5 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,389–1,398 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Flex-room proposition for work-from-home or smaller families.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 2.5 BHK Plan
-          </button>
-        </div>
-
-        <!-- 3 BHK -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">LARGE FAMILY</div>
-            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.35rem 0;">3 BHK</h3>
-            <div style="font-size:1rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">1,733–1,813 sq.ft.</div>
-            <div style="font-size:0.85rem; color:#303F4F; line-height:1.5; margin-bottom:0.85rem;">
-              Larger family format; compare carpet efficiency and view/privacy.
-            </div>
-          </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
-            Request 3 BHK Plan
-          </button>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:#182A3D; margin:0 0 0.5rem 0; line-height:1.2;">
+          Official Floor Plans &amp; Space Analysis
+        </h2>
+        <div style="font-size:1.02rem; color:#4A5568; font-weight:500;">
+          Compare official layouts, usable space and orientation across configurations.
         </div>
       </div>
 
-      <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1rem 1.25rem; font-size:0.88rem; color:#303F4F; font-weight:700; margin-bottom:1.5rem;">
-        Wider Community Format: 4 BHK row houses are referenced in the broader masterplan scheme.
+      <!-- Primary Selector Tabs: Studio, 1 BHK, 2 BHK, 3 BHK, Row House -->
+      <div class="songbird-tab-selector-bar" style="display:flex; align-items:center; gap:0.6rem; overflow-x:auto; white-space:nowrap; padding-bottom:0.5rem; margin-bottom:1.25rem; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+        <button type="button" class="songbird-tab-btn active" onclick="songbirdSelectCategory('studio', this)" id="songbirdTabBtn_studio">
+          Studio
+        </button>
+        <button type="button" class="songbird-tab-btn" onclick="songbirdSelectCategory('bhk1', this)" id="songbirdTabBtn_bhk1">
+          1 BHK
+        </button>
+        <button type="button" class="songbird-tab-btn" onclick="songbirdSelectCategory('bhk2', this)" id="songbirdTabBtn_bhk2">
+          2 BHK
+        </button>
+        <button type="button" class="songbird-tab-btn" onclick="songbirdSelectCategory('bhk3', this)" id="songbirdTabBtn_bhk3">
+          3 BHK
+        </button>
+        <button type="button" class="songbird-tab-btn" onclick="songbirdSelectCategory('rowhouse', this)" id="songbirdTabBtn_rowhouse">
+          Row House
+        </button>
       </div>
 
-      <!-- Buyer Diligence checklist -->
-      <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem 1.5rem;">
-        <div style="font-size:0.9rem; font-weight:800; color:#182A3D; margin-bottom:0.5rem;">Floor-Plan Diligence Checklist:</div>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:0.4rem 1rem; font-size:0.85rem; color:#303F4F; font-weight:600;">
-          <div>• Carpet-to-saleable efficiency</div>
-          <div>• Room dimensions</div>
-          <div>• Kitchen/utility usability</div>
-          <div>• Balcony sizes</div>
-          <div>• Natural light and ventilation</div>
-          <div>• Tower / row-house spacing</div>
-          <div>• Homes served per lift</div>
-          <div>• Floor-rise vs actual view benefit</div>
-        </div>
+      <!-- Secondary Selector: Configuration Chips -->
+      <div id="songbirdConfigChipsContainer" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; min-height:42px;">
+        <!-- Populated dynamically via JS -->
       </div>
+
+      <div class="songbird-main-grid" style="display:grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap:1.5rem; align-items:start; width:100%; box-sizing:border-box;">
+        
+        <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
+        <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
+          
+          <!-- Viewer Top Bar -->
+          <div style="display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
+            
+            <!-- Zoom & Fullscreen Controls -->
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <button type="button" onclick="window.songbirdZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+                +
+              </button>
+              <button type="button" onclick="window.songbirdZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+                −
+              </button>
+              <button type="button" onclick="window.songbirdResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+                Reset
+              </button>
+              <button type="button" onclick="window.songbirdTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+                <i data-feather="maximize-2" style="width:13px;height:13px;"></i> View Fullscreen
+              </button>
+            </div>
+          </div>
+
+          <!-- Floor Plan Image Frame -->
+          <div id="songbirdFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.songbirdTriggerFullscreen()">
+            <img id="songbirdFpMainImg" src="" alt="Sattva Songbird Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.4rem;">
+          </div>
+
+          <!-- Caption Bar -->
+          <div id="songbirdFpCaption" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-top:0.5rem; text-align:center;">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
+        <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.08em; color:#8C6734; text-transform:uppercase; margin-bottom:0.15rem;">
+              PLAN AT A GLANCE
+            </div>
+            <h3 id="songbirdGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#182A3D; margin:0 0 0.1rem 0;">
+              Studio Unit (468–480 sq.ft.)
+            </h3>
+            <div id="songbirdGlanceSubtitle" style="font-size:0.82rem; color:#684A20; font-weight:700; margin-bottom:0.85rem;">
+              Towers A &amp; B (Level G–28)
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.85rem; border-bottom:1px solid #E5E7EB;">
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="songbirdGlanceSbua" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">480 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="songbirdGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">295 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="songbirdGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif;">32 sq.ft.</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
+              </div>
+              <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+                <div id="songbirdGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East / West</div>
+                <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
+              </div>
+            </div>
+
+            <!-- Space Efficiency Block -->
+            <div style="background:#182A3D; color:#FFFFFF; border-radius:8px; padding:0.65rem 0.85rem; margin-bottom:1.15rem;">
+              <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
+                SPACE EFFICIENCY
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem;">
+                <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Carpet Efficiency</span>
+                <span id="songbirdGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">61.5%</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.8rem; color:rgba(255,255,255,0.85);">Non-carpet Share</span>
+                <span id="songbirdGlanceNonCarpet" style="font-size:1.05rem; font-weight:800; color:#FFFFFF;">38.5%</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem 1rem; font-size:0.88rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25);">
+            Get Detailed Cost Sheet &rarr;
+          </button>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
+
+<script>
+(function() {
+  const songbirdData = {
+    studio: {
+      name: 'Studio Configurations',
+      configs: [
+        {
+          id: 'studio_unit',
+          title: 'Studio Unit (468–480 sq.ft.)',
+          name: 'Studio Unit (468–480 sq.ft.)',
+          tower: 'Towers A & B (Level G–28)',
+          facing: 'East / West Facing',
+          sbua: 480,
+          carpet: 295,
+          balcony: 32,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-a.webp?v=20260830_songbird'
+        }
+      ]
+    },
+    bhk1: {
+      name: '1 BHK Configurations',
+      configs: [
+        {
+          id: 'bhk1_compact',
+          title: '1 BHK Compact (753–756 sq.ft.)',
+          name: '1 BHK Compact (753–756 sq.ft.)',
+          tower: 'Towers A & C (Level G–28)',
+          facing: 'East Facing',
+          sbua: 756,
+          carpet: 468,
+          balcony: 45,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-b1a.webp?v=20260830_songbird'
+        }
+      ]
+    },
+    bhk2: {
+      name: '2 BHK Configurations',
+      configs: [
+        {
+          id: 'bhk2_std',
+          title: '2 BHK Standard (1,268–1,280 sq.ft.)',
+          name: '2 BHK Standard (1,268–1,280 sq.ft.)',
+          tower: 'Towers B & C (Level 1–28)',
+          facing: 'East Facing',
+          sbua: 1280,
+          carpet: 792,
+          balcony: 95,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-b1.webp?v=20260830_songbird'
+        },
+        {
+          id: 'bhk2_flex',
+          title: '2.5 BHK Flex (1,389–1,398 sq.ft.)',
+          name: '2.5 BHK Flex (1,389–1,398 sq.ft.)',
+          tower: 'Towers C & D (Level 1–28)',
+          facing: 'West Facing',
+          sbua: 1398,
+          carpet: 865,
+          balcony: 110,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-e3a.webp?v=20260830_songbird'
+        }
+      ]
+    },
+    bhk3: {
+      name: '3 BHK Configurations',
+      configs: [
+        {
+          id: 'bhk3_large',
+          title: '3 BHK Large (1,733–1,813 sq.ft.)',
+          name: '3 BHK Large (1,733–1,813 sq.ft.)',
+          tower: 'Towers D & E (Level 1–28)',
+          facing: 'East Facing',
+          sbua: 1813,
+          carpet: 1124,
+          balcony: 155,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-e1.webp?v=20260830_songbird'
+        }
+      ]
+    },
+    rowhouse: {
+      name: 'Row House Configurations',
+      configs: [
+        {
+          id: 'row_house_4bhk',
+          title: '4 BHK Row House (3,200+ sq.ft.)',
+          name: '4 BHK Row House (3,200+ sq.ft.)',
+          tower: 'Exclusive Row House Enclave (G+2 Triplex)',
+          facing: 'East / North Facing',
+          sbua: 3200,
+          carpet: 2150,
+          balcony: 380,
+          image2d: '../../style-guide/assets/floorplans/evergreen/unit-type-g1.webp?v=20260830_songbird'
+        }
+      ]
+    }
+  };
+
+  let activeCategoryKey = 'studio';
+  let activeConfigIndex = 0;
+  let zoomLevel = 1;
+
+  window.songbirdSelectCategory = function(catKey, btnEl) {
+    activeCategoryKey = catKey;
+    activeConfigIndex = 0;
+
+    document.querySelectorAll('.songbird-tab-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+
+    renderChips();
+    updateToolView();
+  };
+
+  window.songbirdSelectConfig = function(idx, chipEl) {
+    activeConfigIndex = idx;
+
+    document.querySelectorAll('.songbird-chip-btn').forEach(c => c.classList.remove('active'));
+    if (chipEl) chipEl.classList.add('active');
+
+    updateToolView();
+  };
+
+  window.songbirdZoom = function(delta) {
+    zoomLevel = Math.min(Math.max(0.8, zoomLevel + delta), 2.5);
+    applyZoom();
+  };
+
+  window.songbirdResetZoom = function() {
+    zoomLevel = 1;
+    applyZoom();
+  };
+
+  function applyZoom() {
+    const img = document.getElementById('songbirdFpMainImg');
+    if (img) {
+      img.style.transform = `scale(${zoomLevel})`;
+      img.style.transition = 'transform 0.2s ease-out';
+    }
+  }
+
+  window.songbirdTriggerFullscreen = function() {
+    const catData = songbirdData[activeCategoryKey];
+    if (!catData) return;
+    const cfg = catData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    let imgSrc = cfg.image2d;
+    let title = `${cfg.name} — ${cfg.tower}`;
+
+    if (window.openFloorPlanModal) {
+      window.openFloorPlanModal(imgSrc, title);
+    }
+  };
+
+  function renderChips() {
+    const container = document.getElementById('songbirdConfigChipsContainer');
+    if (!container) return;
+
+    const catData = songbirdData[activeCategoryKey];
+    if (!catData) return;
+
+    let html = '';
+    catData.configs.forEach((cfg, idx) => {
+      const activeClass = (idx === activeConfigIndex) ? 'active' : '';
+      html += `<button type="button" class="songbird-chip-btn ${activeClass}" onclick="songbirdSelectConfig(${idx}, this)">${cfg.title}</button>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function updateToolView() {
+    const catData = songbirdData[activeCategoryKey];
+    if (!catData) return;
+    const cfg = catData.configs[activeConfigIndex];
+    if (!cfg) return;
+
+    const img = document.getElementById('songbirdFpMainImg');
+    const cap = document.getElementById('songbirdFpCaption');
+
+    if (img) img.src = cfg.image2d;
+    if (cap) cap.textContent = `${cfg.name} — ${cfg.tower}`;
+
+    zoomLevel = 1;
+    applyZoom();
+
+    const titleEl = document.getElementById('songbirdGlanceTitle');
+    const subTitleEl = document.getElementById('songbirdGlanceSubtitle');
+    const sbuaEl = document.getElementById('songbirdGlanceSbua');
+    const carpetEl = document.getElementById('songbirdGlanceCarpet');
+    const balconyEl = document.getElementById('songbirdGlanceBalcony');
+    const facingEl = document.getElementById('songbirdGlanceFacing');
+    const effEl = document.getElementById('songbirdGlanceEff');
+    const nonCarpetEl = document.getElementById('songbirdGlanceNonCarpet');
+
+    if (titleEl) titleEl.textContent = cfg.name;
+    if (subTitleEl) subTitleEl.textContent = cfg.tower;
+    if (sbuaEl) sbuaEl.textContent = `${cfg.sbua.toLocaleString('en-IN')} sq.ft.`;
+    if (carpetEl) carpetEl.textContent = `${cfg.carpet.toLocaleString('en-IN')} sq.ft.`;
+    if (balconyEl) balconyEl.textContent = `${cfg.balcony} sq.ft.`;
+    if (facingEl) facingEl.textContent = cfg.facing;
+
+    const eff = ((cfg.carpet / cfg.sbua) * 100).toFixed(1);
+    const nonCarpet = (100 - eff).toFixed(1);
+
+    if (effEl) effEl.textContent = `${eff}%`;
+    if (nonCarpetEl) nonCarpetEl.textContent = `${nonCarpet}%`;
+  }
+
+  // Initialize on DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      renderChips();
+      updateToolView();
+    });
+  } else {
+    renderChips();
+    updateToolView();
+  }
+})();
+</script>
 
 
 
