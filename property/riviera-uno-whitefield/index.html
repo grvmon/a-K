@@ -334,7 +334,7 @@ html { scroll-behavior: smooth; }
         <!-- 1. Property Image / Gallery -->
         <div class="ak-mobile-img-box" onclick="openAkLightbox(0);">
           <img src="../../style-guide/assets/riviera/riviera_hero.webp?v=20260831_v2" alt="Riviera Uno Main Villa Exterior Render">
-          <div class="ak-mobile-badge-top-left">1 / 6</div>
+          <div class="ak-mobile-badge-top-left">1 / 4</div>
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#182A3D;"></i>
           </button>
@@ -404,10 +404,8 @@ html { scroll-behavior: smooth; }
             <div class="ak-thumb-strip">
               <button class="ak-thumb-btn active" onclick="akGallerySelect(0)" aria-label="View photo 1"><img src="../../style-guide/assets/riviera/riviera_hero.webp?v=20260831_v2" alt="Main Villa Exterior Render"></button>
               <button class="ak-thumb-btn" onclick="akGallerySelect(1)" aria-label="View photo 2"><img src="../../style-guide/assets/riviera/riviera_interior.webp?v=20260831_v2" alt="Living Room Interior Render"></button>
-              <button class="ak-thumb-btn" onclick="akGallerySelect(2)" aria-label="View photo 3"><img src="../../style-guide/assets/riviera/riviera_hero_aerial.webp?v=20260831_v1" alt="Day Aerial Render"></button>
-              <button class="ak-thumb-btn" onclick="akGallerySelect(3)" aria-label="View photo 4"><img src="../../style-guide/assets/riviera/riviera_villa_exterior.webp?v=20260831_v1" alt="Villa Elevation Render"></button>
-              <button class="ak-thumb-btn" onclick="akGallerySelect(4)" aria-label="View photo 5"><img src="../../style-guide/assets/riviera/riviera_masterplan.webp?v=20260831_v1" alt="Masterplan View"></button>
-              <button class="ak-thumb-btn" onclick="akGallerySelect(5)" aria-label="View photo 6"><img src="../../style-guide/assets/riviera/riviera_luna_villa.webp?v=20260831_v1" alt="LUNA Villa Render"></button>
+              <button class="ak-thumb-btn" onclick="akGallerySelect(2)" aria-label="View photo 3"><img src="../../style-guide/assets/riviera/riviera_villa_exterior.webp?v=20260831_v1" alt="Villa Elevation Render"></button>
+              <button class="ak-thumb-btn" onclick="akGallerySelect(3)" aria-label="View photo 4"><img src="../../style-guide/assets/riviera/riviera_luna_villa.webp?v=20260831_v1" alt="LUNA Villa Render"></button>
             </div>
             <button class="ak-view-all-text-btn" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="background:#182A3D; color:#FFF; border:none; padding:0.55rem 1.15rem; font-size:0.9rem; font-weight:600; font-family:'Manrope',sans-serif; border-radius:24px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:background 0.2s ease;">View all photos &rarr;</button>
           </div>
@@ -1120,9 +1118,7 @@ window.akGalleryIndex = 0;
 const akGalleryMedia = [
   { type: 'image', src: '../../style-guide/assets/riviera/riviera_hero.webp?v=20260831_v2', alt: 'Riviera Uno Main Villa Exterior Render' },
   { type: 'image', src: '../../style-guide/assets/riviera/riviera_interior.webp?v=20260831_v2', alt: 'Riviera Uno Villa Living Room Interior Render' },
-  { type: 'image', src: '../../style-guide/assets/riviera/riviera_hero_aerial.webp?v=20260831_v1', alt: 'Riviera Uno Day Aerial Master Plan Perspective' },
   { type: 'image', src: '../../style-guide/assets/riviera/riviera_villa_exterior.webp?v=20260831_v1', alt: 'Riviera Uno Contemporary Villa Facade' },
-  { type: 'image', src: '../../style-guide/assets/riviera/riviera_masterplan.webp?v=20260831_v1', alt: 'Riviera Uno Official Master Plan Site Layout' },
   { type: 'image', src: '../../style-guide/assets/riviera/riviera_luna_villa.webp?v=20260831_v1', alt: 'Riviera Uno LUNA 4 BHK Villa Render (3,490 sq.ft.)' }
 ];
 
