@@ -465,11 +465,16 @@ body.property-page {
 /* ================= STICKY SECTION NAV ================= */
 .prop-section-nav-sticky {
   position: sticky;
-  top: 68px;
+  top: 88px;
   z-index: 990;
   background: #FFFFFF;
   border-bottom: 1px solid var(--prop-border);
   box-shadow: 0 4px 12px rgba(15, 31, 61, 0.03);
+}
+@media (max-width: 991px) {
+  .prop-section-nav-sticky {
+    top: 68px;
+  }
 }
 .prop-nav-inner {
   display: flex;
@@ -1292,7 +1297,12 @@ body.property-page .header-nav {
 }
 
 .prop-section-nav-sticky {
-  top: 68px !important;
+  top: 88px !important;
+}
+@media (max-width: 991px) {
+  .prop-section-nav-sticky {
+    top: 68px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1670,7 +1680,7 @@ body.property-page main {
 .prop-section-nav-sticky {
   position: sticky !important;
   position: -webkit-sticky !important;
-  top: 68px !important;
+  top: 88px !important;
   z-index: 990 !important;
   background: #FFFFFF !important;
   border-bottom: 1px solid #EAE6DF !important;
