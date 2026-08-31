@@ -682,10 +682,7 @@ html { scroll-behavior: smooth; }
       <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
       <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(24,42,61,0.04); position:relative;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
-          <div id="solaceViewModeBox" style="display:flex; align-items:center; gap:0.35rem; background:#F3F4F6; padding:0.25rem; border-radius:6px;">
-            <button type="button" id="solaceBtn2D" class="solace-mode-btn active" onclick="solaceSetViewMode('2d')">2D Floor Plan</button>
-            <button type="button" id="solaceBtn3D" class="solace-mode-btn" onclick="solaceSetViewMode('3d')">3D View</button>
-          </div>
+          <div style="font-size:0.9rem; font-weight:800; color:#182A3D;">2D Official Floor Plan</div>
           <div style="display:flex; align-items:center; gap:0.4rem;">
             <button type="button" onclick="window.solaceZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer;">+</button>
             <button type="button" onclick="window.solaceZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#182A3D; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer;">−</button>
@@ -1283,14 +1280,12 @@ function nextHeroGallerySlide() {
     const mainImg = document.getElementById('solaceFpMainImg');
     const caption = document.getElementById('solaceFpCaption');
 
-    const imgSrc = (currentViewMode === '3d' && cfg.image3d) ? cfg.image3d : cfg.image2d;
-
-    if (mainImg && imgSrc) {
-      mainImg.src = imgSrc;
+    if (mainImg && cfg.image2d) {
+      mainImg.src = cfg.image2d;
       mainImg.alt = cfg.title;
     }
     if (caption) {
-      caption.innerText = `${cfg.title} — ${cfg.tower} (${currentViewMode.toUpperCase()} View)`;
+      caption.innerText = `${cfg.title} — 2D Floor Plan`;
     }
 
     const titleEl = document.getElementById('solaceGlanceTitle');
