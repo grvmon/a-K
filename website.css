@@ -1138,3 +1138,29 @@ body.page-404 .error-404-section{
 .header-nav.transparent-header:not(.scrolled) .nav-links a {
     color: #ffffff !important;
 }
+
+
+/* High Specificity Overrides for Nav CTA */
+.header-nav .nav-cta-btn,
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn,
+.mobile-drawer-cta {
+    background: linear-gradient(135deg, #b06b4b 0%, #8e4c30 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.header-nav .nav-cta-btn:hover,
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn:hover,
+.mobile-drawer-cta:hover {
+    background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
+    box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+    transform: translateY(-1px) !important;
+}
+
+.header-nav .nav-cta-btn span,
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn span,
+.mobile-drawer-cta span {
+    color: #ffffff !important;
+}
