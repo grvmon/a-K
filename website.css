@@ -1722,3 +1722,60 @@ a.sd-btn-gold:hover,
 }
 
 .framework-card, .market-lens-image-wrapper, .summary-banner { border-radius: 4px !important; }
+
+
+/* Override Spider Node Cards to match provided design */
+.spider-node-card {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(213, 209, 200, 0.4) !important;
+    border-radius: 2px !important;
+    padding: 1.15rem 1.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.15rem !important;
+    box-shadow: 0 4px 12px rgba(13, 27, 36, 0.03) !important;
+    transition: transform 250ms ease, box-shadow 250ms ease !important;
+}
+
+.spider-node-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(13, 27, 36, 0.06) !important;
+}
+
+.spider-node-num {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif) !important;
+    font-size: 1.85rem !important;
+    color: #9B6248 !important; /* Antique Brass */
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+}
+
+.spider-node-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+    padding-left: 1.15rem !important;
+    border-left: 1.5px solid #EAE6DF !important;
+    width: 100% !important;
+}
+
+.spider-node-title {
+    font-family: var(--font-body, 'Manrope', sans-serif) !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #0D1B24 !important;
+    line-height: 1.2 !important;
+}
+
+.spider-node-desc {
+    font-family: var(--font-body, 'Manrope', sans-serif) !important;
+    font-size: 0.88rem !important;
+    color: #59616B !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    opacity: 1 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
