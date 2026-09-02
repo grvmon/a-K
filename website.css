@@ -1504,3 +1504,16 @@ body.page-404 .error-404-section{
     /* Let the hero section handle the fallback color to prevent grey flash on the video element itself */
     background-color: transparent !important;
 }
+
+
+/* =========================================
+   DESKTOP TRUST BAR WIDTH (Stop divider at ~50%)
+   ========================================= */
+@media (min-width: 992px) {
+    .hero-section.premium-dark-hero .hero-trust-bar {
+        width: auto !important;
+        max-width: max-content !important;
+        min-width: 50% !important; /* ensure it looks like it stops at 50% */
+        padding-right: 64px !important; /* give the line a nice tail after the text */
+    }
+}
