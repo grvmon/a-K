@@ -1194,3 +1194,35 @@ body.page-404 .error-404-section{
 .header-nav.transparent-header:not(.scrolled) .primary-cta-btn span {
     color: #ffffff !important;
 }
+
+
+/* Force Hover State for ALL Primary CTAs to retain gradient */
+.primary-cta-btn,
+.header-nav .primary-cta-btn,
+.header-nav.transparent-header:not(.scrolled) .primary-cta-btn,
+.mobile-drawer-cta.primary-cta-btn,
+.nav-cta-btn.primary-cta-btn {
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+}
+
+.primary-cta-btn:hover,
+.header-nav .primary-cta-btn:hover,
+.header-nav.transparent-header:not(.scrolled) .primary-cta-btn:hover,
+.mobile-drawer-cta.primary-cta-btn:hover,
+.nav-cta-btn.primary-cta-btn:hover {
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+    box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Ensure ALL Primary CTAs have the arrow */
+.primary-cta-btn span {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+.primary-cta-btn span::after {
+    content: '→' !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+}
