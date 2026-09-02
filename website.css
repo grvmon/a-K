@@ -1226,3 +1226,82 @@ body.page-404 .error-404-section{
     font-size: 18px !important;
     font-weight: 300 !important;
 }
+
+
+/* =========================================
+   MOBILE HERO REFINEMENTS (Aug 2026)
+   ========================================= */
+@media (max-width: 991px) {
+    /* 1. Main Headline */
+    .hero-section .hero-title {
+        line-height: 1.05 !important; /* -8% line height */
+    }
+
+    /* 2. Subtitle */
+    .hero-section .hero-subtitle {
+        font-size: 17.5px !important; /* +8% font size */
+        margin-top: 1.2rem !important; /* Breathing room above */
+        margin-bottom: 2.8rem !important; /* Breathing room below (+8-10%) */
+    }
+
+    /* 3. Space between metrics and CTA */
+    /* 5. Space around CTA (Increase negative space by 15-25%) */
+    .hero-content .hero-cta-group {
+        margin-top: 32px !important; /* Increased space above CTA (from 20px) */
+        margin-bottom: 32px !important; /* Increased space below CTA (from 20px) */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* Keep centered */
+        align-items: center !important;
+    }
+
+    /* 4. CTA Button Tweaks */
+    .hero-cta-group .primary-cta-btn.premium-inline-cta {
+        width: 82% !important; /* -15-20% width (from 100%) */
+        max-width: 320px !important;
+        height: 60px !important; /* Target 60-64px height (-20% from ~78px) */
+        min-height: 60px !important;
+        padding: 0 20px !important;
+        font-size: 13.5px !important; /* -5% text size */
+        margin: 0 auto !important; /* Center horizontally */
+    }
+}
+
+
+/* =========================================
+   DARK GLASSMORPHISM SCROLLED HEADER
+   ========================================= */
+.header-nav.scrolled {
+    background-color: rgba(13, 27, 36, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.header-nav.scrolled .brand-logo-text {
+    color: #ffffff !important;
+}
+
+.header-nav.scrolled .nav-links a {
+    color: #ffffff !important;
+}
+
+.header-nav.scrolled .hamburger-line {
+    background-color: #ffffff !important;
+}
+
+/* Ensure CTA on scrolled header stays consistent */
+.header-nav.scrolled .primary-cta-btn {
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+.header-nav.scrolled .primary-cta-btn:hover {
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+    box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+    transform: translateY(-1px) !important;
+}
+.header-nav.scrolled .primary-cta-btn span {
+    color: #ffffff !important;
+}
