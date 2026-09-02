@@ -1026,10 +1026,10 @@ body.page-404 .error-404-section{
 
 /* CTA Metallic Gradient Button */
 .premium-inline-cta {
-    background: linear-gradient(135deg, #d3ab7f 0%, #a4764b 100%) !important;
-    border: none !important;
+    background: linear-gradient(135deg, #9c5837 0%, #7d442a 100%) !important; /* Brand-aligned warm gradient */
+    border: 1px solid rgba(255,255,255,0.1) !important; /* Subtle inner highlight */
     border-radius: 4px !important;
-    color: #1a1a1a !important;
+    color: #f8f6f1 !important; /* High contrast text for the darker brand color */
     padding: 18px 24px !important;
     width: 100% !important;
     display: flex !important;
@@ -1038,9 +1038,15 @@ body.page-404 .error-404-section{
     font-size: 14px !important;
     letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
-    font-weight: 500 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 20px rgba(125, 68, 42, 0.3) !important; /* Glowing shadow using brand color */
     font-family: var(--font-body) !important;
+    transition: all 0.3s ease !important;
+}
+.premium-inline-cta:hover {
+    background: linear-gradient(135deg, #a6623e 0%, #87492d 100%) !important; /* Slightly brighter on hover */
+    box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4) !important;
+    transform: translateY(-1px) !important;
 }
 .premium-inline-cta span {
     display: flex !important;
