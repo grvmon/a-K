@@ -1305,3 +1305,111 @@ body.page-404 .error-404-section{
 .header-nav.scrolled .primary-cta-btn span {
     color: #ffffff !important;
 }
+
+
+/* =========================================
+   MOBILE HERO SPACING & ORDER FIX (Aug 2026)
+   ========================================= */
+@media (max-width: 991px) {
+    /* 1. Fix ordering */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 32px !important; /* Push content down away from header */
+    }
+    .hero-content .hero-kicker {
+        order: 1 !important;
+        margin-bottom: 16px !important;
+    }
+    .hero-content .hero-title {
+        order: 2 !important;
+        margin-bottom: 16px !important;
+    }
+    .hero-content .hero-subtitle {
+        order: 3 !important;
+        margin-top: 0 !important;
+        margin-bottom: 24px !important; /* Reduced from 2.8rem */
+    }
+    
+    /* Ensure trust bar is order 4 */
+    .hero-trust-bar {
+        order: 4 !important;
+        margin-top: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .hero-content .hero-cta-group {
+        order: 5 !important;
+        margin-top: 28px !important; 
+        margin-bottom: 40px !important;
+    }
+}
+
+
+/* =========================================
+   MOBILE HERO SPACING & ORDER FIX (Aug 2026)
+   ========================================= */
+@media (max-width: 991px) {
+    /* 1. Fix ordering */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 32px !important; /* Push content down away from header */
+    }
+    .hero-content .hero-kicker {
+        order: 1 !important;
+        margin-bottom: 16px !important;
+    }
+    .hero-content .hero-title {
+        order: 2 !important;
+        margin-bottom: 16px !important;
+    }
+    .hero-content .hero-subtitle {
+        order: 3 !important;
+        margin-top: 0 !important;
+        margin-bottom: 24px !important; /* Reduced from 2.8rem */
+    }
+    
+    /* Ensure trust bar is order 4 */
+    .hero-trust-bar {
+        order: 4 !important;
+        margin-top: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .hero-content .hero-cta-group {
+        order: 5 !important;
+        margin-top: 28px !important; 
+        margin-bottom: 40px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 90px !important; /* Enough to clear the 80px header */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* Vertically center content */
+    }
+    
+    .hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        height: 100% !important;
+        flex: 1 !important;
+    }
+    
+    .hero-content {
+        text-align: center !important;
+        align-items: center !important;
+        padding-top: 16px !important;
+    }
+
+    .hero-content .hero-kicker,
+    .hero-content .hero-title,
+    .hero-content .hero-subtitle {
+        text-align: center !important;
+        width: 100% !important;
+    }
+}
