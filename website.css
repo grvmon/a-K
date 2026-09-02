@@ -1488,3 +1488,19 @@ body.page-404 .error-404-section{
         max-width: 140px; /* encourage wrapping */
     }
 }
+
+
+/* =========================================
+   VIDEO HARDWARE ACCELERATION & IDLE FIXES
+   ========================================= */
+.hero-bg-video {
+    /* Prevents the green-screen YUV decoding flash in WebKit/Chromium */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    /* Let the hero section handle the fallback color to prevent grey flash on the video element itself */
+    background-color: transparent !important;
+}
