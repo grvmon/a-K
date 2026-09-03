@@ -2353,19 +2353,32 @@ a.sd-btn-gold:hover,
     .who-cards-track {
         gap: 14px;
         scroll-snap-type: x mandatory;
-        padding-bottom: 14px;
+        padding-bottom: 16px;
+        -webkit-overflow-scrolling: touch;
     }
     .who-card {
-        height: 480px;
-        width: 74vw;
-        min-width: unset;
+        height: 500px;
+        width: 82vw;
+        min-width: 82vw;
+        scroll-snap-align: center;
+        transition: width 0.35s ease;
     }
     .who-card.is-expanded {
-        width: 84vw;
-        min-width: unset;
+        width: 82vw;
+        min-width: 82vw;
     }
     .who-card-inner {
-        padding: 22px 18px 18px;
+        padding: 24px 20px 20px;
+    }
+    .who-card.is-expanded .who-card-copy {
+        max-height: 160px;
+        opacity: 1;
+        margin-bottom: 14px;
+    }
+    .who-card.is-expanded .who-card-action-wrap {
+        opacity: 1;
+        max-height: 50px;
+        margin-top: 8px;
     }
     .who-closing-statement-wrap {
         margin-top: 26px;
