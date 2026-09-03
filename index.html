@@ -127,12 +127,12 @@
               <h3 class="who-card-headline">You have the ability to do the research. You don't have the time to do it properly.</h3>
               <p class="who-card-copy">We filter the market, evaluate the relevant options and bring only the properties worth your attention.</p>
               <div class="who-card-action-wrap">
-                <span class="who-card-arrow-badge" aria-hidden="true">
+                <a href="#" class="who-card-arrow-badge primary-cta-btn" onclick="window.openModal(); return false;" aria-label="Talk to an Advisor">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                     <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                   </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -150,12 +150,12 @@
               <h3 class="who-card-headline">You know what you want. You want to know whether it's actually the right choice.</h3>
               <p class="who-card-copy">We pressure-test the location, developer, pricing, risks and alternatives before you commit significant capital.</p>
               <div class="who-card-action-wrap">
-                <span class="who-card-arrow-badge" aria-hidden="true">
+                <a href="#" class="who-card-arrow-badge primary-cta-btn" onclick="window.openModal(); return false;" aria-label="Talk to an Advisor">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                     <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                   </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -173,12 +173,12 @@
               <h3 class="who-card-headline">You don't need someone to sell you the property. You need someone willing to challenge it.</h3>
               <p class="who-card-copy">We remain independent from the developer and tell you when the numbers, quality or proposition don't hold up.</p>
               <div class="who-card-action-wrap">
-                <span class="who-card-arrow-badge" aria-hidden="true">
+                <a href="#" class="who-card-arrow-badge primary-cta-btn" onclick="window.openModal(); return false;" aria-label="Talk to an Advisor">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                     <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                   </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -196,12 +196,12 @@
               <h3 class="who-card-headline">You need local judgment you can trust, without having to be there.</h3>
               <p class="who-card-copy">We bring local market intelligence, property-level diligence and independent site assessment together, so you can make a decision with the same depth of insight as if you were here.</p>
               <div class="who-card-action-wrap">
-                <span class="who-card-arrow-badge" aria-hidden="true">
+                <a href="#" class="who-card-arrow-badge primary-cta-btn" onclick="window.openModal(); return false;" aria-label="Talk to an Advisor">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                     <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                   </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -219,12 +219,12 @@
               <h3 class="who-card-headline">The more you buy, the more you realise that experience doesn't eliminate bad decisions.</h3>
               <p class="who-card-copy">We help you compare alternatives objectively, challenge assumptions and negotiate from evidence, so you don't pay a premium where it isn't deserved.</p>
               <div class="who-card-action-wrap">
-                <span class="who-card-arrow-badge" aria-hidden="true">
+                <a href="#" class="who-card-arrow-badge primary-cta-btn" onclick="window.openModal(); return false;" aria-label="Talk to an Advisor">
                   <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                     <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                   </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -395,7 +395,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setExpandedCard(idx, true);
     });
 
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.who-card-arrow-badge')) return;
       setExpandedCard(idx, true);
     });
   });
