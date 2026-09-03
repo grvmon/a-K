@@ -1208,18 +1208,50 @@ body.page-404 .error-404-section{
     transform: translateY(-1px) !important;
 }
 
-/* Explicit reset to prevent any cached pseudo-element arrows */
-.primary-cta-btn span::after,
-.premium-inline-cta span::after,
-.nav-cta-btn span::after,
-.mobile-drawer-cta span::after,
-.primary-cta-btn *::after,
-.premium-inline-cta *::after {
-    content: none !important;
-    display: none !important;
+/* =========================================================
+   AUTHORITATIVE CTA BUTTON & ARROW BADGE UNIFICATION (QC)
+   ========================================================= */
+.primary-cta-btn,
+.nav-cta-btn,
+.premium-inline-cta,
+.mobile-drawer-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    padding: 0 16px 0 24px !important; /* Balanced: 24px left, 16px right for optical equilibrium with the 24px circle badge */
+    gap: 12px !important; /* Matched 12px spacing between text and arrow badge */
+    border-radius: 4px !important;
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-/* Circular Diagonal Arrow CTA Badge */
+/* Ensure child text span has no rogue margins, padding, or gaps */
+.primary-cta-btn > span:not(.cta-arrow-badge),
+.nav-cta-btn > span:not(.cta-arrow-badge),
+.premium-inline-cta > span:not(.cta-arrow-badge),
+.mobile-drawer-cta > span:not(.cta-arrow-badge) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+/* Circular Diagonal Arrow Badge */
 .cta-arrow-badge {
     display: inline-flex !important;
     align-items: center !important;
@@ -1232,26 +1264,30 @@ body.page-404 .error-404-section{
     border: 1px solid rgba(255, 255, 255, 0.45) !important;
     background: rgba(255, 255, 255, 0.08) !important;
     color: #FFFFFF !important;
-    margin-left: 10px !important;
+    margin: 0 !important; /* Spacing cleanly handled by button gap: 12px */
+    padding: 0 !important;
     flex-shrink: 0 !important;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+    flex-grow: 0 !important;
     box-sizing: border-box !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 
 .cta-arrow-badge svg {
     width: 11px !important;
     height: 11px !important;
     stroke: currentColor !important;
+    stroke-width: 1.8 !important;
     display: block !important;
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+/* Micro-interaction on hover */
 .primary-cta-btn:hover .cta-arrow-badge,
 .nav-cta-btn:hover .cta-arrow-badge,
 .mobile-drawer-cta:hover .cta-arrow-badge,
 .premium-inline-cta:hover .cta-arrow-badge {
     background: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.95) !important;
     transform: scale(1.06) !important;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
 }
@@ -1261,6 +1297,17 @@ body.page-404 .error-404-section{
 .mobile-drawer-cta:hover .cta-arrow-badge svg,
 .premium-inline-cta:hover .cta-arrow-badge svg {
     transform: translate(1.5px, -1.5px) !important;
+}
+
+/* Hard reset to eliminate any legacy/cached pseudo-element arrows */
+.primary-cta-btn span::after,
+.premium-inline-cta span::after,
+.nav-cta-btn span::after,
+.mobile-drawer-cta span::after,
+.primary-cta-btn *::after,
+.premium-inline-cta *::after {
+    content: none !important;
+    display: none !important;
 }
 
 
@@ -1729,20 +1776,29 @@ a.sd-btn-gold:hover,
     
     .hero-cta-group .primary-cta-btn {
         width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-    
-    /* Force exact wrapping of span to fix arrow */
-    .hero-cta-group .primary-cta-btn span {
-        width: max-content !important;
-        max-width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
         display: inline-flex !important;
         justify-content: center !important;
         align-items: center !important;
+        padding: 0 16px 0 24px !important;
         gap: 12px !important;
-        margin: 0 auto !important; 
+        height: 50px !important;
+    }
+    
+    .hero-cta-group .primary-cta-btn > span:not(.cta-arrow-badge) {
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important; 
+        padding: 0 !important;
+        gap: 0 !important;
+        flex: 0 0 auto !important;
+    }
+
+    .hero-cta-group .primary-cta-btn .cta-arrow-badge {
+        margin: 0 !important;
         flex: 0 0 auto !important;
     }
 }
