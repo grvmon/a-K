@@ -1208,6 +1208,17 @@ body.page-404 .error-404-section{
     transform: translateY(-1px) !important;
 }
 
+/* Explicit reset to prevent any cached pseudo-element arrows */
+.primary-cta-btn span::after,
+.premium-inline-cta span::after,
+.nav-cta-btn span::after,
+.mobile-drawer-cta span::after,
+.primary-cta-btn *::after,
+.premium-inline-cta *::after {
+    content: none !important;
+    display: none !important;
+}
+
 /* Circular Diagonal Arrow CTA Badge */
 .cta-arrow-badge {
     display: inline-flex !important;
