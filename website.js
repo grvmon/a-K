@@ -1,4 +1,15 @@
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('beforeunload', function () {
+    window.scrollTo(0, 0);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
+if (!window.location.hash) {
+    window.scrollTo(0, 0);
+}
 if (typeof feather !== 'undefined') {
 feather.replace();
 }
