@@ -12,7 +12,7 @@
     errPhoneRequired: "Mobile number is required",
     errPhoneInvalid:  "Enter a valid {len}-digit number for {country}",
     errPhoneCode:     "Please select a valid country code",
-    errPhoneUnknown:  "Country code not recognised — please select manually",
+    errPhoneUnknown:  "Country code not recognised. Please select manually",
     errEmailRequired: "Email is required",
     errEmailInvalid:  "Enter a valid email",
     errCooldown:      "You've already submitted recently. Please wait a few seconds before trying again.",
@@ -20,7 +20,7 @@
     successHeading:   "Thank You",
     successBody:      "Your request has been received. Redirecting in {n}s...",
     successBodyStay:  "Your request has been received. Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.",
-    errOffline:       "Connection issue. Your details are safely held — please click Book Free Consultation once more to retry or reach out to support.",
+    errOffline:       "Connection issue. Your details are safely held. Please click Book Free Consultation once more to retry or reach out to support.",
     errSubmit:        "Form submission blocked by server policy. Please email us directly or try again later.",
   };
 
