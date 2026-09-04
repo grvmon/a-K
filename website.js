@@ -3,13 +3,38 @@ if ('scrollRestoration' in history) {
 }
 
 window.addEventListener('beforeunload', function () {
-    window.scrollTo(0, 0);
+    if (!window.location.hash || window.location.hash === '#') {
+        window.scrollTo(0, 0);
+    }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-if (!window.location.hash) {
-    window.scrollTo(0, 0);
+function scrollToHashTarget(smooth) {
+    var hash = window.location.hash;
+    if (hash && hash.length > 1) {
+        try {
+            var target = document.querySelector(hash);
+            if (target) {
+                var headerNav = document.getElementById('header-nav');
+                var headerOffset = headerNav ? headerNav.offsetHeight + 10 : 90;
+                var elemPos = target.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: Math.max(0, elemPos - headerOffset),
+                    behavior: smooth ? 'smooth' : 'auto'
+                });
+            }
+        } catch (e) {}
+    } else {
+        window.scrollTo(0, 0);
+    }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash && window.location.hash !== '#') {
+        scrollToHashTarget(false);
+        setTimeout(function () { scrollToHashTarget(true); }, 150);
+    } else {
+        window.scrollTo(0, 0);
+    }
 if (typeof feather !== 'undefined') {
 feather.replace();
 }
@@ -542,3 +567,16 @@ document.addEventListener('visibilitychange', function() {
         });
     }
 });
+
+// Re-verify hash target position once full page (images/fonts) loads
+window.addEventListener('load', function () {
+    if (window.location.hash && window.location.hash.length > 1) {
+        setTimeout(function () { scrollToHashTarget(true); }, 80);
+    }
+});
+
+// Handle in-page hash changes dynamically
+window.addEventListener('hashchange', function () {
+    scrollToHashTarget(true);
+});
+
