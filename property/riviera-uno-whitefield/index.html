@@ -49,7 +49,14 @@ html { scroll-behavior: smooth; }
 
 </style>
 <style>
-/* ================= ACRE&KEY MASTER MOBILE OPTIMIZATIONS (<= 768px) ================= */
+/* ================= ACRE&KEY MASTER MOBILE OPTIMIZATIONS (<= 991px) ================= */
+@media (max-width: 991px) {
+  .solace-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   /* Container & Outer Card Padding Scaling */
   .prop-container {
@@ -61,20 +68,24 @@ html { scroll-behavior: smooth; }
   div[style*="padding:2.25rem"],
   div[style*="padding: 2.25rem"],
   div[style*="padding:2rem"],
-  div[style*="padding: 2rem"] {
-    padding: 1.25rem 1rem !important;
+  div[style*="padding: 2rem"],
+  div[style*="padding:1.75rem"] {
+    padding: 1.25rem 0.85rem !important;
     border-radius: 12px !important;
   }
 
   /* Scale Section Headings for Mobile */
   h2, h2[style*="font-size:2rem"], h2[style*="font-size: 2rem"],
-  h2[style*="font-size:1.85rem"], h2[style*="font-size: 1.85rem"] {
+  h2[style*="font-size:1.85rem"], h2[style*="font-size: 1.85rem"],
+  h2[style*="font-size:2.3rem"], h2[style*="font-size: 2.3rem"],
+  h2[style*="font-size:2.2rem"], h2[style*="font-size: 2.2rem"] {
     font-size: 1.45rem !important;
     line-height: 1.3 !important;
   }
 
   h3, h3[style*="font-size:1.65rem"], h3[style*="font-size: 1.65rem"],
-  h3[style*="font-size:1.5rem"], h3[style*="font-size: 1.5rem"] {
+  h3[style*="font-size:1.5rem"], h3[style*="font-size: 1.5rem"],
+  h3[style*="font-size:2.07rem"], h3[style*="font-size: 2.07rem"] {
     font-size: 1.25rem !important;
     line-height: 1.35 !important;
   }
@@ -90,7 +101,26 @@ html { scroll-behavior: smooth; }
   div[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr 1fr !important;
-    gap: 0.65rem !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Floor Plan Frame Height on Mobile */
+  #solaceFpFrame {
+    height: 280px !important;
+  }
+
+  /* RERA Number Overflow Protection */
+  div[style*="PRM/KA/RERA"] {
+    font-size: 0.92rem !important;
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* True Cost Gross Value Flex Wrap */
+  div[style*="border-top:1px dashed"] {
+    font-size: 0.9rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.25rem !important;
   }
 
   /* Clean Sub-Navigation Bar */
@@ -120,15 +150,15 @@ html { scroll-behavior: smooth; }
 
   /* Table Mobile Cell Padding & Font Scaling */
   table {
-    font-size: 0.85rem !important;
-  }
-  th {
-    padding: 0.65rem 0.6rem !important;
     font-size: 0.82rem !important;
   }
+  th {
+    padding: 0.55rem 0.4rem !important;
+    font-size: 0.78rem !important;
+  }
   td {
-    padding: 0.65rem 0.6rem !important;
-    font-size: 0.85rem !important;
+    padding: 0.55rem 0.4rem !important;
+    font-size: 0.82rem !important;
   }
 
   /* Price Journey 3-Stage Visual Stack on Mobile */
@@ -163,6 +193,20 @@ html { scroll-behavior: smooth; }
     width: 100% !important;
     text-align: center !important;
     justify-content: center !important;
+  }
+
+  /* Score Modal Responsive Adjustments */
+  .ak-score-modal-overlay {
+    padding: 0.5rem !important;
+  }
+  .ak-score-modal-card {
+    padding: 1.25rem 0.85rem !important;
+    max-height: 92vh !important;
+    overflow-y: auto !important;
+  }
+  .ak-score-modal-card table th,
+  .ak-score-modal-card table td {
+    font-size: 0.78rem !important;
   }
 }
 </style>
