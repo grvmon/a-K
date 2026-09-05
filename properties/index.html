@@ -282,6 +282,8 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      width: 100%;
+      position: relative;
     }
 
     .ak-card-anchor:hover .ak-property-card {
@@ -293,7 +295,7 @@
     .ak-card-img-box {
       position: relative;
       width: 100%;
-      height: 220px;
+      height: 200px;
       overflow: hidden;
       background: #182A3D;
     }
@@ -309,26 +311,34 @@
       transform: scale(1.05);
     }
 
+    .ak-card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(24, 42, 61, 0.35) 0%, rgba(24, 42, 61, 0) 40%, rgba(24, 42, 61, 0.15) 100%);
+      pointer-events: none;
+    }
+
     .ak-card-dev-badge {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(24, 42, 61, 0.88);
+      background: rgba(24, 42, 61, 0.84);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       color: #FFFFFF;
       font-family: 'Manrope', sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.3rem 0.65rem;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.28rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      z-index: 2;
     }
 
     .ak-card-body {
-      padding: 1.35rem 1.25rem;
+      padding: 1.15rem 1.15rem 1rem 1.15rem;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -355,8 +365,8 @@
     .ak-card-loc {
       font-family: 'Manrope', sans-serif;
       font-size: 0.82rem;
-      color: #5E4119;
-      font-weight: 600;
+      color: #485267;
+      font-weight: 500;
       display: flex;
       align-items: center;
       gap: 0.35rem;
@@ -365,134 +375,230 @@
     .ak-card-loc svg {
       width: 14px;
       height: 14px;
-      flex-shrink: 0;
-    }
-
-    .ak-card-price-row {
-      background: #FBF6F3;
-      border: 1px solid rgba(221, 215, 207, 0.6);
-      border-radius: 6px;
-      padding: 0.6rem 0.85rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .ak-card-price-label {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: #374151;
-    }
-
-    .ak-card-price-val {
-      font-family: 'Manrope', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #182A3D;
-    }
-
-    .ak-card-specs {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-      margin-bottom: 1.15rem;
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.84rem;
-      color: #303F4F;
-    }
-
-    .ak-spec-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .ak-spec-item svg {
-      width: 15px;
-      height: 15px;
       color: #5E4119;
       flex-shrink: 0;
     }
 
-    /* Acre&Key Research Assessment Box */
-    .ak-card-score-box {
-      background: #FBF6F3;
-      border: 1px solid rgba(140, 103, 52, 0.25);
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      margin-top: auto;
-      margin-bottom: 1rem;
+    .ak-card-price-container {
+      background: #FDFBF9;
+      border: 1px solid #DDD7CF;
+      border-radius: 6px;
+      padding: 0.6rem 0.85rem;
+      margin-bottom: 0.85rem;
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      justify-content: space-between;
+      gap: 0.5rem;
     }
 
-    .ak-score-badge {
-      background: #182A3D;
-      color: #FFFFFF;
-      border-radius: 6px;
-      padding: 0.45rem 0.65rem;
-      text-align: center;
-      flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(24, 42, 61, 0.15);
-    }
-
-    .ak-score-num {
-      font-family: 'Manrope', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      line-height: 1;
-      display: block;
-      color: #FFFFFF;
-    }
-
-    .ak-score-sub {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1;
-      display: block;
-      margin-top: 2px;
-    }
-
-    .ak-score-verdict-wrap {
+    .ak-price-main-wrap {
       display: flex;
       flex-direction: column;
-      gap: 0.15rem;
-      flex: 1;
+      gap: 0.1rem;
     }
 
-    .ak-verdict-kicker {
+    .ak-price-kicker {
       font-family: 'Manrope', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #5E4119;
     }
 
-    .ak-verdict-badge {
+    .ak-price-val {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #182A3D;
+      line-height: 1.1;
+    }
+
+    .ak-price-upto-wrap {
+      text-align: right;
+    }
+
+    .ak-price-upto-val {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #485267;
+      display: block;
+    }
+
+    .ak-card-specs-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 0.85rem;
       font-family: 'Manrope', sans-serif;
       font-size: 0.84rem;
+      color: #303F4F;
+    }
+
+    .ak-spec-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ak-spec-icon {
+      width: 14px;
+      height: 14px;
+      color: #5E4119;
+      flex-shrink: 0;
+    }
+
+    .ak-spec-text {
+      font-weight: 500;
+      color: #303F4F;
+    }
+
+    /* Acre&Key Verdict Box */
+    .ak-card-verdict-box {
+      background: #FBF6F3;
+      border: 1px solid rgba(140, 103, 52, 0.22);
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      margin-top: auto;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .ak-verdict-score-sq {
+      background: #182A3D;
+      color: #FFFFFF;
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(24, 42, 61, 0.12);
+    }
+
+    .ak-verdict-score-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .ak-verdict-score-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+    .ak-verdict-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ak-verdict-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+    }
+
+    .ak-verdict-kicker {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5E4119;
+    }
+
+    .ak-verdict-why {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #8C6734;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      transition: color 200ms ease;
+    }
+
+    .ak-card-anchor:hover .ak-why-arrow {
+      transform: translateX(2px);
+    }
+
+    .ak-why-arrow {
+      transition: transform 200ms ease;
+    }
+
+    .ak-verdict-statement {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.86rem;
       font-weight: 700;
       color: #182A3D;
       line-height: 1.3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
+    /* Card Footer */
     .ak-card-footer {
       padding-top: 0.75rem;
-      border-top: 1px solid rgba(24, 42, 61, 0.08);
+      border-top: 1px solid #DDD7CF;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
+      gap: 0.5rem;
     }
 
-    .ak-card-cta-link {
+    .ak-card-compare-btn {
+      background: transparent;
+      border: 1px solid #DDD7CF;
+      border-radius: 4px;
+      padding: 0.35rem 0.65rem;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 200ms ease;
+      z-index: 5;
+    }
+
+    .ak-card-compare-btn:hover {
+      border-color: #8C6734;
+      color: #8C6734;
+      background: rgba(140, 103, 52, 0.05);
+    }
+
+    .ak-card-compare-btn.active {
+      background: rgba(140, 103, 52, 0.12);
+      border-color: #8C6734;
+      color: #5E4119;
+      font-weight: 700;
+    }
+
+    .ak-compare-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .ak-card-primary-cta {
       font-family: 'Manrope', sans-serif;
       font-size: 0.88rem;
       font-weight: 700;
@@ -500,7 +606,11 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      transition: transform 200ms ease;
+      transition: color 200ms ease;
+    }
+
+    .ak-card-anchor:hover .ak-card-primary-cta {
+      color: #684A20;
     }
 
     .ak-card-anchor:hover .ak-cta-arrow {
@@ -509,7 +619,7 @@
 
     .ak-cta-arrow {
       display: inline-block;
-      transition: transform 200ms ease;
+      transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     /* No Results State */
