@@ -17,7 +17,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.9,
     verdict: "Strong End-Use Pick",
-    heroImg: "/style-guide/assets/sumadhura_solace_hero_day_aerial.webp",
+    heroImg: "../style-guide/assets/sumadhura_solace_hero_day_aerial.webp",
     url: "/property/sumadhura-solace-whitefield/"
   },
   {
@@ -38,7 +38,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "2–4 Years",
     score: 3.9,
     verdict: "Core Whitefield + Metro-led Family Living",
-    heroImg: "/style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp",
+    heroImg: "../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp",
     url: "/property/sumadhura-folium-whitefield/"
   },
   {
@@ -59,7 +59,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.2,
     verdict: "Mixed-Format Living on Budigere Road",
-    heroImg: "/style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp",
+    heroImg: "../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp",
     url: "/property/sattva-songbird-budigere-road/"
   },
   {
@@ -80,7 +80,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "1–2 Years",
     score: 3.4,
     verdict: "Compact Community Living at Budigere",
-    heroImg: "/style-guide/assets/bliss/sattva_bliss_hero_pool_elevation.webp",
+    heroImg: "../style-guide/assets/bliss/sattva_bliss_hero_pool_elevation.webp",
     url: "/property/sattva-bliss-budigere-cross/"
   },
   {
@@ -101,7 +101,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.5,
     verdict: "Strong Brand + Township Proposition",
-    heroImg: "/style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp",
+    heroImg: "../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp",
     url: "/property/prestige-evergreen-raintree-park"
   },
   {
@@ -122,7 +122,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.3,
     verdict: "Value-Seeking Homes at Budigere Cross",
-    heroImg: "/style-guide/assets/sumadhura_solace_hero_day_aerial.webp",
+    heroImg: "../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp",
     url: "/property/brigade-belvedere-budigere-cross/"
   },
   {
@@ -143,7 +143,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "2–4 Years",
     score: 3.9,
     verdict: "Integrated City Living",
-    heroImg: "/style-guide/assets/sumadhura_solace_hero_day_aerial.webp",
+    heroImg: "../style-guide/assets/alembic/alembic_hero_tower_elevation.webp",
     url: "/property/alembic-cloud-forest-alembic-city/"
   },
   {
@@ -164,7 +164,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.2,
     verdict: "Future Township Scale. Long-Term Bet.",
-    heroImg: "/style-guide/assets/sumadhura_solace_hero_day_aerial.webp",
+    heroImg: "../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp",
     url: "/property/one-residences-sobha-oneworld/"
   },
   {
@@ -185,7 +185,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "4+ Years",
     score: 3.8,
     verdict: "Premium Core-Whitefield Living",
-    heroImg: "/style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp",
+    heroImg: "../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp",
     url: "/property/sumadhura-edition-whitefield/"
   },
   {
@@ -206,7 +206,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "2–4 Years",
     score: 4.0,
     verdict: "Metro-led Convenience + Compact Community",
-    heroImg: "/style-guide/assets/capitol/sumadhura_capitol_hero_elevation_day.webp",
+    heroImg: "../style-guide/assets/capitol/sumadhura_capitol_hero_elevation_day.webp",
     url: "/property/sumadhura-capitol-residences/"
   },
   {
@@ -227,7 +227,7 @@ const PROPERTIES_DATA = [
     possessionCategory: "Ready to Move",
     score: 4.1,
     verdict: "Luxury Villa Proposition",
-    heroImg: "/style-guide/assets/riviera/riviera_hero.webp",
+    heroImg: "../style-guide/assets/riviera/riviera_hero.webp",
     url: "/property/riviera-uno-whitefield/"
   }
 ];
