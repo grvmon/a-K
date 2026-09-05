@@ -70,104 +70,58 @@ document.addEventListener('DOMContentLoaded', function () {
       cardAnchor.className = 'ak-card-anchor';
       cardAnchor.setAttribute('aria-label', `View ${prop.name} property details`);
 
-      const minPriceStr = prop.minPrice ? `₹${prop.minPrice.toFixed(2).replace(/\.00$/, '')} Cr` : prop.priceRange;
-      const hasMaxPrice = prop.maxPrice && prop.maxPrice !== prop.minPrice;
-      const maxPriceStr = hasMaxPrice ? `Up to ₹${prop.maxPrice.toFixed(2).replace(/\.00$/, '')} Cr` : '';
-
       cardAnchor.innerHTML = `
         <article class="ak-property-card">
           <div class="ak-card-img-box">
-            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" loading="lazy" decoding="async" />
-            <div class="ak-card-img-overlay"></div>
+            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" loading="lazy" />
             <span class="ak-card-dev-badge">${prop.developer}</span>
           </div>
           <div class="ak-card-body">
             <div class="ak-card-header">
               <h3 class="ak-card-title">${prop.name}</h3>
-              <div class="ak-card-loc">
-                <i data-feather="map-pin"></i>
-                <span>${prop.sublocation || prop.location}</span>
-              </div>
+              <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
             </div>
             
-            <div class="ak-card-price-container">
-              <div class="ak-price-main-wrap">
-                <span class="ak-price-kicker">STARTING FROM</span>
-                <span class="ak-price-val">${minPriceStr}</span>
-              </div>
-              ${hasMaxPrice ? `
-                <div class="ak-price-upto-wrap">
-                  <span class="ak-price-upto-val">${maxPriceStr}</span>
-                </div>
-              ` : ''}
+            <div class="ak-card-price-row">
+              <span class="ak-card-price-label">Price Range</span>
+              <span class="ak-card-price-val">${prop.priceRange}</span>
             </div>
 
-            <div class="ak-card-specs-grid">
-              <div class="ak-spec-row">
-                <i data-feather="home" class="ak-spec-icon"></i>
-                <span class="ak-spec-text">${prop.config}</span>
+            <div class="ak-card-specs">
+              <div class="ak-spec-item">
+                <i data-feather="home"></i>
+                <span>${prop.config}</span>
               </div>
-              <div class="ak-spec-row">
-                <i data-feather="maximize-2" class="ak-spec-icon"></i>
-                <span class="ak-spec-text">${prop.sizeRange}</span>
+              <div class="ak-spec-item">
+                <i data-feather="maximize-2"></i>
+                <span>${prop.sizeRange}</span>
               </div>
-              <div class="ak-spec-row">
-                <i data-feather="calendar" class="ak-spec-icon"></i>
-                <span class="ak-spec-text">${prop.possession}</span>
+              <div class="ak-spec-item">
+                <i data-feather="calendar"></i>
+                <span>${prop.possession.replace('Possession: ', '')}</span>
               </div>
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div class="ak-card-verdict-box">
-              <div class="ak-verdict-score-sq">
-                <span class="ak-verdict-score-num">${prop.score}</span>
-                <span class="ak-verdict-score-sub">/ 5</span>
+            <div class="ak-card-score-box">
+              <div class="ak-score-badge">
+                <span class="ak-score-num">${prop.score}</span>
+                <span class="ak-score-sub">/ 5</span>
               </div>
-              <div class="ak-verdict-info">
-                <div class="ak-verdict-top-row">
-                  <span class="ak-verdict-kicker">ACRE&KEY VERDICT</span>
-                  <span class="ak-verdict-why">Why this verdict? <span class="ak-why-arrow">→</span></span>
-                </div>
-                <div class="ak-verdict-statement">${prop.verdict}</div>
+              <div class="ak-score-verdict-wrap">
+                <span class="ak-verdict-kicker">Acre&Key Verdict</span>
+                <span class="ak-verdict-badge">${prop.verdict}</span>
               </div>
             </div>
 
             <div class="ak-card-footer">
-              <button type="button" class="ak-card-compare-btn" aria-label="Compare ${prop.name}">
-                <i data-feather="plus" class="ak-compare-icon"></i>
-                <span>+ Compare</span>
-              </button>
-              <span class="ak-card-primary-cta">
-                <span>Explore Property</span>
-                <span class="ak-cta-arrow">→</span>
-              </span>
+              <span class="ak-card-cta-link">View Property <span class="ak-cta-arrow">→</span></span>
             </div>
           </div>
         </article>
       `;
 
       gridContainer.appendChild(cardAnchor);
-
-      const compareBtn = cardAnchor.querySelector('.ak-card-compare-btn');
-      if (compareBtn) {
-        compareBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          this.classList.toggle('active');
-          const span = this.querySelector('span');
-          if (this.classList.contains('active')) {
-            if (span) span.textContent = '✓ Added';
-            this.style.borderColor = '#8C6734';
-            this.style.background = 'rgba(140, 103, 52, 0.12)';
-            this.style.color = '#5E4119';
-          } else {
-            if (span) span.textContent = '+ Compare';
-            this.style.borderColor = '';
-            this.style.background = '';
-            this.style.color = '';
-          }
-        });
-      }
     });
 
     if (typeof feather !== 'undefined') {
