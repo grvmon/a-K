@@ -6,7 +6,7 @@ const PROPERTY_DATA = {
   "builder": "Prestige",
   "badge": "Prestige Township Precinct",
   "tagline": "Strong Brand + Township Proposition",
-  "rating": 3.50,
+  "rating": 4.11,
   "reviewsCount": 128,
   "shortDescription": "1, 2, 3, 3 BHK + Study & 4 BHK Residences in a 24-Acre Plan",
   "secondaryLine": "24-Acre Plan | 14 Towers | ~86,000 sq.ft. Clubhouse & 70% Open Area",

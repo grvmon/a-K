@@ -99,7 +99,7 @@ const PROPERTIES_DATA = [
     possession: "Possession: Jun 2030",
     possessionYear: 2030,
     possessionCategory: "4+ Years",
-    score: 3.5,
+    score: 4.11,
     verdict: "Strong Brand + Township Proposition",
     heroImg: "../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp",
     url: "/property/prestige-evergreen-raintree-park"
