@@ -1313,7 +1313,7 @@ body.property-page .header-nav:not(.scrolled) .hamburger-line {
 }
 
 body.property-page .header-nav.scrolled {
-  background-color: rgba(13, 27, 36, 0.94) !important;
+  background: rgba(13, 27, 36, 0.92) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -1334,6 +1334,15 @@ body.property-page .header-nav.scrolled .nav-links a:hover {
 
 body.property-page .header-nav.scrolled .hamburger-line {
   background-color: #FFFFFF !important;
+}
+
+/* CTA Arrow Pseudo-Element Suppression */
+body.property-page .primary-cta-btn::after,
+body.property-page .nav-cta-btn::after,
+body.property-page .sd-btn-gold::after,
+body.property-page .mobile-drawer-cta::after {
+  content: none !important;
+  display: none !important;
 }
 
 .prop-section-nav-sticky {
