@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>acre&key - Style Guide</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="../website.min.css?v=20260907_abha_v6">
+    <link rel="stylesheet" href="../website.min.css?v=20260907_abha_v7">
     <link rel="stylesheet" href="../lead-form.min.css?v=20260907_min_v1">
     <style>
         .sg-container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 8rem; }
@@ -140,8 +140,15 @@
                         </svg>
                       </a>
                     </div>
-                  </div>
                 </div>
+            </div>
+            <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                <button type="button" class="sd-btn sd-btn-primary" onclick="if(window.playAdvisorChime){window.playAdvisorChime();}else{new Audio('assets/advisor-chime.wav').play();}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                    <span>Play Advisor Chime Sound</span>
+                </button>
+                <a href="assets/advisor-chime.wav" target="_blank" class="sd-btn sd-btn-secondary" style="display: inline-flex; align-items: center; gap: 6px;">Direct Audio File (.wav)</a>
+                <span style="font-size: 0.9rem; color: var(--deep-slate);">Click to test &amp; validate the incoming text notification chime in your browser.</span>
             </div>
         </div>
     </div>
