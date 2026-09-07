@@ -701,12 +701,19 @@ window.addEventListener('hashchange', function () {
     });
 
     function mountAdvisorUnit() {
-        if (document.getElementById("advisorFloatingUnit")) return;
-        
-        var aside = document.createElement("aside");
-        aside.className = "advisor-floating-unit";
-        aside.id = "advisorFloatingUnit";
-        aside.setAttribute("aria-label", "Home Buying Advisor Assistance");
+        var aside = document.getElementById("advisorFloatingUnit");
+        if (!aside) {
+            aside = document.createElement("aside");
+            aside.className = "advisor-floating-unit";
+            aside.id = "advisorFloatingUnit";
+            aside.setAttribute("aria-label", "Home Buying Advisor Assistance");
+            var modal = document.getElementById("lfModalOverlay");
+            if (modal && modal.parentNode) {
+                modal.parentNode.insertBefore(aside, modal);
+            } else {
+                document.body.appendChild(aside);
+            }
+        }
         
         aside.innerHTML = 
           "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" title=\"Chat with Abha\">" +
@@ -744,16 +751,9 @@ window.addEventListener('hashchange', function () {
             "</div>" +
           "</div>";
         
-        var modal = document.getElementById("lfModalOverlay");
-        if (modal && modal.parentNode) {
-            modal.parentNode.insertBefore(aside, modal);
-        } else {
-            document.body.appendChild(aside);
-        }
-
         // Pop up the speech bubble like an incoming chat text after a natural delay
         setTimeout(function() {
-            var bubble = document.getElementById("advisorSpeechBubble");
+            var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
             if (bubble) {
                 bubble.classList.add("is-popped");
                 playChatSound();
