@@ -580,3 +580,60 @@ window.addEventListener('hashchange', function () {
     scrollToHashTarget(true);
 });
 
+
+
+// Floating Advisor Concierge Unit Auto-mount for All Pages
+(function() {
+    function mountAdvisorUnit() {
+        if (document.getElementById("advisorFloatingUnit")) return;
+        
+        var aside = document.createElement("aside");
+        aside.className = "advisor-floating-unit";
+        aside.id = "advisorFloatingUnit";
+        aside.setAttribute("aria-label", "Home Buying Advisor Assistance");
+        
+        aside.innerHTML = 
+          "<div class=\"advisor-speech-bubble\">" +
+            "<div class=\"advisor-speech-title\">Hi! I’m Abha</div>" +
+            "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
+            "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\"></div>" +
+          "</div>" +
+          "<div class=\"advisor-main-card\">" +
+            "<div class=\"advisor-avatar-wrap\">" +
+              "<svg class=\"advisor-accent-rays\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">" +
+                "<path d=\"M7 17H2\" stroke=\"#9f5334\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>" +
+                "<path d=\"M9 11L4 6\" stroke=\"#9f5334\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>" +
+                "<path d=\"M15 7L13 2\" stroke=\"#9f5334\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>" +
+              "</svg>" +
+              "<img src=\"" + (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-abha.webp" : "https://acrenkey.com/style-guide/assets/advisor-abha.webp") + "\" alt=\"Abha - Home Buying Advisor\" class=\"advisor-avatar-img\" width=\"76\" height=\"76\" loading=\"lazy\">" +
+            "</div>" +
+            "<div class=\"advisor-card-content\">" +
+              "<div class=\"advisor-card-heading\">Looking for<br>your next home?</div>" +
+              "<div class=\"advisor-status-row\">" +
+                "<span class=\"advisor-status-dot\" aria-hidden=\"true\"></span>" +
+                "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
+              "</div>" +
+              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.openModal){window.openModal();} return false;\" aria-label=\"Talk to Abha now\">" +
+                "<span>Talk Now</span>" +
+                "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
+                  "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
+                  "<polyline points=\"12 5 19 12 12 19\"></polyline>" +
+                "</svg>" +
+              "</a>" +
+            "</div>" +
+          "</div>";
+        
+        var modal = document.getElementById("lfModalOverlay");
+        if (modal && modal.parentNode) {
+            modal.parentNode.insertBefore(aside, modal);
+        } else {
+            document.body.appendChild(aside);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", mountAdvisorUnit);
+    } else {
+        mountAdvisorUnit();
+    }
+})();
