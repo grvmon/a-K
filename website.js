@@ -585,6 +585,9 @@ window.addEventListener('hashchange', function () {
 // Floating Advisor Concierge Unit Auto-mount for All Pages
 (function() {
     var sharedAudioCtx = null;
+    var chimePlayed = false;
+    var chimePending = false;
+
     function getAudioContext() {
         if (!sharedAudioCtx) {
             var AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -605,7 +608,7 @@ window.addEventListener('hashchange', function () {
             osc1.frequency.setValueAtTime(587.33, t);
             osc1.frequency.exponentialRampToValueAtTime(880, t + 0.07);
             gain1.gain.setValueAtTime(0.001, t);
-            gain1.gain.linearRampToValueAtTime(0.18, t + 0.015);
+            gain1.gain.linearRampToValueAtTime(0.24, t + 0.015);
             gain1.gain.exponentialRampToValueAtTime(0.001, t + 0.14);
             osc1.connect(gain1);
             gain1.connect(ctx.destination);
@@ -618,65 +621,84 @@ window.addEventListener('hashchange', function () {
             osc2.type = "sine";
             osc2.frequency.setValueAtTime(1174.66, t + 0.08);
             gain2.gain.setValueAtTime(0.001, t + 0.08);
-            gain2.gain.linearRampToValueAtTime(0.22, t + 0.095);
+            gain2.gain.linearRampToValueAtTime(0.28, t + 0.095);
             gain2.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
             osc2.connect(gain2);
             gain2.connect(ctx.destination);
             osc2.start(t + 0.08);
             osc2.stop(t + 0.48);
+            chimePlayed = true;
+            chimePending = false;
             return true;
         } catch(e) {
             return false;
         }
     }
 
-    function playChatSound() {
-        var played = false;
+    function playChatSound(force) {
+        if (chimePlayed && !force) return;
         var ctx = getAudioContext();
         if (ctx) {
             if (ctx.state === "running") {
-                played = triggerChime(ctx);
+                triggerChime(ctx);
+                return;
             } else if (ctx.state === "suspended") {
                 ctx.resume().then(function() {
-                    if (ctx.state === "running" && !played) {
-                        played = triggerChime(ctx);
+                    if (ctx.state === "running") {
+                        triggerChime(ctx);
+                    } else {
+                        chimePending = true;
                     }
-                }).catch(function() {});
+                }).catch(function() {
+                    chimePending = true;
+                });
             }
         }
         
         // HTML5 Audio fallback
-        if (!played) {
-            try {
-                var chimeUrl = (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-chime.wav" : "https://acrenkey.com/style-guide/assets/advisor-chime.wav");
-                var audio = new Audio(chimeUrl);
-                audio.volume = 0.5;
-                var p = audio.play();
-                if (p && p.catch) {
-                    p.then(function() { played = true; }).catch(function() {});
-                }
-            } catch(e) {}
+        try {
+            var chimeUrl = (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-chime.wav" : "https://acrenkey.com/style-guide/assets/advisor-chime.wav");
+            var audio = new Audio(chimeUrl);
+            audio.volume = 0.6;
+            var p = audio.play();
+            if (p && p.then) {
+                p.then(function() {
+                    chimePlayed = true;
+                    chimePending = false;
+                }).catch(function() {
+                    chimePending = true;
+                });
+            }
+        } catch(e) {
+            chimePending = true;
         }
     }
 
     // Expose globally for direct validation
-    window.playAdvisorChime = playChatSound;
+    window.playAdvisorChime = function() {
+        playChatSound(true);
+    };
 
-    // Eagerly unlock audio on user gesture anywhere on the page
+    // Eagerly unlock audio & flush pending chime on first user gesture anywhere on the page
     function unlockOnGesture() {
         var ctx = getAudioContext();
         if (ctx && ctx.state === "suspended") {
-            ctx.resume().catch(function() {});
+            ctx.resume().then(function() {
+                if (chimePending) {
+                    triggerChime(ctx);
+                }
+            }).catch(function() {});
+        } else if (chimePending && ctx && ctx.state === "running") {
+            triggerChime(ctx);
+        } else if (chimePending) {
+            playChatSound(true);
         }
-        window.removeEventListener("pointerdown", unlockOnGesture);
-        window.removeEventListener("touchstart", unlockOnGesture);
-        window.removeEventListener("click", unlockOnGesture);
-        window.removeEventListener("keydown", unlockOnGesture);
     }
-    window.addEventListener("pointerdown", unlockOnGesture, { once: true, passive: true });
-    window.addEventListener("touchstart", unlockOnGesture, { once: true, passive: true });
-    window.addEventListener("click", unlockOnGesture, { once: true, passive: true });
-    window.addEventListener("keydown", unlockOnGesture, { once: true, passive: true });
+
+    // Attach to all user interaction events
+    ["pointerdown", "touchstart", "click", "keydown", "scroll"].forEach(function(evt) {
+        window.addEventListener(evt, unlockOnGesture, { passive: true });
+    });
 
     function mountAdvisorUnit() {
         if (document.getElementById("advisorFloatingUnit")) return;
@@ -687,7 +709,7 @@ window.addEventListener('hashchange', function () {
         aside.setAttribute("aria-label", "Home Buying Advisor Assistance");
         
         aside.innerHTML = 
-          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.openModal){window.openModal();} return false;\" title=\"Chat with Abha\">" +
+          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" title=\"Chat with Abha\">" +
             "<div class=\"advisor-speech-title\">Hi! I’m Abha</div>" +
             "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
             "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\">" +
@@ -712,7 +734,7 @@ window.addEventListener('hashchange', function () {
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
-              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.openModal){window.openModal();} return false;\" aria-label=\"Talk to Abha now\">" +
+              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" aria-label=\"Talk to Abha now\">" +
                 "<span>Talk Now</span>" +
                 "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
                   "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
