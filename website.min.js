@@ -728,10 +728,10 @@ window.addEventListener('hashchange', function () {
           "</div>" +
           "<div class=\"advisor-main-card\">" +
             "<div class=\"advisor-avatar-wrap\">" +
-              "<svg class=\"advisor-accent-rays\" width=\"30\" height=\"30\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\">" +
-                "<path d=\"M10 23H2\" stroke=\"#be7555\" stroke-width=\"3.6\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M13 14L5 7\" stroke=\"#be7555\" stroke-width=\"3.6\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M22 9L18 1\" stroke=\"#be7555\" stroke-width=\"3.6\" stroke-linecap=\"round\"/>" +
+              "<svg class=\"advisor-accent-rays\" width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\">" +
+                "<path d=\"M13 20L8 16\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
+                "<path d=\"M16 14L11 8\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
+                "<path d=\"M23 9L20 3\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
               "</svg>" +
               "<img src=\"" + (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-abha.webp" : "https://acrenkey.com/style-guide/assets/advisor-abha.webp") + "\" alt=\"Abha - Home Buying Advisor\" class=\"advisor-avatar-img\" width=\"76\" height=\"76\" loading=\"lazy\">" +
               "<span class=\"advisor-status-dot\" aria-label=\"Abha is online\"></span>" +
@@ -741,8 +741,8 @@ window.addEventListener('hashchange', function () {
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
-              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" aria-label=\"Talk to Abha now\">" +
-                "<span>Talk Now</span>" +
+              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" aria-label=\"Chat with Abha now\">" +
+                "<span>Chat Now</span>" +
                 "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
                   "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
                   "<polyline points=\"12 5 19 12 12 19\"></polyline>" +
