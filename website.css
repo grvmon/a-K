@@ -2623,15 +2623,15 @@ a.sd-btn-gold:hover,
     border: 1px solid rgba(235, 225, 218, 0.6);
     border-radius: 14px;
     padding: 8px 16px;
-    margin-right: 28px;
-    box-shadow: 0 4px 14px rgba(13, 27, 36, 0.08);
+    margin-right: 24px;
+    box-shadow: 0 4px 14px rgba(13, 27, 36, 0.06);
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
 .advisor-speech-title {
-    font-family: var(--font-body, 'Manrope', sans-serif);
+    font-family: var(--font-body, Manrope, sans-serif);
     font-size: 13.5px;
     font-weight: 700;
     color: var(--deep-navy, #0D1B24);
@@ -2639,7 +2639,7 @@ a.sd-btn-gold:hover,
 }
 
 .advisor-speech-desc {
-    font-family: var(--font-body, 'Manrope', sans-serif);
+    font-family: var(--font-body, Manrope, sans-serif);
     font-size: 12px;
     font-weight: 500;
     color: var(--deep-slate, #59616B);
@@ -2662,77 +2662,50 @@ a.sd-btn-gold:hover,
 .advisor-main-card {
     position: relative;
     background: #FFFFFF;
-    border: 1px solid rgba(221, 215, 207, 0.8);
-    border-radius: 26px;
-    padding: 16px 20px 16px 16px;
-    box-shadow: 0 16px 40px -8px rgba(13, 27, 36, 0.16), 0 4px 14px rgba(13, 27, 36, 0.06);
+    border: 1px solid rgba(220, 215, 208, 0.45);
+    border-radius: 34px;
+    padding: 16px 22px 16px 18px;
+    box-shadow: 0 18px 48px -6px rgba(13, 27, 36, 0.14), 0 4px 16px rgba(13, 27, 36, 0.04);
     display: flex;
     align-items: center;
     gap: 16px;
-    max-width: 380px;
+    max-width: 385px;
     box-sizing: border-box;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .advisor-main-card:hover {
-    box-shadow: 0 20px 48px -8px rgba(13, 27, 36, 0.2), 0 6px 18px rgba(13, 27, 36, 0.08);
+    box-shadow: 0 22px 54px -6px rgba(13, 27, 36, 0.18), 0 6px 20px rgba(13, 27, 36, 0.06);
 }
 
 /* Avatar Wrap & Accent Rays */
 .advisor-avatar-wrap {
     position: relative;
-    width: 76px;
-    height: 76px;
+    width: 78px;
+    height: 78px;
     flex-shrink: 0;
 }
 
 .advisor-accent-rays {
     position: absolute;
-    top: -9px;
-    left: -9px;
-    width: 22px;
-    height: 22px;
+    top: -14px;
+    left: -14px;
+    width: 30px;
+    height: 30px;
     pointer-events: none;
     z-index: 2;
 }
 
 .advisor-avatar-img {
-    width: 76px;
-    height: 76px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    box-shadow: 0 4px 12px rgba(13, 27, 36, 0.1);
+    box-shadow: 0 4px 12px rgba(13, 27, 36, 0.08);
 }
 
-/* Card Content */
-.advisor-card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex: 1;
-    min-width: 0;
-}
-
-.advisor-card-heading {
-    font-family: var(--font-body, 'Manrope', sans-serif);
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.22;
-    color: var(--deep-navy, #0D1B24);
-    letter-spacing: -0.015em;
-}
-
-.advisor-status-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--font-body, 'Manrope', sans-serif);
-    font-size: 12.5px;
-    color: #485267;
-    line-height: 1;
-}
-
+/* Green Status Light (Kept as Avatar Badge per User Instruction) */
 .advisor-status-dot {
     position: absolute;
     bottom: 0px;
@@ -2759,16 +2732,38 @@ a.sd-btn-gold:hover,
         box-shadow: 0 0 0 0 rgba(0, 168, 68, 0);
     }
 }
-    70% {
-        box-shadow: 0 0 0 6px rgba(0, 168, 68, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 68, 0);
-    }
+
+/* Card Content */
+.advisor-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.advisor-card-heading {
+    font-family: var(--font-body, Manrope, sans-serif);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: #0B1B28;
+    letter-spacing: -0.02em;
+}
+
+.advisor-status-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-body, Manrope, sans-serif);
+    font-size: 13.5px;
+    color: #5D6775;
+    line-height: 1;
+    margin-bottom: 3px;
 }
 
 .advisor-status-text strong {
-    color: #9f5334;
+    color: #8F3E1A;
     font-weight: 700;
 }
 
@@ -2777,34 +2772,34 @@ a.sd-btn-gold:hover,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
-    height: 40px;
-    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%);
+    height: 42px;
+    background: #8F3E1A;
     color: #FFFFFF !important;
-    border-radius: 12px;
-    font-family: var(--font-body, 'Manrope', sans-serif);
-    font-size: 14.5px;
+    border-radius: 14px;
+    font-family: var(--font-body, Manrope, sans-serif);
+    font-size: 15px;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(159, 83, 52, 0.28);
+    box-shadow: 0 4px 14px rgba(143, 62, 26, 0.32);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     margin-top: 2px;
     box-sizing: border-box;
 }
 
 .advisor-talk-btn:hover {
-    background: linear-gradient(135deg, #c77f5f 0%, #a85a3a 100%);
+    background: #7B3414;
     color: #FFFFFF !important;
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(159, 83, 52, 0.38);
+    box-shadow: 0 6px 18px rgba(143, 62, 26, 0.4);
 }
 
 .advisor-talk-arrow {
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     transition: transform 0.2s ease;
 }
 
@@ -2839,39 +2834,36 @@ a.sd-btn-gold:hover,
         font-size: 11px;
     }
     .advisor-main-card {
-        padding: 10px 14px 10px 12px;
-        gap: 10px;
-        border-radius: 20px;
+        padding: 12px 14px 12px 12px;
+        gap: 12px;
+        border-radius: 26px;
         max-width: 100%;
     }
     .advisor-avatar-wrap {
-        width: 60px;
-        height: 60px;
+        width: 66px;
+        height: 66px;
     }
     .advisor-avatar-img {
-        width: 60px;
-        height: 60px;
-    }
-    .advisor-card-heading {
-        font-size: 14px;
-        line-height: 1.2;
+        width: 66px;
+        height: 66px;
     }
     .advisor-status-dot {
         bottom: 0px;
         right: 0px;
-        width: 18px;
-        height: 18px;
+        width: 19px;
+        height: 19px;
         border-width: 2.5px;
     }
+    .advisor-card-heading {
+        font-size: 15.5px;
+        line-height: 1.18;
+    }
     .advisor-status-row {
-        font-size: 11px;
+        font-size: 12px;
     }
     .advisor-talk-btn {
-        height: 35px;
-        font-size: 13px;
-        border-radius: 9px;
+        height: 38px;
+        font-size: 14px;
+        border-radius: 12px;
     }
 }
-
-
-
