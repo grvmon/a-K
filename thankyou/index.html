@@ -3,97 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Advisory</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Thank You | acre&Key</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --deep-navy: #0D1B24;
-            --refined-brass: #7d442a;
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Manrope', sans-serif;
-            --bg-color: #F9F8F6;
+            --bg-color: #f7f6f4;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --divider: rgba(0, 0, 0, 0.1);
         }
-        body {
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
             font-family: var(--font-sans);
             background-color: var(--bg-color);
-            color: var(--deep-navy);
+            color: var(--text-main);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 80vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
+            overflow: hidden;
         }
-        .thank-you-container {
-            max-width: 500px;
-            padding: 40px 20px;
-            background: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(13, 27, 36, 0.08);
+
+        /* Replace this URL with your actual background image */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Creates the smooth fade from left to right */
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+            mask-image: linear-gradient(to right, transparent 0%, black 40%);
+            z-index: 1;
         }
-        .icon-circle {
-            width: 80px;
-            height: 80px;
-            background: rgba(125, 68, 42, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px auto;
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
-        .icon-circle svg {
-            width: 40px;
-            height: 40px;
-            color: var(--refined-brass);
+
+        .hero-content {
+            max-width: 540px;
+            padding: 80px 0;
         }
+
+        .kicker {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 24px;
+        }
+
         h1 {
             font-family: var(--font-serif);
-            font-size: 40px;
+            font-size: 72px;
             font-weight: 400;
-            margin: 0 0 16px 0;
-            color: var(--deep-navy);
+            line-height: 1.1;
+            color: var(--text-main);
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
         }
-        p {
+
+        .hero-content p {
             font-size: 16px;
-            line-height: 1.6;
-            color: rgba(13, 27, 36, 0.7);
-            margin: 0 0 32px 0;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 24px;
         }
-        .home-btn {
-            display: inline-flex;
+
+        .hero-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Far Right Overlay Text */
+        .right-motto {
+            position: absolute;
+            right: 40px;
+            top: 120px;
+            font-family: var(--font-sans);
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            line-height: 2.2;
+            color: rgba(0, 0, 0, 0.6);
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .motto-line {
+            width: 40px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 16px;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: var(--bg-color);
+            position: relative;
+            z-index: 2;
+            padding: 60px 0;
+            /* Optional subtle top border to ground the hero fade if needed */
+            /* border-top: 1px solid var(--divider); */
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 0 30px;
+            position: relative;
+        }
+
+        /* Vertical dividers */
+        .feature-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 15%;
+            bottom: 15%;
+            width: 1px;
+            background-color: var(--divider);
+        }
+
+        .feature-icon {
+            display: flex;
             align-items: center;
             justify-content: center;
-            height: 48px;
-            padding: 0 32px;
-            background: linear-gradient(135deg, #be7555 0%, #9f5334 100%);
-            color: #FFFFFF;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 20px;
+            color: var(--text-main);
         }
-        .home-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(125, 68, 42, 0.3);
-            background: linear-gradient(135deg, #c78162 0%, #a85a3a 100%);
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke-width: 1.2;
+        }
+
+        .feature-title {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .feature-desc {
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: var(--text-muted);
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 { font-size: 56px; }
+            .hero-bg { width: 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                width: 100%;
+                /* Change fade to vertical for mobile */
+                -webkit-mask-image: linear-gradient(to top, transparent 0%, black 60%);
+                mask-image: linear-gradient(to top, transparent 0%, black 60%);
+                opacity: 0.2; /* Fade it back so text is legible over it */
+            }
+            .right-motto {
+                display: none; /* Hide side text on small screens */
+            }
+            .hero-content {
+                padding: 60px 0;
+            }
+            h1 {
+                font-size: 46px;
+            }
+            .features-section {
+                padding: 40px 20px 80px 20px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .feature-item:not(:last-child)::after {
+                display: none; /* Remove dividers on mobile */
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="thank-you-container">
-        <div class="icon-circle">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- The background image with the fade overlay -->
+        <div class="hero-bg"></div>
+        
+        <div class="container">
+            <!-- Right Motto Overlay -->
+            <div class="right-motto">
+                A<br>BETTER<br>TOMORROW<br>BEGINS<br>AT HOME
+                <div class="motto-line"></div>
+            </div>
+
+            <div class="hero-content">
+                <span class="kicker">THANK YOU</span>
+                <h1>Your request<br>is in good hands.</h1>
+                <p>An acre&Key Property Concierge will review your requirements and reach out personally to understand what you're looking for.</p>
+                <p>Expect thoughtful guidance, relevant opportunities and a more considered approach to finding your next property.</p>
+            </div>
         </div>
-        <h1>Thank You</h1>
-        <p>We have successfully received your details. One of our property advisors will be in touch with you shortly to help you shortlist, evaluate, and negotiate the right property.</p>
-        <a href="/" class="home-btn">Return to Homepage</a>
-    </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Lock Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="11" width="14" height="10" rx="2" ry="2"></rect>
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-title">PRIVATE</div>
+                    <div class="feature-desc">Your requirements are handled discreetly.</div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Sprout/Leaf Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22v-7"></path>
+                            <path d="M12 15c-3 0-6-3-6-6v-2h2c3 0 6 3 6 6v2z"></path>
+                            <path d="M12 15c3 0 6-3 6-6v-2h-2c-3 0-6 3-6 6v2z"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-title">CURATED</div>
+                    <div class="feature-desc">We share only what is relevant to you.</div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Person Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="feature-title">PERSONAL</div>
+                    <div class="feature-desc">One dedicated point of contact throughout your search.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
