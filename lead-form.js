@@ -1021,7 +1021,9 @@
         }
         var href = el.getAttribute('href');
         if (el.tagName === 'A' && href) {
-          if (href === '/' || href === '/' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
+          var isAnchorOnly = href === '#' || href.startsWith('#');
+          var isPageNavigation = !isAnchorOnly && href !== '' && !href.startsWith('javascript:');
+          if (isPageNavigation || href === '/' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
             return;
           }
         }
