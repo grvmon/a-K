@@ -4,256 +4,377 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | acre&Key</title>
-    <!-- Imports the global website styles so it perfectly matches your branding -->
     <link rel="stylesheet" href="../website.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Force 1-fold layout */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevents scrolling */
-            background-color: #f7f6f4;
-            font-family: var(--font-body), 'Manrope', sans-serif;
+        :root {
+            --deep-navy: #0D1B24;
+            --muted-slate: #485267;
+            --brand-copper: #be7555;
+            --brand-copper-dark: #9f5334;
+            --warm-bg: #F7F5F0;
+            --divider: rgba(13, 27, 36, 0.08);
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        .thankyou-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Exactly 1 fold */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--warm-bg);
+            color: var(--deep-navy);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden; /* Strict 1-fold on desktop */
+        }
+
+        .page-viewport {
+            height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            background-color: var(--warm-bg);
         }
 
-        /* Hero Image Fade */
-        .hero-bg {
+        /* ─── HEADER ─── */
+        .site-header {
+            position: relative;
+            z-index: 10;
+            padding: 24px 0 12px 0;
+            flex-shrink: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .header-logo {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        /* Enforce dark navy logo text (overriding website.min.css transparent-header white styles) */
+        .header-logo .brand-logo-text {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--deep-navy) !important;
+            letter-spacing: -0.02em;
+            text-transform: lowercase;
+            display: inline-block;
+        }
+
+        /* ─── HERO STAGE (Middle Fold) ─── */
+        .hero-stage {
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            min-height: 0; /* allows flex item to shrink properly */
+            overflow: hidden;
+        }
+
+        /* Hero Image strictly restricted to right side of middle fold only */
+        .hero-image-pane {
             position: absolute;
             top: 0;
             right: 0;
-            width: 55%;
+            width: 46%;
             height: 100%;
             background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
-            background-position: center;
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
-            mask-image: linear-gradient(to right, transparent 0%, black 40%);
-            z-index: 0;
+            background-position: center right;
+            background-repeat: no-repeat;
+            /* Soft gradient fade from left edge into the warm cream background */
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.85) 35%, black 60%);
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.85) 35%, black 60%);
+            z-index: 1;
+            pointer-events: none;
         }
 
-        /* Header matching */
-        .header-nav {
-            position: relative;
-            z-index: 10;
-            background: transparent !important;
-            padding: 30px 0;
-            box-shadow: none !important;
-        }
-
-        /* Main Content */
-        .main-content {
+        .hero-content-wrap {
             position: relative;
             z-index: 2;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-        }
-        
-        .content-inner {
-            max-width: 600px;
+            width: 100%;
+            max-width: 580px;
+            padding: 10px 0;
         }
 
-        .kicker {
-            display: block;
+        .thankyou-kicker {
+            display: inline-block;
             font-size: 11px;
-            letter-spacing: 0.25em;
+            font-weight: 700;
+            letter-spacing: 0.28em;
             text-transform: uppercase;
-            font-weight: 600;
-            color: var(--deep-navy, #0D1B24);
-            margin-bottom: 20px;
+            color: var(--brand-copper);
+            margin-bottom: 18px;
         }
 
-        h1.thankyou-title {
-            font-family: 'Cormorant Garamond', serif !important;
-            font-size: 64px !important;
+        .thankyou-title {
+            font-family: var(--font-serif) !important;
+            font-size: clamp(40px, 4.4vw, 62px) !important;
             font-weight: 400 !important;
-            line-height: 1.1 !important;
-            color: var(--deep-navy, #0D1B24) !important;
-            margin-bottom: 24px !important;
-            letter-spacing: -0.02em !important;
+            line-height: 1.08 !important;
+            color: var(--deep-navy) !important;
+            letter-spacing: -0.025em !important;
+            margin-bottom: 22px !important;
         }
 
-        p.thankyou-desc {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #485267;
-            margin-bottom: 20px;
-            max-width: 520px;
+        .thankyou-copy {
+            font-size: 15px;
+            line-height: 1.68;
+            color: var(--muted-slate);
+            margin-bottom: 16px;
+            max-width: 500px;
+            font-weight: 400;
         }
 
-        .back-btn {
+        .thankyou-copy:last-of-type {
+            margin-bottom: 24px;
+        }
+
+        /* Subtle Return CTA matching Acre&Key style */
+        .return-cta {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            margin-top: 10px;
-            color: var(--deep-navy, #0D1B24);
+            gap: 10px;
+            color: var(--deep-navy);
             text-decoration: none;
+            font-size: 14px;
             font-weight: 600;
-            font-size: 14.5px;
-            transition: opacity 0.2s;
-        }
-        .back-btn:hover {
-            opacity: 0.7;
+            letter-spacing: 0.02em;
+            padding: 8px 0;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
-        /* Bottom Features */
-        .bottom-features {
+        .return-cta svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2;
+            transition: transform 0.2s ease;
+        }
+
+        .return-cta:hover {
+            color: var(--brand-copper);
+            transform: translateX(-2px);
+        }
+
+        .return-cta:hover svg {
+            transform: translateX(-3px);
+        }
+
+        /* ─── BOTTOM PILLARS (Clean Solid Ground) ─── */
+        .bottom-pillars {
             position: relative;
-            z-index: 2;
-            padding: 40px 0 60px 0;
-            background: transparent;
+            z-index: 5;
+            background-color: var(--warm-bg);
+            border-top: 1px solid var(--divider);
+            padding: 28px 0 34px 0;
+            flex-shrink: 0;
         }
 
-        .features-grid {
+        .pillars-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            max-width: 900px;
-            margin: 0; /* Aligns with the container edge */
+            max-width: 980px;
+            margin: 0;
         }
 
-        .feature-item {
+        .pillar-card {
             position: relative;
-            padding: 0 40px 0 0;
+            padding: 0 36px 0 0;
         }
-        .feature-item:not(:last-child)::after {
+
+        .pillar-card:not(:last-child)::after {
             content: '';
             position: absolute;
-            right: 20px;
-            top: 15%;
-            bottom: 15%;
+            right: 18px;
+            top: 12%;
+            bottom: 12%;
             width: 1px;
-            background-color: rgba(0,0,0,0.08);
+            background-color: var(--divider);
         }
 
-        .feature-icon {
-            margin-bottom: 12px;
-            color: var(--deep-navy, #0D1B24);
-        }
-        .feature-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke-width: 1.2;
+        .pillar-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--brand-copper);
         }
 
-        .feature-title {
+        .pillar-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke-width: 1.4;
+        }
+
+        .pillar-name {
             font-size: 11px;
+            font-weight: 700;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--deep-navy, #0D1B24);
-        }
-        .feature-desc {
-            font-size: 13.5px;
-            line-height: 1.5;
-            color: #485267;
-            max-width: 220px;
+            color: var(--deep-navy);
+            margin-bottom: 6px;
         }
 
-        /* Responsive Mobile Adjustments */
-        @media (max-width: 1024px) {
-            h1.thankyou-title { font-size: 52px !important; }
-            .hero-bg { width: 50%; }
+        .pillar-text {
+            font-size: 13.5px;
+            line-height: 1.48;
+            color: var(--muted-slate);
+            max-width: 230px;
+        }
+
+        /* ─── RESPONSIVE BEHAVIOR ─── */
+        @media (max-width: 992px) {
+            .hero-image-pane {
+                width: 40%;
+                opacity: 0.35;
+            }
+            .pillars-grid {
+                max-width: 100%;
+            }
+            .pillar-card {
+                padding-right: 20px;
+            }
         }
 
         @media (max-width: 768px) {
-            body, html { 
-                overflow-y: auto; 
-                height: auto; 
+            html, body {
+                overflow-y: auto; /* Allow natural mobile scrolling */
+                height: auto;
             }
-            .thankyou-wrapper { 
-                height: auto; 
-                min-height: 100vh; 
+            .page-viewport {
+                height: auto;
+                min-height: 100vh;
             }
-            .hero-bg { 
-                width: 100%; 
-                -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%); 
-                mask-image: linear-gradient(to top, transparent 0%, black 50%);
-                opacity: 0.15; 
+            .site-header {
+                padding: 20px 0;
             }
-            .main-content {
-                padding: 40px 0 20px 0;
+            .hero-stage {
+                padding: 20px 0 40px 0;
             }
-            .features-grid { 
-                grid-template-columns: 1fr; 
-                gap: 30px; 
+            .hero-image-pane {
+                display: none; /* Keep clean on small mobile devices */
             }
-            .feature-item { padding: 0; }
-            .feature-item:not(:last-child)::after { display: none; }
-            .bottom-features { padding: 20px 0 60px 0; }
+            .hero-content-wrap {
+                max-width: 100%;
+            }
+            .thankyou-title {
+                font-size: 38px !important;
+            }
+            .bottom-pillars {
+                padding: 30px 0 50px 0;
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .pillar-card {
+                padding: 0;
+            }
+            .pillar-card:not(:last-child)::after {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="thankyou-wrapper">
-        <div class="hero-bg"></div>
-        
-        <!-- Pulls your actual website logo directly from your CSS -->
-        <header class="header-nav transparent-header">
+
+    <div class="page-viewport">
+
+        <!-- 1. Header with Dark Navy Acre&Key Branding -->
+        <header class="site-header">
             <div class="container">
-                <a href="/" class="nav-brand" style="text-decoration:none;"><span class="brand-logo-text">acre&amp;key</span></a>
+                <a href="/" class="header-logo" aria-label="Acre&Key Home">
+                    <span class="brand-logo-text">acre&amp;key</span>
+                </a>
             </div>
         </header>
 
-        <!-- Main Content vertically centered -->
-        <div class="main-content">
+        <!-- 2. Hero Middle Stage (1-Fold, Text clear of background image) -->
+        <main class="hero-stage">
+            <!-- Fade image strictly constrained to middle stage right side -->
+            <div class="hero-image-pane" aria-hidden="true"></div>
+
             <div class="container">
-                <div class="content-inner">
-                    <span class="kicker">THANK YOU</span>
+                <div class="hero-content-wrap">
+                    <span class="thankyou-kicker">THANK YOU</span>
                     <h1 class="thankyou-title">Your request<br>is in good hands.</h1>
-                    <p class="thankyou-desc">An acre&Key Property Concierge will review your requirements and reach out personally to understand what you're looking for.</p>
-                    <p class="thankyou-desc">Expect thoughtful guidance, relevant opportunities and a more considered approach to finding your next property.</p>
+                    <p class="thankyou-copy">An acre&amp;Key Property Concierge will review your requirements and reach out personally to understand what you’re looking for.</p>
+                    <p class="thankyou-copy">Expect thoughtful guidance, relevant opportunities and a more considered approach to finding your next property.</p>
                     
-                    <a href="/" class="back-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="/" class="return-cta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
                         </svg>
-                        Return to Home
+                        <span>Return to Home</span>
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
 
-        <!-- Features anchored to the bottom -->
-        <div class="bottom-features">
+        <!-- 3. Bottom Pillars Section (Solid warm background, never covered by image) -->
+        <footer class="bottom-pillars">
             <div class="container">
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="11" width="14" height="10" rx="2" ry="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+                <div class="pillars-grid">
+
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="11" width="14" height="10" rx="2" ry="2"></rect>
+                                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                            </svg>
                         </div>
-                        <div class="feature-title">PRIVATE</div>
-                        <div class="feature-desc">Your requirements are handled discreetly.</div>
+                        <div class="pillar-name">PRIVATE</div>
+                        <div class="pillar-text">Your requirements are handled discreetly.</div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22v-7"></path><path d="M12 15c-3 0-6-3-6-6v-2h2c3 0 6 3 6 6v2z"></path><path d="M12 15c3 0 6-3 6-6v-2h-2c-3 0-6 3-6 6v2z"></path></svg>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22v-7"></path>
+                                <path d="M12 15c-3 0-6-3-6-6v-2h2c3 0 6 3 6 6v2z"></path>
+                                <path d="M12 15c3 0 6-3 6-6v-2h-2c-3 0-6 3-6 6v2z"></path>
+                            </svg>
                         </div>
-                        <div class="feature-title">CURATED</div>
-                        <div class="feature-desc">We share only what is relevant to you.</div>
+                        <div class="pillar-name">CURATED</div>
+                        <div class="pillar-text">We share only what is relevant to you.</div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
                         </div>
-                        <div class="feature-title">PERSONAL</div>
-                        <div class="feature-desc">One dedicated point of contact throughout your search.</div>
+                        <div class="pillar-name">PERSONAL</div>
+                        <div class="pillar-text">One dedicated point of contact throughout your search.</div>
                     </div>
+
                 </div>
             </div>
-        </div>
+        </footer>
+
     </div>
+
 </body>
 </html>
