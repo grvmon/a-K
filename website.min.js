@@ -737,7 +737,7 @@ window.addEventListener('hashchange', function () {
               "<span class=\"advisor-status-dot\" aria-label=\"Abha is online\"></span>" +
             "</div>" +
             "<div class=\"advisor-card-content\">" +
-              "<div class=\"advisor-card-heading\">Looking for<br>your next home?</div>" +
+              "<div class=\"advisor-card-heading\">Have Questions?</div>" +
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
