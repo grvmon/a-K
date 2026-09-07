@@ -2616,46 +2616,94 @@ a.sd-btn-gold:hover,
     display: none !important;
 }
 
-/* Top Speech Bubble */
+/* Top Speech Bubble - Text message from Abha */
 .advisor-speech-bubble {
     position: relative;
-    background: #F7EFE9;
-    border: 1px solid rgba(235, 225, 218, 0.6);
-    border-radius: 14px;
-    padding: 8px 16px;
-    margin-right: 24px;
-    box-shadow: 0 4px 14px rgba(13, 27, 36, 0.06);
+    align-self: flex-start;
+    margin-left: 14px;
+    margin-bottom: 2px;
+    background: #F7F1EA;
+    border: 1px solid rgba(220, 215, 208, 0.5);
+    border-radius: 18px;
+    padding: 10px 18px 11px 18px;
+    box-shadow: 0 10px 28px -4px rgba(13, 27, 36, 0.12), 0 3px 10px rgba(13, 27, 36, 0.04);
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    /* Initial state before text pop: hidden & scaled towards tail */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3) translateY(14px);
+    transform-origin: 36px bottom;
+    pointer-events: none;
+    z-index: 10;
+    animation: advisorBubblePop 0.52s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards;
+}
+
+@keyframes advisorBubblePop {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.3) translateY(14px);
+        pointer-events: none;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0.2;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-2px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateY(0);
+        pointer-events: auto;
+    }
+}
+
+/* Popped active text state */
+.advisor-speech-bubble.is-popped {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+.advisor-speech-bubble:hover {
+    box-shadow: 0 12px 32px -4px rgba(13, 27, 36, 0.16), 0 4px 12px rgba(13, 27, 36, 0.06);
+    transform: scale(1.02) translateY(-1px);
 }
 
 .advisor-speech-title {
     font-family: var(--font-body, Manrope, sans-serif);
-    font-size: 13.5px;
+    font-size: 15.5px;
     font-weight: 700;
-    color: var(--deep-navy, #0D1B24);
-    line-height: 1.2;
+    color: #0B1B28;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
 }
 
 .advisor-speech-desc {
     font-family: var(--font-body, Manrope, sans-serif);
-    font-size: 12px;
+    font-size: 13.5px;
     font-weight: 500;
-    color: var(--deep-slate, #59616B);
-    line-height: 1.25;
+    color: #4A5868;
+    line-height: 1.3;
 }
 
-/* Bubble Tail */
+/* Bubble Tail pointing down directly to Abha's avatar */
 .advisor-bubble-tail {
     position: absolute;
-    bottom: -7px;
-    left: 26px;
-    width: 0;
-    height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid #F7EFE9;
+    bottom: -8px;
+    left: 36px;
+    width: 16px;
+    height: 9px;
+    pointer-events: none;
+    display: flex;
 }
 
 /* Main Card */
@@ -2823,15 +2871,20 @@ a.sd-btn-gold:hover,
         max-width: calc(100vw - 24px);
     }
     .advisor-speech-bubble {
-        margin-right: 12px;
-        padding: 6px 12px;
-        max-width: calc(100vw - 40px);
+        margin-left: 8px;
+        margin-right: 0;
+        padding: 8px 14px 9px 14px;
+        border-radius: 16px;
+        max-width: calc(100vw - 36px);
     }
     .advisor-speech-title {
-        font-size: 12.5px;
+        font-size: 14px;
     }
     .advisor-speech-desc {
-        font-size: 11px;
+        font-size: 12px;
+    }
+    .advisor-bubble-tail {
+        left: 28px;
     }
     .advisor-main-card {
         padding: 12px 14px 12px 12px;
