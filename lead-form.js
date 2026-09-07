@@ -1033,11 +1033,24 @@
     });
   }
 
+  function checkUrlAutoOpen() {
+    if (window.location.hash === '#modal' || window.location.hash === '#open-modal' || window.location.search.indexOf('open=modal') !== -1) {
+      setTimeout(function() {
+        if (window.openModal) window.openModal();
+      }, 150);
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindWebsiteCTAs);
+    document.addEventListener('DOMContentLoaded', function() {
+      bindWebsiteCTAs();
+      checkUrlAutoOpen();
+    });
   } else {
     bindWebsiteCTAs();
+    checkUrlAutoOpen();
   }
+  window.addEventListener('hashchange', checkUrlAutoOpen);
 
   window.lfActiveInstanceWipe = function() {
     clearTimeout(searchDebounceTimer);
