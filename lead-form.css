@@ -308,17 +308,21 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   font-weight: 600 !important; letter-spacing: 0.02em !important;
   text-transform: none !important; text-decoration: none !important;
   cursor: pointer !important;
-  position: relative; overflow: hidden;
+  position: relative;
   box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
-  transition: background-color .2s ease, transform .2s ease, opacity .2s ease, box-shadow .2s ease !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
   display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 12px !important;
   padding: 0 16px 0 24px !important;
   box-sizing: border-box !important;
 }
 .lf-btn:hover {
-  background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
-  box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+  background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
+  box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4) !important;
   transform: translateY(-1px) !important;
+}
+.lf-btn:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
 }
 .lf-btn:disabled { opacity: 0.6 !important; cursor: not-allowed !important; transform: none !important; }
 .lf-btn span { position: relative; z-index: 1; }
