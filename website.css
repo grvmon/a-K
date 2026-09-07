@@ -2815,39 +2815,57 @@ a.sd-btn-gold:hover,
     font-weight: 700;
 }
 
-/* Talk Now CTA Button */
+/* Talk Now CTA Button - Unified with Brand Primary CTA */
 .advisor-talk-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    height: 42px;
-    background: #8F3E1A;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 14px !important;
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
     color: #FFFFFF !important;
-    border-radius: 14px;
-    font-family: var(--font-body, Manrope, sans-serif);
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(143, 62, 26, 0.32);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    margin-top: 2px;
-    box-sizing: border-box;
+    border: none !important;
+    border-radius: 6px !important;
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease !important;
+    margin-top: 2px !important;
+    box-sizing: border-box !important;
 }
 
 .advisor-talk-btn:hover {
-    background: #7B3414;
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
     color: #FFFFFF !important;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(143, 62, 26, 0.4);
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+}
+
+.advisor-talk-btn .cta-arrow-badge {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    margin-left: 2px !important;
+}
+
+.advisor-talk-btn .cta-arrow-badge svg {
+    width: 10px !important;
+    height: 10px !important;
 }
 
 .advisor-talk-arrow {
     display: block;
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     transition: transform 0.2s ease;
 }
 
@@ -2915,8 +2933,9 @@ a.sd-btn-gold:hover,
         font-size: 12px;
     }
     .advisor-talk-btn {
-        height: 38px;
-        font-size: 14px;
-        border-radius: 12px;
+        height: 38px !important;
+        min-height: 38px !important;
+        font-size: 13.5px !important;
+        border-radius: 6px !important;
     }
 }
