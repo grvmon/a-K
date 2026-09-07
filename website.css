@@ -2734,20 +2734,37 @@ a.sd-btn-gold:hover,
 }
 
 .advisor-status-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: #16a34a;
-    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.25);
-    display: inline-block;
-    animation: statusPulse 2s infinite;
+    background: #00A844;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    z-index: 3;
+    animation: statusPulse 2.2s infinite;
 }
 
 @keyframes statusPulse {
-    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); }
-    70% { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 68, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 7px rgba(0, 168, 68, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 68, 0);
+    }
+}
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 168, 68, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 68, 0);
+    }
 }
 
 .advisor-status-text strong {
@@ -2838,6 +2855,13 @@ a.sd-btn-gold:hover,
     .advisor-card-heading {
         font-size: 14px;
         line-height: 1.2;
+    }
+    .advisor-status-dot {
+        bottom: 0px;
+        right: 0px;
+        width: 18px;
+        height: 18px;
+        border-width: 2.5px;
     }
     .advisor-status-row {
         font-size: 11px;
