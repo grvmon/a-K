@@ -28,9 +28,9 @@
   --lf-ok:    #2e7d52;
   --lf-bg-surface: #FFFFFF;
 
-  position: relative; z-index: 100 !important; pointer-events: auto !important; width: min(460px, 92vw); max-width: 460px;
+  position: relative; z-index: 100 !important; pointer-events: auto !important; width: min(380px, 92vw); max-width: 380px;
   background: var(--lf-bg-surface); border-radius:8px;
-  padding: 40px 32px 36px 32px;
+  padding: 36px 26px 30px 26px;
   box-shadow: 0 24px 60px var(--shadow-lux);
   max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow-y: auto;
   transform: translateY(24px);
@@ -89,14 +89,14 @@
 .lf-modal-close-icon svg { width: 15px; height: 15px; }
 .lf-modal-close-icon:hover { color: var(--lf-ink); transform: scale(1.08); }
 
-.lf-header { margin-bottom: 26px; padding: 0 8px; text-align: center; }
+.lf-header { margin-bottom: 20px; padding: 0 4px; text-align: center; }
 .lf-main-heading {
-  font-family: var(--lf-font-serif); font-size: 28px; font-weight: 400;
+  font-family: var(--lf-font-serif); font-size: 24px; font-weight: 400; line-height: 1.25;
   margin-bottom: 6px; color: var(--lf-ink); letter-spacing: -0.02em;
-  white-space: nowrap;
+  white-space: normal;
 }
 .lf-sub-heading {
-  font-family: var(--lf-font-sans); font-size: 15px; color: var(--lf-muted);
+  font-family: var(--lf-font-sans); font-size: 13.5px; color: var(--lf-muted);
   line-height: 1.45;
 }
 
@@ -417,14 +417,17 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 .lf-header {
     text-align: center !important;
     padding-right: 0 !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 20px !important;
 }
 .lf-main-heading {
     text-align: center !important;
-    margin-bottom: 8px !important;
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 6px !important;
 }
 .lf-sub-heading {
     text-align: center !important;
+    font-size: 13.5px !important;
     max-width: 100% !important;
     margin: 0 auto !important;
 }
