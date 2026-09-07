@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Advisory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #0D1B24;
+            --refined-brass: #7d442a;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Manrope', sans-serif;
+            --bg-color: #F9F8F6;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--deep-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .thank-you-container {
+            max-width: 500px;
+            padding: 40px 20px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(13, 27, 36, 0.08);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: rgba(125, 68, 42, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+        }
+        .icon-circle svg {
+            width: 40px;
+            height: 40px;
+            color: var(--refined-brass);
+        }
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 40px;
+            font-weight: 400;
+            margin: 0 0 16px 0;
+            color: var(--deep-navy);
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(13, 27, 36, 0.7);
+            margin: 0 0 32px 0;
+        }
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            padding: 0 32px;
+            background: linear-gradient(135deg, #be7555 0%, #9f5334 100%);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .home-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(125, 68, 42, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <div class="icon-circle">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+        </div>
+        <h1>Thank You</h1>
+        <p>We have successfully received your details. One of our property advisors will be in touch with you shortly to help you shortlist, evaluate, and negotiate the right property.</p>
+        <a href="/" class="home-btn">Return to Homepage</a>
+    </div>
+
+</body>
+</html>
