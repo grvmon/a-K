@@ -5,7 +5,7 @@
   var COOLDOWN_SECONDS  = (typeof window.lfCooldownSeconds !== "undefined") ? window.lfCooldownSeconds : 15;
 
   var STRINGS = {
-    btnSubmit:        "Book Free Consultation",
+    btnSubmit:        "Schedule Advisory Call",
     btnSending:       "Sending...",
     errNameRequired:  "Name is required",
     errNameInvalid:   "Enter a valid name",
@@ -20,7 +20,7 @@
     successHeading:   "Thank You",
     successBody:      "Your request has been received. Redirecting in {n}s...",
     successBodyStay:  "Your request has been received. Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.",
-    errOffline:       "Connection issue. Your details are safely held. Please click Book Free Consultation once more to retry or reach out to support.",
+    errOffline:       "Connection issue. Your details are safely held. Please click Schedule Advisory Call once more to retry or reach out to support.",
     errSubmit:        "Form submission blocked by server policy. Please email us directly or try again later.",
   };
 
