@@ -35,9 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         window.scrollTo(0, 0);
     }
-if (typeof feather !== 'undefined') {
-feather.replace();
-}
 const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');
 
@@ -701,6 +698,11 @@ window.addEventListener('hashchange', function () {
     });
 
     function mountAdvisorUnit() {
+        try {
+            sessionStorage.removeItem("advisor_dismissed");
+            localStorage.removeItem("advisor_dismissed");
+        } catch (e) {}
+
         if (window.location.pathname.indexOf("thankyou") !== -1 || document.querySelector(".thankyou-viewport") || (document.body && document.body.classList.contains("page-thankyou"))) {
             return;
         }
@@ -716,6 +718,12 @@ window.addEventListener('hashchange', function () {
             } else {
                 document.body.appendChild(aside);
             }
+        } else {
+            aside.style.display = "";
+            aside.style.opacity = "1";
+            aside.style.transform = "";
+            aside.style.pointerEvents = "";
+            aside.classList.remove("is-hidden");
         }
         
         aside.innerHTML = 

@@ -1254,7 +1254,8 @@ body.page-404 .error-404-section{
 .primary-cta-btn:hover .cta-arrow-badge,
 .nav-cta-btn:hover .cta-arrow-badge,
 .mobile-drawer-cta:hover .cta-arrow-badge,
-.premium-inline-cta:hover .cta-arrow-badge {
+.premium-inline-cta:hover .cta-arrow-badge,
+.lf-btn:hover .cta-arrow-badge {
     background: rgba(255, 255, 255, 0.22) !important;
     border-color: rgba(255, 255, 255, 0.95) !important;
     transform: scale(1.06) !important;
@@ -1264,7 +1265,8 @@ body.page-404 .error-404-section{
 .primary-cta-btn:hover .cta-arrow-badge svg,
 .nav-cta-btn:hover .cta-arrow-badge svg,
 .mobile-drawer-cta:hover .cta-arrow-badge svg,
-.premium-inline-cta:hover .cta-arrow-badge svg {
+.premium-inline-cta:hover .cta-arrow-badge svg,
+.lf-btn:hover .cta-arrow-badge svg {
     transform: translate(1.5px, -1.5px) !important;
 }
 
@@ -2434,15 +2436,66 @@ a.sd-btn-gold:hover,
 }
 
 /* =========================================================
-   FOOTER LINKS & HOVER CONTRAST ENHANCEMENT (WCAG AAA)
+   FOOTER: 3-COLUMN ARCHITECTURAL GRID (Desktop) & STACK (Mobile)
    ========================================================= */
 .site-footer {
     background-color: #0D1B24 !important;
     color: #FFFFFF !important;
+    padding: 36px 0 32px 0 !important;
+    position: relative;
+    z-index: 10;
 }
 
 .site-footer a {
     transition: color 0.2s ease, opacity 0.2s ease !important;
+}
+
+/* Desktop Grid Layout (992px+) */
+@media (min-width: 992px) {
+    .footer-bottom-bar {
+        display: grid !important;
+        grid-template-columns: 1.15fr auto 1.35fr !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        width: 100% !important;
+        border-top: none !important;
+        padding-top: 0 !important;
+    }
+    .footer-bottom-left {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 6px !important;
+        justify-self: start !important;
+    }
+    .footer-social-icons {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 14px !important;
+        margin: 0 auto !important;
+        justify-self: center !important;
+        flex-wrap: nowrap !important;
+    }
+    .footer-bottom-right {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        text-align: right !important;
+        gap: 8px !important;
+        justify-self: end !important;
+        padding-right: 0 !important;
+    }
+    .footer-legal-links {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 14px !important;
+        flex-wrap: nowrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
 
 .footer-bottom-left span {
@@ -2450,9 +2503,6 @@ a.sd-btn-gold:hover,
 }
 
 .footer-legal-links {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -2468,18 +2518,23 @@ a.sd-btn-gold:hover,
     font-weight: 500 !important;
     text-decoration: none !important;
     opacity: 0.85 !important;
+    white-space: nowrap !important;
 }
 
 .footer-legal-links a:hover,
 .footer-legal-links a:focus {
-    color: #E5B899 !important; /* Elegant warm peach/copper highlight matching Acre&Key branding */
+    color: #E5B899 !important; /* Warm copper/peach highlight */
     opacity: 1 !important;
     text-decoration: underline !important;
 }
 
 .footer-social-icons a {
     color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 1.15rem !important;
     transition: color 0.2s ease, transform 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .footer-social-icons a:hover,
@@ -2510,22 +2565,25 @@ a.sd-btn-gold:hover,
     }
 }
 
-/* Fold 8: Site Footer Mobile Symmetrical Alignment */
-@media (max-width: 768px) {
+/* Fold 8: Site Footer Mobile & Tablet Clean Stack */
+@media (max-width: 991px) {
     .site-footer {
-        padding: 40px 0 24px 0 !important;
+        padding: 40px 0 110px 0 !important;
     }
     .footer-bottom-bar {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         gap: 1.5rem !important;
+        width: 100% !important;
     }
     .footer-bottom-left {
         text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        width: 100% !important;
     }
     .footer-bottom-left span {
         text-align: center !important;
@@ -2533,21 +2591,31 @@ a.sd-btn-gold:hover,
         margin-right: auto !important;
     }
     .footer-social-icons {
+        display: flex !important;
         justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 14px !important;
         width: 100% !important;
+        margin: 0 !important;
     }
     .footer-bottom-right {
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         width: 100% !important;
+        gap: 10px !important;
+        padding-right: 0 !important;
     }
     .footer-bottom-right span {
         text-align: center !important;
     }
     .footer-legal-links {
+        display: flex !important;
         justify-content: center !important;
         flex-wrap: wrap !important;
-        gap: 1.25rem !important;
+        gap: 1rem !important;
     }
 }
 
@@ -2701,22 +2769,23 @@ a.sd-btn-gold:hover,
     min-width: 20px;
     min-height: 20px;
     border-radius: 50%;
-    background: rgba(13, 27, 36, 0.05);
-    border: none;
+    background: rgba(13, 27, 36, 0.08);
+    border: 1px solid rgba(13, 27, 36, 0.12);
     padding: 0;
     margin: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #55606E;
+    color: #434A52;
     cursor: pointer;
     flex-shrink: 0;
-    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
     box-sizing: border-box;
 }
 
 .advisor-close-btn:hover {
-    background-color: rgba(13, 27, 36, 0.14);
+    background-color: rgba(13, 27, 36, 0.18);
+    border-color: rgba(13, 27, 36, 0.25);
     color: #0D1B24;
     transform: scale(1.1);
 }
@@ -2954,15 +3023,10 @@ a.sd-btn-gold:hover,
     }
 }
 
-/* ── Option 1: Footer Layout Clearance for Floating Advisor Widget ── */
-@media (min-width: 992px) {
-    .footer-bottom-right {
-        padding-right: 290px !important;
-    }
-}
+/* ── Footer Layout Clearance for Floating Advisor Widget ── */
 @media (max-width: 991px) {
     .site-footer {
-        padding-bottom: 120px !important;
+        padding-bottom: 110px !important;
     }
 }
 
