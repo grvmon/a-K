@@ -2688,7 +2688,13 @@ a.sd-btn-gold:hover,
     gap: 14px;
     max-width: 340px;
     box-sizing: border-box;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-radius 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                padding 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                gap 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
 .advisor-main-card:hover {
@@ -2797,6 +2803,9 @@ a.sd-btn-gold:hover,
     gap: 5px;
     flex: 1;
     min-width: 0;
+    max-width: 240px;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-width 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .advisor-card-heading {
