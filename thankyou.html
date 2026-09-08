@@ -145,15 +145,82 @@
             font-style: italic;
         }
 
-        .thankyou-copy {
-            font-size: 15.5px;
-            line-height: 1.68;
+        .thankyou-lead {
+            font-size: 15px;
+            line-height: 1.6;
             color: var(--muted-slate);
             margin-bottom: 16px;
-            max-width: 510px;
+            max-width: 600px;
         }
 
-        .thankyou-copy:last-of-type { margin-bottom: 28px; }
+        .thankyou-agenda {
+            margin: 16px 0 16px 0;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(184, 142, 82, 0.22);
+            border-radius: 8px;
+            padding: 16px 20px;
+            max-width: 600px;
+            box-shadow: 0 4px 16px rgba(31, 43, 56, 0.03);
+        }
+
+        .agenda-intro {
+            font-family: var(--font-body);
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 12px;
+            letter-spacing: 0.01em;
+        }
+
+        .agenda-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .agenda-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.4;
+        }
+
+        .agenda-bullet {
+            color: var(--refined-brass);
+            font-size: 9px;
+            line-height: 1.7;
+            flex-shrink: 0;
+        }
+
+        .agenda-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .agenda-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--deep-navy);
+        }
+
+        .agenda-desc {
+            font-size: 13px;
+            color: var(--muted-slate);
+            line-height: 1.4;
+        }
+
+        .thankyou-closing {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin: 16px 0 22px 0;
+        }
 
         .primary-cta-btn {
             display: inline-flex !important;
@@ -414,8 +481,44 @@
                     <h1 class="thankyou-title">
                         Your request <span class="title-accent">is in good hands.</span>
                     </h1>
-                    <p class="thankyou-copy">An Acre&amp;Key Property Concierge will review your requirements and reach out personally to understand what you’re looking for.</p>
-                    <p class="thankyou-copy">Expect thoughtful guidance, relevant opportunities and a more considered approach to finding your next property.</p>
+                    
+                    <p class="thankyou-lead">An acre&amp;key Property Concierge will personally review your requirements and reach out to understand what you’re looking for.</p>
+
+                    <div class="thankyou-agenda">
+                        <p class="agenda-intro">In this call, we’ll discuss…</p>
+                        <ul class="agenda-list">
+                            <li class="agenda-item">
+                                <span class="agenda-bullet" aria-hidden="true">◆</span>
+                                <div class="agenda-text">
+                                    <strong class="agenda-title">Your requirements</strong>
+                                    <span class="agenda-desc">Location, property type, budget, priorities, and timeline.</span>
+                                </div>
+                            </li>
+                            <li class="agenda-item">
+                                <span class="agenda-bullet" aria-hidden="true">◆</span>
+                                <div class="agenda-text">
+                                    <strong class="agenda-title">What matters to you</strong>
+                                    <span class="agenda-desc">Your lifestyle preferences and investment goals.</span>
+                                </div>
+                            </li>
+                            <li class="agenda-item">
+                                <span class="agenda-bullet" aria-hidden="true">◆</span>
+                                <div class="agenda-text">
+                                    <strong class="agenda-title">Relevant opportunities</strong>
+                                    <span class="agenda-desc">Properties selected around your specific requirements.</span>
+                                </div>
+                            </li>
+                            <li class="agenda-item">
+                                <span class="agenda-bullet" aria-hidden="true">◆</span>
+                                <div class="agenda-text">
+                                    <strong class="agenda-title">Next steps</strong>
+                                    <span class="agenda-desc">Pricing, process, timelines, and what happens next.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="thankyou-closing">We look forward to speaking with you.</p>
                     
                     <a href="/" class="primary-cta-btn">
                         <span>Return to Home</span>
