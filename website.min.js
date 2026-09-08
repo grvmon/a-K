@@ -275,9 +275,6 @@ const frameworkGrid = document.querySelector('.framework-grid');
 const dots = document.querySelectorAll('.framework-carousel-dots .dot-btn');
 if (frameworkGrid && dots.length > 0) {
 let currentCardIndex = 0;
-let autoScrollInterval = null;
-let inactivityTimeout = null;
-let isUserInteracting = false;
 function updateDots(index) {
 dots.forEach((dot, idx) => {
 if (idx === index) {
@@ -301,42 +298,6 @@ currentCardIndex = index;
 updateDots(index);
 }
 }
-function startAutoScroll() {
-if (isUserInteracting || window.innerWidth > 991) return;
-stopAutoScroll();
-autoScrollInterval = setInterval(() => {
-const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
-currentCardIndex = (currentCardIndex + 1) % wrappers.length;
-scrollToCard(currentCardIndex);
-}, 6500);
-}
-function stopAutoScroll() {
-if (autoScrollInterval) {
-clearInterval(autoScrollInterval);
-autoScrollInterval = null;
-}
-}
-function handleUserInteractionStart() {
-isUserInteracting = true;
-stopAutoScroll();
-if (inactivityTimeout) {
-clearTimeout(inactivityTimeout);
-inactivityTimeout = null;
-}
-}
-function handleUserInteractionEnd() {
-if (inactivityTimeout) clearTimeout(inactivityTimeout);
-inactivityTimeout = setTimeout(() => {
-isUserInteracting = false;
-startAutoScroll();
-}, 8500);
-}
-frameworkGrid.addEventListener('touchstart', handleUserInteractionStart, { passive: true });
-frameworkGrid.addEventListener('touchend', handleUserInteractionEnd, { passive: true });
-frameworkGrid.addEventListener('mousedown', handleUserInteractionStart);
-frameworkGrid.addEventListener('mouseup', handleUserInteractionEnd);
-frameworkGrid.addEventListener('mouseenter', handleUserInteractionStart);
-frameworkGrid.addEventListener('mouseleave', handleUserInteractionEnd);
 let cardWidth = 0;
 function updateCardWidth() {
 const wrappers = frameworkGrid.querySelectorAll('.framework-card-wrapper');
@@ -368,29 +329,14 @@ isScrollDebouncing = true;
 }, { passive: true });
 dots.forEach((dot, idx) => {
 dot.addEventListener('click', () => {
-handleUserInteractionStart();
 scrollToCard(idx);
-handleUserInteractionEnd();
 });
-});
-if (window.innerWidth <= 991) {
-startAutoScroll();
-}
-window.addEventListener('resize', () => {
-if (window.innerWidth <= 991) {
-startAutoScroll();
-} else {
-stopAutoScroll();
-}
 });
 }
 const testimonialsContainer = document.querySelector('.credentials-col');
 const testimonialDots = document.querySelectorAll('.testimonials-carousel-dots .dot-btn');
 if (testimonialsContainer && testimonialDots.length > 0) {
 let currentTestimonialIndex = 0;
-let tAutoScrollInterval = null;
-let tInactivityTimeout = null;
-let isTUserInteracting = false;
 function updateTestimonialDots(index) {
 testimonialDots.forEach((dot, idx) => {
 if (idx === index) {
@@ -414,42 +360,6 @@ currentTestimonialIndex = index;
 updateTestimonialDots(index);
 }
 }
-function startTestimonialAutoScroll() {
-if (isTUserInteracting || window.innerWidth > 991) return;
-stopTestimonialAutoScroll();
-tAutoScrollInterval = setInterval(() => {
-const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
-currentTestimonialIndex = (currentTestimonialIndex + 1) % tCards.length;
-scrollToTestimonial(currentTestimonialIndex);
-}, 6500);
-}
-function stopTestimonialAutoScroll() {
-if (tAutoScrollInterval) {
-clearInterval(tAutoScrollInterval);
-tAutoScrollInterval = null;
-}
-}
-function handleTUserStart() {
-isTUserInteracting = true;
-stopTestimonialAutoScroll();
-if (tInactivityTimeout) {
-clearTimeout(tInactivityTimeout);
-tInactivityTimeout = null;
-}
-}
-function handleTUserEnd() {
-if (tInactivityTimeout) clearTimeout(tInactivityTimeout);
-tInactivityTimeout = setTimeout(() => {
-isTUserInteracting = false;
-startTestimonialAutoScroll();
-}, 8500);
-}
-testimonialsContainer.addEventListener('touchstart', handleTUserStart, { passive: true });
-testimonialsContainer.addEventListener('touchend', handleTUserEnd, { passive: true });
-testimonialsContainer.addEventListener('mousedown', handleTUserStart);
-testimonialsContainer.addEventListener('mouseup', handleTUserEnd);
-testimonialsContainer.addEventListener('mouseenter', handleTUserStart);
-testimonialsContainer.addEventListener('mouseleave', handleTUserEnd);
 let tCardWidth = 0;
 function updateTCardWidth() {
 const tCards = testimonialsContainer.querySelectorAll('.testimonial-card');
@@ -481,20 +391,8 @@ isTScrollDebouncing = true;
 }, { passive: true });
 testimonialDots.forEach((dot, idx) => {
 dot.addEventListener('click', () => {
-handleTUserStart();
 scrollToTestimonial(idx);
-handleTUserEnd();
 });
-});
-if (window.innerWidth <= 991) {
-startTestimonialAutoScroll();
-}
-window.addEventListener('resize', () => {
-if (window.innerWidth <= 991) {
-startTestimonialAutoScroll();
-} else {
-stopTestimonialAutoScroll();
-}
 });
 }
 const premiumRevealElements = document.querySelectorAll('.premium-reveal');
