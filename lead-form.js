@@ -1,7 +1,7 @@
 (function () {
   var HUBSPOT_PORTAL_ID = window.lfHubspotPortalId || "246341570";
   var HUBSPOT_FORM_GUID = window.lfHubspotFormGuid || "e0b2fc29-e29b-4983-850e-8dca7815d213";
-  var REDIRECT_URL      = (typeof window.lfRedirectUrl !== "undefined") ? window.lfRedirectUrl : "/thankyou/";
+  var REDIRECT_URL      = (typeof window.lfRedirectUrl !== "undefined") ? window.lfRedirectUrl : "/thankyou";
   var COOLDOWN_SECONDS  = (typeof window.lfCooldownSeconds !== "undefined") ? window.lfCooldownSeconds : 15;
 
   var STRINGS = {
@@ -977,7 +977,11 @@
         successCloseTimer = null;
         window.closeModal();
         if (willRedirect) {
-          window.location.href = REDIRECT_URL;
+          var targetUrl = REDIRECT_URL;
+          if (window.location.search && targetUrl.indexOf("?") === -1) {
+            targetUrl += window.location.search;
+          }
+          window.location.href = targetUrl;
         }
       }, delay);
     } catch (err) {
