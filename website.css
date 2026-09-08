@@ -2693,6 +2693,46 @@ a.sd-btn-gold:hover,
     box-shadow: 0 22px 54px -6px rgba(13, 27, 36, 0.18), 0 6px 20px rgba(13, 27, 36, 0.06);
 }
 
+/* Advisor Close / Dismiss Button */
+.advisor-close-btn {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(13, 27, 36, 0.05);
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #55606E;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    box-sizing: border-box;
+}
+
+.advisor-close-btn:hover {
+    background-color: rgba(13, 27, 36, 0.12);
+    color: #0D1B24;
+    transform: scale(1.08);
+}
+
+.advisor-close-btn:active {
+    transform: scale(0.94);
+}
+
+.advisor-close-btn svg {
+    width: 10px;
+    height: 10px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    display: block;
+}
+
 /* Avatar Wrap & Accent Rays */
 .advisor-avatar-wrap {
     position: relative;
@@ -2764,6 +2804,7 @@ a.sd-btn-gold:hover,
     line-height: 1.18;
     color: #0B1B28;
     letter-spacing: -0.02em;
+    padding-right: 18px;
 }
 
 .advisor-status-row {
@@ -2891,6 +2932,12 @@ a.sd-btn-gold:hover,
     }
     .advisor-status-row {
         font-size: 12px;
+    }
+    .advisor-close-btn {
+        top: 7px;
+        right: 9px;
+        width: 24px;
+        height: 24px;
     }
     .advisor-talk-btn {
         height: 38px !important;
