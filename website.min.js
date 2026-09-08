@@ -658,7 +658,7 @@ window.addEventListener('hashchange', function () {
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
-              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" aria-label=\"Chat with Abha now\">" +
+              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();} return false;\" aria-label=\"Chat with Abha now\">" +
                 "<span>Chat Now</span>" +
                 "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
                   "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
@@ -712,21 +712,31 @@ window.addEventListener('hashchange', function () {
             });
         }
 
-        // Expand when minimized card/avatar is clicked
+        // Open Talk to Abha modal when minimized card/avatar is clicked
         var mainCard = aside.querySelector(".advisor-main-card");
         if (mainCard) {
             mainCard.addEventListener("click", function(e) {
                 if (aside.classList.contains("is-minimized")) {
                     e.preventDefault();
                     e.stopPropagation();
-                    expandAdvisor();
+                    if (window.playAdvisorChime) window.playAdvisorChime();
+                    if (window.openAbhaModal) {
+                        window.openAbhaModal();
+                    } else if (window.openModal) {
+                        window.openModal();
+                    }
                 }
             });
             mainCard.addEventListener("keydown", function(e) {
                 if (aside.classList.contains("is-minimized") && (e.key === "Enter" || e.key === " ")) {
                     e.preventDefault();
                     e.stopPropagation();
-                    expandAdvisor();
+                    if (window.playAdvisorChime) window.playAdvisorChime();
+                    if (window.openAbhaModal) {
+                        window.openAbhaModal();
+                    } else if (window.openModal) {
+                        window.openModal();
+                    }
                 }
             });
         }
