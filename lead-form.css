@@ -421,3 +421,72 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     max-width: 100% !important;
     margin: 0 auto !important;
 }
+
+/* ── Accessible Focus States (Style Guide Matched) ── */
+.lf-wrap :focus {
+  outline: none;
+}
+.lf-wrap :focus-visible {
+  outline: none;
+}
+
+.lf-modal-close-icon:focus-visible {
+  outline: none !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.5) !important;
+  background-color: rgba(155, 98, 72, 0.08) !important;
+  color: var(--lf-ink) !important;
+}
+
+.lf-wrap input.lf-input:focus,
+.lf-wrap input.lf-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.lf-clear-btn:focus-visible {
+  outline: none !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.5) !important;
+  background-color: rgba(155, 98, 72, 0.08) !important;
+  color: var(--lf-ink) !important;
+}
+
+.lf-cc-trigger:focus-visible {
+  outline: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.45) !important;
+  background-color: rgba(155, 98, 72, 0.06) !important;
+}
+
+.lf-cc-search:focus-visible {
+  outline: none !important;
+  border-bottom-color: var(--lf-line-focus) !important;
+  box-shadow: 0 1px 0 var(--lf-line-focus) !important;
+}
+
+.lf-cc-opt:focus-visible {
+  outline: none !important;
+  background: #f8f6f1 !important;
+}
+
+.lf-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(155, 98, 72, 0.65), 0 6px 18px rgba(31, 43, 56, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.lf-privacy-consent a:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.45) !important;
+  border-radius: 3px !important;
+  background-color: rgba(155, 98, 72, 0.08) !important;
+}
+
+.lf-page-cta-btn:focus-visible,
+.primary-cta-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(155, 98, 72, 0.65), 0 6px 18px rgba(31, 43, 56, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
