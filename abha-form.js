@@ -216,15 +216,13 @@
               '<div class="lf-err" id="abhaEmailErr" role="alert"></div>' +
             '</div>' +
             '<div class="lf-submit-wrap">' +
-              '<button type="submit" class="lf-btn lf-focusable primary-cta-btn" id="abhaSubmitBtn" tabindex="0">' +
+              '<button type="submit" class="lf-btn lf-focusable advisor-talk-btn" id="abhaSubmitBtn" tabindex="0" aria-label="Start chat with Abha">' +
                 '<div class="lf-spinner"></div>' +
-                '<span id="abhaBtnText">Talk to Abha</span>' +
-                '<span class="cta-arrow-badge" aria-hidden="true">' +
-                  '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
-                    '<line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>' +
-                    '<polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>' +
-                  '</svg>' +
-                '</span>' +
+                '<span id="abhaBtnText">Start Chat</span>' +
+                '<svg class="advisor-talk-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                  '<line x1="5" y1="12" x2="19" y2="12"></line>' +
+                  '<polyline points="12 5 19 12 12 19"></polyline>' +
+                '</svg>' +
               '</button>' +
               '<p class="lf-privacy-consent">' +
                 'By submitting your details, you agree to our <a href="/privacy-policy/">Privacy Policy</a>.' +
@@ -501,7 +499,7 @@
         submitBtn.disabled = false;
         submitBtn.classList.remove('lf-loading');
       }
-      if (btnText) btnText.textContent = 'Talk to Abha';
+      if (btnText) btnText.textContent = 'Start Chat';
       if (globalErr) {
         globalErr.classList.add('lf-show');
         globalErr.textContent = 'Connection issue. Your details are safely held. Please click Submit once more to retry.';
