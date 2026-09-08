@@ -7,6 +7,13 @@
 .abha-modal-overlay,
 .abha-modal-overlay * {
   box-sizing: border-box;
+}
+
+.abha-modal-overlay h1,
+.abha-modal-overlay h2,
+.abha-modal-overlay h3,
+.abha-modal-overlay p,
+.abha-modal-overlay form {
   margin: 0;
   padding: 0;
 }
@@ -206,7 +213,7 @@
   background: var(--lf-bg-surface);
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 16px !important;
   transition: border-color .2s, background-color .2s, box-shadow .2s;
 }
 
@@ -260,7 +267,7 @@
 }
 
 .abha-modal-wrap .lf-field-phone .lf-label {
-  left: 86px !important;
+  left: 87px !important;
 }
 
 .abha-modal-wrap .lf-field-phone.lf-focused .lf-label,
@@ -285,8 +292,9 @@
   font-size: 15px !important;
   font-weight: 500 !important;
   color: var(--lf-ink) !important;
-  padding: 10px 0 0 0 !important;
-  height: 48px !important;
+  padding: 0 !important;
+  height: 100% !important;
+  line-height: normal !important;
 }
 
 /* Clear Input Button */
@@ -328,11 +336,13 @@
 
 /* Phone Row & Country Code Dropdown */
 .abha-modal-wrap .lf-phone-row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  position: relative !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .abha-modal-wrap .lf-cc-trigger {
@@ -341,18 +351,18 @@
   justify-content: space-between !important;
   gap: 4px !important;
   cursor: pointer !important;
-  padding: 8px 0 0 0 !important;
+  padding: 0 6px 0 0 !important;
   background: none !important;
   border: none !important;
   font-family: var(--lf-font-sans) !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   color: var(--lf-ink) !important;
-  height: 48px !important;
-  min-width: 60px !important;
+  height: 100% !important;
+  min-width: 52px !important;
   width: auto !important;
   flex-shrink: 0 !important;
-  padding-right: 6px !important;
+  margin: 0 !important;
 }
 
 .abha-modal-wrap .lf-cc-arrow {
@@ -363,11 +373,11 @@
 }
 
 .abha-modal-wrap .lf-divider {
-  width: 1px;
-  height: 18px;
-  background: var(--lf-line);
-  margin: 6px 12px 0 6px;
-  flex-shrink: 0;
+  width: 1px !important;
+  height: 18px !important;
+  background: var(--lf-line) !important;
+  margin: 0 12px 0 6px !important;
+  flex-shrink: 0 !important;
 }
 
 .abha-modal-wrap .lf-cc-panel {
@@ -453,32 +463,40 @@
 
 .abha-modal-wrap .lf-btn {
   width: 100%;
-  height: 50px;
+  height: 48px;
+  min-height: 48px;
   border: none !important;
-  border-radius: 8px !important;
-  background: var(--refined-brass, #B88E52) !important;
+  border-radius: 4px !important;
+  background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
   color: #FFFFFF !important;
-  font-family: var(--lf-font-sans) !important;
-  font-size: 14px !important;
+  font-family: var(--font-body), var(--lf-font-sans), 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
   font-weight: 600 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
   cursor: pointer !important;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(184, 142, 82, 0.22) !important;
-  transition: background-color .2s ease, transform .2s ease, opacity .2s ease, box-shadow .2s ease !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 0 16px 0 24px !important;
+  box-sizing: border-box !important;
   touch-action: manipulation;
 }
 
 .abha-modal-wrap .lf-btn:hover {
-  background: var(--deep-navy, #1F2B38) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(31, 43, 56, 0.2) !important;
+  background: linear-gradient(135deg, #c78162 0%, #a85a3a 100%) !important;
+  box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4) !important;
+  transform: translateY(-1px) !important;
+}
+
+.abha-modal-wrap .lf-btn:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
 }
 
 .abha-modal-wrap .lf-btn:disabled {
@@ -489,7 +507,8 @@
 
 .abha-modal-wrap .lf-btn:focus-visible {
   outline: none !important;
-  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(184, 142, 82, 0.8) !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px rgba(155, 98, 72, 0.65), 0 6px 18px rgba(31, 43, 56, 0.2) !important;
+  transform: translateY(-1px) !important;
 }
 
 .abha-modal-wrap .lf-btn .cta-arrow-badge {
