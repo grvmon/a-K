@@ -728,7 +728,7 @@ window.addEventListener('hashchange', function () {
         
         aside.innerHTML = 
           "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" title=\"Chat with Abha\">" +
-            "<div class=\"advisor-speech-title\">Hi! I’m Abha</div>" +
+            "<div class=\"advisor-speech-title\">Hi! I'm Abha</div>" +
             "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
             "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\">" +
               "<svg width=\"16\" height=\"9\" viewBox=\"0 0 16 9\" fill=\"none\">" +
@@ -770,32 +770,75 @@ window.addEventListener('hashchange', function () {
             "</div>" +
           "</div>";
         
-        // Attach close button dismiss handler (closes widget for current view, reappears on next load)
+        function minimizeAdvisor() {
+            if (!aside) return;
+            aside.classList.add("is-minimized");
+            aside.setAttribute("aria-expanded", "false");
+            aside.setAttribute("title", "Chat with Abha (online)");
+            var mainCard = aside.querySelector(".advisor-main-card");
+            if (mainCard) {
+                mainCard.setAttribute("tabindex", "0");
+                mainCard.setAttribute("role", "button");
+                mainCard.setAttribute("aria-label", "Open chat with Abha");
+            }
+        }
+
+        function expandAdvisor() {
+            if (!aside) return;
+            aside.classList.remove("is-minimized");
+            aside.setAttribute("aria-expanded", "true");
+            aside.removeAttribute("title");
+            var mainCard = aside.querySelector(".advisor-main-card");
+            if (mainCard) {
+                mainCard.removeAttribute("tabindex");
+                mainCard.removeAttribute("role");
+                mainCard.removeAttribute("aria-label");
+            }
+            var bubble = aside.querySelector(".advisor-speech-bubble");
+            if (bubble) {
+                bubble.classList.add("is-popped");
+            }
+        }
+
+        // Attach minimize button handler
         var closeBtn = document.getElementById("advisorCloseBtn") || (aside ? aside.querySelector(".advisor-close-btn") : null);
         if (closeBtn) {
+            closeBtn.setAttribute("title", "Minimize");
+            closeBtn.setAttribute("aria-label", "Minimize advisor widget");
             closeBtn.addEventListener("click", function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                if (aside) {
-                    aside.style.transition = "opacity 0.25s ease, transform 0.25s ease";
-                    aside.style.opacity = "0";
-                    aside.style.transform = "translateY(20px)";
-                    aside.style.pointerEvents = "none";
-                    setTimeout(function() {
-                        if (aside.parentNode) {
-                            aside.parentNode.removeChild(aside);
-                        }
-                    }, 250);
+                minimizeAdvisor();
+            });
+        }
+
+        // Expand when minimized card/avatar is clicked
+        var mainCard = aside.querySelector(".advisor-main-card");
+        if (mainCard) {
+            mainCard.addEventListener("click", function(e) {
+                if (aside.classList.contains("is-minimized")) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    expandAdvisor();
+                }
+            });
+            mainCard.addEventListener("keydown", function(e) {
+                if (aside.classList.contains("is-minimized") && (e.key === "Enter" || e.key === " ")) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    expandAdvisor();
                 }
             });
         }
         
         // Pop up the speech bubble like an incoming chat text after a natural delay
         setTimeout(function() {
-            var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
-            if (bubble) {
-                bubble.classList.add("is-popped");
-                playChatSound();
+            if (!aside.classList.contains("is-minimized")) {
+                var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
+                if (bubble) {
+                    bubble.classList.add("is-popped");
+                    playChatSound();
+                }
             }
         }, 1600);
     }
