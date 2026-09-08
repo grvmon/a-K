@@ -28,22 +28,16 @@
     <link rel="preload" href="../style-guide/assets/fonts/wEO_EBrOk8hQLDvIAF81VvoK.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="../website.css?v=4">
-    <!-- Lead Form Modal Styles -->
-    <link rel="stylesheet" href="../lead-form.css">
+    <!-- Core Stylesheet (identical to privacy-policy) -->
+    <link rel="stylesheet" href="../website.min.css?v=20260907_width_v20">
+    <link rel="stylesheet" href="../lead-form.min.css?v=20260907_color_v26">
 
     <style>
         :root {
-            --deep-navy: #1F2B38;
-            --refined-brass: #B88E52;
-            --dark-brass: #8f662a;
             --warm-bg: #F7F3EC;
             --muted-slate: #59616B;
             --divider: rgba(31, 43, 56, 0.1);
             --font-heading: 'Marcellus', serif;
-            --font-body: 'Manrope', sans-serif;
-            --font-logo: 'Josefin Sans', sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -53,8 +47,8 @@
             margin: 0;
             padding: 0;
             background-color: var(--warm-bg);
-            color: var(--deep-navy);
-            font-family: var(--font-body);
+            color: #0D1B24;
+            font-family: 'Manrope', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -69,20 +63,14 @@
             box-sizing: border-box;
         }
 
-        /* Fixed Navigation Header */
+        /* Fixed Navigation Header - inherits 100% styles from website.min.css */
         .header-nav {
             position: fixed !important;
             top: 0 !important;
             left: 0 !important;
             right: 0 !important;
             width: 100% !important;
-            height: 80px !important;
             z-index: 1000 !important;
-            background: rgba(247, 243, 236, 0.95) !important;
-            backdrop-filter: blur(16px) !important;
-            -webkit-backdrop-filter: blur(16px) !important;
-            border-bottom: 1px solid rgba(183, 175, 164, 0.3) !important;
-            box-shadow: 0 4px 20px rgba(31, 43, 56, 0.08) !important;
         }
 
         /* Hero Stage */
