@@ -56,7 +56,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
             background-color: var(--warm-bg);
             padding-top: 80px !important;
@@ -271,71 +270,10 @@
             transform: translateX(3px) translateY(-1px);
         }
 
-        /* Bottom Assurance Pillars */
-        .bottom-pillars {
-            position: relative;
-            z-index: 5;
-            background-color: #FFFFFF;
-            border-top: 1px solid rgba(184, 142, 82, 0.2);
-            padding: 14px 0 max(14px, env(safe-area-inset-bottom)) 0;
-            flex-shrink: 0;
-            box-shadow: 0 -4px 16px rgba(31, 43, 56, 0.03);
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 860px;
-            gap: 20px;
-        }
-
-        .pillar-card {
-            position: relative;
-            padding-right: 20px;
-        }
-
-        .pillar-card:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 15%;
-            bottom: 15%;
-            width: 1px;
-            background-color: rgba(184, 142, 82, 0.2);
-        }
-
-        .pillar-icon {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            color: var(--refined-brass);
-        }
-
-        .pillar-icon svg { width: 20px; height: 20px; stroke-width: 1.6; }
-
-        .pillar-name {
-            font-family: var(--font-body);
-            font-size: 10.5px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--deep-navy);
-            margin-bottom: 3px;
-        }
-
-        .pillar-text {
-            font-family: var(--font-body);
-            font-size: 12.5px;
-            line-height: 1.4;
-            color: var(--muted-slate);
-            max-width: 260px;
-        }
-
         @media (max-width: 991px) {
             .thankyou-viewport { padding-top: 70px !important; }
             .hero-stage { padding: 20px 0; }
             .hero-image-pane { width: 40%; opacity: 0.25; }
-            .pillars-grid { max-width: 100%; }
         }
 
         @media (max-width: 768px) {
@@ -344,10 +282,6 @@
             .hero-image-pane { display: none; }
             .hero-content-wrap { max-width: 100%; }
             .thankyou-title { font-size: 24px !important; white-space: normal; }
-            .bottom-pillars { padding: 20px 0 32px 0; }
-            .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
-            .pillar-card { padding: 0; }
-            .pillar-card:not(:last-child)::after { display: none; }
         }
 
         /* Suppress Abha floating advisor widget on thank you page */
@@ -542,47 +476,6 @@
                 </div>
             </div>
         </main>
-
-        <!-- ================= ASSURANCE PILLARS ================= -->
-        <footer class="bottom-pillars">
-            <div class="container nav-container">
-                <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="11" width="14" height="10" rx="2" ry="2"></rect>
-                                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                            </svg>
-                        </div>
-                        <div class="pillar-name">PRIVATE</div>
-                        <div class="pillar-text">Your requirements are handled discreetly.</div>
-                    </div>
-
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22v-7"></path>
-                                <path d="M12 15c-3 0-6-3-6-6v-2h2c3 0 6 3 6 6v2z"></path>
-                                <path d="M12 15c3 0 6-3 6-6v-2h-2c-3 0-6 3-6 6v2z"></path>
-                            </svg>
-                        </div>
-                        <div class="pillar-name">CURATED</div>
-                        <div class="pillar-text">We share only what is relevant to you.</div>
-                    </div>
-
-                    <div class="pillar-card">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                        </div>
-                        <div class="pillar-name">PERSONAL</div>
-                        <div class="pillar-text">One dedicated point of contact throughout your search.</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <!-- Script for mobile menu interactions -->
