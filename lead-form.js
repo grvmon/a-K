@@ -1,7 +1,7 @@
 (function () {
   var HUBSPOT_PORTAL_ID = window.lfHubspotPortalId || "246341570";
   var HUBSPOT_FORM_GUID = window.lfHubspotFormGuid || "e0b2fc29-e29b-4983-850e-8dca7815d213";
-  var REDIRECT_URL      = window.lfRedirectUrl     || "";
+  var REDIRECT_URL      = (typeof window.lfRedirectUrl !== "undefined") ? window.lfRedirectUrl : "/thankyou/";
   var COOLDOWN_SECONDS  = (typeof window.lfCooldownSeconds !== "undefined") ? window.lfCooldownSeconds : 15;
 
   var STRINGS = {
