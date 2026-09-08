@@ -115,7 +115,7 @@
             font-weight: 700;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--refined-brass);
+            color: #be7555;
             margin-bottom: 8px;
         }
 
@@ -131,7 +131,7 @@
         }
 
         .thankyou-title .title-accent {
-            color: var(--refined-brass);
+            color: #be7555;
             font-style: italic;
         }
 
@@ -148,7 +148,7 @@
             background: rgba(255, 255, 255, 0.78);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(184, 142, 82, 0.25);
+            border: 1px solid rgba(190, 117, 85, 0.25);
             border-radius: 8px;
             padding: 13px 18px;
             max-width: 580px;
@@ -184,7 +184,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: var(--refined-brass);
+            color: #be7555;
             width: 8px;
             height: 8px;
             margin-top: 4px;
@@ -218,56 +218,121 @@
             margin: 12px 0 14px 0;
         }
 
+        /* Authoritative Homepage-Matched CTA Button & Arrow Badge QC */
+        .primary-cta-btn,
+        .nav-cta-btn,
+        .mobile-drawer-cta,
         .hero-content-wrap .primary-cta-btn {
             display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
-            height: 44px !important;
-            padding: 0 18px 0 24px !important;
-            gap: 10px !important;
-            border-radius: 6px !important;
-            background: var(--refined-brass) !important;
+            height: 48px !important;
+            min-height: 48px !important;
+            padding: 0 16px 0 24px !important;
+            gap: 12px !important;
+            border-radius: 4px !important;
+            background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
             color: #FFFFFF !important;
-            font-family: var(--font-heading) !important;
-            font-size: 14px !important;
-            font-weight: 500 !important;
-            letter-spacing: 0.05em !important;
-            text-transform: uppercase !important;
+            font-family: var(--font-body), 'Manrope', sans-serif !important;
+            font-size: 15px !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.02em !important;
+            text-transform: none !important;
             text-decoration: none !important;
-            box-shadow: 0 4px 14px rgba(184, 142, 82, 0.28) !important;
-            border: 1px solid var(--refined-brass) !important;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
+            border: none !important;
+            box-sizing: border-box !important;
+            cursor: pointer !important;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease !important;
         }
 
+        .primary-cta-btn:hover,
+        .nav-cta-btn:hover,
+        .mobile-drawer-cta:hover,
         .hero-content-wrap .primary-cta-btn:hover {
-            background: var(--deep-navy) !important;
-            border-color: var(--deep-navy) !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 8px 24px rgba(31, 43, 56, 0.25) !important;
+            background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
+            box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4) !important;
+            transform: translateY(-1px) !important;
+            border: none !important;
+            color: #FFFFFF !important;
+        }
+
+        .primary-cta-btn > span:not(.cta-arrow-badge),
+        .nav-cta-btn > span:not(.cta-arrow-badge),
+        .mobile-drawer-cta > span:not(.cta-arrow-badge),
+        .hero-content-wrap .primary-cta-btn > span:not(.cta-arrow-badge) {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            gap: 0 !important;
+            width: auto !important;
+            flex: 0 0 auto !important;
+            line-height: 1 !important;
+            white-space: nowrap !important;
+            color: #FFFFFF !important;
         }
 
         .cta-arrow-badge {
             display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
-            width: 22px !important;
-            height: 22px !important;
+            width: 24px !important;
+            height: 24px !important;
+            min-width: 24px !important;
+            min-height: 24px !important;
             border-radius: 50% !important;
-            border: 1px solid rgba(255, 255, 255, 0.5) !important;
-            background: rgba(255, 255, 255, 0.15) !important;
+            border: 1px solid rgba(255, 255, 255, 0.45) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
             color: #FFFFFF !important;
-            transition: transform 0.25s ease !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            flex-shrink: 0 !important;
+            flex-grow: 0 !important;
+            box-sizing: border-box !important;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
         }
 
         .cta-arrow-badge svg {
             width: 11px !important;
             height: 11px !important;
             stroke: currentColor !important;
-            stroke-width: 2 !important;
+            stroke-width: 1.8 !important;
+            display: block !important;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
-        .primary-cta-btn:hover .cta-arrow-badge {
-            transform: translateX(3px) translateY(-1px);
+        .primary-cta-btn:hover .cta-arrow-badge,
+        .nav-cta-btn:hover .cta-arrow-badge,
+        .mobile-drawer-cta:hover .cta-arrow-badge,
+        .hero-content-wrap .primary-cta-btn:hover .cta-arrow-badge {
+            background: rgba(255, 255, 255, 0.22) !important;
+            border-color: rgba(255, 255, 255, 0.95) !important;
+            transform: scale(1.06) !important;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .primary-cta-btn:hover .cta-arrow-badge svg,
+        .nav-cta-btn:hover .cta-arrow-badge svg,
+        .mobile-drawer-cta:hover .cta-arrow-badge svg,
+        .hero-content-wrap .primary-cta-btn:hover .cta-arrow-badge svg {
+            transform: translate(1.5px, -1.5px) !important;
+        }
+
+        .primary-cta-btn span::after,
+        .nav-cta-btn span::after,
+        .mobile-drawer-cta span::after,
+        .primary-cta-btn *::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        @media (max-width: 991px) {
+            .header-nav .nav-cta-btn,
+            .nav-container .nav-cta-btn {
+                display: none !important;
+            }
         }
 
         @media (max-width: 991px) {
@@ -321,8 +386,14 @@
                 </ul>
 
                 <!-- Header CTA Button (Desktop) -->
-                <a href="/#footer" class="sd-btn-gold nav-cta-btn primary-cta-btn">
+                <a href="/#footer" class="nav-cta-btn primary-cta-btn">
                     <span>Talk to an Advisor</span>
+                    <span class="cta-arrow-badge" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                            <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
+                        </svg>
+                    </span>
                 </a>
 
                 <!-- Mobile Hamburger Toggle -->
@@ -390,6 +461,12 @@
                     <div class="mobile-drawer-footer">
                         <a href="/#footer" class="mobile-drawer-cta primary-cta-btn">
                             <span>Talk to an Advisor</span>
+                            <span class="cta-arrow-badge" aria-hidden="true">
+                                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                                    <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
+                                </svg>
+                            </span>
                         </a>
                         <span class="mobile-drawer-subtext">Expert Property Guidance</span>
 
@@ -467,9 +544,9 @@
                     <a href="/" class="primary-cta-btn">
                         <span>Return to Home</span>
                         <span class="cta-arrow-badge" aria-hidden="true">
-                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="4" y1="12" x2="12" y2="4"></line>
-                                <polyline points="6 4 12 4 12 10"></polyline>
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                                <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
                             </svg>
                         </span>
                     </a>
