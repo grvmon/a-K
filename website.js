@@ -692,9 +692,11 @@ window.addEventListener('hashchange', function () {
                 mainCard.removeAttribute("role");
                 mainCard.removeAttribute("aria-label");
             }
-            var bubble = aside.querySelector(".advisor-speech-bubble");
-            if (bubble) {
-                bubble.classList.add("is-popped");
+            if (bubblePopped) {
+                var bubble = aside.querySelector(".advisor-speech-bubble");
+                if (bubble) {
+                    bubble.classList.add("is-popped");
+                }
             }
         }
 
@@ -729,16 +731,33 @@ window.addEventListener('hashchange', function () {
             });
         }
         
-        // Pop up the speech bubble like an incoming chat text after a natural delay
-        setTimeout(function() {
-            if (!aside.classList.contains("is-minimized")) {
-                var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
-                if (bubble) {
-                    bubble.classList.add("is-popped");
-                    playChatSound();
-                }
+        // Delay pop-up "Hi! I'm Abha" until the user scrolls past the 1st fold (Hero section)
+        var bubblePopped = false;
+        function triggerBubblePop() {
+            if (bubblePopped) return;
+            if (aside && aside.classList.contains("is-minimized")) return;
+            var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
+            if (bubble) {
+                bubblePopped = true;
+                bubble.classList.add("is-popped");
+                playChatSound();
+                window.removeEventListener("scroll", onScrollCheckFold);
             }
-        }, 1600);
+        }
+
+        function onScrollCheckFold() {
+            if (bubblePopped) return;
+            var hero = document.querySelector(".hero-section");
+            var foldThreshold = hero ? (hero.offsetTop + hero.offsetHeight * 0.55) : (window.innerHeight * 0.65);
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            if (scrollY >= foldThreshold) {
+                triggerBubblePop();
+            }
+        }
+
+        window.addEventListener("scroll", onScrollCheckFold, { passive: true });
+        // Check once after initial load in case user refreshed or navigated directly past 1st fold
+        setTimeout(onScrollCheckFold, 400);
     }
 
     if (document.readyState === "loading") {
