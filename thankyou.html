@@ -106,7 +106,25 @@
             z-index: 2;
             width: 100%;
             max-width: 620px;
-            padding: 4px 0;
+            padding: 8px 0;
+        }
+
+        .thankyou-card {
+            background: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 59, 28, 0.20);
+            border-radius: 12px;
+            padding: 26px 30px;
+            box-shadow: 0 12px 32px rgba(13, 27, 36, 0.05), 0 2px 6px rgba(13, 27, 36, 0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .thankyou-card-header {
+            display: flex;
+            flex-direction: column;
         }
 
         .thankyou-kicker {
@@ -116,16 +134,16 @@
             letter-spacing: 0.22em;
             text-transform: uppercase;
             color: #7D3B1C;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .thankyou-title {
             font-family: var(--font-heading) !important;
-            font-size: clamp(23px, 2.4vw, 35px) !important;
+            font-size: clamp(22px, 2.3vw, 32px) !important;
             font-weight: 400 !important;
-            line-height: 1.2 !important;
+            line-height: 1.22 !important;
             letter-spacing: -0.015em !important;
-            margin-bottom: 12px !important;
+            margin-bottom: 8px !important;
             color: var(--deep-navy);
             white-space: nowrap;
         }
@@ -136,23 +154,17 @@
         }
 
         .thankyou-lead {
-            font-size: 14.5px;
+            font-size: 14px;
             line-height: 1.5;
             color: var(--muted-slate);
-            margin-bottom: 12px;
-            max-width: 580px;
+            margin-bottom: 0;
+            max-width: 540px;
         }
 
-        .thankyou-agenda {
-            margin: 12px 0 12px 0;
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(125, 59, 28, 0.22);
-            border-radius: 8px;
-            padding: 13px 18px;
-            max-width: 580px;
-            box-shadow: 0 4px 16px rgba(31, 43, 56, 0.04);
+        .thankyou-card-divider {
+            height: 1px;
+            background: rgba(13, 27, 36, 0.08);
+            width: 100%;
         }
 
         .agenda-intro {
@@ -160,7 +172,7 @@
             font-size: 13px;
             font-weight: 700;
             color: var(--deep-navy);
-            margin-bottom: 8px;
+            margin-bottom: 9px;
             letter-spacing: 0.01em;
         }
 
@@ -211,11 +223,18 @@
             line-height: 1.35;
         }
 
+        .thankyou-card-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
         .thankyou-closing {
             font-size: 13.5px;
             font-weight: 600;
             color: var(--deep-navy);
-            margin: 12px 0 14px 0;
+            margin: 0;
         }
 
         /* Authoritative Homepage-Matched CTA Button & Arrow Badge QC */
@@ -339,14 +358,17 @@
             .thankyou-viewport { padding-top: 70px !important; }
             .hero-stage { padding: 20px 0; }
             .hero-image-pane { width: 40%; opacity: 0.25; }
+            .thankyou-card { padding: 22px 22px; }
         }
 
         @media (max-width: 768px) {
             .thankyou-viewport { padding-top: 68px !important; }
-            .hero-stage { padding: 24px 0 32px 0; }
+            .hero-stage { padding: 20px 0 28px 0; }
             .hero-image-pane { display: none; }
             .hero-content-wrap { max-width: 100%; }
-            .thankyou-title { font-size: 24px !important; white-space: normal; }
+            .thankyou-card { padding: 20px 16px; border-radius: 10px; }
+            .thankyou-title { font-size: 23px !important; white-space: normal; }
+            .hero-content-wrap .primary-cta-btn { width: 100% !important; }
         }
 
         /* Suppress Abha floating advisor widget on thank you page */
@@ -498,58 +520,70 @@
 
             <div class="container nav-container" style="position: relative; z-index: 5;">
                 <div class="hero-content-wrap">
-                    <span class="thankyou-kicker">THANK YOU</span>
-                    <h1 class="thankyou-title">
-                        Your request <span class="title-accent">is in good hands.</span>
-                    </h1>
-                    
-                    <p class="thankyou-lead">An acre&amp;key Property Concierge will personally review your requirements and reach out to understand what you’re looking for.</p>
+                    <div class="thankyou-card">
+                        <!-- Card Header -->
+                        <div class="thankyou-card-header">
+                            <span class="thankyou-kicker">THANK YOU</span>
+                            <h1 class="thankyou-title">
+                                Your request <span class="title-accent">is in good hands.</span>
+                            </h1>
+                            <p class="thankyou-lead">An acre&amp;key Property Concierge will personally review your requirements and reach out to understand what you’re looking for.</p>
+                        </div>
 
-                    <div class="thankyou-agenda">
-                        <p class="agenda-intro">In this call, we’ll discuss…</p>
-                        <ul class="agenda-list">
-                            <li class="agenda-item">
-                                <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
-                                <div class="agenda-text">
-                                    <strong class="agenda-title">Your requirements</strong>
-                                    <span class="agenda-desc">Location, property type, budget, priorities, and timeline.</span>
-                                </div>
-                            </li>
-                            <li class="agenda-item">
-                                <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
-                                <div class="agenda-text">
-                                    <strong class="agenda-title">What matters to you</strong>
-                                    <span class="agenda-desc">Your lifestyle preferences and investment goals.</span>
-                                </div>
-                            </li>
-                            <li class="agenda-item">
-                                <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
-                                <div class="agenda-text">
-                                    <strong class="agenda-title">Relevant opportunities</strong>
-                                    <span class="agenda-desc">Properties selected around your specific requirements.</span>
-                                </div>
-                            </li>
-                            <li class="agenda-item">
-                                <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
-                                <div class="agenda-text">
-                                    <strong class="agenda-title">Next steps</strong>
-                                    <span class="agenda-desc">Pricing, process, timelines, and what happens next.</span>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="thankyou-card-divider" aria-hidden="true"></div>
+
+                        <!-- Agenda Section -->
+                        <div class="thankyou-agenda-section">
+                            <p class="agenda-intro">In this call, we’ll discuss…</p>
+                            <ul class="agenda-list">
+                                <li class="agenda-item">
+                                    <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
+                                    <div class="agenda-text">
+                                        <strong class="agenda-title">Your requirements</strong>
+                                        <span class="agenda-desc">Location, property type, budget, priorities, and timeline.</span>
+                                    </div>
+                                </li>
+                                <li class="agenda-item">
+                                    <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
+                                    <div class="agenda-text">
+                                        <strong class="agenda-title">What matters to you</strong>
+                                        <span class="agenda-desc">Your lifestyle preferences and investment goals.</span>
+                                    </div>
+                                </li>
+                                <li class="agenda-item">
+                                    <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
+                                    <div class="agenda-text">
+                                        <strong class="agenda-title">Relevant opportunities</strong>
+                                        <span class="agenda-desc">Properties selected around your specific requirements.</span>
+                                    </div>
+                                </li>
+                                <li class="agenda-item">
+                                    <span class="agenda-bullet" aria-hidden="true"><svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor"><polygon points="4,0 8,4 4,8 0,4"/></svg></span>
+                                    <div class="agenda-text">
+                                        <strong class="agenda-title">Next steps</strong>
+                                        <span class="agenda-desc">Pricing, process, timelines, and what happens next.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="thankyou-card-divider" aria-hidden="true"></div>
+
+                        <!-- Card Footer -->
+                        <div class="thankyou-card-footer">
+                            <p class="thankyou-closing">We look forward to speaking with you.</p>
+                            
+                            <a href="/" class="primary-cta-btn">
+                                <span>Return to Home</span>
+                                <span class="cta-arrow-badge" aria-hidden="true">
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                                        <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
-
-                    <p class="thankyou-closing">We look forward to speaking with you.</p>
-                    
-                    <a href="/" class="primary-cta-btn">
-                        <span>Return to Home</span>
-                        <span class="cta-arrow-badge" aria-hidden="true">
-                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
-                                <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
-                            </svg>
-                        </span>
-                    </a>
                 </div>
             </div>
         </main>
