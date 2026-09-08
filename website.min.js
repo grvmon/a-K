@@ -701,12 +701,6 @@ window.addEventListener('hashchange', function () {
     });
 
     function mountAdvisorUnit() {
-        try {
-            if (sessionStorage.getItem("advisor_dismissed") === "true") {
-                return;
-            }
-        } catch (e) {}
-
         if (window.location.pathname.indexOf("thankyou") !== -1 || document.querySelector(".thankyou-viewport") || (document.body && document.body.classList.contains("page-thankyou"))) {
             return;
         }
@@ -736,12 +730,6 @@ window.addEventListener('hashchange', function () {
             "</div>" +
           "</div>" +
           "<div class=\"advisor-main-card\">" +
-            "<button class=\"advisor-close-btn\" id=\"advisorCloseBtn\" aria-label=\"Dismiss advisor widget\" type=\"button\" title=\"Close\">" +
-              "<svg width=\"11\" height=\"11\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
-                "<line x1=\"1.5\" y1=\"1.5\" x2=\"10.5\" y2=\"10.5\"></line>" +
-                "<line x1=\"10.5\" y1=\"1.5\" x2=\"1.5\" y2=\"10.5\"></line>" +
-              "</svg>" +
-            "</button>" +
             "<div class=\"advisor-avatar-wrap\">" +
               "<svg class=\"advisor-accent-rays\" width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\">" +
                 "<path d=\"M13 20L8 16\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
@@ -752,7 +740,15 @@ window.addEventListener('hashchange', function () {
               "<span class=\"advisor-status-dot\" aria-label=\"Abha is online\"></span>" +
             "</div>" +
             "<div class=\"advisor-card-content\">" +
-              "<div class=\"advisor-card-heading\">Have Questions?</div>" +
+              "<div class=\"advisor-card-heading\">" +
+                "<span>Have Questions?</span>" +
+                "<button class=\"advisor-close-btn\" id=\"advisorCloseBtn\" aria-label=\"Dismiss advisor widget\" type=\"button\" title=\"Close\">" +
+                  "<svg width=\"9\" height=\"9\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
+                    "<line x1=\"2\" y1=\"2\" x2=\"10\" y2=\"10\"></line>" +
+                    "<line x1=\"10\" y1=\"2\" x2=\"2\" y2=\"10\"></line>" +
+                  "</svg>" +
+                "</button>" +
+              "</div>" +
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
@@ -766,7 +762,7 @@ window.addEventListener('hashchange', function () {
             "</div>" +
           "</div>";
         
-        // Attach close button dismiss handler
+        // Attach close button dismiss handler (closes widget for current view, reappears on next load)
         var closeBtn = document.getElementById("advisorCloseBtn") || (aside ? aside.querySelector(".advisor-close-btn") : null);
         if (closeBtn) {
             closeBtn.addEventListener("click", function(e) {
@@ -783,9 +779,6 @@ window.addEventListener('hashchange', function () {
                         }
                     }, 250);
                 }
-                try {
-                    sessionStorage.setItem("advisor_dismissed", "true");
-                } catch (err) {}
             });
         }
         
