@@ -339,14 +339,26 @@
         }
 
         @media (max-width: 768px) {
-            .hero-stage { padding: 88px 0 36px 0; }
+            .thankyou-viewport { padding-top: 68px !important; }
+            .hero-stage { padding: 24px 0 32px 0; }
             .hero-image-pane { display: none; }
             .hero-content-wrap { max-width: 100%; }
-            .thankyou-title { font-size: 28px !important; white-space: normal; }
-            .bottom-pillars { padding: 24px 0 40px 0; }
-            .pillars-grid { grid-template-columns: 1fr; gap: 20px; }
+            .thankyou-title { font-size: 24px !important; white-space: normal; }
+            .bottom-pillars { padding: 20px 0 32px 0; }
+            .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
             .pillar-card { padding: 0; }
             .pillar-card:not(:last-child)::after { display: none; }
+        }
+
+        /* Suppress Abha floating advisor widget on thank you page */
+        .advisor-floating-unit,
+        #advisorFloatingUnit,
+        .advisor-speech-bubble,
+        #advisorSpeechBubble {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
         }
     </style>
 </head>
@@ -574,6 +586,6 @@
     </div>
 
     <!-- Script for mobile menu interactions -->
-    <script src="../website.js?v=4" defer></script>
+    <script src="../website.js?v=5" defer></script>
 </body>
 </html>

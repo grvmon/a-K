@@ -349,6 +349,17 @@
             .pillar-card { padding: 0; }
             .pillar-card:not(:last-child)::after { display: none; }
         }
+
+        /* Suppress Abha floating advisor widget on thank you page */
+        .advisor-floating-unit,
+        #advisorFloatingUnit,
+        .advisor-speech-bubble,
+        #advisorSpeechBubble {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
     </style>
 </head>
 <body>
@@ -575,6 +586,6 @@
     </div>
 
     <!-- Script for mobile menu interactions -->
-    <script src="website.js?v=4" defer></script>
+    <script src="website.js?v=5" defer></script>
 </body>
 </html>

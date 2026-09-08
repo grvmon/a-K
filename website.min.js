@@ -701,6 +701,9 @@ window.addEventListener('hashchange', function () {
     });
 
     function mountAdvisorUnit() {
+        if (window.location.pathname.indexOf("thankyou") !== -1 || document.querySelector(".thankyou-viewport") || (document.body && document.body.classList.contains("page-thankyou"))) {
+            return;
+        }
         var aside = document.getElementById("advisorFloatingUnit");
         if (!aside) {
             aside = document.createElement("aside");
