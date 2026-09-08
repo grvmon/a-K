@@ -658,12 +658,14 @@ window.addEventListener('hashchange', function () {
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
-              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();} return false;\" aria-label=\"Start chat with Abha\">" +
+              "<a href=\"#\" class=\"advisor-talk-btn primary-cta-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();} return false;\" aria-label=\"Start chat with Abha\">" +
                 "<span>Start Chat</span>" +
-                "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
-                  "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
-                  "<polyline points=\"12 5 19 12 12 19\"></polyline>" +
-                "</svg>" +
+                "<span class=\"cta-arrow-badge\" aria-hidden=\"true\">" +
+                  "<svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\">" +
+                    "<line x1=\"4.5\" y1=\"11.5\" x2=\"11.5\" y2=\"4.5\"></line>" +
+                    "<polyline points=\"6.5 4.5 11.5 4.5 11.5 9.5\"></polyline>" +
+                  "</svg>" +
+                "</span>" +
               "</a>" +
             "</div>" +
           "</div>";

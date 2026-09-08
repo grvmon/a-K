@@ -2837,49 +2837,96 @@ a.sd-btn-gold:hover,
     font-weight: 700;
 }
 
-/* Talk Now CTA Button */
+/* Talk Now / Start Chat CTA Button */
 .advisor-talk-btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 9px !important;
+    gap: 11px !important;
     width: 100% !important;
     height: 42px !important;
     min-height: 42px !important;
-    padding: 0 16px !important;
+    padding: 0 14px 0 18px !important;
     background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
     color: #FFFFFF !important;
     border: none !important;
-    border-radius: 6px !important;
-    font-family: 'Manrope', var(--font-body), sans-serif !important;
+    border-radius: 4px !important;
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
     font-size: 15px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.01em !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
     text-transform: none !important;
     text-decoration: none !important;
     cursor: pointer !important;
     box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease !important;
     margin-top: 2px !important;
     box-sizing: border-box !important;
 }
 
 .advisor-talk-btn:hover {
-    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+    background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
     color: #FFFFFF !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 6px 16px rgba(125, 68, 42, 0.35) !important;
+    box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4) !important;
 }
 
-.advisor-talk-arrow {
+.advisor-talk-btn > span:not(.cta-arrow-badge) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    color: #FFFFFF !important;
+}
+
+.advisor-talk-btn .cta-arrow-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    box-sizing: border-box !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.advisor-talk-btn .cta-arrow-badge svg {
+    width: 10px !important;
+    height: 10px !important;
+    stroke: currentColor !important;
+    stroke-width: 1.8 !important;
     display: block !important;
-    width: 16px !important;
-    height: 16px !important;
-    transition: transform 0.2s ease !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.advisor-talk-btn:hover .advisor-talk-arrow {
-    transform: translateX(3px) !important;
+.advisor-talk-btn:hover .cta-arrow-badge {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.95) !important;
+    transform: scale(1.06) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+.advisor-talk-btn:hover .cta-arrow-badge svg {
+    transform: translate(1.5px, -1.5px) !important;
 }
 
 /* Static Preview in Style Guide */
@@ -2962,7 +3009,22 @@ a.sd-btn-gold:hover,
         height: 38px !important;
         min-height: 38px !important;
         font-size: 13.5px !important;
-        border-radius: 6px !important;
+        border-radius: 4px !important;
+        padding: 0 12px 0 16px !important;
+        gap: 10px !important;
+    }
+    .advisor-talk-btn > span:not(.cta-arrow-badge) {
+        font-size: 13.5px !important;
+    }
+    .advisor-talk-btn .cta-arrow-badge {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+    }
+    .advisor-talk-btn .cta-arrow-badge svg {
+        width: 9px !important;
+        height: 9px !important;
     }
 }
 
