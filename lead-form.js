@@ -5,22 +5,23 @@
   var COOLDOWN_SECONDS  = (typeof window.lfCooldownSeconds !== "undefined") ? window.lfCooldownSeconds : 15;
 
   var STRINGS = {
-    btnSubmit:        "Submit",
+    btnSubmit:        "Schedule Advisory Call",
     btnSending:       "Sending...",
     errNameRequired:  "Name is required",
     errNameInvalid:   "Enter a valid name",
     errPhoneRequired: "Mobile number is required",
     errPhoneInvalid:  "Enter a valid {len}-digit number for {country}",
     errPhoneCode:     "Please select a valid country code",
-    errPhoneUnknown:  "Country code not recognised — please select manually",
+    errPhoneUnknown:  "Country code not recognised. Please select manually",
     errEmailRequired: "Email is required",
     errEmailInvalid:  "Enter a valid email",
     errCooldown:      "You've already submitted recently. Please wait a few seconds before trying again.",
     slowSubmit:       "Still submitting... Please wait.",
     successHeading:   "Thank You",
     successBody:      "Your request has been received. Redirecting in {n}s...",
-    successBodyStay:  "Your request has been received. Someone will reach out to you in 24 hours.",
-    errOffline:       "Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.",
+    successBodyStay:  "Your request has been received. Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.",
+    errOffline:       "Connection issue. Your details are safely held. Please click Schedule Advisory Call once more to retry or reach out to support.",
+    errSubmit:        "Form submission blocked by server policy. Please email us directly or try again later.",
   };
 
   var nameRx  = /^[\p{Letter}\p{Mark}\p{Number}\s.'-]{2,60}$/u;
@@ -297,14 +298,18 @@
   }
 
   function setBackgroundA11y(hidden) {
-    var nodes = document.querySelectorAll("body > *:not(#lfModalOverlay)");
+    var nodes = document.querySelectorAll("body > *");
     for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
+      if (node === modalOverlay || (modalOverlay && node.contains(modalOverlay))) {
+        continue;
+      }
       if (hidden) {
-        nodes[i].setAttribute("aria-hidden", "true");
-        try { nodes[i].inert = true; } catch (e) {}
+        node.setAttribute("aria-hidden", "true");
+        try { node.inert = true; } catch (e) {}
       } else {
-        nodes[i].removeAttribute("aria-hidden");
-        try { nodes[i].inert = false; } catch (e) {}
+        node.removeAttribute("aria-hidden");
+        try { node.inert = false; } catch (e) {}
       }
     }
   }
@@ -365,6 +370,33 @@
 
   var ModalController = {
     open: function () {
+      if (!modalOverlay) {
+        modalOverlay       = document.getElementById("lfModalOverlay");
+        modalTrigger       = document.getElementById("lfModalTrigger");
+        modalClose         = document.getElementById("lfModalClose");
+        modalContent       = document.getElementById("lfWrap");
+        mainFormContentBox = document.getElementById("lfModalFormContent");
+        form               = document.getElementById("lfForm");
+        nameInput          = document.getElementById("lfName");
+        phoneInput         = document.getElementById("lfPhone");
+        emailInput         = document.getElementById("lfEmail");
+        nameField          = document.getElementById("lfNameField");
+        phoneField         = document.getElementById("lfPhoneField");
+        emailField         = document.getElementById("lfEmailField");
+        nameErr            = document.getElementById("lfNameErr");
+        phoneErr           = document.getElementById("lfPhoneErr");
+        emailErr           = document.getElementById("lfEmailErr");
+        submitBtn          = document.getElementById("lfSubmitBtn");
+        btnText            = document.getElementById("lfBtnText");
+        ccTrigger          = document.getElementById("lfCcTrigger");
+        ccDisplay          = document.getElementById("lfCcDisplay");
+        ccPanel            = document.getElementById("lfCcPanel");
+        ccSearch           = document.getElementById("lfCcSearch");
+        ccList             = document.getElementById("lfCcList");
+        ccVal              = document.getElementById("lfCcVal");
+        globalErr          = document.getElementById("lfGlobalErr");
+        ccBackdrop         = document.getElementById("lfCcBackdrop");
+      }
       if (!modalOverlay) return;
       if (showingSuccess) exitSuccessState();
       lfFormOpenTime = Date.now();
@@ -534,7 +566,6 @@
         context: contextObj
       };
 
-      console.log("[HubSpot Submission Request]", url, hsBody);
 
       var response = await fetch(url, {
         method: "POST",
@@ -551,7 +582,6 @@
       }
 
       var resJson = await response.json().catch(function() { return { inlineMessage: "Success" }; });
-      console.log("[HubSpot Submission Success]", resJson);
       return resJson;
     }
   };
@@ -918,14 +948,14 @@
 
       var h3 = document.createElement("h3");
       h3.setAttribute("tabindex","-1");
-      h3.style.cssText = "font-size:20px;font-weight:500;color:#1F2B38;margin-bottom:6px;outline:none;";
+      h3.style.cssText = "font-size:20px;font-weight:500;color:var(--deep-navy, #0D1B24);margin-bottom:6px;outline:none;";
       h3.textContent = STRINGS.successHeading;
 
       var willRedirect = !!(REDIRECT_URL && REDIRECT_URL !== "#");
       var delay = willRedirect ? 3000 : 2500;
       var remaining = 3;
       var p = document.createElement("p");
-      p.style.cssText = "font-size:14px;color:rgba(31, 43, 56, 0.6);";
+      p.style.cssText = "font-size:14px;color:var(--lf-muted, rgba(13, 27, 36, 0.6));";
       p.textContent = willRedirect
         ? STRINGS.successBody.replace("{n}", remaining)
         : STRINGS.successBodyStay;
@@ -955,7 +985,7 @@
       resetSubmitButton();
       if (globalErr) {
         globalErr.classList.add("lf-show");
-        globalErr.textContent = STRINGS.errOffline;
+        globalErr.textContent = STRINGS.errSubmit;
       }
       console.error("[Submission Failed]", err);
     }
@@ -978,7 +1008,7 @@
       'a[href="#footer"]',
       'a[href="#contact"]',
       'a[href="#inquiry-form"]',
-      'a[href="index.html#footer"]'
+      'a[href="/#footer"]'
     ].join(', ');
 
     var elements = document.querySelectorAll(ctaSelector);
@@ -986,9 +1016,16 @@
       // Don't intercept internal anchor links that are purely navigational if they are not CTAs,
       // but if they are CTA buttons or contain consultation/talk/advisory text, bind modal.
       el.addEventListener('click', function(e) {
-        // Exclude mailto: or purely external links unless they are explicit CTA classes
-        if (el.tagName === 'A' && el.getAttribute('href') && el.getAttribute('href').startsWith('mailto:')) {
+        if (el.hasAttribute('data-no-modal') || el.getAttribute('data-no-modal') === 'true') {
           return;
+        }
+        var href = el.getAttribute('href');
+        if (el.tagName === 'A' && href) {
+          var isAnchorOnly = href === '#' || href.startsWith('#');
+          var isPageNavigation = !isAnchorOnly && href !== '' && !href.startsWith('javascript:');
+          if (isPageNavigation || href === '/' || href === '../' || href.startsWith('mailto:') || href.startsWith('tel:')) {
+            return;
+          }
         }
         e.preventDefault();
         window.openModal();
@@ -996,11 +1033,24 @@
     });
   }
 
+  function checkUrlAutoOpen() {
+    if (window.location.hash === '#modal' || window.location.hash === '#open-modal' || window.location.search.indexOf('open=modal') !== -1) {
+      setTimeout(function() {
+        if (window.openModal) window.openModal();
+      }, 150);
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindWebsiteCTAs);
+    document.addEventListener('DOMContentLoaded', function() {
+      bindWebsiteCTAs();
+      checkUrlAutoOpen();
+    });
   } else {
     bindWebsiteCTAs();
+    checkUrlAutoOpen();
   }
+  window.addEventListener('hashchange', checkUrlAutoOpen);
 
   window.lfActiveInstanceWipe = function() {
     clearTimeout(searchDebounceTimer);

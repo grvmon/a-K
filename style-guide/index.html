@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MKSRMW9C');</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acre&key - Style Guide</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="../website.min.css?v=20260907_width_v20">
+    <link rel="stylesheet" href="../lead-form.min.css?v=20260907_color_v26">
+    <style>
+        .sg-container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 8rem; }
+        .sg-section { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--divider); }
+        .sg-heading { font-family: var(--font-heading); color: var(--deep-navy); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .sg-desc { font-family: var(--font-body); color: var(--muted-slate); font-size: 1rem; margin-bottom: 2.5rem; }
+        .sg-subheading { font-family: var(--font-body); font-weight: 700; color: var(--dark-brass); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+        .color-card { border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--divider); }
+        .color-swatch { height: 100px; width: 100%; }
+        .color-info { padding: 1rem; background: var(--white); font-family: var(--font-body); font-size: 0.85rem; }
+        .color-name { font-weight: 700; color: var(--deep-navy); margin-bottom: 0.25rem; }
+        .color-hex { color: var(--deep-slate); }
+        .typo-sample { margin-bottom: 1.5rem; }
+        .typo-label { font-size: 0.75rem; color: var(--muted-slate); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block; }
+        .sg-components { display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; }
+        
+        </style>
+</head>
+<body>
+    <div class="sg-container">
+        <h1 class="sg-heading">acre&key Style Guide</h1>
+        <p class="sg-desc">Design system tokens, typography, and UI components for Acre&amp;Key web applications.</p>
+        
+                <div class="sg-section">
+            <h2 class="sg-subheading">Colors</h2>
+            <div class="color-grid">
+                <div class="color-card"><div class="color-swatch" style="background: var(--deep-navy);"></div><div class="color-info"><div class="color-name">Deep Navy</div><div class="color-hex">#0D1B24</div></div></div>
+                <div class="color-card"><div class="color-swatch" style="background: var(--refined-brass);"></div><div class="color-info"><div class="color-name">Refined Brass</div><div class="color-hex">#7d442a</div></div></div>
+                <div class="color-card"><div class="color-swatch" style="background: var(--warm-ivory);"></div><div class="color-info"><div class="color-name">Warm Ivory</div><div class="color-hex">#f8f6f1</div></div></div>
+                <div class="color-card"><div class="color-swatch" style="background: var(--white);"></div><div class="color-info"><div class="color-name">White</div><div class="color-hex">#FFFFFF</div></div></div>
+                <div class="color-card"><div class="color-swatch" style="background: var(--muted-slate);"></div><div class="color-info"><div class="color-name">Muted Slate</div><div class="color-hex">#667085</div></div></div>
+                <div class="color-card"><div class="color-swatch" style="background: var(--warm-stone);"></div><div class="color-info"><div class="color-name">Warm Stone</div><div class="color-hex">#DDD7CF</div></div></div>
+            </div>
+        </div>
+
+        <div class="sg-section">
+            <h2 class="sg-subheading">Typography</h2>
+            <div class="typo-sample">
+                <span class="typo-label">Brand Logo (Josefin Sans)</span>
+                <div class="brand-logo-text">acre&amp;key</div>
+            </div>
+            <div class="typo-sample">
+                <span class="typo-label">Section Title (Cormorant Garamond)</span>
+                <h2 class="section-title">Great Locations Still Lead to <span class="highlight-brass">Bad Purchases.</span></h2>
+            </div>
+            <div class="typo-sample">
+                <span class="typo-label">Section Subtitle (Manrope)</span>
+                <p class="section-subtitle">Evaluate beyond brochures, sales pitches, and show apartments.</p>
+            </div>
+            <div class="typo-sample">
+                <span class="typo-label">Kicker / Eyebrow (Manrope)</span>
+                <div class="hero-kicker"><span>HOME BUYER CONCIERGE</span></div>
+            </div>
+            <div class="typo-sample">
+                <span class="typo-label">Body Text (Manrope)</span>
+                <p class="waw-intro-text">acre&amp;key was created by corporate leaders with more than 40 years of combined experience across real estate, investing, strategy, marketing and customer experience.</p>
+            </div>
+        </div>
+
+        <div class="sg-section" style="background: var(--deep-navy); padding: 2rem; border-radius: 8px;">
+            <h2 class="sg-subheading" style="color: var(--white);">Buttons & CTAs</h2>
+            <div class="sg-components">
+                <a href="#" class="premium-inline-cta primary-cta-btn">
+                    <span>Book a Consultation</span>
+                    <span class="btn-arrow-badge">→</span>
+                </a>
+                <a href="#" class="sd-btn-gold">
+                    <span>Talk to an Advisor</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sg-section">
+            <h2 class="sg-subheading">Components</h2>
+            <div style="max-width: 400px; margin-bottom: 2rem;">
+                <span class="typo-label">Framework Card</span>
+                <div class="framework-card" style="height: auto;">
+                    <div class="framework-card-header">
+                        <h3 class="framework-card-title"><span class="title-num">01.</span> Corridor</h3>
+                        <div class="framework-card-sub">Micro-Market &amp; Location Analysis</div>
+                    </div>
+                    <ul class="framework-bullets">
+                        <li>Employment &amp; IT hub access</li>
+                        <li>Metro connectivity &amp; infra</li>
+                    </ul>
+                    <div class="framework-questions-box">
+                        <div class="framework-questions-header">QUESTIONS WE ANSWER</div>
+                        <ul class="framework-questions-list">
+                            <li>Is long-term demand <strong>sustainable</strong>?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sg-section">
+            <h2 class="sg-subheading">Floating Advisor Concierge Unit</h2>
+            <p class="sg-desc" style="margin-bottom: 1.5rem;">Right-aligned persistent concierge card with speech bubble, online status indicator, and direct lead consultation trigger.</p>
+            <div style="background: var(--warm-ivory); padding: 1.5rem 1rem; border-radius: 16px; display: flex; justify-content: flex-end; border: 1px solid var(--warm-stone); max-width: 100%; box-sizing: border-box; overflow: hidden;">
+                <div class="advisor-floating-unit is-static">
+                  <div class="advisor-speech-bubble">
+                    <div class="advisor-speech-title">Hi! I’m Abha</div>
+                    <div class="advisor-speech-desc">How can I help you today?</div>
+                    <div class="advisor-bubble-tail" aria-hidden="true"></div>
+                  </div>
+                  <div class="advisor-main-card">
+                    <div class="advisor-avatar-wrap">
+                      <svg class="advisor-accent-rays" width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M13 20L8 16" stroke="#be7555" stroke-width="3" stroke-linecap="round"/>
+        <path d="M16 14L11 8" stroke="#be7555" stroke-width="3" stroke-linecap="round"/>
+        <path d="M23 9L20 3" stroke="#be7555" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+                      <img src="assets/advisor-abha.webp" alt="Abha - Home Buying Advisor" class="advisor-avatar-img" width="76" height="76" loading="lazy">
+                      <span class="advisor-status-dot" aria-label="Abha is online"></span>
+                    </div>
+                    <div class="advisor-card-content">
+                      <div class="advisor-card-heading">Have Questions?</div>
+                      <div class="advisor-status-row">
+                        <span class="advisor-status-text"><strong>Abha</strong> is online now</span>
+                      </div>
+                      <a href="#" class="advisor-talk-btn" onclick="if(window.openModal){window.openModal();} return false;" aria-label="Chat with Abha now">
+                        <span>Chat Now</span>
+                        <svg class="advisor-talk-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                <button type="button" class="sd-btn sd-btn-primary" onclick="if(window.playAdvisorChime){window.playAdvisorChime();}else{new Audio('assets/advisor-chime.wav').play();}" style="cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                    <span>Play Advisor Chime Sound</span>
+                </button>
+                <a href="assets/advisor-chime.wav" target="_blank" class="sd-btn sd-btn-secondary" style="display: inline-flex; align-items: center; gap: 6px;">Direct Audio File (.wav)</a>
+                <span style="font-size: 0.9rem; color: var(--deep-slate);">Click to test &amp; validate the incoming text notification chime in your browser.</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=lf-modal-overlay id=lfModalOverlay><div class=lf-cc-backdrop id=lfCcBackdrop></div><div class=lf-wrap id=lfWrap role=dialog aria-modal=true aria-labelledby=lfMainHeading aria-describedby=lfSubHeading><div class=lf-drag-handle></div><button type=button class="lf-modal-close-icon lf-focusable" id=lfModalClose aria-label="Close modal window" tabindex=0><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round d="M1 1l12 12M13 1L1 13"/></svg></button><div id=lfModalFormContent><div class=lf-header><h2 class=lf-main-heading id=lfMainHeading>Speak to a Home Buying Expert</h2><p class=lf-sub-heading id=lfSubHeading>Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class=lf-form id=lfForm novalidate><input class=lf-hp type=text name=website value tabindex=-1 autocomplete=off aria-hidden=true><input type=hidden id=lfGclid name=gclid><input type=hidden id=lfFclid name=fclid><input type=hidden id=lfUtmSource name=utm_source><input type=hidden id=lfUtmMedium name=utm_medium><input type=hidden id=lfUtmCampaign name=utm_campaign><input type=hidden id=lfUtmTerm name=utm_term><input type=hidden id=lfUtmContent name=utm_content><input type=hidden id=lfSourceUrl name=source_url><input type=hidden id=lfSubmittedAt name=submitted_at><div class=lf-field id=lfNameField><div class=lf-input-box><label class=lf-label for=lfName>Full name<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=text id=lfName name=name autocomplete=name enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=60 aria-describedby=lfNameErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfNameErr role=alert></div></div><div class="lf-field lf-field-phone" id=lfPhoneField><div class=lf-input-box><label class=lf-label id=lfPhoneLbl for=lfPhone>Mobile<span class=lf-req aria-hidden=true>*</span></label><div class=lf-phone-row><button type=button class="lf-cc-trigger lf-focusable" id=lfCcTrigger aria-haspopup=listbox aria-expanded=false aria-controls=lfCcPanel aria-label="Select country dial code" tabindex=0><span id=lfCcDisplay>+91</span><svg class=lf-cc-arrow viewbox="0 0 8 5" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l3 3 3-3"/></svg></button><div class=lf-cc-panel id=lfCcPanel role=listbox aria-labelledby=lfPhoneLbl><input class="lf-cc-search lf-focusable" type=text id=lfCcSearch role=combobox aria-expanded=true aria-autocomplete=list aria-controls=lfCcList placeholder="Search country..." autocomplete=off aria-label="Search countries by name or code" tabindex=-1><div class=lf-cc-list id=lfCcList></div></div><input type=hidden id=lfCcVal name=country_code value=+91><div class=lf-divider></div><input class="lf-input lf-focusable" type=tel id=lfPhone name=phone inputmode=numeric autocomplete=tel enterkeyhint=next aria-required=true tabindex=0 aria-invalid=false maxlength=15 aria-describedby=lfPhoneErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" id=lfPhoneClearBtn aria-label="Clear mobile number field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class=lf-err id=lfPhoneErr role=alert></div></div><div class=lf-field id=lfEmailField><div class=lf-input-box><label class=lf-label for=lfEmail>Email<span class=lf-req aria-hidden=true>*</span></label><input class="lf-input lf-focusable" type=email id=lfEmail name=email autocomplete=email enterkeyhint=done aria-required=true tabindex=0 aria-invalid=false maxlength=120 aria-describedby=lfEmailErr><span class=lf-valid-icon aria-hidden=true><svg viewbox="0 0 14 14" fill=none><path stroke=currentColor stroke-width=1.5 stroke-linecap=round stroke-linejoin=round d="M1 7l4 4 8-8"/></svg></span><button type=button class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex=-1><svg viewbox="0 0 10 10" fill=none><path stroke=currentColor stroke-width=1.2 stroke-linecap=round d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class=lf-err id=lfEmailErr role=alert></div></div><div class=lf-submit-wrap><button type=submit class="lf-btn lf-focusable primary-cta-btn" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Schedule Advisory Call</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><p class=lf-privacy-consent style="font-size: 0.75rem; color: var(--muted-slate); margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href=/privacy-policy/ style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class=lf-global-err id=lfGlobalErr role=alert aria-live=assertive aria-atomic=true>Connection issue. Your details are safely held. Please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+    <script src="../lead-form.min.js?v=20260907_abha_v18" defer></script>
+</body>
+</html>

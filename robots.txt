@@ -1,4 +1,53 @@
+# robots.txt
+# https://acrenkey.com/robots.txt
+
 User-agent: *
 Allow: /
 
+# Block internal/system folders (if they exist)
+Disallow: /cdn-cgi/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Allow major AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
 Sitemap: https://acrenkey.com/sitemap.xml
+
+# AI documentation
+# https://acrenkey.com/llms.txt
+# https://acrenkey.com/llms-full.txt
+Sitemap: https://acrenkey.com/image-sitemap.xml
