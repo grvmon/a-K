@@ -47,6 +47,24 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+
+function ensureHeaderCtaBadges() {
+    var navCtas = document.querySelectorAll('.header-nav .nav-cta-btn, .header-nav .primary-cta-btn, .header-nav .mobile-drawer-cta');
+    navCtas.forEach(function (btn) {
+        if (!btn.querySelector('.cta-arrow-badge')) {
+            var badge = document.createElement('span');
+            badge.className = 'cta-arrow-badge';
+            badge.setAttribute('aria-hidden', 'true');
+            badge.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg>';
+            btn.appendChild(badge);
+        }
+    });
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureHeaderCtaBadges);
+} else {
+    ensureHeaderCtaBadges();
+}
 const mobileBtn = document.getElementById('mobile-toggle-btn');
 const mobileDrawer = document.getElementById('mobile-drawer');
 const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
