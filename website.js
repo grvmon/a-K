@@ -613,6 +613,57 @@ window.addEventListener('hashchange', function () {
         window.addEventListener(evt, unlockOnGesture, { passive: true });
     });
 
+    window.triggerAbhaChat = function() {
+        if (window.playAdvisorChime) {
+            window.playAdvisorChime();
+        }
+        if (typeof window.openAbhaModal === "function") {
+            window.openAbhaModal();
+            return;
+        }
+        var script = document.getElementById("abhaFormScript") || document.querySelector('script[src*="abha-form"]');
+        if (!script) {
+            var basePath = "/";
+            var webScript = document.querySelector('script[src*="website"]');
+            if (webScript && webScript.getAttribute("src")) {
+                var src = webScript.getAttribute("src");
+                var idx = src.lastIndexOf("website");
+                if (idx !== -1) basePath = src.substring(0, idx);
+            }
+            if (!document.getElementById("abhaFormStyles") && !document.querySelector('link[href*="abha-form"]')) {
+                var link = document.createElement("link");
+                link.id = "abhaFormStyles";
+                link.rel = "stylesheet";
+                link.href = basePath + "abha-form.min.css?v=20260908_qc_v9";
+                document.head.appendChild(link);
+            }
+            script = document.createElement("script");
+            script.id = "abhaFormScript";
+            script.src = basePath + "abha-form.min.js?v=20260908_qc_v9";
+            script.defer = true;
+            script.onload = function() {
+                if (typeof window.openAbhaModal === "function") {
+                    window.openAbhaModal();
+                } else if (typeof window.openModal === "function") {
+                    window.openModal();
+                }
+            };
+            document.body.appendChild(script);
+        } else {
+            var pollCount = 0;
+            var pollTimer = setInterval(function() {
+                pollCount++;
+                if (typeof window.openAbhaModal === "function") {
+                    clearInterval(pollTimer);
+                    window.openAbhaModal();
+                } else if (pollCount > 15) {
+                    clearInterval(pollTimer);
+                    if (typeof window.openModal === "function") window.openModal();
+                }
+            }, 50);
+        }
+    };
+
     function mountAdvisorUnit() {
         try {
             sessionStorage.removeItem("advisor_dismissed");
@@ -643,7 +694,7 @@ window.addEventListener('hashchange', function () {
         }
         
         aside.innerHTML = 
-          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openModal){window.openModal();} return false;\" title=\"Chat with Abha\">" +
+          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.triggerAbhaChat){window.triggerAbhaChat();}else{if(window.playAdvisorChime)window.playAdvisorChime();if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();}} return false;\" title=\"Chat with Abha\">" +
             "<div class=\"advisor-speech-title\">Hi! I'm Abha</div>" +
             "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
             "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\">" +
@@ -676,7 +727,7 @@ window.addEventListener('hashchange', function () {
               "<div class=\"advisor-status-row\">" +
                 "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
               "</div>" +
-              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.playAdvisorChime){window.playAdvisorChime();} if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();} return false;\" aria-label=\"Start chat with Abha\">" +
+              "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.triggerAbhaChat){window.triggerAbhaChat();}else{if(window.playAdvisorChime)window.playAdvisorChime();if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();}} return false;\" aria-label=\"Start chat with Abha\">" +
                 "<span>Start Chat</span>" +
                 "<svg class=\"advisor-talk-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
                   "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>" +
@@ -737,11 +788,12 @@ window.addEventListener('hashchange', function () {
                 if (aside.classList.contains("is-minimized")) {
                     e.preventDefault();
                     e.stopPropagation();
-                    if (window.playAdvisorChime) window.playAdvisorChime();
-                    if (window.openAbhaModal) {
-                        window.openAbhaModal();
-                    } else if (window.openModal) {
-                        window.openModal();
+                    if (window.triggerAbhaChat) {
+                        window.triggerAbhaChat();
+                    } else {
+                        if (window.playAdvisorChime) window.playAdvisorChime();
+                        if (window.openAbhaModal) window.openAbhaModal();
+                        else if (window.openModal) window.openModal();
                     }
                 }
             });
@@ -749,11 +801,12 @@ window.addEventListener('hashchange', function () {
                 if (aside.classList.contains("is-minimized") && (e.key === "Enter" || e.key === " ")) {
                     e.preventDefault();
                     e.stopPropagation();
-                    if (window.playAdvisorChime) window.playAdvisorChime();
-                    if (window.openAbhaModal) {
-                        window.openAbhaModal();
-                    } else if (window.openModal) {
-                        window.openModal();
+                    if (window.triggerAbhaChat) {
+                        window.triggerAbhaChat();
+                    } else {
+                        if (window.playAdvisorChime) window.playAdvisorChime();
+                        if (window.openAbhaModal) window.openAbhaModal();
+                        else if (window.openModal) window.openModal();
                     }
                 }
             });

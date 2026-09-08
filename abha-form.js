@@ -801,7 +801,24 @@
     }
   };
 
+  function ensureStylesLoaded() {
+    if (document.getElementById("abhaFormStyles") || document.querySelector('link[href*="abha-form"]')) return;
+    var link = document.createElement("link");
+    link.id = "abhaFormStyles";
+    link.rel = "stylesheet";
+    var basePath = "/";
+    var script = document.querySelector('script[src*="abha-form"]');
+    if (script && script.getAttribute("src")) {
+      var src = script.getAttribute("src");
+      var idx = src.lastIndexOf("abha-form");
+      if (idx !== -1) basePath = src.substring(0, idx);
+    }
+    link.href = basePath + "abha-form.min.css?v=20260908_qc_v9";
+    document.head.appendChild(link);
+  }
+
   function initElements() {
+    ensureStylesLoaded();
     injectModalMarkup();
 
     modalOverlay = document.getElementById("abhaModalOverlay");
