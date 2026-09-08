@@ -425,21 +425,33 @@
     if (phoneWatchTimer) { clearInterval(phoneWatchTimer); phoneWatchTimer = null; }
   }
 
-  function getQueryParam(param) {
-    if (!window.location.search) return "";
-    var params = new URLSearchParams(window.location.search);
-    return params.get(param) || "";
+  var UTM_TTL = 30 * 60 * 1000;
+  function getParam(key) {
+    if (window.location.search) {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var val = params.get(key);
+        if (val) {
+          Store.set("lf_" + key, val);
+          Store.set("lf_" + key + "_ts", String(Date.now()));
+          return val;
+        }
+      } catch (e) {}
+    }
+    var ts = parseInt(Store.get("lf_" + key + "_ts") || "0", 10);
+    if (ts && (Date.now() - ts) < UTM_TTL) return Store.get("lf_" + key) || "";
+    return Store.get("lf_" + key) || "";
   }
 
   function getTrackingPayload() {
     return {
-      gclid: getQueryParam("gclid") || Store.get("lf_gclid") || "",
-      fclid: getQueryParam("fclid") || Store.get("lf_fclid") || "",
-      utm_source: getQueryParam("utm_source") || Store.get("lf_utm_source") || "",
-      utm_medium: getQueryParam("utm_medium") || Store.get("lf_utm_medium") || "",
-      utm_campaign: getQueryParam("utm_campaign") || Store.get("lf_utm_campaign") || "",
-      utm_term: getQueryParam("utm_term") || Store.get("lf_utm_term") || "",
-      utm_content: getQueryParam("utm_content") || Store.get("lf_utm_content") || "",
+      gclid: getParam("gclid"),
+      fclid: getParam("fclid"),
+      utm_source: getParam("utm_source"),
+      utm_medium: getParam("utm_medium"),
+      utm_campaign: getParam("utm_campaign"),
+      utm_term: getParam("utm_term"),
+      utm_content: getParam("utm_content"),
       source_url: window.location.href,
       submitted_at: new Date().toISOString()
     };
