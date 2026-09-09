@@ -47,8 +47,8 @@
   .lf-wrap {
     max-width: 100% !important;
     width: 100% !important;
-    border-radius:8px !important;
-    padding: 24px 20px calc(24px + env(safe-area-inset-bottom)) 20px !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 14px 20px max(38px, calc(20px + env(safe-area-inset-bottom, 24px))) 20px !important;
     max-height: 92vh !important;
     max-height: 92dvh !important;
     transform: translateY(100%);
@@ -71,23 +71,41 @@
 @media (max-width: 768px) {
   .lf-drag-handle {
     display: block;
-    width: 40px;
+    width: 44px;
     height: 4px;
     background: #DDD7CF;
-    border-radius:8px;
-    margin: 0 auto 18px auto;
+    border-radius: 8px;
+    margin: 2px auto 16px auto;
   }
 }
 
 .lf-modal-close-icon {
-  position: absolute; top: 12px; right: 12px;
+  position: absolute; top: 14px; right: 14px;
+  width: 44px; height: 44px; min-width: 44px; min-height: 44px;
   background: none; border: none; outline: none; cursor: pointer !important;
-  color: var(--lf-muted); padding: 8px;
+  color: var(--lf-muted); padding: 0;
   display: flex; align-items: center; justify-content: center;
-  transition: color 0.15s, transform 0.15s; z-index: 200 !important; pointer-events: auto !important;
+  border-radius: 50%;
+  transition: color 0.15s, background-color 0.15s, transform 0.15s; z-index: 200 !important; pointer-events: auto !important;
+  -webkit-tap-highlight-color: transparent;
 }
-.lf-modal-close-icon svg { width: 15px; height: 15px; }
-.lf-modal-close-icon:hover { color: var(--lf-ink); transform: scale(1.08); }
+.lf-modal-close-icon svg { width: 16px; height: 16px; }
+.lf-modal-close-icon:hover { color: var(--lf-ink); background: rgba(0, 0, 0, 0.04); transform: scale(1.06); }
+.lf-modal-close-icon:active { background: rgba(0, 0, 0, 0.08); transform: scale(0.96); }
+
+@media (max-width: 768px) {
+  .lf-modal-close-icon {
+    top: 8px !important;
+    right: 8px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  .lf-privacy-consent {
+    margin-bottom: 4px !important;
+  }
+}
 
 .lf-header { margin-bottom: 22px; text-align: center; }
 .lf-main-heading { font-family: var(--lf-font-serif); font-size: 24px; font-weight: 400; margin-bottom: 8px; color: var(--lf-ink); letter-spacing: -0.01em; line-height: 1.25; }
