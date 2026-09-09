@@ -25,7 +25,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Official Texture**: Soft paper noise filter with `background-blend-mode: soft-light` over `#FBF6F3` with soft ambient radial light blooms in Gold (`rgba(140, 103, 52, 0.12)`).
 
 ## 3. Typography
-- **Headings & Display**: `'Marcellus', serif` (Weight 400, editorial architectural luxury)
+- **Headings & Display**: `'Cormorant Garamond', serif` (Weight 400, editorial architectural luxury)
 - **Body & UI Elements**: `'Manrope', sans-serif` (Weights 400, 500, 600, 700)
 - **Brand Logo**: `'Josefin Sans', sans-serif` (Weight 600)
 
