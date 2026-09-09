@@ -591,7 +591,12 @@
     max-width: 100% !important;
     width: 100% !important;
     border-radius: 16px 16px 0 0 !important;
-    padding: 20px 20px calc(24px + env(safe-area-inset-bottom)) 20px !important;
+    padding-top: 20px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-bottom: 36px !important;
+    padding-bottom: max(36px, calc(20px + env(safe-area-inset-bottom, 24px))) !important;
+    padding: 20px 24px max(36px, calc(20px + env(safe-area-inset-bottom, 24px))) 24px !important;
     max-height: 92vh !important;
     max-height: 92dvh !important;
     transform: translateY(100%);
