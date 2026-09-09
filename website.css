@@ -6929,75 +6929,9 @@ button:focus-visible,a:focus-visible {
     margin: 0;
 }
 
-.consultant-subsections-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-}
-
-.consultant-sub-card {
-    background: #FBF6F3;
-    border: 1px solid var(--divider);
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.consultant-sub-card:hover {
-    border-color: rgba(125, 68, 42, 0.35);
-    box-shadow: 0 4px 16px rgba(13, 27, 36, 0.04);
-}
-
-.consultant-sub-card.full-width {
-    grid-column: 1 / -1;
-}
-
-.consultant-h3 {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--deep-navy);
-    line-height: 1.25;
-    margin: 0;
-    letter-spacing: -0.01em;
-}
-
-.consultant-copy {
-    font-family: var(--font-body);
-    font-size: 0.94rem;
-    line-height: 1.7;
-    color: var(--deep-slate);
-    margin: 0;
-}
-
-.consultant-copy + .consultant-copy {
-    margin-top: 0.35rem;
-}
-
-.consultant-card-callout {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    font-family: var(--font-body);
-    font-size: 0.88rem;
-    color: var(--deep-navy);
-    line-height: 1.5;
-    padding-top: 0.75rem;
-    margin-top: auto;
-    border-top: 1px solid rgba(213, 209, 200, 0.4);
-}
-
-.consultant-card-callout svg {
-    width: 14px;
-    height: 14px;
-    stroke: var(--refined-brass);
-    flex-shrink: 0;
-    margin-top: 3px;
-}
-
+/* ==========================================================================
+   Editorial SEO Article & Linear FAQ Layout
+   ========================================================================== */
 @media (max-width: 768px) {
     .consultant-info-section {
         padding: 1.75rem 0 2.5rem 0;
@@ -7013,99 +6947,223 @@ button:focus-visible,a:focus-visible {
         justify-content: space-between;
     }
     .consultant-content-wrap {
-        padding: 1.5rem 1.25rem;
-    }
-    .consultant-subsections-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .consultant-sub-card {
-        padding: 1.25rem;
-    }
-    .consultant-h3 {
-        font-size: 1.22rem;
-    }
-    .consultant-lead-text {
-        font-size: 0.98rem;
-    }
-    .consultant-lead-highlight {
-        font-size: 1.2rem;
-    }
-    .consultant-copy {
-        font-size: 0.92rem;
-        line-height: 1.65;
+        padding: 1.5rem 1rem;
     }
 }
 
-/* ==========================================================================
-   FAQ Cards Sub-Grid (Collapsible Widget)
-   ========================================================================== */
-.consultant-faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    align-items: start;
+.consultant-editorial-article {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-.faq-card-item {
-    background: #FBF6F3;
-    border: 1px solid var(--divider);
-    border-radius: 8px;
-    overflow: hidden;
-    box-sizing: border-box;
+.editorial-lead-box {
+    padding-bottom: 2rem;
+    margin-bottom: 2.25rem;
+    border-bottom: 1px solid var(--divider);
+}
+
+.editorial-lead-p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--deep-slate);
+    margin-bottom: 1.15rem;
+}
+
+.editorial-lead-p strong {
+    color: var(--deep-navy);
+    font-weight: 700;
+}
+
+.editorial-lead-quote {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--refined-brass);
+    margin: 0;
+}
+
+.editorial-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.editorial-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.editorial-heading {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    line-height: 1.3;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.editorial-body {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--deep-slate);
+    margin: 0;
+}
+
+.editorial-pullquote {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: rgba(125, 68, 42, 0.04);
+    border-left: 3px solid var(--refined-brass);
+    padding: 0.85rem 1.15rem;
+    border-radius: 0 6px 6px 0;
+    margin-top: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--deep-navy);
+}
+
+.editorial-pullquote svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--refined-brass);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.editorial-divider {
+    height: 1px;
+    background: rgba(213, 209, 200, 0.45);
     width: 100%;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.faq-card-item:hover {
-    border-color: rgba(125, 68, 42, 0.35);
-    box-shadow: 0 4px 14px rgba(13, 27, 36, 0.04);
+.market-pills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.5rem;
 }
 
-.faq-card-item[open] {
-    background: #FFFFFF;
+.market-pill {
+    background: #FAF7F4;
+    border: 1px solid rgba(125, 68, 42, 0.2);
+    color: var(--deep-navy);
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.market-pill:hover {
+    background: var(--refined-brass);
+    color: #FFFFFF;
     border-color: var(--refined-brass);
-    box-shadow: 0 4px 16px rgba(125, 68, 42, 0.08);
 }
 
-.faq-card-summary {
+.consultant-faq-linear-container {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.faq-category-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-category-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1.15rem 1.25rem;
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    box-sizing: border-box;
-    width: 100%;
+    gap: 0.75rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1.5px solid var(--refined-brass);
+    margin-bottom: 0.5rem;
+}
+
+.faq-category-num {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--refined-brass);
+    letter-spacing: 0.08em;
+}
+
+.faq-category-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.faq-linear-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-linear-item {
+    border-bottom: 1px solid rgba(213, 209, 200, 0.55);
+    background: transparent;
     transition: background 0.2s ease;
 }
 
-.faq-card-summary::-webkit-details-marker {
+.faq-linear-item:last-child {
+    border-bottom: none;
+}
+
+.faq-linear-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.15rem 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    transition: color 0.2s ease, padding 0.2s ease;
+}
+
+.faq-linear-summary::-webkit-details-marker {
     display: none;
 }
 
-.faq-card-summary:focus-visible {
+.faq-linear-summary:focus-visible {
     outline: 2px solid var(--refined-brass);
-    outline-offset: -2px;
+    outline-offset: 2px;
 }
 
-.faq-card-question {
+.faq-linear-question {
     font-family: var(--font-heading);
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.35;
     color: var(--deep-navy);
     margin: 0;
     flex: 1 1 auto;
-    word-break: break-word;
+    transition: color 0.2s ease;
 }
 
-.faq-card-icon {
+.faq-linear-summary:hover .faq-linear-question {
+    color: var(--refined-brass);
+}
+
+.faq-linear-icon {
     width: 28px;
     height: 28px;
-    border-radius: 4px;
+    border-radius: 50%;
     border: 1px solid var(--divider);
     background: #FFFFFF;
     display: inline-flex;
@@ -7116,61 +7174,72 @@ button:focus-visible,a:focus-visible {
     transition: all 0.25s ease;
 }
 
-.faq-card-icon svg {
+.faq-linear-icon svg {
     width: 14px;
     height: 14px;
     stroke: currentColor;
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.faq-card-item[open] .faq-card-icon {
-    background: var(--warm-ivory);
+.faq-linear-item[open] {
+    background: #FAF7F4;
+    border-radius: 6px;
+}
+
+.faq-linear-item[open] .faq-linear-summary {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.75rem;
+}
+
+.faq-linear-item[open] .faq-linear-icon {
+    background: var(--refined-brass);
+    color: #FFFFFF;
     border-color: var(--refined-brass);
 }
 
-.faq-card-item[open] .faq-card-icon svg {
+.faq-linear-item[open] .faq-linear-icon svg {
     transform: rotate(180deg);
 }
 
-.faq-card-item[open] .faq-card-summary {
-    border-bottom: 1px solid rgba(213, 209, 200, 0.4);
-    background: #FAF7F4;
+.faq-linear-answer {
+    padding: 0 1rem 1.25rem 1rem;
 }
 
-.faq-card-answer {
-    padding: 1.15rem 1.25rem 1.25rem 1.25rem;
-    background: #FFFFFF;
-}
-
-.faq-card-answer p {
+.faq-linear-answer p {
     font-family: var(--font-body);
-    font-size: 0.94rem;
-    line-height: 1.7;
+    font-size: 0.96rem;
+    line-height: 1.75;
     color: var(--deep-slate);
     margin: 0;
 }
 
-.faq-card-answer p strong {
+.faq-linear-answer p strong {
     color: var(--deep-navy);
     font-weight: 700;
 }
 
-@media (max-width: 900px) {
-    .consultant-faq-grid {
-        grid-template-columns: 1fr;
-        gap: 0.85rem;
+@media (max-width: 768px) {
+    .editorial-heading {
+        font-size: 1.25rem;
     }
-    .faq-card-summary {
-        padding: 1rem 1.15rem;
+    .editorial-lead-quote {
+        font-size: 1.18rem;
     }
-    .faq-card-question {
-        font-size: 0.98rem;
+    .faq-linear-question {
+        font-size: 1.02rem;
     }
-    .faq-card-answer {
-        padding: 1rem 1.15rem 1.15rem 1.15rem;
+    .faq-category-title {
+        font-size: 1.15rem;
     }
-    .faq-card-answer p {
-        font-size: 0.91rem;
-        line-height: 1.65;
+    .faq-linear-summary {
+        padding: 1rem 0.25rem;
+    }
+    .faq-linear-item[open] .faq-linear-summary {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .faq-linear-answer {
+        padding: 0 0.75rem 1rem 0.75rem;
     }
 }
