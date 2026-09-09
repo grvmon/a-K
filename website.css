@@ -7247,3 +7247,10 @@ button:focus-visible,a:focus-visible {
         padding: 0 0.75rem 1rem 0.75rem;
     }
 }
+
+/* Performance & Lazy Rendering: Skip offscreen paint/layout until scrolled near viewport */
+#property-consultant-bangalore,
+.faq-accordion-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 800px;
+}
