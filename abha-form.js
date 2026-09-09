@@ -972,11 +972,25 @@
           if (f) f.classList.add("lf-autofilled");
           checkValueState(inp);
           if (inp === phoneInput) PhoneSyncManager.syncInput();
+          if (modalOverlay) modalOverlay.scrollLeft = 0;
+          if (modalWrap) modalWrap.scrollLeft = 0;
+          if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
         }
       };
       inp.addEventListener("animationstart", h);
+      inp.addEventListener("focus", function() {
+        if (modalOverlay) modalOverlay.scrollLeft = 0;
+        if (modalWrap) modalWrap.scrollLeft = 0;
+        if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
+      });
       autofillListeners.push({ node: inp, handler: h });
     });
+
+    window.addEventListener("scroll", function() {
+      if (modalOverlay && modalOverlay.classList.contains("abha-modal-open") && window.scrollX !== 0) {
+        window.scrollTo(0, window.scrollY);
+      }
+    }, { passive: true });
 
     // Keyboard ESC listener
     document.addEventListener("keydown", function(e) {

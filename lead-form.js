@@ -593,11 +593,25 @@
         if (f) f.classList.add("lf-autofilled");
         checkValueState(inp);
         if (inp === phoneInput) PhoneSyncManager.syncInput();
+        if (modalOverlay) modalOverlay.scrollLeft = 0;
+        if (modalContent) modalContent.scrollLeft = 0;
+        if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
       }
     };
     inp.addEventListener("animationstart", h);
+    inp.addEventListener("focus", function() {
+      if (modalOverlay) modalOverlay.scrollLeft = 0;
+      if (modalContent) modalContent.scrollLeft = 0;
+      if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
+    });
     autofillListeners.push({ node: inp, handler: h });
   });
+
+  window.addEventListener("scroll", function() {
+    if (modalOverlay && modalOverlay.classList.contains("lf-modal-open") && window.scrollX !== 0) {
+      window.scrollTo(0, window.scrollY);
+    }
+  }, { passive: true });
 
   if (modalTrigger) modalTrigger.addEventListener("click", window.openModal);
   if (modalClose) modalClose.addEventListener("click", window.closeModal);
