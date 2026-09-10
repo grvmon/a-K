@@ -4102,6 +4102,7 @@ body.page-404 .error-404-section {
     display:none !important
 }
 
+.hero-bg-image,
 .hero-bg-video {
     position:absolute;
     top:0;
@@ -4115,7 +4116,9 @@ body.page-404 .error-404-section {
     background-position:center;
     transform:translate3d(0,0,0);
     object-position:right center;
-    z-index:0
+    z-index:0;
+    pointer-events:none;
+    display:block;
 }
 
 .header-nav {
@@ -5070,15 +5073,7 @@ body.page-404 .error-404-section {
 
 }
 
-.hero-bg-video {
-    -webkit-backface-visibility:hidden;
-    backface-visibility:hidden;
-    -webkit-transform:translate3d(0,0,0);
-    transform:translate3d(0,0,0);
-    -webkit-perspective:1000;
-    perspective:1000;
-    background-color:transparent !important
-}
+
 
 @media (min-width:992px) {
     .hero-section.premium-dark-hero .hero-trust-bar {
