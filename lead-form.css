@@ -11,11 +11,11 @@
   background: var(--deep-navy-84, rgba(13, 27, 36, 0.84));
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   z-index: 99999999 !important;
-  display: flex; align-items: center; justify-content: center;
+  display: none; align-items: center; justify-content: center;
   padding: 20px; opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.lf-modal-overlay.lf-modal-open { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+.lf-modal-overlay.lf-modal-open { display: flex !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
 
 .lf-wrap {
   --lf-font-sans: 'Manrope', sans-serif;

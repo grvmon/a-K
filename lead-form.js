@@ -404,6 +404,8 @@
       if (globalErr) globalErr.classList.remove("lf-show");
       var sw = window.innerWidth - document.documentElement.clientWidth;
       if (sw > 0) document.body.style.paddingRight = sw + "px";
+      modalOverlay.style.display = "flex";
+      void modalOverlay.offsetWidth;
       modalOverlay.classList.add("lf-modal-open");
       document.body.style.overflow = "hidden";
       setBackgroundA11y(true);
@@ -415,6 +417,11 @@
       if (!modalOverlay) return;
       stopPhoneAutofillWatch();
       modalOverlay.classList.remove("lf-modal-open");
+      setTimeout(function() {
+        if (modalOverlay && !modalOverlay.classList.contains("lf-modal-open")) {
+          modalOverlay.style.display = "none";
+        }
+      }, 300);
       document.body.style.overflow = "";
       document.body.style.paddingRight = "";
       setBackgroundA11y(false);

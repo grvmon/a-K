@@ -476,11 +476,6 @@
           "</button>" +
           "<div class=\"abha-modal-header\">" +
             "<div class=\"abha-header-avatar-wrap\">" +
-              "<svg class=\"abha-header-rays\" width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\">" +
-                "<path d=\"M13 20L8 16\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M16 14L11 8\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M23 9L20 3\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-              "</svg>" +
               "<img src=\"" + avatarUrl + "\" alt=\"Abha - Home Buying Advisor\" class=\"abha-header-avatar-img\" width=\"76\" height=\"76\">" +
               "<span class=\"abha-header-status-dot\" aria-label=\"Abha is online\"></span>" +
             "</div>" +

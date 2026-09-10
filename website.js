@@ -2,9 +2,19 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
+function markPageReady() {
+    document.documentElement.classList.add('is-ready');
+}
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    markPageReady();
+} else {
+    document.addEventListener('DOMContentLoaded', markPageReady);
+    window.addEventListener('load', markPageReady);
+}
+
 window.addEventListener('beforeunload', function () {
     if (!window.location.hash || window.location.hash === '#') {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 });
 
@@ -24,7 +34,7 @@ function scrollToHashTarget(smooth) {
             }
         } catch (e) {}
     } else {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 }
 
@@ -33,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollToHashTarget(false);
         setTimeout(function () { scrollToHashTarget(true); }, 150);
     } else {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');
@@ -46,7 +56,7 @@ window.addEventListener('scroll', function () {
             headerNav.classList.remove('scrolled');
         }
     }
-});
+}, { passive: true });
 
 function ensureHeaderCtaBadges() {
     var navCtas = document.querySelectorAll('.header-nav .nav-cta-btn, .header-nav .primary-cta-btn, .header-nav .mobile-drawer-cta');
@@ -706,11 +716,6 @@ window.addEventListener('hashchange', function () {
           "</div>" +
           "<div class=\"advisor-main-card\">" +
             "<div class=\"advisor-avatar-wrap\">" +
-              "<svg class=\"advisor-accent-rays\" width=\"26\" height=\"26\" viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\">" +
-                "<path d=\"M13 20L8 16\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M16 14L11 8\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-                "<path d=\"M23 9L20 3\" stroke=\"#be7555\" stroke-width=\"3\" stroke-linecap=\"round\"/>" +
-              "</svg>" +
               "<img src=\"" + (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-abha.webp" : "https://acrenkey.com/style-guide/assets/advisor-abha.webp") + "\" alt=\"Abha - Home Buying Advisor\" class=\"advisor-avatar-img\" width=\"76\" height=\"76\" loading=\"lazy\">" +
               "<span class=\"advisor-status-dot\" aria-label=\"Abha is online\"></span>" +
             "</div>" +
