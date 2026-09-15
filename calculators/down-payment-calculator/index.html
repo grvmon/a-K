@@ -1369,7 +1369,10 @@
 
                 <!-- Field 1: Property Price -->
                 <div class="dp-field-group">
-                    <label class="dp-field-label" for="propPriceInput">Property Price</label>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
+                        <label class="dp-field-label" style="margin-bottom:0;" for="propPriceInput">Property Price</label>
+                        <span id="propPriceWordLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">₹ 1.00 Cr</span>
+                    </div>
                     <div class="dp-input-wrapper">
                         <span class="dp-input-prefix">₹</span>
                         <input type="text" id="propPriceInput" class="dp-text-input" value="1,00,00,000" oninput="onPropPriceText(this.value)">
@@ -1381,43 +1384,47 @@
 
                 <!-- Field 2: Down Payment -->
                 <div class="dp-field-group">
-                    <label class="dp-field-label" for="downPaymentSelect">Down Payment</label>
-                    <select id="downPaymentSelect" class="dp-select-input" onchange="onDownPaymentSelect(this.value)">
-                        <option value="10">10%</option>
-                        <option value="15">15%</option>
-                        <option value="20">20%</option>
-                        <option value="25" selected>25% (Default)</option>
-                        <option value="30">30%</option>
-                        <option value="35">35%</option>
-                        <option value="custom">Custom %</option>
-                    </select>
-                    <div id="customDownPayWrap" style="display: none; margin-top: 0.75rem;">
-                        <div class="dp-input-wrapper">
-                            <input type="number" id="customDownPayInput" class="dp-text-input" min="5" max="90" value="25" oninput="onCustomDownPayInput(this.value)">
-                            <span class="dp-input-suffix">%</span>
-                        </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
+                        <label class="dp-field-label" style="margin-bottom:0;" for="downPayInput">Down Payment</label>
+                        <span id="downPayAmountLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">₹ 20.0 L</span>
+                    </div>
+                    <div class="dp-input-wrapper">
+                        <input type="number" id="downPayInput" class="dp-text-input" min="5" max="80" step="1" value="20" oninput="onDownPayTextInput(this.value)">
+                        <span class="dp-input-suffix">%</span>
+                    </div>
+                    <div class="dp-slider-wrap">
+                        <input type="range" id="downPaySlider" class="dp-slider" min="10" max="80" step="1" value="20" oninput="onDownPaySlider(this.value)">
                     </div>
                 </div>
 
                 <!-- Field 3: Interest Rate (p.a.) -->
                 <div class="dp-field-group">
-                    <label class="dp-field-label" for="interestRateInput">Interest Rate (p.a.)</label>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
+                        <label class="dp-field-label" style="margin-bottom:0;" for="interestRateInput">Interest Rate (p.a.)</label>
+                        <span id="interestRateTag" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">Bank Rate</span>
+                    </div>
                     <div class="dp-input-wrapper">
-                        <input type="text" id="interestRateInput" class="dp-text-input" value="8.5%" oninput="onInterestRateInput(this.value)">
+                        <input type="number" id="interestRateInput" class="dp-text-input" min="6.0" max="15.0" step="0.05" value="7.8" oninput="onInterestRateTextInput(this.value)">
+                        <span class="dp-input-suffix">%</span>
+                    </div>
+                    <div class="dp-slider-wrap">
+                        <input type="range" id="interestRateSlider" class="dp-slider" min="6.0" max="15.0" step="0.05" value="7.8" oninput="onInterestRateSlider(this.value)">
                     </div>
                 </div>
 
                 <!-- Field 4: Loan Tenure -->
                 <div class="dp-field-group" style="margin-bottom: 0;">
-                    <label class="dp-field-label" for="loanTenureSelect">Loan Tenure</label>
-                    <select id="loanTenureSelect" class="dp-select-input" onchange="onLoanTenureSelect(this.value)">
-                        <option value="5">5 years</option>
-                        <option value="10">10 years</option>
-                        <option value="15">15 years</option>
-                        <option value="20" selected>20 years</option>
-                        <option value="25">25 years</option>
-                        <option value="30">30 years</option>
-                    </select>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
+                        <label class="dp-field-label" style="margin-bottom:0;" for="loanTenureInput">Loan Tenure</label>
+                        <span id="loanTenureMonthsLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">240 Months</span>
+                    </div>
+                    <div class="dp-input-wrapper">
+                        <input type="number" id="loanTenureInput" class="dp-text-input" min="1" max="30" step="1" value="20" oninput="onLoanTenureTextInput(this.value)">
+                        <span class="dp-input-suffix">Years</span>
+                    </div>
+                    <div class="dp-slider-wrap">
+                        <input type="range" id="loanTenureSlider" class="dp-slider" min="1" max="30" step="1" value="20" oninput="onLoanTenureSlider(this.value)">
+                    </div>
                 </div>
             </div>
 
@@ -1429,7 +1436,7 @@
                 <div class="dp-hero-box">
                     <div class="dp-hero-left">
                         <div class="dp-hero-label">TOTAL CASH REQUIRED</div>
-                        <div class="dp-hero-amount" id="heroTotalCash">₹ 41.5 L</div>
+                        <div class="dp-hero-amount" id="heroTotalCash">₹ 36.5 L</div>
                         <div class="dp-hero-desc">This is the total amount you need upfront to complete your home purchase.</div>
                     </div>
                     <div class="dp-hero-right">
@@ -1470,17 +1477,17 @@
                 <!-- 3 Stat Cards Row -->
                 <div class="dp-stats-grid">
                     <div class="dp-stat-card">
-                        <div class="dp-stat-value" id="cardDownPayVal">₹ 25.0 L</div>
+                        <div class="dp-stat-value" id="cardDownPayVal">₹ 20.0 L</div>
                         <div class="dp-stat-name">Down Payment</div>
-                        <div class="dp-stat-sub" id="cardDownPayPct">(25%)</div>
+                        <div class="dp-stat-sub" id="cardDownPayPct">(20%)</div>
                     </div>
                     <div class="dp-stat-card">
-                        <div class="dp-stat-value" id="cardLoanVal">₹ 75.0 L</div>
+                        <div class="dp-stat-value" id="cardLoanVal">₹ 80.0 L</div>
                         <div class="dp-stat-name">Home Loan Amount</div>
-                        <div class="dp-stat-sub" id="cardLoanPct">(75%)</div>
+                        <div class="dp-stat-sub" id="cardLoanPct">(80%)</div>
                     </div>
                     <div class="dp-stat-card">
-                        <div class="dp-stat-value" id="cardEmiVal">₹ 64,935</div>
+                        <div class="dp-stat-value" id="cardEmiVal">₹ 65,923</div>
                         <div class="dp-stat-name">Monthly EMI</div>
                         <div class="dp-stat-sub" id="cardTenureSub">(for 20 years)</div>
                     </div>
@@ -1492,9 +1499,9 @@
                     <div class="dp-cost-row">
                         <div class="dp-cost-label-group">
                             <span class="dp-dot green"></span>
-                            <span id="rowDownPayLabel">Down Payment (25%)</span>
+                            <span id="rowDownPayLabel">Down Payment (20%)</span>
                         </div>
-                        <div class="dp-cost-val" id="rowDownPayVal">₹ 25,00,000</div>
+                        <div class="dp-cost-val" id="rowDownPayVal">₹ 20,00,000</div>
                     </div>
                     <div class="dp-cost-row">
                         <div class="dp-cost-label-group">
@@ -1514,7 +1521,7 @@
                         <div class="dp-cost-label-group">
                             <span>Total Cash Required</span>
                         </div>
-                        <div class="dp-cost-val" id="rowTotalCashVal">₹ 41,50,000</div>
+                        <div class="dp-cost-val" id="rowTotalCashVal">₹ 36,50,000</div>
                     </div>
                 </div>
 
@@ -1832,8 +1839,8 @@
     // State
     var calcState = {
         propPrice: 10000000,
-        downPayPct: 25,
-        interestRate: 8.5,
+        downPayPct: 20,
+        interestRate: 7.8,
         loanTenureYears: 20
     };
 
@@ -1874,7 +1881,7 @@
         el.style.background = 'linear-gradient(to right, #B88E52 ' + pct + '%, #D1D5DB ' + pct + '%)';
     }
 
-    function calculateAll(triggerNotice) {
+    function calculateAll() {
         var price = calcState.propPrice;
         var dpPct = calcState.downPayPct;
         var rate = calcState.interestRate;
@@ -1885,7 +1892,7 @@
 
         // 2. Home Loan Amount
         var loanAmount = Math.max(0, price - downPayment);
-        var loanPct = 100 - dpPct;
+        var loanPct = Math.max(0, 100 - dpPct);
 
         // 3. Monthly EMI: P * r * (1+r)^n / ((1+r)^n - 1)
         var monthlyRate = (rate / 12) / 100;
@@ -1900,6 +1907,16 @@
         var stampDuty = Math.round(price * 0.06);
         var otherCosts = Math.round(price * 0.105);
         var totalCash = downPayment + stampDuty + otherCosts;
+
+        // Update Input Header Mini Labels
+        var propWordEl = document.getElementById('propPriceWordLabel');
+        if (propWordEl) propWordEl.innerText = formatShortIndian(price);
+
+        var dpAmtEl = document.getElementById('downPayAmountLabel');
+        if (dpAmtEl) dpAmtEl.innerText = formatShortIndian(downPayment);
+
+        var tenureMonthsEl = document.getElementById('loanTenureMonthsLabel');
+        if (tenureMonthsEl) tenureMonthsEl.innerText = totalMonths + ' Months';
 
         // Update Hero Box
         var heroTotalCashEl = document.getElementById('heroTotalCash');
@@ -1947,6 +1964,7 @@
     }
 
     // Input Event Handlers
+    // 1. Property Price
     function onPropPriceText(val) {
         var num = parseRupees(val);
         if (num > 0) {
@@ -1956,7 +1974,7 @@
                 slider.value = num;
                 updateSliderFill('propPriceSlider');
             }
-            calculateAll(false);
+            calculateAll();
         }
     }
 
@@ -1968,46 +1986,82 @@
             textInput.value = formatIndian(num);
         }
         updateSliderFill('propPriceSlider');
-        calculateAll(false);
+        calculateAll();
     }
 
-    function onDownPaymentSelect(val) {
-        var customWrap = document.getElementById('customDownPayWrap');
-        if (val === 'custom') {
-            if (customWrap) customWrap.style.display = 'block';
-            var customInput = document.getElementById('customDownPayInput');
-            var customVal = customInput ? parseFloat(customInput.value) : 25;
-            calcState.downPayPct = isNaN(customVal) ? 25 : customVal;
-        } else {
-            if (customWrap) customWrap.style.display = 'none';
-            calcState.downPayPct = parseFloat(val) || 25;
-        }
-        calculateAll(false);
-    }
-
-    function onCustomDownPayInput(val) {
+    // 2. Down Payment %
+    function onDownPayTextInput(val) {
         var num = parseFloat(val);
-        if (!isNaN(num) && num > 0 && num < 100) {
+        if (!isNaN(num) && num >= 5 && num <= 90) {
             calcState.downPayPct = num;
-            calculateAll(false);
+            var slider = document.getElementById('downPaySlider');
+            if (slider) {
+                slider.value = num;
+                updateSliderFill('downPaySlider');
+            }
+            calculateAll();
         }
     }
 
-    function onInterestRateInput(val) {
-        var cleaned = val.replace('%', '').trim();
-        var num = parseFloat(cleaned);
-        if (!isNaN(num) && num > 0) {
+    function onDownPaySlider(val) {
+        var num = parseFloat(val) || 20;
+        calcState.downPayPct = num;
+        var textInput = document.getElementById('downPayInput');
+        if (textInput) {
+            textInput.value = num;
+        }
+        updateSliderFill('downPaySlider');
+        calculateAll();
+    }
+
+    // 3. Interest Rate
+    function onInterestRateTextInput(val) {
+        var num = parseFloat(val);
+        if (!isNaN(num) && num > 0 && num <= 30) {
             calcState.interestRate = num;
-            calculateAll(false);
+            var slider = document.getElementById('interestRateSlider');
+            if (slider) {
+                slider.value = num;
+                updateSliderFill('interestRateSlider');
+            }
+            calculateAll();
         }
     }
 
-    function onLoanTenureSelect(val) {
-        var num = parseInt(val, 10);
-        if (!isNaN(num) && num > 0) {
-            calcState.loanTenureYears = num;
-            calculateAll(false);
+    function onInterestRateSlider(val) {
+        var num = parseFloat(val) || 7.8;
+        calcState.interestRate = num;
+        var textInput = document.getElementById('interestRateInput');
+        if (textInput) {
+            textInput.value = num;
         }
+        updateSliderFill('interestRateSlider');
+        calculateAll();
+    }
+
+    // 4. Loan Tenure
+    function onLoanTenureTextInput(val) {
+        var num = parseInt(val, 10);
+        if (!isNaN(num) && num >= 1 && num <= 35) {
+            calcState.loanTenureYears = num;
+            var slider = document.getElementById('loanTenureSlider');
+            if (slider) {
+                slider.value = num;
+                updateSliderFill('loanTenureSlider');
+            }
+            calculateAll();
+        }
+    }
+
+    function onLoanTenureSlider(val) {
+        var num = parseInt(val, 10) || 20;
+        calcState.loanTenureYears = num;
+        var textInput = document.getElementById('loanTenureInput');
+        if (textInput) {
+            textInput.value = num;
+        }
+        updateSliderFill('loanTenureSlider');
+        calculateAll();
     }
 
     // Format price on blur
@@ -2015,14 +2069,6 @@
     if (propPriceInputEl) {
         propPriceInputEl.addEventListener('blur', function() {
             this.value = formatIndian(calcState.propPrice);
-        });
-    }
-
-    // Format interest rate on blur
-    var interestRateInputEl = document.getElementById('interestRateInput');
-    if (interestRateInputEl) {
-        interestRateInputEl.addEventListener('blur', function() {
-            this.value = calcState.interestRate + '%';
         });
     }
 
@@ -2038,7 +2084,10 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         updateSliderFill('propPriceSlider');
-        calculateAll(false);
+        updateSliderFill('downPaySlider');
+        updateSliderFill('interestRateSlider');
+        updateSliderFill('loanTenureSlider');
+        calculateAll();
     });
     </script>
 
