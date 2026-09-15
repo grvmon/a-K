@@ -1408,7 +1408,7 @@
                 </div>
 
                 <!-- Field 4: Loan Tenure -->
-                <div class="dp-field-group">
+                <div class="dp-field-group" style="margin-bottom: 0;">
                     <label class="dp-field-label" for="loanTenureSelect">Loan Tenure</label>
                     <select id="loanTenureSelect" class="dp-select-input" onchange="onLoanTenureSelect(this.value)">
                         <option value="5">5 years</option>
@@ -1419,23 +1419,11 @@
                         <option value="30">30 years</option>
                     </select>
                 </div>
-
-                <!-- Calculate Button -->
-                <button type="button" class="dp-calc-btn" id="calcActionBtn" onclick="calculateAll(true)">
-                    <span>Calculate</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </button>
             </div>
 
             <!-- Right Panel: Your Results -->
             <div class="dp-results-card" id="resultsCard">
-                <div class="dp-results-header">
-                    <h2 class="dp-card-title" style="margin-bottom:0;">Your Results</h2>
-                    <button type="button" class="dp-edit-trigger" onclick="focusInputs()">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                        <span>Edit Inputs</span>
-                    </button>
-                </div>
+                <h2 class="dp-card-title">Your Results</h2>
 
                 <!-- Hero Highlight Box with Architectural Visual -->
                 <div class="dp-hero-box">
@@ -1956,18 +1944,6 @@
                 feasTitleEl.innerText = 'Based on your inputs, this looks like a feasible purchase.';
             }
         }
-
-        // Optional feedback if user clicked "Calculate" button
-        if (triggerNotice) {
-            var btn = document.getElementById('calcActionBtn');
-            if (btn) {
-                var origHtml = btn.innerHTML;
-                btn.innerHTML = '<span>Calculated!</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-                setTimeout(function() {
-                    btn.innerHTML = origHtml;
-                }, 1200);
-            }
-        }
     }
 
     // Input Event Handlers
@@ -2031,14 +2007,6 @@
         if (!isNaN(num) && num > 0) {
             calcState.loanTenureYears = num;
             calculateAll(false);
-        }
-    }
-
-    function focusInputs() {
-        var inputEl = document.getElementById('propPriceInput');
-        if (inputEl) {
-            inputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            inputEl.focus();
         }
     }
 
