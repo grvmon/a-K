@@ -714,9 +714,577 @@
             font-size: 0.85rem;
         }
     }
-    @media (max-width: 580px) {
-        .ak-feature-cards {
+    /* --- ACRENKEY 2026 DOWN PAYMENT CALCULATOR UI --- */
+    .dp-calc-container {
+        max-width: 1240px;
+        margin: 110px auto 0 auto;
+        padding: 0 1.5rem;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        color: var(--deep-navy, #1F2B38);
+    }
+    .dp-header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+        gap: 1rem;
+    }
+    .dp-kicker {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--refined-brass, #B88E52);
+        margin-bottom: 0.4rem;
+    }
+    .dp-tagline-quote {
+        font-size: 0.88rem;
+        color: var(--muted-slate, #64748B);
+        text-align: right;
+        max-width: 280px;
+        line-height: 1.4;
+        font-style: italic;
+    }
+    .dp-h1 {
+        font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
+        font-size: 2.85rem;
+        font-weight: 500;
+        color: var(--deep-navy, #1F2B38);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.15;
+    }
+    .dp-subtitle {
+        font-size: 1.05rem;
+        color: var(--deep-slate, #4A5568);
+        max-width: 780px;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    .dp-badges-row {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.25rem;
+    }
+    .dp-badge-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: #FFFFFF;
+        border: 1px solid rgba(184, 142, 82, 0.25);
+        border-radius: 9999px;
+        padding: 0.45rem 1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+        box-shadow: 0 2px 8px rgba(31, 43, 56, 0.04);
+    }
+    .dp-badge-icon {
+        font-size: 0.95rem;
+        color: var(--refined-brass, #B88E52);
+    }
+
+    /* Two-column layout */
+    .dp-main-grid {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 2rem;
+        align-items: start;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Left Card: Inputs */
+    .dp-inputs-card {
+        background: #FFFFFF;
+        border: 1px solid rgba(184, 142, 82, 0.25);
+        border-radius: 12px;
+        padding: 2rem 1.75rem;
+        box-shadow: 0 4px 20px rgba(31, 43, 56, 0.05);
+    }
+    .dp-card-title {
+        font-family: var(--font-heading, 'Cormorant Garamond', serif);
+        font-size: 1.65rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 1.5rem;
+    }
+    .dp-field-group {
+        margin-bottom: 1.4rem;
+    }
+    .dp-field-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 0.45rem;
+    }
+    .dp-input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid #D1D5DB;
+        border-radius: 8px;
+        background: #FFFFFF;
+        transition: all 0.2s ease;
+        overflow: hidden;
+    }
+    .dp-input-wrapper:focus-within {
+        border-color: var(--refined-brass, #B88E52);
+        box-shadow: 0 0 0 3px rgba(184, 142, 82, 0.15);
+    }
+    .dp-input-prefix {
+        padding-left: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+    }
+    .dp-input-suffix {
+        padding-right: 1rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--muted-slate, #64748B);
+    }
+    .dp-text-input {
+        width: 100%;
+        height: 48px;
+        border: none;
+        outline: none;
+        padding: 0 0.85rem;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+        background: transparent;
+    }
+    .dp-select-input {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #D1D5DB;
+        border-radius: 8px;
+        outline: none;
+        padding: 0 1rem;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231F2B38' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+    }
+    .dp-select-input:focus {
+        border-color: var(--refined-brass, #B88E52);
+        box-shadow: 0 0 0 3px rgba(184, 142, 82, 0.15);
+    }
+    .dp-slider-wrap {
+        margin-top: 0.5rem;
+    }
+    .dp-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 5px;
+        border-radius: 3px;
+        background: #D1D5DB;
+        outline: none;
+        cursor: pointer;
+    }
+    .dp-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--refined-brass, #B88E52);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        cursor: pointer;
+    }
+    .dp-slider::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--refined-brass, #B88E52);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        cursor: pointer;
+    }
+    .dp-calc-btn {
+        width: 100%;
+        height: 52px;
+        background: var(--deep-navy, #1F2B38);
+        color: #FFFFFF;
+        border: 1px solid var(--refined-brass, #B88E52);
+        border-radius: 8px;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 4px 14px rgba(31, 43, 56, 0.12);
+        margin-top: 1.5rem;
+    }
+    .dp-calc-btn:hover {
+        background: var(--refined-brass, #B88E52);
+        color: #FFFFFF;
+        border-color: var(--refined-brass, #B88E52);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(184, 142, 82, 0.25);
+    }
+
+    /* Right Card: Results */
+    .dp-results-card {
+        background: #FFFFFF;
+        border: 1px solid rgba(184, 142, 82, 0.25);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(31, 43, 56, 0.05);
+    }
+    .dp-results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.25rem;
+    }
+    .dp-edit-trigger {
+        background: none;
+        border: none;
+        color: var(--refined-brass, #B88E52);
+        font-size: 0.88rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        text-decoration: underline;
+    }
+    .dp-edit-trigger:hover {
+        color: var(--deep-navy, #1F2B38);
+    }
+
+    /* Hero Box with House Illustration */
+    .dp-hero-box {
+        background: linear-gradient(135deg, #FBF8F3 0%, #F5EDE0 100%);
+        border: 1px solid rgba(184, 142, 82, 0.35);
+        border-radius: 10px;
+        padding: 1.75rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .dp-hero-left {
+        flex: 1;
+    }
+    .dp-hero-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 0.4rem;
+    }
+    .dp-hero-amount {
+        font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
+        font-size: 3.25rem;
+        font-weight: 700;
+        color: var(--deep-navy, #1F2B38);
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+    .dp-hero-desc {
+        font-size: 0.9rem;
+        color: var(--deep-slate, #4A5568);
+        line-height: 1.45;
+        max-width: 320px;
+    }
+    .dp-hero-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+    }
+    .dp-hero-note {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: var(--refined-brass, #8C6734);
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    .dp-hero-svg {
+        width: 145px;
+        height: auto;
+    }
+
+    /* 3 Stat Cards */
+    .dp-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    .dp-stat-card {
+        background: #FFFFFF;
+        border: 1px solid #ECEEEF;
+        border-radius: 8px;
+        padding: 1.15rem 1rem;
+        text-align: left;
+        transition: all 0.2s ease;
+    }
+    .dp-stat-card:hover {
+        border-color: rgba(184, 142, 82, 0.4);
+        box-shadow: 0 4px 12px rgba(31, 43, 56, 0.05);
+    }
+    .dp-stat-value {
+        font-family: var(--font-heading, 'Cormorant Garamond', serif);
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--deep-navy, #1F2B38);
+        line-height: 1.1;
+        margin-bottom: 0.35rem;
+    }
+    .dp-stat-name {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+    }
+    .dp-stat-sub {
+        font-size: 0.78rem;
+        color: var(--muted-slate, #64748B);
+    }
+
+    /* Upfront Cost Breakdown */
+    .dp-breakdown-box {
+        border-top: 1px solid #ECEEEF;
+        padding-top: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    .dp-breakdown-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 1rem;
+    }
+    .dp-cost-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        font-size: 0.92rem;
+    }
+    .dp-cost-label-group {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--deep-slate, #4A5568);
+    }
+    .dp-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .dp-dot.green { background: #2E7D32; }
+    .dp-dot.brass { background: var(--refined-brass, #B88E52); }
+    .dp-dot.amber { background: #D97706; }
+
+    .dp-cost-val {
+        font-weight: 600;
+        color: var(--deep-navy, #1F2B38);
+    }
+    .dp-cost-total-row {
+        border-top: 1px solid #ECEEEF;
+        margin-top: 0.5rem;
+        padding-top: 0.75rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+    .dp-cost-total-row .dp-cost-label-group {
+        color: var(--deep-navy, #1F2B38);
+        font-weight: 700;
+    }
+    .dp-cost-total-row .dp-cost-val {
+        font-size: 1.2rem;
+        color: var(--deep-navy, #1F2B38);
+    }
+
+    /* Feasibility Callout */
+    .dp-feasibility-alert {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        background: #F3F8F4;
+        border: 1px solid rgba(46, 125, 50, 0.25);
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+    }
+    .dp-check-icon {
+        width: 26px;
+        height: 26px;
+        background: #2E7D32;
+        color: #FFFFFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+    .dp-alert-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1E5128;
+        line-height: 1.3;
+    }
+    .dp-alert-sub {
+        font-size: 0.8rem;
+        color: var(--deep-slate, #4A5568);
+        margin-top: 2px;
+    }
+
+    /* Affordability Banner */
+    .dp-afford-card {
+        background: #FFFFFF;
+        border: 1px solid rgba(184, 142, 82, 0.25);
+        border-radius: 12px;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+        box-shadow: 0 4px 16px rgba(31, 43, 56, 0.04);
+    }
+    .dp-afford-left {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .dp-afford-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: rgba(184, 142, 82, 0.12);
+        color: var(--refined-brass, #B88E52);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .dp-afford-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 0.25rem;
+    }
+    .dp-afford-sub {
+        font-size: 0.88rem;
+        color: var(--deep-slate, #4A5568);
+    }
+    .dp-afford-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1.5px solid var(--deep-navy, #1F2B38);
+        background: transparent;
+        color: var(--deep-navy, #1F2B38);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .dp-afford-btn:hover {
+        background: var(--deep-navy, #1F2B38);
+        color: #FFFFFF;
+        transform: translateY(-1px);
+    }
+
+    /* Explore More Bar */
+    .dp-explore-section {
+        margin: 2.5rem 0 3.5rem 0;
+    }
+    .dp-explore-heading {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--deep-navy, #1F2B38);
+        margin-bottom: 1rem;
+    }
+    .dp-explore-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .dp-explore-card {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: #FFFFFF;
+        border: 1px solid #ECEEEF;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--deep-navy, #1F2B38);
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: all 0.2s ease;
+    }
+    .dp-explore-card:hover {
+        border-color: var(--refined-brass, #B88E52);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(31, 43, 56, 0.05);
+        color: var(--refined-brass, #B88E52);
+    }
+
+    @media (max-width: 991px) {
+        .dp-main-grid {
             grid-template-columns: 1fr;
+        }
+        .dp-afford-card {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .dp-explore-row {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .dp-h1 {
+            font-size: 2.25rem;
+        }
+    }
+    @media (max-width: 640px) {
+        .dp-stats-grid {
+            grid-template-columns: 1fr;
+        }
+        .dp-explore-row {
+            grid-template-columns: 1fr;
+        }
+        .dp-hero-box {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .dp-hero-amount {
+            font-size: 2.6rem;
         }
     }
     </style>
@@ -732,8 +1300,8 @@
     <!-- Header Navigation -->
     <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#who-were-for">Who We Serve</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="#footer" class="nav-cta-btn primary-cta-btn"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="#footer" class="mobile-drawer-cta primary-cta-btn"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
 
-    <!-- Main Calculator Section -->
-    <main class="ak-calc-wrapper">
+    <!-- Main Calculator Section in AcrenKey Palette & Content -->
+    <main class="dp-calc-container">
         <!-- Breadcrumbs -->
         <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
             <ol class="page-breadcrumb">
@@ -746,166 +1314,252 @@
         </nav>
 
         <!-- Header -->
-        <div class="ak-calc-header-row">
-            <div class="ak-calc-header-left">
-                <h1 class="ak-calc-h1">Down Payment Calculator</h1>
-                <p class="ak-calc-sub-text">Calculate the minimum down payment you need for a home based on the property price and loan-to-value ratio.</p>
+        <div class="dp-header-bar">
+            <div>
+                <div class="dp-kicker">CALCULATORS</div>
+                <h1 class="dp-h1">Down Payment Calculator</h1>
+                <p class="dp-subtitle">Find out how much cash you need to buy your home — including down payment, taxes and other costs. Simple. Fast. Real numbers.</p>
+            </div>
+            <div class="dp-tagline-quote">
+                Smarter real estate decisions for a brighter tomorrow.
             </div>
         </div>
 
-        <!-- Main Grid -->
-        <div class="ak-calc-main-grid">
+        <!-- Badges Row -->
+        <div class="dp-badges-row">
+            <div class="dp-badge-item">
+                <span class="dp-badge-icon">⚡</span>
+                <span>Get instant results</span>
+            </div>
+            <div class="dp-badge-item">
+                <span class="dp-badge-icon">🛡️</span>
+                <span>Accurate estimates</span>
+            </div>
+            <div class="dp-badge-item">
+                <span class="dp-badge-icon">📊</span>
+                <span>Make better decisions</span>
+            </div>
+        </div>
+
+        <!-- Main Calculator Grid -->
+        <div class="dp-main-grid">
             
-            <!-- Left Panel (Inputs) -->
-            <div class="ak-calc-left-panel">
-                <div class="ak-panel-header">
-                    <h2>Calculate your down payment</h2>
-                </div>
+            <!-- Left Panel: Your Inputs -->
+            <div class="dp-inputs-card" id="inputsCard">
+                <h2 class="dp-card-title">Your Inputs</h2>
 
-                <!-- Input: Property Price -->
-                <div class="ak-new-input-row">
-                    <div class="ak-new-input-top">
-                        <div class="ak-new-input-label">
-                            <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></span>
-                            Property Price
-                        </div>
-                        <div class="ak-new-input-box-wrapper">
-                            <span class="prefix">₹</span>
-                            <input type="text" id="propPriceInput" class="ak-new-input has-prefix" value="1,00,00,000" onchange="onPropPriceChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
-                        </div>
+                <!-- Field 1: Property Price -->
+                <div class="dp-field-group">
+                    <label class="dp-field-label" for="propPriceInput">Property Price</label>
+                    <div class="dp-input-wrapper">
+                        <span class="dp-input-prefix">₹</span>
+                        <input type="text" id="propPriceInput" class="dp-text-input" value="1,00,00,000" oninput="onPropPriceText(this.value)">
                     </div>
-                    <div class="ak-new-slider-container">
-                        <input type="range" id="propPriceSlider" class="ak-new-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceChangeSlider(this.value)">
+                    <div class="dp-slider-wrap">
+                        <input type="range" id="propPriceSlider" class="dp-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)">
                     </div>
                 </div>
 
-                <!-- Input: Loan-to-Value (LTV) -->
-                <div class="ak-new-input-row">
-                    <div class="ak-new-input-top">
-                        <div class="ak-new-input-label">
-                            <span class="material-icon-svg-wrapper" title="Percentage of property value financed through home loan." style="cursor:help;"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M760-400v-260L560-800 360-660v60h-80v-100l280-200 280 200v300h-80ZM560-800Zm20 160h40v-40h-40v40Zm-80 0h40v-40h-40v40Zm80 80h40v-40h-40v40Zm-80 0h40v-40h-40v40ZM280-220l278 76 238-74q-5-9-14.5-15.5T760-240H558q-27 0-43-2t-33-8l-93-31 22-78 81 27q17 5 40 8t68 4q0-11-6.5-21T578-354l-234-86h-64v220ZM40-80v-440h304q7 0 14 1.5t13 3.5l235 87q33 12 53.5 42t20.5 66h80q50 0 85 33t35 87v40L560-60l-280-78v58H40Zm80-80h80v-280h-80v280Z"/></svg></span>
-                            Loan-to-Value (LTV)
+                <!-- Field 2: Down Payment -->
+                <div class="dp-field-group">
+                    <label class="dp-field-label" for="downPaymentSelect">Down Payment</label>
+                    <select id="downPaymentSelect" class="dp-select-input" onchange="onDownPaymentSelect(this.value)">
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25" selected>25% (Default)</option>
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="custom">Custom %</option>
+                    </select>
+                    <div id="customDownPayWrap" style="display: none; margin-top: 0.75rem;">
+                        <div class="dp-input-wrapper">
+                            <input type="number" id="customDownPayInput" class="dp-text-input" min="5" max="90" value="25" oninput="onCustomDownPayInput(this.value)">
+                            <span class="dp-input-suffix">%</span>
                         </div>
-                        <div class="ak-new-input-box-wrapper">
-                            <input type="text" id="ltvInput" class="ak-new-input has-suffix" value="80" onchange="onLtvChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
-                            <span class="suffix">%</span>
-                        </div>
-                    </div>
-                    <div class="ak-slider-with-labels">
-                        <span class="ak-slider-labels-inline">10%</span>
-                        <div class="ak-new-slider-container">
-                            <input type="range" id="ltvSlider" class="ak-new-slider" min="10" max="100" step="1" value="80" oninput="onLtvChangeSlider(this.value)">
-                        </div>
-                        <span class="ak-slider-labels-inline">100%</span>
                     </div>
                 </div>
 
-                <!-- Auto-Calculated Box: Maximum Loan Amount -->
-                <div class="ak-loan-amount-box">
-                    <div class="ak-la-row">
-                        <span class="ak-la-title">Maximum Loan Amount <span style="font-weight:400; opacity:0.7;">(Auto-calculated)</span></span>
-                        <span class="ak-la-val" id="maxLoanVal">₹ 80,00,000</span>
+                <!-- Field 3: Interest Rate (p.a.) -->
+                <div class="dp-field-group">
+                    <label class="dp-field-label" for="interestRateInput">Interest Rate (p.a.)</label>
+                    <div class="dp-input-wrapper">
+                        <input type="text" id="interestRateInput" class="dp-text-input" value="8.5%" oninput="onInterestRateInput(this.value)">
                     </div>
                 </div>
 
-                <!-- Input: Available Cash -->
-                <div class="ak-new-input-row" style="margin-bottom: 0.5rem;">
-                    <div class="ak-new-input-top">
-                        <div class="ak-new-input-label">
-                            <span class="material-icon-svg-wrapper" title="Total cash currently available toward down payment." style="cursor:help;"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M200-200v-560 560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v100h-80v-100H200v560h560v-100h80v100q0 33-23.5 56.5T760-120H200Zm320-160q-33 0-56.5-23.5T440-360v-240q0-33 23.5-56.5T520-680h280q33 0 56.5 23.5T880-600v240q0 33-23.5 56.5T800-280H520Zm280-80v-240H520v240h280Zm-160-60q25 0 42.5-17.5T700-480q0-25-17.5-42.5T640-540q-25 0-42.5 17.5T580-480q0 25 17.5 42.5T640-420Z"/></svg></span>
-                            Available Cash
-                        </div>
-                        <div class="ak-new-input-box-wrapper">
-                            <span class="prefix">₹</span>
-                            <input type="text" id="availCashInput" class="ak-new-input has-prefix" value="15,00,000" onchange="onAvailCashChangeInput(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
-                        </div>
-                    </div>
-                    <div class="ak-new-slider-container">
-                        <input type="range" id="availCashSlider" class="ak-new-slider" min="0" max="50000000" step="50000" value="1500000" oninput="onAvailCashChangeSlider(this.value)">
-                    </div>
+                <!-- Field 4: Loan Tenure -->
+                <div class="dp-field-group">
+                    <label class="dp-field-label" for="loanTenureSelect">Loan Tenure</label>
+                    <select id="loanTenureSelect" class="dp-select-input" onchange="onLoanTenureSelect(this.value)">
+                        <option value="5">5 years</option>
+                        <option value="10">10 years</option>
+                        <option value="15">15 years</option>
+                        <option value="20" selected>20 years</option>
+                        <option value="25">25 years</option>
+                        <option value="30">30 years</option>
+                    </select>
                 </div>
 
+                <!-- Calculate Button -->
+                <button type="button" class="dp-calc-btn" id="calcActionBtn" onclick="calculateAll(true)">
+                    <span>Calculate</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
             </div>
 
-            <!-- Right Panel (Results) -->
-            <div class="ak-calc-right-panel" id="resultsPanel">
-                <div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                        <div class="ak-right-header" style="margin-bottom:0;">Minimum Down Payment</div>
-                        <div class="ak-indicative-outline">Indicative</div>
-                    </div>
-                    
-                    <div class="ak-emi-highlight-row" style="align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
-                        <div class="ak-emi-huge" id="resultMinDownPay" style="color: #FFFFFF;"><span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>20,00,000</div>
-                    </div>
-                    <div class="ak-emi-subtext" id="downPaySubtext">Based on ₹1,00,00,000 property price • 80% LTV</div>
+            <!-- Right Panel: Your Results -->
+            <div class="dp-results-card" id="resultsCard">
+                <div class="dp-results-header">
+                    <h2 class="dp-card-title" style="margin-bottom:0;">Your Results</h2>
+                    <button type="button" class="dp-edit-trigger" onclick="focusInputs()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        <span>Edit Inputs</span>
+                    </button>
                 </div>
-                
-                <div class="ak-6-stats-grid">
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">Maximum Loan Amount</div>
-                        <div class="ak-stat-val" id="resultMaxLoan">₹ 80,00,000</div>
+
+                <!-- Hero Highlight Box with Architectural Visual -->
+                <div class="dp-hero-box">
+                    <div class="dp-hero-left">
+                        <div class="dp-hero-label">TOTAL CASH REQUIRED</div>
+                        <div class="dp-hero-amount" id="heroTotalCash">₹ 41.5 L</div>
+                        <div class="dp-hero-desc">This is the total amount you need upfront to complete your home purchase.</div>
                     </div>
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">Down Payment %</div>
-                        <div class="ak-stat-val" id="resultDownPct">20%</div>
-                    </div>
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">Available Cash</div>
-                        <div class="ak-stat-val" id="resultAvailCash">₹ 15,00,000</div>
-                    </div>
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">Additional Cash Required</div>
-                        <div class="ak-stat-val" id="resultAddCashReq">₹ 5,00,000</div>
-                    </div>
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">Property Price</div>
-                        <div class="ak-stat-val" id="resultPropPrice">₹ 1,00,00,000</div>
-                    </div>
-                    <div class="ak-stat-col">
-                        <div class="ak-stat-label">LTV Ratio</div>
-                        <div class="ak-stat-val" id="resultLtv">80%</div>
+                    <div class="dp-hero-right">
+                        <div class="dp-hero-note">
+                            <span>More than just a down payment</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
+                        </div>
+                        <svg class="dp-hero-svg" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Architectural House Illustration in AcrenKey tones -->
+                            <rect x="25" y="42" width="85" height="52" rx="2" fill="#FFFFFF" stroke="#1F2B38" stroke-width="1.8"/>
+                            <polygon points="15,44 67.5,12 120,44" fill="#F8F3EA" stroke="#1F2B38" stroke-width="1.8" stroke-linejoin="round"/>
+                            <!-- Chimney -->
+                            <rect x="90" y="20" width="12" height="18" fill="#B88E52" stroke="#1F2B38" stroke-width="1.5"/>
+                            <!-- Windows -->
+                            <rect x="36" y="52" width="18" height="18" rx="2" fill="#EAE5DC" stroke="#1F2B38" stroke-width="1.4"/>
+                            <line x1="45" y1="52" x2="45" y2="70" stroke="#1F2B38" stroke-width="1.2"/>
+                            <line x1="36" y1="61" x2="54" y2="61" stroke="#1F2B38" stroke-width="1.2"/>
+
+                            <rect x="80" y="52" width="18" height="18" rx="2" fill="#EAE5DC" stroke="#1F2B38" stroke-width="1.4"/>
+                            <line x1="89" y1="52" x2="89" y2="70" stroke="#1F2B38" stroke-width="1.2"/>
+                            <line x1="80" y1="61" x2="98" y2="61" stroke="#1F2B38" stroke-width="1.2"/>
+
+                            <!-- Door -->
+                            <path d="M58 94V74C58 71.8 59.8 70 62 70H72C74.2 70 76 71.8 76 74V94" fill="#B88E52" stroke="#1F2B38" stroke-width="1.5"/>
+                            <circle cx="71" cy="83" r="1.2" fill="#FFFFFF"/>
+
+                            <!-- Trees & Accent Ground -->
+                            <line x1="10" y1="94" x2="130" y2="94" stroke="#1F2B38" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Left Bush -->
+                            <circle cx="18" cy="86" r="8" fill="#D9C3A3" stroke="#1F2B38" stroke-width="1.2"/>
+                            <!-- Right Tree -->
+                            <circle cx="120" cy="76" r="11" fill="#C5A059" stroke="#1F2B38" stroke-width="1.2"/>
+                            <line x1="120" y1="87" x2="120" y2="94" stroke="#1F2B38" stroke-width="1.5"/>
+                        </svg>
                     </div>
                 </div>
 
-                <!-- Funding Breakdown Stacked Bar -->
-                <div class="ak-money-goes-section">
-                    <div class="ak-stacked-bar-title-new">Property Funding Breakdown</div>
-                    <div class="ak-stacked-bar-new">
-                        <div class="ak-bar-loan-new" id="barLoan" style="width:80%"></div>
-                        <div class="ak-bar-down-new" id="barDown" style="width:20%"></div>
+                <!-- 3 Stat Cards Row -->
+                <div class="dp-stats-grid">
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="cardDownPayVal">₹ 25.0 L</div>
+                        <div class="dp-stat-name">Down Payment</div>
+                        <div class="dp-stat-sub" id="cardDownPayPct">(25%)</div>
                     </div>
-                    <div class="ak-legend-row-new">
-                        <div class="ak-legend-item-inline">
-                            <div class="ak-legend-dot-new loan"></div>
-                            <span>Maximum Loan (<span id="legendLoanVal">80.0%</span>)</span>
-                        </div>
-                        <div class="ak-legend-item-inline">
-                            <div class="ak-legend-dot-new down"></div>
-                            <span>Down Payment (<span id="legendDownVal">20.0%</span>)</span>
-                        </div>
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="cardLoanVal">₹ 75.0 L</div>
+                        <div class="dp-stat-name">Home Loan Amount</div>
+                        <div class="dp-stat-sub" id="cardLoanPct">(75%)</div>
+                    </div>
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="cardEmiVal">₹ 64,935</div>
+                        <div class="dp-stat-name">Monthly EMI</div>
+                        <div class="dp-stat-sub" id="cardTenureSub">(for 20 years)</div>
                     </div>
                 </div>
 
-                <!-- Dynamic Cash Sufficiency Insight Box -->
-                <div class="ak-insight-box">
-                    <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span>
-                    <div id="insightText">
-                        You need <strong>₹5,00,000</strong> more cash to meet the minimum down payment requirement.
+                <!-- Upfront Cost Breakdown -->
+                <div class="dp-breakdown-box">
+                    <div class="dp-breakdown-title">Upfront Cost Breakdown</div>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot green"></span>
+                            <span id="rowDownPayLabel">Down Payment (25%)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowDownPayVal">₹ 25,00,000</div>
+                    </div>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot brass"></span>
+                            <span>Stamp Duty &amp; Registration (~6%)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowStampDutyVal">₹ 6,00,000</div>
+                    </div>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot amber"></span>
+                            <span>Other Costs (legal, interiors, etc. ~10.5%)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowOtherCostsVal">₹ 10,50,000</div>
+                    </div>
+                    <div class="dp-cost-row dp-cost-total-row">
+                        <div class="dp-cost-label-group">
+                            <span>Total Cash Required</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowTotalCashVal">₹ 41,50,000</div>
+                    </div>
+                </div>
+
+                <!-- Feasibility Alert Callout -->
+                <div class="dp-feasibility-alert">
+                    <div class="dp-check-icon">✓</div>
+                    <div>
+                        <div class="dp-alert-title" id="feasibilityTitle">Based on your inputs, this looks like a feasible purchase.</div>
+                        <div class="dp-alert-sub">Add your income and savings to check affordability.</div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="ak-post-widget-unit">
-            <div class="ak-tip-box-new">
-                <span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M480-80q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-200v-80h320v80H320Zm10-120q-69-41-109.5-110T180-580q0-125 87.5-212.5T480-880q125 0 212.5 87.5T780-580q0 81-40.5 150T630-320H330Zm24-80h252q45-32 69.5-79T700-580q0-92-64-156t-156-64q-92 0-156 64t-64 156q0 54 24.5 101t69.5 79Zm126 0Z"/></svg></span>
-                <div><strong>Tip:</strong> Remember that stamp duty, registration charges, and legal fees are separate upfront cash expenses not included in the bank loan.</div>
+        <!-- Affordability Analysis Banner -->
+        <div class="dp-afford-card">
+            <div class="dp-afford-left">
+                <div class="dp-afford-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <div>
+                    <div class="dp-afford-title">Want to know if you can afford this home?</div>
+                    <div class="dp-afford-sub">Add your income, existing EMIs and savings to get a personalized affordability analysis.</div>
+                </div>
             </div>
+            <a href="/calculators/home-affordability-calculator/" class="dp-afford-btn">
+                <span>Check Affordability</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
 
-            <div style="text-align: center; color: var(--muted-slate); font-size: 0.8rem; line-height: 1.5;">
-                Down payment calculations are indicative and based on property LTV guidelines. Actual bank LTV limits depend on property valuation and borrower credit profile.
+        <!-- Explore More Row -->
+        <div class="dp-explore-section">
+            <div class="dp-explore-heading">Explore More</div>
+            <div class="dp-explore-row">
+                <a href="/calculators/home-loan-emi-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                    <span>EMI Calculator &rarr;</span>
+                </a>
+                <a href="/calculators/stamp-duty-registration-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Stamp Duty Calculator &rarr;</span>
+                </a>
+                <a href="/calculators/home-affordability-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home Loan Eligibility &rarr;</span>
+                </a>
+                <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Total Purchase Cost &rarr;</span>
+                </a>
             </div>
         </div>
 
@@ -1169,147 +1823,235 @@
     <!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->
     <script>
     // State
-    var state = {
+    var calcState = {
         propPrice: 10000000,
-        ltv: 80,
-        availCash: 1500000
+        downPayPct: 25,
+        interestRate: 8.5,
+        loanTenureYears: 20
     };
 
     function parseRupees(str) {
-        return parseInt(str.replace(/[^0-9]/g, '')) || 0;
+        if (!str) return 0;
+        return parseInt(str.toString().replace(/[^0-9]/g, ''), 10) || 0;
     }
 
     function formatIndian(amount) {
         if (isNaN(amount) || amount === null) return '0';
         var x = Math.round(amount).toString();
-        var lastThree = x.substring(x.length-3);
-        var otherNumbers = x.substring(0, x.length-3);
-        if (otherNumbers != '') lastThree = ',' + lastThree;
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers !== '') lastThree = ',' + lastThree;
         return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
     }
 
-    function syncUI() {
-        // Step 1: Maximum Loan Amount
-        var maxLoan = Math.round(state.propPrice * (state.ltv / 100));
-
-        // Step 2: Minimum Down Payment
-        var minDownPay = Math.max(0, state.propPrice - maxLoan);
-
-        // Step 3: Down Payment %
-        var downPayPct = (100 - state.ltv);
-        if (downPayPct < 0) downPayPct = 0;
-
-        // Step 4: Additional Cash Required
-        var addCashReq = Math.max(0, minDownPay - state.availCash);
-
-        // Update Left Panel Inputs
-        document.getElementById('propPriceInput').value = formatIndian(state.propPrice);
-        document.getElementById('propPriceSlider').value = state.propPrice;
-        updateSliderFill('propPriceSlider');
-
-        document.getElementById('ltvInput').value = state.ltv;
-        document.getElementById('ltvSlider').value = state.ltv;
-        updateSliderFill('ltvSlider');
-
-        document.getElementById('maxLoanVal').innerText = '₹ ' + formatIndian(maxLoan);
-
-        document.getElementById('availCashInput').value = formatIndian(state.availCash);
-        document.getElementById('availCashSlider').value = state.availCash;
-        updateSliderFill('availCashSlider');
-
-        // Update Right Panel Outputs
-        document.getElementById('resultMinDownPay').innerHTML = "<span style='font-size: 0.6em; opacity: 0.7; font-weight: 500; margin-right: 4px;'>₹</span>" + formatIndian(minDownPay);
-        document.getElementById('downPaySubtext').innerText = "Based on ₹" + formatIndian(state.propPrice) + " property price • " + state.ltv + "% LTV";
-        
-        document.getElementById('resultMaxLoan').innerText = "₹ " + formatIndian(maxLoan);
-        document.getElementById('resultDownPct').innerText = downPayPct + "%";
-        document.getElementById('resultAvailCash').innerText = "₹ " + formatIndian(state.availCash);
-        document.getElementById('resultAddCashReq').innerText = "₹ " + formatIndian(addCashReq);
-        document.getElementById('resultPropPrice').innerText = "₹ " + formatIndian(state.propPrice);
-        document.getElementById('resultLtv').innerText = state.ltv + "%";
-
-        // Update Stacked Bar (Loan vs Down Payment)
-        var loanPctBar = state.ltv;
-        var downPctBar = downPayPct;
-
-        document.getElementById('barLoan').style.width = loanPctBar + "%";
-        document.getElementById('barDown').style.width = downPctBar + "%";
-        
-        document.getElementById('legendLoanVal').innerText = loanPctBar.toFixed(1) + "% (₹" + formatIndian(maxLoan) + ")";
-        document.getElementById('legendDownVal').innerText = downPctBar.toFixed(1) + "% (₹" + formatIndian(minDownPay) + ")";
-
-        // Update Dynamic Insight Box
-        var insightEl = document.getElementById('insightText');
-        if (minDownPay === 0) {
-            insightEl.innerHTML = "With <strong>100% LTV financing</strong>, no upfront down payment is required for this loan.";
-        } else if (addCashReq > 0) {
-            insightEl.innerHTML = "You need <strong>₹" + formatIndian(addCashReq) + "</strong> more cash to meet the minimum down payment requirement of <strong>₹" + formatIndian(minDownPay) + "</strong>.";
+    function formatShortIndian(amount) {
+        if (isNaN(amount) || amount === null || amount === 0) return '₹ 0';
+        if (amount >= 10000000) {
+            var cr = amount / 10000000;
+            return '₹ ' + (cr % 1 === 0 ? cr.toFixed(0) : cr.toFixed(2).replace(/0$/, '')) + ' Cr';
+        } else if (amount >= 100000) {
+            var l = amount / 100000;
+            return '₹ ' + (l % 1 === 0 ? l.toFixed(1) : l.toFixed(1)) + ' L';
         } else {
-            insightEl.innerHTML = "Your available cash (<strong>₹" + formatIndian(state.availCash) + "</strong>) is sufficient to cover the minimum down payment of <strong>₹" + formatIndian(minDownPay) + "</strong>.";
+            return '₹ ' + formatIndian(amount);
         }
     }
 
     function updateSliderFill(id) {
         var el = document.getElementById(id);
-        if(!el) return;
+        if (!el) return;
         var min = parseFloat(el.min || 0);
         var max = parseFloat(el.max || 100);
-        var val = parseFloat(el.value);
+        var val = parseFloat(el.value || 0);
         var pct = ((val - min) / (max - min)) * 100;
-        
-        var thumbWidth = 18;
-        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
-        el.style.background = 'linear-gradient(to right, var(--refined-brass) calc(' + pct + '% + ' + offset + 'px), #8C9BB1 calc(' + pct + '% + ' + offset + 'px))';
+        el.style.background = 'linear-gradient(to right, #B88E52 ' + pct + '%, #D1D5DB ' + pct + '%)';
     }
 
-    // Input Handlers
-    function onPropPriceChangeInput(val) {
+    function calculateAll(triggerNotice) {
+        var price = calcState.propPrice;
+        var dpPct = calcState.downPayPct;
+        var rate = calcState.interestRate;
+        var tenure = calcState.loanTenureYears;
+
+        // 1. Down Payment
+        var downPayment = Math.round(price * (dpPct / 100));
+
+        // 2. Home Loan Amount
+        var loanAmount = Math.max(0, price - downPayment);
+        var loanPct = 100 - dpPct;
+
+        // 3. Monthly EMI: P * r * (1+r)^n / ((1+r)^n - 1)
+        var monthlyRate = (rate / 12) / 100;
+        var totalMonths = tenure * 12;
+        var emi = 0;
+        if (loanAmount > 0 && monthlyRate > 0) {
+            var factor = Math.pow(1 + monthlyRate, totalMonths);
+            emi = Math.round(loanAmount * monthlyRate * factor / (factor - 1));
+        }
+
+        // 4. Upfront Costs: Stamp Duty (~6%) and Other Costs (~10.5%)
+        var stampDuty = Math.round(price * 0.06);
+        var otherCosts = Math.round(price * 0.105);
+        var totalCash = downPayment + stampDuty + otherCosts;
+
+        // Update Hero Box
+        var heroTotalCashEl = document.getElementById('heroTotalCash');
+        if (heroTotalCashEl) {
+            heroTotalCashEl.innerText = formatShortIndian(totalCash);
+        }
+
+        // Update 3 Stat Cards
+        var cardDownPayValEl = document.getElementById('cardDownPayVal');
+        var cardDownPayPctEl = document.getElementById('cardDownPayPct');
+        var cardLoanValEl = document.getElementById('cardLoanVal');
+        var cardLoanPctEl = document.getElementById('cardLoanPct');
+        var cardEmiValEl = document.getElementById('cardEmiVal');
+        var cardTenureSubEl = document.getElementById('cardTenureSub');
+
+        if (cardDownPayValEl) cardDownPayValEl.innerText = formatShortIndian(downPayment);
+        if (cardDownPayPctEl) cardDownPayPctEl.innerText = '(' + dpPct + '%)';
+        if (cardLoanValEl) cardLoanValEl.innerText = formatShortIndian(loanAmount);
+        if (cardLoanPctEl) cardLoanPctEl.innerText = '(' + loanPct + '%)';
+        if (cardEmiValEl) cardEmiValEl.innerText = '₹ ' + formatIndian(emi);
+        if (cardTenureSubEl) cardTenureSubEl.innerText = '(for ' + tenure + ' years)';
+
+        // Update Upfront Cost Breakdown
+        var rowDownPayLabelEl = document.getElementById('rowDownPayLabel');
+        var rowDownPayValEl = document.getElementById('rowDownPayVal');
+        var rowStampDutyValEl = document.getElementById('rowStampDutyVal');
+        var rowOtherCostsValEl = document.getElementById('rowOtherCostsVal');
+        var rowTotalCashValEl = document.getElementById('rowTotalCashVal');
+
+        if (rowDownPayLabelEl) rowDownPayLabelEl.innerText = 'Down Payment (' + dpPct + '%)';
+        if (rowDownPayValEl) rowDownPayValEl.innerText = '₹ ' + formatIndian(downPayment);
+        if (rowStampDutyValEl) rowStampDutyValEl.innerText = '₹ ' + formatIndian(stampDuty);
+        if (rowOtherCostsValEl) rowOtherCostsValEl.innerText = '₹ ' + formatIndian(otherCosts);
+        if (rowTotalCashValEl) rowTotalCashValEl.innerText = '₹ ' + formatIndian(totalCash);
+
+        // Update Feasibility alert
+        var feasTitleEl = document.getElementById('feasibilityTitle');
+        if (feasTitleEl) {
+            if (dpPct < 20) {
+                feasTitleEl.innerText = 'Down payment is below standard 20% — ensure your lender allows an 80%+ LTV ratio.';
+            } else {
+                feasTitleEl.innerText = 'Based on your inputs, this looks like a feasible purchase.';
+            }
+        }
+
+        // Optional feedback if user clicked "Calculate" button
+        if (triggerNotice) {
+            var btn = document.getElementById('calcActionBtn');
+            if (btn) {
+                var origHtml = btn.innerHTML;
+                btn.innerHTML = '<span>Calculated!</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(function() {
+                    btn.innerHTML = origHtml;
+                }, 1200);
+            }
+        }
+    }
+
+    // Input Event Handlers
+    function onPropPriceText(val) {
         var num = parseRupees(val);
-        if (num < 1000000) num = 1000000;
-        if (num > 100000000) num = 100000000;
-        state.propPrice = num;
-        syncUI();
-    }
-    function onPropPriceChangeSlider(val) {
-        state.propPrice = parseFloat(val);
-        syncUI();
-    }
-
-    function onLtvChangeInput(val) {
-        var num = parseFloat(val.replace('%', ''));
-        if (isNaN(num)) num = 80;
-        if (num < 10) num = 10;
-        if (num > 100) num = 100;
-        state.ltv = num;
-        syncUI();
-    }
-    function onLtvChangeSlider(val) {
-        state.ltv = parseFloat(val);
-        syncUI();
+        if (num > 0) {
+            calcState.propPrice = num;
+            var slider = document.getElementById('propPriceSlider');
+            if (slider) {
+                slider.value = num;
+                updateSliderFill('propPriceSlider');
+            }
+            calculateAll(false);
+        }
     }
 
-    function onAvailCashChangeInput(val) {
-        var num = parseRupees(val);
-        if (num < 0) num = 0;
-        if (num > 50000000) num = 50000000;
-        state.availCash = num;
-        syncUI();
+    function onPropPriceSlider(val) {
+        var num = parseInt(val, 10) || 0;
+        calcState.propPrice = num;
+        var textInput = document.getElementById('propPriceInput');
+        if (textInput) {
+            textInput.value = formatIndian(num);
+        }
+        updateSliderFill('propPriceSlider');
+        calculateAll(false);
     }
-    function onAvailCashChangeSlider(val) {
-        state.availCash = parseFloat(val);
-        syncUI();
+
+    function onDownPaymentSelect(val) {
+        var customWrap = document.getElementById('customDownPayWrap');
+        if (val === 'custom') {
+            if (customWrap) customWrap.style.display = 'block';
+            var customInput = document.getElementById('customDownPayInput');
+            var customVal = customInput ? parseFloat(customInput.value) : 25;
+            calcState.downPayPct = isNaN(customVal) ? 25 : customVal;
+        } else {
+            if (customWrap) customWrap.style.display = 'none';
+            calcState.downPayPct = parseFloat(val) || 25;
+        }
+        calculateAll(false);
+    }
+
+    function onCustomDownPayInput(val) {
+        var num = parseFloat(val);
+        if (!isNaN(num) && num > 0 && num < 100) {
+            calcState.downPayPct = num;
+            calculateAll(false);
+        }
+    }
+
+    function onInterestRateInput(val) {
+        var cleaned = val.replace('%', '').trim();
+        var num = parseFloat(cleaned);
+        if (!isNaN(num) && num > 0) {
+            calcState.interestRate = num;
+            calculateAll(false);
+        }
+    }
+
+    function onLoanTenureSelect(val) {
+        var num = parseInt(val, 10);
+        if (!isNaN(num) && num > 0) {
+            calcState.loanTenureYears = num;
+            calculateAll(false);
+        }
+    }
+
+    function focusInputs() {
+        var inputEl = document.getElementById('propPriceInput');
+        if (inputEl) {
+            inputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            inputEl.focus();
+        }
+    }
+
+    // Format price on blur
+    var propPriceInputEl = document.getElementById('propPriceInput');
+    if (propPriceInputEl) {
+        propPriceInputEl.addEventListener('blur', function() {
+            this.value = formatIndian(calcState.propPrice);
+        });
+    }
+
+    // Format interest rate on blur
+    var interestRateInputEl = document.getElementById('interestRateInput');
+    if (interestRateInputEl) {
+        interestRateInputEl.addEventListener('blur', function() {
+            this.value = calcState.interestRate + '%';
+        });
     }
 
     // FAQ Accordion Toggle
     document.querySelectorAll('.ak-faq-question').forEach(function(item) {
         item.addEventListener('click', function() {
             var parent = this.parentElement;
-            parent.classList.toggle('active');
+            if (parent) {
+                parent.classList.toggle('active');
+            }
         });
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        syncUI();
+        updateSliderFill('propPriceSlider');
+        calculateAll(false);
     });
     </script>
 
