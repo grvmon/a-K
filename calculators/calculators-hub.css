@@ -43,9 +43,21 @@ body.calc-hub-body {
     box-sizing: border-box;
 }
 
+/* Mobile Navigation Hamburger Override */
+.header-nav .hamburger-line {
+    background-color: #FFFFFF !important;
+}
+
 @media (max-width: 768px) {
     .ak-hub-container {
         padding: 0 1.25rem;
+    }
+    .ak-hub-hero {
+        padding-top: 110px;
+        padding-bottom: 2.75rem;
+    }
+    .ak-hub-hero-h1 {
+        font-size: clamp(1.75rem, 6.5vw, 2.4rem);
     }
 }
 
@@ -88,7 +100,7 @@ body.calc-hub-body {
 
 .ak-hub-hero-h1 {
     font-family: var(--hub-font-heading);
-    font-size: clamp(2.5rem, 4vw, 3.75rem);
+    font-size: clamp(2rem, 4vw, 3.75rem);
     line-height: 1.1;
     font-weight: 400;
     color: var(--hub-navy);
@@ -299,6 +311,16 @@ body.calc-hub-body {
 @media (max-width: 640px) {
     .ak-hub-grid {
         grid-template-columns: 1fr;
+    }
+    .ak-hub-search-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+    .ak-hub-cta-section {
+        padding: 2.75rem 1.25rem;
     }
 }
 

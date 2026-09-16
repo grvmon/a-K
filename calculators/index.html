@@ -27,31 +27,103 @@
   <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20260911_v1">
 
   <!-- Favicon & Font Preloads -->
-  <link rel="icon" type="image/svg+xml" href="../style-guide/assets/favicon.svg">
-  <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../style-guide/assets/fonts/cormorant-latin.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="/style-guide/assets/favicon.svg">
+  <link rel="preload" href="/style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/style-guide/assets/fonts/cormorant-latin.woff2?v=v96" as="font" type="font/woff2" crossorigin>
 
   <!-- Global Stylesheets -->
-  <link rel="stylesheet" href="../website.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="../lead-form.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="../abha-form.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="calculator-design-system.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="calculators-hub.css?v=20260916_v1">
+  <link rel="stylesheet" href="/website.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="/lead-form.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="/abha-form.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="/calculators/calculator-design-system.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="/calculators/calculators-hub.css?v=20260916_v2">
 
-  <!-- JSON-LD Structured Data for Directory -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Acre&Key Property Calculators",
-    "description": "Comprehensive directory of home buying, financial, investment, property tax, and evaluation calculators by Acre&Key.",
-    "url": "https://acrenkey.com/calculators/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Acre&Key",
-      "url": "https://acrenkey.com/"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://acrenkey.com/#organization",
+        "name": "AcrenKey",
+        "legalName": "Acrenkey Realty LLP",
+        "url": "https://acrenkey.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://acrenkey.com/#logo",
+          "url": "https://acrenkey.com/style-guide/assets/favicon.svg",
+          "caption": "AcrenKey - Independent Home Buyer Concierge"
+        },
+        "image": "https://acrenkey.com/style-guide/assets/og-image.jpg?v=20260911_v1",
+        "description": "Independent Home Buyer Concierge in Bangalore advising discerning home buyers, HNI investors, and corporate leaders with strategy-consulting rigor and 69-point diligence.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8th floor, Summit A, Brigade Tech Gardens, Mahadevapura",
+          "addressLocality": "Whitefield, Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560048",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/acrenkey/",
+          "https://www.instagram.com/acrenkey/",
+          "https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw",
+          "https://x.com/acreNkey",
+          "https://www.facebook.com/profile.php?id=61589792184848",
+          "https://www.reddit.com/user/acreNkey/",
+          "https://www.quora.com/profile/AcreNkey",
+          "https://pin.it/58qQo3rsD"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://acrenkey.com/#website",
+        "url": "https://acrenkey.com/",
+        "name": "AcrenKey",
+        "description": "Independent Home Buyer Concierge in Bangalore",
+        "publisher": {
+          "@id": "https://acrenkey.com/#organization"
+        },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://acrenkey.com/calculators/#webpage",
+        "url": "https://acrenkey.com/calculators/",
+        "name": "Property Calculators for Home Buyers | AcrenKey",
+        "description": "Use AcrenKey's independent property calculators to estimate home loan EMI, affordability, stamp duty, buying costs, property returns, rental yield, taxes, interiors and more.",
+        "isPartOf": {
+          "@id": "https://acrenkey.com/#website"
+        },
+        "about": {
+          "@id": "https://acrenkey.com/#organization"
+        },
+        "breadcrumb": {
+          "@id": "https://acrenkey.com/calculators/#breadcrumb"
+        },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://acrenkey.com/calculators/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://acrenkey.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://acrenkey.com/calculators/"
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -62,17 +134,17 @@
   <!-- Standard Acre&Key Header Navigation -->
   <header class="header-nav" id="header-nav">
     <div class="container nav-container">
-      <a href="../" class="nav-brand">
+      <a href="/" class="nav-brand">
         <span class="brand-logo-text">acre&amp;key</span>
       </a>
       <ul class="nav-links">
-        <li><a href="../#who-were-for">Who We Serve</a></li>
-        <li><a href="../#framework">Decision Framework</a></li>
-        <li><a href="../#core">CORE</a></li>
-        <li><a href="../#testimonials">Testimonials</a></li>
-        <li><a href="../#about-us">About Us</a></li>
+        <li><a href="/#who-were-for">Who We Serve</a></li>
+        <li><a href="/#framework">Decision Framework</a></li>
+        <li><a href="/#core">CORE</a></li>
+        <li><a href="/#testimonials">Testimonials</a></li>
+        <li><a href="/#about-us">About Us</a></li>
       </ul>
-      <a href="#footer" class="nav-cta-btn primary-cta-btn">
+      <a href="#footer" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;">
         <span>Talk to an Advisor</span>
         <span class="cta-arrow-badge" aria-hidden="true">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -91,7 +163,7 @@
     <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
       <div class="mobile-drawer-inner">
         <div class="mobile-drawer-header">
-          <a href="../" class="mobile-drawer-brand" aria-label="Acre and Key Home">
+          <a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home">
             <span class="brand-logo-text">acre&amp;key</span>
           </a>
           <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu">
@@ -102,14 +174,14 @@
           </button>
         </div>
         <nav class="mobile-nav-list">
-          <a href="../#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span></a>
-          <a href="../#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span></a>
-          <a href="../#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span></a>
-          <a href="../#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span></a>
-          <a href="../#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span></a>
+          <a href="/#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span></a>
+          <a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span></a>
+          <a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span></a>
+          <a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span></a>
+          <a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span></a>
         </nav>
         <div class="mobile-drawer-footer">
-          <a href="#footer" class="mobile-drawer-cta primary-cta-btn">
+          <a href="#footer" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;">
             <span>Talk to an Advisor</span>
             <span class="cta-arrow-badge" aria-hidden="true">
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -129,7 +201,7 @@
     <div class="ak-hub-container">
       <div class="ak-hub-hero-inner">
         <ul class="ak-hub-breadcrumb">
-          <li><a href="../">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li class="sep">/</li>
           <li>Calculators</li>
         </ul>
@@ -214,7 +286,7 @@
         <div class="ak-hub-cta-content">
           <h2 class="ak-hub-cta-h2">Buying a home is more than a calculation.</h2>
           <p class="ak-hub-cta-desc">Use the numbers to understand your options. If you want an independent perspective on the property itself, Acre&amp;Key can help.</p>
-          <a href="#footer" class="ak-hub-cta-btn">
+          <a href="#footer" class="ak-hub-cta-btn" onclick="window.openModal(); return false;">
             <span>Talk to an Advisor</span>
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="3.5" y1="8" x2="12.5" y2="8"></line>
@@ -232,7 +304,7 @@
     <div class="container">
       <div class="footer-main-grid">
         <div class="footer-brand-col">
-          <a href="../" class="footer-logo-wordmark">acre&amp;key</a>
+          <a href="/" class="footer-logo-wordmark">acre&amp;key</a>
           <div class="footer-tagline">Home Buyer Concierge</div>
           <p class="footer-mission">
             Independent Home Buyer Concierge in Bangalore. We advise discerning home buyers, HNI investors, and corporate leaders with strategy-consulting rigor, unbiased shortlists, and 69-point diligence.
@@ -245,22 +317,22 @@
         <div class="footer-right-col">
           <div class="footer-links-cluster">
             <div class="footer-link-line">
-              <a href="../#property-consultant-bangalore">Property Advisory Bangalore</a>
+              <a href="/#property-consultant-bangalore">Property Advisory Bangalore</a>
               <span class="footer-dot">•</span>
-              <a href="../#faq-property-consultant">Property FAQs</a>
+              <a href="/#faq-property-consultant">Property FAQs</a>
               <span class="footer-dot">•</span>
-              <a href="../properties/">Properties</a>
+              <a href="/properties/">Properties</a>
               <span class="footer-dot">•</span>
-              <a href="../calculators/">Calculators</a>
+              <a href="/calculators/">Calculators</a>
               <span class="footer-dot">•</span>
-              <a href="../careers">Careers</a>
+              <a href="/careers/">Careers</a>
             </div>
             <div class="footer-link-line">
-              <a href="../privacy-policy/">Privacy Policy</a>
+              <a href="/privacy-policy/">Privacy Policy</a>
               <span class="footer-dot">•</span>
-              <a href="../terms-of-service/">Terms of Service</a>
+              <a href="/terms-of-service/">Terms of Service</a>
               <span class="footer-dot">•</span>
-              <a href="../rera-disclaimer/">RERA Disclaimer</a>
+              <a href="/rera-disclaimer/">RERA Disclaimer</a>
             </div>
           </div>
 
@@ -290,8 +362,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../website.min.js?v=20260910_live_v3"></script>
-  <script src="../lead-form.min.js?v=20260910_live_v3"></script>
+  <script src="/website.min.js?v=20260910_live_v3"></script>
+  <script src="/lead-form.min.js?v=20260910_live_v3"></script>
+  <script src="/abha-form.min.js?v=20260910_live_v3"></script>
   
   <!-- Calculator Hub Engine Script -->
   <script>
@@ -1226,32 +1299,107 @@
         renderDirectory();
       };
 
-      // Dynamic JSON-LD ItemList Injection for SEO
-      function injectDynamicItemListSchema() {
-        const schemaObj = {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "name": "Acre&Key Calculators Inventory",
-          "numberOfItems": calculatorsData.length,
-          "itemListElement": calculatorsData.map((item, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": item.name,
-            "url": `https://acrenkey.com${item.slug}`,
-            "description": item.description
-          }))
-        };
-
-        const scriptTag = document.createElement('script');
-        scriptTag.type = 'application/ld+json';
-        scriptTag.textContent = JSON.stringify(schemaObj);
-        document.head.appendChild(scriptTag);
-      }
-
       // Initial Execution
       renderDirectory();
-      injectDynamicItemListSchema();
     })();
   </script>
+
+  <!-- Acre&Key Lead Form Modal -->
+  <div class="lf-modal-overlay" id="lfModalOverlay">
+    <div class="lf-cc-backdrop" id="lfCcBackdrop"></div>
+    <div class="lf-wrap" id="lfWrap" role="dialog" aria-modal="true" aria-labelledby="lfMainHeading" aria-describedby="lfSubHeading">
+      <div class="lf-drag-handle"></div>
+      <button type="button" class="lf-modal-close-icon lf-focusable" id="lfModalClose" aria-label="Close modal window" tabindex="0">
+        <svg viewBox="0 0 14 14" fill="none">
+          <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M1 1l12 12M13 1L1 13"/>
+        </svg>
+      </button>
+      <div id="lfModalFormContent">
+        <div class="lf-header">
+          <h2 class="lf-main-heading" id="lfMainHeading">Speak to a Home Buying Expert</h2>
+          <p class="lf-sub-heading" id="lfSubHeading">Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p>
+        </div>
+        <form class="lf-form" id="lfForm" novalidate>
+          <input class="lf-hp" type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" id="lfGclid" name="gclid">
+          <input type="hidden" id="lfFclid" name="fclid">
+          <input type="hidden" id="lfUtmSource" name="utm_source">
+          <input type="hidden" id="lfUtmMedium" name="utm_medium">
+          <input type="hidden" id="lfUtmCampaign" name="utm_campaign">
+          <input type="hidden" id="lfUtmTerm" name="utm_term">
+          <input type="hidden" id="lfUtmContent" name="utm_content">
+          <input type="hidden" id="lfSourceUrl" name="source_url">
+          <input type="hidden" id="lfSubmittedAt" name="submitted_at">
+          <div class="lf-field" id="lfNameField">
+            <div class="lf-input-box">
+              <label class="lf-label" for="lfName">Full name<span class="lf-req" aria-hidden="true">*</span></label>
+              <input class="lf-input lf-focusable" type="text" id="lfName" name="name" autocomplete="name" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="60" aria-describedby="lfNameErr">
+              <span class="lf-valid-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg>
+              </span>
+              <button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex="-1">
+                <svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg>
+              </button>
+            </div>
+            <div class="lf-err" id="lfNameErr" role="alert"></div>
+          </div>
+          <div class="lf-field lf-field-phone" id="lfPhoneField">
+            <div class="lf-input-box">
+              <label class="lf-label" id="lfPhoneLbl" for="lfPhone">Mobile<span class="lf-req" aria-hidden="true">*</span></label>
+              <div class="lf-phone-row">
+                <button type="button" class="lf-cc-trigger lf-focusable" id="lfCcTrigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lfCcPanel" aria-label="Select country dial code" tabindex="0">
+                  <span id="lfCcDisplay">+91</span>
+                  <svg class="lf-cc-arrow" viewBox="0 0 8 5" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l3 3 3-3"/></svg>
+                </button>
+                <div class="lf-cc-panel" id="lfCcPanel" role="listbox" aria-labelledby="lfPhoneLbl">
+                  <input class="lf-cc-search lf-focusable" type="text" id="lfCcSearch" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="lfCcList" placeholder="Search country..." autocomplete="off" aria-label="Search countries by name or code" tabindex="-1">
+                  <div class="lf-cc-list" id="lfCcList"></div>
+                </div>
+                <input type="hidden" id="lfCcVal" name="country_code" value="+91">
+                <div class="lf-divider"></div>
+                <input class="lf-input lf-focusable" type="tel" id="lfPhone" name="phone" inputmode="numeric" autocomplete="tel" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="15" aria-describedby="lfPhoneErr">
+                <span class="lf-valid-icon" aria-hidden="true">
+                  <svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg>
+                </span>
+                <button type="button" class="lf-clear-btn lf-focusable" id="lfPhoneClearBtn" aria-label="Clear mobile number field" tabindex="-1">
+                  <svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="lf-err" id="lfPhoneErr" role="alert"></div>
+          </div>
+          <div class="lf-field" id="lfEmailField">
+            <div class="lf-input-box">
+              <label class="lf-label" for="lfEmail">Email<span class="lf-req" aria-hidden="true">*</span></label>
+              <input class="lf-input lf-focusable" type="email" id="lfEmail" name="email" autocomplete="email" enterkeyhint="done" aria-required="true" tabindex="0" aria-invalid="false" maxlength="120" aria-describedby="lfEmailErr">
+              <span class="lf-valid-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg>
+              </span>
+              <button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex="-1">
+                <svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg>
+              </button>
+            </div>
+            <div class="lf-err" id="lfEmailErr" role="alert"></div>
+          </div>
+          <div class="lf-submit-wrap">
+            <button type="submit" class="lf-btn lf-focusable primary-cta-btn" id="lfSubmitBtn" tabindex="0">
+              <div class="lf-spinner"></div>
+              <span id="lfBtnText">Schedule Advisory Call</span>
+              <span class="cta-arrow-badge" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
+                  <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
+                </svg>
+              </span>
+            </button>
+            <p class="lf-privacy-consent" style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;">
+              By submitting your details, you agree to our <a href="/privacy-policy/" style="text-decoration: underline; color: inherit;">Privacy Policy</a>.
+            </p>
+            <p class="lf-global-err" id="lfGlobalErr" role="alert" aria-live="assertive" aria-atomic="true">Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
