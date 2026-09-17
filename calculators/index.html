@@ -27,17 +27,17 @@
   <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20260911_v1">
 
   <!-- Favicon & Font Preloads -->
-  <link rel="icon" type="image/svg+xml" href="/style-guide/assets/favicon.svg">
-  <link rel="preload" href="/style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/style-guide/assets/fonts/cormorant-latin.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="../style-guide/assets/favicon.svg">
+  <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../style-guide/assets/fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2?v=v96" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../style-guide/assets/fonts/cormorant-latin.woff2?v=v96" as="font" type="font/woff2" crossorigin>
 
   <!-- Global Stylesheets -->
-  <link rel="stylesheet" href="/website.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="/lead-form.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="/abha-form.min.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="/calculators/calculator-design-system.css?v=20260910_live_v3">
-  <link rel="stylesheet" href="/calculators/calculators-hub.css?v=20260916_v2">
+  <link rel="stylesheet" href="../website.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="../lead-form.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="../abha-form.min.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="calculator-design-system.css?v=20260910_live_v3">
+  <link rel="stylesheet" href="calculators-hub.css?v=20260916_v2">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -47,14 +47,14 @@
       {
         "@type": "Organization",
         "@id": "https://acrenkey.com/#organization",
-        "name": "AcrenKey",
+        "name": "Acre&Key",
         "legalName": "Acrenkey Realty LLP",
         "url": "https://acrenkey.com/",
         "logo": {
           "@type": "ImageObject",
           "@id": "https://acrenkey.com/#logo",
           "url": "https://acrenkey.com/style-guide/assets/favicon.svg",
-          "caption": "AcrenKey - Independent Home Buyer Concierge"
+          "caption": "Acre&Key - Independent Home Buyer Concierge"
         },
         "image": "https://acrenkey.com/style-guide/assets/og-image.jpg?v=20260911_v1",
         "description": "Independent Home Buyer Concierge in Bangalore advising discerning home buyers, HNI investors, and corporate leaders with strategy-consulting rigor and 69-point diligence.",
@@ -81,19 +81,27 @@
         "@type": "WebSite",
         "@id": "https://acrenkey.com/#website",
         "url": "https://acrenkey.com/",
-        "name": "AcrenKey",
+        "name": "Acre&Key",
         "description": "Independent Home Buyer Concierge in Bangalore",
         "publisher": {
           "@id": "https://acrenkey.com/#organization"
         },
-        "inLanguage": "en-IN"
+        "inLanguage": "en-IN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://acrenkey.com/calculators/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": ["WebPage", "CollectionPage"],
         "@id": "https://acrenkey.com/calculators/#webpage",
         "url": "https://acrenkey.com/calculators/",
-        "name": "Property Calculators for Home Buyers | AcrenKey",
-        "description": "Use AcrenKey's independent property calculators to estimate home loan EMI, affordability, stamp duty, buying costs, property returns, rental yield, taxes, interiors and more.",
+        "name": "Property Calculators for Home Buyers | Acre&Key",
+        "description": "Make better property decisions with 68+ independent real estate calculators. Calculate home loan EMI, affordability, stamp duty, upfront down payment outlays, and investment ROI.",
         "isPartOf": {
           "@id": "https://acrenkey.com/#website"
         },
@@ -103,7 +111,95 @@
         "breadcrumb": {
           "@id": "https://acrenkey.com/calculators/#breadcrumb"
         },
-        "inLanguage": "en-IN"
+        "inLanguage": "en-IN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://acrenkey.com/calculators/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Property Decision Calculators",
+          "description": "Comprehensive suite of real estate, home loan EMI, affordability, stamp duty, and investment calculators for Indian home buyers.",
+          "numberOfItems": 68,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home Loan EMI Calculator",
+              "url": "https://acrenkey.com/calculators/home-loan-emi-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Home Affordability Calculator",
+              "url": "https://acrenkey.com/calculators/home-affordability-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Down Payment Calculator",
+              "url": "https://acrenkey.com/calculators/down-payment-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Loan Eligibility Calculator",
+              "url": "https://acrenkey.com/calculators/loan-eligibility-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Stamp Duty & Registration Calculator",
+              "url": "https://acrenkey.com/calculators/stamp-duty-registration-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Total Cost of Buying a Home Calculator",
+              "url": "https://acrenkey.com/calculators/total-cost-of-buying-a-home-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Rent vs Buy Calculator",
+              "url": "https://acrenkey.com/calculators/rent-vs-buy-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "Property Investment ROI Calculator",
+              "url": "https://acrenkey.com/calculators/property-investment-roi-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "Capital Gains Tax Calculator",
+              "url": "https://acrenkey.com/calculators/capital-gains-tax-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "name": "Section 80C Tax Savings Calculator",
+              "url": "https://acrenkey.com/calculators/section-80c-tax-savings-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "name": "Bangalore Property Buying Cost Calculator",
+              "url": "https://acrenkey.com/calculators/bangalore-property-buying-cost-calculator/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "name": "Construction Cost Calculator",
+              "url": "https://acrenkey.com/calculators/construction-cost-calculator/"
+            }
+          ]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -128,10 +224,16 @@
         "@id": "https://acrenkey.com/calculators/#webapp",
         "name": "Acre&Key Property Decision Tools",
         "url": "https://acrenkey.com/calculators/",
-        "applicationCategory": "BusinessApplication",
+        "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
         "description": "Interactive suite of independent property decision calculators for Bangalore real estate including home loan EMI, stamp duty, property tax, and investment ROI.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "featureList": "Real-time EMI amortization, Karnataka stamp duty slabs, capital gains tax, rent vs buy comparative analysis, affordability modeling",
         "provider": {
           "@id": "https://acrenkey.com/#organization"
         }
@@ -147,20 +249,20 @@
   <!-- Standard Acre&Key Header Navigation -->
   <header class="header-nav" id="header-nav">
     <div class="container nav-container">
-      <a href="/" class="nav-brand">
+      <a href="../index.html" class="nav-brand">
         <span class="brand-logo-text">acre&amp;key</span>
       </a>
       <ul class="nav-links">
-        <li><a href="/#who-were-for">Who We Serve</a></li>
-        <li><a href="/#framework">Decision Framework</a></li>
-        <li><a href="/#core">CORE</a></li>
-        <li><a href="/#testimonials">Testimonials</a></li>
-        <li><a href="/#about-us">About Us</a></li>
+        <li><a href="../index.html#who-were-for">Who We Serve</a></li>
+        <li><a href="../index.html#framework">Decision Framework</a></li>
+        <li><a href="../index.html#core">CORE</a></li>
+        <li><a href="../index.html#testimonials">Testimonials</a></li>
+        <li><a href="../index.html#about-us">About Us</a></li>
       </ul>
       <a href="#footer" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;">
         <span>Talk to an Advisor</span>
         <span class="cta-arrow-badge" aria-hidden="true">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
             <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
           </svg>
@@ -176,7 +278,7 @@
     <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
       <div class="mobile-drawer-inner">
         <div class="mobile-drawer-header">
-          <a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home">
+          <a href="../index.html" class="mobile-drawer-brand" aria-label="Acre and Key Home">
             <span class="brand-logo-text">acre&amp;key</span>
           </a>
           <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu">
@@ -187,17 +289,17 @@
           </button>
         </div>
         <nav class="mobile-nav-list">
-          <a href="/#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span></a>
-          <a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span></a>
-          <a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span></a>
-          <a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span></a>
-          <a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span></a>
+          <a href="../index.html#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span></a>
+          <a href="../index.html#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span></a>
+          <a href="../index.html#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span></a>
+          <a href="../index.html#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span></a>
+          <a href="../index.html#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span></a>
         </nav>
         <div class="mobile-drawer-footer">
           <a href="#footer" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;">
             <span>Talk to an Advisor</span>
             <span class="cta-arrow-badge" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
                 <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
               </svg>
@@ -212,68 +314,110 @@
   <!-- Hero Section -->
   <section class="ak-hub-hero">
     <div class="ak-hub-container">
-      <div class="ak-hub-hero-inner">
-        <ul class="ak-hub-breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li class="sep">/</li>
-          <li>Calculators</li>
-        </ul>
-        <div class="ak-hub-kicker">ACRE&amp;KEY DECISION INTELLIGENCE</div>
-        <h1 class="ak-hub-hero-h1">Property Decision Tools, <span class="ak-hub-italic">Refined.</span></h1>
-        <p class="ak-hub-hero-sub">Make high-conviction real estate decisions without bias, hidden assumptions, or developer sales pressure.</p>
-        
-        <div class="ak-hub-search-wrapper">
-          <div class="ak-hub-search-box">
-            <span class="ak-hub-search-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </span>
-            <input type="text" id="calcSearchInput" class="ak-hub-search-input" placeholder="Search 68+ calculators (e.g. EMI, stamp duty, Whitefield, ROI, tax)..." aria-label="Search property calculators">
-            <kbd class="ak-hub-kbd" id="calcSearchKbd" aria-hidden="true">⌘K</kbd>
-            <button id="calcSearchClear" class="ak-hub-search-clear" aria-label="Clear search input">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
+      <div class="ak-hub-hero-grid">
+        <!-- Left Hero Content -->
+        <div class="ak-hub-hero-content">
+          <nav aria-label="Breadcrumb">
+            <ul class="ak-hub-breadcrumb">
+              <li><a href="../index.html">Home</a></li>
+              <li class="sep">/</li>
+              <li aria-current="page">Calculators</li>
+            </ul>
+          </nav>
+          
+          <h1 class="ak-hub-hero-h1">Make Better Property Decisions.</h1>
+          <p class="ak-hub-hero-sub">Calculate costs, compare properties, and make informed decisions before you buy.</p>
+          
+          <!-- Search Capsule Box -->
+          <div class="ak-hub-search-wrapper">
+            <div class="ak-hub-search-box">
+              <span class="ak-hub-search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input type="text" id="calcSearchInput" class="ak-hub-search-input" placeholder="Search calculators, locations, taxes, EMI, ROI..." aria-label="Search calculators">
+              <button type="button" id="calcSearchClear" class="ak-hub-search-clear" aria-label="Clear search input">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
           </div>
           
-          <!-- Curated Intent Quick-Chips -->
-          <div class="ak-hub-intent-chips" role="group" aria-label="Quick search suggestions">
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Home Loan EMI')"><span>💰</span> Home Loan EMI</button>
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Affordability')"><span>🎯</span> Affordability</button>
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Stamp Duty')"><span>🏛️</span> Stamp Duty</button>
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Rent vs Buy')"><span>⚖️</span> Rent vs Buy</button>
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Bangalore')"><span>📍</span> Bangalore Localities</button>
-            <button type="button" class="ak-hub-chip" onclick="setQuickSearch('Tax')"><span>🧾</span> Tax Savings</button>
-          </div>
-
-          <div class="ak-hub-search-meta">
-            <span id="searchMetaText">Explore 68 independent property calculators</span>
-            <span class="ak-hub-count-badge" id="calcCountBadge">68 Calculators</span>
+          <!-- Curated Popular Quick-Chips -->
+          <div class="ak-hub-popular-row" role="group" aria-label="Popular search topics">
+            <span class="ak-hub-popular-label">Popular:</span>
+            <div class="ak-hub-popular-chips">
+              <button type="button" class="ak-hub-pop-chip" onclick="setQuickSearch('Home Loan EMI')">
+                <span class="chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                </span>
+                <span>Home Loan EMI</span>
+                <span class="chip-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="ak-hub-pop-chip" onclick="setQuickSearch('Affordability')">
+                <span class="chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </span>
+                <span>Affordability</span>
+                <span class="chip-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="ak-hub-pop-chip" onclick="setQuickSearch('Stamp Duty')">
+                <span class="chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </span>
+                <span>Stamp Duty</span>
+                <span class="chip-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="ak-hub-pop-chip" onclick="setQuickSearch('Rent vs Buy')">
+                <span class="chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                </span>
+                <span>Rent vs Buy</span>
+                <span class="chip-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="ak-hub-pop-chip" onclick="setQuickSearch('Tax')">
+                <span class="chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"></path><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"></path><circle cx="8" cy="12" r="2"></circle></svg>
+                </span>
+                <span>Tax Savings</span>
+                <span class="chip-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Category Navigation Pills -->
+  <!-- Horizontal Category Navigation Strip with Carousel Controls -->
   <nav class="ak-hub-nav-section" aria-label="Calculator Categories">
     <div class="ak-hub-container">
-      <div class="ak-hub-nav-scroll" id="categoryPillContainer">
-        <button class="ak-hub-pill active" data-category="all">All <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Home Buying">Home Buying <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Home Loans & Finance">Home Loans &amp; Finance <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Property Costs & Taxes">Property Costs &amp; Taxes <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Investment & Returns">Investment &amp; Returns <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Property Evaluation">Property Evaluation <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Location Calculators">Location Calculators <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Construction & Interiors">Construction &amp; Interiors <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Ownership & Lifestyle">Ownership &amp; Lifestyle <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Tax Calculators">Tax Calculators <span class="ak-hub-pill-count"></span></button>
-        <button class="ak-hub-pill" data-category="Planning Tools">Planning Tools <span class="ak-hub-pill-count"></span></button>
+      <div class="ak-hub-nav-wrap">
+        <div class="ak-hub-nav-scroll" id="categoryPillContainer">
+          <button class="ak-hub-tab-btn active" data-category="all">All <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Home Buying">Home Buying <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Home Loans & Finance">Loans &amp; Finance <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Property Costs & Taxes">Property Costs &amp; Taxes <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Investment & Returns">Investment &amp; Returns <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Property Evaluation">Property Evaluation <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Location Calculators">Location Calculators <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Construction & Interiors">Construction &amp; Interiors <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Ownership & Lifestyle">Ownership &amp; Lifestyle <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Tax Calculators">Tax Calculators <span class="ak-hub-tab-count"></span></button>
+          <button class="ak-hub-tab-btn" data-category="Planning Tools">Planning Tools <span class="ak-hub-tab-count"></span></button>
+        </div>
+        <div class="ak-hub-nav-arrows" aria-label="Scroll categories">
+          <button type="button" class="ak-hub-nav-arrow-btn" id="catScrollLeft" aria-label="Scroll left">
+            <svg viewBox="0 0 16 16"><polyline points="10 3 5 8 10 13"></polyline></svg>
+          </button>
+          <button type="button" class="ak-hub-nav-arrow-btn" id="catScrollRight" aria-label="Scroll right">
+            <svg viewBox="0 0 16 16"><polyline points="6 3 11 8 6 13"></polyline></svg>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -282,6 +426,12 @@
   <main class="ak-hub-main-content">
     <div class="ak-hub-container">
       
+      <!-- Search Results Meta Bar -->
+      <div class="ak-hub-search-meta" id="searchMetaBar" style="display: none;">
+        <span id="searchMetaText">Explore 68 independent property calculators</span>
+        <span class="ak-hub-count-badge" id="calcCountBadge">68 Calculators</span>
+      </div>
+
       <!-- No Search Results Empty State -->
       <div class="ak-hub-empty-state" id="emptyState">
         <div class="ak-hub-empty-icon" aria-hidden="true">
@@ -332,7 +482,7 @@
     <div class="container">
       <div class="footer-main-grid">
         <div class="footer-brand-col">
-          <a href="/" class="footer-logo-wordmark">acre&amp;key</a>
+          <a href="../index.html" class="footer-logo-wordmark">acre&amp;key</a>
           <div class="footer-tagline">Home Buyer Concierge</div>
           <p class="footer-mission">
             Independent Home Buyer Concierge in Bangalore. We advise discerning home buyers, HNI investors, and corporate leaders with strategy-consulting rigor, unbiased shortlists, and 69-point diligence.
@@ -345,22 +495,22 @@
         <div class="footer-right-col">
           <div class="footer-links-cluster">
             <div class="footer-link-line">
-              <a href="/#property-consultant-bangalore">Property Advisory Bangalore</a>
+              <a href="../index.html#property-consultant-bangalore">Property Advisory Bangalore</a>
               <span class="footer-dot">•</span>
-              <a href="/#faq-property-consultant">Property FAQs</a>
+              <a href="../index.html#faq-property-consultant">Property FAQs</a>
               <span class="footer-dot">•</span>
-              <a href="/properties/">Properties</a>
+              <a href="../properties/">Properties</a>
               <span class="footer-dot">•</span>
-              <a href="/calculators/">Calculators</a>
+              <a href="./">Calculators</a>
               <span class="footer-dot">•</span>
-              <a href="/careers/">Careers</a>
+              <a href="../careers/">Careers</a>
             </div>
             <div class="footer-link-line">
-              <a href="/privacy-policy/">Privacy Policy</a>
+              <a href="../privacy-policy/">Privacy Policy</a>
               <span class="footer-dot">•</span>
-              <a href="/terms-of-service/">Terms of Service</a>
+              <a href="../terms-of-service/">Terms of Service</a>
               <span class="footer-dot">•</span>
-              <a href="/rera-disclaimer/">RERA Disclaimer</a>
+              <a href="../rera-disclaimer/">RERA Disclaimer</a>
             </div>
           </div>
 
@@ -390,9 +540,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/website.min.js?v=20260910_live_v3"></script>
-  <script src="/lead-form.min.js?v=20260910_live_v3"></script>
-  <script src="/abha-form.min.js?v=20260910_live_v3"></script>
+  <script src="../website.min.js?v=20260910_live_v3"></script>
+  <script src="../lead-form.min.js?v=20260910_live_v3"></script>
+  <script src="../abha-form.min.js?v=20260910_live_v3"></script>
   
   <!-- Calculator Hub Engine Script -->
   <script>
@@ -1190,36 +1340,57 @@
         return tags;
       }
 
-      // Helper function to create card HTML
+      // Helper function to get clean SVG icon per calculator
+      function getCalculatorIconSvg(item) {
+        const slug = (item.slug || '').toLowerCase();
+        const cat = (item.category || '').toLowerCase();
+        
+        if (slug.includes('emi') || slug.includes('prepayment') || slug.includes('balance-transfer') || slug.includes('loan') || cat.includes('finance')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="7" x2="10" y2="7"></line><line x1="14" y1="6" x2="16" y2="8"></line><line x1="16" y1="6" x2="14" y2="8"></line><line x1="8" y1="13" x2="10" y2="13"></line><line x1="9" y1="12" x2="9" y2="14"></line><line x1="14" y1="12" x2="16" y2="12"></line><line x1="14" y1="14" x2="16" y2="14"></line></svg>`;
+        }
+        if (slug.includes('affordability') || slug.includes('eligibility') || slug.includes('house-hunting') || cat.includes('buying')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`;
+        }
+        if (slug.includes('stamp') || slug.includes('tax') || slug.includes('gst') || cat.includes('tax') || cat.includes('cost')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`;
+        }
+        if (slug.includes('roi') || slug.includes('yield') || slug.includes('appreciation') || slug.includes('cagr') || slug.includes('return') || slug.includes('cash-flow') || cat.includes('investment')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>`;
+        }
+        if (slug.includes('compare') || slug.includes('rent-vs-buy') || slug.includes('fd-vs-property')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line></svg>`;
+        }
+        if (slug.includes('construction') || slug.includes('interior') || slug.includes('kitchen') || slug.includes('paint') || slug.includes('cement') || slug.includes('brick') || slug.includes('flooring') || cat.includes('construction')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>`;
+        }
+        if (slug.includes('score') || slug.includes('trust') || slug.includes('risk') || slug.includes('quality') || slug.includes('readiness') || cat.includes('evaluation')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`;
+        }
+        if (cat.includes('location') || slug.includes('bangalore')) {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`;
+        }
+        return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`;
+      }
+
+      // Helper function to create card HTML matching reference mockup
       function renderCard(item, isFeatured = false) {
-        const microTags = getMicroTags(item);
+        const itemUrl = item.slug.replace(/^\/calculators\//, '');
+        const iconSvg = getCalculatorIconSvg(item);
         return `
-          <a href="${item.slug}" class="ak-calc-card ${isFeatured ? 'featured-card' : ''}">
-            ${isFeatured ? '<span class="ak-calc-card-featured-badge">Popular</span>' : ''}
-            <div class="ak-calc-card-top">
-              <span class="ak-calc-card-tag">${item.category}</span>
+          <a href="${itemUrl}" class="ak-calc-card ${isFeatured ? 'featured-card' : ''}">
+            <div class="ak-calc-card-header-flex">
+              <div class="ak-calc-card-icon" aria-hidden="true">${iconSvg}</div>
               <h3 class="ak-calc-card-title">${item.name}</h3>
-              <p class="ak-calc-card-desc">${item.description}</p>
-              <div class="ak-calc-card-micro-tags">
-                ${microTags.map(t => `<span class="ak-calc-micro-tag">${t}</span>`).join('')}
-              </div>
             </div>
-            <div class="ak-calc-card-bottom">
-              <span class="ak-calc-card-cta">Calculate</span>
-              <span class="ak-calc-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 16 16">
-                  <line x1="3.5" y1="8" x2="12.5" y2="8"></line>
-                  <polyline points="8.5 4 12.5 8 8.5 12"></polyline>
-                </svg>
-              </span>
-            </div>
+            <p class="ak-calc-card-desc">${item.description}</p>
+            <span class="ak-calc-card-link">Calculate &rarr;</span>
           </a>
         `;
       }
 
       // Dynamic Category Pill Counter
       function updateCategoryPillCounts() {
-        const pills = document.querySelectorAll('.ak-hub-pill');
+        const pills = document.querySelectorAll('.ak-hub-pill, .ak-hub-tab-btn');
         pills.forEach(pill => {
           const cat = pill.dataset.category;
           let count = 0;
@@ -1228,7 +1399,7 @@
           } else {
             count = calculatorsData.filter(i => i.category === cat || (i.subCategories && i.subCategories.includes(cat))).length;
           }
-          const countSpan = pill.querySelector('.ak-hub-pill-count');
+          const countSpan = pill.querySelector('.ak-hub-pill-count, .ak-hub-tab-count');
           if (countSpan) {
             countSpan.textContent = `(${count})`;
           }
@@ -1261,15 +1432,24 @@
 
         // Update count badge & meta text
         const totalCount = filteredItems.length;
-        countBadge.textContent = `${totalCount} ${totalCount === 1 ? 'Calculator' : 'Calculators'}`;
+        if (countBadge) {
+          countBadge.textContent = `${totalCount} ${totalCount === 1 ? 'Calculator' : 'Calculators'}`;
+        }
 
+        const searchMetaBar = document.getElementById('searchMetaBar');
         if (query || currentCategory !== 'all') {
+          if (searchMetaBar) searchMetaBar.style.display = 'flex';
           const categoryName = currentCategory === 'all' ? 'all categories' : currentCategory;
-          searchMetaText.textContent = query 
-            ? `Showing ${totalCount} results for "${currentQuery}" in ${categoryName}`
-            : `Showing ${totalCount} calculators in ${categoryName}`;
+          if (searchMetaText) {
+            searchMetaText.textContent = query 
+              ? `Showing ${totalCount} results for "${currentQuery}" in ${categoryName}`
+              : `Showing ${totalCount} calculators in ${categoryName}`;
+          }
         } else {
-          searchMetaText.textContent = `Explore ${calculatorsData.length} independent property calculators`;
+          if (searchMetaBar) searchMetaBar.style.display = 'none';
+          if (searchMetaText) {
+            searchMetaText.textContent = `Explore ${calculatorsData.length} independent property calculators`;
+          }
         }
 
         // Handle Empty State
@@ -1283,118 +1463,9 @@
 
         let html = '';
 
-        // Case A: Default view (All Calculators & no search query) -> Show Flagship Bento + In-Stream Advisory + Categorized Directory
+        // Case A: Default view (All Calculators & no search query) -> Show Categorized Directory
         if (currentCategory === 'all' && !query) {
-          // 1. Flagship Bento Grid (Top 4 Decision Engines)
-          html += `
-            <section class="ak-hub-bento-section">
-              <div class="ak-hub-section-header">
-                <span class="ak-hub-kicker" style="margin-bottom: 0.25rem;">FLAGSHIP DECISION ENGINES</span>
-                <h2 class="ak-hub-section-h2">Essential Property Decision Tools</h2>
-                <p class="ak-hub-section-desc">Four foundational models designed to evaluate loans, true closing expenses, statutory taxes, and long-term capital compounding.</p>
-              </div>
-              <div class="ak-hub-bento-grid">
-                <!-- Bento 1: Primary Wide -->
-                <a href="/calculators/home-loan-emi-calculator/" class="ak-bento-card ak-bento-primary">
-                  <div>
-                    <div class="ak-bento-header">
-                      <span class="ak-bento-tag">Primary Engine</span>
-                      <span class="ak-calc-micro-tag">⚡ Live Amortization</span>
-                    </div>
-                    <h3 class="ak-bento-title">Home Loan EMI &amp; Amortization Engine</h3>
-                    <p class="ak-bento-desc">Model principal vs interest repayments, assess prepayment impact, and review complete year-by-year amortization schedules.</p>
-                    <div class="ak-bento-preview-box">
-                      <span>Baseline Rate Benchmark: <strong>8.50% p.a.</strong></span>
-                      <span>Principal vs Interest: <strong>Dynamic Chart</strong></span>
-                    </div>
-                  </div>
-                  <div class="ak-bento-footer">
-                    <span class="ak-bento-cta">Open Calculator</span>
-                    <span class="ak-calc-card-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><line x1="3.5" y1="8" x2="12.5" y2="8"></line><polyline points="8.5 4 12.5 8 8.5 12"></polyline></svg>
-                    </span>
-                  </div>
-                </a>
-
-                <!-- Bento 2: Secondary -->
-                <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-bento-card ak-bento-secondary">
-                  <div>
-                    <div class="ak-bento-header">
-                      <span class="ak-bento-tag">Total Capital Outlay</span>
-                    </div>
-                    <h3 class="ak-bento-title">Total Cost of Buying a Home</h3>
-                    <p class="ak-bento-desc">Uncover hidden statutory charges, builder GST, legal retainers, and realistic interior provisioning before signing agreements.</p>
-                  </div>
-                  <div class="ak-bento-footer">
-                    <span class="ak-bento-cta">Calculate All-In Cost</span>
-                    <span class="ak-calc-card-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><line x1="3.5" y1="8" x2="12.5" y2="8"></line><polyline points="8.5 4 12.5 8 8.5 12"></polyline></svg>
-                    </span>
-                  </div>
-                </a>
-
-                <!-- Bento 3: Stamp Duty & Registration -->
-                <a href="/calculators/stamp-duty-registration-calculator/" class="ak-bento-card ak-bento-tertiary">
-                  <div>
-                    <div class="ak-bento-header">
-                      <span class="ak-bento-tag">Statutory Rates (2026)</span>
-                      <span class="ak-calc-micro-tag">Karnataka Fiscal Rules</span>
-                    </div>
-                    <h3 class="ak-bento-title">Stamp Duty &amp; Registration</h3>
-                    <p class="ak-bento-desc">Accurately project government stamp duty, BBMP cess, BDA surcharge, and sub-registrar fees across Bangalore property tiers.</p>
-                  </div>
-                  <div class="ak-bento-footer">
-                    <span class="ak-bento-cta">Check Surcharges</span>
-                    <span class="ak-calc-card-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><line x1="3.5" y1="8" x2="12.5" y2="8"></line><polyline points="8.5 4 12.5 8 8.5 12"></polyline></svg>
-                    </span>
-                  </div>
-                </a>
-
-                <!-- Bento 4: Rent vs Buy -->
-                <a href="/calculators/rent-vs-buy-calculator/" class="ak-bento-card ak-bento-quaternary">
-                  <div>
-                    <div class="ak-bento-header">
-                      <span class="ak-bento-tag">Capital Strategy</span>
-                      <span class="ak-calc-micro-tag">Wealth Creation</span>
-                    </div>
-                    <h3 class="ak-bento-title">Rent vs. Buy Simulator</h3>
-                    <p class="ak-bento-desc">Evaluate the net wealth impact over 10 to 25 years comparing home equity accumulation against diversified equity market compounding.</p>
-                  </div>
-                  <div class="ak-bento-footer">
-                    <span class="ak-bento-cta">Compare Wealth</span>
-                    <span class="ak-calc-card-arrow" aria-hidden="true">
-                      <svg viewBox="0 0 16 16"><line x1="3.5" y1="8" x2="12.5" y2="8"></line><polyline points="8.5 4 12.5 8 8.5 12"></polyline></svg>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </section>
-          `;
-
-          // 2. In-Stream Concierge Advisory Breakout (Between Bento and Full Directory)
-          html += `
-            <div class="ak-hub-advisory-breakout">
-              <div class="ak-hub-advisory-breakout-content">
-                <span class="ak-hub-advisory-breakout-kicker">Concierge Advisory</span>
-                <h3 class="ak-hub-advisory-breakout-h3">Calculators evaluate the math. Acre&amp;Key evaluates the asset.</h3>
-                <p class="ak-hub-advisory-breakout-desc">Before committing multi-crore capital, verify title deeds, structural floor efficiency, soil conditions, and future infra pipeline with senior real estate strategists.</p>
-              </div>
-              <div class="ak-hub-advisory-breakout-btn">
-                <a href="#footer" class="ak-hub-cta-btn primary-cta-btn" onclick="window.openModal(); return false;">
-                  <span>Speak to an Advisor</span>
-                  <span class="cta-arrow-badge" aria-hidden="true">
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line>
-                      <polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-          `;
-
-          // 3. Category Sections
+          // Category Sections
           categoryMetadata.forEach(cat => {
             const catItems = calculatorsData.filter(item => 
               item.category === cat.key || (item.subCategories && item.subCategories.includes(cat.key))
@@ -1450,11 +1521,11 @@
       });
 
       pillContainer.addEventListener('click', function(e) {
-        const pill = e.target.closest('.ak-hub-pill');
+        const pill = e.target.closest('.ak-hub-pill, .ak-hub-tab-btn');
         if (!pill) return;
 
         // Update active pill UI
-        document.querySelectorAll('.ak-hub-pill').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.ak-hub-pill, .ak-hub-tab-btn').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
 
         currentCategory = pill.dataset.category;
@@ -1467,13 +1538,33 @@
         currentQuery = tag;
         // reset category to all when using quick intent search
         currentCategory = 'all';
-        document.querySelectorAll('.ak-hub-pill').forEach(p => p.classList.remove('active'));
-        const allPill = document.querySelector('.ak-hub-pill[data-category="all"]');
+        document.querySelectorAll('.ak-hub-pill, .ak-hub-tab-btn').forEach(p => p.classList.remove('active'));
+        const allPill = document.querySelector('.ak-hub-pill[data-category="all"], .ak-hub-tab-btn[data-category="all"]');
         if (allPill) allPill.classList.add('active');
         
         searchInput.focus();
         renderDirectory();
       };
+
+      // Category tab scroll carousel controls
+      const catScrollLeft = document.getElementById('catScrollLeft');
+      const catScrollRight = document.getElementById('catScrollRight');
+      if (catScrollLeft && catScrollRight && pillContainer) {
+        catScrollLeft.addEventListener('click', function() {
+          pillContainer.scrollBy({ left: -240, behavior: 'smooth' });
+        });
+        catScrollRight.addEventListener('click', function() {
+          pillContainer.scrollBy({ left: 240, behavior: 'smooth' });
+        });
+      }
+
+      // Search submit button
+      const searchSubmit = document.getElementById('calcSearchSubmit');
+      if (searchSubmit) {
+        searchSubmit.addEventListener('click', function() {
+          searchInput.focus();
+        });
+      }
 
       // Keyboard shortcut: Cmd+K / Ctrl+K or '/' to focus search
       document.addEventListener('keydown', function(e) {

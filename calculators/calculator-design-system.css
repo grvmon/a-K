@@ -93,20 +93,26 @@
 .ak-calc-header-row {
     margin-bottom: 2rem;
 }
-.ak-calc-h1 {
-    font-family: var(--font-heading, 'Cormorant Garamond', serif);
-    font-size: 2.25rem;
-    font-weight: 400;
-    color: var(--deep-navy, #2F3B42);
-    letter-spacing: -0.02em;
-    margin: 0 0 0.5rem 0;
+.ak-calc-h1,
+.ak-calc-header-left .ak-calc-h1,
+.dp-h1 {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif) !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    color: var(--deep-navy, #141D24) !important;
+    letter-spacing: -0.015em !important;
+    line-height: 1.2 !important;
+    margin: 0 0 0.65rem 0 !important;
 }
-.ak-calc-sub-text {
-    font-size: 0.95rem;
-    color: var(--deep-slate, #4A5861);
-    max-width: 840px;
-    line-height: 1.6;
-    margin: 0;
+.ak-calc-sub-text,
+.dp-subtitle {
+    font-family: var(--font-body, 'Manrope', sans-serif) !important;
+    font-size: 0.92rem !important;
+    font-weight: 400 !important;
+    color: var(--deep-slate, #4A5568) !important;
+    max-width: 660px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
 }
 
 /* --- 4. MAIN CALCULATOR GRID --- */
@@ -668,8 +674,16 @@
         margin: 90px auto 0 auto;
         padding: 0 1rem;
     }
-    .ak-calc-h1 {
-        font-size: 1.75rem;
+    .ak-calc-h1,
+    .ak-calc-header-left .ak-calc-h1,
+    .dp-h1 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+    }
+    .ak-calc-sub-text,
+    .dp-subtitle {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
     }
     .ak-calc-left-panel, .ak-calc-right-panel {
         padding: 1.25rem;
@@ -691,6 +705,22 @@
     }
     .ak-calc-article h2:first-of-type {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .ak-calc-h1,
+    .ak-calc-header-left .ak-calc-h1,
+    .dp-h1 {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+        word-break: break-word;
+    }
+    .ak-calc-sub-text,
+    .dp-subtitle {
+        font-size: 0.84rem !important;
+        line-height: 1.48 !important;
+        margin-bottom: 1rem !important;
     }
 }
 

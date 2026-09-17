@@ -38,8 +38,8 @@
     <noscript></noscript>
 
     <link rel="stylesheet" href="../../website.min.css?v=20260910_live_v3">
-    <link rel="stylesheet" href="../../lead-form.min.css?v=20260910_live_v3"><link rel=stylesheet href="../../abha-form.min.css?v=20260910_live_v3">
-    <link rel="stylesheet" href="../../calculators/calculator-design-system.css?v=20260910_live_v3">
+    <link rel="stylesheet" href="../../lead-form.min.css?v=20260910_live_v3"><link rel="stylesheet" href="../../abha-form.min.css?v=20260910_live_v3">
+    <link rel="stylesheet" href="../calculator-design-system.css?v=20260910_live_v3">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -154,6 +154,57 @@
     :root {
         --font-heading: 'Cormorant Garamond', serif;
         --font-body: 'Manrope', sans-serif;
+        --deep-navy: #141D24;
+        --refined-brass: #7d442a;
+        --brass-hover: #965335;
+        --deep-slate: #33414C;
+        --muted-slate: #64748B;
+        --warm-ivory: #FAF8F5;
+        --divider: #ECEEEF;
+    }
+
+    /* Mobile Header Navigation & Toggle */
+    .header-nav .mobile-toggle {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        .header-nav .nav-links,
+        .header-nav .nav-cta-btn {
+            display: none !important;
+        }
+        .header-nav .mobile-toggle {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 5px !important;
+            width: 44px !important;
+            height: 44px !important;
+            min-width: 44px !important;
+            min-height: 44px !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            z-index: 1060 !important;
+        }
+        .header-nav .hamburger-line {
+            display: block !important;
+            width: 22px !important;
+            height: 2px !important;
+            background-color: #FFFFFF !important;
+            border-radius: 8px !important;
+            transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+        }
+        .header-nav .mobile-toggle.is-active .top-line {
+            transform: translateY(7px) rotate(45deg) !important;
+        }
+        .header-nav .mobile-toggle.is-active .mid-line {
+            opacity: 0 !important;
+        }
+        .header-nav .mobile-toggle.is-active .bot-line {
+            transform: translateY(-7px) rotate(-45deg) !important;
+        }
     }
 
     /* Global Box-Sizing & Viewport Integrity */
@@ -183,13 +234,14 @@
         transition: color 0.2s ease;
     }
     .page-breadcrumb a:hover {
-        color: var(--refined-brass, #B88E52);
+        color: var(--refined-brass, #7d442a);
     }
     .page-breadcrumb .separator {
-        color: #A0AEC0;
+        color: #CBD5E1;
+        font-size: 0.85rem;
     }
     .page-breadcrumb .current {
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
         font-weight: 600;
     }
 
@@ -418,66 +470,74 @@
     /* --- ACRENKEY 2026 DOWN PAYMENT CALCULATOR UI --- */
     .dp-calc-container {
         max-width: 1240px;
-        margin: 110px auto 0 auto;
+        margin: 105px auto 0 auto;
         padding: 0 1.5rem;
         font-family: var(--font-body, 'Manrope', sans-serif);
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
     }
     .dp-header-bar {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.35rem;
         gap: 1rem;
+    }
+    .ak-calc-kicker {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--refined-brass, #7d442a);
+        margin-bottom: 0.45rem;
     }
     .dp-h1 {
         font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
-        font-size: 35px !important;
+        font-size: 34px !important;
         font-weight: 400 !important;
         color: var(--deep-navy, #141D24) !important;
-        letter-spacing: -0.01em !important;
-        margin: 0 0 0.85rem 0 !important;
-        line-height: 1.25 !important;
+        letter-spacing: -0.015em !important;
+        margin: 0 0 0.65rem 0 !important;
+        line-height: 1.2 !important;
     }
     .dp-subtitle {
         font-family: var(--font-body), 'Manrope', sans-serif !important;
-        font-size: 20px !important;
+        font-size: 0.92rem !important;
         font-weight: 400 !important;
-        color: var(--deep-slate, #33414C) !important;
-        max-width: 820px;
-        line-height: 1.5 !important;
-        margin-bottom: 1.5rem !important;
+        color: var(--deep-slate, #4A5568) !important;
+        max-width: 660px;
+        line-height: 1.55 !important;
+        margin-bottom: 1.25rem !important;
     }
     .dp-badges-row {
         display: flex;
         align-items: center;
-        gap: 0.85rem;
+        gap: 0.65rem;
         flex-wrap: wrap;
-        margin-bottom: 2.25rem;
+        margin-bottom: 2rem;
     }
     .dp-badge-item {
         display: inline-flex;
         align-items: center;
         gap: 0.45rem;
         background: #FFFFFF;
-        border: 1px solid rgba(184, 142, 82, 0.25);
+        border: 1px solid rgba(125, 68, 42, 0.2);
         border-radius: 9999px;
-        padding: 0.45rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.38rem 0.95rem;
+        font-size: 0.82rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
-        box-shadow: 0 2px 8px rgba(31, 43, 56, 0.04);
+        color: var(--deep-navy, #141D24);
+        box-shadow: 0 2px 8px rgba(20, 29, 36, 0.03);
     }
     .dp-badge-icon {
         font-size: 0.95rem;
-        color: var(--refined-brass, #B88E52);
+        color: var(--refined-brass, #7d442a);
     }
 
     /* Two-column layout */
     .dp-main-grid {
         display: grid;
         grid-template-columns: 420px 1fr;
-        gap: 2rem;
+        gap: 1.75rem;
         align-items: stretch;
         margin-bottom: 2.5rem;
     }
@@ -485,20 +545,20 @@
     /* Left Card: Inputs */
     .dp-inputs-card {
         background: #FFFFFF;
-        border: 1px solid rgba(184, 142, 82, 0.25);
+        border: 1px solid rgba(125, 68, 42, 0.2);
         border-radius: 12px;
-        padding: 1.75rem 1.75rem;
-        box-shadow: 0 4px 20px rgba(31, 43, 56, 0.05);
+        padding: 1.6rem 1.65rem;
+        box-shadow: 0 4px 20px rgba(20, 29, 36, 0.04);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     .dp-card-title {
         font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.65rem;
+        font-size: 1.55rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
-        margin-bottom: 1.25rem;
+        color: var(--deep-navy, #141D24);
+        margin-bottom: 1.15rem;
     }
     .dp-field-group {
         margin-bottom: 1.15rem;
@@ -635,10 +695,10 @@
     /* Right Card: Results */
     .dp-results-card {
         background: #FFFFFF;
-        border: 1px solid rgba(184, 142, 82, 0.25);
+        border: 1px solid rgba(125, 68, 42, 0.2);
         border-radius: 12px;
-        padding: 1.65rem 1.75rem;
-        box-shadow: 0 4px 20px rgba(31, 43, 56, 0.05);
+        padding: 1.6rem 1.65rem;
+        box-shadow: 0 4px 20px rgba(20, 29, 36, 0.04);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -652,7 +712,7 @@
     .dp-edit-trigger {
         background: none;
         border: none;
-        color: var(--refined-brass, #B88E52);
+        color: var(--refined-brass, #7d442a);
         font-size: 0.88rem;
         font-weight: 600;
         cursor: pointer;
@@ -662,125 +722,173 @@
         text-decoration: underline;
     }
     .dp-edit-trigger:hover {
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
     }
 
-    /* Hero Box with House Illustration */
+    /* Hero Box with Capital Stack Bar */
     .dp-hero-box {
-        background: linear-gradient(135deg, #FBF8F3 0%, #F5EDE0 100%);
-        border: 1px solid rgba(184, 142, 82, 0.35);
+        background: linear-gradient(135deg, #FAF7F2 0%, #F5EDE0 100%);
+        border: 1px solid rgba(125, 68, 42, 0.25);
         border-radius: 10px;
-        padding: 1rem 1.35rem;
+        padding: 0.9rem 1.25rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 1.25rem;
-        margin-bottom: 0.85rem;
+        margin-bottom: 0.75rem;
         position: relative;
-        overflow: hidden;
     }
     .dp-hero-left {
         flex: 1;
     }
     .dp-hero-label {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.12em;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
         margin-bottom: 0.25rem;
     }
     .dp-hero-amount {
-        font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
-        font-size: 2.75rem;
+        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
         font-weight: 700;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
         line-height: 1.05;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.3rem;
     }
     .dp-hero-desc {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         color: var(--deep-slate, #4A5568);
-        line-height: 1.4;
+        line-height: 1.42;
         max-width: 320px;
     }
     .dp-hero-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        background: #FFFFFF;
+        border: 1px solid rgba(125, 68, 42, 0.18);
+        border-radius: 8px;
+        padding: 0.7rem 0.95rem;
+        min-width: 215px;
+        box-shadow: 0 2px 8px rgba(20, 29, 36, 0.04);
         flex-shrink: 0;
     }
-    .dp-hero-note {
-        font-size: 0.75rem;
-        font-style: italic;
-        color: var(--refined-brass, #8C6734);
-        font-weight: 600;
-        margin-bottom: 0.25rem;
+    .dp-stack-header {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.72rem;
+        margin-bottom: 0.45rem;
+    }
+    .dp-stack-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--deep-slate, #33414C);
+    }
+    .dp-stack-ratio {
+        font-weight: 700;
+        color: var(--refined-brass, #7d442a);
+    }
+    .dp-capital-bar-track {
+        display: flex;
+        height: 8px;
+        width: 100%;
+        border-radius: 9999px;
+        overflow: hidden;
+        background: #E2E8F0;
+        margin-bottom: 0.45rem;
+    }
+    .dp-bar-seg {
+        height: 100%;
+        transition: width 0.3s ease;
+    }
+    .dp-seg-equity {
+        background: var(--deep-navy, #141D24);
+    }
+    .dp-seg-stamp {
+        background: var(--refined-brass, #7d442a);
+    }
+    .dp-seg-other {
+        background: #C4A482;
+    }
+    .dp-capital-legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.68rem;
+        color: var(--muted-slate, #64748B);
+        font-weight: 500;
+    }
+    .dp-leg-item {
+        display: inline-flex;
         align-items: center;
         gap: 0.25rem;
     }
-    .dp-hero-svg {
-        width: 115px;
-        height: auto;
+    .dp-leg-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
     }
+    .dp-leg-dot.equity { background: var(--deep-navy, #141D24); }
+    .dp-leg-dot.stamp { background: var(--refined-brass, #7d442a); }
+    .dp-leg-dot.other { background: #C4A482; }
 
     /* 3 Stat Cards */
     .dp-stats-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.75rem;
-        margin-bottom: 0.85rem;
+        gap: 0.65rem;
+        margin-bottom: 0.75rem;
     }
     .dp-stat-card {
         background: #FFFFFF;
         border: 1px solid #ECEEEF;
         border-radius: 8px;
-        padding: 0.75rem 0.85rem;
+        padding: 0.65rem 0.8rem;
         text-align: left;
         transition: all 0.2s ease;
     }
     .dp-stat-card:hover {
-        border-color: rgba(184, 142, 82, 0.4);
-        box-shadow: 0 4px 12px rgba(31, 43, 56, 0.05);
+        border-color: rgba(125, 68, 42, 0.4);
+        box-shadow: 0 4px 12px rgba(20, 29, 36, 0.05);
     }
     .dp-stat-value {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.5rem;
+        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-size: 1.45rem;
         font-weight: 700;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
         line-height: 1.1;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.15rem;
     }
     .dp-stat-name {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
     }
     .dp-stat-sub {
-        font-size: 0.75rem;
+        font-size: 0.73rem;
         color: var(--muted-slate, #64748B);
     }
 
     /* Upfront Cost Breakdown */
     .dp-breakdown-box {
         border-top: 1px solid #ECEEEF;
-        padding-top: 0.75rem;
-        margin-bottom: 0.85rem;
+        padding-top: 0.65rem;
+        margin-bottom: 0.75rem;
     }
     .dp-breakdown-title {
-        font-size: 0.88rem;
+        font-size: 0.85rem;
         font-weight: 700;
-        color: var(--deep-navy, #1F2B38);
-        margin-bottom: 0.5rem;
+        color: var(--deep-navy, #141D24);
+        margin-bottom: 0.4rem;
     }
     .dp-cost-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.28rem 0;
-        font-size: 0.88rem;
+        padding: 0.22rem 0;
+        font-size: 0.86rem;
     }
     .dp-cost-label-group {
         display: flex;
@@ -794,28 +902,28 @@
         border-radius: 50%;
         flex-shrink: 0;
     }
-    .dp-dot.green { background: #2E7D32; }
-    .dp-dot.brass { background: var(--refined-brass, #B88E52); }
-    .dp-dot.amber { background: #D97706; }
+    .dp-dot.green { background: var(--deep-navy, #141D24); }
+    .dp-dot.brass { background: var(--refined-brass, #7d442a); }
+    .dp-dot.amber { background: #C4A482; }
 
     .dp-cost-val {
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
     }
     .dp-cost-total-row {
         border-top: 1px solid #ECEEEF;
-        margin-top: 0.35rem;
-        padding-top: 0.45rem;
-        font-size: 0.98rem;
+        margin-top: 0.25rem;
+        padding-top: 0.35rem;
+        font-size: 0.95rem;
         font-weight: 700;
     }
     .dp-cost-total-row .dp-cost-label-group {
-        color: var(--deep-navy, #1F2B38);
+        color: var(--deep-navy, #141D24);
         font-weight: 700;
     }
     .dp-cost-total-row .dp-cost-val {
-        font-size: 1.15rem;
-        color: var(--deep-navy, #1F2B38);
+        font-size: 1.1rem;
+        color: var(--deep-navy, #141D24);
     }
 
     /* Feasibility Callout */
@@ -826,7 +934,7 @@
         background: #F3F8F4;
         border: 1px solid rgba(46, 125, 50, 0.25);
         border-radius: 8px;
-        padding: 0.75rem 1rem;
+        padding: 0.65rem 0.85rem;
     }
     .dp-check-icon {
         width: 26px;
@@ -968,11 +1076,11 @@
     }
     @media (max-width: 768px) {
         .dp-h1 {
-            font-size: 28px !important;
+            font-size: 26px !important;
             line-height: 1.25 !important;
         }
         .dp-subtitle {
-            font-size: 16px !important;
+            font-size: 0.88rem !important;
             line-height: 1.5 !important;
         }
         .ak-calc-article {
@@ -998,38 +1106,39 @@
     }
     @media (max-width: 640px) {
         .dp-calc-container {
-            margin-top: 90px;
+            margin-top: 85px;
             padding: 0 1rem;
         }
         .dp-h1 {
-            font-size: 28px !important;
+            font-size: 25px !important;
             line-height: 1.25 !important;
             word-break: break-word;
         }
         .dp-subtitle {
-            font-size: 16px !important;
-            line-height: 1.5 !important;
-            margin-bottom: 1.25rem;
+            font-size: 0.84rem !important;
+            line-height: 1.48 !important;
+            margin-bottom: 1rem;
         }
         .dp-inputs-card,
         .dp-results-card {
-            padding: 1.35rem 1rem;
+            padding: 1.25rem 1rem;
         }
         .dp-hero-box {
             flex-direction: column;
-            align-items: flex-start;
-            padding: 1.25rem 1rem;
-            gap: 1rem;
+            align-items: stretch;
+            padding: 1rem;
+            gap: 0.85rem;
         }
         .dp-hero-amount {
-            font-size: 2.25rem;
+            font-size: 2.1rem;
         }
-        .dp-hero-svg {
-            width: 120px;
+        .dp-hero-right {
+            min-width: unset;
+            width: 100%;
         }
         .dp-stats-grid {
             grid-template-columns: 1fr;
-            gap: 0.75rem;
+            gap: 0.65rem;
         }
         .dp-explore-row {
             grid-template-columns: 1fr;
@@ -1051,27 +1160,22 @@
         }
     }
     </style>
-<link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
-
-
-
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Header Navigation -->
-    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#who-were-for">Who We Serve</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#testimonials">Testimonials</a></li><li><a href="/#about-us">About Us</a></li></ul><a href="#footer" class="nav-cta-btn primary-cta-btn"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="#footer" class="mobile-drawer-cta primary-cta-btn"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="../../index.html" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="../../index.html#who-were-for">Who We Serve</a></li><li><a href="../../index.html#framework">Decision Framework</a></li><li><a href="../../index.html#core">CORE</a></li><li><a href="../../index.html#testimonials">Testimonials</a></li><li><a href="../../index.html#about-us">About Us</a></li></ul><a href="#footer" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="../../index.html" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="../../index.html#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../index.html#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../index.html#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../index.html#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../index.html#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="#footer" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
 
     <!-- Main Calculator Section in AcrenKey Palette & Content -->
     <main class="dp-calc-container">
         <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.5rem;">
+        <nav aria-label="breadcrumb" style="align-self: flex-start; width: 100%; text-align: left; margin-bottom: 1.25rem;">
             <ol class="page-breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li><span class="separator">›</span></li>
-                <li><a href="/calculators/">Calculators</a></li>
-                <li><span class="separator">›</span></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li><a href="../index.html">Calculators</a></li>
+                <li class="separator">/</li>
                 <li class="current" aria-current="page">Down Payment Calculator</li>
             </ol>
         </nav>
@@ -1081,22 +1185,6 @@
             <div>
                 <h1 class="dp-h1">Down Payment Calculator</h1>
                 <p class="dp-subtitle">Calculate your true upfront liquidity requirement before committing to an agreement. Models statutory RBI down payment tiers, Karnataka stamp duty, registration, and initial capital outlays.</p>
-            </div>
-        </div>
-
-        <!-- Badges Row -->
-        <div class="dp-badges-row">
-            <div class="dp-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B88E52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>RBI LTV Compliant</span>
-            </div>
-            <div class="dp-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B88E52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                <span>Karnataka Registration Norms</span>
-            </div>
-            <div class="dp-badge-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B88E52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span>Comprehensive Outlay Modeling</span>
             </div>
         </div>
 
@@ -1111,7 +1199,7 @@
                 <div class="dp-field-group">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
                         <label class="dp-field-label" style="margin-bottom:0;" for="propPriceInput">Property Price</label>
-                        <span id="propPriceWordLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">₹ 1.00 Cr</span>
+                        <span id="propPriceWordLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #7d442a);">₹ 1.00 Cr</span>
                     </div>
                     <div class="dp-input-wrapper">
                         <span class="dp-input-prefix">₹</span>
@@ -1126,7 +1214,7 @@
                 <div class="dp-field-group">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
                         <label class="dp-field-label" style="margin-bottom:0;" for="downPayInput">Down Payment</label>
-                        <span id="downPayAmountLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">₹ 20.0 L</span>
+                        <span id="downPayAmountLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #7d442a);">₹ 20.0 L</span>
                     </div>
                     <div class="dp-input-wrapper">
                         <input type="number" id="downPayInput" class="dp-text-input" min="5" max="80" step="1" value="20" oninput="onDownPayTextInput(this.value)">
@@ -1141,7 +1229,7 @@
                 <div class="dp-field-group">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
                         <label class="dp-field-label" style="margin-bottom:0;" for="interestRateInput">Interest Rate (p.a.)</label>
-                        <span id="interestRateTag" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">Bank Rate</span>
+                        <span id="interestRateTag" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #7d442a);">Bank Rate</span>
                     </div>
                     <div class="dp-input-wrapper">
                         <input type="number" id="interestRateInput" class="dp-text-input" min="6.0" max="15.0" step="0.05" value="7.8" oninput="onInterestRateTextInput(this.value)">
@@ -1156,7 +1244,7 @@
                 <div class="dp-field-group" style="margin-bottom: 0;">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.45rem;">
                         <label class="dp-field-label" style="margin-bottom:0;" for="loanTenureInput">Loan Tenure</label>
-                        <span id="loanTenureMonthsLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #B88E52);">240 Months</span>
+                        <span id="loanTenureMonthsLabel" style="font-size:0.85rem; font-weight:600; color:var(--refined-brass, #7d442a);">240 Months</span>
                     </div>
                     <div class="dp-input-wrapper">
                         <input type="number" id="loanTenureInput" class="dp-text-input" min="1" max="30" step="1" value="20" oninput="onLoanTenureTextInput(this.value)">
@@ -1172,45 +1260,28 @@
             <div class="dp-results-card" id="resultsCard">
                 <h2 class="dp-card-title">Your Results</h2>
 
-                <!-- Hero Highlight Box with Architectural Visual -->
+                <!-- Hero Highlight Box with Capital Stack Bar -->
                 <div class="dp-hero-box">
                     <div class="dp-hero-left">
-                        <div class="dp-hero-label">TOTAL CASH REQUIRED</div>
+                        <div class="dp-hero-label">TOTAL CASH REQUIRED AT SIGNING</div>
                         <div class="dp-hero-amount" id="heroTotalCash">₹ 36.5 L</div>
                         <div class="dp-hero-desc">Total liquid capital needed at signing — includes mandatory down payment, state stamp duty, registration cess, and initial establishment reserves.</div>
                     </div>
                     <div class="dp-hero-right">
-                        <div class="dp-hero-note">
-                            <span>More than just a down payment</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
+                        <div class="dp-stack-header">
+                            <span class="dp-stack-title">Capital Stack</span>
+                            <span class="dp-stack-ratio" id="heroEquityRatio">55% Equity</span>
                         </div>
-                        <svg class="dp-hero-svg" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Architectural House Illustration in AcrenKey tones -->
-                            <rect x="25" y="42" width="85" height="52" rx="2" fill="#FFFFFF" stroke="#1F2B38" stroke-width="1.8"/>
-                            <polygon points="15,44 67.5,12 120,44" fill="#F8F3EA" stroke="#1F2B38" stroke-width="1.8" stroke-linejoin="round"/>
-                            <!-- Chimney -->
-                            <rect x="90" y="20" width="12" height="18" fill="#B88E52" stroke="#1F2B38" stroke-width="1.5"/>
-                            <!-- Windows -->
-                            <rect x="36" y="52" width="18" height="18" rx="2" fill="#EAE5DC" stroke="#1F2B38" stroke-width="1.4"/>
-                            <line x1="45" y1="52" x2="45" y2="70" stroke="#1F2B38" stroke-width="1.2"/>
-                            <line x1="36" y1="61" x2="54" y2="61" stroke="#1F2B38" stroke-width="1.2"/>
-
-                            <rect x="80" y="52" width="18" height="18" rx="2" fill="#EAE5DC" stroke="#1F2B38" stroke-width="1.4"/>
-                            <line x1="89" y1="52" x2="89" y2="70" stroke="#1F2B38" stroke-width="1.2"/>
-                            <line x1="80" y1="61" x2="98" y2="61" stroke="#1F2B38" stroke-width="1.2"/>
-
-                            <!-- Door -->
-                            <path d="M58 94V74C58 71.8 59.8 70 62 70H72C74.2 70 76 71.8 76 74V94" fill="#B88E52" stroke="#1F2B38" stroke-width="1.5"/>
-                            <circle cx="71" cy="83" r="1.2" fill="#FFFFFF"/>
-
-                            <!-- Trees & Accent Ground -->
-                            <line x1="10" y1="94" x2="130" y2="94" stroke="#1F2B38" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Left Bush -->
-                            <circle cx="18" cy="86" r="8" fill="#D9C3A3" stroke="#1F2B38" stroke-width="1.2"/>
-                            <!-- Right Tree -->
-                            <circle cx="120" cy="76" r="11" fill="#C5A059" stroke="#1F2B38" stroke-width="1.2"/>
-                            <line x1="120" y1="87" x2="120" y2="94" stroke="#1F2B38" stroke-width="1.5"/>
-                        </svg>
+                        <div class="dp-capital-bar-track">
+                            <div class="dp-bar-seg dp-seg-equity" id="barSegEquity" style="width: 54.8%;" title="Down Payment"></div>
+                            <div class="dp-bar-seg dp-seg-stamp" id="barSegStamp" style="width: 16.4%;" title="Stamp Duty & Registration"></div>
+                            <div class="dp-bar-seg dp-seg-other" id="barSegOther" style="width: 28.8%;" title="Setup & Reserves"></div>
+                        </div>
+                        <div class="dp-capital-legend">
+                            <span class="dp-leg-item"><span class="dp-leg-dot equity"></span>Equity</span>
+                            <span class="dp-leg-item"><span class="dp-leg-dot stamp"></span>Govt</span>
+                            <span class="dp-leg-item"><span class="dp-leg-dot other"></span>Setup</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1288,7 +1359,7 @@
                     <div class="dp-afford-sub">Evaluate how this <strong id="affordEmiHighlight" style="color:var(--deep-navy);">₹ 65,923</strong> monthly EMI impacts your fixed obligation-to-income ratio (FOIR), debt capacity, and long-term liquidity reserves.</div>
                 </div>
             </div>
-            <a href="/calculators/home-affordability-calculator/" class="dp-afford-btn">
+            <a href="../home-affordability-calculator/" class="dp-afford-btn">
                 <span>Analyze Affordability</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -1298,19 +1369,19 @@
         <div class="dp-explore-section">
             <div class="dp-explore-heading">Explore More</div>
             <div class="dp-explore-row">
-                <a href="/calculators/home-loan-emi-calculator/" class="dp-explore-card">
+                <a href="../home-loan-emi-calculator/" class="dp-explore-card">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
                     <span>EMI Calculator &rarr;</span>
                 </a>
-                <a href="/calculators/stamp-duty-registration-calculator/" class="dp-explore-card">
+                <a href="../stamp-duty-registration-calculator/" class="dp-explore-card">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                     <span>Stamp Duty Calculator &rarr;</span>
                 </a>
-                <a href="/calculators/home-affordability-calculator/" class="dp-explore-card">
+                <a href="../home-affordability-calculator/" class="dp-explore-card">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     <span>Home Loan Eligibility &rarr;</span>
                 </a>
-                <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="dp-explore-card">
+                <a href="../total-cost-of-buying-a-home-calculator/" class="dp-explore-card">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     <span>Total Purchase Cost &rarr;</span>
                 </a>
@@ -1362,9 +1433,9 @@
         <p>The Reserve Bank of India mandates statutory Loan-to-Value (LTV) ceilings to prevent systemic overleveraging. These caps apply strictly to the registered agreement value, establishing your mandatory floor for personal equity:</p>
 
         <div style="overflow-x: auto; margin: 1.5rem 0 2.5rem 0;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left; background: #FFFFFF; border: 1px solid rgba(184,142,82,0.25); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(31,43,56,0.04);">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left; background: #FFFFFF; border: 1px solid rgba(125, 68, 42, 0.2); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(20, 29, 36, 0.04);">
                 <thead>
-                    <tr style="background: #1F2B38; color: #FFFFFF;">
+                    <tr style="background: var(--deep-navy, #141D24); color: #FFFFFF;">
                         <th style="padding: 14px 18px; font-weight: 600;">Property Agreement Value</th>
                         <th style="padding: 14px 18px; font-weight: 600;">Maximum Bank Loan (LTV)</th>
                         <th style="padding: 14px 18px; font-weight: 600; color: #E5B98F;">Mandatory Down Payment</th>
@@ -1372,19 +1443,19 @@
                 </thead>
                 <tbody>
                     <tr style="border-bottom: 1px solid #ECEEEF;">
-                        <td style="padding: 14px 18px; font-weight: 600; color: #1F2B38;">Up to ₹30 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #141D24);">Up to ₹30 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 90%</td>
-                        <td style="padding: 14px 18px; font-weight: 600; color: #B88E52;">10% Minimum</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">10% Minimum</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ECEEEF; background: #FAF9F7;">
-                        <td style="padding: 14px 18px; font-weight: 600; color: #1F2B38;">₹30 Lakhs to ₹75 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #141D24);">₹30 Lakhs to ₹75 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 80%</td>
-                        <td style="padding: 14px 18px; font-weight: 600; color: #B88E52;">20% Minimum</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">20% Minimum</td>
                     </tr>
                     <tr>
-                        <td style="padding: 14px 18px; font-weight: 600; color: #1F2B38;">Above ₹75 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #141D24);">Above ₹75 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 75%</td>
-                        <td style="padding: 14px 18px; font-weight: 600; color: #B88E52;">25% Minimum</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">25% Minimum</td>
                     </tr>
                 </tbody>
             </table>
@@ -1434,7 +1505,7 @@
         </div>
 
         <div class="ak-feature-cards">
-            <a href="/calculators/home-loan-emi-calculator/" class="ak-fcard">
+            <a href="../home-loan-emi-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></span></div>
                     <div class="ak-fcard-title">Home Loan EMI Calculator</div>
@@ -1443,7 +1514,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/home-affordability-calculator/" class="ak-fcard">
+            <a href="../home-affordability-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></span></div>
                     <div class="ak-fcard-title">Home Affordability Calculator</div>
@@ -1452,7 +1523,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/loan-eligibility-calculator/" class="ak-fcard">
+            <a href="../loan-eligibility-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="m438-338 226-226-57-57-169 169-84-84-57 57 141 141Zm42 258q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg></span></div>
                     <div class="ak-fcard-title">Loan Eligibility Calculator</div>
@@ -1461,7 +1532,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/stamp-duty-registration-calculator/" class="ak-fcard">
+            <a href="../stamp-duty-registration-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M160-120v-80h480v80H160Zm226-194L160-540l84-86 228 226-86 86Zm254-254L414-796l86-84 226 226-86 86Zm184 408L302-682l56-56 522 522-56 56Z"/></svg></span></div>
                     <div class="ak-fcard-title">Stamp Duty & Registration Calculator</div>
@@ -1470,7 +1541,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+            <a href="../total-cost-of-buying-a-home-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg></span></div>
                     <div class="ak-fcard-title">Total Cost of Buying a Home</div>
@@ -1479,7 +1550,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/rent-vs-buy-calculator/" class="ak-fcard">
+            <a href="../rent-vs-buy-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M80-120v-80h360v-447q-26-9-45-28t-28-45H240l120 280q0 50-41 85t-99 35q-58 0-99-35t-41-85l120-280h-80v-80h247q12-35 43-57.5t70-22.5q39 0 70 22.5t43 57.5h247v80h-80l120 280q0 50-41 85t-99 35q-58 0-99-35t-41-85l120-280H593q-9 26-28 45t-45 28v447h360v80H80Zm585-320h150l-75-174-75 174Zm-520 0h150l-75-174-75 174Zm335-280q17 0 28.5-11.5T520-760q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760q0 17 11.5 28.5T480-720Z"/></svg></span></div>
                     <div class="ak-fcard-title">Rent vs Buy Calculator</div>
@@ -1488,7 +1559,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/property-investment-roi-calculator/" class="ak-fcard">
+            <a href="../property-investment-roi-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z"/></svg></span></div>
                     <div class="ak-fcard-title">Property Investment ROI</div>
@@ -1497,7 +1568,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/rental-yield-calculator/" class="ak-fcard">
+            <a href="../rental-yield-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="M200-120v-406L88-440l-48-64 440-336 440 336-48 64-112-86v406h-80v-120H280v120h-80Zm80-360h400v-80H280v80Zm0 160h400v-80H280v80Zm70-320h260l-130-99-130 99Z"/></svg></span></div>
                     <div class="ak-fcard-title">Rental Yield Calculator</div>
@@ -1506,7 +1577,7 @@
                 <span class="ak-fcard-link">Calculate &rarr;</span>
             </a>
 
-            <a href="/calculators/property-appreciation-calculator/" class="ak-fcard">
+            <a href="../property-appreciation-calculator/" class="ak-fcard">
                 <div class="ak-fcard-header-flex">
                     <div class="ak-fcard-icon"><span class="material-icon-svg-wrapper"><svg class="material-symbols-outlined" style="width:1em;height:1em;fill:currentColor;vertical-align:middle;display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em"><path d="m140-220-60-60 300-300 160 160 284-320 56 56-340 384-160-160-240 240Z"/></svg></span></div>
                     <div class="ak-fcard-title">Property Appreciation Calculator</div>
@@ -1523,7 +1594,7 @@
     <div class="footer-main-grid">
       <!-- Left Column: Brand, Mission, Contact & Office -->
       <div class="footer-brand-col">
-        <a href="../../" class="footer-logo-wordmark">acre&amp;key</a>
+        <a href="../../index.html" class="footer-logo-wordmark">acre&amp;key</a>
         <div class="footer-tagline">Home Buyer Concierge</div>
         <p class="footer-mission">
           Independent Home Buyer Concierge in Bangalore. We advise discerning home buyers, HNI investors, and corporate leaders with strategy-consulting rigor, unbiased shortlists, and 69-point diligence.
@@ -1537,13 +1608,13 @@
       <div class="footer-right-col">
         <div class="footer-links-cluster">
           <div class="footer-link-line">
-            <a href="../../#property-consultant-bangalore">Property Advisory Bangalore</a>
+            <a href="../../index.html#property-consultant-bangalore">Property Advisory Bangalore</a>
             <span class="footer-dot">•</span>
-            <a href="../../#faq-property-consultant">Property FAQs</a>
+            <a href="../../index.html#faq-property-consultant">Property FAQs</a>
             <span class="footer-dot">•</span>
             <a href="../../properties/">Properties</a>
             <span class="footer-dot">•</span>
-            <a href="../../careers">Careers</a>
+            <a href="../../careers/">Careers</a>
           </div>
           <div class="footer-link-line">
             <a href="../../privacy-policy/">Privacy Policy</a>
@@ -1624,7 +1695,7 @@
         var max = parseFloat(el.max || 100);
         var val = parseFloat(el.value || 0);
         var pct = ((val - min) / (max - min)) * 100;
-        el.style.background = 'linear-gradient(to right, #B88E52 ' + pct + '%, #D1D5DB ' + pct + '%)';
+        el.style.background = 'linear-gradient(to right, #7d442a ' + pct + '%, #D1D5DB ' + pct + '%)';
     }
 
     function calculateAll() {
@@ -1668,6 +1739,23 @@
         var heroTotalCashEl = document.getElementById('heroTotalCash');
         if (heroTotalCashEl) {
             heroTotalCashEl.innerText = formatShortIndian(totalCash);
+        }
+
+        // Update Capital Stack Bar in Hero Box
+        if (totalCash > 0) {
+            var equityShare = ((downPayment / totalCash) * 100);
+            var stampShare = ((stampDuty / totalCash) * 100);
+            var otherShare = Math.max(0, 100 - equityShare - stampShare);
+
+            var barSegEquity = document.getElementById('barSegEquity');
+            var barSegStamp = document.getElementById('barSegStamp');
+            var barSegOther = document.getElementById('barSegOther');
+            var heroEquityRatio = document.getElementById('heroEquityRatio');
+
+            if (barSegEquity) barSegEquity.style.width = equityShare.toFixed(1) + '%';
+            if (barSegStamp) barSegStamp.style.width = stampShare.toFixed(1) + '%';
+            if (barSegOther) barSegOther.style.width = otherShare.toFixed(1) + '%';
+            if (heroEquityRatio) heroEquityRatio.innerText = Math.round(equityShare) + '% Equity';
         }
 
         // Update 3 Stat Cards
@@ -1843,7 +1931,7 @@
     });
     </script>
 
-<div class="lf-modal-overlay" id="lfModalOverlay"><div class="lf-cc-backdrop" id="lfCcBackdrop"></div><div class="lf-wrap" id="lfWrap" role="dialog" aria-modal="true" aria-labelledby="lfMainHeading" aria-describedby="lfSubHeading"><div class="lf-drag-handle"></div><button type="button" class="lf-modal-close-icon lf-focusable" id="lfModalClose" aria-label="Close modal window" tabindex="0"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M1 1l12 12M13 1L1 13"/></svg></button><div id="lfModalFormContent"><div class="lf-header"><h2 class="lf-main-heading" id="lfMainHeading">Speak to a Home Buying Expert</h2><p class="lf-sub-heading" id="lfSubHeading">Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class="lf-form" id="lfForm" novalidate><input class="lf-hp" type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" id="lfGclid" name="gclid"><input type="hidden" id="lfFclid" name="fclid"><input type="hidden" id="lfUtmSource" name="utm_source"><input type="hidden" id="lfUtmMedium" name="utm_medium"><input type="hidden" id="lfUtmCampaign" name="utm_campaign"><input type="hidden" id="lfUtmTerm" name="utm_term"><input type="hidden" id="lfUtmContent" name="utm_content"><input type="hidden" id="lfSourceUrl" name="source_url"><input type="hidden" id="lfSubmittedAt" name="submitted_at"><div class="lf-field" id="lfNameField"><div class="lf-input-box"><label class="lf-label" for="lfName">Full name<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="text" id="lfName" name="name" autocomplete="name" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="60" aria-describedby="lfNameErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfNameErr" role="alert"></div></div><div class="lf-field lf-field-phone" id="lfPhoneField"><div class="lf-input-box"><label class="lf-label" id="lfPhoneLbl" for="lfPhone">Mobile<span class="lf-req" aria-hidden="true">*</span></label><div class="lf-phone-row"><button type="button" class="lf-cc-trigger lf-focusable" id="lfCcTrigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lfCcPanel" aria-label="Select country dial code" tabindex="0"><span id="lfCcDisplay">+91</span><svg class="lf-cc-arrow" viewBox="0 0 8 5" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l3 3 3-3"/></svg></button><div class="lf-cc-panel" id="lfCcPanel" role="listbox" aria-labelledby="lfPhoneLbl"><input class="lf-cc-search lf-focusable" type="text" id="lfCcSearch" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="lfCcList" placeholder="Search country..." autocomplete="off" aria-label="Search countries by name or code" tabindex="-1"><div class="lf-cc-list" id="lfCcList"></div></div><input type="hidden" id="lfCcVal" name="country_code" value="+91"><div class="lf-divider"></div><input class="lf-input lf-focusable" type="tel" id="lfPhone" name="phone" inputmode="numeric" autocomplete="tel" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="15" aria-describedby="lfPhoneErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" id="lfPhoneClearBtn" aria-label="Clear mobile number field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class="lf-err" id="lfPhoneErr" role="alert"></div></div><div class="lf-field" id="lfEmailField"><div class="lf-input-box"><label class="lf-label" for="lfEmail">Email<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="email" id="lfEmail" name="email" autocomplete="email" enterkeyhint="done" aria-required="true" tabindex="0" aria-invalid="false" maxlength="120" aria-describedby="lfEmailErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfEmailErr" role="alert"></div></div><div class="lf-submit-wrap"><button type=submit class="lf-btn lf-focusable primary-cta-btn" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Schedule Advisory Call</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><p class="lf-privacy-consent" style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href="/privacy-policy/" style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class="lf-global-err" id="lfGlobalErr" role="alert" aria-live="assertive" aria-atomic="true">Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
+<div class="lf-modal-overlay" id="lfModalOverlay"><div class="lf-cc-backdrop" id="lfCcBackdrop"></div><div class="lf-wrap" id="lfWrap" role="dialog" aria-modal="true" aria-labelledby="lfMainHeading" aria-describedby="lfSubHeading"><div class="lf-drag-handle"></div><button type="button" class="lf-modal-close-icon lf-focusable" id="lfModalClose" aria-label="Close modal window" tabindex="0"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M1 1l12 12M13 1L1 13"/></svg></button><div id="lfModalFormContent"><div class="lf-header"><h2 class="lf-main-heading" id="lfMainHeading">Speak to a Home Buying Expert</h2><p class="lf-sub-heading" id="lfSubHeading">Tell us what you're looking for, and our advisors will help you shortlist, evaluate, and negotiate the right property.</p></div><form class="lf-form" id="lfForm" novalidate><input class="lf-hp" type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" id="lfGclid" name="gclid"><input type="hidden" id="lfFclid" name="fclid"><input type="hidden" id="lfUtmSource" name="utm_source"><input type="hidden" id="lfUtmMedium" name="utm_medium"><input type="hidden" id="lfUtmCampaign" name="utm_campaign"><input type="hidden" id="lfUtmTerm" name="utm_term"><input type="hidden" id="lfUtmContent" name="utm_content"><input type="hidden" id="lfSourceUrl" name="source_url"><input type="hidden" id="lfSubmittedAt" name="submitted_at"><div class="lf-field" id="lfNameField"><div class="lf-input-box"><label class="lf-label" for="lfName">Full name<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="text" id="lfName" name="name" autocomplete="name" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="60" aria-describedby="lfNameErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear name field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfNameErr" role="alert"></div></div><div class="lf-field lf-field-phone" id="lfPhoneField"><div class="lf-input-box"><label class="lf-label" id="lfPhoneLbl" for="lfPhone">Mobile<span class="lf-req" aria-hidden="true">*</span></label><div class="lf-phone-row"><button type="button" class="lf-cc-trigger lf-focusable" id="lfCcTrigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lfCcPanel" aria-label="Select country dial code" tabindex="0"><span id="lfCcDisplay">+91</span><svg class="lf-cc-arrow" viewBox="0 0 8 5" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l3 3 3-3"/></svg></button><div class="lf-cc-panel" id="lfCcPanel" role="listbox" aria-labelledby="lfPhoneLbl"><input class="lf-cc-search lf-focusable" type="text" id="lfCcSearch" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="lfCcList" placeholder="Search country..." autocomplete="off" aria-label="Search countries by name or code" tabindex="-1"><div class="lf-cc-list" id="lfCcList"></div></div><input type="hidden" id="lfCcVal" name="country_code" value="+91"><div class="lf-divider"></div><input class="lf-input lf-focusable" type="tel" id="lfPhone" name="phone" inputmode="numeric" autocomplete="tel" enterkeyhint="next" aria-required="true" tabindex="0" aria-invalid="false" maxlength="15" aria-describedby="lfPhoneErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" id="lfPhoneClearBtn" aria-label="Clear mobile number field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div></div><div class="lf-err" id="lfPhoneErr" role="alert"></div></div><div class="lf-field" id="lfEmailField"><div class="lf-input-box"><label class="lf-label" for="lfEmail">Email<span class="lf-req" aria-hidden="true">*</span></label><input class="lf-input lf-focusable" type="email" id="lfEmail" name="email" autocomplete="email" enterkeyhint="done" aria-required="true" tabindex="0" aria-invalid="false" maxlength="120" aria-describedby="lfEmailErr"><span class="lf-valid-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M1 7l4 4 8-8"/></svg></span><button type="button" class="lf-clear-btn lf-focusable" aria-label="Clear email field" tabindex="-1"><svg viewBox="0 0 10 10" fill="none"><path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" d="M1 1l8 8M9 1L1 9"/></svg></button></div><div class="lf-err" id="lfEmailErr" role="alert"></div></div><div class="lf-submit-wrap"><button type=submit class="lf-btn lf-focusable primary-cta-btn" id=lfSubmitBtn tabindex=0><div class=lf-spinner></div><span id=lfBtnText>Schedule Advisory Call</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><p class="lf-privacy-consent" style="font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; line-height: 1.4;"> By submitting your details, you agree to our <a href="../../privacy-policy/" style="text-decoration: underline; color: inherit;">Privacy Policy</a>. </p><p class="lf-global-err" id="lfGlobalErr" role="alert" aria-live="assertive" aria-atomic="true">Connection issue. Your details are safely held — please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>
 <script src="../../website.min.js?v=20260910_live_v3" defer></script>
 <script src="../../lead-form.min.js?v=20260910_live_v3" defer></script>
 <script src="../../abha-form.min.js?v=20260910_live_v3" defer></script>
