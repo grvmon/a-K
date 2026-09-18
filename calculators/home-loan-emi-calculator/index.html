@@ -1129,9 +1129,9 @@
 
     /* Article & SEO Matrix Section */
     .ak-calc-article {
-      max-width: 1000px;
-      margin: 3rem auto 0 auto;
-      padding: 0 2rem;
+      max-width: 1140px;
+      margin: 2.5rem auto 3.5rem auto;
+      padding: 0 1.5rem;
       font-family: var(--font-body, 'Manrope', sans-serif);
       color: var(--deep-slate, #33414C);
       line-height: 1.8;
@@ -1220,31 +1220,35 @@
       background: var(--deep-navy, #141D24);
       color: #FFFFFF;
       font-weight: 600;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1.1rem;
       text-align: left;
       font-size: 0.9rem;
       white-space: nowrap;
     }
-    .ak-calc-article-table th:not(:first-child) {
-      text-align: right;
-    }
     .ak-calc-article-table td {
-      padding: 0.85rem 1rem;
+      padding: 0.85rem 1.1rem;
       border-bottom: 1px solid #E5E7EB;
       color: var(--deep-slate, #33414C);
       font-size: 0.92rem;
       white-space: nowrap;
-    }
-    .ak-calc-article-table td:not(:first-child) {
-      text-align: right;
-      font-weight: 600;
-      color: var(--deep-navy, #141D24);
+      text-align: left;
     }
     .ak-calc-article-table tr:hover td {
       background: #FAF8F5;
     }
     .ak-calc-article-table tr:last-child td {
       border-bottom: none;
+    }
+    .ak-table-num {
+      text-align: right !important;
+      font-weight: 600;
+      color: var(--deep-navy, #141D24);
+    }
+    .ak-table-center {
+      text-align: center !important;
+    }
+    .ak-table-text {
+      text-align: left !important;
     }
 
     /* FAQ Section */
@@ -1854,72 +1858,10 @@
     </div>
   </main>
 
-  <!-- More Home Buying Calculators Bento Grid -->
-  <section class="ak-more-calcs-section">
-    <div class="ak-more-calcs-header">
-      <h2 class="ak-more-calcs-title">More Home Buying Decision Calculators</h2>
-      <p class="ak-more-calcs-sub">Model every rupee before making India's largest capital commitment.</p>
-    </div>
-
-    <div class="ak-feature-cards">
-      <a href="../home-affordability-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">home</span></div>
-          <div class="ak-fcard-title">Home Affordability Calculator</div>
-        </div>
-        <div class="ak-fcard-desc">Determine your maximum comfortable property budget based on household income, debts, and lifestyle expenses.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-
-      <a href="../loan-eligibility-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">verified_user</span></div>
-          <div class="ak-fcard-title">Home Loan Eligibility</div>
-        </div>
-        <div class="ak-fcard-desc">Estimate the maximum borrowing limit banks will sanction based on your net in-hand salary and FOIR limits.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-
-      <a href="../stamp-duty-registration-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
-          <div class="ak-fcard-title">Stamp Duty &amp; Registration</div>
-        </div>
-        <div class="ak-fcard-desc">Model statutory government dues, cess, surcharges, and sub-registrar registration charges across major states.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-
-      <a href="../total-cost-of-buying-a-home-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
-          <div class="ak-fcard-title">Total Cost of Buying a Home</div>
-        </div>
-        <div class="ak-fcard-desc">Expose all upfront and hidden charges: clubhouse fees, BESCOM deposits, legal clearance, and interior reserves.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-
-      <a href="../rent-vs-buy-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">compare_arrows</span></div>
-          <div class="ak-fcard-title">Rent vs Buy Calculator</div>
-        </div>
-        <div class="ak-fcard-desc">Evaluate the 20-year net wealth trajectory of renting and compounding in index funds versus owning real estate.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-
-      <a href="../home-loan-prepayment-savings-calculator/" class="ak-fcard">
-        <div class="ak-fcard-header-flex">
-          <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
-          <div class="ak-fcard-title">Home Loan Prepayment</div>
-        </div>
-        <div class="ak-fcard-desc">See how periodic prepayments accelerate principal reduction and save lakhs in lifetime bank interest.</div>
-        <div class="ak-fcard-link">Calculate &rarr;</div>
-      </a>
-    </div>
-  </section>
+  
 
   <!-- Comprehensive SEO Reference Content & Featured Snippet Tables -->
-  <section class="ak-calc-article">
+  <article class="ak-calc-article container">
     <h2>Master Home Loan EMI Comparison Matrix (8.50% Interest Rate)</h2>
     <p>Use this reference table to evaluate how loan size and repayment tenure directly affect your monthly commitment and lifetime interest outgo. Formatted as an institutional planning benchmark:</p>
 
@@ -1927,70 +1869,70 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th>Loan Amount</th>
-            <th>15 Years EMI</th>
-            <th>20 Years EMI</th>
-            <th>25 Years EMI</th>
-            <th>30 Years EMI</th>
-            <th>20-Yr Total Interest</th>
+            <th class="ak-table-text">Loan Amount</th>
+            <th class="ak-table-num">15 Years EMI</th>
+            <th class="ak-table-num">20 Years EMI</th>
+            <th class="ak-table-num">25 Years EMI</th>
+            <th class="ak-table-num">30 Years EMI</th>
+            <th class="ak-table-num">20-Yr Total Interest</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>₹ 30 Lakhs</strong></td>
-            <td>₹ 29,542</td>
-            <td>₹ 26,035</td>
-            <td>₹ 24,157</td>
-            <td>₹ 23,067</td>
-            <td>₹ 32,48,312</td>
+            <td class="ak-table-text"><strong>₹ 30 Lakhs</strong></td>
+            <td class="ak-table-num">₹ 29,542</td>
+            <td class="ak-table-num">₹ 26,035</td>
+            <td class="ak-table-num">₹ 24,157</td>
+            <td class="ak-table-num">₹ 23,067</td>
+            <td class="ak-table-num">₹ 32,48,312</td>
           </tr>
           <tr>
-            <td><strong>₹ 50 Lakhs</strong></td>
-            <td>₹ 49,237</td>
-            <td>₹ 43,391</td>
-            <td>₹ 40,261</td>
-            <td>₹ 38,446</td>
-            <td>₹ 54,13,853</td>
+            <td class="ak-table-text"><strong>₹ 50 Lakhs</strong></td>
+            <td class="ak-table-num">₹ 49,237</td>
+            <td class="ak-table-num">₹ 43,391</td>
+            <td class="ak-table-num">₹ 40,261</td>
+            <td class="ak-table-num">₹ 38,446</td>
+            <td class="ak-table-num">₹ 54,13,853</td>
           </tr>
           <tr>
-            <td><strong>₹ 75 Lakhs</strong></td>
-            <td>₹ 73,855</td>
-            <td>₹ 65,087</td>
-            <td>₹ 60,392</td>
-            <td>₹ 57,668</td>
-            <td>₹ 81,20,779</td>
+            <td class="ak-table-text"><strong>₹ 75 Lakhs</strong></td>
+            <td class="ak-table-num">₹ 73,855</td>
+            <td class="ak-table-num">₹ 65,087</td>
+            <td class="ak-table-num">₹ 60,392</td>
+            <td class="ak-table-num">₹ 57,668</td>
+            <td class="ak-table-num">₹ 81,20,779</td>
           </tr>
           <tr>
-            <td><strong>₹ 1.00 Crore</strong></td>
-            <td>₹ 98,474</td>
-            <td>₹ 86,782</td>
-            <td>₹ 80,523</td>
-            <td>₹ 76,891</td>
-            <td>₹ 1,08,27,705</td>
+            <td class="ak-table-text"><strong>₹ 1.00 Crore</strong></td>
+            <td class="ak-table-num">₹ 98,474</td>
+            <td class="ak-table-num">₹ 86,782</td>
+            <td class="ak-table-num">₹ 80,523</td>
+            <td class="ak-table-num">₹ 76,891</td>
+            <td class="ak-table-num">₹ 1,08,27,705</td>
           </tr>
           <tr>
-            <td><strong>₹ 1.50 Crores</strong></td>
-            <td>₹ 1,47,711</td>
-            <td>₹ 1,30,174</td>
-            <td>₹ 1,20,784</td>
-            <td>₹ 1,15,337</td>
-            <td>₹ 1,62,41,558</td>
+            <td class="ak-table-text"><strong>₹ 1.50 Crores</strong></td>
+            <td class="ak-table-num">₹ 1,47,711</td>
+            <td class="ak-table-num">₹ 1,30,174</td>
+            <td class="ak-table-num">₹ 1,20,784</td>
+            <td class="ak-table-num">₹ 1,15,337</td>
+            <td class="ak-table-num">₹ 1,62,41,558</td>
           </tr>
           <tr>
-            <td><strong>₹ 2.00 Crores</strong></td>
-            <td>₹ 1,96,948</td>
-            <td>₹ 1,73,565</td>
-            <td>₹ 1,61,045</td>
-            <td>₹ 1,53,783</td>
-            <td>₹ 2,16,55,410</td>
+            <td class="ak-table-text"><strong>₹ 2.00 Crores</strong></td>
+            <td class="ak-table-num">₹ 1,96,948</td>
+            <td class="ak-table-num">₹ 1,73,565</td>
+            <td class="ak-table-num">₹ 1,61,045</td>
+            <td class="ak-table-num">₹ 1,53,783</td>
+            <td class="ak-table-num">₹ 2,16,55,410</td>
           </tr>
           <tr>
-            <td><strong>₹ 3.00 Crores</strong></td>
-            <td>₹ 2,95,422</td>
-            <td>₹ 2,60,347</td>
-            <td>₹ 2,41,568</td>
-            <td>₹ 2,30,674</td>
-            <td>₹ 3,24,83,116</td>
+            <td class="ak-table-text"><strong>₹ 3.00 Crores</strong></td>
+            <td class="ak-table-num">₹ 2,95,422</td>
+            <td class="ak-table-num">₹ 2,60,347</td>
+            <td class="ak-table-num">₹ 2,41,568</td>
+            <td class="ak-table-num">₹ 2,30,674</td>
+            <td class="ak-table-num">₹ 3,24,83,116</td>
           </tr>
         </tbody>
       </table>
@@ -2003,55 +1945,55 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th>Lender</th>
-            <th>Indicative Rate (p.a.)</th>
-            <th>Processing Fee</th>
-            <th>Max Loan Tenure</th>
-            <th>Benchmark Type</th>
+            <th class="ak-table-text">Lender</th>
+            <th class="ak-table-center">Indicative Rate (p.a.)</th>
+            <th class="ak-table-text">Processing Fee</th>
+            <th class="ak-table-center">Max Loan Tenure</th>
+            <th class="ak-table-text">Benchmark Type</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>State Bank of India (SBI)</strong></td>
-            <td>8.35% – 9.15%</td>
-            <td>Up to 0.35% (Max ₹10,000)</td>
-            <td>30 Years</td>
-            <td>EBLR / Repo Linked</td>
+            <td class="ak-table-text"><strong>State Bank of India (SBI)</strong></td>
+            <td class="ak-table-center">8.35% – 9.15%</td>
+            <td class="ak-table-text">Up to 0.35% (Max ₹10,000)</td>
+            <td class="ak-table-center">30 Years</td>
+            <td class="ak-table-text">EBLR / Repo Linked</td>
           </tr>
           <tr>
-            <td><strong>HDFC Bank</strong></td>
-            <td>8.45% – 9.40%</td>
-            <td>Up to 0.50% (Min ₹3,000)</td>
-            <td>30 Years</td>
-            <td>Repo Linked (RLBR)</td>
+            <td class="ak-table-text"><strong>HDFC Bank</strong></td>
+            <td class="ak-table-center">8.45% – 9.40%</td>
+            <td class="ak-table-text">Up to 0.50% (Min ₹3,000)</td>
+            <td class="ak-table-center">30 Years</td>
+            <td class="ak-table-text">Repo Linked (RLBR)</td>
           </tr>
           <tr>
-            <td><strong>ICICI Bank</strong></td>
-            <td>8.40% – 9.35%</td>
-            <td>0.50% – 1.00%</td>
-            <td>30 Years</td>
-            <td>I-EBLR</td>
+            <td class="ak-table-text"><strong>ICICI Bank</strong></td>
+            <td class="ak-table-center">8.40% – 9.35%</td>
+            <td class="ak-table-text">0.50% – 1.00%</td>
+            <td class="ak-table-center">30 Years</td>
+            <td class="ak-table-text">I-EBLR</td>
           </tr>
           <tr>
-            <td><strong>Kotak Mahindra Bank</strong></td>
-            <td>8.30% – 9.20%</td>
-            <td>0.50% + GST</td>
-            <td>25 Years</td>
-            <td>K-EBLR</td>
+            <td class="ak-table-text"><strong>Kotak Mahindra Bank</strong></td>
+            <td class="ak-table-center">8.30% – 9.20%</td>
+            <td class="ak-table-text">0.50% + GST</td>
+            <td class="ak-table-center">25 Years</td>
+            <td class="ak-table-text">K-EBLR</td>
           </tr>
           <tr>
-            <td><strong>Bank of Baroda</strong></td>
-            <td>8.40% – 9.25%</td>
-            <td>Nil to 0.25% (Promo)</td>
-            <td>30 Years</td>
-            <td>BRLLR</td>
+            <td class="ak-table-text"><strong>Bank of Baroda</strong></td>
+            <td class="ak-table-center">8.40% – 9.25%</td>
+            <td class="ak-table-text">Nil to 0.25% (Promo)</td>
+            <td class="ak-table-center">30 Years</td>
+            <td class="ak-table-text">BRLLR</td>
           </tr>
           <tr>
-            <td><strong>LIC Housing Finance</strong></td>
-            <td>8.50% – 9.55%</td>
-            <td>0.25% – 0.50%</td>
-            <td>30 Years</td>
-            <td>LHFL Internal Prime</td>
+            <td class="ak-table-text"><strong>LIC Housing Finance</strong></td>
+            <td class="ak-table-center">8.50% – 9.55%</td>
+            <td class="ak-table-text">0.25% – 0.50%</td>
+            <td class="ak-table-center">30 Years</td>
+            <td class="ak-table-text">LHFL Internal Prime</td>
           </tr>
         </tbody>
       </table>
@@ -2064,10 +2006,10 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th>Milestone</th>
-            <th>Annual Principal Paid</th>
-            <th>Annual Interest Paid</th>
-            <th>Ending Loan Balance</th>
+            <th class="ak-table-text">Milestone</th>
+            <th class="ak-table-num">Annual Principal Paid</th>
+            <th class="ak-table-num">Annual Interest Paid</th>
+            <th class="ak-table-num">Ending Loan Balance</th>
           </tr>
         </thead>
         <tbody id="amortizationTbody">
@@ -2188,6 +2130,70 @@
           Yes. If husband and wife are joint owners of the property and co-borrowers on the home loan, both can separately claim up to ₹2,00,000 under Section 24(b) (total ₹4,00,000 interest deduction) and up to ₹1,50,000 each under Section 80C (total ₹3,00,000 principal deduction), provided each co-borrower actively services loan instalments proportionate to their ownership share.
         </div>
       </div>
+    </div>
+  </article>
+
+  <!-- More Home Buying Calculators Bento Grid -->
+  <section class="ak-more-calcs-section">
+    <div class="ak-more-calcs-header">
+      <h2 class="ak-more-calcs-title">More Home Buying Decision Calculators</h2>
+      <p class="ak-more-calcs-sub">Model every rupee before making India's largest capital commitment.</p>
+    </div>
+
+    <div class="ak-feature-cards">
+      <a href="../home-affordability-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">home</span></div>
+          <div class="ak-fcard-title">Home Affordability Calculator</div>
+        </div>
+        <div class="ak-fcard-desc">Determine your maximum comfortable property budget based on household income, debts, and lifestyle expenses.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
+
+      <a href="../loan-eligibility-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">verified_user</span></div>
+          <div class="ak-fcard-title">Home Loan Eligibility</div>
+        </div>
+        <div class="ak-fcard-desc">Estimate the maximum borrowing limit banks will sanction based on your net in-hand salary and FOIR limits.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
+
+      <a href="../stamp-duty-registration-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">receipt_long</span></div>
+          <div class="ak-fcard-title">Stamp Duty &amp; Registration</div>
+        </div>
+        <div class="ak-fcard-desc">Model statutory government dues, cess, surcharges, and sub-registrar registration charges across major states.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
+
+      <a href="../total-cost-of-buying-a-home-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">payments</span></div>
+          <div class="ak-fcard-title">Total Cost of Buying a Home</div>
+        </div>
+        <div class="ak-fcard-desc">Expose all upfront and hidden charges: clubhouse fees, BESCOM deposits, legal clearance, and interior reserves.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
+
+      <a href="../rent-vs-buy-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">compare_arrows</span></div>
+          <div class="ak-fcard-title">Rent vs Buy Calculator</div>
+        </div>
+        <div class="ak-fcard-desc">Evaluate the 20-year net wealth trajectory of renting and compounding in index funds versus owning real estate.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
+
+      <a href="../home-loan-prepayment-savings-calculator/" class="ak-fcard">
+        <div class="ak-fcard-header-flex">
+          <div class="ak-fcard-icon"><span class="material-symbols-outlined">savings</span></div>
+          <div class="ak-fcard-title">Home Loan Prepayment</div>
+        </div>
+        <div class="ak-fcard-desc">See how periodic prepayments accelerate principal reduction and save lakhs in lifetime bank interest.</div>
+        <div class="ak-fcard-link">Calculate &rarr;</div>
+      </a>
     </div>
   </section>
 
@@ -2584,12 +2590,12 @@
         var y = milestones[i];
         if (y <= state.tenure && yearlySchedule[y - 1]) {
           var s = yearlySchedule[y - 1];
-          rowsHTML += '<tr><td><strong>Year ' + y + '</strong></td><td>₹ ' + formatIndian(s.principal) + '</td><td>₹ ' + formatIndian(s.interest) + '</td><td>₹ ' + formatIndian(s.balance) + '</td></tr>';
+          rowsHTML += '<tr><td class="ak-table-text"><strong>Year ' + y + '</strong></td><td class="ak-table-num">₹ ' + formatIndian(s.principal) + '</td><td class="ak-table-num">₹ ' + formatIndian(s.interest) + '</td><td class="ak-table-num">₹ ' + formatIndian(s.balance) + '</td></tr>';
         }
       }
       if (state.tenure > 0 && yearlySchedule.length >= state.tenure && !milestones.includes(state.tenure)) {
         var finalS = yearlySchedule[state.tenure - 1];
-        rowsHTML += '<tr><td><strong>Final Year (' + state.tenure + ')</strong></td><td>₹ ' + formatIndian(finalS.principal) + '</td><td>₹ ' + formatIndian(finalS.interest) + '</td><td>₹ 0</td></tr>';
+        rowsHTML += '<tr><td class="ak-table-text"><strong>Final Year (' + state.tenure + ')</strong></td><td class="ak-table-num">₹ ' + formatIndian(finalS.principal) + '</td><td class="ak-table-num">₹ ' + formatIndian(finalS.interest) + '</td><td class="ak-table-num">₹ 0</td></tr>';
       }
       var tbody = document.getElementById('amortizationTbody');
       if (tbody) tbody.innerHTML = rowsHTML;
