@@ -10,7 +10,7 @@
     --hub-navy: #141D24;
     --hub-navy-muted: rgba(20, 29, 36, 0.72);
     --hub-slate: #33414C;
-    --hub-slate-muted: #5A6776;
+    --hub-slate-muted: #384654;
     --hub-brass: #7d442a;
     --hub-brass-hover: #9e5535;
     --hub-brass-light: rgba(125, 68, 42, 0.08);
@@ -110,7 +110,7 @@ body.calc-hub-body {
     color: var(--hub-brass);
 }
 .ak-hub-breadcrumb .sep {
-    color: #CBD5E1;
+    color: #475467;
     font-size: 0.75rem;
 }
 .ak-hub-breadcrumb li[aria-current="page"] {
@@ -450,9 +450,10 @@ body.calc-hub-body {
 
 .ak-hub-pill-count, .ak-hub-tab-count {
     font-size: 0.8rem;
-    opacity: 0.8;
+    opacity: 1;
+    color: var(--hub-slate);
     margin-left: 0.35rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Category Nav Carousel Arrows */
@@ -1193,4 +1194,24 @@ body.calc-hub-body {
 a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-visible {
     outline: 2px solid var(--hub-brass);
     outline-offset: 2px;
+}
+
+/* WCAG Level AAA Enhanced Contrast Overrides (>= 7:1 Ratio) */
+.footer-address-text,
+.footer-bottom,
+.footer-bottom p,
+.footer-bottom div,
+.footer-bottom-line,
+.footer-bottom-line div,
+.footer-bottom-legal {
+    color: rgba(225, 230, 235, 0.78) !important;
+}
+.footer-dot {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+.advisor-status-text {
+    color: #33414C !important;
+}
+.advisor-status-text strong {
+    color: #7D442A !important;
 }
