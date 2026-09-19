@@ -2695,12 +2695,17 @@
 
     // Modal Helper
     function openLeadModal(source) {
-      var modal = document.getElementById('lfModalOverlay');
-      if (modal) {
-        modal.classList.add('lf-active');
-        var sourceInput = document.getElementById('lfSourceUrl');
-        if (sourceInput) sourceInput.value = window.location.href + '#' + (source || 'loan_eligibility');
+      if (typeof window.openModal === 'function') {
+        window.openModal();
+      } else {
+        var modal = document.getElementById('lfModalOverlay');
+        if (modal) {
+          modal.style.display = 'flex';
+          modal.classList.add('lf-modal-open');
+        }
       }
+      var sourceInput = document.getElementById('lfSourceUrl');
+      if (sourceInput) sourceInput.value = window.location.href + '#' + (source || 'loan_eligibility');
     }
 
     document.addEventListener('DOMContentLoaded', function() {
