@@ -45,8 +45,33 @@ body.calc-hub-body {
 }
 
 /* Mobile Navigation Hamburger Override */
-.header-nav .hamburger-line {
-    background-color: #FFFFFF !important;
+@media (max-width: 991px) {
+    .header-nav .nav-links,
+    .header-nav .nav-cta-btn {
+        display: none !important;
+    }
+    .header-nav .mobile-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        z-index: 1060 !important;
+    }
+    .header-nav .hamburger-line {
+        display: block !important;
+        width: 22px !important;
+        height: 2px !important;
+        background-color: #FFFFFF !important;
+    }
 }
 
 /* --- 2. LUXURY EDITORIAL HERO SECTION --- */
@@ -267,7 +292,7 @@ body.calc-hub-body {
     gap: 0.45rem;
     background: #FFFFFF;
     border: 1px solid rgba(125, 68, 42, 0.2);
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 0.34rem 0.72rem;
     font-family: var(--hub-font-body);
     font-size: 0.8rem;
@@ -364,6 +389,8 @@ body.calc-hub-body {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    min-width: 0;
+    width: 100%;
 }
 
 .ak-hub-nav-scroll {
@@ -375,6 +402,8 @@ body.calc-hub-body {
     -ms-overflow-style: none;
     padding: 0.75rem 0;
     scroll-behavior: smooth;
+    min-width: 0;
+    flex: 1;
 }
 
 .ak-hub-nav-scroll::-webkit-scrollbar {
@@ -483,7 +512,7 @@ body.calc-hub-body {
     color: var(--hub-brass);
     background: var(--hub-brass-light);
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: 6px;
     border: 1px solid rgba(125, 68, 42, 0.15);
 }
 
@@ -628,6 +657,9 @@ body.calc-hub-body {
 }
 
 @media (max-width: 640px) {
+    .ak-hub-container {
+        padding: 0 1.25rem !important;
+    }
     .ak-hub-featured-cards-grid {
         grid-template-columns: 1fr;
     }
@@ -877,7 +909,7 @@ body.calc-hub-body {
     font-size: 0.82rem;
     font-weight: 600;
     padding: 0.4rem 0.85rem;
-    border-radius: 20px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
