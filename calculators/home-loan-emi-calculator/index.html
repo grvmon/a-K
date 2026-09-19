@@ -1524,30 +1524,253 @@
     }
 
     /* Print Stylesheet */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 12mm 12mm;
+    }
     @media print {
+      /* Hide all interactive UI chrome, floating concierge, and navigation */
       .header-nav, .mobile-toggle, .mobile-drawer, .site-footer,
-      .lf-modal-overlay, .abha-floating-container,
-      .dp-slider-wrap, .ak-preset-strip, .dp-afford-card,
-      .dp-explore-section, .ak-more-calcs-section, .dp-print-summary-btn,
-      .ak-bank-calc-btn {
+      .lf-modal-overlay, #leadFormModal, .abha-modal-overlay, #abhaLeadFormModal,
+      .advisor-floating-unit, #advisorFloatingUnit, .advisor-floating-wrap,
+      .dp-slider-wrap, .ak-preset-strip, .dp-badges-row, .ak-results-tabs,
+      .dp-afford-card, .dp-explore-section, .ak-more-calcs-section,
+      .dp-print-summary-btn, .ak-bank-calc-btn, .ak-sim-control-box,
+      noscript, iframe {
         display: none !important;
       }
+
       body {
         background: #FFFFFF !important;
-        color: #000000 !important;
+        color: #141D24 !important;
+        font-size: 11pt !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
-      .dp-calc-container, .ak-calc-article {
-        margin-top: 0 !important;
+
+      .dp-calc-container {
+        margin: 0 !important;
         padding: 0 !important;
         max-width: 100% !important;
       }
-      .dp-main-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 1.5rem !important;
+
+      /* Compact Header for Print */
+      nav[aria-label="breadcrumb"] {
+        margin-bottom: 0.35rem !important;
+        font-size: 0.72rem !important;
       }
-      .dp-hero-box, .dp-inputs-card, .dp-results-card {
+      .dp-header-bar {
+        margin-bottom: 0.45rem !important;
+      }
+      .dp-h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0.2rem !important;
+        color: #141D24 !important;
+      }
+      .dp-subtitle {
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+        color: #4A5568 !important;
+        max-width: 100% !important;
+      }
+
+      /* Page 1: Main Assessment Grid */
+      .dp-main-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.05fr !important;
+        gap: 1rem !important;
+        margin-top: 0.5rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .dp-inputs-card, .dp-results-card {
+        padding: 0.85rem !important;
+        border: 1px solid rgba(43, 43, 43, 0.18) !important;
+        border-radius: 6px !important;
         box-shadow: none !important;
-        border: 1px solid #CCCCCC !important;
+        background: #FFFFFF !important;
+      }
+
+      .dp-card-title {
+        font-size: 1.15rem !important;
+        margin-bottom: 0.45rem !important;
+      }
+
+      /* Inputs Column */
+      .dp-field-group {
+        margin-bottom: 0.42rem !important;
+      }
+      .dp-field-label {
+        font-size: 0.78rem !important;
+      }
+      .dp-text-input {
+        padding: 0.38rem 0.65rem !important;
+        font-size: 0.88rem !important;
+        height: auto !important;
+        background: #FAF8F5 !important;
+        border: 1px solid rgba(43, 43, 43, 0.2) !important;
+      }
+      .dp-input-prefix, .dp-input-suffix {
+        font-size: 0.78rem !important;
+        padding: 0.38rem 0.5rem !important;
+      }
+
+      /* Results Column */
+      .dp-results-header {
+        margin-bottom: 0.45rem !important;
+      }
+      .ak-tab-view {
+        min-height: auto !important;
+      }
+      .dp-hero-box {
+        padding: 0.7rem 0.85rem !important;
+        margin-bottom: 0.5rem !important;
+        background: #FAF8F5 !important;
+        border: 1px solid rgba(125, 68, 42, 0.25) !important;
+        border-radius: 6px !important;
+      }
+      .dp-hero-amount {
+        font-size: 1.55rem !important;
+        line-height: 1.1 !important;
+      }
+      .dp-hero-desc {
+        font-size: 0.7rem !important;
+        margin-top: 0.2rem !important;
+      }
+
+      .dp-stats-grid {
+        gap: 0.45rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .dp-stat-card {
+        padding: 0.42rem 0.55rem !important;
+        border-radius: 6px !important;
+      }
+      .dp-stat-value {
+        font-size: 1.05rem !important;
+      }
+      .dp-stat-name {
+        font-size: 0.66rem !important;
+      }
+      .dp-stat-sub {
+        font-size: 0.6rem !important;
+      }
+
+      .dp-salary-qual-card {
+        padding: 0.48rem 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 6px !important;
+        border: 1px solid rgba(125, 68, 42, 0.2) !important;
+      }
+      .dp-salary-qual-tag {
+        font-size: 0.6rem !important;
+      }
+      .dp-salary-qual-val {
+        font-size: 0.95rem !important;
+      }
+      .dp-salary-qual-desc {
+        font-size: 0.66rem !important;
+        line-height: 1.3 !important;
+      }
+
+      .dp-breakdown-box {
+        padding: 0.48rem 0.75rem !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 6px !important;
+      }
+      .dp-breakdown-title {
+        font-size: 0.74rem !important;
+        margin-bottom: 0.3rem !important;
+      }
+      .dp-cost-row {
+        padding: 0.2rem 0 !important;
+        font-size: 0.72rem !important;
+      }
+
+      .dp-feasibility-alert {
+        padding: 0.42rem 0.65rem !important;
+        border-radius: 6px !important;
+      }
+      .dp-alert-title {
+        font-size: 0.72rem !important;
+      }
+      .dp-alert-sub {
+        font-size: 0.66rem !important;
+        line-height: 1.3 !important;
+      }
+
+      /* Educational Article on Subsequent Pages */
+      .ak-calc-article {
+        page-break-before: always !important;
+        break-before: page !important;
+        margin-top: 1.5rem !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .ak-calc-article h2 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        margin-top: 1rem !important;
+      }
+      .ak-calc-article-table, .ak-faq-item {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      /* Article Tables in Print */
+      .ak-table-responsive {
+        overflow: visible !important;
+        width: 100% !important;
+        margin: 0.85rem 0 !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: none !important;
+      }
+      .ak-calc-article-table {
+        width: 100% !important;
+        min-width: 0 !important;
+        font-size: 0.72rem !important;
+        border-collapse: collapse !important;
+        table-layout: auto !important;
+      }
+      .ak-calc-article-table th {
+        background: #141D24 !important;
+        color: #FFFFFF !important;
+        padding: 0.4rem 0.38rem !important;
+        font-size: 0.69rem !important;
+        white-space: normal !important;
+      }
+      .ak-calc-article-table td {
+        padding: 0.35rem 0.38rem !important;
+        font-size: 0.69rem !important;
+        white-space: normal !important;
+        border-bottom: 1px solid #E5E7EB !important;
+      }
+
+      /* FAQs in Print: Expand All Answers and Hide Chevron */
+      .ak-faq-section {
+        margin-top: 1.25rem !important;
+        padding-top: 0.85rem !important;
+      }
+      .ak-faq-item {
+        padding: 0.6rem 0 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .ak-faq-question {
+        font-size: 0.9rem !important;
+      }
+      .ak-faq-question .material-symbols-outlined {
+        display: none !important;
+      }
+      .ak-faq-answer {
+        display: block !important;
+        padding-top: 0.3rem !important;
+        font-size: 0.78rem !important;
+        line-height: 1.45 !important;
+        color: #33414C !important;
       }
     }
 
