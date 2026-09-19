@@ -1411,6 +1411,137 @@
         justify-content: center;
       }
     }
+
+    /* Salary Qualification Card */
+    .dp-salary-qual-card {
+      background: #FAF8F5;
+      border: 1px solid rgba(125, 68, 42, 0.22);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .dp-salary-qual-left {
+      flex: 1;
+    }
+    .dp-salary-qual-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--refined-brass, #7d442a);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .dp-salary-qual-val {
+      font-family: var(--font-heading), 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--deep-navy, #141D24);
+      line-height: 1.15;
+      margin-bottom: 0.25rem;
+    }
+    .dp-salary-qual-desc {
+      font-size: 0.76rem;
+      color: var(--deep-slate, #4A5568);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .dp-salary-foir-badge {
+      background: rgba(125, 68, 42, 0.08);
+      color: var(--refined-brass, #7d442a);
+      border: 1px solid rgba(125, 68, 42, 0.2);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    /* Interactive Bank Rate Apply Button */
+    .ak-bank-calc-btn {
+      background: #FAF8F5;
+      border: 1px solid rgba(125, 68, 42, 0.3);
+      color: var(--refined-brass, #7d442a);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.32rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .ak-bank-calc-btn:hover, .ak-bank-calc-btn.active {
+      background: var(--refined-brass, #7d442a);
+      color: #FFFFFF;
+      border-color: var(--refined-brass, #7d442a);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(125, 68, 42, 0.2);
+    }
+
+    /* Print Summary Button */
+    .dp-print-summary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #FAF8F5;
+      border: 1px solid rgba(43, 43, 43, 0.18);
+      border-radius: 6px;
+      padding: 0.24rem 0.6rem;
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--deep-navy, #141D24);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .dp-print-summary-btn:hover {
+      background: #FFFFFF;
+      border-color: var(--refined-brass, #7d442a);
+      color: var(--refined-brass, #7d442a);
+    }
+    .dp-print-summary-btn svg {
+      width: 13px;
+      height: 13px;
+      stroke: currentColor;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      .header-nav, .mobile-toggle, .mobile-drawer, .site-footer,
+      .lf-modal-overlay, .abha-floating-container,
+      .dp-slider-wrap, .ak-preset-strip, .dp-afford-card,
+      .dp-explore-section, .ak-more-calcs-section, .dp-print-summary-btn,
+      .ak-bank-calc-btn {
+        display: none !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+      }
+      .dp-calc-container, .ak-calc-article {
+        margin-top: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .dp-main-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .dp-hero-box, .dp-inputs-card, .dp-results-card {
+        box-shadow: none !important;
+        border: 1px solid #CCCCCC !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1599,7 +1730,17 @@
       <div class="dp-results-card" id="resultsCard">
         <div class="dp-results-header">
           <h2 class="dp-card-title" style="margin-bottom: 0;">Your Results</h2>
-          <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--refined-brass, #7d442a); background: rgba(125, 68, 42, 0.08); padding: 0.25rem 0.65rem; border-radius: 20px;">Indicative</span>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button type="button" class="dp-print-summary-btn" onclick="window.print()" aria-label="Print or save calculation summary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Print / PDF</span>
+            </button>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--refined-brass, #7d442a); background: rgba(125, 68, 42, 0.08); padding: 0.24rem 0.6rem; border-radius: 6px; border: 1px solid rgba(125, 68, 42, 0.18);">Indicative</span>
+          </div>
         </div>
 
         <!-- Interactive Mode Tabs -->
@@ -1650,6 +1791,18 @@
               <div class="dp-stat-value" id="cardRepayVal">₹ 1.67 Cr</div>
               <div class="dp-stat-name">Total Repayment</div>
               <div class="dp-stat-sub" id="cardRepaySub">Principal + Interest</div>
+            </div>
+          </div>
+
+          <!-- Bank Approval Salary Benchmark Card -->
+          <div class="dp-salary-qual-card">
+            <div class="dp-salary-qual-left">
+              <span class="dp-salary-qual-tag">Bank Loan Eligibility Requirement</span>
+              <div class="dp-salary-qual-val" id="salaryQualVal">₹ 1.39 L – ₹ 1.74 L / mo</div>
+              <p class="dp-salary-qual-desc">Estimated in-hand household income required for bank sanction based on Indian institutional <strong>40%–50% FOIR</strong> caps (with no other active debts).</p>
+            </div>
+            <div class="dp-salary-qual-right">
+              <div class="dp-salary-foir-badge">40% – 50% FOIR</div>
             </div>
           </div>
 
@@ -1873,12 +2026,12 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th class="ak-table-text">Loan Amount</th>
-            <th class="ak-table-num">15 Years EMI</th>
-            <th class="ak-table-num">20 Years EMI</th>
-            <th class="ak-table-num">25 Years EMI</th>
-            <th class="ak-table-num">30 Years EMI</th>
-            <th class="ak-table-num">20-Yr Total Interest</th>
+            <th scope="col" class="ak-table-text">Loan Amount</th>
+            <th scope="col" class="ak-table-num">15 Years EMI</th>
+            <th scope="col" class="ak-table-num">20 Years EMI</th>
+            <th scope="col" class="ak-table-num">25 Years EMI</th>
+            <th scope="col" class="ak-table-num">30 Years EMI</th>
+            <th scope="col" class="ak-table-num">20-Yr Total Interest</th>
           </tr>
         </thead>
         <tbody>
@@ -1949,11 +2102,12 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th class="ak-table-text">Lender</th>
-            <th class="ak-table-center">Indicative Rate (p.a.)</th>
-            <th class="ak-table-text">Processing Fee</th>
-            <th class="ak-table-center">Max Loan Tenure</th>
-            <th class="ak-table-text">Benchmark Type</th>
+            <th scope="col" class="ak-table-text">Lender</th>
+            <th scope="col" class="ak-table-center">Indicative Rate (p.a.)</th>
+            <th scope="col" class="ak-table-text">Processing Fee</th>
+            <th scope="col" class="ak-table-center">Max Loan Tenure</th>
+            <th scope="col" class="ak-table-text">Benchmark Type</th>
+            <th scope="col" class="ak-table-center">Apply Benchmark</th>
           </tr>
         </thead>
         <tbody>
@@ -1963,6 +2117,7 @@
             <td class="ak-table-text">Up to 0.35% (Max ₹10,000)</td>
             <td class="ak-table-center">30 Years</td>
             <td class="ak-table-text">EBLR / Repo Linked</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_SBI" onclick="applyBankRate(8.35, 'SBI')">Test 8.35% &uarr;</button></td>
           </tr>
           <tr>
             <td class="ak-table-text"><strong>HDFC Bank</strong></td>
@@ -1970,6 +2125,7 @@
             <td class="ak-table-text">Up to 0.50% (Min ₹3,000)</td>
             <td class="ak-table-center">30 Years</td>
             <td class="ak-table-text">Repo Linked (RLBR)</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_HDFC" onclick="applyBankRate(8.45, 'HDFC')">Test 8.45% &uarr;</button></td>
           </tr>
           <tr>
             <td class="ak-table-text"><strong>ICICI Bank</strong></td>
@@ -1977,6 +2133,7 @@
             <td class="ak-table-text">0.50% – 1.00%</td>
             <td class="ak-table-center">30 Years</td>
             <td class="ak-table-text">I-EBLR</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_ICICI" onclick="applyBankRate(8.40, 'ICICI')">Test 8.40% &uarr;</button></td>
           </tr>
           <tr>
             <td class="ak-table-text"><strong>Kotak Mahindra Bank</strong></td>
@@ -1984,6 +2141,7 @@
             <td class="ak-table-text">0.50% + GST</td>
             <td class="ak-table-center">25 Years</td>
             <td class="ak-table-text">K-EBLR</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_Kotak" onclick="applyBankRate(8.30, 'Kotak')">Test 8.30% &uarr;</button></td>
           </tr>
           <tr>
             <td class="ak-table-text"><strong>Bank of Baroda</strong></td>
@@ -1991,6 +2149,7 @@
             <td class="ak-table-text">Nil to 0.25% (Promo)</td>
             <td class="ak-table-center">30 Years</td>
             <td class="ak-table-text">BRLLR</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_BankofBaroda" onclick="applyBankRate(8.40, 'Bank of Baroda')">Test 8.40% &uarr;</button></td>
           </tr>
           <tr>
             <td class="ak-table-text"><strong>LIC Housing Finance</strong></td>
@@ -1998,6 +2157,7 @@
             <td class="ak-table-text">0.25% – 0.50%</td>
             <td class="ak-table-center">30 Years</td>
             <td class="ak-table-text">LHFL Internal Prime</td>
+            <td class="ak-table-center"><button type="button" class="ak-bank-calc-btn" id="bankBtn_LICHFL" onclick="applyBankRate(8.50, 'LIC HFL')">Test 8.50% &uarr;</button></td>
           </tr>
         </tbody>
       </table>
@@ -2508,6 +2668,14 @@
       document.getElementById('feasibilityTitle').innerText = 'Manageable Repayment Ratio: Interest is ' + interestRatio.toFixed(1) + '% of Principal';
       document.getElementById('feasibilitySub').innerText = 'Prepaying ~' + formatLakhCrore(prepayAnnual) + ' annually can save roughly ' + formatLakhCrore(potentialSavings) + ' in interest and shorten tenure by 4+ years.';
 
+      // Required Monthly In-Hand Salary (40% - 50% FOIR)
+      var minSalary = emi > 0 ? Math.round(emi / 0.50) : 0;
+      var maxSalary = emi > 0 ? Math.round(emi / 0.40) : 0;
+      var salaryEl = document.getElementById('salaryQualVal');
+      if (salaryEl) {
+        salaryEl.innerText = formatLakhCrore(minSalary) + ' – ' + formatLakhCrore(maxSalary) + ' / mo';
+      }
+
       // --- TAB 2: Tax Relief Computations ---
       // Annual interest in early years is roughly loanVal * annualRate
       var avgYearlyInterest = Math.min(200000, (loanVal * (state.interest / 100)));
@@ -2653,6 +2821,44 @@
       state.tenure = parseInt(val);
       syncUI();
     }
+
+    // 1-Click Interactive Bank Benchmark Rate Applicator
+    function applyBankRate(rate, bankName) {
+      state.interest = rate;
+      document.getElementById('interestRateInput').value = rate.toFixed(2);
+      document.getElementById('interestRateSlider').value = rate;
+      document.getElementById('interestRateTag').innerText = bankName + ' Benchmark: ' + rate.toFixed(2) + '%';
+      syncUI();
+
+      // Highlight clicked button
+      document.querySelectorAll('.ak-bank-calc-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      var cleanId = 'bankBtn_' + bankName.replace(/[^a-zA-Z0-9]/g, '');
+      var activeBtn = document.getElementById(cleanId);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      // Smooth scroll to calculator inputs
+      var el = document.getElementById('inputsCard');
+      if (el) {
+        var header = document.querySelector('.header-nav');
+        var offset = header ? header.offsetHeight + 20 : 90;
+        var topPos = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
+
+        // Highlight input box briefly
+        var input = document.getElementById('interestRateInput');
+        var wrapper = input ? input.closest('.dp-input-wrapper') : null;
+        if (wrapper) {
+          wrapper.style.borderColor = 'var(--refined-brass, #7d442a)';
+          wrapper.style.boxShadow = '0 0 0 4px rgba(125, 68, 42, 0.25)';
+          setTimeout(function() {
+            wrapper.style.borderColor = '';
+            wrapper.style.boxShadow = '';
+          }, 1400);
+        }
+      }
+    };
 
     // Initialize FAQ Accordion & UI on DOM ready
     document.addEventListener('DOMContentLoaded', function() {
