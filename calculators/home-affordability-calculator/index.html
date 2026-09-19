@@ -165,7 +165,7 @@
           "@id": "https://acrenkey.com/#organization"
         },
         "datePublished": "2026-09-17T00:00:00+05:30",
-        "dateModified": "2026-09-19T05:30:00+05:30",
+        "dateModified": "2026-09-19T23:30:00+05:30",
         "image": "https://acrenkey.com/style-guide/assets/og-image.jpg?v=20260911_v1",
         "inLanguage": "en-IN",
         "about": [
@@ -312,6 +312,70 @@
               "@type": "Answer",
               "text": "RBI mandates standard Loan-to-Value (LTV) limits for all commercial banks: up to 90% for property values up to ₹30 lakh; up to 80% for loans between ₹30 lakh and ₹75 lakh; and up to 75% for loans exceeding ₹75 lakh. Borrowers must fund the remaining balance as upfront equity."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add a co-borrower (spouse or parent) to boost home affordability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Indian banks permit co-borrowers (spouse, parent, or working son) to pool their verifiable take-home incomes. This directly increases total permissible household debt capacity under FOIR guidelines, often boosting your maximum home loan eligibility and affordable property budget by 60% to 100%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does loan tenure (20 years vs. 30 years) alter my affordable property price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Extending loan tenure from 20 to 30 years reduces your monthly EMI per lakh borrowed from ~₹868 to ~₹769 at an 8.50% interest rate. Because bank FOIR limits constrain monthly EMI rather than loan principal, a 30-year tenure boosts borrowing capacity by ~12% to 15%, though it increases cumulative lifetime interest outgo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the minimum CIBIL credit score needed for prime home loan interest rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most scheduled Indian commercial banks (such as SBI, HDFC, and ICICI) offer their prime benchmark interest rate (e.g. 8.35%–8.50%) only to borrowers with a CIBIL score of 750 or above. Scores between 700 and 749 attract a risk spread of 25 to 50 bps (8.75%–9.00%), which elevates monthly EMIs and reduces maximum borrowing capacity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What hidden upfront costs must I budget for beyond the builder base price in Bangalore?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Beyond the basic flat cost, home buyers in Bangalore must budget for: 1) Karnataka statutory stamp duty (5% + cess + surcharge) & registration (1%), totalling ~6.65%; 2) Bescom and BWSSB infrastructure connection charges (₹150–₹250/sq ft); 3) Advance maintenance & sinking fund (₹3–₹5/sq ft/month for 1–2 years); 4) Bank mortgage deed registration / MODT charges (~0.5%); and 5) Interior furnishings (typically 10%–15% of property value)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does step-up repayment or flexible EMI affect my purchase budget?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Specialized bank loan products like SBI FlexiPay or HDFC Step-Up loans offer lower EMIs during the initial 3 to 5 years (assuming accelerated career salary progression), with EMIs stepping up in subsequent years. This structure can enhance your initial borrowing eligibility by up to 20% compared to standard level EMI loans."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if interest rates rise after sanction under floating EBLR loans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All floating retail home loans in India are pegged to External Benchmark Lending Rates (EBLR/Repo Rate). If the RBI hikes repo rates by 50 bps, banks typically extend the loan tenure first (if within retirement age limits) or increase the monthly EMI. A 50 bps rate increase on a ₹1 crore 20-year loan raises the monthly EMI by ~₹3,200, which can push your debt obligations beyond comfortable FOIR limits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What income tax deductions can reduce the effective cost of a home loan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under the Old Tax Regime, home owners can claim: 1) Up to ₹2,00,000 per financial year for interest payments under Section 24(b) for self-occupied properties; and 2) Up to ₹1,50,000 for principal repayment, stamp duty, and registration charges under Section 80C. Under the New Tax Regime (Section 115BAC), these deductions are not available for self-occupied homes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why should I secure an in-principle bank pre-approval letter before house hunting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An in-principle bank pre-approval validates your creditworthiness, establishes your firm sanction limit based on your FOIR and income documents, and strengthens your negotiating leverage with developers. It also ensures you do not commit earnest booking token money to a property that exceeds bank mortgage underwriting sanction limits."
+            }
           }
         ]
       }
@@ -442,110 +506,80 @@
     .dp-header-bar {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.35rem;
-      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 0.75rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
-    .ak-calc-kicker {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--refined-brass, #7d442a);
-      margin-bottom: 0.45rem;
+    .dp-header-left {
+      flex: 1;
+      min-width: 320px;
+      max-width: 680px;
     }
     .dp-h1 {
       font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
-      font-size: 34px !important;
-      font-weight: 400 !important;
+      font-size: 32px !important;
+      font-weight: 500 !important;
       color: var(--deep-navy, #141D24) !important;
       letter-spacing: -0.015em !important;
-      margin: 0 0 0.65rem 0 !important;
-      line-height: 1.2 !important;
+      margin: 0 0 0.2rem 0 !important;
+      line-height: 1.15 !important;
     }
     .dp-subtitle {
       font-family: var(--font-body), 'Manrope', sans-serif !important;
-      font-size: 0.92rem !important;
+      font-size: 0.86rem !important;
       font-weight: 400 !important;
       color: var(--deep-slate, #4A5568) !important;
-      max-width: 820px;
-      line-height: 1.6;
-      margin: 0 0 1.25rem 0;
+      max-width: 680px;
+      line-height: 1.45 !important;
+      margin-bottom: 0 !important;
     }
 
-    /* Trust & Methodology Badges */
-    .dp-badges-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-bottom: 1.5rem;
-    }
-    .dp-badge-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: #FFFFFF;
-      border: 1px solid rgba(43, 43, 43, 0.15);
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      color: var(--deep-navy, #141D24);
-      font-weight: 500;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-    }
-    .dp-badge-item .material-symbols-outlined {
-      font-size: 16px;
-      color: var(--refined-brass, #7d442a);
-    }
-
-    /* Presets Strip */
+    /* 1-Click Quick Salary Presets Bar */
     .ak-preset-strip {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
-      background: #FFFFFF;
-      border: 1px solid rgba(43, 43, 43, 0.15);
-      border-radius: 8px;
-      padding: 0.6rem 0.9rem;
-      margin-bottom: 2rem;
+      gap: 0.35rem;
       flex-wrap: wrap;
+      margin-bottom: 0;
+      padding: 0.3rem 0.55rem;
+      background: #FFFFFF;
+      border: 1px solid rgba(43, 43, 43, 0.14);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(20, 29, 36, 0.02);
     }
     .ak-preset-label {
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--deep-slate, #33414C);
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
+      color: var(--muted-slate, #64748B);
+      margin-right: 0.15rem;
     }
     .ak-preset-chip {
       background: #FAF8F5;
-      border: 1px solid rgba(43, 43, 43, 0.15);
+      border: 1px solid rgba(125, 68, 42, 0.18);
       border-radius: 6px;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.8rem;
+      padding: 0.24rem 0.55rem;
+      font-family: var(--font-body);
+      font-size: 0.76rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       cursor: pointer;
       transition: all 0.2s ease;
     }
-    .ak-preset-chip:hover {
-      border-color: var(--refined-brass, #7d442a);
-      background: #F5EFEB;
-    }
-    .ak-preset-chip.active {
+    .ak-preset-chip:hover, .ak-preset-chip.active {
       background: var(--refined-brass, #7d442a);
       color: #FFFFFF;
       border-color: var(--refined-brass, #7d442a);
+      transform: translateY(-1px);
     }
 
     /* Main Grid Layout */
     .dp-main-grid {
       display: grid;
       grid-template-columns: 420px 1fr;
-      gap: 1.75rem;
+      gap: 1.5rem;
       align-items: stretch;
       margin-bottom: 3rem;
     }
@@ -554,43 +588,62 @@
     .dp-inputs-card {
       background: #FFFFFF;
       border: 1.5px solid rgba(43, 43, 43, 0.18);
-      border-radius: 12px;
-      padding: 1.6rem 1.65rem;
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
       box-shadow: 0 4px 20px rgba(13, 27, 36, 0.04);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
     }
-    .dp-card-title {
-      font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
-      font-weight: 600;
-      color: var(--deep-navy, #141D24);
-      margin-bottom: 1.15rem;
+    .dp-inputs-header, .dp-results-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      min-height: 28px;
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid rgba(43, 43, 43, 0.08);
+    }
+    .dp-inputs-badge, .dp-indicative-badge {
+      font-size: 0.70rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--refined-brass, #7d442a);
+      background: rgba(125, 68, 42, 0.08);
+      padding: 0.22rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid rgba(125, 68, 42, 0.18);
+      white-space: nowrap;
+    }
+    .dp-card-title {
+      font-family: var(--font-heading), 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--deep-navy, #141D24);
+      margin: 0;
     }
     .dp-field-group {
-      margin-bottom: 1.15rem;
+      margin-bottom: 0.55rem;
     }
     .dp-field-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.25rem;
     }
     .dp-field-label {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
+      margin-bottom: 0;
     }
     .dp-field-sub {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: var(--refined-brass, #7d442a);
     }
@@ -599,7 +652,7 @@
       display: flex;
       align-items: center;
       border: 1px solid #D1D5DB;
-      border-radius: 8px;
+      border-radius: 6px;
       background: #FFFFFF;
       transition: all 0.2s ease;
       overflow: hidden;
@@ -609,32 +662,32 @@
       box-shadow: 0 0 0 3px rgba(125, 68, 42, 0.15);
     }
     .dp-input-prefix {
-      padding-left: 1rem;
-      font-size: 1rem;
+      padding-left: 0.75rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
     }
     .dp-input-suffix {
-      padding-right: 1rem;
-      font-size: 0.95rem;
+      padding-right: 0.75rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--muted-slate, #64748B);
     }
     .dp-text-input {
       width: 100%;
-      height: 46px;
+      height: 38px;
       border: none;
       outline: none;
-      padding: 0 0.85rem;
+      padding: 0 0.75rem;
       font-family: var(--font-body), 'Manrope', sans-serif;
-      font-size: 1rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
       background: transparent;
       box-sizing: border-box;
     }
     .dp-slider-wrap {
-      margin-top: 0.5rem;
+      margin-top: 0.35rem;
     }
     .dp-slider {
       -webkit-appearance: none;
@@ -674,25 +727,25 @@
     .dp-slider-limits {
       display: flex;
       justify-content: space-between;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       color: var(--muted-slate, #64748B);
       font-weight: 500;
-      margin-top: 0.25rem;
+      margin-top: 0.15rem;
     }
 
     /* FOIR Selection Pills */
     .ak-foir-picker {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-      margin-top: 0.45rem;
-      margin-bottom: 0.25rem;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+      margin-bottom: 0.2rem;
     }
     .ak-foir-opt {
       border: 1px solid rgba(43, 43, 43, 0.18);
       background: #FAF8F5;
-      border-radius: 8px;
-      padding: 0.55rem 0.35rem;
+      border-radius: 6px;
+      padding: 0.38rem 0.3rem;
       text-align: center;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -703,16 +756,16 @@
     .ak-foir-opt.active {
       background: #FFFFFF;
       border: 1.5px solid var(--refined-brass, #7d442a);
-      box-shadow: 0 2px 8px rgba(125, 68, 42, 0.12);
+      box-shadow: 0 2px 6px rgba(125, 68, 42, 0.12);
     }
     .ak-foir-title {
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     .ak-foir-sub {
-      font-size: 0.7rem;
+      font-size: 0.66rem;
       color: var(--muted-slate, #64748B);
     }
 
@@ -720,9 +773,9 @@
     .ak-derived-summary-box {
       background: #FAF8F5;
       border: 1px dashed rgba(125, 68, 42, 0.35);
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      margin-top: 0.5rem;
+      border-radius: 6px;
+      padding: 0.45rem 0.75rem;
+      margin-top: 0.35rem;
     }
     .ak-dsb-row {
       display: flex;
@@ -730,12 +783,13 @@
       align-items: center;
     }
     .ak-dsb-title {
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--deep-slate, #33414C);
     }
     .ak-dsb-val {
-      font-size: 1.05rem;
+      font-family: var(--font-heading), 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--refined-brass, #7d442a);
     }
@@ -744,8 +798,8 @@
     .dp-results-card {
       background: #FFFFFF;
       border: 1.5px solid rgba(43, 43, 43, 0.18);
-      border-radius: 12px;
-      padding: 1.6rem 1.65rem;
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
       box-shadow: 0 4px 20px rgba(13, 27, 36, 0.04);
       display: flex;
       flex-direction: column;
@@ -756,18 +810,45 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--divider, #ECEEEF);
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid rgba(43, 43, 43, 0.08);
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
     .dp-results-heading {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
+      font-size: 1.35rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       margin: 0;
+    }
+
+    /* Print Summary Button */
+    .dp-print-summary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #FAF8F5;
+      border: 1px solid rgba(43, 43, 43, 0.18);
+      border-radius: 6px;
+      padding: 0.24rem 0.6rem;
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--deep-navy, #141D24);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .dp-print-summary-btn:hover {
+      background: #FFFFFF;
+      border-color: var(--refined-brass, #7d442a);
+      color: var(--refined-brass, #7d442a);
+    }
+    .dp-print-summary-btn svg {
+      width: 13px;
+      height: 13px;
+      stroke: currentColor;
     }
 
     /* Tabs in Results Card */
@@ -782,8 +863,8 @@
     .ak-res-tab-btn {
       background: transparent;
       border: none;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.78rem;
+      padding: 0.3rem 0.65rem;
+      font-size: 0.76rem;
       font-weight: 600;
       font-family: var(--font-body, 'Manrope', sans-serif);
       color: var(--muted-slate, #64748B);
@@ -802,58 +883,63 @@
     }
     .ak-tab-view {
       display: none;
+      min-height: 475px;
     }
     .ak-tab-view.active {
       display: block;
+      animation: akTabFadeIn 0.2s ease-out;
+    }
+    @keyframes akTabFadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Hero Box */
     .dp-hero-box {
       background: linear-gradient(135deg, #FAF7F2 0%, #F5EDE0 100%);
       border: 1px solid rgba(125, 68, 42, 0.25);
-      border-radius: 10px;
-      padding: 1.1rem 1.35rem;
-      margin-bottom: 1.25rem;
+      border-radius: 8px;
+      padding: 0.65rem 0.95rem;
+      margin-bottom: 0.75rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1rem;
     }
     .dp-hero-label {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.10em;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
     .dp-hero-amount {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-size: 2.05rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
       line-height: 1.1;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
     .dp-hero-sub {
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       color: var(--deep-slate, #4A5568);
     }
     .dp-hero-right {
       flex-shrink: 0;
       text-align: right;
-      min-width: 175px;
     }
     .dp-hero-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
       background: var(--refined-brass, #7d442a);
       color: #FFFFFF !important;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      padding: 0.65rem 1.1rem;
+      padding: 0.42rem 0.85rem;
       border-radius: 6px;
       text-decoration: none;
       transition: background 0.2s ease, transform 0.15s ease;
@@ -869,22 +955,22 @@
     .dp-stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.85rem;
-      margin-bottom: 1.25rem;
-      padding-bottom: 1.15rem;
+      gap: 0.55rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.65rem;
       border-bottom: 1px solid var(--divider, #ECEEEF);
     }
     .dp-stat-card {
       background: #FAF8F5;
-      border-radius: 8px;
-      padding: 0.9rem;
+      border-radius: 6px;
+      padding: 0.45rem 0.65rem;
       border: 1px solid rgba(43, 43, 43, 0.08);
     }
     .dp-stat-lbl {
-      font-size: 0.74rem;
+      font-size: 0.70rem;
       color: var(--muted-slate, #64748B);
       font-weight: 500;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
     .dp-stat-num {
       font-size: 1.15rem;
@@ -893,9 +979,9 @@
       line-height: 1.2;
     }
     .dp-stat-detail {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       color: var(--deep-slate, #4A5568);
-      margin-top: 0.25rem;
+      margin-top: 0.15rem;
     }
 
     /* Stacked Funding Bar */
@@ -1446,6 +1532,190 @@
         gap: 0.75rem;
       }
     }
+
+    /* Print Stylesheet */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 12mm 12mm;
+    }
+    @media print {
+      .header-nav, .mobile-toggle, .mobile-drawer, .site-footer,
+      .lf-modal-overlay, #leadFormModal, .abha-modal-overlay, #abhaLeadFormModal,
+      .advisor-floating-unit, #advisorFloatingUnit, .advisor-floating-wrap,
+      .dp-slider-wrap, .dp-slider-limits, .ak-preset-strip, .ak-res-tabs,
+      .dp-explore-row, .ak-more-calcs-section, .ak-foir-picker,
+      .dp-print-summary-btn, .dp-hero-cta,
+      noscript, iframe {
+        display: none !important;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #141D24 !important;
+        font-size: 11pt !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .dp-calc-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      nav[aria-label="breadcrumb"] {
+        margin-bottom: 0.35rem !important;
+        font-size: 0.72rem !important;
+      }
+      .dp-header-bar {
+        margin-bottom: 0.45rem !important;
+      }
+      .dp-h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0.2rem !important;
+        color: #141D24 !important;
+      }
+      .dp-subtitle {
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+        color: #4A5568 !important;
+        max-width: 100% !important;
+      }
+
+      /* Page 1: Main Assessment Grid */
+      .dp-main-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.05fr !important;
+        gap: 1rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .dp-inputs-card, .dp-results-card {
+        padding: 0.85rem !important;
+        border: 1px solid rgba(43, 43, 43, 0.18) !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        background: #FFFFFF !important;
+      }
+
+      .dp-card-title {
+        font-size: 1.15rem !important;
+        margin-bottom: 0.45rem !important;
+      }
+
+      .dp-field-group {
+        margin-bottom: 0.42rem !important;
+      }
+      .dp-field-label {
+        font-size: 0.78rem !important;
+      }
+      .dp-text-input {
+        padding: 0.38rem 0.65rem !important;
+        font-size: 0.88rem !important;
+        height: auto !important;
+        background: #FAF8F5 !important;
+        border: 1px solid rgba(43, 43, 43, 0.2) !important;
+      }
+      .dp-input-prefix, .dp-input-suffix {
+        font-size: 0.78rem !important;
+        padding: 0.38rem 0.5rem !important;
+      }
+
+      .ak-tab-view {
+        min-height: auto !important;
+        display: block !important;
+      }
+      .dp-hero-box {
+        padding: 0.7rem 0.85rem !important;
+        margin-bottom: 0.5rem !important;
+        background: #FAF8F5 !important;
+        border: 1px solid rgba(125, 68, 42, 0.25) !important;
+        border-radius: 6px !important;
+      }
+      .dp-hero-amount {
+        font-size: 1.55rem !important;
+        line-height: 1.1 !important;
+      }
+      .dp-hero-sub {
+        font-size: 0.7rem !important;
+        margin-top: 0.2rem !important;
+      }
+
+      .dp-stats-grid {
+        gap: 0.45rem !important;
+        margin-bottom: 0.5rem !important;
+        padding-bottom: 0.45rem !important;
+      }
+      .dp-stat-card {
+        padding: 0.42rem 0.55rem !important;
+        border-radius: 6px !important;
+      }
+      .dp-stat-num {
+        font-size: 1.05rem !important;
+      }
+      .dp-stat-lbl {
+        font-size: 0.66rem !important;
+      }
+
+      /* Editorial Article & Tables */
+      .ak-calc-article {
+        page-break-before: always;
+        break-before: page;
+        margin-top: 1rem !important;
+        padding: 0 !important;
+      }
+      .ak-table-responsive {
+        overflow: visible !important;
+        width: 100% !important;
+        margin-bottom: 1.5rem !important;
+      }
+      .ak-calc-article-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+      }
+      .ak-calc-article-table th {
+        background: #FAF8F5 !important;
+        color: #141D24 !important;
+        font-size: 0.75rem !important;
+        padding: 0.45rem 0.6rem !important;
+        border: 1px solid #D1D5DB !important;
+      }
+      .ak-calc-article-table td {
+        font-size: 0.75rem !important;
+        padding: 0.45rem 0.6rem !important;
+        border: 1px solid #E5E7EB !important;
+      }
+
+      /* FAQs auto-expanded in Print */
+      .ak-faq-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        border: 1px solid #E5E7EB !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 6px !important;
+      }
+      .ak-faq-question {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+      }
+      .ak-faq-question .material-symbols-outlined {
+        display: none !important;
+      }
+      .ak-faq-answer {
+        display: block !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.80rem !important;
+        line-height: 1.45 !important;
+        color: #33414C !important;
+        border-top: 1px solid #E5E7EB !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1516,47 +1786,23 @@
       </ol>
     </nav>
 
-    <!-- Header Block -->
+    <!-- Header Bar with Integrated Quick Salary Presets -->
     <div class="dp-header-bar">
-      <div>
-        <div class="ak-calc-kicker">MORTGAGE ELIGIBILITY &amp; BUDGET PLANNING</div>
+      <div class="dp-header-left">
         <h1 class="dp-h1">Home Affordability Calculator</h1>
         <p class="dp-subtitle">
           Calculate your true home buying budget based on monthly in-hand income, active debt obligations, available down payment savings, and institutional bank FOIR lending rules.
         </p>
       </div>
-    </div>
 
-    <!-- Trust & Benchmark Badges -->
-    <div class="dp-badges-row">
-      <div class="dp-badge-item">
-        <span class="material-symbols-outlined">verified</span>
-        <span>RBI LTV Cap: 75%–80%</span>
+      <!-- 1-Click Quick Household Income Presets Strip -->
+      <div class="ak-preset-strip" role="group" aria-label="Quick Household Income Presets">
+        <span class="ak-preset-label">Presets:</span>
+        <button type="button" class="ak-preset-chip" onclick="applyPreset(100000, 0, 2000000, 45, 8.5, 20)">₹1.0 L</button>
+        <button type="button" class="ak-preset-chip active" id="presetDefault" onclick="applyPreset(175000, 0, 3500000, 45, 8.5, 20)">₹1.75 L</button>
+        <button type="button" class="ak-preset-chip" onclick="applyPreset(300000, 25000, 6000000, 50, 8.5, 20)">₹3.0 L</button>
+        <button type="button" class="ak-preset-chip" onclick="applyPreset(500000, 50000, 10000000, 50, 8.5, 20)">₹5.0 L</button>
       </div>
-      <div class="dp-badge-item">
-        <span class="material-symbols-outlined">account_balance</span>
-        <span>Bank FOIR Benchmark: 40%–50%</span>
-      </div>
-      <div class="dp-badge-item">
-        <span class="material-symbols-outlined">percent</span>
-        <span>Repo-Linked Rates: 8.35%–8.75%</span>
-      </div>
-      <div class="dp-badge-item">
-        <span class="material-symbols-outlined">real_estate_agent</span>
-        <span>Includes Karnataka Upfront (~6.65%)</span>
-      </div>
-    </div>
-
-    <!-- Quick Household Income Presets Strip -->
-    <div class="ak-preset-strip">
-      <div class="ak-preset-label">
-        <span class="material-symbols-outlined" style="font-size: 16px; color: var(--refined-brass);">flash_on</span>
-        <span>Salary Presets:</span>
-      </div>
-      <button type="button" class="ak-preset-chip" onclick="applyPreset(100000, 0, 2000000, 45, 8.5, 20)">₹1.0L/mo (Mid-Level IT)</button>
-      <button type="button" class="ak-preset-chip active" onclick="applyPreset(175000, 0, 3500000, 45, 8.5, 20)">₹1.75L/mo (Senior Tech / PM)</button>
-      <button type="button" class="ak-preset-chip" onclick="applyPreset(300000, 25000, 6000000, 50, 8.5, 20)">₹3.0L/mo (Dual Income / Lead)</button>
-      <button type="button" class="ak-preset-chip" onclick="applyPreset(500000, 50000, 10000000, 50, 8.5, 20)">₹5.0L/mo (Leadership / CXO)</button>
     </div>
 
     <!-- Two Column Main Calculation Grid -->
@@ -1564,9 +1810,9 @@
 
       <!-- LEFT COLUMN: Financial Inputs -->
       <div class="dp-inputs-card">
-        <div class="dp-card-title">
-          <span>Your Financial Profile</span>
-          <span style="font-size: 0.82rem; font-family: var(--font-body); color: var(--muted-slate); font-weight: 500;">Step 1 of 2</span>
+        <div class="dp-inputs-header">
+          <h2 class="dp-card-title" style="margin-bottom: 0;">Your Financial Profile</h2>
+          <span class="dp-inputs-badge">Borrower Parameters</span>
         </div>
 
         <!-- Input 1: Monthly Net Take-Home Salary -->
@@ -1583,7 +1829,7 @@
             <input type="text" id="incomeInput" class="dp-text-input" value="1,75,000" onchange="onIncomeText(this.value)">
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="incomeSlider" class="dp-slider" min="30000" max="1000000" step="5000" value="175000" oninput="onIncomeSlider(this.value)">
+            <input type="range" id="incomeSlider" class="dp-slider" min="30000" max="1000000" step="5000" value="175000" oninput="onIncomeSlider(this.value)" aria-label="Monthly net salary slider">
           </div>
           <div class="dp-slider-limits">
             <span>₹30 Thousand</span>
@@ -1605,7 +1851,7 @@
             <input type="text" id="debtInput" class="dp-text-input" value="0" onchange="onDebtText(this.value)">
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="debtSlider" class="dp-slider" min="0" max="300000" step="2500" value="0" oninput="onDebtSlider(this.value)">
+            <input type="range" id="debtSlider" class="dp-slider" min="0" max="300000" step="2500" value="0" aria-label="Existing monthly EMIs slider" oninput="onDebtSlider(this.value)">
           </div>
           <div class="dp-slider-limits">
             <span>₹0 (Debt Free)</span>
@@ -1627,7 +1873,7 @@
             <input type="text" id="savingsInput" class="dp-text-input" value="35,00,000" onchange="onSavingsText(this.value)">
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="savingsSlider" class="dp-slider" min="500000" max="30000000" step="50000" value="3500000" oninput="onSavingsSlider(this.value)">
+            <input type="range" id="savingsSlider" class="dp-slider" min="500000" max="30000000" step="50000" value="3500000" aria-label="Available cash savings slider" oninput="onSavingsSlider(this.value)">
           </div>
           <div class="dp-slider-limits">
             <span>₹5 Lakh</span>
@@ -1682,7 +1928,7 @@
             <span class="dp-input-suffix">%</span>
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="interestRateSlider" class="dp-slider" min="7.0" max="12.0" step="0.05" value="8.50" oninput="onInterestSlider(this.value)">
+            <input type="range" id="interestRateSlider" class="dp-slider" min="7.0" max="12.0" step="0.05" value="8.50" aria-label="Interest rate slider" oninput="onInterestSlider(this.value)">
           </div>
           <div class="dp-slider-limits">
             <span>7.0%</span>
@@ -1704,7 +1950,7 @@
             <span class="dp-input-suffix">Years</span>
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="tenureSlider" class="dp-slider" min="5" max="30" step="1" value="20" oninput="onTenureSlider(this.value)">
+            <input type="range" id="tenureSlider" class="dp-slider" min="5" max="30" step="1" value="20" aria-label="Loan tenure slider" oninput="onTenureSlider(this.value)">
           </div>
           <div class="dp-slider-limits">
             <span>5 Years</span>
@@ -1719,7 +1965,13 @@
         <div>
           <!-- Tabbed Header -->
           <div class="dp-results-top-bar">
-            <h2 class="dp-results-heading">Affordability Analysis</h2>
+            <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+              <h2 class="dp-results-heading" style="margin: 0;">Affordability Analysis</h2>
+              <button type="button" class="dp-print-summary-btn" onclick="window.print()" title="Print or save PDF memorandum" aria-label="Print or save PDF summary">
+                <span class="material-symbols-outlined" style="font-size: 15px;">print</span>
+                <span>Print / PDF</span>
+              </button>
+            </div>
             <div class="ak-res-tabs">
               <button type="button" class="ak-res-tab-btn active" id="tabBtnBudget" onclick="switchTab('budget')">Budget Overview</button>
               <button type="button" class="ak-res-tab-btn" id="tabBtnFoir" onclick="switchTab('foir')">FOIR &amp; Salary Stack</button>
@@ -1997,11 +2249,11 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th class="ak-table-text">Monthly Net Salary</th>
-            <th class="ak-table-num">Max Permissible EMI (45%)</th>
-            <th class="ak-table-num">Max Eligible Loan</th>
-            <th class="ak-table-num">Required Down Pay (20%)</th>
-            <th class="ak-table-num">Affordable Property Budget</th>
+            <th scope="col" class="ak-table-text">Monthly Net Salary</th>
+            <th scope="col" class="ak-table-num">Max Permissible EMI (45%)</th>
+            <th scope="col" class="ak-table-num">Max Eligible Loan</th>
+            <th scope="col" class="ak-table-num">Required Down Pay (20%)</th>
+            <th scope="col" class="ak-table-num">Affordable Property Budget</th>
           </tr>
         </thead>
         <tbody>
@@ -2067,11 +2319,11 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th class="ak-table-text">Bank / Lender</th>
-            <th class="ak-table-center">Benchmark Rates (p.a.)</th>
-            <th class="ak-table-center">Standard FOIR Cap</th>
-            <th class="ak-table-center">Max Tenure</th>
-            <th class="ak-table-text">Key Eligibility Feature</th>
+            <th scope="col" class="ak-table-text">Bank / Lender</th>
+            <th scope="col" class="ak-table-center">Benchmark Rates (p.a.)</th>
+            <th scope="col" class="ak-table-center">Standard FOIR Cap</th>
+            <th scope="col" class="ak-table-center">Max Tenure</th>
+            <th scope="col" class="ak-table-text">Key Eligibility Feature</th>
           </tr>
         </thead>
         <tbody>
@@ -2235,6 +2487,86 @@
         </div>
         <div class="ak-faq-answer">
           RBI mandates standard Loan-to-Value (LTV) limits for all commercial banks: up to 90% for property values up to ₹30 lakh; up to 80% for loans between ₹30 lakh and ₹75 lakh; and up to 75% for loans exceeding ₹75 lakh. Borrowers must fund the remaining balance as upfront equity.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>Can I add a co-borrower (spouse or parent) to boost home affordability?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Yes. Indian banks permit co-borrowers (spouse, parent, or working son) to pool their verifiable take-home incomes. This directly increases total permissible household debt capacity under FOIR guidelines, often boosting your maximum home loan eligibility and affordable property budget by 60% to 100%.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>How does loan tenure (20 years vs. 30 years) alter my affordable property price?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Extending loan tenure from 20 to 30 years reduces your monthly EMI per lakh borrowed from ~₹868 to ~₹769 at an 8.50% interest rate. Because bank FOIR limits constrain monthly EMI rather than loan principal, a 30-year tenure boosts borrowing capacity by ~12% to 15%, though it increases cumulative lifetime interest outgo.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>What is the minimum CIBIL credit score needed for prime home loan interest rates?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Most scheduled Indian commercial banks (such as SBI, HDFC, and ICICI) offer their prime benchmark interest rate (e.g. 8.35%–8.50%) only to borrowers with a CIBIL score of 750 or above. Scores between 700 and 749 attract a risk spread of 25 to 50 bps (8.75%–9.00%), which elevates monthly EMIs and reduces maximum borrowing capacity.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>What hidden upfront costs must I budget for beyond the builder base price in Bangalore?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Beyond the basic flat cost, home buyers in Bangalore must budget for: 1) Karnataka statutory stamp duty (5% + cess + surcharge) & registration (1%), totalling ~6.65%; 2) Bescom and BWSSB infrastructure connection charges (₹150–₹250/sq ft); 3) Advance maintenance & sinking fund (₹3–₹5/sq ft/month for 1–2 years); 4) Bank mortgage deed registration / MODT charges (~0.5%); and 5) Interior furnishings (typically 10%–15% of property value).
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>How does step-up repayment or flexible EMI affect my purchase budget?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Specialized bank loan products like SBI FlexiPay or HDFC Step-Up loans offer lower EMIs during the initial 3 to 5 years (assuming accelerated career salary progression), with EMIs stepping up in subsequent years. This structure can enhance your initial borrowing eligibility by up to 20% compared to standard level EMI loans.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>What happens if interest rates rise after sanction under floating EBLR loans?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          All floating retail home loans in India are pegged to External Benchmark Lending Rates (EBLR/Repo Rate). If the RBI hikes repo rates by 50 bps, banks typically extend the loan tenure first (if within retirement age limits) or increase the monthly EMI. A 50 bps rate increase on a ₹1 crore 20-year loan raises the monthly EMI by ~₹3,200, which can push your debt obligations beyond comfortable FOIR limits.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>What income tax deductions can reduce the effective cost of a home loan?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          Under the Old Tax Regime, home owners can claim: 1) Up to ₹2,00,000 per financial year for interest payments under Section 24(b) for self-occupied properties; and 2) Up to ₹1,50,000 for principal repayment, stamp duty, and registration charges under Section 80C. Under the New Tax Regime (Section 115BAC), these deductions are not available for self-occupied homes.
+        </div>
+      </div>
+
+      <div class="ak-faq-item">
+        <div class="ak-faq-question">
+          <span>Why should I secure an in-principle bank pre-approval letter before house hunting?</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="ak-faq-answer">
+          An in-principle bank pre-approval validates your creditworthiness, establishes your firm sanction limit based on your FOIR and income documents, and strengthens your negotiating leverage with developers. It also ensures you do not commit earnest booking token money to a property that exceeds bank mortgage underwriting sanction limits.
         </div>
       </div>
     </div>
