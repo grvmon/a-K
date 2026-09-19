@@ -527,7 +527,7 @@
       display: grid;
       grid-template-columns: 420px 1fr;
       gap: 1.75rem;
-      align-items: stretch;
+      align-items: start;
       margin-bottom: 2.5rem;
     }
 
@@ -540,7 +540,7 @@
       box-shadow: 0 4px 20px rgba(20, 29, 36, 0.04);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     .dp-card-title {
       font-family: var(--font-heading, 'Cormorant Garamond', serif);
@@ -640,7 +640,7 @@
       box-shadow: 0 4px 20px rgba(20, 29, 36, 0.04);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     .dp-results-header {
       display: flex;
@@ -903,9 +903,15 @@
     /* Interactive Prepayment & Tax Tab Styles */
     .ak-tab-view {
       display: none;
+      min-height: 530px;
     }
     .ak-tab-view.active {
       display: block;
+      animation: akTabFadeIn 0.2s ease-out;
+    }
+    @keyframes akTabFadeIn {
+      from { opacity: 0; transform: translateY(2px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .ak-sim-control-box {
       background: #FAF8F5;
@@ -1298,6 +1304,9 @@
       .dp-main-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+      }
+      .ak-tab-view {
+        min-height: 845px;
       }
       .dp-afford-card {
         flex-direction: column;
