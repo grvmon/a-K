@@ -498,17 +498,17 @@
     /* Container & Header */
     .dp-calc-container {
       max-width: 1240px;
-      margin: 105px auto 0 auto;
-      padding: 0 1.5rem;
+      margin: 94px auto 0 auto;
+      padding: 0 1.5rem 1.5rem;
       font-family: var(--font-body, 'Manrope', sans-serif);
       color: var(--deep-navy, #141D24);
     }
     .dp-header-bar {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 0.75rem;
-      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 0.55rem;
+      gap: 1.25rem;
       flex-wrap: wrap;
     }
     .dp-header-left {
@@ -518,20 +518,20 @@
     }
     .dp-h1 {
       font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
-      font-size: 32px !important;
+      font-size: 28px !important;
       font-weight: 500 !important;
       color: var(--deep-navy, #141D24) !important;
       letter-spacing: -0.015em !important;
-      margin: 0 0 0.2rem 0 !important;
+      margin: 0 0 0.15rem 0 !important;
       line-height: 1.15 !important;
     }
     .dp-subtitle {
       font-family: var(--font-body), 'Manrope', sans-serif !important;
-      font-size: 0.86rem !important;
+      font-size: 0.80rem !important;
       font-weight: 400 !important;
       color: var(--deep-slate, #4A5568) !important;
       max-width: 680px;
-      line-height: 1.45 !important;
+      line-height: 1.35 !important;
       margin-bottom: 0 !important;
     }
 
@@ -542,14 +542,14 @@
       gap: 0.35rem;
       flex-wrap: wrap;
       margin-bottom: 0;
-      padding: 0.3rem 0.55rem;
+      padding: 0.25rem 0.55rem;
       background: #FFFFFF;
       border: 1px solid rgba(43, 43, 43, 0.14);
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(20, 29, 36, 0.02);
     }
     .ak-preset-label {
-      font-size: 0.72rem;
+      font-size: 0.70rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -560,9 +560,9 @@
       background: #FAF8F5;
       border: 1px solid rgba(125, 68, 42, 0.18);
       border-radius: 6px;
-      padding: 0.24rem 0.55rem;
+      padding: 0.22rem 0.55rem;
       font-family: var(--font-body);
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       cursor: pointer;
@@ -579,9 +579,9 @@
     .dp-main-grid {
       display: grid;
       grid-template-columns: 420px 1fr;
-      gap: 1.5rem;
+      gap: 1.25rem;
       align-items: stretch;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
 
     /* Inputs Card */
@@ -589,7 +589,7 @@
       background: #FFFFFF;
       border: 1.5px solid rgba(43, 43, 43, 0.18);
       border-radius: 8px;
-      padding: 1.15rem 1.25rem;
+      padding: 0.95rem 1.15rem;
       box-shadow: 0 4px 20px rgba(13, 27, 36, 0.04);
       display: flex;
       flex-direction: column;
@@ -600,50 +600,50 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 28px;
-      margin-bottom: 0.65rem;
-      padding-bottom: 0.45rem;
+      min-height: 26px;
+      margin-bottom: 0.45rem;
+      padding-bottom: 0.35rem;
       border-bottom: 1px solid rgba(43, 43, 43, 0.08);
     }
     .dp-inputs-badge, .dp-indicative-badge {
-      font-size: 0.70rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--refined-brass, #7d442a);
       background: rgba(125, 68, 42, 0.08);
-      padding: 0.22rem 0.55rem;
-      border-radius: 6px;
+      padding: 0.18rem 0.5rem;
+      border-radius: 5px;
       border: 1px solid rgba(125, 68, 42, 0.18);
       white-space: nowrap;
     }
     .dp-card-title {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       margin: 0;
     }
     .dp-field-group {
-      margin-bottom: 0.55rem;
+      margin-bottom: 0.38rem;
     }
     .dp-field-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.18rem;
     }
     .dp-field-label {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
       margin-bottom: 0;
     }
     .dp-field-sub {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--refined-brass, #7d442a);
     }
@@ -656,45 +656,46 @@
       background: #FFFFFF;
       transition: all 0.2s ease;
       overflow: hidden;
+      height: 33px;
     }
     .dp-input-wrapper:focus-within {
       border-color: var(--refined-brass, #7d442a);
       box-shadow: 0 0 0 3px rgba(125, 68, 42, 0.15);
     }
     .dp-input-prefix {
-      padding-left: 0.75rem;
-      font-size: 0.88rem;
+      padding-left: 0.65rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
     }
     .dp-input-suffix {
-      padding-right: 0.75rem;
-      font-size: 0.85rem;
+      padding-right: 0.65rem;
+      font-size: 0.80rem;
       font-weight: 600;
       color: var(--muted-slate, #64748B);
     }
     .dp-text-input {
       width: 100%;
-      height: 38px;
+      height: 100%;
       border: none;
       outline: none;
-      padding: 0 0.75rem;
+      padding: 0 0.65rem;
       font-family: var(--font-body), 'Manrope', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--deep-navy, #1F2B38);
       background: transparent;
       box-sizing: border-box;
     }
     .dp-slider-wrap {
-      margin-top: 0.35rem;
+      margin-top: 0.22rem;
     }
     .dp-slider {
       -webkit-appearance: none;
       appearance: none;
       width: 100%;
-      height: 5px;
-      border-radius: 3px;
+      height: 4px;
+      border-radius: 2px;
       background: #D1D5DB;
       outline: none;
       cursor: pointer;
@@ -703,8 +704,8 @@
     .dp-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background: var(--refined-brass, #7d442a);
       border: 2px solid #FFFFFF;
@@ -716,8 +717,8 @@
       transform: scale(1.15);
     }
     .dp-slider::-moz-range-thumb {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background: var(--refined-brass, #7d442a);
       border: 2px solid #FFFFFF;
@@ -727,71 +728,100 @@
     .dp-slider-limits {
       display: flex;
       justify-content: space-between;
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       color: var(--muted-slate, #64748B);
       font-weight: 500;
-      margin-top: 0.15rem;
+      margin-top: 0.12rem;
+    }
+    @media (min-width: 992px) {
+      .dp-slider-limits {
+        display: none;
+      }
     }
 
-    /* FOIR Selection Pills */
+    /* Combined FOIR & Permissible EMI Row */
+    .dp-foir-combined-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.65rem;
+      margin-top: 0.15rem;
+      margin-bottom: 0.35rem;
+      background: #FAF8F5;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid rgba(43, 43, 43, 0.1);
+    }
+    .dp-foir-left {
+      flex: 1;
+    }
     .ak-foir-picker {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.4rem;
-      margin-top: 0.35rem;
-      margin-bottom: 0.2rem;
+      display: flex;
+      gap: 0.25rem;
+      margin-top: 0.15rem;
     }
     .ak-foir-opt {
       border: 1px solid rgba(43, 43, 43, 0.18);
-      background: #FAF8F5;
-      border-radius: 6px;
-      padding: 0.38rem 0.3rem;
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 0.2rem 0.45rem;
       text-align: center;
       cursor: pointer;
-      transition: all 0.2s ease;
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+      transition: all 0.15s ease;
     }
     .ak-foir-opt:hover {
       border-color: var(--refined-brass, #7d442a);
     }
     .ak-foir-opt.active {
-      background: #FFFFFF;
-      border: 1.5px solid var(--refined-brass, #7d442a);
-      box-shadow: 0 2px 6px rgba(125, 68, 42, 0.12);
+      background: var(--deep-navy, #141D24);
+      color: #FFFFFF;
+      border-color: var(--deep-navy, #141D24);
+    }
+    .ak-foir-opt.active .ak-foir-title,
+    .ak-foir-opt.active .ak-foir-sub {
+      color: #FFFFFF;
     }
     .ak-foir-title {
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      margin-bottom: 1px;
     }
     .ak-foir-sub {
-      font-size: 0.66rem;
+      font-size: 0.62rem;
       color: var(--muted-slate, #64748B);
     }
-
-    /* Summary Card / Callout */
     .ak-derived-summary-box {
-      background: #FAF8F5;
-      border: 1px dashed rgba(125, 68, 42, 0.35);
-      border-radius: 6px;
-      padding: 0.45rem 0.75rem;
-      margin-top: 0.35rem;
-    }
-    .ak-dsb-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
     }
     .ak-dsb-title {
-      font-size: 0.78rem;
+      font-size: 0.66rem;
       font-weight: 600;
       color: var(--deep-slate, #33414C);
+      display: block;
+      margin-bottom: 1px;
+      white-space: nowrap;
     }
     .ak-dsb-val {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--refined-brass, #7d442a);
+      line-height: 1;
+    }
+
+    /* 2-Column Row for Interest Rate & Tenure */
+    .dp-inputs-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-top: 0.15rem;
     }
 
     /* Results Card */
@@ -799,7 +829,7 @@
       background: #FFFFFF;
       border: 1.5px solid rgba(43, 43, 43, 0.18);
       border-radius: 8px;
-      padding: 1.15rem 1.25rem;
+      padding: 0.95rem 1.15rem;
       box-shadow: 0 4px 20px rgba(13, 27, 36, 0.04);
       display: flex;
       flex-direction: column;
@@ -810,15 +840,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.65rem;
-      padding-bottom: 0.45rem;
+      margin-bottom: 0.45rem;
+      padding-bottom: 0.35rem;
       border-bottom: 1px solid rgba(43, 43, 43, 0.08);
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
     .dp-results-heading {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       margin: 0;
@@ -832,9 +862,9 @@
       background: #FAF8F5;
       border: 1px solid rgba(43, 43, 43, 0.18);
       border-radius: 6px;
-      padding: 0.24rem 0.6rem;
+      padding: 0.22rem 0.55rem;
       font-family: var(--font-body);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
       cursor: pointer;
@@ -854,7 +884,7 @@
     /* Tabs in Results Card */
     .ak-res-tabs {
       display: flex;
-      gap: 0.35rem;
+      gap: 0.25rem;
       background: #FAF8F5;
       padding: 3px;
       border-radius: 6px;
@@ -863,8 +893,8 @@
     .ak-res-tab-btn {
       background: transparent;
       border: none;
-      padding: 0.3rem 0.65rem;
-      font-size: 0.76rem;
+      padding: 0.26rem 0.55rem;
+      font-size: 0.74rem;
       font-weight: 600;
       font-family: var(--font-body, 'Manrope', sans-serif);
       color: var(--muted-slate, #64748B);
@@ -883,7 +913,7 @@
     }
     .ak-tab-view {
       display: none;
-      min-height: 475px;
+      min-height: 285px;
     }
     .ak-tab-view.active {
       display: block;
@@ -899,31 +929,31 @@
       background: linear-gradient(135deg, #FAF7F2 0%, #F5EDE0 100%);
       border: 1px solid rgba(125, 68, 42, 0.25);
       border-radius: 8px;
-      padding: 0.65rem 0.95rem;
-      margin-bottom: 0.75rem;
+      padding: 0.5rem 0.85rem;
+      margin-bottom: 0.55rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
     }
     .dp-hero-label {
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
-      letter-spacing: 0.10em;
+      letter-spacing: 0.08em;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.1rem;
     }
     .dp-hero-amount {
       font-family: var(--font-heading), 'Cormorant Garamond', serif;
-      font-size: 2.05rem;
+      font-size: 1.85rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      line-height: 1.1;
-      margin-bottom: 0.15rem;
+      line-height: 1.05;
+      margin-bottom: 0.1rem;
     }
     .dp-hero-sub {
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       color: var(--deep-slate, #4A5568);
     }
     .dp-hero-right {
@@ -937,9 +967,9 @@
       gap: 0.35rem;
       background: var(--refined-brass, #7d442a);
       color: #FFFFFF !important;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      padding: 0.42rem 0.85rem;
+      padding: 0.38rem 0.75rem;
       border-radius: 6px;
       text-decoration: none;
       transition: background 0.2s ease, transform 0.15s ease;
@@ -955,63 +985,68 @@
     .dp-stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.55rem;
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.65rem;
+      gap: 0.45rem;
+      margin-bottom: 0.45rem;
+      padding-bottom: 0.45rem;
       border-bottom: 1px solid var(--divider, #ECEEEF);
     }
     .dp-stat-card {
       background: #FAF8F5;
       border-radius: 6px;
-      padding: 0.45rem 0.65rem;
+      padding: 0.32rem 0.5rem;
       border: 1px solid rgba(43, 43, 43, 0.08);
+      text-align: center;
     }
     .dp-stat-lbl {
-      font-size: 0.70rem;
+      font-size: 0.66rem;
       color: var(--muted-slate, #64748B);
       font-weight: 500;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.1rem;
     }
     .dp-stat-num {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .dp-stat-detail {
-      font-size: 0.68rem;
+      font-size: 0.64rem;
       color: var(--deep-slate, #4A5568);
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
     }
 
     /* Stacked Funding Bar */
     .dp-stack-container {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.45rem;
+      background: #FAF8F5;
+      padding: 0.35rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid rgba(43, 43, 43, 0.08);
     }
     .dp-stack-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.22rem;
     }
     .dp-stack-title {
-      font-size: 0.8rem;
+      font-size: 0.74rem;
       font-weight: 600;
       color: var(--deep-navy, #141D24);
     }
     .dp-stack-ratio {
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       color: var(--muted-slate, #64748B);
       font-weight: 500;
     }
     .dp-stacked-bar {
       width: 100%;
-      height: 12px;
+      height: 6px;
       background: #E5E7EB;
-      border-radius: 6px;
+      border-radius: 3px;
       overflow: hidden;
       display: flex;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.3rem;
     }
     .dp-bar-segment.loan {
       background: var(--refined-brass, #7d442a);
@@ -1037,18 +1072,18 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      font-size: 0.78rem;
+      gap: 0.5rem;
+      font-size: 0.70rem;
       color: var(--deep-slate, #33414C);
     }
     .dp-legend-item {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
     .dp-legend-dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
     }
     .dp-legend-dot.loan { background: var(--refined-brass, #7d442a); }
@@ -1058,26 +1093,27 @@
 
     /* Detailed Breakdown List */
     .dp-breakdown-list {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.45rem;
       border-top: 1px solid var(--divider, #ECEEEF);
-      padding-top: 0.85rem;
+      padding-top: 0.35rem;
     }
     .dp-breakdown-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.4rem 0;
-      font-size: 0.86rem;
+      padding: 0.18rem 0;
+      font-size: 0.80rem;
       color: var(--deep-slate, #33414C);
     }
     .dp-breakdown-item strong {
       color: var(--deep-navy, #141D24);
       font-weight: 700;
+      font-size: 0.80rem;
     }
     .dp-breakdown-item.total-row {
       border-top: 1px dashed rgba(43, 43, 43, 0.2);
-      margin-top: 0.45rem;
-      padding-top: 0.65rem;
+      margin-top: 0.25rem;
+      padding-top: 0.35rem;
       font-weight: 700;
       color: var(--deep-navy, #141D24);
     }
@@ -1085,22 +1121,54 @@
     /* Contextual Feasibility Callout */
     .dp-feasibility-box {
       background: #FAF8F5;
-      border-left: 4px solid var(--refined-brass, #7d442a);
-      border-radius: 0 8px 8px 0;
-      padding: 0.85rem 1.1rem;
+      border-left: 3px solid var(--refined-brass, #7d442a);
+      border-radius: 0 6px 6px 0;
+      padding: 0.38rem 0.6rem;
       display: flex;
       align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.84rem;
-      line-height: 1.5;
+      gap: 0.5rem;
+      font-size: 0.74rem;
+      line-height: 1.35;
       color: var(--deep-slate, #33414C);
-      margin-bottom: 1rem;
+      margin-bottom: 0;
     }
     .dp-feasibility-box .material-symbols-outlined {
       color: var(--refined-brass, #7d442a);
-      font-size: 20px;
+      font-size: 18px;
       flex-shrink: 0;
-      margin-top: 2px;
+      margin-top: 1px;
+    }
+
+    /* Tab 2 & 3 Support Cards */
+    .ak-tab-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+      margin-bottom: 0.45rem;
+    }
+    .ak-tab-card {
+      background: #FAF8F5;
+      border: 1px solid rgba(43, 43, 43, 0.08);
+      border-radius: 6px;
+      padding: 0.35rem 0.55rem;
+    }
+    .ak-tab-card-label {
+      font-size: 0.66rem;
+      color: var(--muted-slate, #64748B);
+      font-weight: 500;
+      margin-bottom: 0.1rem;
+    }
+    .ak-tab-card-val {
+      font-family: var(--font-heading), 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--deep-navy, #141D24);
+      line-height: 1.15;
+    }
+    .ak-tab-card-sub {
+      font-size: 0.64rem;
+      color: var(--deep-slate, #4A5568);
+      margin-top: 0.1rem;
     }
 
     /* Explore Calculators Bottom Row */
@@ -1531,6 +1599,26 @@
         grid-template-columns: 1fr;
         gap: 0.75rem;
       }
+      .dp-inputs-row-2col {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .dp-foir-combined-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+      }
+      .ak-derived-summary-box {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px dashed rgba(125, 68, 42, 0.2);
+        padding-top: 0.35rem;
+      }
+      .ak-tab-view {
+        min-height: auto;
+      }
     }
 
     /* Print Stylesheet */
@@ -1776,7 +1864,7 @@
   <!-- Main Calculator Section -->
   <main class="dp-calc-container">
     <!-- Breadcrumbs -->
-    <nav aria-label="breadcrumb" style="margin-bottom: 1.25rem;">
+    <nav aria-label="breadcrumb" style="margin-bottom: 0.45rem;">
       <ol class="page-breadcrumb">
         <li><a href="../../">Home</a></li>
         <li><span class="separator">/</span></li>
@@ -1881,80 +1969,81 @@
           </div>
         </div>
 
-        <!-- Debt-to-Income / FOIR Multiplier Picker -->
-        <div class="dp-field-group" style="margin-bottom: 0.85rem;">
-          <div class="dp-field-header" style="margin-bottom: 0.25rem;">
-            <label class="dp-field-label">
-              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--refined-brass);">donut_large</span>
-              Debt-to-Income / FOIR Cap
-            </label>
-            <span id="foirPercentageBadge" style="font-size: 0.8rem; font-weight: 700; color: var(--deep-navy);">45% Benchmark</span>
+        <!-- FOIR Multiplier & Permissible EMI Row -->
+        <div class="dp-foir-combined-row">
+          <div class="dp-foir-left">
+            <div class="dp-field-header" style="margin-bottom: 0.2rem;">
+              <label class="dp-field-label" style="font-size: 0.78rem;">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--refined-brass);">donut_large</span>
+                FOIR Cap
+              </label>
+              <span id="foirPercentageBadge" style="font-size: 0.74rem; font-weight: 700; color: var(--deep-navy);">45% Benchmark</span>
+            </div>
+            <div class="ak-foir-picker">
+              <div class="ak-foir-opt" id="foirOpt35" onclick="setFoir(35)">
+                <div class="ak-foir-title">35%</div>
+                <div class="ak-foir-sub">Conservative</div>
+              </div>
+              <div class="ak-foir-opt active" id="foirOpt45" onclick="setFoir(45)">
+                <div class="ak-foir-title">45%</div>
+                <div class="ak-foir-sub">Standard</div>
+              </div>
+              <div class="ak-foir-opt" id="foirOpt50" onclick="setFoir(50)">
+                <div class="ak-foir-title">50%</div>
+                <div class="ak-foir-sub">Max</div>
+              </div>
+            </div>
           </div>
-          <div class="ak-foir-picker">
-            <div class="ak-foir-opt" id="foirOpt35" onclick="setFoir(35)">
-              <div class="ak-foir-title">35% FOIR</div>
-              <div class="ak-foir-sub">Conservative</div>
-            </div>
-            <div class="ak-foir-opt active" id="foirOpt45" onclick="setFoir(45)">
-              <div class="ak-foir-title">45% FOIR</div>
-              <div class="ak-foir-sub">Bank Standard</div>
-            </div>
-            <div class="ak-foir-opt" id="foirOpt50" onclick="setFoir(50)">
-              <div class="ak-foir-title">50% FOIR</div>
-              <div class="ak-foir-sub">Max Ceiling</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Derived Affordable EMI Box -->
-        <div class="ak-derived-summary-box">
-          <div class="ak-dsb-row">
-            <span class="ak-dsb-title">Permissible Monthly Home EMI</span>
+          <div class="ak-derived-summary-box">
+            <span class="ak-dsb-title">Permissible Home EMI</span>
             <span class="ak-dsb-val" id="derivedEmiCapacity">₹ 78,750</span>
           </div>
         </div>
 
-        <!-- Input 4: Expected Interest Rate -->
-        <div class="dp-field-group" style="margin-top: 1.15rem;">
-          <div class="dp-field-header">
-            <label class="dp-field-label" for="interestRateInput">
-              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--refined-brass);">trending_up</span>
-              Interest Rate (p.a.)
-            </label>
-            <span class="dp-field-sub" id="interestBenchmarkLabel" style="color: var(--muted-slate);">Benchmark: 8.50%</span>
+        <!-- 2-Column Row: Interest Rate & Loan Tenure -->
+        <div class="dp-inputs-row-2col">
+          <!-- Input 4: Expected Interest Rate -->
+          <div class="dp-field-group" style="margin-bottom: 0;">
+            <div class="dp-field-header" style="margin-bottom: 0.2rem;">
+              <label class="dp-field-label" for="interestRateInput" style="font-size: 0.78rem;">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--refined-brass);">trending_up</span>
+                Interest Rate (p.a.)
+              </label>
+              <span class="dp-field-sub" id="interestBenchmarkLabel" style="font-size: 0.74rem;">8.50%</span>
+            </div>
+            <div class="dp-input-wrapper">
+              <input type="text" id="interestRateInput" class="dp-text-input" value="8.50" onchange="onInterestText(this.value)">
+              <span class="dp-input-suffix">%</span>
+            </div>
+            <div class="dp-slider-wrap">
+              <input type="range" id="interestRateSlider" class="dp-slider" min="7.0" max="12.0" step="0.05" value="8.50" aria-label="Interest rate slider" oninput="onInterestSlider(this.value)">
+            </div>
+            <div class="dp-slider-limits">
+              <span>7.0%</span>
+              <span>12.0%</span>
+            </div>
           </div>
-          <div class="dp-input-wrapper">
-            <input type="text" id="interestRateInput" class="dp-text-input" value="8.50" onchange="onInterestText(this.value)">
-            <span class="dp-input-suffix">%</span>
-          </div>
-          <div class="dp-slider-wrap">
-            <input type="range" id="interestRateSlider" class="dp-slider" min="7.0" max="12.0" step="0.05" value="8.50" aria-label="Interest rate slider" oninput="onInterestSlider(this.value)">
-          </div>
-          <div class="dp-slider-limits">
-            <span>7.0%</span>
-            <span>12.0%</span>
-          </div>
-        </div>
 
-        <!-- Input 5: Desired Loan Tenure -->
-        <div class="dp-field-group" style="margin-bottom: 0.5rem;">
-          <div class="dp-field-header">
-            <label class="dp-field-label" for="tenureInput">
-              <span class="material-symbols-outlined" style="font-size: 18px; color: var(--refined-brass);">schedule</span>
-              Loan Tenure
-            </label>
-            <span class="dp-field-sub" id="tenureMonthsLabel" style="color: var(--muted-slate);">240 Months</span>
-          </div>
-          <div class="dp-input-wrapper">
-            <input type="text" id="tenureInput" class="dp-text-input" value="20" onchange="onTenureText(this.value)">
-            <span class="dp-input-suffix">Years</span>
-          </div>
-          <div class="dp-slider-wrap">
-            <input type="range" id="tenureSlider" class="dp-slider" min="5" max="30" step="1" value="20" aria-label="Loan tenure slider" oninput="onTenureSlider(this.value)">
-          </div>
-          <div class="dp-slider-limits">
-            <span>5 Years</span>
-            <span>30 Years</span>
+          <!-- Input 5: Desired Loan Tenure -->
+          <div class="dp-field-group" style="margin-bottom: 0;">
+            <div class="dp-field-header" style="margin-bottom: 0.2rem;">
+              <label class="dp-field-label" for="tenureInput" style="font-size: 0.78rem;">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--refined-brass);">schedule</span>
+                Loan Tenure
+              </label>
+              <span class="dp-field-sub" id="tenureMonthsLabel" style="font-size: 0.74rem;">240 Months</span>
+            </div>
+            <div class="dp-input-wrapper">
+              <input type="text" id="tenureInput" class="dp-text-input" value="20" onchange="onTenureText(this.value)">
+              <span class="dp-input-suffix">Years</span>
+            </div>
+            <div class="dp-slider-wrap">
+              <input type="range" id="tenureSlider" class="dp-slider" min="5" max="30" step="1" value="20" aria-label="Loan tenure slider" oninput="onTenureSlider(this.value)">
+            </div>
+            <div class="dp-slider-limits">
+              <span>5 Years</span>
+              <span>30 Years</span>
+            </div>
           </div>
         </div>
 
@@ -2187,24 +2276,24 @@
 
         </div>
 
-        <!-- Bottom Calculator Cross-Navigation -->
-        <div class="dp-explore-row">
-          <a href="../home-loan-emi-calculator/" class="dp-explore-btn">
-            <span class="material-symbols-outlined" style="font-size: 16px;">calculate</span>
-            <span>EMI Calculator</span>
-          </a>
-          <a href="../down-payment-calculator/" class="dp-explore-btn">
-            <span class="material-symbols-outlined" style="font-size: 16px;">savings</span>
-            <span>Down Payment</span>
-          </a>
-          <a href="../stamp-duty-registration-calculator/" class="dp-explore-btn">
-            <span class="material-symbols-outlined" style="font-size: 16px;">receipt_long</span>
-            <span>Stamp Duty</span>
-          </a>
-        </div>
-
       </div>
 
+    </div>
+
+    <!-- Bottom Calculator Cross-Navigation -->
+    <div class="dp-explore-row">
+      <a href="../home-loan-emi-calculator/" class="dp-explore-btn">
+        <span class="material-symbols-outlined" style="font-size: 16px;">calculate</span>
+        <span>EMI Calculator</span>
+      </a>
+      <a href="../down-payment-calculator/" class="dp-explore-btn">
+        <span class="material-symbols-outlined" style="font-size: 16px;">savings</span>
+        <span>Down Payment</span>
+      </a>
+      <a href="../stamp-duty-registration-calculator/" class="dp-explore-btn">
+        <span class="material-symbols-outlined" style="font-size: 16px;">receipt_long</span>
+        <span>Stamp Duty</span>
+      </a>
     </div>
 
   </main>
