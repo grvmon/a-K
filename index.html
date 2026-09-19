@@ -1587,19 +1587,59 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script>
 (() => {
+  function initFaqFilters() {
+    const filterBtns = document.querySelectorAll('.faq-filter-btn');
+    const categoryGroups = document.querySelectorAll('.faq-category-group');
+
+    if (!filterBtns.length || !categoryGroups.length) return;
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetCategory = this.getAttribute('data-category');
+
+        // Toggle active button style
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter FAQ category groups
+        categoryGroups.forEach((group) => {
+          const groupCategory = group.getAttribute('data-category');
+          if (targetCategory === 'all' || groupCategory === targetCategory) {
+            group.style.display = 'flex';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   function handleConsultantHash() {
-    if (window.location.hash === '#property-consultant-bangalore') {
+    const hash = window.location.hash;
+    if (hash === '#property-consultant-bangalore') {
       const details = document.querySelector('#property-consultant-bangalore details');
-      if (details) {
-        details.open = true;
+      if (details) details.open = true;
+    } else if (hash === '#faq-property-consultant') {
+      const faqDetails = document.getElementById('faq-property-consultant');
+      if (faqDetails) {
+        faqDetails.open = true;
+        faqDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }
-  window.addEventListener('DOMContentLoaded', handleConsultantHash);
-  window.addEventListener('hashchange', handleConsultantHash);
-  if (document.readyState !== 'loading') {
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initFaqFilters();
+      handleConsultantHash();
+    });
+  } else {
+    initFaqFilters();
     handleConsultantHash();
   }
+
+  window.addEventListener('hashchange', handleConsultantHash);
 })();
 </script>
 </body></html>
