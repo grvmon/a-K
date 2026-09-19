@@ -806,6 +806,43 @@
       box-shadow: 0 2px 8px rgba(20, 29, 36, 0.04);
       flex-shrink: 0;
     }
+    .dp-hero-right-cta {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      min-width: auto !important;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .dp-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      background: var(--refined-brass, #7d442a);
+      color: #FFFFFF !important;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.38rem 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .dp-hero-cta:hover {
+      background: var(--brass-hover, #965335);
+      transform: translateY(-1px);
+    }
+    .dp-stack-container {
+      margin-bottom: 0.6rem;
+      background: #FFFFFF;
+      border: 1px solid rgba(125, 68, 42, 0.18);
+      border-radius: 8px;
+      padding: 0.45rem 0.75rem;
+      box-shadow: 0 2px 8px rgba(20, 29, 36, 0.04);
+    }
     .dp-stack-header {
       display: flex;
       justify-content: space-between;
@@ -1473,6 +1510,10 @@
         min-width: unset;
         width: 100%;
       }
+      .dp-hero-right-cta {
+        text-align: left !important;
+        width: 100% !important;
+      }
       .dp-stats-grid {
         grid-template-columns: 1fr;
         gap: 0.65rem;
@@ -1623,6 +1664,7 @@
       .dp-slider-wrap, .ak-preset-strip, .ak-results-tabs,
       .dp-afford-card, .dp-explore-section, .ak-more-calcs-section,
       .dp-print-summary-btn, .ak-bank-calc-btn, .ak-sim-control-box,
+      .dp-hero-cta,
       noscript, iframe {
         display: none !important;
       }
@@ -2079,19 +2121,12 @@
               <div class="dp-hero-amount" id="heroEmiAmount">₹ 69,426 <span style="font-size: 0.45em; font-weight: 500; font-family: var(--font-body); color: #4A5568;">/month</span></div>
               <div class="dp-hero-desc" id="heroEmiSubtext">Based on ₹80,00,000 loan • 8.50% p.a. • 20 years</div>
             </div>
-            <div class="dp-hero-right">
-              <div class="dp-stack-header">
-                <span class="dp-stack-title">Repayment Stack</span>
-                <span class="dp-stack-ratio" id="heroStackRatio">48% Principal</span>
-              </div>
-              <div class="dp-capital-bar-track">
-                <div class="dp-bar-seg" id="barPrincipal" style="width: 48%; background: var(--deep-navy, #141D24);" title="Principal"></div>
-                <div class="dp-bar-seg" id="barInterest" style="width: 52%; background: var(--refined-brass, #7d442a);" title="Interest"></div>
-              </div>
-              <div class="dp-capital-legend">
-                <span class="dp-leg-item"><span class="dp-leg-dot" style="background: var(--deep-navy, #141D24);"></span>Principal</span>
-                <span class="dp-leg-item"><span class="dp-leg-dot" style="background: var(--refined-brass, #7d442a);"></span>Interest</span>
-              </div>
+            <div class="dp-hero-right dp-hero-right-cta">
+              <button type="button" class="dp-hero-cta" onclick="if(window.openModal){window.openModal();}return false;" data-modal-open aria-label="Discuss shortlist with an advisor">
+                <span>Discuss Shortlist</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+              </button>
+              <div style="font-size: 0.72rem; color: var(--muted-slate); margin-top: 0.35rem;">69-point diligence advisory</div>
             </div>
           </div>
 
@@ -2111,6 +2146,22 @@
               <div class="dp-stat-value" id="cardRepayVal">₹ 1.67 Cr</div>
               <div class="dp-stat-name">Total Repayment</div>
               <div class="dp-stat-sub" id="cardRepaySub">Principal + Interest</div>
+            </div>
+          </div>
+
+          <!-- Repayment Stack Visualization Bar -->
+          <div class="dp-stack-container">
+            <div class="dp-stack-header">
+              <span class="dp-stack-title">Repayment Stack</span>
+              <span class="dp-stack-ratio" id="heroStackRatio">48% Principal</span>
+            </div>
+            <div class="dp-capital-bar-track">
+              <div class="dp-bar-seg" id="barPrincipal" style="width: 48%; background: var(--deep-navy, #141D24);" title="Principal"></div>
+              <div class="dp-bar-seg" id="barInterest" style="width: 52%; background: var(--refined-brass, #7d442a);" title="Interest"></div>
+            </div>
+            <div class="dp-capital-legend">
+              <span class="dp-leg-item"><span class="dp-leg-dot" style="background: var(--deep-navy, #141D24);"></span>Principal</span>
+              <span class="dp-leg-item"><span class="dp-leg-dot" style="background: var(--refined-brass, #7d442a);"></span>Interest</span>
             </div>
           </div>
 
