@@ -1987,7 +1987,7 @@
             <input type="text" id="propPriceInput" class="dp-text-input" value="1,00,00,000" oninput="onPropPriceText(this.value)">
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="propPriceSlider" class="dp-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)">
+            <input type="range" id="propPriceSlider" class="dp-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropPriceSlider(this.value)" aria-label="Property price slider">
           </div>
         </div>
 
@@ -2002,7 +2002,7 @@
             <span class="dp-input-suffix">%</span>
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="downPaySlider" class="dp-slider" min="0" max="80" step="1" value="20" oninput="onDownPaySlider(this.value)">
+            <input type="range" id="downPaySlider" class="dp-slider" min="0" max="80" step="1" value="20" oninput="onDownPaySlider(this.value)" aria-label="Down payment percentage slider">
           </div>
         </div>
 
@@ -2026,7 +2026,7 @@
             <span class="dp-input-suffix">%</span>
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="interestRateSlider" class="dp-slider" min="5.0" max="15.0" step="0.05" value="8.5" oninput="onInterestRateSlider(this.value)">
+            <input type="range" id="interestRateSlider" class="dp-slider" min="5.0" max="15.0" step="0.05" value="8.5" oninput="onInterestRateSlider(this.value)" aria-label="Interest rate slider">
           </div>
         </div>
 
@@ -2041,7 +2041,7 @@
             <span class="dp-input-suffix">Years</span>
           </div>
           <div class="dp-slider-wrap">
-            <input type="range" id="loanTenureSlider" class="dp-slider" min="1" max="30" step="1" value="20" oninput="onLoanTenureSlider(this.value)">
+            <input type="range" id="loanTenureSlider" class="dp-slider" min="1" max="30" step="1" value="20" oninput="onLoanTenureSlider(this.value)" aria-label="Loan tenure slider">
           </div>
         </div>
       </div>
@@ -2490,10 +2490,10 @@
       <table class="ak-calc-article-table">
         <thead>
           <tr>
-            <th class="ak-table-text">Milestone</th>
-            <th class="ak-table-num">Annual Principal Paid</th>
-            <th class="ak-table-num">Annual Interest Paid</th>
-            <th class="ak-table-num">Ending Loan Balance</th>
+            <th scope="col" class="ak-table-text">Milestone</th>
+            <th scope="col" class="ak-table-num">Annual Principal Paid</th>
+            <th scope="col" class="ak-table-num">Annual Interest Paid</th>
+            <th scope="col" class="ak-table-num">Ending Loan Balance</th>
           </tr>
         </thead>
         <tbody id="amortizationTbody">
