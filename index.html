@@ -224,6 +224,47 @@ if (!window.location.hash || window.location.hash === '#') {
     <link rel="preload" href="style-guide/assets/fonts/cormorant-latin.woff2?v=v96" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="website.min.css?v=20260910_live_v3"><style>
 html:not(.is-ready) { scroll-behavior: auto !important; }
+
+/* Architectural Acre&Key FAQ Filter Tabs (Replaces oval pills) */
+.faq-filter-tabs-bar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 2rem !important;
+    border-bottom: 1px solid rgba(20, 29, 36, 0.1) !important;
+    padding-bottom: 1.25rem !important;
+}
+.faq-filter-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #FAF8F5 !important;
+    border: 1px solid rgba(20, 29, 36, 0.14) !important;
+    color: #2F3B42 !important;
+    font-family: var(--font-body), 'Manrope', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    padding: 8px 18px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-sizing: border-box !important;
+}
+.faq-filter-btn:hover {
+    background: #F3EFEA !important;
+    border-color: rgba(190, 117, 85, 0.45) !important;
+    color: #141D24 !important;
+    transform: translateY(-1px) !important;
+}
+.faq-filter-btn.active {
+    background: #141D24 !important;
+    border-color: #141D24 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(20, 29, 36, 0.18) !important;
+    transform: none !important;
+}
+
 /* Authoritative CTA Button & Arrow Badge QC */
 .primary-cta-btn,
 .nav-cta-btn,
