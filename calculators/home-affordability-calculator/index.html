@@ -746,33 +746,35 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.5rem;
       margin-top: 0.15rem;
       margin-bottom: 0.35rem;
       background: #FAF8F5;
-      padding: 0.35rem 0.65rem;
+      padding: 0.35rem 0.55rem;
       border-radius: 6px;
       border: 1px solid rgba(43, 43, 43, 0.1);
     }
     .dp-foir-left {
       flex: 1;
+      min-width: 0;
     }
     .ak-foir-picker {
       display: flex;
-      gap: 0.25rem;
+      gap: 0.2rem;
       margin-top: 0.15rem;
     }
     .ak-foir-opt {
       border: 1px solid rgba(43, 43, 43, 0.18);
       background: #FFFFFF;
       border-radius: 4px;
-      padding: 0.2rem 0.45rem;
+      padding: 0.18rem 0.38rem;
       text-align: center;
       cursor: pointer;
       display: flex;
       align-items: baseline;
-      gap: 3px;
+      gap: 2px;
       transition: all 0.15s ease;
+      white-space: nowrap;
     }
     .ak-foir-opt:hover {
       border-color: var(--refined-brass, #7d442a);
@@ -801,6 +803,8 @@
       padding: 0;
       margin: 0;
       text-align: right;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
     .ak-dsb-title {
       font-size: 0.66rem;
@@ -824,7 +828,21 @@
       grid-template-columns: 1fr 1fr;
       gap: 0.65rem;
       margin-top: 0.15rem;
-      padding-bottom: 0.35rem;
+      padding-bottom: 0.45rem;
+    }
+    .dp-inputs-row-2col .dp-field-header {
+      min-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+    }
+    .dp-inputs-row-2col .dp-field-label {
+      white-space: nowrap;
+    }
+    .dp-inputs-row-2col .dp-field-sub {
+      white-space: nowrap;
     }
 
     /* Results Card */
@@ -2091,7 +2109,7 @@
             <div class="dp-field-header" style="margin-bottom: 0.2rem;">
               <label class="dp-field-label" for="interestRateInput" style="font-size: 0.78rem;">
                 <span class="material-symbols-outlined" style="font-size: 16px; color: var(--refined-brass);">trending_up</span>
-                Interest Rate (p.a.)
+                Interest Rate
               </label>
               <span class="dp-field-sub" id="interestBenchmarkLabel" style="font-size: 0.74rem;">8.50%</span>
             </div>
@@ -3127,7 +3145,7 @@
       document.getElementById('foirPercentageBadge').innerText = state.foir + '% Benchmark';
       document.getElementById('derivedEmiCapacity').innerText = '₹ ' + formatIndian(maxPermissibleEmi);
 
-      document.getElementById('interestBenchmarkLabel').innerText = 'Benchmark: ' + state.interest.toFixed(2) + '%';
+      document.getElementById('interestBenchmarkLabel').innerText = state.interest.toFixed(2) + '%';
       document.getElementById('interestRateInput').value = state.interest.toFixed(2);
       document.getElementById('interestRateSlider').value = state.interest;
       updateSliderTrack(document.getElementById('interestRateSlider'));
