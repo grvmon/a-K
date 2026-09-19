@@ -37,7 +37,7 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 999999999 !important;
-  display: flex;
+  display: none;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 24px;
@@ -48,9 +48,17 @@
 }
 
 .abha-modal-overlay.abha-modal-open {
+  display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
+}
+
+.abha-modal-overlay:not(.abha-modal-open) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .abha-modal-backdrop {

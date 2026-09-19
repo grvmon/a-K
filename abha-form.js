@@ -1014,6 +1014,8 @@
     }
     if (btnText) btnText.textContent = STRINGS.btnSubmit;
 
+    modalOverlay.style.display = "flex";
+    void modalOverlay.offsetWidth;
     modalOverlay.classList.add("abha-modal-open");
     modalOverlay.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -1044,6 +1046,11 @@
     stopPhoneAutofillWatch();
     modalOverlay.classList.remove("abha-modal-open");
     modalOverlay.setAttribute("aria-hidden", "true");
+    setTimeout(function() {
+      if (modalOverlay && !modalOverlay.classList.contains("abha-modal-open")) {
+        modalOverlay.style.display = "none";
+      }
+    }, 280);
     document.body.style.overflow = "";
     closeCcPanel();
   }

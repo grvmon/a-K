@@ -1215,3 +1215,19 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
 .advisor-status-text strong {
     color: #7D442A !important;
 }
+
+/* --- 8. MOBILE FOOTER CLEARANCE & ZERO-OVERFLOW SAFEGUARD --- */
+@media (max-width: 768px) {
+    .site-footer {
+        padding-bottom: max(210px, calc(190px + env(safe-area-inset-bottom, 24px))) !important;
+    }
+}
+
+/* Prevent iOS WebKit translateY overflow when modals are inactive */
+.lf-modal-overlay:not(.lf-modal-open),
+.abha-modal-overlay:not(.abha-modal-open) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

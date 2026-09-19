@@ -7875,7 +7875,7 @@ button:focus-visible,a:focus-visible {
 }
 @media (max-width: 600px) {
     .site-footer {
-        padding: 50px 0 24px 0;
+        padding: 50px 0 max(210px, calc(190px + env(safe-area-inset-bottom, 24px))) 0;
     }
     .footer-bottom-line {
         flex-direction: column;
@@ -7884,8 +7884,9 @@ button:focus-visible,a:focus-visible {
     }
 }
 
-/* ── MODAL OVERLAY ZERO-FOUC PROTECTION ── */
-.lf-modal-overlay:not(.lf-modal-open) {
+/* ── MODAL OVERLAY ZERO-FOUC & ZERO-OVERFLOW PROTECTION ── */
+.lf-modal-overlay:not(.lf-modal-open),
+.abha-modal-overlay:not(.abha-modal-open) {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
