@@ -419,7 +419,7 @@
     .header-nav .mobile-toggle {
       display: none;
     }
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       .header-nav .nav-links,
       .header-nav .nav-cta-btn {
         display: none !important;
@@ -1416,7 +1416,7 @@
       display: block;
     }
 
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       .dp-main-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1441,7 +1441,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       .ak-calc-kicker {
         font-size: 0.68rem;
         letter-spacing: 0.12em;
@@ -1473,7 +1473,7 @@
         grid-template-columns: 1fr;
       }
     }
-    @media (max-width: 640px) {
+    @media screen and (max-width: 640px) {
       .dp-calc-container {
         margin-top: 85px;
         padding: 0 1rem;
@@ -1664,7 +1664,7 @@
       .dp-slider-wrap, .ak-preset-strip, .ak-results-tabs,
       .dp-afford-card, .dp-explore-section, .ak-more-calcs-section,
       .dp-print-summary-btn, .ak-bank-calc-btn, .ak-sim-control-box,
-      .dp-hero-cta,
+      .dp-hero-right, .dp-hero-cta,
       noscript, iframe {
         display: none !important;
       }
@@ -1672,7 +1672,7 @@
       body {
         background: #FFFFFF !important;
         color: #141D24 !important;
-        font-size: 11pt !important;
+        font-size: 10.5pt !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
@@ -1685,27 +1685,27 @@
 
       /* Compact Header for Print */
       nav[aria-label="breadcrumb"] {
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.25rem !important;
         font-size: 0.72rem !important;
       }
       .dp-header-bar {
-        margin-bottom: 0.45rem !important;
+        margin-bottom: 0.35rem !important;
       }
       .ak-calc-kicker {
         font-size: 0.62rem !important;
         letter-spacing: 0.12em !important;
-        margin-bottom: 0.2rem !important;
+        margin-bottom: 0.15rem !important;
         color: #7d442a !important;
       }
       .dp-h1 {
-        font-size: 1.65rem !important;
+        font-size: 1.5rem !important;
         line-height: 1.15 !important;
-        margin-bottom: 0.2rem !important;
+        margin-bottom: 0.15rem !important;
         color: #141D24 !important;
       }
       .dp-subtitle {
-        font-size: 0.78rem !important;
-        line-height: 1.35 !important;
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
         margin-bottom: 0 !important;
         color: #4A5568 !important;
         max-width: 100% !important;
@@ -1715,133 +1715,156 @@
       .dp-main-grid {
         display: grid !important;
         grid-template-columns: 1fr 1.05fr !important;
-        gap: 1rem !important;
-        margin-top: 0.5rem !important;
+        gap: 0.85rem !important;
+        margin-top: 0.35rem !important;
+        margin-bottom: 0 !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
       }
 
       .dp-inputs-card, .dp-results-card {
-        padding: 0.85rem !important;
+        padding: 0.65rem 0.8rem !important;
         border: 1px solid rgba(43, 43, 43, 0.18) !important;
         border-radius: 6px !important;
         box-shadow: none !important;
         background: #FFFFFF !important;
+        min-height: 0 !important;
+        height: auto !important;
       }
 
       .dp-card-title {
-        font-size: 1.15rem !important;
-        margin-bottom: 0.45rem !important;
+        font-size: 1.05rem !important;
+        margin-bottom: 0.35rem !important;
+      }
+      .dp-inputs-header, .dp-results-header {
+        margin-bottom: 0.35rem !important;
       }
 
       /* Inputs Column */
       .dp-field-group {
-        margin-bottom: 0.42rem !important;
+        margin-bottom: 0.32rem !important;
       }
       .dp-field-label {
-        font-size: 0.78rem !important;
+        font-size: 0.74rem !important;
+        margin-bottom: 0.15rem !important;
       }
       .dp-text-input {
-        padding: 0.38rem 0.65rem !important;
-        font-size: 0.88rem !important;
+        padding: 0.3rem 0.55rem !important;
+        font-size: 0.82rem !important;
         height: auto !important;
         background: #FAF8F5 !important;
         border: 1px solid rgba(43, 43, 43, 0.2) !important;
       }
       .dp-input-prefix, .dp-input-suffix {
-        font-size: 0.78rem !important;
-        padding: 0.38rem 0.5rem !important;
+        font-size: 0.74rem !important;
+        padding: 0.3rem 0.45rem !important;
+      }
+      .dp-auto-loan-box {
+        padding: 0.35rem 0.6rem !important;
+        margin-bottom: 0.32rem !important;
       }
 
       /* Results Column */
-      .dp-results-header {
-        margin-bottom: 0.45rem !important;
-      }
       .ak-tab-view {
-        min-height: auto !important;
+        min-height: 0 !important;
+        height: auto !important;
+      }
+      #viewCore {
+        display: block !important;
+      }
+      #viewTax, #viewPrepay {
+        display: none !important;
       }
       .dp-hero-box {
-        padding: 0.7rem 0.85rem !important;
-        margin-bottom: 0.5rem !important;
+        padding: 0.55rem 0.75rem !important;
+        margin-bottom: 0.4rem !important;
         background: #FAF8F5 !important;
         border: 1px solid rgba(125, 68, 42, 0.25) !important;
         border-radius: 6px !important;
+        display: block !important;
       }
       .dp-hero-amount {
-        font-size: 1.55rem !important;
+        font-size: 1.45rem !important;
         line-height: 1.1 !important;
       }
       .dp-hero-desc {
-        font-size: 0.7rem !important;
-        margin-top: 0.2rem !important;
+        font-size: 0.68rem !important;
+        margin-top: 0.15rem !important;
       }
 
       .dp-stats-grid {
-        gap: 0.45rem !important;
-        margin-bottom: 0.5rem !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.4rem !important;
+        margin-bottom: 0.4rem !important;
       }
       .dp-stat-card {
-        padding: 0.42rem 0.55rem !important;
+        padding: 0.35rem 0.5rem !important;
         border-radius: 6px !important;
       }
       .dp-stat-value {
-        font-size: 1.05rem !important;
+        font-size: 0.98rem !important;
       }
       .dp-stat-name {
-        font-size: 0.66rem !important;
+        font-size: 0.64rem !important;
       }
       .dp-stat-sub {
-        font-size: 0.6rem !important;
+        font-size: 0.58rem !important;
+      }
+
+      .dp-stack-container {
+        margin-bottom: 0.4rem !important;
+        padding: 0.35rem 0.5rem !important;
       }
 
       .dp-salary-qual-card {
-        padding: 0.48rem 0.75rem !important;
-        margin-bottom: 0.5rem !important;
+        padding: 0.4rem 0.65rem !important;
+        margin-bottom: 0.4rem !important;
         border-radius: 6px !important;
         border: 1px solid rgba(125, 68, 42, 0.2) !important;
       }
       .dp-salary-qual-tag {
-        font-size: 0.6rem !important;
+        font-size: 0.58rem !important;
       }
       .dp-salary-qual-val {
-        font-size: 0.95rem !important;
+        font-size: 0.9rem !important;
       }
       .dp-salary-qual-desc {
-        font-size: 0.66rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.64rem !important;
+        line-height: 1.25 !important;
       }
 
       .dp-breakdown-box {
-        padding: 0.48rem 0.75rem !important;
-        margin-bottom: 0.5rem !important;
+        padding: 0.4rem 0.65rem !important;
+        margin-bottom: 0.4rem !important;
         border-radius: 6px !important;
       }
       .dp-breakdown-title {
-        font-size: 0.74rem !important;
-        margin-bottom: 0.3rem !important;
+        font-size: 0.72rem !important;
+        margin-bottom: 0.25rem !important;
       }
       .dp-cost-row {
-        padding: 0.2rem 0 !important;
-        font-size: 0.72rem !important;
+        padding: 0.15rem 0 !important;
+        font-size: 0.7rem !important;
       }
 
       .dp-feasibility-alert {
-        padding: 0.42rem 0.65rem !important;
+        padding: 0.35rem 0.55rem !important;
         border-radius: 6px !important;
       }
       .dp-alert-title {
-        font-size: 0.72rem !important;
+        font-size: 0.7rem !important;
       }
       .dp-alert-sub {
-        font-size: 0.66rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.64rem !important;
+        line-height: 1.25 !important;
       }
 
       /* Educational Article on Subsequent Pages */
       .ak-calc-article {
         page-break-before: always !important;
         break-before: page !important;
-        margin-top: 1.5rem !important;
+        margin-top: 1rem !important;
         padding: 0 !important;
         max-width: 100% !important;
       }
@@ -1849,62 +1872,99 @@
         page-break-after: avoid !important;
         break-after: avoid !important;
         margin-top: 1rem !important;
+        margin-bottom: 0.35rem !important;
+        font-size: 1.15rem !important;
       }
-      .ak-calc-article-table, .ak-faq-item {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
+      .ak-calc-article p {
+        font-size: 0.78rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .ak-calc-article ul, .ak-calc-article ol {
+        font-size: 0.76rem !important;
+        line-height: 1.4 !important;
+        margin: 0.35rem 0 0.5rem 1.2rem !important;
+      }
+      .ak-calc-article li {
+        margin-bottom: 0.25rem !important;
       }
 
-      /* Article Tables in Print */
+      /* Callouts */
+      .ak-formula-box, .ak-tradeoff-box, blockquote {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin: 0.6rem 0 !important;
+        padding: 0.5rem 0.75rem !important;
+        border-radius: 6px !important;
+        font-size: 0.76rem !important;
+      }
+
+      /* Tables: allow row breaks so tables don't push huge empty blocks */
       .ak-table-responsive {
         overflow: visible !important;
         width: 100% !important;
-        margin: 0.85rem 0 !important;
+        margin: 0.5rem 0 0.85rem 0 !important;
         border: 1px solid #E2E8F0 !important;
         box-shadow: none !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
       }
       .ak-calc-article-table {
         width: 100% !important;
         min-width: 0 !important;
-        font-size: 0.72rem !important;
+        font-size: 0.7rem !important;
         border-collapse: collapse !important;
         table-layout: auto !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+      }
+      .ak-calc-article-table thead {
+        display: table-header-group !important;
+      }
+      .ak-calc-article-table tr {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
       .ak-calc-article-table th {
         background: #141D24 !important;
         color: #FFFFFF !important;
-        padding: 0.4rem 0.38rem !important;
-        font-size: 0.69rem !important;
+        padding: 0.32rem 0.35rem !important;
+        font-size: 0.68rem !important;
         white-space: normal !important;
       }
       .ak-calc-article-table td {
-        padding: 0.35rem 0.38rem !important;
-        font-size: 0.69rem !important;
+        padding: 0.28rem 0.35rem !important;
+        font-size: 0.68rem !important;
         white-space: normal !important;
         border-bottom: 1px solid #E5E7EB !important;
       }
 
-      /* FAQs in Print: Expand All Answers and Hide Chevron */
+      /* FAQs in Print: Compact and flowing without empty gaps */
       .ak-faq-section {
-        margin-top: 1.25rem !important;
-        padding-top: 0.85rem !important;
+        margin-top: 1rem !important;
+        padding-top: 0.6rem !important;
       }
       .ak-faq-item {
-        padding: 0.6rem 0 !important;
+        padding: 0.4rem 0 !important;
+        border-bottom: 1px solid #E5E7EB !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
       }
       .ak-faq-question {
-        font-size: 0.9rem !important;
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+        color: #141D24 !important;
+        margin-bottom: 0.15rem !important;
       }
       .ak-faq-question .material-symbols-outlined {
         display: none !important;
       }
       .ak-faq-answer {
         display: block !important;
-        padding-top: 0.3rem !important;
-        font-size: 0.78rem !important;
-        line-height: 1.45 !important;
+        padding-top: 0.15rem !important;
+        font-size: 0.74rem !important;
+        line-height: 1.4 !important;
         color: #33414C !important;
       }
     }
