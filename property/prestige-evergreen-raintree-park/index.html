@@ -1157,6 +1157,30 @@ html { scroll-behavior: auto !important; }
       color: #2F3B42;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+    .evergreen-cost-cta-btn {
+      width: 100% !important;
+      padding: 0.8rem 1rem !important;
+      font-size: 0.92rem !important;
+      font-weight: 700 !important;
+      border-radius: 8px !important;
+      background: #2F3B42 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #2F3B42 !important;
+      cursor: pointer !important;
+      box-shadow: 0 4px 14px rgba(47, 59, 66, 0.2) !important;
+      transition: all 0.2s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.4rem !important;
+      font-family: 'Manrope', sans-serif !important;
+    }
+    .evergreen-cost-cta-btn:hover {
+      background: #8C6734 !important;
+      border-color: #8C6734 !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 14px rgba(140, 103, 52, 0.3) !important;
+    }
     @media (max-width: 1024px) {
       .evergreen-main-grid {
         grid-template-columns: 1fr !important;
@@ -1174,9 +1198,6 @@ html { scroll-behavior: auto !important; }
     
     <!-- Section Header -->
     <div style="margin-bottom: 2rem;">
-      <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.35rem;">
-        ACRE&amp;KEY PROPERTY DECISION TOOL
-      </div>
       <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
         Official Floor Plans &amp; Space Analysis
       </h2>
@@ -1302,8 +1323,8 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.75rem 1rem; font-size:0.9rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(140,103,52,0.25); transition:background 0.2s ease;">
-            Get Detailed Cost Sheet &rarr;
+          <button type="button" class="sd-btn-gold evergreen-cost-cta-btn" onclick="window.openModal(); return false;">
+            <span>Get Detailed Cost Sheet &rarr;</span>
           </button>
           <div style="text-align:center; margin-top:0.55rem;">
             <button type="button" onclick="window.evergreenTriggerFullscreen(); return false;" style="background:none; border:none; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:underline; font-family:'Manrope',sans-serif; padding:0;">
