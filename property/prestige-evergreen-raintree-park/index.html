@@ -44,7 +44,7 @@ html { scroll-behavior: auto !important; }
 .advisor-status-text { color: #374151 !important; }
 .advisor-status-text strong { color: #7D3216 !important; }
 .ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
-.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 260px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 6px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 260px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 .ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2F3B42 transparent transparent transparent; }
 .ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
 .local-nav-link {
@@ -68,7 +68,7 @@ html { scroll-behavior: auto !important; }
 @media (max-width: 768px) {
   .prop-section, #verdict, #masterplan { scroll-margin-top: 110px; }
   .prop-container { padding-left: 0.85rem !important; padding-right: 0.85rem !important; }
-  div[style*="padding:2.25rem"], div[style*="padding: 2.25rem"], div[style*="padding:2rem"], div[style*="padding: 2rem"] { padding: 1.25rem 1rem !important; border-radius: 12px !important; }
+  div[style*="padding:2.25rem"], div[style*="padding: 2.25rem"], div[style*="padding:2rem"], div[style*="padding: 2rem"] { padding: 1.25rem 1rem !important; border-radius: 4px !important; }
   h2, h2[style*="font-size:2rem"], h2[style*="font-size: 2rem"], h2[style*="font-size:2.13rem"], h2[style*="font-size: 2.13rem"], h2[style*="font-size:2.2rem"] { font-size: 1.45rem !important; line-height: 1.3 !important; }
   h3, h3[style*="font-size:1.65rem"], h3[style*="font-size: 1.65rem"], h3[style*="font-size:2rem"], h3[style*="font-size: 2.07rem"] { font-size: 1.25rem !important; line-height: 1.35 !important; }
   .ak-pros-cons-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
@@ -79,6 +79,26 @@ html { scroll-behavior: auto !important; }
   .prop-snap-num-v2 { font-size: 1.05rem !important; }
   .prop-snap-lbl-v2 { font-size: 0.7rem !important; }
 }
+
+/* Acre&Key Reference Card System (4px Radius & Institutional Styling) */
+.prop-section div[style*="border-radius"],
+.prop-container div[style*="border-radius"],
+.prop-hero-grid div[style*="border-radius"],
+.prop-overview-card div[style*="border-radius"] {
+  border-radius: 4px !important;
+}
+div[style*="border-radius:50%"],
+div[style*="border-radius: 50%"],
+span[style*="border-radius:50%"],
+span[style*="border-radius: 50%"],
+img[style*="border-radius:50%"],
+img[style*="border-radius: 50%"] {
+  border-radius: 50% !important;
+}
+.sd-btn-gold, .evergreen-cost-cta-btn, button, input {
+  border-radius: 4px !important;
+}
+
 </style>
 <style>
 .ak-mobile-hero-v5 { display: none; }
@@ -89,9 +109,9 @@ html { scroll-behavior: auto !important; }
 @media (max-width: 768px) {
   .prop-hero-grid, .prop-snapshot-strip-v2 { display: none !important; }
   .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
-  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 8px; overflow: hidden; margin-bottom: 0.85rem; }
+  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 4px; overflow: hidden; margin-bottom: 0.85rem; }
   .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; }
-  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(15, 31, 61, 0.75); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 20px; backdrop-filter: blur(4px); }
+  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(15, 31, 61, 0.75); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 3px; backdrop-filter: blur(4px); }
   .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.95); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
   .desktop-only-nav { display: none !important; }
   .mobile-only-nav { display: flex !important; overflow-x: auto !important; white-space: nowrap !important; padding: 0.35rem 0.5rem !important; gap: 0.4rem !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -111,7 +131,7 @@ html { scroll-behavior: auto !important; }
   width: 100%;
   height: 100%;
   min-height: clamp(450px, 52vh, 500px);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   background-color: #141B22;
   box-sizing: border-box;
@@ -187,7 +207,7 @@ html { scroll-behavior: auto !important; }
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 6px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,8 +359,8 @@ html { scroll-behavior: auto !important; }
           Possession: June 2030
         </div>
 
-        <div onclick="window.openAkScoreModal && window.openAkScoreModal();" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
-          <div style="background:#2F3B42; color:#FFFFFF; border-radius:8px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0;">
+        <div onclick="window.openAkScoreModal && window.openAkScoreModal();" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
+          <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0;">
             <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1; color:#FFFFFF;">4.11</div>
             <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
           </div>
@@ -355,16 +375,16 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <div style="display:flex; flex-direction:column; gap:0.55rem; margin-bottom:0.85rem;">
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.9rem; font-size:0.95rem; font-weight:700; border-radius:8px; text-align:center; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(125, 68, 42, 0.25); display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.9rem; font-size:0.95rem; font-weight:700; border-radius: 4px; text-align:center; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(125, 68, 42, 0.25); display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
             <span>Get Buyer Analysis &rarr;</span>
           </button>
-          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" style="width:100%; padding:0.75rem; font-size:0.9rem; font-weight:600; border-radius:8px; text-align:center; background:#FFFFFF; color:#2F3B42; border:1px solid #DDD7CF; font-family:'Manrope',sans-serif; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:0.45rem; box-sizing:border-box;">
+          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" style="width:100%; padding:0.75rem; font-size:0.9rem; font-weight:600; border-radius: 4px; text-align:center; background:#FFFFFF; color:#2F3B42; border:1px solid #DDD7CF; font-family:'Manrope',sans-serif; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:0.45rem; box-sizing:border-box;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F3B42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
             <span>View Floor Plans &rarr;</span>
           </a>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.8rem; font-weight:700; color:#4A5861; background:#FAF9F6; border:1px solid #DDD7CF; border-radius:8px; padding:0.75rem 0.85rem;">
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.8rem; font-weight:700; color:#4A5861; background:#FAF9F6; border:1px solid #DDD7CF; border-radius: 4px; padding:0.75rem 0.85rem;">
           <div style="display:flex; align-items:center; gap:0.35rem; color:#2F3B42;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Prestige brand</strong> + township scale</span></div>
           <div style="display:flex; align-items:center; gap:0.35rem; color:#2F3B42;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Adjacent to</strong> Prestige Tech Forest</span></div>
           <div style="display:flex; align-items:center; gap:0.35rem; color:#2F3B42;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Whitefield–Varthur</strong> Connectivity</span></div>
@@ -448,7 +468,7 @@ html { scroll-behavior: auto !important; }
     </div>
   </div>
 
-  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:1px solid rgba(213,209,200,0.85); border-radius:8px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#8C6734';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
+  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:1px solid rgba(213,209,200,0.85); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#8C6734';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
     <div style="display:flex; align-items:baseline; gap:0.15rem;">
       <span style="font-size:1.55rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">4.11</span>
       <span style="font-size:0.82rem; color:#374151; font-weight:500;">/5</span>
@@ -494,7 +514,7 @@ html { scroll-behavior: auto !important; }
       background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
       color: #FFFFFF !important;
       border: 1px solid #9f5334 !important;
-      border-radius: 6px !important;
+      border-radius: 4px !important;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
       font-size: 0.92rem !important;
       font-weight: 600 !important;
@@ -523,7 +543,7 @@ html { scroll-behavior: auto !important; }
       background: #FFFFFF !important;
       color: #2F3B42 !important;
       border: 1px solid #D5C7B8 !important;
-      border-radius: 6px !important;
+      border-radius: 4px !important;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
       font-size: 0.92rem !important;
       font-weight: 600 !important;
@@ -554,7 +574,7 @@ html { scroll-behavior: auto !important; }
     </a>
   </div>
 
-  <div class="ak-info-insight" style="background:#FAF9F6; border-radius:8px; padding:0.6rem 0.85rem; margin-bottom:0; border:1px solid rgba(213,209,200,0.7); box-shadow:none;">
+  <div class="ak-info-insight" style="background:#FAF9F6; border-radius: 4px; padding:0.6rem 0.85rem; margin-bottom:0; border:1px solid rgba(213,209,200,0.7); box-shadow:none;">
     <div class="ak-view-row" style="display:flex; align-items:stretch; gap:0.95rem;">
       <!-- Column 1: Highlights -->
       <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
@@ -694,7 +714,7 @@ html { scroll-behavior: auto !important; }
         </p>
       </div>
 
-      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius:8px; overflow:hidden; border:1px solid #DDD7CF; box-shadow:0 4px 16px rgba(15, 31, 61, 0.05);">
+      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius: 4px; overflow:hidden; border:1px solid #DDD7CF; box-shadow:0 4px 16px rgba(15, 31, 61, 0.05);">
         <!-- Top-left category badge -->
         <div style="position:absolute; top:12px; left:12px; z-index:3; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:4px; border:1px solid rgba(255,255,255,0.15); pointer-events:none;">
           Township Walkthrough · 3:53
@@ -712,7 +732,7 @@ html { scroll-behavior: auto !important; }
           </span>
         </div>
 
-        <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px; background:#2B2B2B; display:block;">
+        <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius: 4px; background:#2B2B2B; display:block;">
           <source src="../../style-guide/assets/prestige_evergreen_walkthrough.mp4?v=20260829_v1" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -736,7 +756,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 2: Acre&Key Verdict & Assessment (Consolidated) -->
 <section id="verdict" class="prop-section" style="border-top:none; padding: clamp(2rem, 3.5vw, 2.75rem) 0;">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:10px; padding:clamp(1.15rem, 2.5vw, 1.75rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.15rem, 2.5vw, 1.75rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       
       <!-- Header with Score Badge -->
       <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.15rem; margin-bottom:1.25rem;">
@@ -752,13 +772,13 @@ html { scroll-behavior: auto !important; }
           </p>
         </div>
 
-        <div style="display:flex; align-items:center; gap:0.85rem; background:#FBF6F3; border:1px solid rgba(140,103,52,0.25); border-radius:8px; padding:0.6rem 1rem; cursor:pointer; flex-shrink:0; transition:all 0.2s ease;" onclick="openAkScoreModal();" title="Click to view full 6-pillar score breakdown" onmouseover="this.style.borderColor='#8C6734'; this.style.boxShadow='0 4px 12px rgba(140,103,52,0.1)';" onmouseout="this.style.borderColor='rgba(140,103,52,0.25)'; this.style.boxShadow='none';">
+        <div style="display:flex; align-items:center; gap:0.85rem; background:#FBF6F3; border:1px solid rgba(140,103,52,0.25); border-radius: 4px; padding:0.6rem 1rem; cursor:pointer; flex-shrink:0; transition:all 0.2s ease;" onclick="openAkScoreModal();" title="Click to view full 6-pillar score breakdown" onmouseover="this.style.borderColor='#8C6734'; this.style.boxShadow='0 4px 12px rgba(140,103,52,0.1)';" onmouseout="this.style.borderColor='rgba(140,103,52,0.25)'; this.style.boxShadow='none';">
           <div style="text-align:right;">
             <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; font-family:'Josefin Sans', sans-serif;">ACRE&amp;KEY SCORE</div>
             <div style="font-size:0.76rem; font-weight:700; color:#2F3B42;">6 Pillars Evaluated</div>
             <div style="font-size:0.65rem; font-weight:700; color:#8C6734; margin-top:0.1rem; display:flex; align-items:center; justify-content:flex-end; gap:0.2rem;">View Breakdown &nearr;</div>
           </div>
-          <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.4rem 0.65rem; font-family:'Manrope',sans-serif; text-align:center;">
+          <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.4rem 0.65rem; font-family:'Manrope',sans-serif; text-align:center;">
             <span style="font-size:1.35rem; font-weight:800; line-height:1;">4.11</span>
             <span style="font-size:0.7rem; opacity:0.75;">/5</span>
           </div>
@@ -768,7 +788,7 @@ html { scroll-behavior: auto !important; }
       <!-- Unified 2-Column Decision & Diligence Matrix -->
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem; margin-bottom:1.25rem;">
         <!-- Left: Investment Case & Who Should Buy -->
-        <div style="background:#F9FBF9; border:1px solid #D1E0D7; border-radius:8px; padding:1.1rem 1.25rem;">
+        <div style="background:#F9FBF9; border:1px solid #D1E0D7; border-radius: 4px; padding:1.1rem 1.25rem;">
           <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.85rem; padding-bottom:0.45rem; border-bottom:1.5px solid #D1E0D7;">
             <span style="font-size:0.82rem; font-weight:800; color:#1B5E20; text-transform:uppercase; letter-spacing:0.04em; display:flex; align-items:center; gap:0.4rem;">
               <span style="display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.65rem; font-weight:800;">✓</span>
@@ -797,7 +817,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Right: Watch-Outs & Avoid Criteria -->
-        <div style="background:#FDFBF9; border:1px solid #EADBCE; border-radius:8px; padding:1.1rem 1.25rem;">
+        <div style="background:#FDFBF9; border:1px solid #EADBCE; border-radius: 4px; padding:1.1rem 1.25rem;">
           <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.85rem; padding-bottom:0.45rem; border-bottom:1.5px solid #EADBCE;">
             <span style="font-size:0.82rem; font-weight:800; color:#8C6734; text-transform:uppercase; letter-spacing:0.04em; display:flex; align-items:center; gap:0.4rem;">
               <span style="display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; background:#8C6734; color:#FFFFFF; border-radius:50%; font-size:0.65rem; font-weight:800;">!</span>
@@ -827,13 +847,13 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Streamlined Advisory Concierge Action Bar -->
-      <div style="padding:0.75rem 1.15rem; background:linear-gradient(135deg, #FBF6F3 0%, #FAF8F5 100%); border:1px solid rgba(140,103,52,0.22); border-radius:8px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+      <div style="padding:0.75rem 1.15rem; background:linear-gradient(135deg, #FBF6F3 0%, #FAF8F5 100%); border:1px solid rgba(140,103,52,0.22); border-radius: 4px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
         <div>
           <div style="font-size:0.85rem; font-weight:700; color:#2F3B42;">Unsure if Evergreen aligns with your commute, budget, and possession horizon?</div>
           <div style="font-size:0.75rem; color:#667085; margin-top:0.1rem;">Independent 15-minute consultation with our Whitefield research lead · Unhurried analysis, zero broker bias.</div>
         </div>
         <div style="margin-right:clamp(0px, 14vw, 210px);">
-          <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="padding:0.55rem 1.1rem; font-size:0.8rem; font-weight:700; background:#8C6734; color:#FFFFFF; border:none; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.35rem; box-shadow:0 2px 8px rgba(140,103,52,0.18); transition:background 0.2s ease;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal();" style="padding:0.55rem 1.1rem; font-size:0.8rem; font-weight:700; background:#8C6734; color:#FFFFFF; border:none; border-radius: 4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.35rem; box-shadow:0 2px 8px rgba(140,103,52,0.18); transition:background 0.2s ease;">
             <span>Schedule 15-Min Diligence Call &rarr;</span>
           </button>
         </div>
@@ -856,13 +876,13 @@ html { scroll-behavior: auto !important; }
     </div>
 
     <!-- Master Precinct Aerial Anchor Visual -->
-    <div style="border-radius:12px; border:1px solid #DDD7CF; overflow:hidden; position:relative; margin-bottom:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04); background:#0D1B24;">
+    <div style="border-radius: 4px; border:1px solid #DDD7CF; overflow:hidden; position:relative; margin-bottom:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04); background:#0D1B24;">
       <div style="position:relative; width:100%; height:clamp(240px, 32vw, 380px); overflow:hidden;">
         <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp" alt="Prestige Evergreen Precinct Master Plan Aerial" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,27,36,0.2) 0%, rgba(13,27,36,0.65) 100%);"></div>
         
         <!-- Top Badge -->
-        <div style="position:absolute; top:1rem; left:1rem; background:rgba(13, 27, 36, 0.85); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); color:#FFFFFF; font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; padding:0.4rem 0.85rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15); display:inline-flex; align-items:center; gap:0.45rem;">
+        <div style="position:absolute; top:1rem; left:1rem; background:rgba(13, 27, 36, 0.85); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); color:#FFFFFF; font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; padding:0.4rem 0.85rem; border-radius: 4px; border:1px solid rgba(255,255,255,0.15); display:inline-flex; align-items:center; gap:0.45rem;">
           <span style="color:#D8A566; font-size:0.85rem;">⌖</span> 107-ACRE INTEGRATED TOWNSHIP PRECINCT
         </div>
       </div>
@@ -894,10 +914,10 @@ html { scroll-behavior: auto !important; }
     </div>
 
     <!-- Phase 1 vs Phase 2 Disambiguation Card -->
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3vw, 1.85rem); margin-bottom:2.5rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.85rem); margin-bottom:2.5rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem; border-bottom:1px solid #EDE8E1; padding-bottom:0.9rem;">
         <div style="display:flex; align-items:center; gap:0.6rem;">
-          <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:#8C6734; color:#FFFFFF; border-radius:6px; font-size:0.85rem; font-weight:800; flex-shrink:0;">🧭</span>
+          <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:#8C6734; color:#FFFFFF; border-radius: 4px; font-size:0.85rem; font-weight:800; flex-shrink:0;">🧭</span>
           <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#2F3B42; margin:0; line-height:1.2;">
             Township Master Differentiation: Phase 1 vs Phase 2 (Evergreen)
           </h3>
@@ -909,7 +929,7 @@ html { scroll-behavior: auto !important; }
       
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:1.25rem;">
         <!-- Phase 1 Card -->
-        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.6rem;">
               <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#59616B; background:#FFFFFF; border:1px solid #CFD8DC; padding:0.25rem 0.65rem; border-radius:4px;">PHASE 1</span>
@@ -935,7 +955,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Phase 2 Card (Current) -->
-        <div style="background:#FFFFFF; border:2px solid #8C6734; border-radius:10px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between; position:relative; box-shadow:0 6px 20px rgba(140,103,52,0.08);">
+        <div style="background:#FFFFFF; border:2px solid #8C6734; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between; position:relative; box-shadow:0 6px 20px rgba(140,103,52,0.08);">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.6rem;">
               <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#1B5E20; background:#E8F5E9; border:1px solid #C8E6C9; padding:0.25rem 0.65rem; border-radius:4px;">PHASE 2 · CURRENT EVALUATION</span>
@@ -979,7 +999,7 @@ html { scroll-behavior: auto !important; }
 
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:1.25rem;">
       <!-- Orientation 1: Lake Facing -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
             <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#1B5E20; background:#E8F5E9; border:1px solid #D1E0D7; padding:0.2rem 0.55rem; border-radius:4px;">PREMIUM VIEW</span>
@@ -1010,13 +1030,13 @@ html { scroll-behavior: auto !important; }
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid #EDE8E1; display:flex; justify-content:space-between; align-items:center;">
             <a href="#floor-plans" style="font-size:0.82rem; font-weight:800; color:#8C6734; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">View Tower Plans &darr;</a>
-            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.2s ease;">Check Availability</button>
+            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius: 4px; transition:all 0.2s ease;">Check Availability</button>
           </div>
         </div>
       </div>
 
       <!-- Orientation 2: Courtyard / Podium Facing -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
             <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#2F3B42; background:#F4F6F8; border:1px solid #CFD8DC; padding:0.2rem 0.55rem; border-radius:4px;">FAMILY &amp; TRANQUIL</span>
@@ -1048,13 +1068,13 @@ html { scroll-behavior: auto !important; }
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid #EDE8E1; display:flex; justify-content:space-between; align-items:center;">
             <a href="#floor-plans" style="font-size:0.82rem; font-weight:800; color:#8C6734; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">View Tower Plans &darr;</a>
-            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.2s ease;">Check Availability</button>
+            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius: 4px; transition:all 0.2s ease;">Check Availability</button>
           </div>
         </div>
       </div>
 
       <!-- Orientation 3: Perimeter Facing -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
             <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#8C6734; background:#FAF5F2; border:1px solid #EADBCE; padding:0.2rem 0.55rem; border-radius:4px;">ENTRY &amp; FAST COMMUTE</span>
@@ -1083,7 +1103,7 @@ html { scroll-behavior: auto !important; }
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid #EDE8E1; display:flex; justify-content:space-between; align-items:center;">
             <a href="#floor-plans" style="font-size:0.82rem; font-weight:800; color:#8C6734; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">View Tower Plans &darr;</a>
-            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius:6px; transition:all 0.2s ease;">Check Availability</button>
+            <button type="button" onclick="window.openModal();" style="background:#FAF8F5; border:1px solid #8C6734; color:#8C6734; font-size:0.78rem; font-weight:700; cursor:pointer; padding:0.35rem 0.75rem; border-radius: 4px; transition:all 0.2s ease;">Check Availability</button>
           </div>
         </div>
       </div>
@@ -1103,7 +1123,7 @@ html { scroll-behavior: auto !important; }
       font-size: 0.92rem;
       font-weight: 700;
       padding: 0.6rem 1.25rem;
-      border-radius: 8px;
+      border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
@@ -1126,7 +1146,7 @@ html { scroll-behavior: auto !important; }
       font-size: 0.85rem;
       font-weight: 600;
       padding: 0.45rem 0.95rem;
-      border-radius: 20px;
+      border-radius: 3px;
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
@@ -1162,7 +1182,7 @@ html { scroll-behavior: auto !important; }
       padding: 0.8rem 1rem !important;
       font-size: 0.92rem !important;
       font-weight: 700 !important;
-      border-radius: 8px !important;
+      border-radius: 4px !important;
       background: #2F3B42 !important;
       color: #FFFFFF !important;
       border: 1px solid #2F3B42 !important;
@@ -1230,30 +1250,30 @@ html { scroll-behavior: auto !important; }
     <div class="evergreen-main-grid" style="display:grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap:1.5rem; align-items:start; width:100%; box-sizing:border-box;">
       
       <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.25rem; box-shadow:0 4px 16px rgba(47, 59, 66,0.04); position:relative;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:1.25rem; box-shadow:0 4px 16px rgba(47, 59, 66,0.04); position:relative;">
         
         <!-- Viewer Top Bar -->
         <div style="display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid #E5E7EB;">
           
           <!-- Zoom & Fullscreen Controls -->
           <div style="display:flex; align-items:center; gap:0.4rem;">
-            <button type="button" onclick="window.evergreenZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#2F3B42; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+            <button type="button" onclick="window.evergreenZoom(0.15)" title="Zoom In" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#2F3B42; font-weight:700; width:32px; height:32px; border-radius: 4px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
               +
             </button>
-            <button type="button" onclick="window.evergreenZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#2F3B42; font-weight:700; width:32px; height:32px; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
+            <button type="button" onclick="window.evergreenZoom(-0.15)" title="Zoom Out" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#2F3B42; font-weight:700; width:32px; height:32px; border-radius: 4px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">
               −
             </button>
-            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius:6px; cursor:pointer;">
+            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#684A20; font-size:0.75rem; font-weight:700; padding:0 0.5rem; height:32px; border-radius: 4px; cursor:pointer;">
               Reset
             </button>
-            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#2F3B42; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
+            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#2F3B42; color:#FFFFFF; border:none; padding:0.4rem 0.85rem; font-size:0.82rem; font-weight:600; border-radius: 4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem;">
               <i data-feather="maximize-2" style="width:13px;height:13px;"></i> View Fullscreen
             </button>
           </div>
         </div>
 
         <!-- Floor Plan Image Frame -->
-        <div id="evergreenFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius:8px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.evergreenTriggerFullscreen()">
+        <div id="evergreenFpFrame" style="width:100%; height:410px; background:#FAF8F5; border-radius: 4px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.evergreenTriggerFullscreen()">
           <img id="evergreenFpMainImg" src="" alt="Prestige Evergreen Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.4rem;">
         </div>
 
@@ -1264,7 +1284,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(47, 59, 66,0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:1.15rem 1.25rem; box-shadow:0 4px 16px rgba(47, 59, 66,0.04); display:flex; flex-direction:column; justify-content:space-between;">
         <div>
           <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; color:#8C6734; text-transform:uppercase; margin-bottom:0.25rem;">
             PLAN AT A GLANCE
@@ -1278,26 +1298,26 @@ html { scroll-behavior: auto !important; }
 
           <!-- Key Metrics Grid -->
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.85rem; border-bottom:1px solid #E5E7EB;">
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius: 4px; padding:0.45rem 0.65rem;">
               <div id="evergreenGlanceSbua" style="font-size:1.05rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">659 sq.ft.</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">SBUA</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius: 4px; padding:0.45rem 0.65rem;">
               <div id="evergreenGlanceCarpet" style="font-size:1.05rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">419 sq.ft.</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Carpet Area</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius: 4px; padding:0.45rem 0.65rem;">
               <div id="evergreenGlanceBalcony" style="font-size:1.05rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">28 sq.ft.</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Balcony &amp; Utility</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius:8px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.18); border-radius: 4px; padding:0.45rem 0.65rem;">
               <div id="evergreenGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East Facing</div>
               <div style="font-size:0.68rem; color:#8C6734; font-weight:700; text-transform:uppercase;">Orientation</div>
             </div>
           </div>
 
           <!-- Space Efficiency Block -->
-          <div style="background:#2F3B42; color:#FFFFFF; border-radius:8px; padding:0.75rem 0.95rem; margin-bottom:1.15rem;">
+          <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.75rem 0.95rem; margin-bottom:1.15rem;">
             <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">
               SPACE EFFICIENCY RATIO
             </div>
@@ -1652,16 +1672,16 @@ html { scroll-behavior: auto !important; }
 
         <!-- Feature Inclusions Grid -->
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:0.75rem; margin-bottom:1.5rem;">
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius: 4px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
             <span style="color:#D4AF37; font-weight:800;">&check;</span> 1 to 4 BHK Sanctioned Layouts
           </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius: 4px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
             <span style="color:#D4AF37; font-weight:800;">&check;</span> 2026 RERA Cost Sheet &amp; Taxes
           </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius: 4px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
             <span style="color:#D4AF37; font-weight:800;">&check;</span> 107-Acre Master Precinct Plan
           </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius: 4px; padding:0.65rem 0.85rem; font-size:0.85rem; color:#FAF8F5; display:flex; align-items:center; gap:0.5rem;">
             <span style="color:#D4AF37; font-weight:800;">&check;</span> Payment Milestones &amp; Schedule
           </div>
         </div>
@@ -1674,8 +1694,8 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Right: Dossier Action Card -->
-      <div style="background:rgba(255, 255, 255, 0.05); border:1px solid rgba(221, 215, 207, 0.22); border-radius:12px; padding:1.75rem; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,0.25); backdrop-filter:blur(8px);">
-        <div style="display:inline-flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:12px; background:rgba(140, 103, 52, 0.25); border:1px solid rgba(212, 175, 55, 0.4); margin-bottom:1rem;">
+      <div style="background:rgba(255, 255, 255, 0.05); border:1px solid rgba(221, 215, 207, 0.22); border-radius: 4px; padding:1.75rem; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,0.25); backdrop-filter:blur(8px);">
+        <div style="display:inline-flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius: 4px; background:rgba(140, 103, 52, 0.25); border:1px solid rgba(212, 175, 55, 0.4); margin-bottom:1rem;">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -1691,7 +1711,7 @@ html { scroll-behavior: auto !important; }
           48 Pages &bull; High-Res PDF &bull; 14.8 MB
         </div>
 
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; display:inline-flex; justify-content:center; align-items:center; gap:0.6rem; padding:0.95rem 1.75rem; font-size:0.98rem; font-weight:700; border-radius:8px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.3); text-decoration:none; transition:transform 0.2s, background 0.2s;">
+        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; display:inline-flex; justify-content:center; align-items:center; gap:0.6rem; padding:0.95rem 1.75rem; font-size:0.98rem; font-weight:700; border-radius: 4px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.3); text-decoration:none; transition:transform 0.2s, background 0.2s;">
           <span>Download Dossier &amp; Cost Sheet &rarr;</span>
         </button>
 
@@ -1707,7 +1727,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 6: True Cost -->
 <section id="true-cost" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.75rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
           True Cost Analysis
@@ -1731,7 +1751,7 @@ html { scroll-behavior: auto !important; }
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border-radius: 10px;
+          border-radius: 4px;
           padding: 1.25rem 1rem;
           text-align: center;
           box-sizing: border-box;
@@ -1810,7 +1830,7 @@ html { scroll-behavior: auto !important; }
         <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; color:#2F3B42; margin-top:0; margin-bottom:1rem; line-height:1.25;">What Gets Added to the Headline Price?</h3>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem;">
           <!-- Column 1: Project Charges -->
-          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.2); border-radius:10px; padding:1.35rem;">
+          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.35rem;">
             <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.85rem; border-bottom:1px solid rgba(140, 103, 52, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background:#8C6734; display:inline-block;"></span> PROJECT INCLUSIONS
             </div>
@@ -1823,7 +1843,7 @@ html { scroll-behavior: auto !important; }
           </div>
 
           <!-- Column 2: Unit-Dependent Premiums -->
-          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.2); border-radius:10px; padding:1.35rem;">
+          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.35rem;">
             <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.85rem; border-bottom:1px solid rgba(140, 103, 52, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background:#8C6734; display:inline-block;"></span> UNIT-DEPENDENT PREMIUMS
             </div>
@@ -1835,7 +1855,7 @@ html { scroll-behavior: auto !important; }
           </div>
 
           <!-- Column 3: Government Charges — Additional -->
-          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.25); border-radius:10px; padding:1.35rem;">
+          <div style="background:#FAF8F5; border:1px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:1.35rem;">
             <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#B76E00; margin-bottom:0.85rem; border-bottom:1px solid rgba(183, 110, 0, 0.2); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background:#B76E00; display:inline-block;"></span> GOVERNMENT STATUTORY LEVIES
             </div>
@@ -1871,7 +1891,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Scrollable Table -->
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius:10px; background:#FFFFFF; margin-bottom:2rem;">
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius: 4px; background:#FFFFFF; margin-bottom:2rem;">
         <table style="width:100%; min-width:640px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem;">
           <thead>
             <tr style="background:#FAF8F5;">
@@ -1917,34 +1937,34 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Interactive Itemized Typology Cost Estimator -->
-      <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
+      <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
           <div>
             <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0;">Select Typology for Acquisition Drilldown</h4>
           </div>
           <!-- Selector Pills -->
           <div id="evergreenCostTabs" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:6px; border:1px solid #8C6734; background:#8C6734; color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">1 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:6px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">2 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:6px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:6px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK + Study</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:6px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK</button>
+            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #8C6734; background:#8C6734; color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">1 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">2 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK + Study</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK</button>
           </div>
         </div>
 
         <!-- Dynamic Content Box -->
-        <div id="evergreenCostBreakdownContent" style="background:#FFFFFF; border:1px solid #EAE6DF; border-radius:10px; padding:1.25rem;">
+        <div id="evergreenCostBreakdownContent" style="background:#FFFFFF; border:1px solid #EAE6DF; border-radius: 4px; padding:1.25rem;">
           <!-- Injected via JavaScript -->
         </div>
       </div>
 
       <!-- Concierge Callout Strip -->
-      <div style="background:linear-gradient(135deg, #FAF8F5 0%, #F5F0EB 100%); border:1px solid #DDD7CF; border-radius:10px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+      <div style="background:linear-gradient(135deg, #FAF8F5 0%, #F5F0EB 100%); border:1px solid #DDD7CF; border-radius: 4px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
         <div>
           <div style="font-weight:800; font-size:0.95rem; color:#2F3B42; margin-bottom:0.2rem;">Looking for an exact tower &amp; floor cost sheet?</div>
           <div style="font-size:0.85rem; color:#4A5861;">Get unit-level quotation including precise floor-rise, preferred view PLC, and payment milestone schedule.</div>
         </div>
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.4rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; text-decoration:none;">
+        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.4rem; font-size:0.88rem; font-weight:700; border-radius: 4px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; text-decoration:none;">
           <span>Request Unit Cost Sheet &rarr;</span>
         </button>
       </div>
@@ -2031,19 +2051,19 @@ html { scroll-behavior: auto !important; }
         '<div style="font-size:0.75rem; color:#1B5E20; font-weight:800; background:#E8F5E9; padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
       '</div>' +
       '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:\'Manrope\',sans-serif;">' +
-        '<div style="background:#FAF8F5; border-radius:6px; padding:0.85rem; border:1px solid #DDD7CF;">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
           '<div style="font-size:0.72rem; color:#8C6734; font-weight:800; text-transform:uppercase;">1. Base Construction</div>' +
           '<div style="font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0.2rem;">' + item.base + '</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius:6px; padding:0.85rem; border:1px solid #DDD7CF;">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
           '<div style="font-size:0.72rem; color:#8C6734; font-weight:800; text-transform:uppercase;">2. Infra, Club &amp; Parking</div>' +
           '<div style="font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0.2rem;">' + item.infra + '</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius:6px; padding:0.85rem; border:1px solid #DDD7CF;">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
           '<div style="font-size:0.72rem; color:#8C6734; font-weight:800; text-transform:uppercase;">3. Statutory Taxes (GST + Reg)</div>' +
           '<div style="font-size:1.05rem; font-weight:800; color:#684A20; margin-top:0.2rem;">' + item.gst + ' + ' + item.stamp + '</div>' +
         '</div>' +
-        '<div style="background:#2F3B42; border-radius:6px; padding:0.85rem; border:1px solid #8C6734;">' +
+        '<div style="background:#2F3B42; border-radius: 4px; padding:0.85rem; border:1px solid #8C6734;">' +
           '<div style="font-size:0.72rem; color:#D4AF37; font-weight:800; text-transform:uppercase;">Total Estimated Outlay</div>' +
           '<div style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-top:0.2rem;">' + item.total + '</div>' +
         '</div>' +
@@ -2062,7 +2082,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 7: Area Appreciation / Investment Perspective -->
 <section id="appreciation" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
           Area Appreciation &amp; Historical Capital Growth
@@ -2074,7 +2094,7 @@ html { scroll-behavior: auto !important; }
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.5rem; margin-bottom:1.5rem;">
         <!-- Left Box: SVG Line Chart -->
-        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.98rem; font-weight:800; color:#2F3B42; margin-bottom:0.2rem;">Whitefield–Varthur Corridor: Grade-A High-Rise Trend</div>
             <div style="font-size:0.75rem; color:#667085; font-style:italic; margin-bottom:1.25rem;">(Weighted Average Base Rate in ₹/sq.ft. for Tier-1 Gated Communities)</div>
@@ -2131,7 +2151,7 @@ html { scroll-behavior: auto !important; }
           </div>
 
           <!-- 3-Pillar Quantitative Strip -->
-          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; background:#FFFFFF; border:1px solid #DDD7CF; border-radius:8px; padding:0.85rem 0.75rem; text-align:center;">
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:0.85rem 0.75rem; text-align:center;">
             <div style="border-right:1px solid #EAE6DF; padding-right:0.35rem;">
               <div style="font-size:0.68rem; font-weight:800; text-transform:uppercase; color:#8C6734;">5-YR CAGR</div>
               <div style="font-size:1.15rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.15rem;">~15.7%</div>
@@ -2148,7 +2168,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Right Box: 4 Core Catalysts -->
-        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:1.02rem; font-weight:800; color:#2F3B42; margin-bottom:1rem;">Structural Drivers Accelerating Corridor Value</div>
 
@@ -2172,14 +2192,14 @@ html { scroll-behavior: auto !important; }
             </div>
           </div>
 
-          <div style="background:#FFFFFF; border:1px solid #EADBCE; border-radius:8px; padding:0.85rem 1rem; font-size:0.82rem; color:#8C6734; font-weight:600; line-height:1.5;">
+          <div style="background:#FFFFFF; border:1px solid #EADBCE; border-radius: 4px; padding:0.85rem 1rem; font-size:0.82rem; color:#8C6734; font-weight:600; line-height:1.5;">
             <strong>Acre&amp;Key Advisory:</strong> Historical capital growth should not be extrapolated linearly. Future returns depend heavily on Varthur Junction bottleneck resolutions and BWSSB Cauvery Stage V distribution.
           </div>
         </div>
       </div>
 
       <!-- Bottom Takeaway & Report CTA Banner -->
-      <div style="background:linear-gradient(135deg, #242E34 0%, #2F3B42 100%); color:#FFFFFF; border:1px solid #8C6734; border-radius:12px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem; box-shadow:0 6px 18px rgba(47, 59, 66, 0.16);">
+      <div style="background:linear-gradient(135deg, #242E34 0%, #2F3B42 100%); color:#FFFFFF; border:1px solid #8C6734; border-radius: 4px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem; box-shadow:0 6px 18px rgba(47, 59, 66, 0.16);">
         <div style="max-width:720px;">
           <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#D4AF37; margin-bottom:0.35rem;">
             INVESTMENT VERDICT &bull; CAPITAL PRESERVATION
@@ -2188,7 +2208,7 @@ html { scroll-behavior: auto !important; }
             The strongest thesis for Prestige Evergreen rests on <strong>long-term technology-led housing absorption and Prestige's delivery track record</strong>, rather than speculative short-term price escalations.
           </div>
         </div>
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.8rem 1.5rem; font-size:0.88rem; font-weight:700; border-radius:6px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; text-decoration:none; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.8rem 1.5rem; font-size:0.88rem; font-weight:700; border-radius: 4px; background:#8C6734; color:#FFFFFF; border:none; cursor:pointer; text-decoration:none; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,0.25);">
           <span>Get Micro-Market Report (PDF) &rarr;</span>
         </button>
       </div>
@@ -2199,7 +2219,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 8: Amenities & Lifestyle -->
 <section id="amenities" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       
       <!-- Section Heading -->
       <div style="margin-bottom:2rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
@@ -2211,7 +2231,7 @@ html { scroll-behavior: auto !important; }
       <div class="ak-amenities-cat-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
         
         <!-- Category 1: FITNESS & WELLNESS -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
               <i data-feather="heart" style="width:16px; height:16px; color:#8C6734;"></i>
@@ -2228,7 +2248,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Category 2: SPORTS & RECREATION -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
               <i data-feather="activity" style="width:16px; height:16px; color:#8C6734;"></i>
@@ -2245,7 +2265,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Category 3: FAMILY & SOCIAL -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
               <i data-feather="users" style="width:16px; height:16px; color:#8C6734;"></i>
@@ -2262,7 +2282,7 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Category 4: OUTDOORS & CONVENIENCE -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.2); padding-bottom:0.5rem;">
               <i data-feather="sun" style="width:16px; height:16px; color:#8C6734;"></i>
@@ -2281,7 +2301,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Action Bar: Download Complete Amenity Dossier -->
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.15rem 1.35rem; margin-bottom:1.5rem;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.15rem 1.35rem; margin-bottom:1.5rem;">
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div style="width:38px; height:38px; border-radius:50%; background:rgba(140, 103, 52, 0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <i data-feather="file-text" style="width:18px; height:18px; color:#8C6734;"></i>
@@ -2291,14 +2311,14 @@ html { scroll-behavior: auto !important; }
             <div style="font-size:0.78rem; color:#667085; font-weight:500;">Includes detailed carpet area blueprints of The Club and outdoor sporting precincts.</div>
           </div>
         </div>
-        <button onclick="openModal('prestige-evergreen-brochure')" style="background:#8C6734; color:#FFFFFF; border:none; border-radius:6px; padding:0.65rem 1.25rem; font-size:0.82rem; font-weight:700; cursor:pointer; font-family:'Manrope',sans-serif; display:inline-flex; align-items:center; gap:0.4rem; white-space:nowrap; transition:all 0.2s ease;">
+        <button onclick="openModal('prestige-evergreen-brochure')" style="background:#8C6734; color:#FFFFFF; border:none; border-radius: 4px; padding:0.65rem 1.25rem; font-size:0.82rem; font-weight:700; cursor:pointer; font-family:'Manrope',sans-serif; display:inline-flex; align-items:center; gap:0.4rem; white-space:nowrap; transition:all 0.2s ease;">
           <i data-feather="download" style="width:14px; height:14px;"></i>
           Request Amenity Layouts (PDF)
         </button>
       </div>
 
       <!-- ACRE&KEY VIEW Banner -->
-      <div style="background:#2F3B42; border-radius:10px; padding:1.15rem 1.5rem; margin-bottom:1rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
+      <div style="background:#2F3B42; border-radius: 4px; padding:1.15rem 1.5rem; margin-bottom:1rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
         <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.25rem; font-family:'Josefin Sans', sans-serif;">ACRE&amp;KEY VIEW</div>
         <div style="font-size:0.92rem; line-height:1.55; color:rgba(255,255,255,0.92); font-weight:500;">
           &ldquo;The amenity proposition is exceptionally strong, but Evergreen&rsquo;s larger structural differentiator is the scale of the overall 24-acre environment and how its continuous landscaped open buffers insulate residents from Varthur Main Road&rsquo;s acoustic traffic spillover.&rdquo;
@@ -2317,7 +2337,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 9: Location & Commute Reality -->
 <section id="location" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
           Tech Corridor Catchment vs Peak-Hour Traffic Realities
@@ -2336,7 +2356,7 @@ html { scroll-behavior: auto !important; }
           <i data-feather="arrow-right" style="width:13px; height:13px;"></i>
           <span>Swipe horizontally on mobile to view distance, non-peak drive &amp; peak rush-hour transit times</span>
         </div>
-        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius:10px; background:#FFFFFF;">
+        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius: 4px; background:#FFFFFF;">
           <table style="width:100%; min-width:620px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.9rem;">
             <thead>
               <tr style="background:#FBF6F3;">
@@ -2353,8 +2373,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Direct access via SH-35 Varthur Main Rd</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">1.8 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">~5 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">8–12 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~5 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">8–12 mins</span></td>
               </tr>
               <tr style="border-bottom:1px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
@@ -2362,8 +2382,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">via Hope Farm Junction / Whitefield Main Rd</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">7.5 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">18–20 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">30–42 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">18–20 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">30–42 mins</span></td>
               </tr>
               <tr style="border-bottom:1px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
@@ -2371,8 +2391,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">via Panathur - Balagere underpass or Varthur Lake Rd</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">8.5 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">20–22 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">35–50 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">20–22 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">35–50 mins</span></td>
               </tr>
               <tr style="border-bottom:1px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
@@ -2380,8 +2400,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">via Outer Ring Road / Kadubeesanahalli junction</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">11.2 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">25–28 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">45–65 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">25–28 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">45–65 mins</span></td>
               </tr>
               <tr style="border-bottom:1px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
@@ -2389,8 +2409,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">via Doddanekundi / Mahadevapura bypass</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">9.8 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">22–25 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">40–55 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">22–25 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">40–55 mins</span></td>
               </tr>
               <tr style="border-bottom:1px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
@@ -2398,8 +2418,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Namma Metro Phase 2 Operational Terminal Station</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">8.0 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">18 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">28–35 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">18 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">28–35 mins</span></td>
               </tr>
               <tr>
                 <td style="padding:0.85rem 1.25rem;">
@@ -2407,8 +2427,8 @@ html { scroll-behavior: auto !important; }
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">via SH-35 / Budigere Cross expressway / STRR</div>
                 </td>
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">41.5 km</td>
-                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">55–65 mins</span></td>
-                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.82rem; display:inline-block;">85–105 mins</span></td>
+                <td style="padding:0.85rem 1rem; text-align:center;"><span style="background:#E8F5E9; color:#1B5E20; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">55–65 mins</span></td>
+                <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#FEF3C7; color:#B76E00; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">85–105 mins</span></td>
               </tr>
             </tbody>
           </table>
@@ -2417,7 +2437,7 @@ html { scroll-behavior: auto !important; }
 
       <!-- Social Infrastructure 3-Column Strip -->
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#8C6734; text-transform:uppercase; margin-bottom:0.6rem;">TOP REPUTED SCHOOLS</div>
           <div style="display:flex; flex-direction:column; gap:0.45rem; font-size:0.85rem; color:#4A5861;">
             <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.35rem; border-bottom:1px solid rgba(221,215,207,0.5);">
@@ -2443,7 +2463,7 @@ html { scroll-behavior: auto !important; }
           </div>
         </div>
 
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#8C6734; text-transform:uppercase; margin-bottom:0.6rem;">HEALTHCARE &amp; EMERGENCY</div>
           <div style="display:flex; flex-direction:column; gap:0.45rem; font-size:0.85rem; color:#4A5861;">
             <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.35rem; border-bottom:1px solid rgba(221,215,207,0.5);">
@@ -2465,7 +2485,7 @@ html { scroll-behavior: auto !important; }
           </div>
         </div>
 
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#8C6734; text-transform:uppercase; margin-bottom:0.6rem;">RETAIL &amp; ENTERTAINMENT</div>
           <div style="display:flex; flex-direction:column; gap:0.45rem; font-size:0.85rem; color:#4A5861;">
             <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.35rem; border-bottom:1px solid rgba(221,215,207,0.5);">
@@ -2489,7 +2509,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Traffic Diligence Advisory Callout -->
-      <div style="background:#2F3B42; border-radius:10px; padding:1.25rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
+      <div style="background:#2F3B42; border-radius: 4px; padding:1.25rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
         <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem; font-family:'Josefin Sans', sans-serif;">ACRE&amp;KEY COMMUTE DILIGENCE</div>
         <div style="font-size:0.9rem; color:rgba(255,255,255,0.92); line-height:1.6; font-weight:500;">
           While SH-35 provides direct dual-carriageway access to Whitefield and Sarjapur, the Varthur Junction rotary and connecting railway underpasses (Panathur/Balagere) experience intense vehicular congestion during peak school and tech office hours (8:30–10:30 AM &amp; 5:30–7:30 PM). Buyers planning a daily on-road commute to Bellandur/ORR should test drive the route during these windows before finalizing tower selection.
@@ -2502,7 +2522,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 10: RERA & Legal Diligence -->
 <section id="rera-legal" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.75rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
           RERA &amp; Legal Due Diligence
@@ -2515,14 +2535,14 @@ html { scroll-behavior: auto !important; }
       <!-- RERA Cards Grid -->
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
         <!-- Phase 2 (Evergreen) RERA Card -->
-        <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.3); border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.3); border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
               <span style="font-size:0.75rem; font-weight:800; color:#8C6734; text-transform:uppercase; letter-spacing:0.06em;">PHASE 2 · PRESTIGE EVERGREEN</span>
-              <span style="font-size:0.72rem; font-weight:800; color:#1B5E20; background:#E8F5E9; border:1px solid #C8E6C9; padding:0.2rem 0.55rem; border-radius:6px;">RERA Registered ✓</span>
+              <span style="font-size:0.72rem; font-weight:800; color:#1B5E20; background:#E8F5E9; border:1px solid #C8E6C9; padding:0.2rem 0.55rem; border-radius: 4px;">RERA Registered ✓</span>
             </div>
             <div style="font-size:0.75rem; color:#667085; font-weight:600; margin-bottom:0.25rem;">Karnataka RERA Registration No.</div>
-            <code style="font-family:'SFMono-Regular', Consolas, Menlo, monospace; font-size:0.85rem; font-weight:700; color:#2F3B42; background:rgba(140,103,52,0.08); padding:0.3rem 0.5rem; border-radius:6px; word-break:break-all; display:block; margin-bottom:0.85rem; border:1px solid rgba(140,103,52,0.15);">
+            <code style="font-family:'SFMono-Regular', Consolas, Menlo, monospace; font-size:0.85rem; font-weight:700; color:#2F3B42; background:rgba(140,103,52,0.08); padding:0.3rem 0.5rem; border-radius: 4px; word-break:break-all; display:block; margin-bottom:0.85rem; border:1px solid rgba(140,103,52,0.15);">
               PRM/KA/RERA/1251/446/PR/010126/008374
             </code>
             <div style="font-size:0.85rem; color:#4A5861; line-height:1.6;">
@@ -2543,14 +2563,14 @@ html { scroll-behavior: auto !important; }
         </div>
 
         <!-- Phase 1 (Raintree Park) RERA Card -->
-        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.35rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
               <span style="font-size:0.75rem; font-weight:800; color:#4A5861; text-transform:uppercase; letter-spacing:0.06em;">PHASE 1 · PRESTIGE RAINTREE PARK</span>
-              <span style="font-size:0.72rem; font-weight:800; color:#1B5E20; background:#E8F5E9; border:1px solid #C8E6C9; padding:0.2rem 0.55rem; border-radius:6px;">RERA Registered ✓</span>
+              <span style="font-size:0.72rem; font-weight:800; color:#1B5E20; background:#E8F5E9; border:1px solid #C8E6C9; padding:0.2rem 0.55rem; border-radius: 4px;">RERA Registered ✓</span>
             </div>
             <div style="font-size:0.75rem; color:#667085; font-weight:600; margin-bottom:0.25rem;">Karnataka RERA Registration No.</div>
-            <code style="font-family:'SFMono-Regular', Consolas, Menlo, monospace; font-size:0.85rem; font-weight:700; color:#2F3B42; background:rgba(0,0,0,0.04); padding:0.3rem 0.5rem; border-radius:6px; word-break:break-all; display:block; margin-bottom:0.85rem; border:1px solid #DDD7CF;">
+            <code style="font-family:'SFMono-Regular', Consolas, Menlo, monospace; font-size:0.85rem; font-weight:700; color:#2F3B42; background:rgba(0,0,0,0.04); padding:0.3rem 0.5rem; border-radius: 4px; word-break:break-all; display:block; margin-bottom:0.85rem; border:1px solid #DDD7CF;">
               PRM/KA/RERA/1251/446/PR/270824/006981
             </code>
             <div style="font-size:0.85rem; color:#4A5861; line-height:1.6;">
@@ -2572,7 +2592,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Critical Regulatory & Environmental Diligence Checklist -->
-      <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:12px; padding:1.5rem; margin-bottom:1.5rem;">
+      <div style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:1.5rem; margin-bottom:1.5rem;">
         <h3 style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42; margin:0 0 1.15rem 0; display:flex; align-items:center; gap:0.5rem;">
           <i data-feather="shield" style="width:18px; height:18px; color:#8C6734;"></i>
           Acre&amp;Key 4-Point Diligence Checklist for Buyers
@@ -2615,7 +2635,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Institutional Verification Callout -->
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; background:#2F3B42; border-radius:10px; padding:1.15rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; background:#2F3B42; border-radius: 4px; padding:1.15rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.1);">
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div style="width:36px; height:36px; border-radius:50%; background:rgba(255, 255, 255, 0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <i data-feather="shield" style="width:18px; height:18px; color:#FFFFFF;"></i>
@@ -2625,7 +2645,7 @@ html { scroll-behavior: auto !important; }
             <div style="font-size:0.78rem; color:rgba(255, 255, 255, 0.75); font-weight:500;">Copies of BDA Sanction Plan, SEIAA Environmental Clearance (EC) &amp; Title Report can be reviewed via Acre&amp;Key.</div>
           </div>
         </div>
-        <button onclick="openModal('prestige-evergreen-brochure')" style="background:#8C6734; color:#FFFFFF; border:none; border-radius:6px; padding:0.65rem 1.25rem; font-size:0.82rem; font-weight:700; cursor:pointer; font-family:'Manrope',sans-serif; display:inline-flex; align-items:center; gap:0.4rem; white-space:nowrap; transition:all 0.2s ease;">
+        <button onclick="openModal('prestige-evergreen-brochure')" style="background:#8C6734; color:#FFFFFF; border:none; border-radius: 4px; padding:0.65rem 1.25rem; font-size:0.82rem; font-weight:700; cursor:pointer; font-family:'Manrope',sans-serif; display:inline-flex; align-items:center; gap:0.4rem; white-space:nowrap; transition:all 0.2s ease;">
           <i data-feather="download" style="width:14px; height:14px;"></i>
           Request Legal Dossier
         </button>
@@ -2639,8 +2659,7 @@ html { scroll-behavior: auto !important; }
 <section id="comparison" class="prop-section" style="background:#FAF8F5; border-top:1px solid #DDD7CF; border-bottom:1px solid #DDD7CF;">
   <div class="prop-container">
     <div style="margin-bottom:1.75rem;">
-      <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#8C6734; display:block; margin-bottom:0.35rem;">COMPETITIVE LANDSCAPE</span>
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
+            <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
         Prestige Evergreen vs Peer Projects in East Bengaluru
       </h2>
       <p style="font-size:0.95rem; color:#4A5861; margin:0; line-height:1.65;">
@@ -2655,7 +2674,7 @@ html { scroll-behavior: auto !important; }
     </div>
 
     <!-- Direct Side-by-Side Comparison Table -->
-    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius:10px; background:#FFFFFF; margin-bottom:2.5rem; box-shadow:0 4px 16px rgba(47, 59, 66, 0.04);">
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #DDD7CF; border-radius: 4px; background:#FFFFFF; margin-bottom:2.5rem; box-shadow:0 4px 16px rgba(47, 59, 66, 0.04);">
       <table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.9rem; min-width:720px;">
         <thead>
           <tr style="background:#2F3B42; color:#FFFFFF;">
@@ -2677,7 +2696,7 @@ html { scroll-behavior: auto !important; }
             <td style="padding:0.95rem 1rem; font-weight:800; color:#2F3B42;">₹1.07 – 4.09 Cr</td>
             <td style="padding:0.95rem 1rem; font-weight:700; color:#8C6734;">June 2030</td>
             <td style="padding:0.95rem 1.25rem; text-align:right;">
-              <span style="background:#1B5E20; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius:6px; font-weight:800; font-size:0.88rem; font-family:'Manrope',sans-serif; display:inline-block;">4.11 / 5</span>
+              <span style="background:#1B5E20; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:800; font-size:0.88rem; font-family:'Manrope',sans-serif; display:inline-block;">4.11 / 5</span>
             </td>
           </tr>
           <tr style="border-bottom:1px solid #EAE6DF;">
@@ -2691,7 +2710,7 @@ html { scroll-behavior: auto !important; }
             <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹2.06 – 3.73 Cr</td>
             <td style="padding:0.9rem 1rem;">Dec 2029</td>
             <td style="padding:0.9rem 1.25rem; text-align:right;">
-              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.80 / 5</span>
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.80 / 5</span>
             </td>
           </tr>
           <tr style="border-bottom:1px solid #EAE6DF;">
@@ -2705,7 +2724,7 @@ html { scroll-behavior: auto !important; }
             <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹2.18 – 3.10 Cr</td>
             <td style="padding:0.9rem 1rem;">Dec 2029</td>
             <td style="padding:0.9rem 1.25rem; text-align:right;">
-              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.90 / 5</span>
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.90 / 5</span>
             </td>
           </tr>
           <tr>
@@ -2719,7 +2738,7 @@ html { scroll-behavior: auto !important; }
             <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹1.10 – 3.93 Cr</td>
             <td style="padding:0.9rem 1rem;">July 2032</td>
             <td style="padding:0.9rem 1.25rem; text-align:right;">
-              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.20 / 5</span>
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.20 / 5</span>
             </td>
           </tr>
         </tbody>
@@ -2731,7 +2750,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 12: FAQs -->
 <section id="faqs" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#8C6734; display:block; margin-bottom:0.35rem;">FREQUENTLY ASKED QUESTIONS</span>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">Prestige Evergreen FAQs</h2>
@@ -2740,7 +2759,7 @@ html { scroll-behavior: auto !important; }
 
       <div style="display:flex; flex-direction:column; gap:0.75rem;">
         <!-- Q1 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>Is Prestige Evergreen RERA registered?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2754,7 +2773,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q2 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>What is the total acquisition cost of buying a Prestige Evergreen apartment?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2766,7 +2785,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q3 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>What is the carpet-area space efficiency of Prestige Evergreen floor plans?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2778,7 +2797,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q4 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>Is Prestige Evergreen suitable for end-use living?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2790,7 +2809,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q5 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>What is the long-term investment case and rental yield expectation?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2802,7 +2821,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q6 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>What are the key watch-outs and risks identified by Acre&amp;Key?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2817,7 +2836,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q7 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>How does Prestige Evergreen relate to the overall Prestige Raintree Park township?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2828,7 +2847,7 @@ html { scroll-behavior: auto !important; }
         </details>
 
         <!-- Q8 -->
-        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius:10px; padding:0.9rem 1.15rem;">
+        <details style="background:#FBF6F3; border:1px solid #DDD7CF; border-radius: 4px; padding:0.9rem 1.15rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:0.75rem;">
             <span>What due diligence should I verify before executing the booking agreement?</span>
             <span style="color:#8C6734; font-weight:700; font-size:1.1rem;">+</span>
@@ -2860,10 +2879,10 @@ html { scroll-behavior: auto !important; }
       
       <!-- Alternative 1 -->
       <a href="/property/sumadhura-edition-whitefield/" class="ak-card-anchor" aria-label="View Sumadhura Edition property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
           <div style="position:relative; width:100%; height:190px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp" alt="Sumadhura Edition Whitefield, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">Sumadhura Infracon</span>
+            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:1px solid rgba(255,255,255,0.15);">Sumadhura Infracon</span>
           </div>
           <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -2871,7 +2890,7 @@ html { scroll-behavior: auto !important; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; color:#8C6734; font-weight:700; display:flex; align-items:center; gap:0.35rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Whitefield, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:8px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#667085;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹2.06 – 3.73 Cr</span>
             </div>
@@ -2883,8 +2902,8 @@ html { scroll-behavior: auto !important; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">3.8</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -2903,10 +2922,10 @@ html { scroll-behavior: auto !important; }
 
       <!-- Alternative 2 -->
       <a href="/property/sumadhura-solace-whitefield/" class="ak-card-anchor" aria-label="View Sumadhura Solace property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
           <div style="position:relative; width:100%; height:190px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/sumadhura_solace_hero_day_aerial.webp" alt="Sumadhura Solace Whitefield, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">Sumadhura Infracon</span>
+            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:1px solid rgba(255,255,255,0.15);">Sumadhura Infracon</span>
           </div>
           <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -2914,7 +2933,7 @@ html { scroll-behavior: auto !important; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; color:#8C6734; font-weight:700; display:flex; align-items:center; gap:0.35rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Whitefield, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:8px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#667085;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹2.18 – 3.10 Cr</span>
             </div>
@@ -2926,8 +2945,8 @@ html { scroll-behavior: auto !important; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">3.9</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -2946,10 +2965,10 @@ html { scroll-behavior: auto !important; }
 
       <!-- Alternative 3 -->
       <a href="/property/one-residences-sobha-oneworld/" class="ak-card-anchor" aria-label="View One Residences at SOBHA OneWorld property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
+        <article class="ak-property-card" style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%; transition:transform 0.2s ease, box-shadow 0.2s ease;">
           <div style="position:relative; width:100%; height:190px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp" alt="One Residences at SOBHA OneWorld Greater Whitefield, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">SOBHA Limited</span>
+            <span style="position:absolute; top:12px; left:12px; background:rgba(47, 59, 66, 0.9); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:1px solid rgba(255,255,255,0.15);">SOBHA Limited</span>
           </div>
           <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -2957,7 +2976,7 @@ html { scroll-behavior: auto !important; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; color:#8C6734; font-weight:700; display:flex; align-items:center; gap:0.35rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Greater Whitefield, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:8px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#667085;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹1.10 – 3.93 Cr</span>
             </div>
@@ -2969,8 +2988,8 @@ html { scroll-behavior: auto !important; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">3.2</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -2998,7 +3017,7 @@ html { scroll-behavior: auto !important; }
     <p style="font-size:0.95rem; color:rgba(255,255,255,0.88); line-height:1.65; margin:0 auto 2rem auto; max-width:720px;">
       Explore Acre&amp;Key-assessed developments across Bengaluru. Compare pricing, configurations, possession timelines, key risks and our independent project score.
     </p>
-    <a href="/properties/" class="sd-btn-gold" data-no-modal="true" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; background:#8C6734; color:#FFFFFF; padding:0.85rem 1.85rem; border-radius:8px; font-weight:700; font-size:0.95rem; transition:background 0.2s ease;">
+    <a href="/properties/" class="sd-btn-gold" data-no-modal="true" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; background:#8C6734; color:#FFFFFF; padding:0.85rem 1.85rem; border-radius: 4px; font-weight:700; font-size:0.95rem; transition:background 0.2s ease;">
       <span>Explore All Properties &rarr;</span>
     </a>
   </div>
@@ -3332,7 +3351,7 @@ function akGallerySelect(idx) {
 }
 </style>
 <div id=akScoreBreakupModal class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role=dialog aria-modal=true aria-labelledby=akScoreModalTitle style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(13, 27, 36,0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
-  <div class="ak-score-modal-card" onclick=event.stopPropagation(); style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
+  <div class="ak-score-modal-card" onclick=event.stopPropagation(); style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius: 4px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
     <button type=button class=ak-score-modal-close onclick=closeAkScoreModal(); style="position:absolute; top:1rem; right:1rem; background:rgba(13, 27, 36,0.06); border:none; width:30px; height:30px; border-radius:50%; font-size:1.2rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s ease;" aria-label="Close Score Breakup Modal" title=Close>&times;</button>
     
     <div style="margin-bottom:0.75rem; padding-right:2.5rem;">
@@ -3354,7 +3373,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Builder</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">Tier-1 Pedigree</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">Tier-1 Pedigree</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Developer solvency, execution track record &amp; market standing</div>
           </td>
@@ -3371,7 +3390,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Approvals</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">RERA Validated</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">RERA Validated</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Clean land title, sanction plans &amp; PRM/KA/RERA registration</div>
           </td>
@@ -3388,7 +3407,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Location</span>
-              <span style="background:#FBF6F3; color:#8C6734; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">Traffic Watch</span>
+              <span style="background:#FBF6F3; color:#8C6734; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">Traffic Watch</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Whitefield tech proximity vs Varthur Junction bottleneck</div>
           </td>
@@ -3405,7 +3424,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Masterplan</span>
-              <span style="background:#FBF6F3; color:#8C6734; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">High Density</span>
+              <span style="background:#FBF6F3; color:#8C6734; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">High Density</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">24-acre precinct, 70% open area &amp; ~86,000 sq.ft. clubhouse</div>
           </td>
@@ -3422,7 +3441,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Delivery</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">June 2030 Horizon</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">June 2030 Horizon</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">High construction velocity aligned to statutory completion date</div>
           </td>
@@ -3439,7 +3458,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Liquidity</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius:100px; letter-spacing:0.02em;">High Tech Demand</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">High Tech Demand</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Tier-1 secondary sales liquidity &amp; executive rental pool</div>
           </td>
@@ -3454,21 +3473,21 @@ function akGallerySelect(idx) {
     </table>
 
     <!-- Summary Box -->
-    <div style="margin-top:0.75rem; background:#FBF6F3; padding:0.65rem 0.95rem; border-radius:8px; border:1px solid rgba(140,103,52,0.25); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+    <div style="margin-top:0.75rem; background:#FBF6F3; padding:0.65rem 0.95rem; border-radius: 4px; border:1px solid rgba(140,103,52,0.25); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
       <div>
         <span style="font-size:0.62rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; display:block; font-family:'Manrope',sans-serif;">COMPOSITE VERDICT</span>
         <div style="font-weight:800; color:#2F3B42; font-size:0.9rem;">Acre&amp;Key Overall Score</div>
       </div>
       <div style="display:flex; align-items:center; gap:0.5rem;">
         <span style="background:#1B5E20; color:#FFFFFF; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.04em;">Strong Buy</span>
-        <div style="font-size:1.05rem; font-weight:800; color:#2F3B42; background:#FFFFFF; padding:0.25rem 0.65rem; border-radius:6px; border:1px solid #DDD7CF; box-shadow:0 2px 5px rgba(0,0,0,0.04); font-family:'Manrope',sans-serif;">
+        <div style="font-size:1.05rem; font-weight:800; color:#2F3B42; background:#FFFFFF; padding:0.25rem 0.65rem; border-radius: 4px; border:1px solid #DDD7CF; box-shadow:0 2px 5px rgba(0,0,0,0.04); font-family:'Manrope',sans-serif;">
           4.11 <span style="font-size:0.7rem; color:#667085; font-weight:600;">/ 5.0</span>
         </div>
       </div>
     </div>
 
     <!-- Action Button -->
-    <button type=button class=sd-btn-gold onclick="closeAkScoreModal(); window.openModal();" style="width:100%; margin-top:0.65rem; padding:0.65rem 1.15rem; font-size:0.88rem; font-weight:700; background:#8C6734; color:#FFFFFF; border:none; border-radius:6px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.45rem; transition:background 0.2s ease; box-shadow:0 3px 10px rgba(140,103,52,0.2);">
+    <button type=button class=sd-btn-gold onclick="closeAkScoreModal(); window.openModal();" style="width:100%; margin-top:0.65rem; padding:0.65rem 1.15rem; font-size:0.88rem; font-weight:700; background:#8C6734; color:#FFFFFF; border:none; border-radius: 4px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.45rem; transition:background 0.2s ease; box-shadow:0 3px 10px rgba(140,103,52,0.2);">
       <span>Download Full 69-Point Diligence Memo (PDF) &rarr;</span>
     </button>
     <p style="text-align:center; font-size:0.7rem; color:#8A94A6; margin:0.4rem 0 0 0; font-family:'Manrope',sans-serif;">
@@ -3478,7 +3497,7 @@ function akGallerySelect(idx) {
 </div>
 
 <!-- Floor Plan Modal -->
-<div id=propFloorPlanModal class=prop-fp-modal-overlay onclick=closeFloorPlanModal(event); style="display:none; position:fixed; inset:0; background:rgba(13,27,36,0.85); backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;"><div class=prop-fp-modal-content onclick=event.stopPropagation(); style="background:#FFFFFF; border-radius:12px; max-width:860px; width:100%; padding:1.5rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.35); box-sizing:border-box;"><button type=button class=prop-fp-modal-close onclick=closeFloorPlanModal(); style="position:absolute; top:1rem; right:1rem; background:rgba(13,27,36,0.06); border:none; width:34px; height:34px; border-radius:50%; font-size:1.4rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Lightbox">&times;</button><h3 id=propFpModalTitle class=prop-fp-modal-title style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#2F3B42; margin:0 0 1rem 0; font-weight:700;">Evergreen at Prestige Raintree Park Floor Plan</h3><div class=prop-fp-modal-img-wrapper style="width:100%; height:62vh; max-height:560px; background:#FAF8F5; border-radius:8px; display:flex; align-items:center; justify-content:center; overflow:hidden;"><img id=propFpModalImg src="../../style-guide/assets/floorplans/evergreen/unit-type-a.webp" alt="Floor Plan View" style="max-width:100%; max-height:100%; object-fit:contain;"></div><div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;"><span style="font-size:0.85rem; color:#667085;">Official Sanctioned Architectural Layout</span><button type=button class=sd-btn-gold onclick="closeFloorPlanModal(); window.openModal();" style="padding:0.65rem 1.5rem; font-size:0.9rem; background:#8C6734; color:#FFFFFF; border:none; border-radius:6px; font-weight:700; cursor:pointer;"><span>Get Verified Cost Sheet &rarr;</span></button></div></div></div>
+<div id=propFloorPlanModal class=prop-fp-modal-overlay onclick=closeFloorPlanModal(event); style="display:none; position:fixed; inset:0; background:rgba(13,27,36,0.85); backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;"><div class=prop-fp-modal-content onclick=event.stopPropagation(); style="background:#FFFFFF; border-radius: 4px; max-width:860px; width:100%; padding:1.5rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.35); box-sizing:border-box;"><button type=button class=prop-fp-modal-close onclick=closeFloorPlanModal(); style="position:absolute; top:1rem; right:1rem; background:rgba(13,27,36,0.06); border:none; width:34px; height:34px; border-radius:50%; font-size:1.4rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Lightbox">&times;</button><h3 id=propFpModalTitle class=prop-fp-modal-title style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#2F3B42; margin:0 0 1rem 0; font-weight:700;">Evergreen at Prestige Raintree Park Floor Plan</h3><div class=prop-fp-modal-img-wrapper style="width:100%; height:62vh; max-height:560px; background:#FAF8F5; border-radius: 4px; display:flex; align-items:center; justify-content:center; overflow:hidden;"><img id=propFpModalImg src="../../style-guide/assets/floorplans/evergreen/unit-type-a.webp" alt="Floor Plan View" style="max-width:100%; max-height:100%; object-fit:contain;"></div><div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;"><span style="font-size:0.85rem; color:#667085;">Official Sanctioned Architectural Layout</span><button type=button class=sd-btn-gold onclick="closeFloorPlanModal(); window.openModal();" style="padding:0.65rem 1.5rem; font-size:0.9rem; background:#8C6734; color:#FFFFFF; border:none; border-radius: 4px; font-weight:700; cursor:pointer;"><span>Get Verified Cost Sheet &rarr;</span></button></div></div></div>
 
 <!-- AcreNKey Enhanced Architectural Lightbox Modal -->
 <style id="ak-lightbox-enhanced-styles">
@@ -3562,7 +3581,7 @@ function akGallerySelect(idx) {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 6px 16px;
-    border-radius: 20px;
+    border-radius: 3px;
     font-family: 'Manrope', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
@@ -3668,14 +3687,14 @@ function akGallerySelect(idx) {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
   .ak-lb-media-viewport.floorplan-mode #akLbMainImg {
     background: #FAF8F5;
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 4px;
     box-shadow: 0 24px 60px rgba(0,0,0,0.6);
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
@@ -3727,7 +3746,7 @@ function akGallerySelect(idx) {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 4px;
     padding: 6px 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     display: inline-flex;
@@ -3744,7 +3763,7 @@ function akGallerySelect(idx) {
   .ak-lb-thumb {
     width: 68px;
     height: 48px;
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
     border: 2px solid transparent;
     opacity: 0.45;
