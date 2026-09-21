@@ -189,9 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   };
-  }
-  }
-  };
 
 
   // 10. Spacious Floor Plans Tab Controller
@@ -454,8 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-  
+});
 
 // Global AcrenKey Score Breakup Modal Handlers
 window.openAcrenKeyScoreModal = function() {

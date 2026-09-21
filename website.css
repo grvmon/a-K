@@ -5994,21 +5994,18 @@ body.page-404 .error-404-section {
     gap:8px;
     user-select:none;
     box-sizing:border-box;
-    animation:advisorSlideIn 0.5s cubic-bezier(0.16,1,0.3,1) both
-}
-
-@keyframes advisorSlideIn {
-    0% {
     opacity:0;
-    transform:translateY(20px) scale(0.96)
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(20px) scale(0.96);
+    transition:opacity 0.4s cubic-bezier(0.16,1,0.3,1),transform 0.4s cubic-bezier(0.16,1,0.3,1),visibility 0.4s ease;
 }
 
-100% {
+.advisor-floating-unit.is-visible {
     opacity:1;
-    transform:translateY(0) scale(1)
-}
-
-
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0) scale(1);
 }
 
 .advisor-floating-unit.is-hidden,

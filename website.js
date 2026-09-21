@@ -697,9 +697,6 @@ window.addEventListener('hashchange', function () {
             }
         } else {
             aside.style.display = "";
-            aside.style.opacity = "1";
-            aside.style.transform = "";
-            aside.style.pointerEvents = "";
             aside.classList.remove("is-hidden");
         }
         
@@ -817,7 +814,7 @@ window.addEventListener('hashchange', function () {
             });
         }
         
-        // Delay pop-up "Hi! I'm Abha" until the user scrolls past the 1st fold (Hero section)
+        // Delay Abha concierge unit until user scrolls past the 1st fold (Hero section)
         var bubblePopped = false;
         function triggerBubblePop() {
             if (bubblePopped) return;
@@ -827,23 +824,37 @@ window.addEventListener('hashchange', function () {
                 bubblePopped = true;
                 bubble.classList.add("is-popped");
                 playChatSound();
-                window.removeEventListener("scroll", onScrollCheckFold);
             }
         }
 
+        function getFoldThreshold() {
+            var vh = window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || 800;
+            return Math.max(Math.min(Math.round(vh * 0.45), 450), 260);
+        }
+
         function onScrollCheckFold() {
-            if (bubblePopped) return;
-            var hero = document.querySelector(".hero-section");
-            var foldThreshold = hero ? (hero.offsetTop + hero.offsetHeight * 0.55) : (window.innerHeight * 0.65);
             var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            var foldThreshold = getFoldThreshold();
+
             if (scrollY >= foldThreshold) {
-                triggerBubblePop();
+                if (aside && !aside.classList.contains("is-visible")) {
+                    aside.classList.add("is-visible");
+                    if (!bubblePopped) {
+                        setTimeout(triggerBubblePop, 500);
+                    }
+                }
+            } else {
+                if (aside && aside.classList.contains("is-visible")) {
+                    aside.classList.remove("is-visible");
+                }
             }
         }
 
         window.addEventListener("scroll", onScrollCheckFold, { passive: true });
-        // Check once after initial load in case user refreshed or navigated directly past 1st fold
-        setTimeout(onScrollCheckFold, 400);
+        setTimeout(onScrollCheckFold, 150);
+        window.addEventListener("hashchange", function() {
+            setTimeout(onScrollCheckFold, 150);
+        });
     }
 
     if (document.readyState === "loading") {
