@@ -89,7 +89,7 @@ html { scroll-behavior: auto !important; }
 @media (max-width: 768px) {
   .prop-hero-grid, .prop-snapshot-strip-v2 { display: none !important; }
   .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
-  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 12px; overflow: hidden; margin-bottom: 0.85rem; }
+  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 8px; overflow: hidden; margin-bottom: 0.85rem; }
   .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; }
   .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(15, 31, 61, 0.75); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 20px; backdrop-filter: blur(4px); }
   .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.95); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
@@ -694,9 +694,9 @@ html { scroll-behavior: auto !important; }
         </p>
       </div>
 
-      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius:12px; overflow:hidden;">
+      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius:8px; overflow:hidden; border:1px solid #DDD7CF; box-shadow:0 4px 16px rgba(15, 31, 61, 0.05);">
         <!-- Top-left category badge -->
-        <div style="position:absolute; top:12px; left:12px; z-index:3; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15); pointer-events:none;">
+        <div style="position:absolute; top:12px; left:12px; z-index:3; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:4px; border:1px solid rgba(255,255,255,0.15); pointer-events:none;">
           Township Walkthrough · 3:53
         </div>
 
@@ -712,7 +712,7 @@ html { scroll-behavior: auto !important; }
           </span>
         </div>
 
-        <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; background:#2B2B2B; display:block;">
+        <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px; background:#2B2B2B; display:block;">
           <source src="../../style-guide/assets/prestige_evergreen_walkthrough.mp4?v=20260829_v1" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -736,7 +736,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 2: Acre&Key Verdict & Assessment (Consolidated) -->
 <section id="verdict" class="prop-section" style="padding: clamp(2rem, 3.5vw, 2.75rem) 0;">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.15rem, 2.5vw, 1.75rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.15rem, 2.5vw, 1.75rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       
       <!-- Header with Score Badge -->
       <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.15rem; margin-bottom:1.25rem;">
@@ -1632,7 +1632,7 @@ html { scroll-behavior: auto !important; }
       </div>
 
       <!-- Right: Dossier Action Card -->
-      <div style="background:rgba(255, 255, 255, 0.05); border:1px solid rgba(221, 215, 207, 0.22); border-radius:14px; padding:1.75rem; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,0.25); backdrop-filter:blur(8px);">
+      <div style="background:rgba(255, 255, 255, 0.05); border:1px solid rgba(221, 215, 207, 0.22); border-radius:12px; padding:1.75rem; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,0.25); backdrop-filter:blur(8px);">
         <div style="display:inline-flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:12px; background:rgba(140, 103, 52, 0.25); border:1px solid rgba(212, 175, 55, 0.4); margin-bottom:1rem;">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -1665,7 +1665,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 6: True Cost -->
 <section id="true-cost" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.75rem;">
         <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#8C6734; display:block; margin-bottom:0.35rem;">ACQUISITION REALITY &bull; DILIGENCE BREAKDOWN</span>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.85rem, 1.4rem + 1.2vw, 2.35rem); font-weight:700; color:#2F3B42; margin:0 0 0.45rem 0; line-height:1.2;">
@@ -2022,7 +2022,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 7: Area Appreciation / Investment Perspective -->
 <section id="appreciation" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#8C6734; display:block; margin-bottom:0.35rem;">MICRO-MARKET CAPITAL INTELLIGENCE</span>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.85rem, 1.4rem + 1.2vw, 2.35rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">
@@ -2159,7 +2159,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 8: Amenities & Lifestyle -->
 <section id="amenities" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       
       <!-- Section Heading -->
       <div style="margin-bottom:2rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
@@ -2278,7 +2278,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 9: Location & Commute Reality -->
 <section id="location" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#8C6734; margin-bottom:0.35rem;">MICRO-MARKET CONNECTIVITY &amp; COMMUTE MATRIX</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem, 1.4rem + 1.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">
@@ -2464,7 +2464,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 10: RERA & Legal Diligence -->
 <section id="rera-legal" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.75rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#8C6734; margin-bottom:0.35rem;">STATUTORY CLEARANCES &amp; COMPLIANCE</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem, 1.4rem + 1.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">
@@ -2694,7 +2694,7 @@ html { scroll-behavior: auto !important; }
 <!-- Section 12: FAQs -->
 <section id="faqs" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; padding:clamp(1.25rem, 3.5vw, 2.25rem); box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.5rem; border-bottom:1px solid #DDD7CF; padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#8C6734; margin-bottom:0.35rem;">FREQUENTLY ASKED QUESTIONS</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem, 1.4rem + 1.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">Prestige Evergreen FAQs</h2>
@@ -3295,7 +3295,7 @@ function akGallerySelect(idx) {
 }
 </style>
 <div id=akScoreBreakupModal class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role=dialog aria-modal=true aria-labelledby=akScoreModalTitle style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(13, 27, 36,0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
-  <div class="ak-score-modal-card" onclick=event.stopPropagation(); style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:14px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
+  <div class="ak-score-modal-card" onclick=event.stopPropagation(); style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:12px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
     <button type=button class=ak-score-modal-close onclick=closeAkScoreModal(); style="position:absolute; top:1rem; right:1rem; background:rgba(13, 27, 36,0.06); border:none; width:30px; height:30px; border-radius:50%; font-size:1.2rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s ease;" aria-label="Close Score Breakup Modal" title=Close>&times;</button>
     
     <div style="margin-bottom:0.75rem; padding-right:2.5rem;">
