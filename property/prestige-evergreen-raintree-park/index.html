@@ -114,8 +114,75 @@ img[style*="border-radius: 50%"] {
   margin-bottom: 0 !important;
 }
 
+/* Acre&Key 4-Point Diligence Checklist (Single 4-Column Row on Desktop) */
+.ak-diligence-4col-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0.75rem !important;
+  align-items: stretch !important;
+}
+.ak-diligence-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E0D8 !important;
+  border-radius: 4px !important;
+  padding: 0.85rem 0.95rem !important;
+  box-shadow: 0 2px 6px rgba(15, 31, 61, 0.03) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+.ak-diligence-header {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+}
+.ak-diligence-badge {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: #7D442A !important;
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+.ak-diligence-title {
+  color: #2F3B42 !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+.ak-diligence-body {
+  font-size: 0.76rem !important;
+  color: #4A5861 !important;
+  line-height: 1.48 !important;
+  margin: 0.45rem 0 0 0 !important;
+  flex: 1 !important;
+}
+@media (max-width: 991px) {
+  .ak-diligence-4col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .ak-diligence-4col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+  .ak-diligence-card {
+    padding: 0.75rem 0.85rem !important;
+  }
+}
 
-/* Uniform Primary CTA Styling (Acre&Key Terracotta Gradient) */
+
 .ak-hero-btn-primary,
 .sd-btn-gold,
 .evergreen-cost-cta-btn {
@@ -2645,38 +2712,46 @@ img[style*="border-radius: 50%"] {
           <i data-feather="shield" style="width:16px; height:16px; color:#7D442A;"></i>
           Acre&amp;Key 4-Point Diligence Checklist for Buyers
         </h3>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; font-size:0.86rem; color:#4A5861; line-height:1.55;">
+        <div class="ak-diligence-4col-grid">
           
-          <div style="display:flex; gap:0.65rem;">
-            <div style="width:24px; height:24px; border-radius:50%; background:#7D442A; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.74rem; flex-shrink:0; margin-top:2px;">1</div>
-            <div>
-              <strong style="color:#2F3B42; display:block; margin-bottom:0.2rem;">75-Metre Lake Buffer Compliance:</strong>
-              Under NGT norms, construction is prohibited within 75m buffer of lake perimeters. In Raintree Park, master plan places open landscaped areas, access roads, and stormwater green drainage buffers along lake margins, ensuring all residential towers sit safely outside non-build zones.
+          <div class="ak-diligence-card">
+            <div class="ak-diligence-header">
+              <div class="ak-diligence-badge">1</div>
+              <h4 class="ak-diligence-title">75m Lake Buffer Compliance</h4>
             </div>
+            <p class="ak-diligence-body">
+              Under NGT norms, construction is prohibited within 75m buffer of lake perimeters. Master plan places landscaped park buffers and drainage along margins, keeping all residential towers safely outside non-build zones.
+            </p>
           </div>
 
-          <div style="display:flex; gap:0.65rem;">
-            <div style="width:24px; height:24px; border-radius:50%; background:#7D442A; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.74rem; flex-shrink:0; margin-top:2px;">2</div>
-            <div>
-              <strong style="color:#2F3B42; display:block; margin-bottom:0.2rem;">Water Infrastructure &amp; Cauvery Stage V:</strong>
-              BWSSB's Cauvery Stage V pipeline project is expanding feeder distribution into the Varthur belt. Project incorporates high-capacity rainwater harvesting, on-site sewage treatment plants (STPs), and dual-piping flushing networks.
+          <div class="ak-diligence-card">
+            <div class="ak-diligence-header">
+              <div class="ak-diligence-badge">2</div>
+              <h4 class="ak-diligence-title">Cauvery Stage V &amp; Water Security</h4>
             </div>
+            <p class="ak-diligence-body">
+              BWSSB's Cauvery Stage V pipeline project is expanding feeder distribution into Varthur. Project incorporates on-site sewage treatment (STP), high-capacity rainwater harvesting, and dual-piping flushing networks.
+            </p>
           </div>
 
-          <div style="display:flex; gap:0.65rem;">
-            <div style="width:24px; height:24px; border-radius:50%; background:#7D442A; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.74rem; flex-shrink:0; margin-top:2px;">3</div>
-            <div>
-              <strong style="color:#2F3B42; display:block; margin-bottom:0.2rem;">Clear Land Title &amp; Statutory Approvals:</strong>
-              Clear freehold land title held under Prestige Group joint-development agreements, backed by scheduled commercial bank financing. Sanctioned approvals from BDA, BESCOM, BWSSB, and KSPCB.
+          <div class="ak-diligence-card">
+            <div class="ak-diligence-header">
+              <div class="ak-diligence-badge">3</div>
+              <h4 class="ak-diligence-title">Clear Land Title &amp; Approvals</h4>
             </div>
+            <p class="ak-diligence-body">
+              Clear freehold land title held under Prestige Group joint-development agreements, backed by scheduled commercial bank project financing. Sanctioned approvals from BDA, BESCOM, BWSSB, and KSPCB.
+            </p>
           </div>
 
-          <div style="display:flex; gap:0.65rem;">
-            <div style="width:24px; height:24px; border-radius:50%; background:#7D442A; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.74rem; flex-shrink:0; margin-top:2px;">4</div>
-            <div>
-              <strong style="color:#2F3B42; display:block; margin-bottom:0.2rem;">Shared Township Maintenance Rights:</strong>
-              Agreements clearly demarcate common township infrastructure maintenance levies versus Evergreen-exclusive clubhouse and amenity upkeep charges to prevent unexpected long-term CAM escalation.
+          <div class="ak-diligence-card">
+            <div class="ak-diligence-header">
+              <div class="ak-diligence-badge">4</div>
+              <h4 class="ak-diligence-title">Shared Township Maintenance</h4>
             </div>
+            <p class="ak-diligence-body">
+              Agreements clearly demarcate common 107-acre township infrastructure maintenance levies versus Evergreen-exclusive clubhouse and amenity upkeep charges to prevent unexpected long-term CAM escalation.
+            </p>
           </div>
 
         </div>
