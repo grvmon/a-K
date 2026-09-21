@@ -1188,7 +1188,7 @@ img[style*="border-radius: 50%"] {
       font-size: 0.85rem;
       font-weight: 600;
       padding: 0.45rem 0.95rem;
-      border-radius: 3px;
+      border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
@@ -1198,9 +1198,15 @@ img[style*="border-radius: 50%"] {
       color: #2F3B42;
     }
     .evergreen-chip-btn.active {
-      background: #7D442A;
-      color: #FFFFFF;
-      border-color: #7D442A;
+      background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+      color: #FFFFFF !important;
+      border: 1px solid #9f5334 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(159, 83, 52, 0.25) !important;
+    }
+    .evergreen-chip-btn.active:hover {
+      background: linear-gradient(135deg, #a85a3a 0%, #844222 100%) !important;
+      border-color: #844222 !important;
     }
     .evergreen-mode-btn {
       background: transparent;
