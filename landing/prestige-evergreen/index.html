@@ -1325,7 +1325,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
         flex-direction: column !important;
         justify-content: center !important;
         box-sizing: border-box !important;
-        padding: clamp(1.25rem, 2.8vh, 2.25rem) 0 !important;
+        padding: clamp(1.25rem, 2.5vh, 2.0rem) 0 !important;
       }
       .evergreen-main-grid {
         display: grid !important;
@@ -1336,7 +1336,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
         box-sizing: border-box !important;
       }
       #evergreenFpFrame {
-        height: clamp(380px, 48vh, 480px) !important;
+        height: clamp(380px, 46vh, 460px) !important;
       }
     }
     @media (max-width: 900px) {
@@ -1351,6 +1351,47 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       #evergreenFpFrame {
         height: 280px !important;
       }
+      .evergreen-controls-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        height: auto !important;
+        max-height: none !important;
+        gap: 0.65rem !important;
+      }
+      .evergreen-controls-divider {
+        display: none !important;
+      }
+    }
+    .evergreen-controls-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      height: 44px;
+      min-height: 44px;
+      max-height: 44px;
+      margin-bottom: clamp(0.75rem, 1.5vh, 1.15rem);
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .evergreen-controls-divider {
+      width: 1px;
+      height: 24px;
+      background: #DDD7CF;
+      flex-shrink: 0;
+    }
+    .evergreen-chips-scroll-strip {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      height: 100%;
+      flex: 1;
+    }
+    .evergreen-chips-scroll-strip::-webkit-scrollbar {
+      display: none;
     }
     .evergreen-tower-btn {
       background: #FFFFFF;
@@ -1362,23 +1403,27 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       padding: 0.4rem 1.05rem;
       border-radius: 4px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       white-space: nowrap;
       flex-shrink: 0;
+      outline: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+    .evergreen-tower-btn:focus,
+    .evergreen-tower-btn:focus-visible,
+    .evergreen-tower-btn:active {
+      outline: none !important;
+      box-shadow: none !important;
     }
     .evergreen-tower-btn:hover {
       background: #FBF6F3;
       border-color: #7D442A;
     }
     .evergreen-tower-btn.active {
-      background: #2F3B42;
-      color: #FFFFFF;
-      border-color: #2F3B42;
-    }
-    .evergreen-tower-btn:focus,
-    .evergreen-tower-btn:focus-visible {
-      outline: none !important;
-      box-shadow: none !important;
+      background: #2F3B42 !important;
+      color: #FFFFFF !important;
+      border-color: #2F3B42 !important;
     }
     .evergreen-chip-btn {
       background: #FFFFFF;
@@ -1390,11 +1435,16 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       padding: 0.35rem 0.85rem;
       border-radius: 4px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       white-space: nowrap;
+      flex-shrink: 0;
+      outline: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent !important;
     }
     .evergreen-chip-btn:focus,
-    .evergreen-chip-btn:focus-visible {
+    .evergreen-chip-btn:focus-visible,
+    .evergreen-chip-btn:active {
       outline: none !important;
       box-shadow: none !important;
     }
@@ -1408,10 +1458,6 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       border: 1px solid #9f5334 !important;
       font-weight: 700 !important;
       box-shadow: 0 2px 6px rgba(159, 83, 52, 0.2) !important;
-    }
-    .evergreen-chip-btn.active:hover {
-      background: linear-gradient(135deg, #a85a3a 0%, #844222 100%) !important;
-      border-color: #844222 !important;
     }
     .evergreen-cost-cta-btn {
       width: 100% !important;
@@ -1431,11 +1477,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       justify-content: center !important;
       gap: 0.45rem !important;
       font-family: 'Manrope', sans-serif !important;
-    }
-    .evergreen-cost-cta-btn:hover {
-      background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
-      border-color: #a55a3a !important;
-      color: #FFFFFF !important;
+      outline: none !important;
     }
     .evergreen-zoom-btn {
       background: #FBF6F3;
@@ -1451,65 +1493,63 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
       justify-content: center;
       font-size: 1.05rem;
       transition: all 0.15s ease;
-    }
-    .evergreen-zoom-btn:hover {
-      background: #FFFFFF;
-      border-color: #7D442A;
-      color: #7D442A;
+      outline: none !important;
     }
   </style>
 
   <div class="prop-container">
     
-    <!-- Unified Section Header & Selectors -->
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:0.85rem; margin-bottom:clamp(0.85rem, 1.8vh, 1.35rem); padding-bottom:clamp(0.65rem, 1.4vh, 0.95rem); border-bottom:1px solid #E5E0D8;">
-      <div>
-        <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#7D442A; margin-bottom:0.25rem; display:flex; align-items:center; gap:0.5rem;">
-          <span>SECTION 02</span>
-          <span style="display:inline-block; width:20px; height:1px; background:#7D442A;"></span>
-          <span>ARCHITECTURAL BLUEPRINTS</span>
-        </div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.85rem, 2.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0 0 0.2rem 0; line-height:1.2;">
+    <!-- Section Header (Clean & Invariant Height) -->
+    <div style="margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem);">
+      <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#7D442A; margin-bottom:0.2rem; display:flex; align-items:center; gap:0.5rem;">
+        <span>SECTION 02</span>
+        <span style="display:inline-block; width:20px; height:1px; background:#7D442A;"></span>
+        <span>ARCHITECTURAL BLUEPRINTS</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem;">
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.85rem, 2.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0; line-height:1.2;">
           Official Floor Plans &amp; Space Analysis
         </h2>
-        <p style="font-size:clamp(0.9rem, 1vw, 1.02rem); line-height:1.45; color:#59616B; margin:0; font-family:'Manrope',sans-serif;">
+        <p style="font-size:clamp(0.88rem, 0.95vw, 0.98rem); line-height:1.4; color:#59616B; margin:0; font-family:'Manrope',sans-serif;">
           Compare official layouts, usable space and orientation across configurations.
         </p>
       </div>
+    </div>
 
-      <!-- Selectors Row in Header -->
-      <div style="display:flex; align-items:center; gap:0.55rem; flex-wrap:wrap;">
-        <!-- Primary Selector: BHK Tabs -->
-        <div class="evergreen-tower-selector-bar" style="display:inline-flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:1px solid #DDD7CF; border-radius:4px; padding:0.25rem; box-shadow:0 2px 6px rgba(15,31,61,0.03);">
-          <button type="button" class="evergreen-tower-btn active" onclick="evergreenSelectTower('bhk1', this)" id="evergreenTowerBtn_bhk1" style="border:none;">
-            1 BHK
-          </button>
-          <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk2', this)" id="evergreenTowerBtn_bhk2" style="border:none;">
-            2 BHK
-          </button>
-          <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk3', this)" id="evergreenTowerBtn_bhk3" style="border:none;">
-            3 BHK
-          </button>
-          <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk4', this)" id="evergreenTowerBtn_bhk4" style="border:none;">
-            4 BHK
-          </button>
-        </div>
+    <!-- Controls Bar (Strict Fixed 44px Height - Zero Jerk) -->
+    <div class="evergreen-controls-bar">
+      <!-- Primary Selector: BHK Tabs -->
+      <div class="evergreen-tower-selector-bar" style="display:inline-flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:1px solid #DDD7CF; border-radius:4px; padding:0.25rem; box-shadow:0 2px 6px rgba(15,31,61,0.03); flex-shrink:0;">
+        <button type="button" class="evergreen-tower-btn active" onclick="evergreenSelectTower('bhk1', this)" id="evergreenTowerBtn_bhk1" style="border:none;">
+          1 BHK
+        </button>
+        <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk2', this)" id="evergreenTowerBtn_bhk2" style="border:none;">
+          2 BHK
+        </button>
+        <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk3', this)" id="evergreenTowerBtn_bhk3" style="border:none;">
+          3 BHK
+        </button>
+        <button type="button" class="evergreen-tower-btn" onclick="evergreenSelectTower('bhk4', this)" id="evergreenTowerBtn_bhk4" style="border:none;">
+          4 BHK
+        </button>
+      </div>
 
-        <!-- Secondary Selector: Configuration Chips -->
-        <div id="evergreenConfigChipsContainer" style="display:inline-flex; align-items:center; gap:0.35rem; flex-wrap:wrap;">
-          <!-- Populated dynamically via JS -->
-        </div>
+      <div class="evergreen-controls-divider"></div>
+
+      <!-- Secondary Selector: Configuration Chips (Always on 1 Row, Zero Height Reflow) -->
+      <div id="evergreenConfigChipsContainer" class="evergreen-chips-scroll-strip">
+        <!-- Populated dynamically via JS -->
       </div>
     </div>
 
-    <!-- MAIN GRID -->
+    <!-- MAIN GRID (Locked Height Stability) -->
     <div class="evergreen-main-grid">
       
       <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.85rem, 1.5vh, 1.15rem) clamp(0.95rem, 1.5vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.85rem, 1.4vh, 1.1rem) clamp(0.95rem, 1.4vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
         
         <!-- Viewer Top Bar -->
-        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem; margin-bottom:0.65rem; padding-bottom:0.55rem; border-bottom:1px solid #F0ECE6;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6;">
           <div style="font-size:0.75rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Josefin Sans',sans-serif;">
             SANCTIONED ARCHITECTURAL BLUEPRINT
           </div>
@@ -1520,80 +1560,80 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
             <button type="button" class="evergreen-zoom-btn" onclick="window.evergreenZoom(-0.15)" title="Zoom Out">
               −
             </button>
-            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif;">
+            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; outline:none;">
               Reset
             </button>
-            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#2F3B42; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif;">
+            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#2F3B42; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; outline:none;">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
               <span>View Fullscreen</span>
             </button>
           </div>
         </div>
 
-        <!-- Floor Plan Image Frame (Expansive & legible) -->
-        <div id="evergreenFpFrame" style="width:100%; height:clamp(380px, 48vh, 480px); background:#FAF8F5; border-radius:4px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.evergreenTriggerFullscreen()">
-          <img id="evergreenFpMainImg" src="" alt="Prestige Evergreen Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease; transform-origin:center center; padding:0.5rem;">
+        <!-- Floor Plan Image Frame -->
+        <div id="evergreenFpFrame" style="width:100%; height:clamp(380px, 46vh, 460px); background:#FAF8F5; border-radius:4px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="window.evergreenTriggerFullscreen()">
+          <img id="evergreenFpMainImg" src="" alt="Prestige Evergreen Floor Plan Layout" style="max-width:100%; max-height:100%; object-fit:contain; transition:transform 0.25s ease, opacity 0.15s ease; transform-origin:center center; padding:0.5rem;">
         </div>
 
-        <!-- Caption Bar -->
-        <div id="evergreenFpCaption" style="font-size:0.84rem; color:#7D442A; font-weight:700; margin-top:0.55rem; text-align:center; font-family:'Manrope',sans-serif;">
+        <!-- Caption Bar (Height Locked to 22px to prevent line-wrap jerking) -->
+        <div id="evergreenFpCaption" style="height:22px; line-height:22px; font-size:0.84rem; color:#7D442A; font-weight:700; margin-top:0.45rem; text-align:center; font-family:'Manrope',sans-serif; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
           <!-- Populated via JS -->
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: "PLAN AT A GLANCE" Card -->
-      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(1.0rem, 1.8vh, 1.35rem) clamp(1.1rem, 1.6vw, 1.4rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <!-- RIGHT COLUMN: PLAN AT A GLANCE Card -->
+      <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.95rem, 1.6vh, 1.25rem) clamp(1.05rem, 1.5vw, 1.35rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
         <div>
-          <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.25rem; font-family:'Josefin Sans',sans-serif;">
+          <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem; font-family:'Josefin Sans',sans-serif;">
             PLAN AT A GLANCE
           </div>
 
-          <h3 id="evergreenGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.8vw, 2.0rem); font-weight:700; color:#2F3B42; margin:0 0 0.15rem 0; line-height:1.2;">
+          <h3 id="evergreenGlanceTitle" style="height:30px; line-height:30px; font-family:'Cormorant Garamond',serif; font-size:clamp(1.55rem, 1.7vw, 1.9rem); font-weight:700; color:#2F3B42; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
             Unit Type-A (1BHK)
           </h3>
-          <div id="evergreenGlanceSubtitle" style="font-size:0.82rem; color:#59616B; font-weight:600; margin-bottom:clamp(0.75rem, 1.4vh, 1.05rem); font-family:'Manrope',sans-serif;">
+          <div id="evergreenGlanceSubtitle" style="height:20px; line-height:20px; font-size:0.82rem; color:#59616B; font-weight:600; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); font-family:'Manrope',sans-serif; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
             Building 02 — Tower 05 (Level G–19)
           </div>
 
           <!-- Key Metrics Grid (2x2 Grid) -->
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-bottom:clamp(0.75rem, 1.4vh, 1.05rem); padding-bottom:clamp(0.75rem, 1.4vh, 1.05rem); border-bottom:1px solid #F0ECE6;">
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.5rem 0.75rem;">
-              <div id="evergreenGlanceSbua" style="font-size:1.1rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">659 sq.ft.</div>
-              <div style="font-size:0.68rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.15rem;">SBUA</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.55rem; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); padding-bottom:clamp(0.65rem, 1.2vh, 0.95rem); border-bottom:1px solid #F0ECE6;">
+            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceSbua" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">659 sq.ft.</div>
+              <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">SBUA</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.5rem 0.75rem;">
-              <div id="evergreenGlanceCarpet" style="font-size:1.1rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">419 sq.ft.</div>
-              <div style="font-size:0.68rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.15rem;">Carpet Area</div>
+            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceCarpet" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">419 sq.ft.</div>
+              <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Carpet Area</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.5rem 0.75rem;">
-              <div id="evergreenGlanceBalcony" style="font-size:1.1rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">28 sq.ft.</div>
-              <div style="font-size:0.68rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.15rem;">Balcony &amp; Utility</div>
+            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+              <div id="evergreenGlanceBalcony" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">28 sq.ft.</div>
+              <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Balcony &amp; Utility</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.5rem 0.75rem;">
+            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
               <div id="evergreenGlanceFacing" style="font-size:1.05rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif; line-height:1.2;">East Facing</div>
-              <div style="font-size:0.68rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.15rem;">Orientation</div>
+              <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Orientation</div>
             </div>
           </div>
 
           <!-- Space Efficiency Block -->
-          <div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:clamp(0.75rem, 1.4vh, 0.95rem) clamp(0.85rem, 1.4vw, 1.05rem); margin-bottom:clamp(0.75rem, 1.4vh, 1.05rem);">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem;">
-              <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#E2B77B; font-family:'Josefin Sans',sans-serif;">
+          <div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:clamp(0.65rem, 1.2vh, 0.85rem) clamp(0.75rem, 1.2vw, 0.95rem); margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+              <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#E2B77B; font-family:'Josefin Sans',sans-serif;">
                 SPACE EFFICIENCY RATIO
               </span>
-              <span id="evergreenGlanceEff" style="font-size:1.08rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif;">63.6%</span>
+              <span id="evergreenGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif;">63.6%</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:rgba(255,255,255,0.85); font-family:'Manrope',sans-serif;">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; color:rgba(255,255,255,0.85); font-family:'Manrope',sans-serif;">
               <span>Carpet Efficiency</span>
               <span id="evergreenGlanceNonCarpet" style="font-weight:700; color:#DDD7CF;">36.4%</span>
             </div>
             
             <!-- Dynamic Dual-Tone Progress Bar -->
-            <div style="margin-top:0.45rem; width:100%; height:6px; background:#0F1B24; border-radius:3px; overflow:hidden; display:flex;">
+            <div style="margin-top:0.35rem; width:100%; height:6px; background:#0F1B24; border-radius:3px; overflow:hidden; display:flex;">
               <div id="evergreenGlanceEffBar" style="width:63.6%; height:100%; background:#22C55E; border-radius:3px 0 0 3px; transition:width 0.3s ease;"></div>
               <div id="evergreenGlanceNonCarpetBar" style="width:36.4%; height:100%; background:#E2B77B; border-radius:0 3px 3px 0; transition:width 0.3s ease;"></div>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.68rem; color:rgba(255,255,255,0.7); margin-top:0.4rem; font-family:'Manrope',sans-serif;">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.66rem; color:rgba(255,255,255,0.7); margin-top:0.35rem; font-family:'Manrope',sans-serif;">
               <span style="display:inline-flex; align-items:center; gap:0.3rem;"><span style="width:6px; height:6px; border-radius:50%; background:#22C55E; display:inline-block;"></span> Usable Carpet</span>
               <span style="display:inline-flex; align-items:center; gap:0.3rem;"><span style="width:6px; height:6px; border-radius:50%; background:#E2B77B; display:inline-block;"></span> Non-Carpet Share</span>
             </div>
@@ -1604,8 +1644,8 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
           <button type="button" class="sd-btn-gold evergreen-cost-cta-btn" onclick="window.openModal(); return false;">
             <span>Get Detailed Cost Sheet &rarr;</span>
           </button>
-          <div style="text-align:center; margin-top:0.5rem;">
-            <button type="button" onclick="window.evergreenTriggerFullscreen(); return false;" style="background:none; border:none; color:#7D442A; font-size:0.82rem; font-weight:700; cursor:pointer; text-decoration:underline; font-family:'Manrope',sans-serif; padding:0;">
+          <div style="text-align:center; margin-top:0.45rem;">
+            <button type="button" onclick="window.evergreenTriggerFullscreen(); return false;" style="background:none; border:none; color:#7D442A; font-size:0.8rem; font-weight:700; cursor:pointer; text-decoration:underline; font-family:'Manrope',sans-serif; padding:0; outline:none;">
               View High-Res Sanctioned Plan &rarr;
             </button>
           </div>
