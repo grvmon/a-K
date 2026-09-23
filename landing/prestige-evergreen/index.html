@@ -8,45 +8,80 @@
 <style>
 html { scroll-behavior: auto !important; }
 .prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
-/* Refined Balanced Spacing for Hero First Fold */
+/* Precise 1-Fold Architecture for Hero First Fold (Desktop 100vh lock, Zero Fold-2 Bleed) */
 .prop-hero-section {
   padding: 1.5rem 0 2rem 0 !important;
   background: #FAF8F5 !important;
 }
-@media (min-width: 769px) {
+@media (min-width: 901px) {
   .prop-hero-section {
-    min-height: auto !important;
-    display: block !important;
-    box-sizing: border-box;
-    padding: clamp(1.25rem, 2.2vh, 1.85rem) 0 clamp(1.5rem, 2.5vh, 2rem) 0 !important;
+    min-height: calc(100vh - 68px) !important;
+    height: calc(100vh - 68px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    padding: clamp(0.75rem, 1.8vh, 1.35rem) 0 clamp(0.75rem, 1.8vh, 1.35rem) 0 !important;
+    overflow: hidden !important;
   }
   .prop-hero-section > .prop-container {
     display: flex !important;
     flex-direction: column !important;
-    flex: none !important;
-    justify-content: flex-start !important;
-    gap: clamp(1.5rem, 2.5vh, 2.25rem) !important;
+    flex: 1 !important;
+    justify-content: space-between !important;
     width: 100% !important;
+    height: 100% !important;
+    gap: clamp(0.75rem, 1.8vh, 1.5rem) !important;
   }
-}
-.prop-hero-grid {
-  display: grid !important;
-  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr) !important;
-  gap: 28px !important;
-  align-items: start !important;
-}
-.ak-hero-editorial-gallery {
-  min-height: 410px !important;
-  height: 410px !important;
-  max-height: 420px !important;
-}
-.prop-hero-details {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  gap: 0.65rem !important;
-  padding-top: 0 !important;
-  height: auto !important;
+  .prop-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr) !important;
+    gap: clamp(1.25rem, 2vw, 1.75rem) !important;
+    align-items: stretch !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+  }
+  .ak-hero-editorial-gallery {
+    min-height: 370px !important;
+    height: 100% !important;
+    max-height: clamp(380px, 46vh, 480px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .prop-hero-details {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: clamp(0.35rem, 0.8vh, 0.65rem) !important;
+    padding-top: 0 !important;
+    height: 100% !important;
+  }
+  .prop-snapshot-strip-v2 {
+    background: transparent !important;
+    border: none !important;
+    border-top: 1px solid #E5E0D8 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-top: 0 !important;
+    padding: clamp(0.65rem, 1.3vh, 1.1rem) 0 0 0 !important;
+    flex-shrink: 0 !important;
+  }
+  .prop-glance-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: clamp(0.3rem, 0.7vh, 0.6rem) !important;
+  }
+  .prop-glance-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    align-items: center !important;
+  }
+  .prop-glance-num {
+    font-size: clamp(1.65rem, 2.5vw, 2.15rem) !important;
+    line-height: 1 !important;
+    margin-bottom: 0.15rem !important;
+  }
 }
 .prop-hero-details > * {
   margin-bottom: 0 !important;
@@ -65,15 +100,6 @@ html { scroll-behavior: auto !important; }
 }
 .ak-info-cta-row {
   margin-bottom: 0 !important;
-}
-.prop-snapshot-strip-v2 {
-  background: transparent !important;
-  border: none !important;
-  border-top: 1px solid #E5E0D8 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  margin-top: 0 !important;
-  padding: clamp(1.25rem, 2vh, 1.75rem) 0 0 0 !important;
 }
 .prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
 .prop-glance-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; color: #7D442A; text-transform: uppercase; }
@@ -540,17 +566,29 @@ body.property-page .header-nav.scrolled .hamburger-line {
   text-decoration: none !important;
 }
 
+.nav-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
 .nav-brand-divider {
   display: inline-block !important;
   width: 1px !important;
-  height: 24px !important;
+  height: 20px !important;
   background: rgba(255, 255, 255, 0.28) !important;
+  flex-shrink: 0 !important;
+}
+
+.nav-partner-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
 .nav-partner-badge {
-  height: 28px !important;
+  height: 25px !important;
   width: auto !important;
-  max-width: 140px !important;
+  max-width: 110px !important;
   object-fit: contain !important;
   display: block !important;
   filter: brightness(0) invert(1) !important;
@@ -654,8 +692,8 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
 
 /* Responsive adjustments */
 @media (max-width: 1180px) {
-  .nav-brand-group { gap: 0.6rem !important; }
-  .nav-partner-badge { height: 25px !important; max-width: 115px !important; }
+  .nav-brand-group { gap: 0.65rem !important; }
+  .nav-partner-badge { height: 23px !important; max-width: 100px !important; }
   body.property-page .header-nav .nav-links { gap: 0.15rem !important; }
   body.property-page .header-nav .nav-links a.nav-page-link,
   body.property-page .header-nav .nav-links a.local-nav-link { font-size: 0.82rem !important; padding: 0.45rem 0.55rem !important; }
@@ -666,15 +704,15 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
   body.property-page .header-nav .nav-cta-btn {
     display: none !important;
   }
-  .nav-brand-group { gap: 0.55rem !important; }
-  .nav-partner-badge { height: 24px !important; max-width: 105px !important; }
-  .nav-brand-divider { height: 20px !important; }
+  .nav-brand-group { gap: 0.6rem !important; }
+  .nav-partner-badge { height: 22px !important; max-width: 95px !important; }
+  .nav-brand-divider { height: 18px !important; }
 }
 
 @media (max-width: 400px) {
-  .nav-brand-group { gap: 0.4rem !important; }
-  .nav-partner-badge { height: 20px !important; max-width: 88px !important; }
-  .nav-brand-divider { height: 18px !important; }
+  .nav-brand-group { gap: 0.45rem !important; }
+  .nav-partner-badge { height: 19px !important; max-width: 82px !important; }
+  .nav-brand-divider { height: 16px !important; }
 }
 
 #about, #floor-plans, #configuration, #cost-sheet, #amenities, #location {
@@ -708,7 +746,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
 <a href="/" class="nav-brand" style="margin-right:0;"><span class="brand-logo-text">acre&amp;key</span></a>
 <span class="nav-brand-divider" aria-hidden="true"></span>
 <div class="nav-partner-wrap" title="Prestige Group Authorised Sales Partner">
-<img src="../../style-guide/assets/prestige_authorised_sales_partner.png" alt="Prestige Group Authorised Sales Partner" class="nav-partner-badge" loading="eager" width="838" height="298">
+<img src="../../style-guide/assets/prestige_authorised_sales_partner.png" alt="Prestige Group Authorised Sales Partner" class="nav-partner-badge" loading="eager" width="818" height="208">
 </div>
 </div><ul class="nav-links">
 <li><a href="#about" class="nav-page-link local-nav-link active">About the Project</a></li>
@@ -719,8 +757,8 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
 <li><a href="#location" class="nav-page-link local-nav-link">Location</a></li>
 </ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><div class="mobile-drawer-brand-group" style="display:flex; align-items:center; gap:0.65rem;">
 <a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home" style="margin-right:0;"><span class="brand-logo-text">acre&amp;key</span></a>
-<span style="display:inline-block; width:1px; height:20px; background:#DDD7CF;" aria-hidden="true"></span>
-<img src="../../style-guide/assets/prestige_authorised_sales_partner.png" alt="Prestige Group Authorised Sales Partner" class="mobile-drawer-partner-badge" style="height:22px; width:auto; max-width:105px; object-fit:contain; display:block;" loading="eager" width="838" height="298">
+<span style="display:inline-block; width:1px; height:18px; background:#DDD7CF;" aria-hidden="true"></span>
+<img src="../../style-guide/assets/prestige_authorised_sales_partner.png" alt="Prestige Group Authorised Sales Partner" class="mobile-drawer-partner-badge" style="height:21px; width:auto; max-width:95px; object-fit:contain; display:block;" loading="eager" width="818" height="208">
 </div><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list">
 <a href="#about" class="mobile-nav-item local-nav-link" onclick="if(typeof closeMobileDrawer==='function')closeMobileDrawer();"><span class="mobile-nav-label">About the Project</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
 <a href="#floor-plans" class="mobile-nav-item local-nav-link" onclick="if(typeof closeMobileDrawer==='function')closeMobileDrawer();"><span class="mobile-nav-label">Floor Plan</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
