@@ -8,21 +8,19 @@
 <style>
 html { scroll-behavior: auto !important; }
 .prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
-/* Precise 1-Fold Architecture for Hero First Fold (Desktop 100vh lock, Zero Fold-2 Bleed) */
+/* Refined Balanced Architecture for Hero First Fold (Aligned Column Baselines & Harmonious Rhythm) */
 .prop-hero-section {
-  padding: 1.5rem 0 2rem 0 !important;
+  padding: 1.25rem 0 1.5rem 0 !important;
   background: #FAF8F5 !important;
 }
 @media (min-width: 901px) {
   .prop-hero-section {
     min-height: calc(100vh - 68px) !important;
-    height: calc(100vh - 68px) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    padding: clamp(0.75rem, 1.8vh, 1.35rem) 0 clamp(0.75rem, 1.8vh, 1.35rem) 0 !important;
-    overflow: hidden !important;
+    padding: clamp(0.85rem, 1.8vh, 1.35rem) 0 clamp(0.75rem, 1.5vh, 1.15rem) 0 !important;
   }
   .prop-hero-section > .prop-container {
     display: flex !important;
@@ -30,29 +28,32 @@ html { scroll-behavior: auto !important; }
     flex: 1 !important;
     justify-content: space-between !important;
     width: 100% !important;
-    height: 100% !important;
-    gap: clamp(0.75rem, 1.8vh, 1.5rem) !important;
+    gap: clamp(0.85rem, 1.8vh, 1.35rem) !important;
   }
   .prop-hero-grid {
     display: grid !important;
-    grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr) !important;
-    gap: clamp(1.25rem, 2vw, 1.75rem) !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+    gap: clamp(1.5rem, 2.5vw, 2.25rem) !important;
     align-items: stretch !important;
     flex: 1 !important;
     min-height: 0 !important;
   }
   .ak-hero-editorial-gallery {
-    min-height: 370px !important;
+    min-height: 420px !important;
     height: 100% !important;
-    max-height: clamp(380px, 46vh, 480px) !important;
+    position: relative !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background-color: #141B22 !important;
     display: flex !important;
     flex-direction: column !important;
+    box-sizing: border-box !important;
   }
   .prop-hero-details {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    gap: clamp(0.35rem, 0.8vh, 0.65rem) !important;
+    gap: clamp(0.45rem, 0.9vh, 0.75rem) !important;
     padding-top: 0 !important;
     height: 100% !important;
   }
@@ -63,7 +64,7 @@ html { scroll-behavior: auto !important; }
     box-shadow: none !important;
     border-radius: 0 !important;
     margin-top: 0 !important;
-    padding: clamp(0.65rem, 1.3vh, 1.1rem) 0 0 0 !important;
+    padding: clamp(0.65rem, 1.2vh, 1.0rem) 0 0 0 !important;
     flex-shrink: 0 !important;
   }
   .prop-glance-header {
@@ -880,7 +881,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
         </div>
       </div>
 
-<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: start;">
+<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
 <div class="ak-hero-editorial-gallery" id="akHeroGallery">
   <div class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);">
     <img id="akMainHeroImage" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" alt="Prestige Evergreen Evening Pool View">
@@ -945,7 +946,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn:hover {
     </div>
   </div>
 </div>
-<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:flex-start; gap:0.65rem; padding-top:0; height:auto;">
+<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
 
   <div class="ak-info-header" style="margin-bottom:8px;">
     <h1 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; text-transform:none;">Prestige Evergreen</h1>
