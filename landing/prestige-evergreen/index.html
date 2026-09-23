@@ -8,24 +8,73 @@
 <style>
 html { scroll-behavior: auto !important; }
 .prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
+/* Refined Balanced Spacing for Hero First Fold */
+.prop-hero-section {
+  padding: 1.5rem 0 2rem 0 !important;
+  background: #FAF8F5 !important;
+}
 @media (min-width: 769px) {
   .prop-hero-section {
-    min-height: calc(100vh - 64px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-height: auto !important;
+    display: block !important;
     box-sizing: border-box;
-    padding: 1.15rem 0 2rem 0 !important;
+    padding: clamp(1.25rem, 2.2vh, 1.85rem) 0 clamp(1.5rem, 2.5vh, 2rem) 0 !important;
   }
   .prop-hero-section > .prop-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: none !important;
+    justify-content: flex-start !important;
+    gap: clamp(1.5rem, 2.5vh, 2.25rem) !important;
+    width: 100% !important;
   }
 }
-.prop-snapshot-strip-v2 { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1rem !important; padding: 0 !important; }
+.prop-hero-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr) !important;
+  gap: 28px !important;
+  align-items: start !important;
+}
+.ak-hero-editorial-gallery {
+  min-height: 410px !important;
+  height: 410px !important;
+  max-height: 420px !important;
+}
+.prop-hero-details {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 0.65rem !important;
+  padding-top: 0 !important;
+  height: auto !important;
+}
+.prop-hero-details > * {
+  margin-bottom: 0 !important;
+}
+.ak-info-header {
+  margin-bottom: 0 !important;
+}
+.ak-info-meta {
+  margin-bottom: 0 !important;
+}
+.ak-info-metrics-strip {
+  margin-bottom: 0 !important;
+}
+.ak-info-facts {
+  margin-bottom: 0 !important;
+}
+.ak-info-cta-row {
+  margin-bottom: 0 !important;
+}
+.prop-snapshot-strip-v2 {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid #E5E0D8 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  padding: clamp(1.25rem, 2vh, 1.75rem) 0 0 0 !important;
+}
 .prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
 .prop-glance-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; color: #7D442A; text-transform: uppercase; }
 .prop-glance-rule { width: 80px; height: 1px; background: #D5C7B8; }
@@ -870,7 +919,7 @@ body.property-page .header-nav .nav-cta-btn:hover {
         </div>
       </div>
 
-<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
+<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: start;">
 <div class="ak-hero-editorial-gallery" id="akHeroGallery">
   <div class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);">
     <img id="akMainHeroImage" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=20260829_v2" alt="Prestige Evergreen Evening Pool View">
@@ -935,7 +984,7 @@ body.property-page .header-nav .nav-cta-btn:hover {
     </div>
   </div>
 </div>
-<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
+<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:flex-start; gap:0.65rem; padding-top:0; height:auto;">
 
   <div class="ak-info-header" style="margin-bottom:8px;">
     <h1 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; text-transform:none;">Prestige Evergreen</h1>
