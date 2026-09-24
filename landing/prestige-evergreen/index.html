@@ -7,21 +7,22 @@
 
 <style>
 html { scroll-behavior: auto !important; }
-.prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
+.prop-hero-section { padding: 2rem 0 !important; }
 @media (min-width: 769px) {
   .prop-hero-section {
-    min-height: calc(100vh - 64px);
+    min-height: calc(100vh - 68px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
-    padding: 1.15rem 0 2rem 0 !important;
+    padding: 2rem 0 !important;
   }
   .prop-hero-section > .prop-container {
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1.5rem;
     width: 100%;
   }
 }
@@ -521,6 +522,7 @@ body.property-page .header-nav .nav-container {
   display: grid !important;
   grid-template-columns: 1fr auto 1fr !important;
   align-items: center !important;
+  align-content: center !important;
   height: 68px !important;
   max-width: 1280px !important;
   margin: 0 auto !important;
@@ -530,9 +532,11 @@ body.property-page .header-nav .nav-container {
 
 body.property-page .header-nav .nav-brand-group {
   justify-self: start !important;
+  align-self: center !important;
   display: flex !important;
   align-items: center !important;
   gap: 0.75rem !important;
+  margin: 0 !important;
 }
 
 .nav-brand-divider {
@@ -559,6 +563,7 @@ body.property-page .header-nav .nav-brand-group {
 /* Header Navigation Links: Perfectly Centered */
 body.property-page .header-nav .nav-links {
   justify-self: center !important;
+  align-self: center !important;
   display: flex !important;
   align-items: center !important;
   gap: 0.35rem !important;
@@ -645,6 +650,8 @@ body.property-page .header-nav:not(.scrolled) .nav-cta-btn,
 body.property-page .header-nav.scrolled .nav-cta-btn,
 body.property-page .mobile-drawer .mobile-drawer-cta {
   justify-self: end !important;
+  align-self: center !important;
+  margin: 0 !important;
   font-family: 'Manrope', sans-serif !important;
   font-size: 0.85rem !important;
   font-weight: 700 !important;
