@@ -686,9 +686,10 @@ window.addEventListener('hashchange', function () {
         var aside = document.getElementById("advisorFloatingUnit");
         if (!aside) {
             aside = document.createElement("aside");
-            aside.className = "advisor-floating-unit";
+            aside.className = "advisor-floating-unit is-minimized";
             aside.id = "advisorFloatingUnit";
             aside.setAttribute("aria-label", "Home Buying Advisor Assistance");
+            aside.setAttribute("title", "");
             var modal = document.getElementById("lfModalOverlay");
             if (modal && modal.parentNode) {
                 modal.parentNode.insertBefore(aside, modal);
@@ -701,7 +702,7 @@ window.addEventListener('hashchange', function () {
         }
         
         aside.innerHTML = 
-          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.triggerAbhaChat){window.triggerAbhaChat();}else{if(window.playAdvisorChime)window.playAdvisorChime();if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();}} return false;\" title=\"Chat with Abha\">" +
+          "<div class=\"advisor-speech-bubble\" id=\"advisorSpeechBubble\" role=\"status\" aria-live=\"polite\" onclick=\"if(window.triggerAbhaChat){window.triggerAbhaChat();}else{if(window.playAdvisorChime)window.playAdvisorChime();if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();}} return false;\" title=\"\">" +
             "<div class=\"advisor-speech-title\">Hi! I'm Abha</div>" +
             "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
             "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\">" +
@@ -743,7 +744,7 @@ window.addEventListener('hashchange', function () {
             if (!aside) return;
             aside.classList.add("is-minimized");
             aside.setAttribute("aria-expanded", "false");
-            aside.setAttribute("title", "Chat with Abha (online)");
+            aside.setAttribute("title", "");
             var mainCard = aside.querySelector(".advisor-main-card");
             if (mainCard) {
                 mainCard.setAttribute("tabindex", "0");
@@ -814,11 +815,12 @@ window.addEventListener('hashchange', function () {
             });
         }
         
-        // Delay Abha concierge unit until user scrolls past the 1st fold (Hero section)
+        // Start minimized as a chat head avatar in the first fold
+        minimizeAdvisor();
+        
         var bubblePopped = false;
         function triggerBubblePop() {
             if (bubblePopped) return;
-            if (aside && aside.classList.contains("is-minimized")) return;
             var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
             if (bubble) {
                 bubblePopped = true;
@@ -833,19 +835,10 @@ window.addEventListener('hashchange', function () {
         }
 
         function onScrollCheckFold() {
-            var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-            var foldThreshold = getFoldThreshold();
-
-            if (scrollY >= foldThreshold) {
-                if (aside && !aside.classList.contains("is-visible")) {
-                    aside.classList.add("is-visible");
-                    if (!bubblePopped) {
-                        setTimeout(triggerBubblePop, 500);
-                    }
-                }
-            } else {
-                if (aside && aside.classList.contains("is-visible")) {
-                    aside.classList.remove("is-visible");
+            if (aside && !aside.classList.contains("is-visible")) {
+                aside.classList.add("is-visible");
+                if (!bubblePopped) {
+                    setTimeout(triggerBubblePop, 500);
                 }
             }
         }

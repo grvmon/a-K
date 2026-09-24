@@ -6694,20 +6694,24 @@ body.drawer-open .advisor-floating-unit {
 
 
 /* Minimized State for Abha Floating Advisor */
-.advisor-floating-unit.is-minimized {
-    gap:0 !important
+@keyframes floatWidget {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
 }
 
-.advisor-floating-unit.is-minimized .advisor-speech-bubble {
-    opacity:0 !important;
-    visibility:hidden !important;
-    transform:scale(0.6) translateY(12px) !important;
-    pointer-events:none !important;
-    max-height:0 !important;
-    margin:0 !important;
-    padding:0 !important;
-    border:none !important
+@keyframes pulseGlow {
+    0% { box-shadow: 0 10px 28px rgba(13,27,36,0.22), 0 0 0 0 rgba(140, 103, 52, 0.4); }
+    70% { box-shadow: 0 14px 34px rgba(13,27,36,0.28), 0 0 0 12px rgba(140, 103, 52, 0); }
+    100% { box-shadow: 0 10px 28px rgba(13,27,36,0.22), 0 0 0 0 rgba(140, 103, 52, 0); }
 }
+
+.advisor-floating-unit.is-minimized {
+    gap: 0 !important;
+    animation: floatWidget 3.5s ease-in-out infinite !important;
+}
+
+/* Removed forceful hiding of speech bubble in minimized state to let it pop up over the avatar */
 
 .advisor-floating-unit.is-minimized .advisor-main-card {
     padding:0 !important;
@@ -6720,12 +6724,12 @@ body.drawer-open .advisor-floating-unit {
     cursor:pointer !important;
     background:#FFFFFF !important;
     border:2px solid #FFFFFF !important;
-    box-shadow:0 10px 28px rgba(13,27,36,0.22),0 3px 10px rgba(13,27,36,0.08) !important;
     display:flex !important;
     align-items:center !important;
     justify-content:center !important;
     overflow:visible !important;
-    transition:transform 0.25s cubic-bezier(0.16,1,0.3,1),box-shadow 0.25s ease !important
+    transition:transform 0.25s cubic-bezier(0.16,1,0.3,1),box-shadow 0.25s ease !important;
+    animation: pulseGlow 2.5s infinite !important;
 }
 
 .advisor-floating-unit.is-minimized .advisor-main-card:hover {
@@ -7888,4 +7892,14 @@ button:focus-visible,a:focus-visible {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
+}
+.advisor-floating-unit.is-minimized .advisor-speech-bubble {
+    align-self: flex-end !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.advisor-floating-unit.is-minimized .advisor-bubble-tail {
+    left: auto !important;
+    right: 26px !important;
 }

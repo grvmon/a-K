@@ -369,7 +369,7 @@
   }
 
   var ModalController = {
-    open: function () {
+    open: function (context, formName) {
       if (!modalOverlay) {
         modalOverlay       = document.getElementById("lfModalOverlay");
         modalTrigger       = document.getElementById("lfModalTrigger");
@@ -398,6 +398,38 @@
         ccBackdrop         = document.getElementById("lfCcBackdrop");
       }
       if (!modalOverlay) return;
+
+      var mainHeading = document.getElementById("lfMainHeading");
+      var subHeading = document.getElementById("lfSubHeading");
+      var formNameInput = document.getElementById("lfFormName");
+
+      if (context === 'brochure' || context === 'prestige-evergreen-brochure') {
+        if (mainHeading) mainHeading.textContent = "Download Official Brochure";
+        if (subHeading) subHeading.textContent = "Get the complete project dossier, high-resolution masterplan, and detailed floor configurations.";
+        if (btnText) btnText.textContent = "Download Brochure (PDF)";
+        if (formNameInput) formNameInput.value = formName || "brochure_download";
+      } else if (context === 'pricing') {
+        if (mainHeading) mainHeading.textContent = "Get Detailed Cost Breakdown";
+        if (subHeading) subHeading.textContent = "Receive unit-wise all-inclusive pricing, payment milestones, and availability status.";
+        if (btnText) btnText.textContent = "Get Cost Breakdown";
+        if (formNameInput) formNameInput.value = formName || "pricing_enquiry";
+      } else if (context === 'floorplan') {
+        if (mainHeading) mainHeading.textContent = "Check Unit Availability";
+        if (subHeading) subHeading.textContent = "Get exact tower & floor-wise allocation, and high-floor premium breakdown.";
+        if (btnText) btnText.textContent = "Check Availability";
+        if (formNameInput) formNameInput.value = formName || "floorplan_enquiry";
+      } else if (context === 'sitevisit') {
+        if (mainHeading) mainHeading.textContent = "Schedule a Site Visit";
+        if (subHeading) subHeading.textContent = "Book an accompanied site visit with an Acre&Key advisor to evaluate the property.";
+        if (btnText) btnText.textContent = "Schedule Visit";
+        if (formNameInput) formNameInput.value = formName || "site_visit";
+      } else {
+        if (mainHeading) mainHeading.textContent = "Talk to an Expert Advisor";
+        if (subHeading) subHeading.textContent = "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
+        if (btnText) btnText.textContent = "Request Callback";
+        if (formNameInput) formNameInput.value = formName || "general_enquiry";
+      }
+
       if (showingSuccess) exitSuccessState();
       lfFormOpenTime = Date.now();
       lastActiveElement = document.activeElement;
@@ -431,7 +463,7 @@
     }
   };
 
-  window.openModal  = function() { ModalController.open(); };
+  window.openModal  = function(context, formName) { ModalController.open(context, formName); };
   window.closeModal = function() { ModalController.close(); };
 
   var ValidationService = {
