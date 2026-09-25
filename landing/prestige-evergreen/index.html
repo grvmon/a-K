@@ -1664,22 +1664,74 @@ body.property-page .header-nav .mobile-toggle {
     }
     @media (max-width: 900px) {
       .prop-fp-fold-section {
-        padding: 2.25rem 0 !important;
+        padding: 1.75rem 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
       }
       .evergreen-main-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 1.5rem !important;
+        gap: 1.25rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
       }
       #evergreenFpFrame {
-        height: 280px !important;
+        height: clamp(260px, 38vh, 320px) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .evergreen-controls-bar {
+        display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: stretch !important;
         height: auto !important;
         max-height: none !important;
-        gap: 0.65rem !important;
+        gap: 0.55rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+      .evergreen-tower-selector-bar {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 0.2rem !important;
+        gap: 0.25rem !important;
+      }
+      .evergreen-tower-btn {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        padding: 0.45rem 0.5rem !important;
+        font-size: 0.82rem !important;
+        min-width: 60px !important;
+      }
+      .evergreen-chips-scroll-strip {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        min-width: 0 !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 0.2rem 0 !important;
+        gap: 0.4rem !important;
+        flex-wrap: nowrap !important;
+      }
+      .evergreen-chip-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        font-size: 0.78rem !important;
+        padding: 0.35rem 0.65rem !important;
       }
       .evergreen-controls-divider {
         display: none !important;
@@ -2208,6 +2260,7 @@ body.property-page .header-nav .mobile-toggle {
       html += `<button type="button" class="evergreen-chip-btn ${activeClass}" onclick="evergreenSelectConfig(${idx}, this)">${cfg.title}</button>`;
     });
     container.innerHTML = html;
+    container.scrollLeft = 0;
   }
 
   function updateImageOnly() {
