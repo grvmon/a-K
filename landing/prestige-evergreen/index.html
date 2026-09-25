@@ -102,8 +102,13 @@ html { scroll-behavior: auto !important; }
   /* Touch target heights */
   button, .sd-btn-gold, .evergreen-cost-cta-btn { min-height: 44px; touch-action: manipulation; }
   
-  /* Image & Viewer mobile heights */
-  /* Cost Sheet Mobile Tabs */
+  /* Cost Sheet Mobile Tabs & Card Spacing */
+  .evergreen-cost-card-outer {
+    padding: 0.9rem !important;
+  }
+  #evergreenCostBreakdownContent {
+    padding: 0.85rem !important;
+  }
   #evergreenCostTabs {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -2607,7 +2612,7 @@ body.property-page .header-nav .mobile-toggle {
 
       
 <!-- Interactive Itemized Typology Cost Estimator -->
-      <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
+      <div class="evergreen-cost-card-outer" style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
           <div>
             <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0;">Select Configuration for Cost Breakdown</h4>
@@ -2652,48 +2657,53 @@ body.property-page .header-nav .mobile-toggle {
 (function() {
   var costData = {
     '1bhk': {
-      title: '1 BHK Residence (Typ. 659 sq.ft. SBA)',
-      base: '₹1.04 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹8.5 Lakhs (Clubhouse, BESCOM & BWSSB)',
-      preTax: '₹1.12 Cr',
-      gst: '~₹5.6 Lakhs (5% GST)',
-      stamp: '~₹7.4 Lakhs (~6.6% Duty & Registration)',
+      title: '1 BHK Residence (659 sq.ft. SBA)',
+      base: '₹1.04 Cr',
+      baseSub: 'Agreement rate (~₹15,800/sq.ft.)',
+      infra: '~₹8.5 Lakhs',
+      infraSub: 'Clubhouse, BESCOM & BWSSB',
+      tax: '~₹13.0 Lakhs',
+      taxSub: '5% GST + ~6.6% Duty & Reg.',
       total: '₹1.25 Cr'
     },
     '2bhk': {
-      title: '2 BHK Residence (Typ. 1,174 sq.ft. SBA)',
-      base: '₹1.85 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹14.0 Lakhs (Club, Parking & Infra)',
-      preTax: '₹1.99 Cr',
-      gst: '~₹9.9 Lakhs (5% GST)',
-      stamp: '~₹13.1 Lakhs (~6.6% Duty & Registration)',
+      title: '2 BHK Residence (1,174 sq.ft. SBA)',
+      base: '₹1.85 Cr',
+      baseSub: 'Agreement rate (~₹15,800/sq.ft.)',
+      infra: '~₹14.0 Lakhs',
+      infraSub: 'Club, Car Park & Infra',
+      tax: '~₹23.0 Lakhs',
+      taxSub: '5% GST + ~6.6% Duty & Reg.',
       total: '₹2.22 Cr'
     },
     '3bhk': {
-      title: '3 BHK Residence (Typ. 1,461 sq.ft. SBA)',
-      base: '₹2.30 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹16.5 Lakhs (Club, Parking & Infra)',
-      preTax: '₹2.46 Cr',
-      gst: '~₹12.3 Lakhs (5% GST)',
-      stamp: '~₹16.2 Lakhs (~6.6% Duty & Registration)',
+      title: '3 BHK Residence (1,461 sq.ft. SBA)',
+      base: '₹2.30 Cr',
+      baseSub: 'Agreement rate (~₹15,800/sq.ft.)',
+      infra: '~₹16.5 Lakhs',
+      infraSub: 'Club, Car Park & Infra',
+      tax: '~₹28.5 Lakhs',
+      taxSub: '5% GST + ~6.6% Duty & Reg.',
       total: '₹2.75 Cr'
     },
     '3bhk_study': {
-      title: '3 BHK + Study Residence (Typ. 1,991 sq.ft. SBA)',
-      base: '₹3.14 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹19.0 Lakhs (Club, Parking & Infra)',
-      preTax: '₹3.33 Cr',
-      gst: '~₹16.6 Lakhs (5% GST)',
-      stamp: '~₹22.0 Lakhs (~6.6% Duty & Registration)',
+      title: '3 BHK + Study Residence (1,991 sq.ft. SBA)',
+      base: '₹3.14 Cr',
+      baseSub: 'Agreement rate (~₹15,800/sq.ft.)',
+      infra: '~₹19.0 Lakhs',
+      infraSub: 'Club, Car Park & Infra',
+      tax: '~₹38.6 Lakhs',
+      taxSub: '5% GST + ~6.6% Duty & Reg.',
       total: '₹3.72 Cr'
     },
     '4bhk': {
-      title: '4 BHK Luxury Residence (Typ. 2,271 sq.ft. SBA)',
-      base: '₹3.58 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹22.5 Lakhs (Club, 2 Car Parks & Infra)',
-      preTax: '₹3.80 Cr',
-      gst: '~₹19.0 Lakhs (5% GST)',
-      stamp: '~₹25.1 Lakhs (~6.6% Duty & Registration)',
+      title: '4 BHK Luxury Residence (2,271 sq.ft. SBA)',
+      base: '₹3.58 Cr',
+      baseSub: 'Agreement rate (~₹15,800/sq.ft.)',
+      infra: '~₹22.5 Lakhs',
+      infraSub: 'Club, 2 Car Parks & Infra',
+      tax: '~₹44.1 Lakhs',
+      taxSub: '5% GST + ~6.6% Duty & Reg.',
       total: '₹4.24 Cr'
     }
   };
@@ -2716,44 +2726,44 @@ body.property-page .header-nav .mobile-toggle {
     if (!container) return;
 
     container.innerHTML = 
-      '<div style="margin-bottom:0.85rem; padding-bottom:0.65rem; border-bottom:1px solid #EAE6DF;">' +
-        '<div style="font-family:\'Cormorant Garamond\',serif; font-size:1.35rem; font-weight:700; color:#2F3B42; line-height:1.2;">' + item.title + '</div>' +
+      '<div style="margin-bottom:0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #EAE6DF;">' +
+        '<div style="font-family:\'Cormorant Garamond\',serif; font-size:1.25rem; font-weight:700; color:#2F3B42; line-height:1.2;">' + item.title + '</div>' +
       '</div>' +
 
-      '<div style="display:flex; flex-direction:column; gap:0.45rem; margin-bottom:0.95rem; font-family:\'Manrope\',sans-serif;">' +
+      '<div style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:0.85rem; font-family:\'Manrope\',sans-serif;">' +
         
-        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
-            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">1. Base Construction Rate</div>' +
-            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">Core agreement cost (~₹15,800/sq.ft.)</div>' +
+            '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">1. Base Construction</div>' +
+            '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.baseSub + '</div>' +
           '</div>' +
-          '<div style="font-size:0.95rem; font-weight:800; color:#2F3B42;">' + item.base + '</div>' +
+          '<div style="font-size:0.92rem; font-weight:800; color:#2F3B42; white-space:nowrap; flex-shrink:0;">' + item.base + '</div>' +
         '</div>' +
 
-        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
-            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">2. Infra, Club &amp; Car Parking</div>' +
-            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">' + item.infra + '</div>' +
+            '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">2. Infra, Club &amp; Parking</div>' +
+            '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.infraSub + '</div>' +
           '</div>' +
-          '<div style="font-size:0.95rem; font-weight:800; color:#2F3B42;">Included</div>' +
+          '<div style="font-size:0.92rem; font-weight:800; color:#2F3B42; white-space:nowrap; flex-shrink:0;">' + item.infra + '</div>' +
         '</div>' +
 
-        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
-            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">3. Statutory Taxes (GST + Reg.)</div>' +
-            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">GST (5%) + Stamp Duty &amp; Registration (~6.6%)</div>' +
+            '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">3. Statutory Taxes</div>' +
+            '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.taxSub + '</div>' +
           '</div>' +
-          '<div style="font-size:0.95rem; font-weight:800; color:#7D442A;">' + item.gst + ' + ' + item.stamp + '</div>' +
+          '<div style="font-size:0.92rem; font-weight:800; color:#7D442A; white-space:nowrap; flex-shrink:0;">' + item.tax + '</div>' +
         '</div>' +
 
       '</div>' +
 
-      '<div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:0.85rem 1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">' +
+      '<div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:0.75rem 0.9rem; display:flex; justify-content:space-between; align-items:center; gap:0.5rem;">' +
         '<div>' +
-          '<div style="font-family:\'Josefin Sans\',sans-serif; font-size:0.68rem; font-weight:800; letter-spacing:0.08em; color:#E2B77B; text-transform:uppercase;">TOTAL ESTIMATED OUTLAY</div>' +
-          '<div style="font-size:0.74rem; color:rgba(255,255,255,0.75); margin-top:1px;">All-inclusive on-road acquisition cost</div>' +
+          '<div style="font-family:\'Josefin Sans\',sans-serif; font-size:0.65rem; font-weight:800; letter-spacing:0.08em; color:#E2B77B; text-transform:uppercase;">TOTAL ESTIMATED OUTLAY</div>' +
+          '<div style="font-size:0.72rem; color:rgba(255,255,255,0.75); margin-top:1px;">All-inclusive acquisition cost</div>' +
         '</div>' +
-        '<div style="font-size:1.3rem; font-weight:800; color:#FFFFFF; font-family:\'Manrope\',sans-serif;">' + item.total + '</div>' +
+        '<div style="font-size:1.25rem; font-weight:800; color:#FFFFFF; font-family:\'Manrope\',sans-serif; white-space:nowrap; flex-shrink:0;">' + item.total + '</div>' +
       '</div>';
   };
 
