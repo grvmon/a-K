@@ -3383,7 +3383,26 @@ function akGallerySelect(idx) {
 </div>
 
 <!-- Floor Plan Modal -->
-<div id=propFloorPlanModal class=prop-fp-modal-overlay onclick=closeFloorPlanModal(event); style="display:none; position:fixed; inset:0; background:rgba(13,27,36,0.85); backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;"><div class=prop-fp-modal-content onclick=event.stopPropagation(); style="background:#FFFFFF; border-radius: 4px; max-width:860px; width:100%; padding:1.5rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.35); box-sizing:border-box;"><button type=button class=prop-fp-modal-close onclick=closeFloorPlanModal(); style="position:absolute; top:1rem; right:1rem; background:rgba(13,27,36,0.06); border:none; width:34px; height:34px; border-radius:50%; font-size:1.4rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Lightbox">&times;</button><h3 id=propFpModalTitle class=prop-fp-modal-title style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:#2F3B42; margin:0 0 1rem 0; font-weight:700;">Evergreen at Prestige Raintree Park Floor Plan</h3><div class=prop-fp-modal-img-wrapper style="width:100%; height:62vh; max-height:560px; background:#FAF8F5; border-radius: 4px; display:flex; align-items:center; justify-content:center; overflow:hidden;"><img id=propFpModalImg src="../../style-guide/assets/floorplans/evergreen/unit-type-a.webp" alt="Floor Plan View" style="max-width:100%; max-height:100%; object-fit:contain;" loading="lazy"></div><div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;"><span style="font-size:0.85rem; color:#667085;">Official Sanctioned Architectural Layout</span><button type=button class=sd-btn-gold onclick="closeFloorPlanModal(); window.openModal('pricing', 'floorplan_lightbox_cost_sheet');" style="padding:0.65rem 1.5rem; font-size:0.9rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius: 4px; font-weight:700; cursor:pointer; box-shadow:0 3px 10px rgba(125,68,42,0.25);"><span>Get Verified Cost Sheet &rarr;</span></button></div></div></div>
+<div id="propFloorPlanModal" class="prop-fp-modal-overlay" onclick="closeFloorPlanModal(event);" style="display:none; position:fixed; inset:0; background:rgba(13,27,36,0.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
+  <div class="prop-fp-modal-content" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius:6px; max-width:860px; width:100%; max-height:92vh; padding:1.25rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.35); box-sizing:border-box; display:flex; flex-direction:column; overflow:hidden;">
+    <button type="button" class="prop-fp-modal-close" onclick="closeFloorPlanModal();" style="position:absolute; top:0.85rem; right:0.85rem; background:rgba(13,27,36,0.06); border:none; width:34px; height:34px; border-radius:50%; font-size:1.4rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s ease; z-index:10;" aria-label="Close Lightbox">&times;</button>
+
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; width:100%; margin-bottom:0.75rem; padding-right:2.5rem; box-sizing:border-box;">
+      <h3 id="propFpModalTitle" class="prop-fp-modal-title" style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem, 1.1rem + 0.5vw, 1.55rem); color:#2F3B42; margin:0; font-weight:700; line-height:1.25; word-break:break-word;">Evergreen at Prestige Raintree Park Floor Plan</h3>
+    </div>
+
+    <div class="prop-fp-modal-img-wrapper" style="width:100%; height:auto; max-height:65vh; min-height:160px; background:#FAF8F5; border:1px solid #E5E0D8; border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:0.35rem; box-sizing:border-box;">
+      <img id="propFpModalImg" src="../../style-guide/assets/floorplans/evergreen/unit-type-a.webp" alt="Floor Plan View" style="max-width:100%; max-height:62vh; width:auto; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius:2px;" loading="lazy">
+    </div>
+
+    <div style="margin-top:0.85rem; padding-top:0.5rem; border-top:1px solid #F0ECE6; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.65rem;">
+      <span style="font-size:0.82rem; color:#667085; font-weight:500;">Official Sanctioned Architectural Layout</span>
+      <button type="button" class="sd-btn-gold" onclick="closeFloorPlanModal(); window.openModal('pricing', 'floorplan_lightbox_cost_sheet');" style="padding:0.65rem 1.35rem; font-size:0.88rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer; box-shadow:0 3px 10px rgba(125,68,42,0.25); white-space:nowrap;">
+        <span>Get Verified Cost Sheet &rarr;</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- AcreNKey Enhanced Architectural Lightbox Modal -->
 <style id="ak-lightbox-enhanced-styles">
