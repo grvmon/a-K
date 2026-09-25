@@ -1386,151 +1386,175 @@ body.property-page .header-nav .mobile-toggle {
 </div>
 </section>
 
-<!-- Section 2: Diligence & Executive Overview -->
-<section id="about" class="prop-section" style="background:#FFFFFF; border-bottom:1px solid #DDD7CF;">
-<div class="prop-container">
-
-  <!-- Diligence Checklist Section -->
-  <div style="margin-bottom:2.25rem;">
-    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
-      <div>
-        <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem;">INDEPENDENT BUYER DILIGENCE</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:#2F3B42; margin:0;">Key Diligence Points Before Booking</h2>
-      </div>
-      <a href="#" onclick="window.openModal('general', 'diligence_checklist_download'); return false;" style="font-size:0.85rem; font-weight:700; color:#7D442A; text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;">
-        <span>Download Full Diligence Report &rarr;</span>
-      </a>
+<!-- Section 2: Executive Overview & Masterplan -->
+<section id="about" class="prop-section prop-about-fold-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+  <style>
+    @media (min-width: 901px) {
+      .prop-about-fold-section {
+        min-height: calc(100vh - 80px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+        padding: clamp(1.75rem, 3.5vh, 2.75rem) 0 !important;
+      }
+      .prop-about-fold-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
+        gap: clamp(2rem, 3.5vw, 3.5rem) !important;
+        align-items: center !important;
+      }
+    }
+    @media (max-width: 900px) {
+      .prop-about-fold-section {
+        padding: 2.25rem 0 !important;
+      }
+      .prop-about-fold-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.75rem !important;
+      }
+    }
+    .about-pillar-card {
+      background: #FFFFFF;
+      border: 1px solid #E2DDD5;
+      border-radius: 4px;
+      padding: clamp(0.75rem, 1.4vh, 1.05rem) clamp(0.85rem, 1.2vw, 1.15rem);
+      box-shadow: 0 2px 8px rgba(15, 31, 61, 0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .about-pillar-card:hover {
+      border-color: #BE7555;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 540px) {
+      .about-pillars-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+  <div class="prop-container">
+    <!-- Header Block -->
+    <div style="margin-bottom: clamp(1.25rem, 2.5vh, 2rem);">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.0rem, 2.5vw, 2.75rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.15;">
+        About Sumadhura Folium
+      </h2>
+      <p style="font-size:clamp(1.0rem, 1.1vw, 1.15rem); color:#4A5861; margin:0; line-height:1.55; max-width:920px;">
+        A 16.5-acre master-planned residential precinct of ~1,300 homes across 7 high-rise towers in Borewell Road, Core Whitefield, East Bengaluru.
+      </p>
     </div>
 
-    <!-- 4-Column Diligence Row -->
-    <div class="ak-diligence-4col-grid">
-      <div class="ak-diligence-card">
-        <div class="ak-diligence-header">
-          <div class="ak-diligence-badge">✓</div>
-          <h3 class="ak-diligence-title">83% Reported Open Space</h3>
-        </div>
-        <p class="ak-diligence-body">Substantial open green area, multi-tiered landscaping, and expansive courtyard layout across 16.5 acres.</p>
-      </div>
-
-      <div class="ak-diligence-card">
-        <div class="ak-diligence-header">
-          <div class="ak-diligence-badge">✓</div>
-          <h3 class="ak-diligence-title">~3 km to ITPL &amp; EPIP</h3>
-        </div>
-        <p class="ak-diligence-body">Prime Core Whitefield placement offering fast daily commute access to major IT hubs and Purple Line Metro.</p>
-      </div>
-
-      <div class="ak-diligence-card">
-        <div class="ak-diligence-header">
-          <div class="ak-diligence-badge" style="background:#B45309;">⚠</div>
-          <h3 class="ak-diligence-title">Borewell Road Congestion</h3>
-        </div>
-        <p class="ak-diligence-body">Peak-hour bottlenecks along Borewell Road require route planning and transit time buffers for daily commuters.</p>
-      </div>
-
-      <div class="ak-diligence-card">
-        <div class="ak-diligence-header">
-          <div class="ak-diligence-badge" style="background:#B45309;">⚠</div>
-          <h3 class="ak-diligence-title">Mar 2028 Possession</h3>
-        </div>
-        <p class="ak-diligence-body">RERA Phase IV completion filing (March 2028) vs builder marketing target (December 2027) timeline reconciliation.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Detailed Overview Narrative Grid -->
-  <div style="display:grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap:2rem; align-items:start;" class="ak-overview-narrative-grid">
-    <div>
-      <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; color:#2F3B42; margin:0 0 1rem 0;">Project Overview: Sumadhura Folium</h3>
-      <div style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:#4B5563; line-height:1.7; display:flex; flex-direction:column; gap:1rem;">
-        <p style="margin:0;">
-          <strong>Sumadhura Folium</strong> is a residential community on Borewell Road in Core Whitefield. The project spans approximately 16.5 acres and comprises 7 towers with approximately 1,300 residences.
+    <!-- Main 2-Column Showcase Grid -->
+    <div class="prop-about-fold-grid">
+      <!-- Left Column: Narrative & 4 Architectural Pillars -->
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <p style="font-size:clamp(0.98rem, 1.05vw, 1.08rem); line-height:1.65; color:#303F4F; margin-bottom:clamp(1.0rem, 1.8vh, 1.4rem);">
+          Planned across <strong>7 residential towers</strong>, the development balances premium high-rise architecture with expansive open spaces, dedicated lifestyle amenities, and shared community infrastructure.
         </p>
-        <p style="margin:0;">
-          It offers 3 BHK, 3 BHK + Study, 4 BHK and 4 BHK + Study configurations ranging from approximately 1,515 to 2,435 sq.ft. The project's proposition is centred around Core Whitefield connectivity, ITPL/EPIP access (~3 km), operational Purple Line Metro connectivity (~2–3 km), large open space (83%), and a substantial ~54,000 sq.ft. amenity ecosystem.
-        </p>
-        <p style="margin:0;">
-          Designed for families seeking core employment catchment proximity alongside a high quality of life, Sumadhura Folium provides extensive sporting, wellness, and leisure facilities within a self-contained community environment.
-        </p>
-      </div>
-    </div>
 
-    <!-- Quick Fact Box -->
-    <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:1.5rem;" class="ak-card-dossier">
-      <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:#2F3B42; margin:0 0 1rem 0; padding-bottom:0.65rem; border-bottom:1px solid #EAE6DF;">Development Snapshot</h4>
-      <div style="display:flex; flex-direction:column; gap:0.75rem; font-family:'Manrope',sans-serif; font-size:0.88rem;">
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Developer</span>
-          <span style="font-weight:700; color:#2F3B42;">Sumadhura Group</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Location</span>
-          <span style="font-weight:700; color:#2F3B42;">Borewell Road, Whitefield</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Land Parcel</span>
-          <span style="font-weight:700; color:#2F3B42;">16.5 Acres</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Open Space</span>
-          <span style="font-weight:700; color:#2F3B42;">83% Reported</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Towers / Elevation</span>
-          <span style="font-weight:700; color:#2F3B42;">7 Towers (2B + G + 19)</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Total Residences</span>
-          <span style="font-weight:700; color:#2F3B42;">~1,300 Units</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.45rem;">
-          <span style="color:#667085;">Clubhouse Scale</span>
-          <span style="font-weight:700; color:#2F3B42;">~54,000 sq.ft.</span>
-        </div>
-        <div style="display:flex; justify-content:space-between;">
-          <span style="color:#667085;">RERA Phase IV No.</span>
-          <span style="font-weight:700; color:#7D442A; font-size:0.8rem;">PRM/KA/RERA/1251/446/PR/310328</span>
-        </div>
-      </div>
-    </div>
-  </div>
+        <!-- 4 Architectural Pillars (2x2 Grid) -->
+        <div class="about-pillars-grid" style="display:grid; grid-template-columns: repeat(2, 1fr); gap: clamp(0.65rem, 1.2vh, 0.95rem); margin-bottom: clamp(1.0rem, 1.8vh, 1.35rem);">
+          <!-- Pillar 1 -->
+          <div class="about-pillar-card">
+            <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">01</span>
+              <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">7 Towers</strong>
+            </div>
+            <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">2B + G + 19 floors with 3 &amp; 4 BHK flexible layouts.</p>
+          </div>
 
-</div>
-</section>
+          <!-- Pillar 2 -->
+          <div class="about-pillar-card">
+            <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">02</span>
+              <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">83% Open Area</strong>
+            </div>
+            <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Expansive greenery, courtyard lawns &amp; tree avenues.</p>
+          </div>
 
-<!-- Section 3: Walkthrough & Media Showcase -->
-<section class="prop-section" style="background:#FAF8F5; border-bottom:1px solid #DDD7CF;">
-<div class="prop-container">
+          <!-- Pillar 3 -->
+          <div class="about-pillar-card">
+            <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">03</span>
+              <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">~54k sq.ft. Club</strong>
+            </div>
+            <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Dual lifestyle hubs with 40+ resort-grade amenities.</p>
+          </div>
 
-  <div style="text-align:center; max-width:720px; margin:0 auto 2rem auto;">
-    <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.14em; color:#7D442A; text-transform:uppercase; margin-bottom:0.35rem;">VISUAL TOUR</div>
-    <h2 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:#2F3B42; margin:0 0 0.5rem 0;">Project Video Walkthrough</h2>
-    <p style="font-family:'Manrope',sans-serif; font-size:0.92rem; color:#667085; line-height:1.5; margin:0;">Experience the architectural design, central courtyard lagoon, and 16.5-acre masterplan layout of Sumadhura Folium.</p>
-  </div>
-
-  <div style="max-width:960px; margin:0 auto; position:relative;">
-    <div style="position:relative; width:100%; aspect-ratio:16/9; background:#141B22; border-radius: 4px; overflow:hidden; border:1px solid #DDD7CF; box-shadow:0 8px 30px rgba(0,0,0,0.12);">
-      
-      <div id="videoPlayOverlay" onclick="var v=document.getElementById('overviewVideoPlayer'); if(v){ v.play(); this.style.display='none'; }" style="position:absolute; inset:0; z-index:3; cursor:pointer; background:rgba(0,0,0,0.3); display:flex; flex-direction:column; align-items:center; justify-content:center; transition:background 0.3s ease;">
-        <div style="width:68px; height:68px; border-radius:50%; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(125, 68, 42, 0.4); margin-bottom:0.75rem; transition:transform 0.2s ease;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" stroke="none"><polygon points="8 5 19 12 8 19 8 5"></polygon></svg>
+          <!-- Pillar 4 -->
+          <div class="about-pillar-card">
+            <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">04</span>
+              <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">16.5-Acre Master</strong>
+            </div>
+            <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Integrated live-work township with internal transit.</p>
+          </div>
         </div>
-        <span style="color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.92rem; font-weight:700; text-shadow:0 2px 6px rgba(0,0,0,0.8); letter-spacing:0.02em;">
-          Play Project Walkthrough
-        </span>
-        <span style="color:rgba(255,255,255,0.82); font-family:'Manrope',sans-serif; font-size:0.75rem; margin-top:0.2rem; text-shadow:0 1px 4px rgba(0,0,0,0.8);">
-          3D Courtyard &amp; Amenity Tour
-        </span>
+
+        <!-- Footnote Callout Box -->
+        <div style="display:flex; align-items:flex-start; gap:0.6rem; background:rgba(255,255,255,0.75); border:1px solid #DDD7CF; border-left:3px solid #7D442A; border-radius:4px; padding:clamp(0.6rem, 1.2vh, 0.8rem) clamp(0.75rem, 1.5vw, 1.0rem); margin-bottom:1.25rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D442A" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span style="font-size:0.88rem; color:#2F3B42; line-height:1.5;">The scale of the development makes the masterplan and execution an important part of understanding the project.</span>
+        </div>
+
+        <!-- Section Action -->
+        <div>
+          <button type="button" class="sd-btn-gold" onclick="window.openModal('general', 'brochure_download'); return false;" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.4rem; font-size:0.9rem; font-weight:700; border-radius:4px; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; cursor:pointer; font-family:'Manrope',sans-serif; box-shadow:0 4px 12px rgba(125, 68, 42, 0.25);">
+            <i data-feather="book-open" style="width:16px; height:16px;"></i>
+            <span>Download Official Brochure &rarr;</span>
+          </button>
+        </div>
       </div>
 
-      <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp" style="width:100%; height:100%; object-fit:cover; border-radius:4px; background:#141B22; display:block;">
-        <source src="../../style-guide/assets/sumadhura_folium_walkthrough.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-  </div>
+      <!-- Right Column: Cinematic Walkthrough Video Player -->
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius:6px; overflow:hidden; border:1px solid #DDD7CF; box-shadow:0 8px 30px rgba(15, 31, 61, 0.08); width:100%; aspect-ratio:16/9; background:#141B22;">
+          <!-- Top-left category badge -->
+          <div style="position:absolute; top:14px; left:14px; z-index:3; background:rgba(47, 59, 66, 0.9); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:4px; border:1px solid rgba(255,255,255,0.18); pointer-events:none; display:flex; align-items:center; gap:0.4rem;">
+            <span style="width:6px; height:6px; border-radius:50%; background:#BE7555; display:inline-block;"></span>
+            <span>TOWNSHIP WALKTHROUGH · 3:53</span>
+          </div>
 
-</div>
+          <!-- Luxury Frosted Play Overlay -->
+          <div id="propVideoOverlay" onclick="playOverviewVideo();" style="position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(15, 27, 36, 0.32); cursor:pointer; transition:all 0.3s ease;">
+            <div style="width:72px; height:72px; border-radius:50%; background:rgba(47, 59, 66, 0.88); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); display:flex; align-items:center; justify-content:center; border:2px solid rgba(255,255,255,0.35); box-shadow:0 8px 28px rgba(0,0,0,0.4); transition:transform 0.2s ease;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#BE7555" stroke="#BE7555" style="margin-left:4px;">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <span style="color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.92rem; font-weight:700; margin-top:0.85rem; text-shadow:0 2px 6px rgba(0,0,0,0.8); letter-spacing:0.02em;">
+              Play Project Walkthrough
+            </span>
+            <span style="color:rgba(255,255,255,0.82); font-family:'Manrope',sans-serif; font-size:0.75rem; margin-top:0.2rem; text-shadow:0 1px 4px rgba(0,0,0,0.8);">
+              Full 3D Elevation &amp; Landscape Tour
+            </span>
+          </div>
+
+          <video id="overviewVideoPlayer" playsinline preload="metadata" poster="../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp" style="width:100%; height:100%; object-fit:cover; border-radius:6px; background:#141B22; display:block;">
+            <source src="../../style-guide/assets/sumadhura_folium_walkthrough.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+        <!-- Video Footer Tags -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.65rem; padding:0 0.25rem;">
+          <span style="font-size:0.76rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; font-family:'Josefin Sans',sans-serif;">SUMADHURA FOLIUM · CORE WHITEFIELD</span>
+          <span style="font-size:0.76rem; color:#59616B; font-weight:600;">1080p HD Architectural Tour</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      function playOverviewVideo() {
+        var vid = document.getElementById("overviewVideoPlayer");
+        var overlay = document.getElementById("propVideoOverlay");
+        if (vid) {
+          vid.setAttribute("controls", "true");
+          vid.play();
+          if (overlay) overlay.style.display = "none";
+        }
+      }
+    </script>
+  </div>
 </section>
 
 <!-- Section 4: Floor Plans -->
