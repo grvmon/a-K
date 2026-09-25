@@ -103,9 +103,25 @@ html { scroll-behavior: auto !important; }
   button, .sd-btn-gold, .evergreen-cost-cta-btn { min-height: 44px; touch-action: manipulation; }
   
   /* Image & Viewer mobile heights */
-  #evergreenFpFrame { height: clamp(270px, 40vh, 340px) !important; }
-  #evergreenGlanceTitle { height: auto !important; min-height: 28px !important; line-height: 1.25 !important; font-size: 1.35rem !important; }
-  #evergreenGlanceSubtitle { height: auto !important; min-height: 20px !important; line-height: 1.3 !important; }
+  /* Cost Sheet Mobile Tabs */
+  #evergreenCostTabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-bottom: 4px !important;
+    scrollbar-width: none !important;
+  }
+  #evergreenCostTabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  #evergreenCostTabs .ak-cost-tab {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
 }
 
 /* Acre&Key Reference Card System (4px Radius & Institutional Styling) */
@@ -2587,9 +2603,7 @@ body.property-page .header-nav .mobile-toggle {
         </div>
       </div>
 
-      <div class="prop-table-scroll-hint" style="display:none; font-size:0.75rem; color:#7D442A; font-weight:700; margin-bottom:0.4rem;">
-        &larr; Scroll horizontally to view complete table columns &rarr;
-      </div>
+
 
       
 <!-- Interactive Itemized Typology Cost Estimator -->
@@ -2702,27 +2716,44 @@ body.property-page .header-nav .mobile-toggle {
     if (!container) return;
 
     container.innerHTML = 
-      '<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #EAE6DF; padding-bottom:0.75rem; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">' +
-        '<div style="font-weight:800; color:#2F3B42; font-size:1.02rem;">' + item.title + '</div>' +
-        '<div style="font-size:0.75rem; color:#1B5E20; font-weight:800; background:#E8F5E9; padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
+      '<div style="margin-bottom:0.85rem; padding-bottom:0.65rem; border-bottom:1px solid #EAE6DF;">' +
+        '<div style="font-family:\'Cormorant Garamond\',serif; font-size:1.35rem; font-weight:700; color:#2F3B42; line-height:1.2;">' + item.title + '</div>' +
       '</div>' +
-      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:\'Manrope\',sans-serif;">' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
-          '<div style="font-size:0.72rem; color:#7D442A; font-weight:800; text-transform:uppercase;">1. Base Construction</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0.2rem;">' + item.base + '</div>' +
+
+      '<div style="display:flex; flex-direction:column; gap:0.45rem; margin-bottom:0.95rem; font-family:\'Manrope\',sans-serif;">' +
+        
+        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+          '<div>' +
+            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">1. Base Construction Rate</div>' +
+            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">Core agreement cost (~₹15,800/sq.ft.)</div>' +
+          '</div>' +
+          '<div style="font-size:0.95rem; font-weight:800; color:#2F3B42;">' + item.base + '</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
-          '<div style="font-size:0.72rem; color:#7D442A; font-weight:800; text-transform:uppercase;">2. Infra, Club &amp; Parking</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0.2rem;">' + item.infra + '</div>' +
+
+        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+          '<div>' +
+            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">2. Infra, Club &amp; Car Parking</div>' +
+            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">' + item.infra + '</div>' +
+          '</div>' +
+          '<div style="font-size:0.95rem; font-weight:800; color:#2F3B42;">Included</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border:1px solid #DDD7CF;">' +
-          '<div style="font-size:0.72rem; color:#7D442A; font-weight:800; text-transform:uppercase;">3. Statutory Taxes (GST + Reg)</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#7D442A; margin-top:0.2rem;">' + item.gst + ' + ' + item.stamp + '</div>' +
+
+        '<div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap; gap:0.35rem;">' +
+          '<div>' +
+            '<div style="font-size:0.84rem; font-weight:700; color:#2F3B42;">3. Statutory Taxes (GST + Reg.)</div>' +
+            '<div style="font-size:0.75rem; color:#667085; margin-top:1px;">GST (5%) + Stamp Duty &amp; Registration (~6.6%)</div>' +
+          '</div>' +
+          '<div style="font-size:0.95rem; font-weight:800; color:#7D442A;">' + item.gst + ' + ' + item.stamp + '</div>' +
         '</div>' +
-        '<div style="background:#2F3B42; border-radius: 4px; padding:0.85rem; border:1px solid #7D442A;">' +
-          '<div style="font-size:0.72rem; color:#D4AF37; font-weight:800; text-transform:uppercase;">Total Estimated Outlay</div>' +
-          '<div style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-top:0.2rem;">' + item.total + '</div>' +
+
+      '</div>' +
+
+      '<div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:0.85rem 1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">' +
+        '<div>' +
+          '<div style="font-family:\'Josefin Sans\',sans-serif; font-size:0.68rem; font-weight:800; letter-spacing:0.08em; color:#E2B77B; text-transform:uppercase;">TOTAL ESTIMATED OUTLAY</div>' +
+          '<div style="font-size:0.74rem; color:rgba(255,255,255,0.75); margin-top:1px;">All-inclusive on-road acquisition cost</div>' +
         '</div>' +
+        '<div style="font-size:1.3rem; font-weight:800; color:#FFFFFF; font-family:\'Manrope\',sans-serif;">' + item.total + '</div>' +
       '</div>';
   };
 
