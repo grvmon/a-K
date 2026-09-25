@@ -275,6 +275,64 @@ img[style*="border-radius: 50%"] {
   .mobile-only-nav::-webkit-scrollbar { display: none; }
   .mobile-only-nav .local-nav-link { padding: 0.35rem 0.75rem !important; font-size: 0.82rem !important; font-weight: 700 !important; }
 }
+
+@media (min-width: 901px) {
+  .prop-fp-fold-section {
+    min-height: calc(100vh - 80px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: clamp(1.25rem, 2.5vh, 2.0rem) 0 !important;
+  }
+  .folium-main-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.1fr) !important;
+    gap: clamp(1.25rem, 2vw, 1.85rem) !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #foliumFpFrame {
+    height: clamp(380px, 46vh, 460px) !important;
+  }
+}
+@media (max-width: 900px) {
+  .prop-fp-fold-section {
+    padding: 1.75rem 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  .folium-main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+  #foliumFpFrame {
+    height: clamp(260px, 38vh, 320px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .folium-chips-scroll-strip {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 0.2rem 0 !important;
+    gap: 0.4rem !important;
+    flex-wrap: nowrap !important;
+  }
+}
 @media (max-width: 992px) {
   .ak-amenities-cat-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1.25rem !important; }
 }
@@ -1615,73 +1673,136 @@ body.property-page .header-nav .mobile-toggle {
 </section>
 
 <!-- Section 4: Floor Plans -->
-<section id="floor-plans" class="prop-section" style="background:#FFFFFF; border-bottom:1px solid #DDD7CF;">
+<section id="floor-plans" class="prop-section prop-fp-fold-section" style="background:#FFFFFF; border-bottom:1px solid #DDD7CF;">
 <div class="prop-container">
 
-  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
-    <div>
-      <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem;">CONFIGURATIONS &amp; LAYOUTS</div>
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:#2F3B42; margin:0;">Sumadhura Folium Floor Plans</h2>
-    </div>
-    <div style="font-size:0.85rem; color:#667085; font-family:'Manrope',sans-serif;">Click plan to view high-resolution floor plan</div>
-  </div>
-
-  <!-- Selector Tabs -->
-  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.25rem;">
-    <button type="button" class="ak-fp-tab active" onclick="selectFoliumFp('3bhk_classic', this)" style="padding:0.5rem 1rem; font-size:0.85rem; font-weight:700; border-radius: 4px; border:1px solid #7D442A; background:#7D442A; color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK Classic (1,515 sq.ft.)</button>
-    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('3bhk_smart', this)" style="padding:0.5rem 1rem; font-size:0.85rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK Smart (1,725 sq.ft.)</button>
-    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('4bhk_classic', this)" style="padding:0.5rem 1rem; font-size:0.85rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK Classic (2,120 sq.ft.)</button>
-    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('4bhk_smart', this)" style="padding:0.5rem 1rem; font-size:0.85rem; font-weight:700; border-radius: 4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK Smart (2,435 sq.ft.)</button>
-  </div>
-
-  <!-- Display Canvas -->
-  <div style="background:#FAF8F5; border:1px solid #DDD7CF; border-radius: 4px; padding:1.25rem; position:relative;" class="ak-card-dossier">
-    <div style="display:grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap:1.5rem; align-items:center;" class="ak-fp-display-grid">
-      
-      <!-- Image Viewer Box -->
-      <div id="foliumFpFrame" onclick="openFpModalCurrent();" style="position:relative; width:100%; height: clamp(270px, 40vh, 340px); background:#FFFFFF; border:1px solid #EAE6DF; border-radius: 4px; overflow:hidden; cursor:pointer; display:flex; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
-        <img id="foliumFpImg" src="../../style-guide/assets/floorplans/folium/unit-3bhk-classic-01.webp" alt="3 BHK Classic Floor Plan" style="max-width:100%; max-height:100%; object-fit:contain; display:block;">
-        <div style="position:absolute; bottom:12px; right:12px; background:rgba(47,59,66,0.85); color:#FFFFFF; font-size:0.75rem; font-weight:700; padding:0.3rem 0.65rem; border-radius: 4px; backdrop-filter:blur(4px); display:flex; align-items:center; gap:0.35rem;">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-          <span>View Fullscreen</span>
-        </div>
+  <!-- Section Header -->
+  <div style="margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem);">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem;">
+      <div>
+        <div style="font-family:'Josefin Sans',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem;">CONFIGURATIONS &amp; LAYOUTS</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.85rem, 2.2vw, 2.4rem); font-weight:700; color:#2F3B42; margin:0; line-height:1.2;">
+          Official Floor Plans &amp; Space Analysis
+        </h2>
       </div>
+      <p style="font-size:clamp(0.88rem, 0.95vw, 0.98rem); line-height:1.4; color:#59616B; margin:0; font-family:'Manrope',sans-serif;">
+        Compare official layouts, usable space and orientation across configurations.
+      </p>
+    </div>
+  </div>
 
-      <!-- Plan Metadata Card -->
-      <div id="foliumFpDetails" style="display:flex; flex-direction:column; gap:0.85rem; font-family:'Manrope',sans-serif;">
-        <div>
-          <div style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; color:#7D442A; text-transform:uppercase;" id="foliumGlanceTag">TYPOLOGY SPECIFICATION</div>
-          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; color:#2F3B42; margin:0.2rem 0 0 0; line-height:1.2;" id="foliumGlanceTitle">3 BHK Classic Residence</h3>
-          <div style="font-size:0.85rem; color:#667085; margin-top:2px;" id="foliumGlanceSubtitle">Typ. 1,515 sq.ft. Super Built-up Area</div>
+  <!-- Selector Chips Strip (Always 1 Row on Mobile) -->
+  <div class="folium-chips-scroll-strip" style="display:flex; gap:0.4rem; overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:1.1rem; flex-wrap:nowrap; scrollbar-width:none;">
+    <button type="button" class="ak-fp-tab active" onclick="selectFoliumFp('3bhk_classic', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:4px; border:1px solid #7D442A; background:#7D442A; color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif; flex-shrink:0; white-space:nowrap;">3 BHK Classic (1,515 sq.ft.)</button>
+    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('3bhk_smart', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif; flex-shrink:0; white-space:nowrap;">3 BHK Smart (1,725 sq.ft.)</button>
+    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('4bhk_classic', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif; flex-shrink:0; white-space:nowrap;">4 BHK Classic (2,120 sq.ft.)</button>
+    <button type="button" class="ak-fp-tab" onclick="selectFoliumFp('4bhk_smart', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius:4px; border:1px solid #DDD7CF; background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif; flex-shrink:0; white-space:nowrap;">4 BHK Smart (2,435 sq.ft.)</button>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="folium-main-grid">
+    
+    <!-- LEFT COLUMN: Image Viewer Frame -->
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.85rem, 1.4vh, 1.1rem) clamp(0.95rem, 1.4vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      
+      <!-- Viewer Top Bar -->
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem 0.75rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap;">
+        <div style="font-size:0.75rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Josefin Sans',sans-serif; flex:1 1 auto; white-space:nowrap; min-width:140px;">
+          SANCTIONED ARCHITECTURAL BLUEPRINT
         </div>
-
-        <div style="display:flex; flex-direction:column; gap:0.55rem; background:#FFFFFF; border:1px solid #EAE6DF; border-radius: 4px; padding:0.85rem; font-size:0.84rem;">
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.35rem;">
-            <span style="color:#667085;">Super Built-up Area</span>
-            <span style="font-weight:700; color:#2F3B42;" id="foliumFpSba">1,515 sq.ft.</span>
-          </div>
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.35rem;">
-            <span style="color:#667085;">Carpet Area Approx.</span>
-            <span style="font-weight:700; color:#2F3B42;" id="foliumFpCarpet">~1,020 sq.ft.</span>
-          </div>
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid #F0ECE6; padding-bottom:0.35rem;">
-            <span style="color:#667085;">Balcony &amp; Utility</span>
-            <span style="font-weight:700; color:#2F3B42;" id="foliumFpBalcony">Dual Balconies + Utility</span>
-          </div>
-          <div style="display:flex; justify-content:space-between;">
-            <span style="color:#667085;">Est. On-Road Outlay</span>
-            <span style="font-weight:700; color:#7D442A;" id="foliumFpPrice">&#8377;2.45 Cr*</span>
-          </div>
-        </div>
-
-        <div style="display:flex; gap:0.5rem;">
-          <button type="button" class="sd-btn-gold" onclick="window.openModal('floorplan', 'fp_section_download'); return false;" style="flex:1; padding:0.7rem; font-size:0.85rem; font-weight:700; border-radius: 4px; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; cursor:pointer; text-align:center;">
-            <span>Download Floor Plan PDF &rarr;</span>
+        <div style="display:inline-flex; align-items:center; gap:0.35rem; flex-shrink:0;">
+          <button type="button" onclick="window.foliumZoom(0.15)" title="Zoom In" style="width:30px; height:30px; border-radius:4px; border:1px solid #DDD7CF; background:#FBF6F3; color:#7D442A; font-size:1.1rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-family:'Manrope',sans-serif;">+</button>
+          <button type="button" onclick="window.foliumZoom(-0.15)" title="Zoom Out" style="width:30px; height:30px; border-radius:4px; border:1px solid #DDD7CF; background:#FBF6F3; color:#7D442A; font-size:1.1rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-family:'Manrope',sans-serif;">−</button>
+          <button type="button" onclick="window.foliumResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; white-space:nowrap; flex-shrink:0;">Reset</button>
+          <button type="button" onclick="openFpModalCurrent()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; white-space:nowrap !important; flex-shrink:0 !important;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            <span>View Fullscreen</span>
           </button>
         </div>
       </div>
 
+      <!-- Floor Plan Image Frame -->
+      <div id="foliumFpFrame" style="width:100%; height:clamp(380px, 46vh, 460px); background:#FAF8F5; border-radius:4px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; cursor:zoom-in;" onclick="openFpModalCurrent();">
+        <img id="foliumFpImg" src="../../style-guide/assets/floorplans/folium/unit-3bhk-classic-01.webp" alt="Sumadhura Folium Floor Plan Layout" style="width:100%; height:100%; object-fit:contain; transition:transform 0.25s ease, opacity 0.2s ease; transform-origin:center center; padding:0.5rem; display:block;" loading="lazy">
+      </div>
+
+      <!-- Caption Bar -->
+      <div id="foliumFpCaption" style="height:22px; line-height:22px; font-size:0.84rem; color:#7D442A; font-weight:700; margin-top:0.45rem; text-align:center; font-family:'Manrope',sans-serif; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+        3 BHK Classic Residence — Tower 01 (Core Whitefield)
+      </div>
     </div>
+
+    <!-- RIGHT COLUMN: PLAN AT A GLANCE Card -->
+    <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.95rem, 1.6vh, 1.25rem) clamp(1.05rem, 1.5vw, 1.35rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div>
+        <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem; font-family:'Josefin Sans',sans-serif;">
+          PLAN AT A GLANCE
+        </div>
+
+        <h3 id="foliumGlanceTitle" style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.55rem, 1.7vw, 1.9rem); font-weight:700; color:#2F3B42; margin:0; line-height:1.2;">
+          3 BHK Classic Residence
+        </h3>
+        <div id="foliumGlanceSubtitle" style="font-size:0.82rem; color:#59616B; font-weight:600; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); font-family:'Manrope',sans-serif;">
+          Typ. 1,515 sq.ft. Super Built-up Area
+        </div>
+
+        <!-- 2x2 Metric Grid -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.55rem; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); padding-bottom:clamp(0.65rem, 1.2vh, 0.95rem); border-bottom:1px solid #F0ECE6;">
+          <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div id="foliumFpSba" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">1,515 sq.ft.</div>
+            <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">SBUA</div>
+          </div>
+          <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div id="foliumFpCarpet" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">~1,020 sq.ft.</div>
+            <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Carpet Area</div>
+          </div>
+          <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div id="foliumFpBalcony" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">Dual Balconies</div>
+            <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Balcony &amp; Utility</div>
+          </div>
+          <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div id="foliumFpPrice" style="font-size:1.05rem; font-weight:800; color:#7D442A; font-family:'Manrope',sans-serif; line-height:1.2;">₹2.45 Cr*</div>
+            <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Est. Outlay</div>
+          </div>
+        </div>
+
+        <!-- Space Efficiency Block -->
+        <div style="background:#182A3D; color:#FFFFFF; border-radius:4px; padding:clamp(0.65rem, 1.2vh, 0.85rem) clamp(0.75rem, 1.2vw, 0.95rem); margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+            <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#E2B77B; font-family:'Josefin Sans',sans-serif;">
+              CARPET EFFICIENCY RATIO
+            </span>
+            <span id="foliumGlanceEff" style="font-size:1.05rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif;">67.3%</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; color:rgba(255,255,255,0.85); font-family:'Manrope',sans-serif;">
+            <span>Usable Carpet Share</span>
+            <span id="foliumGlanceNonCarpet" style="font-weight:700; color:#DDD7CF;">32.7%</span>
+          </div>
+          
+          <!-- Dynamic Dual-Tone Progress Bar -->
+          <div style="margin-top:0.35rem; width:100%; height:6px; background:#0F1B24; border-radius:3px; overflow:hidden; display:flex;">
+            <div id="foliumGlanceEffBar" style="width:67.3%; height:100%; background:#22C55E; border-radius:3px 0 0 3px; transition:width 0.3s ease;"></div>
+            <div id="foliumGlanceNonCarpetBar" style="width:32.7%; height:100%; background:#E2B77B; border-radius:0 3px 3px 0; transition:width 0.3s ease;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.66rem; color:rgba(255,255,255,0.7); margin-top:0.35rem; font-family:'Manrope',sans-serif;">
+            <span style="display:inline-flex; align-items:center; gap:0.3rem;"><span style="width:6px; height:6px; border-radius:50%; background:#22C55E; display:inline-block;"></span> Usable Carpet</span>
+            <span style="display:inline-flex; align-items:center; gap:0.3rem;"><span style="width:6px; height:6px; border-radius:50%; background:#E2B77B; display:inline-block;"></span> Non-Carpet Share</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" class="sd-btn-gold" onclick="window.openModal('floorplan', 'fp_section_download'); return false;" style="width:100%; padding:0.75rem 1.25rem; font-size:0.88rem; font-weight:700; border-radius:4px; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; cursor:pointer; text-align:center; box-shadow:0 4px 12px rgba(125,68,42,0.25);">
+          <span>Get Detailed Cost Sheet &amp; PDF &rarr;</span>
+        </button>
+        <div style="text-align:center; margin-top:0.45rem;">
+          <button type="button" onclick="openFpModalCurrent(); return false;" style="background:none; border:none; color:#7D442A; font-size:0.8rem; font-weight:700; cursor:pointer; text-decoration:underline; font-family:'Manrope',sans-serif; padding:0; outline:none;">
+            View High-Res Sanctioned Plan &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
@@ -2440,45 +2561,82 @@ body.property-page .header-nav .mobile-toggle {
     '3bhk_classic': {
       title: '3 BHK Classic Residence',
       subtitle: 'Typ. 1,515 sq.ft. Super Built-up Area',
+      caption: '3 BHK Classic Residence — Tower 01 (Core Whitefield)',
       sba: '1,515 sq.ft.',
       carpet: '~1,020 sq.ft.',
-      balcony: 'Dual Balconies + Utility',
+      balcony: 'Dual Balconies',
       price: '₹2.45 Cr*',
+      eff: '67.3%',
+      nonCarpet: '32.7%',
+      effVal: 67.3,
       img: '../../style-guide/assets/floorplans/folium/unit-3bhk-classic-01.webp'
     },
     '3bhk_smart': {
       title: '3 BHK Smart Residence',
       subtitle: 'Typ. 1,725 sq.ft. Super Built-up Area',
+      caption: '3 BHK Smart Residence — Tower 02 (Core Whitefield)',
       sba: '1,725 sq.ft.',
       carpet: '~1,160 sq.ft.',
-      balcony: 'Dual Balconies + Utility',
+      balcony: 'Dual Balconies',
       price: '₹2.79 Cr*',
+      eff: '67.2%',
+      nonCarpet: '32.8%',
+      effVal: 67.2,
       img: '../../style-guide/assets/floorplans/folium/unit-3bhk-smart-08.webp'
     },
     '4bhk_classic': {
       title: '4 BHK Classic Residence',
       subtitle: 'Typ. 2,120 sq.ft. Super Built-up Area',
+      caption: '4 BHK Classic Residence — Tower 05 (Core Whitefield)',
       sba: '2,120 sq.ft.',
       carpet: '~1,430 sq.ft.',
-      balcony: 'Triple Balconies + Utility',
+      balcony: 'Triple Balconies',
       price: '₹3.42 Cr*',
+      eff: '67.5%',
+      nonCarpet: '32.5%',
+      effVal: 67.5,
       img: '../../style-guide/assets/floorplans/folium/unit-4bhk-smart-01.webp'
     },
     '4bhk_smart': {
       title: '4 BHK Smart / Luxury Residence',
       subtitle: 'Typ. 2,435 sq.ft. Super Built-up Area',
+      caption: '4 BHK Luxury Residence — Tower 07 (Core Whitefield)',
       sba: '2,435 sq.ft.',
       carpet: '~1,640 sq.ft.',
-      balcony: 'Triple Balconies + Utility',
+      balcony: 'Triple Balconies',
       price: '₹3.94 Cr*',
+      eff: '67.4%',
+      nonCarpet: '32.6%',
+      effVal: 67.4,
       img: '../../style-guide/assets/floorplans/folium/unit-4bhk-luxury-2435.webp'
     }
   };
+
+  let foliumZoomLevel = 1;
+
+  window.foliumZoom = function(delta) {
+    foliumZoomLevel = Math.min(Math.max(0.8, foliumZoomLevel + delta), 2.5);
+    applyFoliumZoom();
+  };
+
+  window.foliumResetZoom = function() {
+    foliumZoomLevel = 1;
+    applyFoliumZoom();
+  };
+
+  function applyFoliumZoom() {
+    const img = document.getElementById('foliumFpImg');
+    if (img) {
+      img.style.transform = `scale(${foliumZoomLevel})`;
+      img.style.transition = 'transform 0.2s ease-out';
+    }
+  }
 
   window.currentFpKey = '3bhk_classic';
 
   window.selectFoliumFp = function(key, btn) {
     window.currentFpKey = key;
+    foliumResetZoom();
     const item = fpData[key] || fpData['3bhk_classic'];
     const tabs = document.querySelectorAll('.ak-fp-tab');
     tabs.forEach(t => {
@@ -2492,13 +2650,33 @@ body.property-page .header-nav .mobile-toggle {
       btn.style.border = '1px solid #7D442A';
     }
 
-    document.getElementById('foliumFpImg').src = item.img;
-    document.getElementById('foliumGlanceTitle').innerText = item.title;
-    document.getElementById('foliumGlanceSubtitle').innerText = item.subtitle;
-    document.getElementById('foliumFpSba').innerText = item.sba;
-    document.getElementById('foliumFpCarpet').innerText = item.carpet;
-    document.getElementById('foliumFpBalcony').innerText = item.balcony;
-    document.getElementById('foliumFpPrice').innerText = item.price;
+    const img = document.getElementById('foliumFpImg');
+    if (img) img.src = item.img;
+    const caption = document.getElementById('foliumFpCaption');
+    if (caption) caption.innerText = item.caption || item.title;
+    const title = document.getElementById('foliumGlanceTitle');
+    if (title) title.innerText = item.title;
+    const sub = document.getElementById('foliumGlanceSubtitle');
+    if (sub) sub.innerText = item.subtitle;
+    const sba = document.getElementById('foliumFpSba');
+    if (sba) sba.innerText = item.sba;
+    const carpet = document.getElementById('foliumFpCarpet');
+    if (carpet) carpet.innerText = item.carpet;
+    const balcony = document.getElementById('foliumFpBalcony');
+    if (balcony) balcony.innerText = item.balcony;
+    const price = document.getElementById('foliumFpPrice');
+    if (price) price.innerText = item.price;
+    const eff = document.getElementById('foliumGlanceEff');
+    if (eff) eff.innerText = item.eff;
+    const nonCarpet = document.getElementById('foliumGlanceNonCarpet');
+    if (nonCarpet) nonCarpet.innerText = item.nonCarpet;
+
+    const effBar = document.getElementById('foliumGlanceEffBar');
+    const nonCarpetBar = document.getElementById('foliumGlanceNonCarpetBar');
+    if (effBar && nonCarpetBar) {
+      effBar.style.width = item.effVal + '%';
+      nonCarpetBar.style.width = (100 - item.effVal) + '%';
+    }
   };
 
   window.openFpModalCurrent = function() {
