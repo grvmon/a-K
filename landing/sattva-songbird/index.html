@@ -4108,20 +4108,20 @@ function akGallerySelect(idx) {
 
 <script>
     // Score Breakdown Modal
-    function openAkScoreModal() {
+    window.openAkScoreModal = function openAkScoreModal() {
         var modal = document.getElementById("akScoreBreakupModal");
         if (modal) {
             modal.style.display = "flex";
             document.body.style.overflow = "hidden";
         }
-    }
-    function closeAkScoreModal() {
+    };
+    window.closeAkScoreModal = function closeAkScoreModal() {
         var modal = document.getElementById("akScoreBreakupModal");
         if (modal) {
             modal.style.display = "none";
             document.body.style.overflow = "";
         }
-    }
+    };
 
     // Floor Plan Fullscreen Modal
     window.openFloorPlanModal = function(imgSrc, title) {
@@ -4289,41 +4289,57 @@ function akGallerySelect(idx) {
     var shareTriggerBtnEl = null;
     function openShareModal(btnEl) {
         if (btnEl) shareTriggerBtnEl = btnEl;
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (isMobile && navigator.share) {
-            navigator.share({
-                title: 'Sattva Songbird, Budigere Road | Acre&Key',
-      text: 'Sattva Songbird — Cheemasandra / Budigere Road, Bengaluru
+        var modal = document.getElementById('akShareModal');
+        if (modal) {
+            modal.style.display = 'flex';
+            modal.style.opacity = '1';
+            modal.style.visibility = 'visible';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
 
-₹0.72–₹2.67 Cr · Studio to 3 BHK
-Acre&Key Score: 3.28/5
+    function closeShareModal() {
+        var modal = document.getElementById('akShareModal');
+        if (modal) {
+            modal.style.opacity = '0';
+            modal.style.visibility = 'hidden';
+            modal.classList.remove('active');
+            setTimeout(function() { modal.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+        }
+    }
 
-View pricing, floor plans & Acre&Key analysis:
-',
-      url: shareUrl
-    }).catch(console.error);
-  } else {
-    var modal = document.getElementById('akShareModal');
-    var input = document.getElementById('akShareUrlInput');
-    if (input) input.value = shareUrl;
-    var msg = 'Sattva Songbird — Cheemasandra / Budigere Road, Bengaluru
+    function handlePropertyShare(e) {
+        if (e) e.preventDefault();
+        openShareModal(e ? e.currentTarget : null);
+    }
 
-₹0.72–₹2.67 Cr · Studio to 3 BHK
-Acre&Key Score: 3.28/5
+    function shareWhatsApp() {
+        var shareUrl = window.location.href;
+        var msg = 'Sattva Songbird — Cheemasandra / Budigere Road, Bengaluru\n\n₹0.72–₹2.67 Cr · Studio to 3 BHK\nAcre&Key Score: 3.28/5\n\nView pricing, floor plans & Acre&Key analysis:\n' + shareUrl;
+        window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+    }
 
-View pricing, floor plans & Acre&Key analysis:
-' + shareUrl;
-    var waBtn = document.getElementById('akShareWaBtn');
-    if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msg);
-    var subject = 'Sattva Songbird — Acre&Key Property Review';
-    var body = 'Sattva Songbird
-Cheemasandra / Budigere Road, Bengaluru
+    function copyShareLink() {
+        var shareUrl = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(shareUrl).then(showShareToast);
+        }
+    }
 
-₹0.72–₹2.67 Cr · Studio to 3 BHK
-Acre&Key Score: 3.28/5
+    function showShareToast() {
+        var toast = document.getElementById('akShareToast');
+        if (!toast) return;
+        toast.style.display = 'flex';
+        toast.classList.add('active');
+        setTimeout(function() { toast.classList.remove('active'); }, 2500);
+    }
 
-View pricing, floor plans and Acre&Key analysis:
-' + shareUrl;
+    function shareEmail() {
+        var shareUrl = window.location.href;
+        var subject = 'Sattva Songbird — Acre&Key Property Review';
+        var body = 'Sattva Songbird\nCheemasandra / Budigere Road, Bengaluru\n\n₹0.72–₹2.67 Cr · Studio to 3 BHK\nAcre&Key Score: 3.28/5\n\nView pricing, floor plans and Acre&Key analysis:\n' + shareUrl;
         window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
 </script>
