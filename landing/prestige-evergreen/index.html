@@ -7,7 +7,7 @@
 
 <style>
 html { scroll-behavior: auto !important; }
-.abha-widget, .abha-widget-container, .abha-form, [id*="abha"], [class*="abha"] {
+#advisorFloatingUnit, .advisor-floating-unit, .advisor-speech-bubble, .advisor-main-card, .advisor-avatar-wrap, [id*="advisorFloating"], [class*="advisor-floating"], .abha-widget, .abha-widget-container, .abha-form, [id*="abha"], [class*="abha"] {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
@@ -3120,6 +3120,19 @@ body.property-page .header-nav .mobile-toggle {
 
 
 <script src="../../website.min.js?v=20260920_live_v1"></script><script src="../../lead-form.min.js?v=20260924_contextual_fix"></script><script src="property-data.js?v=20260827_video_grey_fix"></script><script src="../../style-guide/assets/js/property.js?v=20260827_video_grey_fix"></script>
+
+<script>
+window.mountAdvisorUnit = function() { return false; };
+document.addEventListener('DOMContentLoaded', function() {
+    window.mountAdvisorUnit = function() { return false; };
+    var unit = document.getElementById('advisorFloatingUnit');
+    if (unit) unit.remove();
+    setInterval(function() {
+        var el = document.getElementById('advisorFloatingUnit');
+        if (el) el.remove();
+    }, 250);
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
