@@ -803,6 +803,14 @@ body.property-page .header-nav .mobile-toggle:focus {
   body.property-page .header-nav .nav-links a.local-nav-link { font-size: 0.76rem !important; padding: 0.3rem 0.45rem !important; }
 }
 
+body.property-page main {
+  padding-top: 0 !important;
+}
+
+body.property-page .header-nav .mobile-toggle {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
   body.property-page .header-nav .nav-links,
   body.property-page .header-nav:not(.scrolled) .nav-links,
@@ -810,7 +818,7 @@ body.property-page .header-nav .mobile-toggle:focus {
     display: none !important;
   }
   body.property-page .header-nav .mobile-toggle {
-    display: inline-flex !important;
+    display: none !important;
   }
   body.property-page .header-nav .nav-cta-btn,
   body.property-page .header-nav:not(.scrolled) .nav-cta-btn,
@@ -819,7 +827,7 @@ body.property-page .header-nav .mobile-toggle:focus {
   }
 }
 
-/* Mobile Specific Header Rules (<= 768px) */
+/* Mobile Specific Header & Hero Spacing Rules (<= 768px) */
 @media (max-width: 768px) {
   body.property-page .header-nav,
   body.property-page .header-nav:not(.scrolled),
@@ -829,10 +837,20 @@ body.property-page .header-nav .mobile-toggle:focus {
   body.property-page {
     padding-top: 60px !important;
   }
+  .prop-hero-section {
+    padding: 0.75rem 0 1.25rem 0 !important;
+  }
+  .ak-mobile-hero-v5 {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .ak-mobile-img-box {
+    margin-top: 0 !important;
+  }
   body.property-page .header-nav .nav-container {
     height: 60px !important;
-    padding: 0 0.5rem !important;
-    gap: 0.25rem !important;
+    padding: 0 0.75rem !important;
+    gap: 0.35rem !important;
     box-sizing: border-box !important;
     display: flex !important;
     align-items: center !important;
@@ -842,19 +860,19 @@ body.property-page .header-nav .mobile-toggle:focus {
   body.property-page .header-nav .nav-brand-group {
     display: flex !important;
     align-items: center !important;
-    gap: 0.25rem !important;
+    gap: 0.35rem !important;
     flex: 0 1 auto !important;
     min-width: 0 !important;
     overflow: hidden !important;
   }
   body.property-page .header-nav .brand-logo-text {
-    font-size: 1.08rem !important;
+    font-size: 1.15rem !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     line-height: 1 !important;
   }
   .nav-brand-divider {
-    height: 13px !important;
+    height: 15px !important;
     width: 1px !important;
     margin: 0 2px !important;
     flex-shrink: 0 !important;
@@ -868,16 +886,15 @@ body.property-page .header-nav .mobile-toggle:focus {
     overflow: hidden !important;
   }
   .nav-partner-badge {
-    height: 15px !important;
+    height: 16px !important;
     width: auto !important;
-    max-width: 68px !important;
+    max-width: 75px !important;
     object-fit: contain !important;
     flex-shrink: 1 !important;
   }
   .nav-right-actions {
     display: flex !important;
     align-items: center !important;
-    gap: 0.25rem !important;
     flex: 0 0 auto !important;
     margin-left: auto !important;
   }
@@ -887,72 +904,54 @@ body.property-page .header-nav .mobile-toggle:focus {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 32px !important;
-    min-height: 32px !important;
-    padding: 0 6px 0 8px !important;
-    gap: 3px !important;
-    font-size: 10.5px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 10px 0 12px !important;
+    gap: 5px !important;
+    font-size: 11.5px !important;
     font-weight: 600 !important;
-    letter-spacing: -0.01em !important;
+    letter-spacing: 0.01em !important;
     border-radius: 4px !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
   }
   body.property-page .header-nav .cta-arrow-badge {
-    width: 15px !important;
-    height: 15px !important;
-    min-width: 15px !important;
-    min-height: 15px !important;
+    width: 17px !important;
+    height: 17px !important;
+    min-width: 17px !important;
+    min-height: 17px !important;
     flex-shrink: 0 !important;
   }
   body.property-page .header-nav .cta-arrow-badge svg {
-    width: 8px !important;
-    height: 8px !important;
+    width: 8.5px !important;
+    height: 8.5px !important;
   }
   body.property-page .header-nav .mobile-toggle {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-width: 30px !important;
-    min-height: 30px !important;
-    width: 30px !important;
-    height: 30px !important;
-    padding: 0 !important;
-    flex-shrink: 0 !important;
+    display: none !important;
   }
 }
 
 @media (max-width: 380px) {
   body.property-page .header-nav .nav-container {
-    padding: 0 0.35rem !important;
-    gap: 0.2rem !important;
+    padding: 0 0.5rem !important;
   }
   body.property-page .header-nav .brand-logo-text {
-    font-size: 1.02rem !important;
+    font-size: 1.05rem !important;
   }
   .nav-brand-divider {
-    height: 12px !important;
+    height: 13px !important;
   }
   .nav-partner-badge {
-    height: 14px !important;
-    max-width: 60px !important;
-  }
-  .nav-right-actions {
-    gap: 0.2rem !important;
+    height: 15px !important;
+    max-width: 65px !important;
   }
   body.property-page .header-nav .nav-cta-btn,
   body.property-page .header-nav:not(.scrolled) .nav-cta-btn,
   body.property-page .header-nav.scrolled .nav-cta-btn {
-    padding: 0 5px 0 7px !important;
-    font-size: 10px !important;
-    height: 30px !important;
-    min-height: 30px !important;
-  }
-  body.property-page .header-nav .mobile-toggle {
-    min-width: 28px !important;
-    min-height: 28px !important;
-    width: 28px !important;
-    height: 28px !important;
+    padding: 0 8px 0 10px !important;
+    font-size: 10.5px !important;
+    height: 32px !important;
+    min-height: 32px !important;
   }
 }
 
@@ -1012,7 +1011,7 @@ body.property-page .header-nav .mobile-toggle:focus {
 <li><a href="#cost-sheet" class="nav-page-link local-nav-link">Cost Sheet</a></li>
 <li><a href="#amenities" class="nav-page-link local-nav-link">Amenities</a></li>
 <li><a href="#location" class="nav-page-link local-nav-link">Location</a></li>
-</ul><div class="nav-right-actions"><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal('general', 'nav_cta'); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><div class="mobile-drawer-brand-group" style="display:flex; align-items:center; gap:0.65rem;">
+</ul><div class="nav-right-actions"><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal('general', 'nav_cta'); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a></div></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><div class="mobile-drawer-brand-group" style="display:flex; align-items:center; gap:0.65rem;">
 <a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); if(typeof closeMobileDrawer==='function')closeMobileDrawer(); return false;" class="mobile-drawer-brand" aria-label="Acre and Key Home" style="margin-right:0;"><span class="brand-logo-text">acre&amp;key</span></a>
 <span style="display:inline-block; width:1px; height:18px; background:#DDD7CF;" aria-hidden="true"></span>
 <img src="../../style-guide/assets/prestige_authorised_sales_partner.png" alt="Prestige Group Authorised Sales Partner" class="mobile-drawer-partner-badge" style="height:21px; width:auto; max-width:95px; object-fit:contain; display:block;" loading="eager" width="818" height="208">
