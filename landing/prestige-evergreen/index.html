@@ -1707,6 +1707,15 @@ body.property-page .header-nav .mobile-toggle {
       transition: all 0.15s ease;
       outline: none !important;
     }
+    .evergreen-fullscreen-btn {
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      transition: background-color 0.2s ease, transform 0.15s ease !important;
+    }
+    .evergreen-fullscreen-btn:hover {
+      background-color: #25384D !important;
+      color: #FFFFFF !important;
+    }
   </style>
 
   <div class="prop-container">
@@ -1756,23 +1765,23 @@ body.property-page .header-nav .mobile-toggle {
       <div style="background:#FFFFFF; border:1px solid #DDD7CF; border-radius:6px; padding:clamp(0.85rem, 1.4vh, 1.1rem) clamp(0.95rem, 1.4vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
         
         <!-- Viewer Top Bar -->
-        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6;">
-          <div style="font-size:0.75rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Josefin Sans',sans-serif;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem 0.75rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap;">
+          <div style="font-size:0.75rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Josefin Sans',sans-serif; flex:1 1 auto; white-space:nowrap; min-width:140px;">
             SANCTIONED ARCHITECTURAL BLUEPRINT
           </div>
-          <div style="display:flex; align-items:center; gap:0.4rem;">
+          <div style="display:inline-flex; align-items:center; gap:0.35rem; flex-shrink:0;">
             <button type="button" class="evergreen-zoom-btn" onclick="window.evergreenZoom(0.15)" title="Zoom In">
               +
             </button>
             <button type="button" class="evergreen-zoom-btn" onclick="window.evergreenZoom(-0.15)" title="Zoom Out">
               −
             </button>
-            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; outline:none;">
+            <button type="button" onclick="window.evergreenResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border:1px solid #DDD7CF; color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; outline:none; white-space:nowrap; flex-shrink:0;">
               Reset
             </button>
-            <button type="button" onclick="window.evergreenTriggerFullscreen()" style="background:#2F3B42; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; outline:none;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-              <span>View Fullscreen</span>
+            <button type="button" class="evergreen-fullscreen-btn" onclick="window.evergreenTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; outline:none; white-space:nowrap !important; flex-shrink:0 !important;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+              <span style="white-space:nowrap !important; display:inline-block;">View Fullscreen</span>
             </button>
           </div>
         </div>
