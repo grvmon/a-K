@@ -486,8 +486,10 @@ img[style*="border-radius: 50%"] {
 
 
 <style id="landing-header-theme">
+body.property-page { background-color: #141D24 !important; padding-bottom: 0 !important; }
 @media (max-width: 900px) {
-  body.property-page { padding-bottom: 68px !important; }
+  body.property-page { padding-bottom: 0 !important; }
+  footer.site-footer { padding-bottom: 80px !important; }
 }
 .prop-mobile-sticky-bar { display: none; }
 @media (max-width: 900px) {
@@ -1204,7 +1206,7 @@ body.property-page .header-nav .mobile-toggle {
 
   <div class="ak-editorial-top-left">
     <div class="ak-editorial-tag">SATTVA SONGBIRD · BUDIGERE ROAD</div>
-    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">05</span></div>
+    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">06</span></div>
     <div class="ak-editorial-line"></div>
   </div>
 
@@ -1233,6 +1235,9 @@ body.property-page .header-nav .mobile-toggle {
       </button>
       <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(4);" aria-label="View photo 5">
         <img src="../../style-guide/assets/songbird/sattva_songbird_hero_layout_top_down.webp" alt="Masterplan Site Layout Top-Down View" loading="lazy">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(5);" aria-label="View video 6">
+        <img src="../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp" alt="Official Walkthrough Video" loading="lazy">
       </button>
     </div>
     <div class="ak-editorial-gallery-trigger">
@@ -1615,7 +1620,10 @@ body.property-page .header-nav .mobile-toggle {
             </span>
           </div>
 
-          <img src="../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp" alt="Sattva Songbird Elevation" style="width:100%; height:100%; object-fit:cover; border-radius:6px; display:block;">
+          <video id="overviewVideoPlayer" preload="metadata" poster="../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp?v=20260829_v2" style="width:100%; height:100%; object-fit:cover; border-radius:6px; display:block;" playsinline>
+            <source src="../../style-guide/assets/sattva_songbird_walkthrough.mp4?v=20260829_v1" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
         </div>
 
         <!-- Video Footer Tags -->
@@ -3257,7 +3265,8 @@ const akGalleryMedia = [
       { type: 'image', src: '../../style-guide/assets/songbird/sattva_songbird_hero_masterplan_wide_aerial.webp?v=20260829_v3', alt: 'Wide Masterplan Aerial View' },
       { type: 'image', src: '../../style-guide/assets/songbird/sattva_songbird_hero_towers_rowhouses_aerial.webp?v=20260829_v3', alt: 'Towers, Row Houses & Forest Surroundings' },
       { type: 'image', src: '../../style-guide/assets/songbird/sattva_songbird_hero_towers_front_elevation.webp?v=20260829_v3', alt: 'Residential High-Rise Towers Elevation' },
-      { type: 'image', src: '../../style-guide/assets/songbird/sattva_songbird_hero_layout_top_down.webp?v=20260829_v3', alt: 'Masterplan Site Layout Top-Down View' }
+      { type: 'image', src: '../../style-guide/assets/songbird/sattva_songbird_hero_layout_top_down.webp?v=20260829_v3', alt: 'Masterplan Site Layout Top-Down View' },
+      { type: 'video', src: '../../style-guide/assets/sattva_songbird_walkthrough.mp4?v=20260829_v1', poster: '../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp?v=20260829_v3', alt: 'Official Project Walkthrough Video' }
     ];
 
 function updateAkGalleryUI() {
