@@ -2895,6 +2895,121 @@ body.property-page .header-nav .mobile-toggle {
     if (window.feather) feather.replace();
   });
 
+  function initSubnavScrollspy() {
+    const navLinks = document.querySelectorAll('.header-nav .nav-links a.local-nav-link, .mobile-drawer .mobile-nav-item.local-nav-link');
+    if (!navLinks.length) return;
+
+    const sectionIds = ['#about', '#floor-plans', '#configuration', '#cost-sheet', '#amenities', '#location'];
+    const linkSectionMap = [];
+
+    sectionIds.forEach(function(id) {
+      const sec = document.querySelector(id);
+      if (sec) {
+        linkSectionMap.push({ id: id, section: sec });
+      }
+    });
+
+    if (!linkSectionMap.length) return;
+
+    let isClickScrolling = false;
+    let clickScrollTimer = null;
+
+    function updateActiveState() {
+      if (isClickScrolling) return;
+
+      const scrollPos = window.scrollY + 100;
+      let activeId = null;
+
+      // When scrolled near bottom of page, activate last section (location)
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 80)) {
+        activeId = linkSectionMap[linkSectionMap.length - 1].id;
+      } else {
+        for (let i = 0; i < linkSectionMap.length; i++) {
+          const item = linkSectionMap[i];
+          const rect = item.section.getBoundingClientRect();
+          const top = rect.top + window.scrollY;
+          const height = rect.height;
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            activeId = item.id;
+            break;
+          }
+        }
+      }
+
+      if (activeId) {
+        navLinks.forEach(function(l) {
+          if (l.getAttribute('href') === activeId) {
+            l.classList.add('active');
+          } else {
+            l.classList.remove('active');
+          }
+        });
+      } else {
+        // User is at the top of the page in the hero fold - clear all active states
+        navLinks.forEach(function(l) {
+          l.classList.remove('active');
+        });
+      }
+    }
+
+    let isTicking = false;
+    function onScrollThrottled() {
+      if (isClickScrolling) return;
+      if (!isTicking) {
+        window.requestAnimationFrame(function() {
+          updateActiveState();
+          isTicking = false;
+        });
+        isTicking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScrollThrottled, { passive: true });
+    updateActiveState();
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            isClickScrolling = true;
+            clearTimeout(clickScrollTimer);
+            clickScrollTimer = setTimeout(function() { isClickScrolling = false; }, 900);
+
+            const rect = target.getBoundingClientRect();
+            const targetTop = rect.top + window.scrollY - 74;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+
+            navLinks.forEach(function(l) {
+              if (l.getAttribute('href') === href) {
+                l.classList.add('active');
+              } else {
+                l.classList.remove('active');
+              }
+            });
+
+            if (typeof closeMobileDrawer === 'function') {
+              closeMobileDrawer();
+            }
+
+            if (history.pushState) {
+              history.pushState(null, null, href);
+            }
+          }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSubnavScrollspy);
+  } else {
+    initSubnavScrollspy();
+  }
+
 })();
 </script>
 <script src="../../website.min.js?v=20260920_live_v1"></script><script src="../../lead-form.min.js?v=20260924_contextual_fix"></script><script src="../../abha-form.min.js?v=20260910_live_v3" defer></script>
