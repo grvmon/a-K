@@ -403,32 +403,74 @@
       var subHeading = document.getElementById("lfSubHeading");
       var formNameInput = document.getElementById("lfFormName");
 
-      if (context === 'brochure' || context === 'prestige-evergreen-brochure') {
-        if (mainHeading) mainHeading.textContent = "Download Official Brochure";
-        if (subHeading) subHeading.textContent = "Get the complete project dossier, high-resolution masterplan, and detailed floor configurations.";
-        if (btnText) btnText.textContent = "Download Brochure (PDF)";
+      var getProjectName = function() {
+        if (window.akProjectName) return window.akProjectName;
+        var path = window.location.pathname.toLowerCase();
+        if (path.indexOf("prestige-evergreen") !== -1) return "Prestige Evergreen";
+        if (path.indexOf("sumadhura-folium") !== -1) return "Sumadhura Folium";
+        if (path.indexOf("sattva-songbird") !== -1) return "Sattva Songbird";
+        if (path.indexOf("brigade-belvedere") !== -1) return "Brigade Belvedere";
+        if (path.indexOf("riviera-uno") !== -1) return "Riviera Uno";
+        if (path.indexOf("sumadhura-solace") !== -1) return "Sumadhura Solace";
+
+        var h1 = document.querySelector("h1");
+        if (h1) {
+          var txt = h1.textContent.trim();
+          if (txt && txt.length < 40 && !/anyone|welcome|home|buy/i.test(txt)) {
+            return txt;
+          }
+        }
+        return "";
+      };
+
+      var proj = getProjectName();
+      var ctx = (context || "").toLowerCase();
+      var fn = (formName || "").toLowerCase();
+
+      var mainText = "";
+      var subText = "";
+      var btnLabel = "";
+
+      if (customOptions && customOptions.heading) {
+        mainText = customOptions.heading;
+        subText = customOptions.subHeading || "";
+        btnLabel = customOptions.btnText || "";
+        if (formNameInput) formNameInput.value = formName || "custom_enquiry";
+      } else if (ctx === 'analysis' || ctx === 'buyer-analysis' || ctx === 'diligence' || fn.indexOf('buyer_analysis') !== -1 || fn.indexOf('diligence') !== -1) {
+        mainText = proj ? "Get " + proj + " Buyer Analysis" : "Get Independent Buyer Analysis";
+        subText = "Access unit-wise pricing breakdown, high-floor premium analysis, RERA timeline risks, and independent Acre&Key score.";
+        btnLabel = "Download Buyer Analysis (PDF)";
+        if (formNameInput) formNameInput.value = formName || "buyer_analysis";
+      } else if (ctx === 'brochure' || ctx.indexOf('brochure') !== -1 || fn.indexOf('brochure') !== -1) {
+        mainText = proj ? "Download " + proj + " Official Brochure" : "Download Official Brochure";
+        subText = "Get the complete project dossier, masterplan layouts, specification sheet, and high-res floor configurations.";
+        btnLabel = "Download Brochure (PDF)";
         if (formNameInput) formNameInput.value = formName || "brochure_download";
-      } else if (context === 'pricing') {
-        if (mainHeading) mainHeading.textContent = "Get Detailed Cost Breakdown";
-        if (subHeading) subHeading.textContent = "Receive unit-wise all-inclusive pricing, payment milestones, and availability status.";
-        if (btnText) btnText.textContent = "Get Cost Breakdown";
+      } else if (ctx === 'pricing' || fn.indexOf('cost_sheet') !== -1 || fn.indexOf('cost_estimator') !== -1) {
+        mainText = proj ? "Get " + proj + " Cost Breakdown" : "Get Detailed Cost Breakdown";
+        subText = "Receive unit-wise all-inclusive pricing, floor-rise & PLC charges, GST schedule, and payment milestones.";
+        btnLabel = "Get Detailed Cost Sheet";
         if (formNameInput) formNameInput.value = formName || "pricing_enquiry";
-      } else if (context === 'floorplan') {
-        if (mainHeading) mainHeading.textContent = "Check Unit Availability";
-        if (subHeading) subHeading.textContent = "Get exact tower & floor-wise allocation, and high-floor premium breakdown.";
-        if (btnText) btnText.textContent = "Check Availability";
+      } else if (ctx === 'floorplan' || ctx === 'availability' || fn.indexOf('availability') !== -1) {
+        mainText = proj ? "Check " + proj + " Unit Availability" : "Check Unit Availability";
+        subText = "Get real-time 1 to 4 BHK unit availability, tower layout plans, and floor selection guidance.";
+        btnLabel = "Check Available Units";
         if (formNameInput) formNameInput.value = formName || "floorplan_enquiry";
-      } else if (context === 'sitevisit') {
-        if (mainHeading) mainHeading.textContent = "Schedule a Site Visit";
-        if (subHeading) subHeading.textContent = "Book an accompanied site visit with an Acre&Key advisor to evaluate the property.";
-        if (btnText) btnText.textContent = "Schedule Visit";
+      } else if (ctx === 'sitevisit' || ctx === 'visit' || fn.indexOf('visit') !== -1) {
+        mainText = proj ? "Schedule " + proj + " Site Visit" : "Schedule a Site Visit";
+        subText = "Book an accompanied private site visit with an Acre&Key project specialist.";
+        btnLabel = "Schedule Private Visit";
         if (formNameInput) formNameInput.value = formName || "site_visit";
       } else {
-        if (mainHeading) mainHeading.textContent = "Talk to an Expert Advisor";
-        if (subHeading) subHeading.textContent = "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
-        if (btnText) btnText.textContent = "Request Callback";
+        mainText = proj ? "Talk to a " + proj + " Advisor" : "Talk to an Expert Advisor";
+        subText = proj ? "Get unbiased property guidance, verified unit pricing, and independent Acre&Key diligence for " + proj + "." : "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
+        btnLabel = proj ? "Request Advisor Callback" : "Request Callback";
         if (formNameInput) formNameInput.value = formName || "general_enquiry";
       }
+
+      if (mainHeading) mainHeading.textContent = mainText;
+      if (subHeading) subHeading.textContent = subText;
+      if (btnText) btnText.textContent = btnLabel;
 
       if (showingSuccess) exitSuccessState();
       lfFormOpenTime = Date.now();
