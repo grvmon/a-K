@@ -31,6 +31,7 @@
   var isSubmitting = false;
   var slowSubmitTimer = null;
   var autofillListeners = [];
+  var currentModalBtnText = "";
 
   if (window.lfActiveInstanceWipe && typeof window.lfActiveInstanceWipe === "function") {
     window.lfActiveInstanceWipe();
@@ -320,7 +321,8 @@
       submitBtn.disabled = false;
       submitBtn.classList.remove("lf-loading");
     }
-    if (btnText) btnText.textContent = STRINGS.btnSubmit;
+    var btnTextEl = document.getElementById("lfBtnText") || btnText;
+    if (btnTextEl) btnTextEl.textContent = currentModalBtnText || STRINGS.btnSubmit;
   }
 
   function exitSuccessState() {
@@ -369,7 +371,7 @@
   }
 
   var ModalController = {
-    open: function (context, formName) {
+    open: function (context, formName, customOptions) {
       if (!modalOverlay) {
         modalOverlay       = document.getElementById("lfModalOverlay");
         modalTrigger       = document.getElementById("lfModalTrigger");
@@ -402,6 +404,7 @@
       var mainHeading = document.getElementById("lfMainHeading");
       var subHeading = document.getElementById("lfSubHeading");
       var formNameInput = document.getElementById("lfFormName");
+      var btnTextEl = document.getElementById("lfBtnText") || btnText;
 
       var getProjectName = function() {
         if (window.akProjectName) return window.akProjectName;
@@ -446,7 +449,7 @@
         subText = "Get the complete project dossier, masterplan layouts, specification sheet, and high-res floor configurations.";
         btnLabel = "Download Brochure (PDF)";
         if (formNameInput) formNameInput.value = formName || "brochure_download";
-      } else if (ctx === 'pricing' || fn.indexOf('cost_sheet') !== -1 || fn.indexOf('cost_estimator') !== -1) {
+      } else if (ctx === 'pricing' || ctx === 'cost' || fn.indexOf('cost_sheet') !== -1 || fn.indexOf('cost_estimator') !== -1) {
         mainText = proj ? "Get " + proj + " Cost Breakdown" : "Get Detailed Cost Breakdown";
         subText = "Receive unit-wise all-inclusive pricing, floor-rise & PLC charges, GST schedule, and payment milestones.";
         btnLabel = "Get Detailed Cost Sheet";
@@ -468,9 +471,11 @@
         if (formNameInput) formNameInput.value = formName || "general_enquiry";
       }
 
+      currentModalBtnText = btnLabel;
+
       if (mainHeading) mainHeading.textContent = mainText;
       if (subHeading) subHeading.textContent = subText;
-      if (btnText) btnText.textContent = btnLabel;
+      if (btnTextEl) btnTextEl.textContent = btnLabel;
 
       if (showingSuccess) exitSuccessState();
       lfFormOpenTime = Date.now();
@@ -505,7 +510,7 @@
     }
   };
 
-  window.openModal  = function(context, formName) { ModalController.open(context, formName); };
+  window.openModal  = function(context, formName, customOptions) { ModalController.open(context, formName, customOptions); };
   window.closeModal = function() { ModalController.close(); };
 
   var ValidationService = {
