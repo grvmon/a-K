@@ -2867,7 +2867,7 @@ to {
 
 .footer-social-icons a {
     color:rgba(255,255,255,0.7);
-    font-size:1.25rem;
+    
     text-decoration:none;
     transition:color 180ms ease,transform 180ms ease;
     display:flex;
@@ -4264,7 +4264,7 @@ body.page-404 .error-404-section {
 
 .luxury-approach-num {
     font-family:var(--font-heading),'Cormorant Garamond',serif;
-    font-size:1.25rem;
+    
     font-weight:400;
     color:var(--refined-brass, #7d442a);
     position:relative;
@@ -4364,9 +4364,7 @@ body.page-404 .error-404-section {
 
 }
 
-.section-title,.hero-title,.premium-title,.luxury-approach-title {
-    font-size:35px !important
-}
+
 
 .hero-subtitle,.premium-subtitle,.section-subtitle,.luxury-approach-desc {
     font-size:20px !important;
@@ -4374,9 +4372,7 @@ body.page-404 .error-404-section {
 }
 
 @media (max-width:768px) {
-    .section-title,.hero-title,.premium-title,.luxury-approach-title {
-    font-size:28px !important
-}
+    
 
 .hero-subtitle,.premium-subtitle,.section-subtitle,.luxury-approach-desc {
     font-size:16px !important
@@ -6900,7 +6896,7 @@ button:focus-visible,a:focus-visible {
 
 .consultant-main-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 1.25rem + 0.6vw, 1.95rem);
+    
     font-weight: 700;
     line-height: 1.25;
     color: var(--deep-navy);
@@ -7078,7 +7074,7 @@ button:focus-visible,a:focus-visible {
 
 .editorial-heading {
     font-family: var(--font-heading);
-    font-size: 1.45rem;
+    
     font-weight: 700;
     color: var(--deep-navy);
     line-height: 1.3;
@@ -7305,7 +7301,7 @@ button:focus-visible,a:focus-visible {
 
 @media (max-width: 768px) {
     .editorial-heading {
-        font-size: 1.25rem;
+        
     }
     .editorial-lead-quote {
         font-size: 1.18rem;
@@ -7407,7 +7403,7 @@ button:focus-visible,a:focus-visible {
 }
 .roadmap-stage-title {
     font-family: var(--font-heading), 'Playfair Display', serif;
-    font-size: 1.25rem;
+    
     color: #1E293B;
     margin: 0;
     font-weight: 600;
@@ -7902,4 +7898,26 @@ button:focus-visible,a:focus-visible {
 .advisor-floating-unit.is-minimized .advisor-bubble-tail {
     left: auto !important;
     right: 26px !important;
+}
+
+
+/* --- 10% Typography Cascade (Base 35px) --- */
+/* Level 1: Hero */
+.hero-title, .premium-title { 
+    font-size: 35px !important; 
+}
+/* Level 2: Section Titles (10% smaller) */
+.section-title, .luxury-approach-title, .consultant-main-title { 
+    font-size: 31.5px !important; 
+}
+/* Level 3: Subheadings (10% smaller) */
+.editorial-heading, .framework-title { 
+    font-size: 28.35px !important; 
+}
+
+/* Mobile Scale */
+@media (max-width: 768px) {
+    .hero-title, .premium-title { font-size: 28px !important; }
+    .section-title, .luxury-approach-title, .consultant-main-title { font-size: 25.2px !important; }
+    .editorial-heading, .framework-title { font-size: 22.68px !important; }
 }
