@@ -4369,19 +4369,14 @@ body.page-404 .error-404-section {
 
 }
 
-.section-title,.hero-title,.premium-title,.luxury-approach-title { font-size:35px !important; }
 
-.hero-subtitle,.premium-subtitle,.section-subtitle,.luxury-approach-desc {
-    font-size:20px !important;
-    line-height:1.5 !important
-}
+
+
 
 @media (max-width:768px) {
-    .section-title,.hero-title,.premium-title,.luxury-approach-title { font-size:28px !important; }
+    
 
-.hero-subtitle,.premium-subtitle,.section-subtitle,.luxury-approach-desc {
-    font-size:16px !important
-}
+
 
 
 }
@@ -7903,4 +7898,51 @@ button:focus-visible,a:focus-visible {
 .advisor-floating-unit.is-minimized .advisor-bubble-tail {
     left: auto !important;
     right: 26px !important;
+}
+
+
+/* --- STRICT HNI TYPOGRAPHIC HIERARCHY --- */
+/* Level 1: Hero Titles */
+.hero-title, .premium-title {
+    font-size: 46px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+}
+
+/* Level 2: Section Titles */
+.section-title, .luxury-approach-title, .consultant-main-title {
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Level 3: Subheadings / Cards */
+.editorial-heading, .framework-title {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+}
+
+/* Level 4: Kickers / Tiny Labels */
+.premium-kicker, .faq-category-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+}
+
+/* Level 5: Body / Paragraphs */
+.hero-subtitle, .premium-subtitle, .section-subtitle, .luxury-approach-desc, p, .editorial-body, .faq-linear-answer {
+    font-size: 16.5px !important;
+    line-height: 1.7 !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-title, .premium-title { font-size: 36px !important; }
+    .section-title, .luxury-approach-title, .consultant-main-title { font-size: 28px !important; }
+    .editorial-heading, .framework-title { font-size: 21px !important; }
+    .hero-subtitle, .premium-subtitle, .section-subtitle, .luxury-approach-desc, p, .editorial-body, .faq-linear-answer { font-size: 15.5px !important; }
 }
