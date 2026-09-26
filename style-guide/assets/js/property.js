@@ -494,3 +494,13 @@ document.addEventListener('click', function(e) {
     window.openAcrenKeyScoreModal();
   }
 });
+
+// Global Smooth Scroll Helper for Floor Plans
+window.scrollToFloorPlans = function(e) {
+  if (e) e.preventDefault();
+  var sec = document.querySelector('#floor-plans') || document.querySelector('#floorplan') || document.querySelector('#configuration') || document.querySelector('#configurations');
+  if (sec) {
+    var topPos = sec.offsetTop - 100;
+    window.scrollTo({ top: topPos, behavior: 'smooth' });
+  }
+};
