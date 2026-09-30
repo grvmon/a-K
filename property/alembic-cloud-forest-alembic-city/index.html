@@ -392,7 +392,7 @@ img[style*="border-radius: 50%"] {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .ak-editorial-thumb.active {
-  border: 2px solid #7D442A !important;
+  border: 2px solid #FFFFFF !important;
   opacity: 1 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
@@ -540,7 +540,7 @@ img[style*="border-radius: 50%"] {
 <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(1);" aria-label="View Biophilic Retail &amp; Dining Plaza" title="Biophilic Retail &amp; Dining Plaza"><img src="../../style-guide/assets/alembic/alembic_hero_retail_plaza.webp?v=20260830_v1" alt="Biophilic Retail &amp; Dining Plaza"></button>
 <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(2);" aria-label="View Alfresco Dining Canopy" title="Alfresco Dining Canopy"><img src="../../style-guide/assets/alembic/alembic_hero_dining_canopy.webp?v=20260830_v1" alt="Alfresco Dining Canopy"></button>
 <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(3);" aria-label="View Alembic Commercial Hub" title="Alembic Commercial Hub"><img src="../../style-guide/assets/alembic/alembic_hero_commercial_hub.webp?v=20260830_v1" alt="Alembic Commercial Hub"></button>
-<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(4);" aria-label="View Video" title="Walkthrough Video"><img src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=20260830_v1" alt="Walkthrough Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.55)"></circle><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"></polygon></svg></div></button><div class="ak-editorial-gallery-trigger">
+<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(4);" aria-label="View Video" title="Walkthrough Video"><img src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=20260830_v1" alt="Walkthrough Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.55)"></circle><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"></polygon></svg></div></button><div class="ak-editorial-gallery-trigger">
       <div class="ak-editorial-divider"></div>
       <button type="button" class="ak-editorial-view-btn" onclick="event.stopPropagation(); openAkLightbox(window.akGalleryIndex || 0);" aria-label="View all gallery photos">
         <span>View gallery</span>
@@ -3164,7 +3164,7 @@ function akGallerySelect(idx) {
             btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
             btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
             if (media.type === 'video') {
-                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="#7D442A" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"/></svg></div>';
+                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"/></svg></div>';
             } else {
                 btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '">';
             }

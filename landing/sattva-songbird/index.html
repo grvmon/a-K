@@ -440,7 +440,7 @@ img[style*="border-radius: 50%"] {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .ak-editorial-thumb.active {
-  border: 2px solid #7D442A !important;
+  border: 2px solid #FFFFFF !important;
   opacity: 1 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
@@ -4199,7 +4199,7 @@ function akGallerySelect(idx) {
             btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
             btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
             if (media.type === 'video') {
-                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="#7D442A" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"/></svg></div>';
+                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"/></svg></div>';
             } else {
                 btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '" loading="lazy">';
             }
