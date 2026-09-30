@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcreNKey — Ultra-HNI Visual Moodboard (3:4)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cta-gradient: linear-gradient(135deg, #be7555 0%, #9f5334 100%);
+            --text-copper-aaa: #804526;
+            --titanium-frost: #FAFAFA;
+            --obsidian-black: #0A0A0B;
+            --neutral-grey: #55555A;
+        }
+        
+        body {
+            margin: 0;
+            background-color: var(--obsidian-black);
+            font-family: 'Manrope', sans-serif;
+            color: var(--titanium-frost);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 4rem;
+            padding: 4rem 2rem;
+        }
+        .frame {
+            position: relative;
+            /* 1200 x 1600 canvas */
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 1200 / 1600;
+            overflow: hidden;
+            background: #000;
+            container-type: inline-size;
+        }
+        .frame-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.85) contrast(1.05);
+        }
+        
+        .frame-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 35%, rgba(10, 10, 11, 0) 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Typography Safe Zone (150px/200px) */
+            padding-top: 12.5%;
+            padding-bottom: 12.5%;
+            padding-left: 12.5%;
+            padding-right: 12.5%;
+            box-sizing: border-box;
+        }
+
+        .frame-text {
+            font-family: 'Marcellus', serif;
+            font-size: 6.5cqw; /* Scales perfectly with width to stay on 1 line */
+            font-weight: 400;
+            color: var(--titanium-frost);
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            white-space: nowrap; /* Force one line */
+        }
+        .center-overlay {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(10, 10, 11, 0.75);
+        }
+        
+        .brand-logo-josefin {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 8cqw;
+            color: var(--titanium-frost);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-logo {
+            font-family: 'Marcellus', serif;
+            font-size: 8cqw;
+            color: var(--titanium-frost);
+            margin-bottom: 0.5rem;
+        }
+        .brand-sub {
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.5cqw;
+            color: rgba(250, 250, 250, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+        }
+
+    
+        
+        
+        
+        /* Carousel Navigation */
+        .carousel-nav-container {
+            position: absolute;
+            bottom: 10%; /* 160px from bottom (Critical Safe Area) */
+            left: 10%; /* 120px from left */
+            right: 10%; /* 120px from right */
+
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .carousel-dots {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .carousel-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-sizing: border-box;
+        }
+        .carousel-dot.active {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .carousel-arrow-right {
+            width: 48px;
+            height: 48px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+        .carousel-arrow-right:hover {
+            transform: translateX(5px);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 01 -->
+    <div class="frame">
+        <img class="frame-img" src="/Users/gauravmongia/.gemini/antigravity/brain/65b24d7e-1543-41a1-bb3a-a3103a0e449b/frame1_3x4.jpg" alt="01">
+        <div class="frame-overlay">
+            <h1 class="frame-text">Buying a home?</h1>
+        </div>
+        <div class="carousel-nav-container">
+            <div></div><div class="carousel-dot "></div><div class="carousel-dot "></div><div class="carousel-dot "></div>
+            </div>
+            
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <polyline points="15 5 22 12 15 19"></polyline>
+        </svg>
+    
+        </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="frame">
+        <img class="frame-img" src="/Users/gauravmongia/.gemini/antigravity/brain/65b24d7e-1543-41a1-bb3a-a3103a0e449b/frame2_3x4.jpg" alt="02">
+        <div class="frame-overlay">
+            <h1 class="frame-text">We help you buy right.</h1>
+        </div>
+        <div class="carousel-nav-container">
+            <div></div><div class="carousel-dot active"></div><div class="carousel-dot "></div><div class="carousel-dot "></div>
+            </div>
+            
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <polyline points="15 5 22 12 15 19"></polyline>
+        </svg>
+    
+        </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="frame">
+        <img class="frame-img" src="/Users/gauravmongia/.gemini/antigravity/brain/65b24d7e-1543-41a1-bb3a-a3103a0e449b/frame3_3x4.jpg" alt="03">
+        <div class="frame-overlay">
+            <h1 class="frame-text">Find. Check. Inspect. Negotiate.</h1>
+        </div>
+        <div class="carousel-nav-container">
+            <div></div><div class="carousel-dot "></div><div class="carousel-dot active"></div><div class="carousel-dot "></div>
+            </div>
+            
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <polyline points="15 5 22 12 15 19"></polyline>
+        </svg>
+    
+        </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="frame">
+        <img class="frame-img" src="/Users/gauravmongia/.gemini/antigravity/brain/65b24d7e-1543-41a1-bb3a-a3103a0e449b/frame5_3x4.jpg" alt="04">
+        <div class="frame-overlay">
+            <h1 class="frame-text" style="font-size: 5.5cqw; margin-bottom: 2.5rem;">You Decide.</h1>
+            <div class="brand-logo-josefin">acre&key</div>
+            <div class="brand-sub">Home-buying concierge.</div>
+        </div>
+        <div class="carousel-nav-container">
+            <div></div><div class="carousel-dot "></div><div class="carousel-dot "></div><div class="carousel-dot active"></div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+</html>
