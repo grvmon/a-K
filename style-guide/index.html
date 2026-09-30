@@ -47,7 +47,7 @@
             padding: 0.4rem 0;
             color: var(--neutral-grey);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size:0.95rem;
             transition: color 0.2s;
         }
         .ds-nav a[aria-current="true"] {
@@ -190,14 +190,14 @@
         .ds-swatch-name {
             font-family: 'Manrope', sans-serif;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size:0.95rem;
             color: var(--obsidian-black);
             margin-bottom: 0.25rem;
         }
 
         .ds-swatch-hex {
             font-family: 'Manrope', sans-serif;
-            font-size: 0.8rem;
+            font-size:0.85rem;
             color: var(--neutral-grey);
             font-variant-numeric: tabular-nums;
         }
@@ -277,7 +277,7 @@
 
         .ds-card-title {
             font-family: 'Marcellus', serif;
-            font-size: 1.45rem;
+            font-size:1.5rem;
             font-weight: 600;
             color: var(--obsidian-black);
             margin: 0 0 1rem 0;
@@ -419,16 +419,7 @@
                 </table>
             </div>
             
-            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
-                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Spatial & Layout Variables</h3>
-                <ul style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); line-height:1.6; margin:0; padding-left:1.2rem;">
-                    <li><strong>Fibonacci Scale:</strong> Margins and paddings follow a Fibonacci rhythm (1, 1, 2, 3, 5, 8).</li>
-                    <li><strong>Section Spacing:</strong> Desktop: <code>110px</code> | Mobile: <code>60px</code></li>
-                    <li><strong>Container Max Width:</strong> <code>1280px</code> (Aligning to Rule of Thirds grid points)</li>
-                    <li><strong>Blur Scale:</strong> Nav/Glassmorphism uses <code>16px</code> blur. Modals use <code>8px</code> blur.</li>
-                    <li><strong>Z-Index:</strong> Modals (1000) > Header (900) > Dropdowns (800) > Tooltips (700) > Base Content (1)</li>
-                </ul>
-            </div>
+            
         </section>
 
 
@@ -513,7 +504,17 @@
 
         <!-- SECTION 3: TYPOGRAPHY -->
         <section class="ds-section" id="layout">
-<h2 class="ds-section-title">6. Layout & Spacing</h2><p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p></section>
+<h2 class="ds-section-title">6. Layout & Spacing</h2><p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p>
+<div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Spatial & Layout Variables</h3>
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); line-height:1.6; margin:0; padding-left:1.2rem;">
+                    <li><strong>Fibonacci Scale:</strong> Margins and paddings follow a Fibonacci rhythm (1, 1, 2, 3, 5, 8).</li>
+                    <li><strong>Section Spacing:</strong> Desktop: <code>110px</code> | Mobile: <code>60px</code></li>
+                    <li><strong>Container Max Width:</strong> <code>1280px</code> (Aligning to Rule of Thirds grid points)</li>
+                    <li><strong>Blur Scale:</strong> Nav/Glassmorphism uses <code>16px</code> blur. Modals use <code>8px</code> blur.</li>
+                    <li><strong>Z-Index:</strong> Modals (1000) > Header (900) > Dropdowns (800) > Tooltips (700) > Base Content (1)</li>
+                </ul>
+            </div></section>
 <section class="ds-section" id="motion">
             <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
@@ -521,7 +522,7 @@
             <div class="ds-card-demo">
                 <div class="ds-card">
                     <h3 class="ds-card-title">Cinematic UI Card</h3>
-                    <p style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); margin-bottom:1.5rem; line-height:1.5;">Hover over this card. Notice it does not physically lift up. The background simply dims smoothly via a 0.4s transition. The borders are 0.5px hairlines.</p>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); margin-bottom:1.5rem; line-height:1.5;">Hover over this card. Notice it does not physically lift up. The background simply dims smoothly via a 0.4s transition. The borders are 0.5px hairlines.</p>
                     <button class="ds-card-btn">Request Advisory Call</button>
                 </div>
             </div>
@@ -586,8 +587,8 @@
                 <div style="position:absolute; inset:0; background:rgba(10,10,10,0.85); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:2rem;">
                     <!-- Modal Card -->
                     <div style="background:#FFF; padding:2rem; border-radius:4px; width:100%; max-width:400px; ">
-                        <h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:var(--obsidian-black); margin:0 0 1rem 0;">Floorplan Access</h3>
-                        <p style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); margin-bottom:1.5rem; line-height:1.5;">Please confirm your credentials to view the highly detailed architectural layouts.</p>
+                        <h3 style="font-family:'Marcellus', serif; font-size:1.5rem; font-weight: 400; color:var(--obsidian-black); margin:0 0 1rem 0;">Floorplan Access</h3>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); margin-bottom:1.5rem; line-height:1.5;">Please confirm your credentials to view the highly detailed architectural layouts.</p>
                         <button class="ds-card-btn" style="width:100%;">Authenticate &amp; View</button>
                     </div>
                 </div>
@@ -603,8 +604,8 @@
                 <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; display:block;">
                 <!-- The HNI Gradient Overlay -->
                 <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:2rem;">
-                    <h3 style="color:#FFF; font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; margin:0 0 0.25rem 0;">Protected Legibility</h3>
-                    <p style="color:rgba(250, 250, 250, 0.88); font-family:'Manrope', sans-serif; font-size:0.9rem; margin:0;">Text is anchored  by the navy gradient, ignoring the chaotic image behind it.</p>
+                    <h3 style="color:#FFF; font-family:'Marcellus', serif; font-size:1.5rem; font-weight: 400; margin:0 0 0.25rem 0;">Protected Legibility</h3>
+                    <p style="color:rgba(250, 250, 250, 0.88); font-family:'Manrope', sans-serif; font-size:0.95rem; margin:0;">Text is anchored  by the navy gradient, ignoring the chaotic image behind it.</p>
                 </div>
             </div>
         </section>
@@ -616,18 +617,18 @@
             
             <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:2rem; max-width: 450px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem; border-bottom: 0.5px solid rgba(85, 85, 90, 0.1); padding-bottom: 1rem;">
-                    <h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Township Data</h3>
+                    <h3 style="font-family:'Marcellus', serif; font-size:1.5rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Township Data</h3>
                     <!-- Referencing Section 7 Badges -->
                     <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:var(--titanium-frost); padding:0.3rem 0.6rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Verified</span>
                 </div>
                 <div style="display:flex; flex-direction:column; gap: 0.8rem;">
                     <div style="display:flex; justify-content:space-between;">
-                        <span style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey);">Total Area</span>
-                        <span style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--obsidian-black); font-weight:700;">24 Acres</span>
+                        <span style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey);">Total Area</span>
+                        <span style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); font-weight:700;">24 Acres</span>
                     </div>
                     <div style="display:flex; justify-content:space-between;">
-                        <span style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey);">Typology</span>
-                        <span style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--obsidian-black); font-weight:700;">3 & 4 BHK Advisory</span>
+                        <span style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey);">Typology</span>
+                        <span style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); font-weight:700;">3 & 4 BHK Advisory</span>
                     </div>
                 </div>
             </div>
@@ -898,7 +899,7 @@
                 <!-- Alert Box -->
                 <div>
                     <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-left:3px solid var(--text-copper-aaa); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start;">
-                        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.2rem; color:var(--text-copper-aaa); line-height:1;">i</div>
+                        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.1rem; color:var(--text-copper-aaa); line-height:1;">i</div>
                         <div>
                             <h4 style="font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700; color:var(--obsidian-black); margin:0 0 0.25rem 0;">Report Dispatched</h4>
                             <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0;">The 69-point buyer analysis has been securely emailed to your registered address.</p>
@@ -1078,7 +1079,7 @@
                         </div>
                         
                         <!-- Heading -->
-                        <h3 style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight: 400; color:#FFF; line-height:1.2; margin:0 0 1.25rem 0;">
+                        <h3 style="font-family:'Marcellus', serif; font-size:2rem; font-weight: 400; color:#FFF; line-height:1.2; margin:0 0 1.25rem 0;">
                             You know what you want. You just don't have the time to find it.
                         </h3>
                         
@@ -1172,14 +1173,14 @@
                     <!-- Header -->
                     <div style="display:flex; align-items:baseline; gap:1rem;">
                         <div style="font-family:'Marcellus', serif; font-size:2rem; font-weight: 400; color:var(--text-copper-aaa);">01</div>
-                        <h3 style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight: 400; color:var(--obsidian-black); text-transform:uppercase; letter-spacing:0.05em; margin:0;">Clarify</h3>
+                        <h3 style="font-family:'Marcellus', serif; font-size:2rem; font-weight: 400; color:var(--obsidian-black); text-transform:uppercase; letter-spacing:0.05em; margin:0;">Clarify</h3>
                     </div>
                     
                     <!-- Hairline Divider -->
                     <div style="height:0.5px; background:rgba(85, 85, 90, 0.15); width:100%;"></div>
                     
                     <!-- Lead Text -->
-                    <p style="font-family:'Manrope',sans-serif; font-size:1.05rem; color:var(--obsidian-black); margin:0; line-height:1.5;">
+                    <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--obsidian-black); margin:0; line-height:1.5;">
                         Mandate calibration &amp; comprehensive requirement definition.
                     </p>
                     
@@ -1370,7 +1371,7 @@
                 
                 <!-- Copper Canvas (CTA) -->
                 <div style="background:var(--text-copper-aaa); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
-                    <div style="font-family:'Manrope',sans-serif; font-size:0.65rem; font-weight:700; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:0.2em;">Primary Copper Environment</div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:0.2em;">Primary Copper Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1;">
                         acre<span style="color:var(--obsidian-black);">&amp;</span>key
                     </div>
@@ -1378,7 +1379,7 @@
 
                 <!-- Light Canvas (Titanium Frost) -->
                 <div style="background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
-                    <div style="font-family:'Manrope',sans-serif; font-size:0.65rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.2em;">Titanium Frost Environment</div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.2em;">Titanium Frost Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:var(--obsidian-black); line-height:1;">
                         acre<span style="color:var(--text-copper-aaa);">&amp;</span>key
                     </div>
@@ -1386,7 +1387,7 @@
 
                 <!-- Dark Canvas (Obsidian) -->
                 <div style="background:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
-                    <div style="font-family:'Manrope',sans-serif; font-size:0.65rem; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.2em;">Obsidian Environment</div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.2em;">Obsidian Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1;">
                         acre<span style="color:var(--text-copper-aaa);">&amp;</span>key
                     </div>
@@ -1397,7 +1398,7 @@
                     <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
                     <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.6) 100%);"></div>
                     
-                    <div style="position:relative; font-family:'Manrope',sans-serif; font-size:0.65rem; font-weight:700; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.2em; z-index:2;">Cinematic Image Overlay</div>
+                    <div style="position:relative; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.2em; z-index:2;">Cinematic Image Overlay</div>
                     <div style="position:relative; font-family:'Josefin Sans', sans-serif; font-size:4.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1; z-index:2; text-shadow:0 10px 30px rgba(10,10,11,0.5);">
                         acre<span style="color:var(--text-copper-aaa);">&amp;</span>key
                     </div>
@@ -1483,7 +1484,7 @@
         <section class="ds-section" id="accessibility">
             <h2 class="ds-section-title">12. Accessibility Standards</h2>
             <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
-                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
                     <li><strong>Focus & Keyboard:</strong> All interactive elements must support standard <code>:focus-visible</code> (2px copper ring). Tab indexing must flow logically from top-left to bottom-right.</li>
                     <li><strong>ARIA Patterns:</strong> Accordions must toggle <code>aria-expanded</code>. Tabs require <code>aria-selected</code>. Modals mandate a focus-trap and must respond to the <code>Esc</code> key to close.</li>
                     <li><strong>Touch Equivalents:</strong> Hover-only tooltips or card-dimming effects must have a persistent or tap-equivalent display on mobile.</li>
@@ -1496,7 +1497,7 @@
         <section class="ds-section" id="trust">
             <h2 class="ds-section-title">13. Trust & Compliance</h2>
             <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
-                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
                     <li><strong>RERA & Disclaimers:</strong> RERA registration numbers must be pinned to the primary hero section or the sticky global footer. "Artist's impression" labels must be embedded in the bottom-right of 3D renders.</li>
                     <li><strong>Stat Sourcing:</strong> Any numerical claim must have a source/date footnote linked directly below the component.</li>
                     <li><strong>DPDP Consent:</strong> All lead-capture forms must include a non-pre-checked consent block explicitly authorizing WhatsApp and Call contact under DPDP norms.</li>
@@ -1509,7 +1510,7 @@
         <section class="ds-section" id="governance">
             <h2 class="ds-section-title">15. Governance & Contribution</h2>
             <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
-                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
                     <li><strong>Version:</strong> 2.0.1 (Apple-Grade Architectural Release).</li>
                     <li><strong>CSS/Token Link:</strong> The active token root is maintained in <code>website.css</code>. Modifying variables directly in local HTML files is strictly banned.</li>
                     <li><strong>Copy-Ready Code:</strong> The components documented in this system are structural blueprints.</li>
