@@ -45,14 +45,14 @@
     @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:100 700;src:url('../../style-guide/assets/fonts/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2'), url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v175/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2') format('woff2')}.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; overflow: hidden; width: 1em; height: 1em;}
 
     :root {
-        --font-heading: 'Cormorant Garamond', serif;
+        --font-heading: 'Marcellus', serif;
         --font-body: 'Manrope', sans-serif;
-        --deep-navy: #0A0A0B;
+        --obsidian-black: #0A0A0B;
         --refined-brass: #7d442a;
         --brass-hover: #965335;
         --deep-slate: #55555A;
-        --muted-slate: #64748B;
-        --warm-ivory: #FAFAFA;
+        --neutral-grey: #64748B;
+        --titanium-frost: #FAFAFA;
         --divider: #ECEEEF;
     }
 
@@ -122,7 +122,7 @@
         flex-wrap: wrap;
     }
     .page-breadcrumb a {
-        color: var(--muted-slate, #64748B);
+        color: var(--neutral-grey, #64748B);
         text-decoration: none;
         transition: color 0.2s ease;
     }
@@ -134,7 +134,7 @@
         font-size: 0.85rem;
     }
     .page-breadcrumb .current {
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         font-weight: 600;
     }
 
@@ -143,7 +143,7 @@
         max-width: 1000px;
         margin: 2.5rem auto 3.5rem auto;
         font-family: var(--font-body, 'Manrope', sans-serif);
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         line-height: 1.7;
         box-sizing: border-box;
     }
@@ -153,7 +153,7 @@
         font-weight: 500;
         margin-top: 3.5rem;
         margin-bottom: 1rem;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         letter-spacing: -0.02em;
     }
     .ak-calc-article h2:first-of-type {
@@ -180,7 +180,7 @@
     .ak-formula-card h3 {
         font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
         font-size: 1.25rem;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         margin: 0 0 1rem 0;
     }
     .ak-formula-step {
@@ -199,9 +199,9 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        background: var(--warm-ivory, #FAFAFA);
+        background: var(--titanium-frost, #FAFAFA);
         border: 0.5px solid var(--refined-brass, #B88E52);
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         font-weight: 700;
         display: flex;
         align-items: center;
@@ -214,7 +214,7 @@
         min-width: 0;
     }
     .ak-formula-content strong {
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         display: block;
         margin-bottom: 0.35rem;
     }
@@ -225,7 +225,7 @@
         white-space: normal;
         font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         background: #F4EFEA;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         padding: 4px 8px;
         border-radius: 4px;
         font-size: 0.85rem;
@@ -245,7 +245,7 @@
         font-family: var(--font-body, 'Manrope', sans-serif);
         font-size: 1.05rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         cursor: pointer;
         display: flex;
         justify-content: space-between;
@@ -285,13 +285,13 @@
         font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
         font-size: 28px;
         font-weight: 500;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         letter-spacing: -0.02em;
         margin: 0 0 0.5rem 0;
     }
     .ak-more-calcs-sub {
         font-size: 0.95rem;
-        color: var(--muted-slate, #64748B);
+        color: var(--neutral-grey, #64748B);
         font-weight: 400;
     }
     .ak-feature-cards {
@@ -338,7 +338,7 @@
     .ak-fcard-title {
         font-family: var(--font-heading, 'Cormorant Garamond', 'Marcellus', serif);
         font-size: 1.15rem;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         font-weight: 500;
         line-height: 1.3;
     }
@@ -366,7 +366,7 @@
         margin: 96px auto 0 auto;
         padding: 0 1.5rem;
         font-family: var(--font-body, 'Manrope', sans-serif);
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
     }
     .dp-header-bar {
         display: flex;
@@ -385,10 +385,10 @@
         display: block;
     }
     .dp-h1 {
-        font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
+        font-family: var(--font-heading), 'Marcellus', serif !important;
         font-size: 31px !important;
         font-weight: 500 !important;
-        color: var(--deep-navy, #0A0A0B) !important;
+        color: var(--obsidian-black, #0A0A0B) !important;
         letter-spacing: -0.015em !important;
         margin: 0 0 0.2rem 0 !important;
         line-height: 1.15 !important;
@@ -419,7 +419,7 @@
         padding: 0.38rem 0.95rem;
         font-size: 0.82rem;
         font-weight: 600;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         box-shadow: 0 2px 8px rgba(10, 10, 11, 0.03);
     }
     .dp-badge-icon {
@@ -466,10 +466,10 @@
         padding: 0.18rem 0.5rem;
     }
     .dp-card-title {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
+        font-family: var(--font-heading, 'Marcellus', serif);
         font-size: 1.35rem;
         font-weight: 600;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         margin-bottom: 0.55rem;
     }
     .dp-field-group {
@@ -479,7 +479,7 @@
         display: block;
         font-size: 0.88rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         margin-bottom: 0.25rem;
     }
     .dp-input-wrapper {
@@ -500,13 +500,13 @@
         padding-left: 0.75rem;
         font-size: 0.88rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
     }
     .dp-input-suffix {
         padding-right: 0.75rem;
         font-size: 0.84rem;
         font-weight: 600;
-        color: var(--muted-slate, #64748B);
+        color: var(--neutral-grey, #64748B);
     }
     .dp-text-input {
         width: 100%;
@@ -517,7 +517,7 @@
         font-family: var(--font-body, 'Manrope', sans-serif);
         font-size: 0.92rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         background: transparent;
     }
     .dp-select-input {
@@ -530,7 +530,7 @@
         font-family: var(--font-body, 'Manrope', sans-serif);
         font-size: 0.92rem;
         font-weight: 600;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         background: #FFFFFF;
         cursor: pointer;
         transition: all 0.2s ease;
@@ -580,7 +580,7 @@
     .dp-calc-btn {
         width: 100%;
         height: 48px;
-        background: var(--deep-navy, #1F2B38);
+        background: var(--obsidian-black, #1F2B38);
         color: #FFFFFF;
         border: 0.5px solid var(--refined-brass, #B88E52);
         border-radius: 4px;
@@ -635,7 +635,7 @@
         text-decoration: underline;
     }
     .dp-edit-trigger:hover {
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
     }
 
     /* Hero Box with Capital Stack Bar */
@@ -659,14 +659,14 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.12em;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         margin-bottom: 0.15rem;
     }
     .dp-hero-amount {
-        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-family: var(--font-heading), 'Marcellus', serif;
         font-size: 2.05rem;
         font-weight: 700;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         line-height: 1.05;
         margin-bottom: 0.15rem;
     }
@@ -716,7 +716,7 @@
         transition: width 0.3s ease;
     }
     .dp-seg-equity {
-        background: var(--deep-navy, #0A0A0B);
+        background: var(--obsidian-black, #0A0A0B);
     }
     .dp-seg-stamp {
         background: var(--refined-brass, #7d442a);
@@ -729,7 +729,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 0.65rem;
-        color: var(--muted-slate, #64748B);
+        color: var(--neutral-grey, #64748B);
         font-weight: 500;
     }
     .dp-leg-item {
@@ -743,7 +743,7 @@
         border-radius: 50%;
         display: inline-block;
     }
-    .dp-leg-dot.equity { background: var(--deep-navy, #0A0A0B); }
+    .dp-leg-dot.equity { background: var(--obsidian-black, #0A0A0B); }
     .dp-leg-dot.stamp { background: var(--refined-brass, #7d442a); }
     .dp-leg-dot.other { background: #C4A482; }
 
@@ -767,21 +767,21 @@
         box-shadow: 0 4px 12px rgba(10, 10, 11, 0.05);
     }
     .dp-stat-value {
-        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-family: var(--font-heading), 'Marcellus', serif;
         font-size: 1.25rem;
         font-weight: 700;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         line-height: 1.1;
         margin-bottom: 0.1rem;
     }
     .dp-stat-name {
         font-size: 0.75rem;
         font-weight: 600;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
     }
     .dp-stat-sub {
         font-size: 0.68rem;
-        color: var(--muted-slate, #64748B);
+        color: var(--neutral-grey, #64748B);
     }
 
     /* Upfront Cost Breakdown */
@@ -793,7 +793,7 @@
     .dp-breakdown-title {
         font-size: 0.78rem;
         font-weight: 700;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         margin-bottom: 0.25rem;
     }
     .dp-cost-row {
@@ -815,13 +815,13 @@
         border-radius: 50%;
         flex-shrink: 0;
     }
-    .dp-dot.green { background: var(--deep-navy, #0A0A0B); }
+    .dp-dot.green { background: var(--obsidian-black, #0A0A0B); }
     .dp-dot.brass { background: var(--refined-brass, #7d442a); }
     .dp-dot.amber { background: #C4A482; }
 
     .dp-cost-val {
         font-weight: 600;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
     }
     .dp-cost-total-row {
         border-top: 0.5px solid #ECEEEF;
@@ -831,12 +831,12 @@
         font-weight: 700;
     }
     .dp-cost-total-row .dp-cost-label-group {
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
         font-weight: 700;
     }
     .dp-cost-total-row .dp-cost-val {
         font-size: 0.98rem;
-        color: var(--deep-navy, #0A0A0B);
+        color: var(--obsidian-black, #0A0A0B);
     }
 
     /* Feasibility Callout */
@@ -907,7 +907,7 @@
     .dp-afford-title {
         font-size: 1.1rem;
         font-weight: 700;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         margin-bottom: 0.25rem;
     }
     .dp-afford-sub {
@@ -918,9 +918,9 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        border: 1.5px solid var(--deep-navy, #1F2B38);
+        border: 1.5px solid var(--obsidian-black, #1F2B38);
         background: transparent;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         padding: 0.75rem 1.5rem;
         border-radius: 4px;
         font-size: 0.92rem;
@@ -931,7 +931,7 @@
         flex-shrink: 0;
     }
     .dp-afford-btn:hover {
-        background: var(--deep-navy, #1F2B38);
+        background: var(--obsidian-black, #1F2B38);
         color: #FFFFFF;
         transform: translateY(-1px);
     }
@@ -943,7 +943,7 @@
     .dp-explore-heading {
         font-size: 1.05rem;
         font-weight: 700;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         margin-bottom: 1rem;
     }
     .dp-explore-row {
@@ -960,7 +960,7 @@
         border: 0.5px solid #ECEEEF;
         border-radius: 4px;
         text-decoration: none;
-        color: var(--deep-navy, #1F2B38);
+        color: var(--obsidian-black, #1F2B38);
         font-weight: 600;
         font-size: 0.88rem;
         transition: all 0.2s ease;
@@ -1092,7 +1092,7 @@
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Header Navigation -->
-    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="../../" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="../../#who-were-for">Who We Serve</a></li><li><a href="../../#framework">Decision Framework</a></li><li><a href="../../#core">CORE</a></li><li><a href="../../#testimonials">Testimonials</a></li><li><a href="../../#about-us">About Us</a></li></ul><a href="#footer" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="../../" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="../../#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="#footer" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
+    <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="../../" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="../../#who-were-for">Who We Serve</a></li><li><a href="../../#framework">Decision Framework</a></li><li><a href="../../#core">CORE</a></li><li><a href="../../#testimonials">Testimonials</a></li><li><a href="../../#about-us">About Us</a></li></ul><a href="#footer" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="../../" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--obsidian-black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="../../#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="../../#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="#footer" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div></div></div></div></header>
 
     <!-- Main Calculator Section in AcrenKey Palette & Content -->
     <main class="dp-calc-container">
@@ -1289,7 +1289,7 @@
                 </div>
                 <div>
                     <div class="dp-afford-title">Stress-test your monthly cash flows</div>
-                    <div class="dp-afford-sub">Evaluate how this <strong id="affordEmiHighlight" style="color:var(--deep-navy);">₹ 65,923</strong> monthly EMI impacts your fixed obligation-to-income ratio (FOIR), debt capacity, and long-term liquidity reserves.</div>
+                    <div class="dp-afford-sub">Evaluate how this <strong id="affordEmiHighlight" style="color:var(--obsidian-black);">₹ 65,923</strong> monthly EMI impacts your fixed obligation-to-income ratio (FOIR), debt capacity, and long-term liquidity reserves.</div>
                 </div>
             </div>
             <a href="../home-affordability-calculator/" class="dp-afford-btn">
@@ -1368,7 +1368,7 @@
         <div style="overflow-x: auto; margin: 1.5rem 0 2.5rem 0;">
             <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left; background: #FFFFFF; border: 0.5px solid rgba(125, 68, 42, 0.2); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 16px rgba(10, 10, 11, 0.04);">
                 <thead>
-                    <tr style="background: var(--deep-navy, #0A0A0B); color: #FFFFFF;">
+                    <tr style="background: var(--obsidian-black, #0A0A0B); color: #FFFFFF;">
                         <th style="padding: 14px 18px; font-weight: 600;">Property Agreement Value</th>
                         <th style="padding: 14px 18px; font-weight: 600;">Maximum Bank Loan (LTV)</th>
                         <th style="padding: 14px 18px; font-weight: 600; color: #E5B98F;">Mandatory Down Payment</th>
@@ -1376,17 +1376,17 @@
                 </thead>
                 <tbody>
                     <tr style="border-bottom: 0.5px solid #ECEEEF;">
-                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #0A0A0B);">Up to ₹30 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--obsidian-black, #0A0A0B);">Up to ₹30 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 90%</td>
                         <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">10% Minimum</td>
                     </tr>
                     <tr style="border-bottom: 0.5px solid #ECEEEF; background: #FAF9F7;">
-                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #0A0A0B);">₹30 Lakhs to ₹75 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--obsidian-black, #0A0A0B);">₹30 Lakhs to ₹75 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 80%</td>
                         <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">20% Minimum</td>
                     </tr>
                     <tr>
-                        <td style="padding: 14px 18px; font-weight: 600; color: var(--deep-navy, #0A0A0B);">Above ₹75 Lakhs</td>
+                        <td style="padding: 14px 18px; font-weight: 600; color: var(--obsidian-black, #0A0A0B);">Above ₹75 Lakhs</td>
                         <td style="padding: 14px 18px; color: #4A5568;">Up to 75%</td>
                         <td style="padding: 14px 18px; font-weight: 600; color: var(--refined-brass, #7d442a);">25% Minimum</td>
                     </tr>

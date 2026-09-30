@@ -1058,7 +1058,7 @@
 
       var h3 = document.createElement("h3");
       h3.setAttribute("tabindex","-1");
-      h3.style.cssText = "font-size:20px;font-weight:500;color:var(--deep-navy, #2F3B42);margin-bottom:6px;outline:none;";
+      h3.style.cssText = "font-size:20px;font-weight:500;color:var(--obsidian-black, #2F3B42);margin-bottom:6px;outline:none;";
       h3.textContent = STRINGS.successHeading;
 
       var p = document.createElement("p");

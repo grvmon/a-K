@@ -5,9 +5,9 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #be7555 0%, #9f5334 100%)`
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
-- **Titanium Frost Canvas Base (`--warm-ivory`)**: `#FAFAFA`
-- **Obsidian Black (`--deep-navy`)**: `#0A0A0B` / `#0A0A0B`
-- **Muted Slate (`--muted-slate`)**: `#55555A` (Body paragraphs)
+- **Titanium Frost Canvas Base (`--titanium-frost`)**: `#FAFAFA`
+- **Obsidian Black (`--obsidian-black`)**: `#0A0A0B` / `#0A0A0B`
+- **Muted Slate (`--neutral-grey`)**: `#55555A` (Body paragraphs)
 
 ## 2. Typography
 - **Headings & Display**: `'Cormorant Garamond', serif` (Weight 400/500/700, editorial architectural luxury)
@@ -59,3 +59,17 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **No Default Blue**: Never use default browser blue links.
 - **Luxury Underlines**: Inline links must use `--text-copper-aaa` with a `1px` thick underline that is offset by `text-underline-offset: 4px;` or `6px;`. 
 - **Hover State**: The underline should be slightly transparent (`rgba(128,69,38,0.3)`) and turn fully solid on hover over `0.4s`.
+
+
+## 14. Typography Updates
+- **Headings**: `Marcellus`, serif (Must always be weight 400. Do not faux-bold).
+- **Body**: `Manrope`, sans-serif.
+- **Icons**: Line icons • 2px stroke • Navy. Use only when they add clarity.
+
+## 15. Layout & Fibonacci Structure
+- **Fibonacci Sequence**: Utilize the golden ratio sequence (1, 1, 2, 3, 5, 8...) for natural, aesthetically pleasing proportions in layout sizing, padding, and margins.
+- **Rule of Thirds**: Use a grid system that brings focus to content by aligning key elements to the intersections of a 3x3 grid.
+
+## 16. Visual Design (Shadows & Silhouettes)
+- **70/30 Rule**: Use shadows and silhouettes to create depth. Maintain 70% light/positive space and 30% shadow/silhouette.
+- **Perspective & Orthogonal Assets**: Digital and print assets must be rendered in 3D space to convey a premium, tangible quality.
