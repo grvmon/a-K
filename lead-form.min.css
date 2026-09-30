@@ -29,7 +29,7 @@
   --lf-bg-surface: #FFFFFF;
 
   position: relative; z-index: 10; width: min(420px, 92vw); max-width: 420px;
-  background: var(--lf-bg-surface); border-radius: 12px;
+  background: var(--lf-bg-surface); border-radius: 4px;
   padding: 40px 32px 34px 32px;
   box-shadow: 0 24px 60px rgba(31, 43, 56, 0.25);
   max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow-y: auto;
@@ -52,7 +52,7 @@
   .lf-wrap {
     max-width: 100% !important;
     width: 100% !important;
-    border-radius: 20px 20px 0 0 !important;
+    border-radius: 4px 0 0 !important;
     padding-top: 16px !important;
     padding-left: 24px !important;
     padding-right: 24px !important;
@@ -96,7 +96,7 @@
     width: 44px;
     height: 4px;
     background: #DDD7CF;
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 2px auto 16px auto;
   }
 }
@@ -144,7 +144,7 @@
 
 .lf-input-box {
   position: relative; width: 100%; height: 50px; min-height: 50px;
-  border: 1px solid var(--lf-line); border-radius: 8px;
+  border: 0.5px solid var(--lf-line); border-radius: 4px;
   background: var(--lf-bg-surface);
   display: flex; align-items: center; padding: 0 16px !important;
   transition: border-color .2s, background-color .2s, box-shadow .2s;
@@ -248,8 +248,8 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   z-index: 9999999 !important;
   width: calc(100% + 32px);
   background: #fff;
-  border: 1px solid var(--divider);
-  border-radius:8px;
+  border: 0.5px solid var(--divider);
+  border-radius: 4px;
   box-shadow: var(--shadow-lux);
   max-height: 260px;
   overflow: hidden;
@@ -279,7 +279,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     width: 100% !important;
     max-height: 60vh !important;
     max-height: 60dvh !important;
-    border-radius:8px !important;
+    border-radius: 4px !important;
     border: none !important;
     box-shadow: 0 -10px 32px var(--shadow-lux) !important;
     z-index: 10000000 !important;
@@ -300,7 +300,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     display: block;
     width: 36px; height: 4px;
     background: #DDD7CF;
-    border-radius:8px;
+    border-radius: 4px;
     margin: 12px auto 6px;
     flex-shrink: 0;
   }
@@ -309,7 +309,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 .lf-cc-search {
   padding: 12px 14px;
   border: none !important;
-  border-bottom: 1px solid #DDD7CF !important;
+  border-bottom: 0.5px solid #DDD7CF !important;
   width: 100%; outline: none !important;
   font-family: var(--lf-font-sans) !important;
   font-size: 16px !important;
@@ -389,7 +389,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   min-width: 24px !important;
   min-height: 24px !important;
   border-radius: 50% !important;
-  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.45) !important;
   background: rgba(255, 255, 255, 0.08) !important;
   color: #FFFFFF !important;
   margin: 0 !important;
@@ -427,7 +427,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 
 .lf-spinner {
   display: none; width: 16px; height: 16px;
-  border: 2px solid rgba(255,255,255,0.4); border-top-color: #FFFFFF;
+  border: 0.5px solid rgba(255,255,255,0.4); border-top-color: #FFFFFF;
   border-radius: 50%; animation: lfSpin 0.7s linear infinite; flex-shrink: 0;
 }
 .lf-btn.lf-loading .lf-spinner { display: block; }
@@ -504,7 +504,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 
 .lf-cc-trigger:focus-visible {
   outline: none !important;
-  border-radius: 6px !important;
+  border-radius: 4px !important;
   box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.45) !important;
   background-color: rgba(155, 98, 72, 0.06) !important;
 }
@@ -529,7 +529,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 .lf-privacy-consent a:focus-visible {
   outline: none !important;
   box-shadow: 0 0 0 2px rgba(155, 98, 72, 0.45) !important;
-  border-radius: 3px !important;
+  border-radius: 4px !important;
   background-color: rgba(155, 98, 72, 0.08) !important;
 }
 
