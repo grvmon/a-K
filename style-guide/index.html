@@ -165,6 +165,42 @@
             transform: translateY(0);
         }
 
+        
+        /* === INTERACTIVE COMPONENTS CSS === */
+        .ds-top-tab {
+            font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; border-bottom:2px solid transparent; margin-bottom:-1px; cursor:pointer; transition:color 0.2s, border-color 0.2s;
+        }
+        .ds-top-tab[aria-selected="true"] {
+            color:var(--text-copper-aaa); border-bottom:2px solid var(--text-copper-aaa);
+        }
+        
+        .ds-side-tab {
+            font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 1.5rem; border-right:2px solid transparent; cursor:pointer; transition:color 0.2s, border-color 0.2s; margin-right:-1px;
+        }
+        .ds-side-tab[aria-selected="true"] {
+            color:var(--text-copper-aaa); border-right:2px solid var(--text-copper-aaa);
+        }
+        
+        .ds-tab-panel {
+            display: none;
+            opacity: 0;
+        }
+        .ds-tab-panel[data-active="true"] {
+            display: flex;
+            animation: akRevealUp 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+        
+        .ds-accordion-trigger {
+            width:100%; background:none; border:none; padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align:left;
+        }
+        .ds-accordion-content {
+            display: none; padding-bottom: 2rem;
+            animation: akRevealUp 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+        .ds-accordion-trigger[aria-expanded="true"] + .ds-accordion-content {
+            display: block;
+        }
+
         /* STATES & ACCESSIBILITY GLOBALS */
         :focus-visible {
             outline: 2px solid var(--text-copper-aaa);
@@ -869,17 +905,26 @@
             <h2 class="ds-section-title">Accordions &amp; Toggles</h2>
             <p class="ds-section-desc">No floating boxes. Items are separated by strictly 0.5px hairlines. The expansion icon is a minimalist SVG.</p>
             
-            <div style="max-width: 800px;">
-                <div style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What is the legal land title status?</h4>
-                    <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">-</span>
+            <div class="ds-accordion-group" style="max-width: 800px;">
+                <!-- Item 1 -->
+                <div class="ds-accordion-item" style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15);">
+                    <button class="ds-accordion-trigger" aria-expanded="true">
+                        <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What is the legal land title status?</h4>
+                        <span class="ds-accordion-icon" style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">-</span>
+                    </button>
+                    <div class="ds-accordion-content">
+                        <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--neutral-grey); line-height:1.7; margin:0;">The land title has been verified across 40 years of records. It possesses an A-Khata certification with zero encumbrances from the BDA. A comprehensive legal dossier is available in the diligence report.</p>
+                    </div>
                 </div>
-                <div style="padding: 1.5rem 0 2rem 0; border-bottom: 0.5px solid rgba(80, 80, 85, 0.15);">
-                    <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--neutral-grey); line-height:1.7; margin:0;">The land title has been verified across 40 years of records. It possesses an A-Khata certification with zero encumbrances from the BDA. A comprehensive legal dossier is available in the diligence report.</p>
-                </div>
-                <div style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What are the township infrastructure details?</h4>
-                    <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">+</span>
+                <!-- Item 2 -->
+                <div class="ds-accordion-item" style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15);">
+                    <button class="ds-accordion-trigger" aria-expanded="false">
+                        <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What are the township infrastructure details?</h4>
+                        <span class="ds-accordion-icon" style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">+</span>
+                    </button>
+                    <div class="ds-accordion-content">
+                        <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--neutral-grey); line-height:1.7; margin:0;">The township features a 12-lane internal road network, dedicated dual-power substations, and a centralized water filtration plant capable of supporting 5,000 residents sustainably.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1797,6 +1842,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -80% 0px' });
     
     sections.forEach(sec => observer.observe(sec));
+
+    // INTERACTIVE COMPONENTS LOGIC (TABS & ACCORDIONS)
+    
+    // 1. Accordions
+    const accordions = document.querySelectorAll('.ds-accordion-trigger');
+    accordions.forEach(acc => {
+        acc.addEventListener('click', () => {
+            const isExpanded = acc.getAttribute('aria-expanded') === 'true';
+            // Close all others (optional, but good for clean UI)
+            accordions.forEach(a => {
+                a.setAttribute('aria-expanded', 'false');
+                a.querySelector('.ds-accordion-icon').textContent = '+';
+            });
+            // Toggle clicked
+            if (!isExpanded) {
+                acc.setAttribute('aria-expanded', 'true');
+                acc.querySelector('.ds-accordion-icon').textContent = '-';
+            }
+        });
+    });
+
+    // 2. Tabs (Top and Side)
+    const tabContainers = document.querySelectorAll('.ds-tab-container');
+    tabContainers.forEach(container => {
+        const tabs = container.querySelectorAll('[role="tab"]');
+        const panels = container.querySelectorAll('.ds-tab-panel');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Deactivate all
+                tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+                panels.forEach(p => p.setAttribute('data-active', 'false'));
+                
+                // Activate clicked
+                tab.setAttribute('aria-selected', 'true');
+                const targetId = tab.getAttribute('data-target');
+                container.querySelector('#' + targetId).setAttribute('data-active', 'true');
+            });
+        });
+    });
+
 });
 </script>
 </body>
