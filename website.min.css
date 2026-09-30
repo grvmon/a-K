@@ -1400,7 +1400,7 @@ b .brand-inline-text,
 }
 
 .mobile-drawer-footer {
-    margin-top:auto;
+    /* margin-top: auto; removed to bring CTA up */
     padding:24px 20px 28px 20px;
     background-color:#FFFFFF;
     border-top:1px solid #f8f6f1;
@@ -7463,7 +7463,7 @@ button:focus-visible,a:focus-visible {
     margin: 3px 0 0 0;
 }
 .roadmap-stage-footer {
-    margin-top: auto;
+    /* margin-top: auto; removed to bring CTA up */
     padding-top: 0.75rem;
     border-top: 1px dashed rgba(24, 42, 61, 0.1);
 }
@@ -8110,4 +8110,10 @@ h2, h3, h4 {
 /* UI Pro Max: Fix 300ms mobile tap delay */
 a, button, input[type="submit"], input[type="button"], .primary-cta-btn, .mobile-nav-item, .mobile-drawer-cta, .cookie-btn, .nav-cta-btn {
     touch-action: manipulation;
+}
+
+
+/* Fix Mobile Drawer Logo Color */
+.mobile-drawer .brand-logo-text {
+    color: #000000 !important;
 }
