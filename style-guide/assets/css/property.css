@@ -4691,3 +4691,49 @@ body.property-page main {
   background: #FFFFFF !important;
   border-color: #EAE6DF !important;
 }
+
+
+/* Global Typography Enhancements */
+body.property-page p, 
+body.property-page .prop-desc, 
+body.property-page .prop-highlight-desc {
+    line-height: 1.75 !important;
+}
+
+/* Drop Cap for Editorial Text */
+.prop-overview-grid-v2 > div:first-child > p:first-of-type::first-letter,
+.prop-about-text > p:first-of-type::first-letter {
+    font-family: var(--font-heading), 'Cormorant Garamond', serif;
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    color: var(--prop-navy);
+    font-weight: 500;
+}
+
+/* Frosted Glass Sticky Nav */
+.prop-section-nav-sticky {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(47, 59, 66, 0.08) !important;
+    transition: all 0.3s ease;
+}
+
+/* Scroll-Spy smooth transition */
+.local-nav-link {
+    transition: color 0.3s ease !important;
+}
+
+
+/* Hero Cinematic Reveal */
+.prop-hero-section {
+    animation: fadeSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes fadeSlideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
