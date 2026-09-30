@@ -730,7 +730,7 @@ window.addEventListener('hashchange', function () {
             "</div>" +
             "<div class=\"advisor-card-content\">" +
               "<div class=\"advisor-card-heading\">" +
-                "<span>Have Questions?</span>" +
+                "<span>Ask Abha</span>" +
                 "<button class=\"advisor-close-btn\" id=\"advisorCloseBtn\" aria-label=\"Dismiss advisor widget\" type=\"button\" title=\"Close\">" +
                   "<svg width=\"9\" height=\"9\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">" +
                     "<line x1=\"2\" y1=\"2\" x2=\"10\" y2=\"10\"></line>" +
@@ -739,7 +739,7 @@ window.addEventListener('hashchange', function () {
                 "</button>" +
               "</div>" +
               "<div class=\"advisor-status-row\">" +
-                "<span class=\"advisor-status-text\"><strong>Abha</strong> is online now</span>" +
+                "<span class=\"advisor-status-text\">Property Concierge · Online Now</span>" +
               "</div>" +
               "<a href=\"#\" class=\"advisor-talk-btn\" onclick=\"if(window.triggerAbhaChat){window.triggerAbhaChat();}else{if(window.playAdvisorChime)window.playAdvisorChime();if(window.openAbhaModal){window.openAbhaModal();}else if(window.openModal){window.openModal();}} return false;\" aria-label=\"Start chat with Abha\">" +
                 "<span>Start Chat</span>" +

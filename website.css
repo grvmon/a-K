@@ -7959,73 +7959,147 @@ h2, h3, h4 {
 }
 
 
+
 /* =========================================================================
-   ABHA DESKTOP PILL WIDGET OVERRIDE (MODERN LUXURY FIX)
+   ABHA DESKTOP PILL WIDGET — v2 (Refined Luxury Standard)
    ========================================================================= */
 @media (min-width: 769px) {
-    /* Hide the absurdly large speech bubble */
+
+    /* ── 1. Kill the speech bubble on desktop ─────────────────────────── */
     .advisor-floating-unit.is-minimized .advisor-speech-bubble {
         display: none !important;
     }
 
-    /* Transform the giant floating head into a sleek horizontal pill */
+    /* ── 2. Shape the main card into a premium pill ───────────────────── */
     .advisor-floating-unit.is-minimized .advisor-main-card {
         border-radius: 99px !important;
         width: auto !important;
-        min-width: 130px !important;
-        max-width: 200px !important;
-        height: 48px !important;
-        min-height: 48px !important;
-        padding: 5px 20px 5px 5px !important;
+        min-width: 0 !important;
+        max-width: 240px !important;
+        height: 54px !important;
+        min-height: 54px !important;
+        padding: 6px 20px 6px 6px !important;
         display: flex !important;
         flex-direction: row !important;
-        justify-content: flex-start !important;
         align-items: center !important;
+        gap: 0 !important;
         background: #FFFFFF !important;
-        border: 1px solid rgba(24, 42, 61, 0.08) !important;
-        box-shadow: 0 4px 20px rgba(15, 31, 61, 0.08) !important;
-        animation: none !important; /* Kill the distracting pulse */
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        border: 1.5px solid rgba(24, 42, 61, 0.1) !important;
+        box-shadow:
+            0 2px 8px rgba(24, 42, 61, 0.06),
+            0 8px 24px rgba(24, 42, 61, 0.08) !important;
+        animation: none !important;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease !important;
+        overflow: hidden !important;
     }
 
-    /* Add the text inside the pill via pseudo-element */
+    /* Remove the single-line ::after text (we now use real DOM) */
     .advisor-floating-unit.is-minimized .advisor-main-card::after {
-        content: "Ask Abha";
-        font-family: 'Manrope', sans-serif !important;
-        font-size: 14.5px !important;
-        font-weight: 800 !important;
-        color: #182A3D !important;
-        margin-left: 12px !important;
-        white-space: nowrap !important;
-        letter-spacing: 0.02em !important;
+        content: none !important;
     }
 
-    /* Shrink the avatar to fit the pill */
-    .advisor-floating-unit.is-minimized .advisor-avatar-wrap,
-    .advisor-floating-unit.is-minimized .advisor-avatar-img {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
-        min-height: 38px !important;
+    /* ── 3. Avatar: tighter, perfectly circular ───────────────────────── */
+    .advisor-floating-unit.is-minimized .advisor-avatar-wrap {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+        flex-shrink: 0 !important;
         margin: 0 !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+
+    .advisor-floating-unit.is-minimized .advisor-avatar-img {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        display: block !important;
+        box-shadow: none !important;
         border: none !important;
     }
 
-    /* Subdue the online indicator dot */
+    /* ── 4. Online dot: tiny, brand-compliant gold accent ────────────── */
     .advisor-floating-unit.is-minimized .advisor-status-dot {
         width: 10px !important;
         height: 10px !important;
-        bottom: 0px !important;
-        right: 0px !important;
-        border-width: 2px !important;
-        border-color: #FFFFFF !important;
-        background: #5E4119 !important; /* WCAG 7AAA compliant Step Brass */
+        bottom: 1px !important;
+        right: 1px !important;
+        border: 2px solid #FFFFFF !important;
+        background: #8C6734 !important;
+        box-shadow: none !important;
     }
 
-    /* Elegant hover state */
+    /* ── 5. Unlock the card-content to show the two-line text ─────────── */
+    .advisor-floating-unit.is-minimized .advisor-card-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 0 0 0 12px !important;
+        overflow: hidden !important;
+        gap: 1px !important;
+    }
+
+    /* ── 6. Card heading: render "Ask Abha" as the name ──────────────── */
+    .advisor-floating-unit.is-minimized .advisor-card-heading {
+        display: flex !important;
+        align-items: center !important;
+        margin-bottom: 0 !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* The name span */
+    .advisor-floating-unit.is-minimized .advisor-card-heading > span {
+        font-family: 'Manrope', sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 800 !important;
+        color: #182A3D !important;
+        letter-spacing: 0.01em !important;
+        white-space: nowrap !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Hide the close button inside the pill */
+    .advisor-floating-unit.is-minimized .advisor-close-btn {
+        display: none !important;
+    }
+
+    /* ── 7. Status row: the subtle sub-label ─────────────────────────── */
+    .advisor-floating-unit.is-minimized .advisor-status-row {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        margin: 0 !important;
+    }
+
+    .advisor-floating-unit.is-minimized .advisor-status-text {
+        font-family: 'Manrope', sans-serif !important;
+        font-size: 10.5px !important;
+        font-weight: 600 !important;
+        color: #8C6734 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.02em !important;
+        line-height: 1.2 !important;
+    }
+
+    /* ── 8. Hide the Start Chat CTA button inside the pill ──────────── */
+    .advisor-floating-unit.is-minimized .advisor-talk-btn {
+        display: none !important;
+    }
+
+    /* ── 9. Hover: elegant lift + gold border glow ───────────────────── */
     .advisor-floating-unit.is-minimized .advisor-main-card:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 24px rgba(15, 31, 61, 0.12) !important;
-        border-color: rgba(140, 103, 52, 0.3) !important;
+        box-shadow:
+            0 4px 12px rgba(24, 42, 61, 0.08),
+            0 12px 32px rgba(24, 42, 61, 0.1) !important;
+        border-color: rgba(140, 103, 52, 0.35) !important;
     }
 }
