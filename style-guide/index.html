@@ -102,6 +102,69 @@
             color: var(--highlight-peach);
         }
 
+        
+        /* === ACRE&KEY MOTION PHYSICS === */
+        
+        /* 1. Cinematic Reveal */
+        @keyframes akRevealUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .demo-reveal:hover .ak-reveal-up {
+            animation: akRevealUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        /* 2. Data Cascade */
+        .demo-cascade:hover .ak-stagger-1 { animation: akRevealUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.0s forwards; }
+        .demo-cascade:hover .ak-stagger-2 { animation: akRevealUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s forwards; }
+        .demo-cascade:hover .ak-stagger-3 { animation: akRevealUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards; }
+        .ak-reveal-up, .ak-stagger-1, .ak-stagger-2, .ak-stagger-3 { opacity: 0; }
+
+        /* 3. Architectural Pan */
+        .ak-pan-container {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .ak-image-pan {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .ak-pan-container:hover .ak-image-pan {
+            transform: scale(1.03);
+        }
+
+        /* 4. Focus Blur (Modal Backdrop Demo) */
+        .demo-blur-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 11, 0);
+            backdrop-filter: blur(0px);
+            transition: all 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .demo-blur-modal {
+            background: #FFF;
+            padding: 2rem;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .demo-blur-container:hover .demo-blur-backdrop {
+            background: rgba(10, 10, 11, 0.75);
+            backdrop-filter: blur(8px);
+        }
+        .demo-blur-container:hover .demo-blur-modal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* STATES & ACCESSIBILITY GLOBALS */
         :focus-visible {
             outline: 2px solid var(--text-copper-aaa);
@@ -627,7 +690,48 @@
         </section>
 <section class="ds-section" id="motion">
             <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
-            <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
+            <p class="ds-section-desc">Strictly <code>4px</code> border radiuses and <code>0.5px</code> hairlines. All movement runs on <strong>Acre&amp;Key Motion Physics</strong>: a suite of cinematic, gravity-weighted CSS animations that avoid cheap "bouncy" effects in favor of slow, deliberate reveals.</p>
+            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                <!-- Pillar 1: Cinematic Reveal -->
+                <div class="demo-reveal" style="cursor:crosshair;">
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">1. Cinematic Reveal</div>
+                    <div style="background:var(--titanium-frost); height: 250px; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); display:flex; align-items:center; justify-content:center; padding:2rem;">
+                        <div class="ak-reveal-up" style="background:#FFF; width:100%; padding:2rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); text-align:center;">
+                            <div style="font-family:'Marcellus',serif; font-size:1.25rem; color:var(--obsidian-black);">Hover to Reveal</div>
+                            <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin-top:0.5rem;">0.6s cubic-bezier</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pillar 2: Data Cascade -->
+                <div class="demo-cascade" style="cursor:crosshair;">
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">2. Data Cascade</div>
+                    <div style="background:var(--titanium-frost); height: 250px; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); padding:2rem; display:flex; flex-direction:column; gap:0.5rem; justify-content:center;">
+                        <div class="ak-stagger-1" style="background:#FFF; width:100%; padding:1rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey);">Data Row 1 (0.0s delay)</div>
+                        <div class="ak-stagger-2" style="background:#FFF; width:100%; padding:1rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey);">Data Row 2 (0.1s delay)</div>
+                        <div class="ak-stagger-3" style="background:#FFF; width:100%; padding:1rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey);">Data Row 3 (0.2s delay)</div>
+                    </div>
+                </div>
+                <!-- Pillar 3: Architectural Pan -->
+                <div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">3. Architectural Pan</div>
+                    <div class="ak-pan-container" style="height: 250px; border:0.5px solid rgba(80, 80, 85, 0.15); cursor:crosshair; border-radius:4px;">
+                        <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="ak-image-pan img-filtered" style="width:100%; height:100%; object-fit:cover;" alt="Hover Pan Demo">
+                    </div>
+                </div>
+                <!-- Pillar 4: Focus Blur -->
+                <div class="demo-blur-container" style="cursor:crosshair;">
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">4. Focus Blur (Modal)</div>
+                    <div style="position:relative; background:var(--titanium-frost); height: 250px; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                        <div style="font-family:'Marcellus',serif; font-size:1.5rem; color:var(--neutral-grey); opacity:0.5;">Page Content</div>
+                        <div class="demo-blur-backdrop">
+                            <div class="demo-blur-modal">
+                                <div style="font-family:'Marcellus',serif; font-size:1.25rem; color:var(--obsidian-black); margin-bottom:0.5rem;">Advisory Modal</div>
+                                <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey);">Hover triggers blur.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="ds-card-demo">
                 <div class="ds-card">
