@@ -919,10 +919,7 @@ b .brand-inline-text,
     font-weight:700
 }
 
-.nav-links a:hover {
-    color:#7D442A;
-    background:transparent
-}
+.nav-links a:hover { opacity: 1; }
 
 .nav-cta-btn {
     font-family:var(--font-heading);
@@ -4653,7 +4650,7 @@ body.page-404 .error-404-section {
 
 .nav-links a:hover {
     opacity:1 !important;
-    color:#7D442A !important
+    color:inherit !important
 }
 
 .header-nav.transparent-header:not(.scrolled) .nav-links a {
@@ -7945,4 +7942,11 @@ button:focus-visible,a:focus-visible {
     .hero-title, .premium-title { font-size: 28px !important; }
     .section-title, .luxury-approach-title, .consultant-main-title { font-size: 25.2px !important; }
     .editorial-heading, .framework-title { font-size: 22.68px !important; }
+}
+
+
+/* Force white hover on scrolled */
+.header-nav.scrolled .nav-links a:hover {
+    color:#ffffff !important;
+    opacity: 1 !important;
 }
