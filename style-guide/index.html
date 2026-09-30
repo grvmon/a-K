@@ -257,6 +257,10 @@
             text-decoration-color: rgba(128,69,38,1);
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y proximity;
+        }
         body {
             background-color: var(--titanium-frost);
             color: var(--obsidian-black);
@@ -295,6 +299,8 @@
         }
 
         .ds-section {
+            scroll-margin-top: 4rem;
+            
             margin-bottom: 6rem;
             padding-bottom: 4rem;
             border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); /* Hairline */
