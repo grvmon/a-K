@@ -376,6 +376,62 @@
         
         <div class="ds-main-content">
 
+        <!-- GOVERNANCE & VERSIONING -->
+        <section class="ds-section" id="governance-meta">
+            <h2 class="ds-section-title">0. Governance & Versioning</h2>
+            <p class="ds-section-desc"><strong>Version:</strong> 2.0.0 (Apple-Grade Architectural Release)<br>
+            <strong>Owner:</strong> Acre&Key Design Authority<br>
+            <strong>Changelog:</strong> Pivot from Warm Ivory to Titanium Frost, shift from Cormorant to Marcellus, implementation of strict 7.0:1 AAA contrast and 4px micro-edge geometry.</p>
+        </section>
+
+        <!-- P0 FOUNDATIONS -->
+        <section class="ds-section" id="brand">
+            <h2 class="ds-section-title">1. Master Foundations (P0)</h2>
+            <p class="ds-section-desc">The absolute root parameters that govern the entire design system.</p>
+            
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Token Map & Contrast Matrix</h3>
+                <table style="width:100%; border-collapse:collapse; font-family:'Manrope',sans-serif; font-size:0.85rem; text-align:left;">
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2);">
+                        <th style="padding:0.75rem 0;">Role</th>
+                        <th>Token Name</th>
+                        <th>Hex/Value</th>
+                        <th>Contrast (vs Canvas)</th>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Canvas Light</td><td><code>--titanium-frost</code></td><td>#FAFAFA</td><td>N/A</td>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Canvas Dark (Anchor)</td><td><code>--obsidian-black</code></td><td>#0A0A0B</td><td>18.9:1 (AAA)</td>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Primary Accent</td><td><code>--text-copper-aaa</code></td><td>#804526</td><td>7.2:1 (AAA)</td>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Highlight Accent</td><td><code>--highlight-peach</code></td><td>#e5b899</td><td>10.9:1 (On Obsidian)</td>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#55555A</td><td>7.1:1 (AAA)</td>
+                    </tr>
+                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <td style="padding:0.75rem 0;">Hairline Divider</td><td><code>--divider</code></td><td>rgba(85, 85, 90, 0.15)</td><td>Structural</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Spatial & Layout Variables</h3>
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); line-height:1.6; margin:0; padding-left:1.2rem;">
+                    <li><strong>Fibonacci Scale:</strong> Margins and paddings follow a Fibonacci rhythm (1, 1, 2, 3, 5, 8).</li>
+                    <li><strong>Section Spacing:</strong> Desktop: <code>110px</code> | Mobile: <code>60px</code></li>
+                    <li><strong>Container Max Width:</strong> <code>1280px</code> (Aligning to Rule of Thirds grid points)</li>
+                    <li><strong>Blur Scale:</strong> Nav/Glassmorphism uses <code>16px</code> blur. Modals use <code>8px</code> blur.</li>
+                    <li><strong>Z-Index:</strong> Modals (1000) > Header (900) > Dropdowns (800) > Tooltips (700) > Base Content (1)</li>
+                </ul>
+            </div>
+        </section>
+
+
 <div class="ds-container">
         
         <!-- SECTION 1: ETHOS & LEXICON -->
@@ -456,7 +512,9 @@
         </section>
 
         <!-- SECTION 3: TYPOGRAPHY -->
-        <section class="ds-section" id="motion">
+        <section class="ds-section" id="layout">
+<h2 class="ds-section-title">6. Layout & Spacing</h2><p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p></section>
+<section class="ds-section" id="motion">
             <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
             
@@ -1404,6 +1462,46 @@
                     <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:1rem 0 0 0;"><strong>Usage:</strong> UI elements, footnotes, card tags, timestamps, and utility links.</p>
                 </div>
 
+            </div>
+        </section>
+
+
+        <!-- SECTION: ACCESSIBILITY -->
+        <section class="ds-section" id="accessibility">
+            <h2 class="ds-section-title">12. Accessibility Standards</h2>
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                    <li><strong>Focus & Keyboard:</strong> All interactive elements must support standard <code>:focus-visible</code> (2px copper ring). Tab indexing must flow logically from top-left to bottom-right.</li>
+                    <li><strong>ARIA Patterns:</strong> Accordions must toggle <code>aria-expanded</code>. Tabs require <code>aria-selected</code>. Modals mandate a focus-trap and must respond to the <code>Esc</code> key to close.</li>
+                    <li><strong>Touch Equivalents:</strong> Hover-only tooltips or card-dimming effects must have a persistent or tap-equivalent display on mobile.</li>
+                    <li><strong>Contrast Rules:</strong> Text must meet WCAG 7.0:1 AAA strictly. The CTA button passes AA (3.0:1).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION: TRUST & COMPLIANCE -->
+        <section class="ds-section" id="trust">
+            <h2 class="ds-section-title">13. Trust & Compliance</h2>
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                    <li><strong>RERA & Disclaimers:</strong> RERA registration numbers must be pinned to the primary hero section or the sticky global footer. "Artist's impression" labels must be embedded in the bottom-right of 3D renders.</li>
+                    <li><strong>Stat Sourcing:</strong> Any numerical claim must have a source/date footnote linked directly below the component.</li>
+                    <li><strong>DPDP Consent:</strong> All lead-capture forms must include a non-pre-checked consent block explicitly authorizing WhatsApp and Call contact under DPDP norms.</li>
+                    <li><strong>Testimonial Rules:</strong> Testimonials must use a standard attribution format: [Initials/Name], [Profession/Sector], [Year], with verified consent.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION: GOVERNANCE -->
+        <section class="ds-section" id="governance">
+            <h2 class="ds-section-title">15. Governance & Contribution</h2>
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
+                <ul style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
+                    <li><strong>Version:</strong> 2.0.1 (Apple-Grade Architectural Release).</li>
+                    <li><strong>CSS/Token Link:</strong> The active token root is maintained in <code>website.css</code>. Modifying variables directly in local HTML files is strictly banned.</li>
+                    <li><strong>Copy-Ready Code:</strong> The components documented in this system are structural blueprints.</li>
+                    <li><strong>Review Rules:</strong> Any new component introduced to this system must pass a dual review for (1) WCAG AAA Contrast, and (2) adherence to the 4px Micro-Edge geometry rule before being merged.</li>
+                </ul>
             </div>
         </section>
 
