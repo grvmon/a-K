@@ -1596,7 +1596,7 @@ body.property-page .header-nav .mobile-toggle {
     }
     .evergreen-tower-btn:hover {
       background: #FBF6F3;
-      border-color: #7D442A;
+      border-color: #FFFFFF;
     }
     .evergreen-tower-btn.active {
       background: #2F3B42 !important;
@@ -1627,7 +1627,7 @@ body.property-page .header-nav .mobile-toggle {
       box-shadow: none !important;
     }
     .evergreen-chip-btn:hover {
-      border-color: #7D442A;
+      border-color: #FFFFFF;
       color: #2F3B42;
     }
     .evergreen-chip-btn.active {
@@ -3495,7 +3495,7 @@ function akGallerySelect(idx) {
   .ak-lb-nav-btn.next { right: 2.2rem; }
   .ak-lb-nav-btn:hover {
     background: rgba(255, 255, 255, 0.15);
-    border-color: #7D442A;
+    border-color: #FFFFFF;
     color: #FFFFFF;
     transform: translateY(-50%) scale(1.08);
     box-shadow: 0 8px 25px rgba(125, 68, 42, 0.45);
@@ -3622,9 +3622,9 @@ function akGallerySelect(idx) {
   }
   .ak-lb-thumb.active {
     opacity: 1;
-    border-color: #7D442A;
+    border-color: #FFFFFF;
     transform: translateY(-3px);
-    box-shadow: 0 4px 14px rgba(125, 68, 42, 0.45);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   }
   .ak-lb-footer-hint {
     margin-top: 0.55rem;
@@ -3880,7 +3880,7 @@ function akGallerySelect(idx) {
             btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
             btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
             if (media.type === 'video') {
-                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#7D442A"/></svg></div>';
+                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
             } else {
                 btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '" loading="lazy">';
             }
