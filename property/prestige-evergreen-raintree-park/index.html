@@ -208,6 +208,35 @@ img[style*="border-radius: 50%"] {
   color: #9f5334 !important;
 }
 
+
+    .ak-cost-tab {
+      background: #FFFFFF;
+      border: 1px solid rgba(47, 59, 66, 0.08);
+      color: #2F3B42;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .ak-cost-tab:hover {
+      border-color: #FFFFFF;
+      color: #2F3B42;
+    }
+    .ak-cost-tab.active {
+      background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+      color: #FFFFFF !important;
+      border: 1px solid #9f5334 !important;
+      box-shadow: 0 2px 8px rgba(159, 83, 52, 0.25) !important;
+    }
+    .ak-cost-tab.active:hover {
+      background: linear-gradient(135deg, #a85a3a 0%, #844222 100%) !important;
+      border-color: #844222 !important;
+    }
+
 </style>
 <style>
 .ak-mobile-hero-v5 { display: none; }
@@ -2046,11 +2075,11 @@ img[style*="border-radius: 50%"] {
           </div>
           <!-- Selector Pills -->
           <div id="evergreenCostTabs" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #7D442A; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">1 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">2 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK + Study</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK</button>
+            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)">1 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)">2 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)">3 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)">3 BHK + Study</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)">4 BHK</button>
           </div>
         </div>
 
@@ -2133,14 +2162,10 @@ img[style*="border-radius: 50%"] {
   window.selectEvergreenCostTab = function(key, btn) {
     var tabs = document.querySelectorAll('#evergreenCostTabs .ak-cost-tab');
     tabs.forEach(function(t) {
-      t.style.background = '#FFFFFF';
-      t.style.color = '#2F3B42';
-      t.style.border = '1px solid #DDD7CF';
+      t.classList.remove('active');
     });
     if (btn) {
-      btn.style.background = '#7D442A';
-      btn.style.color = '#FFFFFF';
-      btn.style.border = '1px solid #7D442A';
+      btn.classList.add('active');
     }
 
     var item = costData[key] || costData['1bhk'];
