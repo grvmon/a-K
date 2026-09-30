@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acre&Key — LinkedIn Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian-black: #0A0A0B;
+            --titanium-frost: #FAFAFA;
+        }
+        body {
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        /* 1128 x 191 Canvas */
+        .cover-canvas {
+            position: relative;
+            width: 1128px;
+            height: 191px;
+            background-color: var(--obsidian-black);
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Right Side: Architecture */
+        .cover-image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+        }
+        
+        .cover-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            filter: saturate(0.85) contrast(1.05);
+        }
+
+        /* Gradient mask to fade architecture into the black typography zone */
+        .gradient-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--obsidian-black) 0%, rgba(10,10,11,0.9) 25%, rgba(10,10,11,0) 100%);
+        }
+
+        /* Left Side: Typography (Safe Area Constraints: X: 100-650, Y: 30-175) */
+        .typography-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 650px;
+            height: 100%;
+            padding-left: 100px;
+            
+             /* 191 - 175 = 16px */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* Typography Hierarchy */
+        .h1-primary {
+            font-family: 'Marcellus', serif;
+            font-size: 26px;
+            color: var(--titanium-frost);
+            margin: 0 0 8px 0;
+            line-height: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .p-secondary {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(250, 250, 250, 0.85);
+            margin: 0 0 24px 0;
+            letter-spacing: 0.02em;
+        }
+        
+        .p-secondary strong {
+            font-weight: 600;
+            color: var(--titanium-frost);
+        }
+
+        .brand-lockup {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+            color: var(--titanium-frost);
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-descriptor {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(250, 250, 250, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-left: 1px solid rgba(250,250,250,0.3);
+            padding-left: 12px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cover-canvas">
+        <div class="cover-image-container">
+            <!-- Using frame1 (Entrance) as it has strong architectural geometry -->
+            <img class="cover-img" src="assets/images/moodboard/frame1_3x4.jpg" alt="Architecture">
+            <div class="gradient-mask"></div>
+        </div>
+        
+        <div class="typography-zone">
+            <h1 class="h1-primary">Buying a home?</h1>
+            <p class="p-secondary">We help you <strong>find. Check. Inspect. Negotiate.</strong></p>
+            
+            <div class="brand-lockup">
+                <div class="brand-logo">acre&key</div>
+                <div class="brand-descriptor">Home-buying<br>concierge.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
