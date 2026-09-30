@@ -87,12 +87,13 @@
 
         .p-secondary {
             font-family: 'Manrope', sans-serif;
-            font-size: 12.5px;
+            font-size: 11.5px;
             font-weight: 400;
             color: rgba(250, 250, 250, 0.8);
             margin: 0 0 14px 0;
             letter-spacing: 0.02em;
             line-height: 1.5;
+            white-space: nowrap; /* Prevent wrap on this narrow canvas */
         }
         
         .p-secondary strong {
@@ -110,8 +111,7 @@
         .brand-logo {
             font-family: 'Josefin Sans', sans-serif;
             font-size: 18px;
-            color: var(--titanium-frost);
-            margin: 0;
+            color: var(--titanium-frost);\n            margin: 0;
             line-height: 1;
             letter-spacing: -0.02em;
         }
@@ -120,13 +120,14 @@
             font-family: 'Manrope', sans-serif;
             font-size: 10px;
             font-weight: 500;
-            /* Fixed: was rgba(250,250,250,0.55) = ~5.9:1 — FAIL. Now rgba(250,250,250,0.75) ≈ 8.5:1 — AAA PASS */
             color: rgba(250, 250, 250, 0.75);
             text-transform: none;
             letter-spacing: 0.05em;
+            /* Right-aligned layout: divider goes on the right of acre&key, left of descriptor */
             border-left: 0.5px solid rgba(250,250,250,0.25);
             padding-left: 14px;
             line-height: 1.4;
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -134,7 +135,6 @@
 
     <div class="cover-canvas">
         <div class="cover-image-container">
-            <!-- Using frame1 (Entrance) as it has strong architectural geometry -->
             <img class="cover-img" src="assets/images/moodboard/frame1_3x4.jpg" alt="Architecture">
             <div class="gradient-mask"></div>
         </div>
@@ -145,7 +145,7 @@
             
             <div class="brand-lockup">
                 <div class="brand-logo">acre&key</div>
-                <div class="brand-descriptor">Home-buying<br>concierge.</div>
+                <div class="brand-descriptor">Home-buying concierge.</div>
             </div>
         </div>
     </div>
