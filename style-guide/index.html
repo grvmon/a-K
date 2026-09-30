@@ -484,6 +484,217 @@
             </p>
         </section>
 
+        <!-- PART II: THE COMPONENT LIBRARY -->
+        <div style="margin: 8rem 0 4rem; padding-top: 4rem; border-top: 2px solid var(--deep-navy);">
+            <h1 style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--deep-navy); margin:0 0 1rem 0;">Part II: The Component Library</h1>
+            <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--muted-slate); max-width:800px;">Every standard web component strictly translated into the HNI Architectural standard. Copy and paste these structures directly into production.</p>
+        </div>
+
+        <!-- ACCORDIONS & TOGGLES -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Accordions &amp; Toggles</h2>
+            <p class="ds-section-desc">No floating boxes. Items are separated by strictly 0.5px hairlines. The expansion icon is a minimalist SVG.</p>
+            
+            <div style="max-width: 800px;">
+                <div style="border-bottom: 0.5px solid rgba(51, 65, 76, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--deep-navy); margin:0;">What is the legal land title status?</h4>
+                    <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">-</span>
+                </div>
+                <div style="padding: 1.5rem 0 2rem 0; border-bottom: 0.5px solid rgba(51, 65, 76, 0.15);">
+                    <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--muted-slate); line-height:1.7; margin:0;">The land title has been verified across 40 years of records. It possesses an A-Khata certification with zero encumbrances from the BDA. A comprehensive legal dossier is available in the diligence report.</p>
+                </div>
+                <div style="border-bottom: 0.5px solid rgba(51, 65, 76, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                    <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--deep-navy); margin:0;">What are the township infrastructure details?</h4>
+                    <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">+</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUTTONS & LINKS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Button Hierarchy</h2>
+            <p class="ds-section-desc">Buttons must never be fully rounded pills. Primary uses the copper gradient. Secondary uses a 0.5px hairline outline. Ghost buttons are pure text with an offset underline.</p>
+            
+            <div style="display: flex; gap: 2rem; align-items: center;">
+                <button style="background:var(--cta-gradient); color:#FFF; border:none; border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: opacity 0.4s ease;">Primary Action</button>
+                
+                <button style="background:transparent; color:var(--deep-navy); border:0.5px solid rgba(51, 65, 76, 0.3); border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: all 0.4s ease;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'; this.style.color='var(--text-copper-aaa)';" onmouseout="this.style.borderColor='rgba(51, 65, 76, 0.3)'; this.style.color='var(--deep-navy)';">Secondary Outline</button>
+
+                <a href="#" style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; transition:all 0.4s ease;">Ghost Link UI</a>
+            </div>
+        </section>
+
+        <!-- TABS (TOP & SIDE) -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Tabs (Top &amp; Side)</h2>
+            <p class="ds-section-desc">Tabs are constructed using pure typography and hairline indicators. No chunky background boxes.</p>
+            
+            <div style="display:flex; gap:4rem; margin-top:2rem;">
+                <!-- Top Tabs -->
+                <div style="flex:1;">
+                    <div style="display:flex; border-bottom:0.5px solid rgba(51, 65, 76, 0.15); gap:2rem; margin-bottom:2rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; border-bottom:2px solid var(--text-copper-aaa); cursor:pointer;">Financials</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; cursor:pointer;">Masterplan</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; cursor:pointer;">Diligence</div>
+                    </div>
+                    <div style="background:#FFF; padding:2rem; border-radius:4px; border:0.5px solid rgba(51, 65, 76, 0.15); min-height:150px;">
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--muted-slate); margin:0;">Financial data module content goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Side Tabs -->
+                <div style="flex:1; display:flex; gap:2rem;">
+                    <div style="display:flex; flex-direction:column; border-left:0.5px solid rgba(51, 65, 76, 0.15);">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 2rem; border-left:2px solid var(--text-copper-aaa); margin-left:-1px; cursor:pointer;">Overview</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 2rem; cursor:pointer;">Specifications</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 2rem; cursor:pointer;">Gallery</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING TABLES -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Pricing &amp; Data Tables</h2>
+            <p class="ds-section-desc">Tables must feel like high-end financial documents. Use muted slate headers, 0.5px dividers, and right-aligned numerical data.</p>
+            
+            <div style="background:#FFF; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px; overflow:hidden;">
+                <table style="width:100%; border-collapse:collapse; font-family:'Manrope',sans-serif; text-align:left;">
+                    <thead style="background:rgba(51, 65, 76, 0.04); border-bottom:0.5px solid rgba(51, 65, 76, 0.15);">
+                        <tr>
+                            <th style="padding:1.25rem 1.5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted-slate);">Typology</th>
+                            <th style="padding:1.25rem 1.5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted-slate);">Carpet Area</th>
+                            <th style="padding:1.25rem 1.5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted-slate); text-align:right;">Institutional Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom:0.5px solid rgba(51, 65, 76, 0.1);">
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--deep-navy);">3 BHK + Staff</td>
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; color:var(--muted-slate);">2,204 Sq.Ft.</td>
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--text-copper-aaa); text-align:right;">₹ 3.14 Cr</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--deep-navy);">4 BHK Signature</td>
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; color:var(--muted-slate);">3,150 Sq.Ft.</td>
+                            <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--text-copper-aaa); text-align:right;">₹ 4.85 Cr</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TEAM & TESTIMONIALS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Team &amp; Testimonials</h2>
+            <p class="ds-section-desc">Testimonials use large, authoritative serif typography. Team cards are highly structured with sharp geometries.</p>
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
+                <!-- Testimonial -->
+                <div style="border-left:2px solid var(--text-copper-aaa); padding-left:2rem;">
+                    <p style="font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-style:italic; color:var(--deep-navy); line-height:1.4; margin:0 0 1.5rem 0;">"The advisory provided by Acre&amp;Key bypassed the standard developer marketing and provided raw, actionable data on asset appreciation."</p>
+                    <div style="font-family:'Manrope',sans-serif;">
+                        <div style="font-weight:700; font-size:0.95rem; color:var(--deep-navy); text-transform:uppercase; letter-spacing:0.05em;">Rahul V.</div>
+                        <div style="font-size:0.85rem; color:var(--muted-slate);">Family Office Director</div>
+                    </div>
+                </div>
+
+                <!-- Team Card -->
+                <div style="background:#FFF; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px; overflow:hidden; display:flex;">
+                    <div style="width:140px; background:rgba(51, 65, 76, 0.05);">
+                        <img src="assets/Nitin_Kocchar.webp" style="width:100%; height:100%; object-fit:cover; display:block; filter:saturate(0.85) contrast(1.05);">
+                    </div>
+                    <div style="padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
+                        <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:var(--deep-navy); margin:0 0 0.25rem 0;">Nitin Kochhar</h4>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Managing Partner</div>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:0; line-height:1.6;">Ex-McKinsey. Specializes in institutional capital allocation and ultra-luxury asset evaluation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS & COUNTERS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Progress Bars &amp; Counters</h2>
+            <p class="ds-section-desc">Avoid thick, colorful progress bars. Use ultra-thin (2px) tracks. Counters must pair massive serif numerals with tiny, tracked-out sans-serif labels.</p>
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
+                <!-- Counters -->
+                <div style="display:flex; gap:3rem;">
+                    <div>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:700; color:var(--deep-navy); line-height:1;">69</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.5rem;">Diligence Checks</div>
+                    </div>
+                    <div>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:700; color:var(--deep-navy); line-height:1;">14<span style="font-size:2rem; color:var(--muted-slate);">%</span></div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.5rem;">Target CAGR</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bars -->
+                <div style="display:flex; flex-direction:column; gap:1.5rem; justify-content:center;">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-family:'Manrope',sans-serif; font-size:0.85rem;">
+                            <span style="font-weight:700; color:var(--deep-navy);">Project Completion</span>
+                            <span style="color:var(--muted-slate);">85%</span>
+                        </div>
+                        <div style="width:100%; height:2px; background:rgba(51, 65, 76, 0.1); border-radius:4px; overflow:hidden;">
+                            <div style="width:85%; height:100%; background:var(--text-copper-aaa);"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-family:'Manrope',sans-serif; font-size:0.85rem;">
+                            <span style="font-weight:700; color:var(--deep-navy);">Inventory Sold</span>
+                            <span style="color:var(--muted-slate);">40%</span>
+                        </div>
+                        <div style="width:100%; height:2px; background:rgba(51, 65, 76, 0.1); border-radius:4px; overflow:hidden;">
+                            <div style="width:40%; height:100%; background:var(--text-copper-aaa);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LISTS & BREADCRUMBS -->
+        <section class="ds-section" style="border-bottom:none;">
+            <h2 class="ds-section-title">Lists &amp; Breadcrumbs</h2>
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
+                <!-- Breadcrumbs -->
+                <div>
+                    <h3 style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.5rem;">Breadcrumb Path</h3>
+                    
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); display:flex; gap:0.5rem; align-items:center;">
+                        <a href="#" style="color:var(--muted-slate); text-decoration:none; transition:color 0.2s;">Home</a>
+                        <span style="color:rgba(51, 65, 76, 0.3);">/</span>
+                        <a href="#" style="color:var(--muted-slate); text-decoration:none; transition:color 0.2s;">Advisory</a>
+                        <span style="color:rgba(51, 65, 76, 0.3);">/</span>
+                        <span style="color:var(--deep-navy); font-weight:700;">Prestige Evergreen</span>
+                    </div>
+                </div>
+
+                <!-- Custom Lists -->
+                <div>
+                    <h3 style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.5rem;">Architectural Lists</h3>
+                    
+                    <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--deep-navy);">
+                        <li style="display:flex; gap:1rem; align-items:flex-start;">
+                            <div style="width:6px; height:6px; background:var(--text-copper-aaa); margin-top:0.4rem; flex-shrink:0;"></div>
+                            <span style="line-height:1.6;">Title deeds verified against RERA database.</span>
+                        </li>
+                        <li style="display:flex; gap:1rem; align-items:flex-start;">
+                            <div style="width:6px; height:6px; background:var(--text-copper-aaa); margin-top:0.4rem; flex-shrink:0;"></div>
+                            <span style="line-height:1.6;">Masterplan audited for hyper-density risk metrics.</span>
+                        </li>
+                        <li style="display:flex; gap:1rem; align-items:flex-start;">
+                            <div style="width:6px; height:6px; background:var(--text-copper-aaa); margin-top:0.4rem; flex-shrink:0;"></div>
+                            <span style="line-height:1.6;">Comparative pricing analysis completed.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
     </div>
 </body>
 </html>
