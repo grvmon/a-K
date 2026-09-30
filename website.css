@@ -3521,7 +3521,7 @@ to {
 
 .cookie-btn {
     padding:6px 10px;
-    min-height:40px;
+    min-height: 48px;
     font-size:12px;
     font-weight:600;
     border-radius:2px
@@ -4071,8 +4071,8 @@ body.page-404 .error-404-section {
 }
 
 .nav-cta-btn,.mobile-drawer-cta {
-    height:42px;
-    min-height:42px;
+    height: 48px;
+    min-height: 48px;
     padding:0 24px;
     font-size:1rem;
     text-transform:none !important;
@@ -6216,8 +6216,8 @@ body.drawer-open .advisor-floating-unit {
     justify-content:center !important;
     gap:8px !important;
     width:100% !important;
-    height:40px !important;
-    min-height:40px !important;
+    height: 48px !important;
+    min-height: 48px !important;
     padding:0 16px !important;
     background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
     color:#FFFFFF !important;
@@ -6330,8 +6330,8 @@ body.drawer-open .advisor-floating-unit {
 }
 
 .advisor-talk-btn {
-    height:38px !important;
-    min-height:38px !important;
+    height: 48px !important;
+    min-height: 48px !important;
     font-size:13.5px !important;
     border-radius:6px !important
 }
@@ -8104,4 +8104,10 @@ h2, h3, h4 {
     .advisor-floating-unit.is-minimized .advisor-main-card::after {
         content: none !important;
     }
+}
+
+
+/* UI Pro Max: Fix 300ms mobile tap delay */
+a, button, input[type="submit"], input[type="button"], .primary-cta-btn, .mobile-nav-item, .mobile-drawer-cta, .cookie-btn, .nav-cta-btn {
+    touch-action: manipulation;
 }
