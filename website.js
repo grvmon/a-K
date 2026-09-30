@@ -1,3 +1,14 @@
+
+var akGetBasePath = function() {
+  var b = "/";
+  var s = document.querySelector('script[src*="website"]');
+  if (s && s.getAttribute("src")) {
+    var src = s.getAttribute("src");
+    var idx = src.lastIndexOf("website");
+    if (idx !== -1) b = src.substring(0, idx);
+  }
+  return b;
+};
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
@@ -714,7 +725,7 @@ window.addEventListener('hashchange', function () {
           "</div>" +
           "<div class=\"advisor-main-card\">" +
             "<div class=\"advisor-avatar-wrap\">" +
-              "<img src=\"" + (window.location.origin && window.location.origin.indexOf("http") === 0 ? "/style-guide/assets/advisor-abha.webp" : "https://acrenkey.com/style-guide/assets/advisor-abha.webp") + "\" alt=\"Abha - Home Buying Advisor\" class=\"advisor-avatar-img\" width=\"76\" height=\"76\" loading=\"lazy\">" +
+              "<img src=\"" + akGetBasePath() + "style-guide/assets/advisor-abha.webp" + "\" alt=\"Abha - Home Buying Advisor\" class=\"advisor-avatar-img\" width=\"76\" height=\"76\" loading=\"lazy\">" +
               "<span class=\"advisor-status-dot\" aria-label=\"Abha is online\"></span>" +
             "</div>" +
             "<div class=\"advisor-card-content\">" +

@@ -1,3 +1,14 @@
+
+var akGetBasePath = function() {
+  var b = "/";
+  var s = document.querySelector('script[src*="abha-form"]');
+  if (s && s.getAttribute("src")) {
+    var src = s.getAttribute("src");
+    var idx = src.lastIndexOf("abha-form");
+    if (idx !== -1) b = src.substring(0, idx);
+  }
+  return b;
+};
 /**
  * ── Talk to Abha Lead Modal Widget ──
  * Standalone, decoupled lead capture widget for the floating Abha advisor.
@@ -460,9 +471,7 @@
   function injectModalMarkup() {
     if (document.getElementById("abhaModalOverlay")) return;
 
-    var avatarUrl = (window.location.origin && window.location.origin.indexOf("http") === 0)
-      ? "/style-guide/assets/advisor-abha.webp"
-      : "https://acrenkey.com/style-guide/assets/advisor-abha.webp";
+    var avatarUrl = akGetBasePath() + "style-guide/assets/advisor-abha.webp";
 
     var html = "" +
       "<div class=\"abha-modal-overlay\" id=\"abhaModalOverlay\" aria-hidden=\"true\">" +
