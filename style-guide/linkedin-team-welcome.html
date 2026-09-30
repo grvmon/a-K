@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acre&Key — Team Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian-black: #0A0A0B;
+            --titanium-frost: #FAFAFA;
+            --text-copper-aaa: #804526;
+        }
+        body {
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        /* Scaled down to 50% for on-screen preview (600x600).
+           Puppeteer export script will still render at full 1200x1200 via aspect-ratio and cqw. */
+        .preview-wrapper {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* 1200 x 1200 Canvas using Container Queries for perfect scaling */
+        .post-canvas {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: var(--obsidian-black);
+            overflow: hidden;
+            container-type: inline-size;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Right Side: Portrait */
+        .portrait-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 75%;
+            height: 100%;
+        }
+        
+        .portrait-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            filter: saturate(0.85) contrast(1.05); /* Brand Cinematic Grade */
+        }
+
+        /* Gradient mask fading portrait into the left typography zone */
+        .gradient-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(10,10,11,1) 0%, rgba(10,10,11,0.95) 30%, rgba(10,10,11,0.4) 70%, rgba(10,10,11,0) 100%);
+        }
+
+        /* Left Side: Typography (Safe Area inside the deep gradient) */
+        .typography-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 65%;
+            height: 100%;
+            padding: 10cqw; /* Equal 10% padding on all sides */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 10;
+        }
+
+        /* Hierarchy Step 1 */
+        .eyebrow {
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.2cqw;
+            font-weight: 500;
+            color: rgba(250, 250, 250, 0.65);
+            margin: 0 0 2cqw 0;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* Hierarchy Step 2 */
+        .name-primary {
+            font-family: 'Marcellus', serif;
+            font-size: 8cqw;
+            color: var(--titanium-frost);
+            margin: 0 0 1cqw 0;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        /* Hierarchy Step 3 */
+        .role-secondary {
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.8cqw;
+            font-weight: 400;
+            color: var(--text-copper-aaa);
+            margin: 0 0 4cqw 0;
+            letter-spacing: 0.02em;
+        }
+
+        /* Hierarchy Step 4 - Clinical Details */
+        .description {
+            font-family: 'Manrope', sans-serif;
+            font-size: 2cqw;
+            font-weight: 400;
+            color: rgba(250, 250, 250, 0.7);
+            margin: 0;
+            line-height: 1.6;
+            max-width: 90%;
+            border-left: 0.5px solid rgba(250,250,250,0.2);
+            padding-left: 2.5cqw;
+        }
+
+        /* Bottom Brand Lockup */
+        .bottom-brand {
+            position: absolute;
+            bottom: 10cqw;
+            left: 10cqw;
+            display: flex;
+            align-items: center;
+            gap: 1.5cqw;
+            z-index: 10;
+        }
+
+        .brand-logo {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3.5cqw;
+            color: var(--titanium-frost);
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-descriptor {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.6cqw;
+            font-weight: 400;
+            color: rgba(250, 250, 250, 0.75);
+            text-transform: none;
+            letter-spacing: 0.03em;
+            border-left: 0.5px solid rgba(250,250,250,0.2);
+            padding-left: 1.5cqw;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preview-wrapper">
+        <div class="post-canvas">
+            <div class="portrait-container">
+                <!-- Using an interior placeholder for now. Replace with actual portrait. -->
+                <img class="portrait-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Portrait">
+                <div class="gradient-mask"></div>
+            </div>
+            
+            <div class="typography-zone">
+                <p class="eyebrow">Strengthening Advisory</p>
+                <h1 class="name-primary">Alexander<br>Wright.</h1>
+                <p class="role-secondary">Director of Asset Strategy</p>
+                
+                <p class="description">Leading macro-market analysis and institutional-grade structuring for ultra-HNI portfolios.</p>
+            </div>
+
+            <div class="bottom-brand">
+                <div class="brand-logo">acre&key</div>
+                <div class="brand-descriptor">Home Buying Concierge.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
