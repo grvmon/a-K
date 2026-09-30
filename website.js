@@ -835,10 +835,16 @@ window.addEventListener('hashchange', function () {
         }
 
         function onScrollCheckFold() {
-            if (aside && !aside.classList.contains("is-visible")) {
-                aside.classList.add("is-visible");
-                if (!bubblePopped) {
-                    setTimeout(triggerBubblePop, 500);
+            var scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+            var isDesktop = window.innerWidth >= 992;
+            var threshold = isDesktop ? getFoldThreshold() : 0;
+            
+            if (scrollY >= threshold || !isDesktop) {
+                if (aside && !aside.classList.contains("is-visible")) {
+                    aside.classList.add("is-visible");
+                    if (!bubblePopped) {
+                        setTimeout(triggerBubblePop, 500);
+                    }
                 }
             }
         }
