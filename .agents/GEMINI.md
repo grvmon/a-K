@@ -5,9 +5,9 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #be7555 0%, #9f5334 100%)`
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
-- **Warm Ivory Canvas Base (`--warm-ivory`)**: `#FBF6F3`
-- **Deep Midnight Navy (`--deep-navy`)**: `#182A3D` / `#141D24`
-- **Muted Slate (`--muted-slate`)**: `#33414C` (Body paragraphs)
+- **Warm Ivory Canvas Base (`--warm-ivory`)**: `#FAFAFA`
+- **Deep Midnight Navy (`--deep-navy`)**: `#0A0A0B` / `#0A0A0B`
+- **Muted Slate (`--muted-slate`)**: `#6E6E73` (Body paragraphs)
 
 ## 2. Typography
 - **Headings & Display**: `'Cormorant Garamond', serif` (Weight 400/500/700, editorial architectural luxury)
@@ -36,7 +36,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 8. Forms & Inputs (Zero Bubbly UIs)
 - **Geometry**: Inputs and Select dropdowns must have strictly `4px` radiuses.
-- **Borders**: Strictly `0.5px` borders (`rgba(51, 65, 76, 0.2)`).
+- **Borders**: Strictly `0.5px` borders (`rgba(110, 110, 115, 0.2)`).
 - **Focus States**: Bottom-border or full-border color shifts to Text Copper (`#804526`) with a 0.4s transition.
 
 ## 9. Badges & Tags (The Anti-Pill Rule)
@@ -49,7 +49,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 11. Text-on-Image Legibility (The Anchored Gradient Rule)
 - **No Raw Text**: Never place text directly over an image without protection.
-- **Gradient Anchors**: Always apply a deep navy linear gradient overlay (`linear-gradient(to top, rgba(20,29,36,0.95) 0%, rgba(20,29,36,0) 60%)`) anchoring the text from the bottom (or top) to guarantee 7.0:1 AAA contrast.
+- **Gradient Anchors**: Always apply a deep navy linear gradient overlay (`linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%)`) anchoring the text from the bottom (or top) to guarantee 7.0:1 AAA contrast.
 
 ## 12. Editorial Cards (Zero Default Shadows)
 - **No Floating Cards**: Do NOT use default CSS drop shadows on static data cards. It looks like a cheap SaaS dashboard.
