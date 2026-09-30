@@ -1263,6 +1263,78 @@
 
             </div>
         </section>
+        <!-- TYPOGRAPHY HIERARCHY -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Typography Hierarchy & Guidelines</h2>
+            <p class="ds-section-desc">The HNI architecture relies on a strict dual-font system. <strong>Cormorant Garamond</strong> provides editorial authority for display and headings. <strong>Manrope</strong> provides extreme technical legibility for data, kickers, and body text.</p>
+            
+            <div style="display:flex; flex-direction:column; gap:3rem; margin-top:2rem; background:var(--warm-ivory); border-radius:4px; padding:3rem; border:0.5px solid rgba(110, 110, 115, 0.15);">
+                
+                <!-- H1 Display -->
+                <div style="border-bottom:0.5px solid rgba(110, 110, 115, 0.2); padding-bottom:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Display Title (H1)</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--muted-slate);">Cormorant Garamond • 400/500 • LH: 1.1 • LS: -0.02em</div>
+                    </div>
+                    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem, 2rem + 3vw, 4.5rem); font-weight:400; color:var(--deep-navy); line-height:1.1; margin:0; letter-spacing:-0.02em;">
+                        The Architecture of Wealth
+                    </h1>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:1rem 0 0 0;"><strong>Usage:</strong> Strictly reserved for Hero sections. Must use <code>clamp()</code> for fluid responsive scaling without breakpoints.</p>
+                </div>
+
+                <!-- H2 Section -->
+                <div style="border-bottom:0.5px solid rgba(110, 110, 115, 0.2); padding-bottom:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Section Heading (H2/H3)</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--muted-slate);">Cormorant Garamond • 600 • LH: 1.2 • LS: 0</div>
+                    </div>
+                    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight:600; color:var(--deep-navy); line-height:1.2; margin:0;">
+                        Institutional Grade diligence.
+                    </h2>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:1rem 0 0 0;"><strong>Usage:</strong> Section dividers, grid headers, and primary content breaks. Never uppercase.</p>
+                </div>
+
+                <!-- Kicker / Overline -->
+                <div style="border-bottom:0.5px solid rgba(110, 110, 115, 0.2); padding-bottom:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Overline Kicker</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--muted-slate);">Manrope • 700 • Uppercase • LH: 1.2 • LS: 0.15em</div>
+                    </div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--deep-navy); text-transform:uppercase; letter-spacing:0.15em; margin:0;">
+                        Micro-Market Analysis
+                    </div>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:1rem 0 0 0;"><strong>Usage:</strong> Eyebrows above headings, category tags, and data pillar labels. Provides structural metadata.</p>
+                </div>
+
+                <!-- Body / Lead -->
+                <div style="border-bottom:0.5px solid rgba(110, 110, 115, 0.2); padding-bottom:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Body &amp; Lead Text</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--muted-slate);">Manrope • 400/500 • LH: 1.6 • LS: 0</div>
+                    </div>
+                    <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--muted-slate); line-height:1.6; margin:0; max-width:700px;">
+                        We filter out 95% of the noise in the market to bring you absolute clarity. Our independent advisory evaluates the opportunity, uncovers the risks, and negotiates entirely on your behalf.
+                    </p>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:1rem 0 0 0;"><strong>Usage:</strong> All paragraph text. Use 1.1rem for lead paragraphs (like above), 0.95rem for standard card reading.</p>
+                </div>
+
+                <!-- UI / Microcopy -->
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Data &amp; Microcopy</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--muted-slate);">Manrope • 600/700 • LH: 1.4 • LS: 0</div>
+                    </div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--deep-navy); margin:0;">
+                        Deliverable: Buyer Mandate Brief
+                    </div>
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:600; color:var(--muted-slate); margin-top:0.25rem;">
+                        Updated 2 hours ago
+                    </div>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:1rem 0 0 0;"><strong>Usage:</strong> UI elements, footnotes, card tags, timestamps, and utility links.</p>
+                </div>
+
+            </div>
+        </section>
 
     </div>
 </body>
