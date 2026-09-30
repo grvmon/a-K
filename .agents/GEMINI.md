@@ -46,3 +46,16 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 ## 10. Cinematic Modals & Overlays
 - **Backdrops**: Modals must blur the background natively using `backdrop-filter: blur(8px)`.
 - **Overlay Color**: Use `rgba(10,10,10,0.85)` for a deep, desaturated cinematic dimming effect instead of flat black.
+
+## 11. Text-on-Image Legibility (The Anchored Gradient Rule)
+- **No Raw Text**: Never place text directly over an image without protection.
+- **Gradient Anchors**: Always apply a deep navy linear gradient overlay (`linear-gradient(to top, rgba(20,29,36,0.95) 0%, rgba(20,29,36,0) 60%)`) anchoring the text from the bottom (or top) to guarantee 7.0:1 AAA contrast.
+
+## 12. Editorial Cards (Zero Default Shadows)
+- **No Floating Cards**: Do NOT use default CSS drop shadows on static data cards. It looks like a cheap SaaS dashboard.
+- **Architectural Hierarchy**: Cards must rely on `0.5px` hairlines, pure whitespace (min `1.5rem` padding), and strict typography scales to create structure.
+
+## 13. Inline Link Behavior
+- **No Default Blue**: Never use default browser blue links.
+- **Luxury Underlines**: Inline links must use `--text-copper-aaa` with a `1px` thick underline that is offset by `text-underline-offset: 4px;` or `6px;`. 
+- **Hover State**: The underline should be slightly transparent (`rgba(128,69,38,0.3)`) and turn fully solid on hover over `0.4s`.
