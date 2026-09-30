@@ -91,7 +91,7 @@
             font-family: 'Manrope', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.4s ease;
         }
@@ -113,7 +113,7 @@
         }
         .ds-shimmer {
             animation: shimmer 2s infinite linear;
-            background: linear-gradient(to right, rgba(85,85,90,0.05) 4%, rgba(85,85,90,0.12) 25%, rgba(85,85,90,0.05) 36%);
+            background: linear-gradient(to right, rgba(80, 80, 85,0.05) 4%, rgba(80, 80, 85,0.12) 25%, rgba(80, 80, 85,0.05) 36%);
             background-size: 800px 100%;
         }
         @media (prefers-reduced-motion: reduce) {
@@ -177,7 +177,7 @@
         .ds-section {
             margin-bottom: 6rem;
             padding-bottom: 4rem;
-            border-bottom: 0.5px solid rgba(85, 85, 90, 0.15); /* Hairline */
+            border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); /* Hairline */
         }
 
         .ds-section-title {
@@ -207,7 +207,7 @@
         .ds-swatch {
             border-radius: 4px; /* Strict 4px geometry */
             overflow: hidden;
-            border: 0.5px solid rgba(85, 85, 90, 0.1);
+            border: 0.5px solid rgba(80, 80, 85, 0.1);
             background: #FFF;
         }
 
@@ -244,7 +244,7 @@
 
         .ds-table th, .ds-table td {
             text-align: left;
-            padding: 1.5rem 1rem; border-bottom: 0.5px solid rgba(85, 85, 90, 0.15);
+            padding: 1.5rem 1rem; border-bottom: 0.5px solid rgba(80, 80, 85, 0.15);
         }
 
         .ds-table th {
@@ -274,7 +274,7 @@
         .ds-type-row {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
-            border-bottom: 0.5px dashed rgba(85, 85, 90, 0.1);
+            border-bottom: 0.5px dashed rgba(80, 80, 85, 0.1);
         }
 
         .ds-type-meta {
@@ -296,7 +296,7 @@
         .ds-card {
             background: #FFF;
             border-radius: 4px;
-            border: 0.5px solid rgba(85, 85, 90, 0.15);
+            border: 0.5px solid rgba(80, 80, 85, 0.15);
             padding: 2rem;
             transition: all 0.4s ease; /* Cinematic Fade */
             cursor: pointer;
@@ -305,7 +305,7 @@
         .ds-card:hover {
             /* Cinematic Flat Interaction: NO Box Shadow lifting. Just dimming the inner elements slightly */
             background: #FAFAFA;
-            border-color: rgba(85, 85, 90, 0.3);
+            border-color: rgba(80, 80, 85, 0.3);
         }
 
         .ds-card-title {
@@ -344,7 +344,7 @@
             position: relative;
             border-radius: 4px;
             overflow: hidden;
-            border: 0.5px solid rgba(85, 85, 90, 0.15);
+            border: 0.5px solid rgba(80, 80, 85, 0.15);
         }
 
         .ds-photo-wrapper img {
@@ -422,32 +422,32 @@
             <h2 class="ds-section-title">1. Master Foundations (P0)</h2>
             <p class="ds-section-desc">The absolute root parameters that govern the entire design system.</p>
             
-            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
+            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; margin-bottom:2rem;">
                 <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Token Map & Contrast Matrix</h3>
                 <table style="width:100%; border-collapse:collapse; font-family:'Manrope',sans-serif; font-size:0.85rem; text-align:left;">
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2);">
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2);">
                         <th style="padding:0.75rem 0;">Role</th>
                         <th>Token Name</th>
                         <th>Hex/Value</th>
                         <th>Contrast (vs Canvas)</th>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Canvas Light</td><td><code>--titanium-frost</code></td><td>#FAFAFA</td><td>N/A</td>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Canvas Dark (Anchor)</td><td><code>--obsidian-black</code></td><td>#0A0A0B</td><td>18.9:1 (AAA)</td>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Primary Accent</td><td><code>--text-copper-aaa</code></td><td>#804526</td><td>7.2:1 (AAA)</td>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Highlight Accent</td><td><code>--highlight-peach</code></td><td>#e5b899</td><td>10.9:1 (On Obsidian)</td>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#55555A</td><td>7.1:1 (AAA)</td>
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
+                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#505055</td><td>7.1:1 (AAA)</td>
                     </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Hairline Divider</td><td><code>--divider</code></td><td>rgba(85, 85, 90, 0.15)</td><td>Structural</td>
+                    <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
+                        <td style="padding:0.75rem 0;">Hairline Divider</td><td><code>--divider</code></td><td>rgba(80, 80, 85, 0.15)</td><td>Structural</td>
                     </tr>
                 </table>
             </div>
@@ -529,7 +529,7 @@
                     <div class="ds-swatch-color" style="background: var(--neutral-grey);"></div>
                     <div class="ds-swatch-meta">
                         <div class="ds-swatch-name">Muted Slate (Body)</div>
-                        <div class="ds-swatch-hex">#55555A</div>
+                        <div class="ds-swatch-hex">#505055</div>
                     </div>
                 </div>
             </div>
@@ -541,7 +541,7 @@
                 <h3 style="font-family:'Marcellus', serif; font-size:1.5rem; margin:0 0 1rem 0;">5.5 Iconography Guidelines</h3>
                 <p class="ds-section-desc" style="margin-bottom:2rem;">Icons must be purely functional. We exclusively use un-filled line icons with a strict <code>2px</code> stroke in Obsidian Black or Neutral Grey. <strong>Usage Rule:</strong> Use only when they add analytical clarity.</p>
                 
-                <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:3rem; display:flex; gap:3rem; align-items:center;">
+                <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:3rem; display:flex; gap:3rem; align-items:center;">
                     
                     <div style="display:flex; flex-direction:column; align-items:center; gap:1rem;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--obsidian-black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -584,7 +584,7 @@
         </section>
         <section class="ds-section" id="layout">
 <h2 class="ds-section-title">6. Layout & Spacing</h2><p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p>
-<div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
+<div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; margin-bottom:2rem;">
                 <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Spatial & Layout Variables</h3>
                 <ul style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); line-height:1.6; margin:0; padding-left:1.2rem;">
                     <li><strong>Fibonacci Scale:</strong> Margins and paddings follow a Fibonacci rhythm (1, 1, 2, 3, 5, 8).</li>
@@ -598,17 +598,17 @@
                 <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Section Theming (Alternating Backgrounds)</h3>
                 <p class="ds-section-desc" style="margin-bottom:2rem;">To create visual pacing on long-scroll pages without relying on harsh drop shadows, we use <strong>Banded Sections</strong>. The page background must strictly alternate between these three environments to delineate different content blocks.</p>
                 
-                <div style="border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden;">
+                <div style="border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; overflow:hidden;">
                     
                     <!-- Band 1: Titanium Frost -->
-                    <div style="background:var(--titanium-frost); padding:3rem; border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <div style="background:var(--titanium-frost); padding:3rem; border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Base Canvas</div>
                         <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; margin:0 0 0.5rem 0; color:var(--obsidian-black);">Titanium Frost</h4>
                         <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0;">The default background for the majority of the page. Creates a soft, premium foundation.</p>
                     </div>
 
                     <!-- Band 2: Pure White -->
-                    <div style="background:#FFFFFF; padding:3rem; border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <div style="background:#FFFFFF; padding:3rem; border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Alternating Canvas</div>
                         <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; margin:0 0 0.5rem 0; color:var(--obsidian-black);">Pure White</h4>
                         <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0;">Used for the very next section to create subtle, shadow-free separation from the Frost canvas above it.</p>
@@ -663,12 +663,12 @@
             <h2 class="ds-section-title">9. Components (Inputs & Forms) Architecture</h2>
             <p class="ds-section-desc">HNI clients do not fill out "squeeze pages." Our forms must feel like secure, private banking applications. No bubbly inputs. We use strict 0.5px borders, 4px radiuses, and crisp typography.</p>
             
-            <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(85, 85, 90, 0.15);">
+            <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(80, 80, 85, 0.15);">
                 <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing: 0.12em;">Full Legal Name</label>
-                <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px;  transition:all 0.4s ease; margin-bottom: 1.5rem;"  >
+                <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px;  transition:all 0.4s ease; margin-bottom: 1.5rem;"  >
                 
                 <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing: 0.12em;">Advisory Requirement</label>
-                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px;  appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%230A0A0B" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
+                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px;  appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%230A0A0B" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
                     <option>Portfolio Restructuring</option>
                     <option>Asset Acquisition</option>
                 </select>
@@ -683,7 +683,7 @@
             <div style="display:flex; gap:1rem; flex-wrap:wrap;">
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:rgba(10, 10, 11, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(10, 10, 11, 0.1); letter-spacing: 0.12em; text-transform:uppercase;">Under Construction</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); background:rgba(128, 69, 38, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(128, 69, 38, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">RERA Verified</span>
-                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#0A0A0B; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: [X.XX]/5</span>
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#0A0A0B; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: [X.XX]/5</span>
             </div>
         </section>
 
@@ -692,7 +692,7 @@
             <h2 class="ds-section-title">8. Cinematic Modals & Overlays</h2>
             <p class="ds-section-desc">Pop-ups should not feel like marketing interruptions. Modal backdrops must use a heavy cinematic blur (<code>backdrop-filter: blur(8px)</code>) with a deep, desaturated overlay (<code>rgba(10,10,10,0.85)</code>) to completely focus the user's attention.</p>
             
-            <div style="position:relative; width:100%; height:300px; border-radius:4px; overflow:hidden; background:url('assets/evergreen/prestige_evergreen_hero_pool_evening.webp') center/cover; border:0.5px solid rgba(85, 85, 90, 0.15);">
+            <div style="position:relative; width:100%; height:300px; border-radius:4px; overflow:hidden; background:url('assets/evergreen/prestige_evergreen_hero_pool_evening.webp') center/cover; border:0.5px solid rgba(80, 80, 85, 0.15);">
                 <!-- Modal Backdrop Overlay -->
                 <div style="position:absolute; inset:0; background:rgba(10,10,10,0.85); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:2rem;">
                     <!-- Modal Card -->
@@ -710,7 +710,7 @@
             <h2 class="ds-section-title">9. Text-on-Image Legibility</h2>
             <p class="ds-section-desc">Placing raw text directly over a photograph severely compromises legibility. We enforce a strict "Anchored Gradient" rule. Whenever text sits on an image, a deep navy gradient (fading from 95% opacity to 0% at the 60% mark) must anchor the text from the bottom or top, targeting a 7.0:1 AAA contrast ratio.</p>
             
-            <div style="position:relative; border-radius:4px; overflow:hidden; height:250px; border:0.5px solid rgba(85, 85, 90, 0.15); max-width: 600px;">
+            <div style="position:relative; border-radius:4px; overflow:hidden; height:250px; border:0.5px solid rgba(80, 80, 85, 0.15); max-width: 600px;">
                 <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; display:block;">
                 <!-- The HNI Gradient Overlay -->
                 <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:2rem;">
@@ -725,11 +725,11 @@
             <h2 class="ds-section-title">10. The "Editorial Card" Standard</h2>
             <p class="ds-section-desc">Data cards should never use default CSS box-shadows. Shadows look like generic web templates. Our cards use strict 0.5px hairlines, generous internal padding (min 1.5rem), and rely entirely on typography sizing to establish hierarchy.</p>
             
-            <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:2rem; max-width: 450px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem; border-bottom: 0.5px solid rgba(85, 85, 90, 0.1); padding-bottom: 1rem;">
+            <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:2rem; max-width: 450px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem; border-bottom: 0.5px solid rgba(80, 80, 85, 0.1); padding-bottom: 1rem;">
                     <h3 style="font-family:'Marcellus', serif; font-size:1.5rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Township Data</h3>
                     <!-- Referencing Section 7 Badges -->
-                    <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:var(--titanium-frost); padding:0.3rem 0.6rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Verified</span>
+                    <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:var(--titanium-frost); padding:0.3rem 0.6rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Verified</span>
                 </div>
                 <div style="display:flex; flex-direction:column; gap: 0.8rem;">
                     <div style="display:flex; justify-content:space-between;">
@@ -766,14 +766,14 @@
             <p class="ds-section-desc">No floating boxes. Items are separated by strictly 0.5px hairlines. The expansion icon is a minimalist SVG.</p>
             
             <div style="max-width: 800px;">
-                <div style="border-bottom: 0.5px solid rgba(85, 85, 90, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <div style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                     <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What is the legal land title status?</h4>
                     <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">-</span>
                 </div>
-                <div style="padding: 1.5rem 0 2rem 0; border-bottom: 0.5px solid rgba(85, 85, 90, 0.15);">
+                <div style="padding: 1.5rem 0 2rem 0; border-bottom: 0.5px solid rgba(80, 80, 85, 0.15);">
                     <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--neutral-grey); line-height:1.7; margin:0;">The land title has been verified across 40 years of records. It possesses an A-Khata certification with zero encumbrances from the BDA. A comprehensive legal dossier is available in the diligence report.</p>
                 </div>
-                <div style="border-bottom: 0.5px solid rgba(85, 85, 90, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <div style="border-bottom: 0.5px solid rgba(80, 80, 85, 0.15); padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
                     <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">What are the township infrastructure details?</h4>
                     <span style="font-family:'Manrope',sans-serif; font-size:1.5rem; font-weight:300; color:var(--text-copper-aaa);">+</span>
                 </div>
@@ -788,7 +788,7 @@
             <div style="display: flex; gap: 2rem; align-items: center;">
                 <button style="background:var(--cta-gradient); color:#FFF; border:none; border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: opacity 0.4s ease;">Primary Action</button>
                 
-                <button style="background:transparent; color:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.3); border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: all 0.4s ease;"  >Secondary Outline</button>
+                <button style="background:transparent; color:var(--obsidian-black); border:0.5px solid rgba(80, 80, 85, 0.3); border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: all 0.4s ease;"  >Secondary Outline</button>
 
                 <a href="#" style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; transition:all 0.4s ease;">Ghost Link UI</a>
             </div>
@@ -802,7 +802,7 @@
                 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
                     
                     <!-- Light Canvas Menu -->
-                    <div style="background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
+                    <div style="background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em;">Titanium Frost (Light) Menu</div>
                         
                         <nav class="ds-menu-light" style="display:flex; gap:2rem; align-items:center;" aria-label="Light Demo Navigation">
@@ -814,7 +814,7 @@
                     </div>
 
                     <!-- Dark Canvas Menu -->
-                    <div style="background:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
+                    <div style="background:var(--obsidian-black); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--highlight-peach); text-transform:uppercase; letter-spacing:0.1em;">Obsidian (Dark) Menu</div>
                         
                         <nav class="ds-menu-dark" style="display:flex; gap:2rem; align-items:center;" aria-label="Dark Demo Navigation">
@@ -837,18 +837,18 @@
             <div style="display:flex; gap:4rem; margin-top:2rem;">
                 <!-- Top Tabs -->
                 <div style="flex:1;">
-                    <div style="display:flex; border-bottom:0.5px solid rgba(85, 85, 90, 0.2); gap:2rem; margin-bottom:2rem;">
+                    <div style="display:flex; border-bottom:0.5px solid rgba(80, 80, 85, 0.2); gap:2rem; margin-bottom:2rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; border-bottom:2px solid var(--text-copper-aaa); margin-bottom:-1px; cursor:pointer;">Financials</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; border-bottom:2px solid transparent; margin-bottom:-1px; cursor:pointer; transition:color 0.2s;">Masterplan</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding-bottom:1rem; border-bottom:2px solid transparent; margin-bottom:-1px; cursor:pointer; transition:color 0.2s;">Diligence</div>
                     </div>
-                    <div style="background:#FFF; padding:2rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.15); min-height:150px; display:flex; align-items:center;">
+                    <div style="background:#FFF; padding:2rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15); min-height:150px; display:flex; align-items:center;">
                         <p style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); margin:0;">Horizontal tab content dynamically loads here.</p>
                     </div>
                 </div>
                 <!-- Side Tabs -->
                 <div style="flex:1; display:flex;">
-                    <div style="display:flex; flex-direction:column; border-right:0.5px solid rgba(85, 85, 90, 0.2); min-width:140px;">
+                    <div style="display:flex; flex-direction:column; border-right:0.5px solid rgba(80, 80, 85, 0.2); min-width:140px;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 1.5rem; border-right:2px solid var(--text-copper-aaa); margin-right:-1px; cursor:pointer;">Overview</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 1.5rem; cursor:pointer; transition:color 0.2s;">Specs</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.05em; padding:1rem 1.5rem; cursor:pointer; transition:color 0.2s;">Gallery</div>
@@ -865,9 +865,9 @@
             <h2 class="ds-section-title">10. Data & Tools (Pricing Tables) Tables</h2>
             <p class="ds-section-desc">Tables must feel like high-end financial documents. Use muted slate headers, 0.5px dividers, and right-aligned numerical data.</p>
             
-            <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden;">
+            <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; overflow:hidden;">
                 <table style="width:100%; border-collapse:collapse; font-family:'Manrope',sans-serif; text-align:left;">
-                    <thead style="background:rgba(85, 85, 90, 0.04); border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                    <thead style="background:rgba(80, 80, 85, 0.04); border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <tr>
                             <th style="padding:1.25rem 1.5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--neutral-grey);">Typology</th>
                             <th style="padding:1.25rem 1.5rem; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--neutral-grey);">Carpet Area</th>
@@ -875,7 +875,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.1);">
+                        <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.1);">
                             <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--obsidian-black);">3 BHK + Staff</td>
                             <td style="padding:1.25rem 1.5rem; font-size:0.95rem; color:var(--neutral-grey);">2,204 Sq.Ft.</td>
                             <td style="padding:1.25rem 1.5rem; font-size:0.95rem; font-weight:700; color:var(--text-copper-aaa); text-align:right;">₹ 3.14 Cr</td>
@@ -915,7 +915,7 @@
                             <span style="font-weight:700; color:var(--obsidian-black);">Project Completion</span>
                             <span style="color:var(--neutral-grey);">85%</span>
                         </div>
-                        <div style="width:100%; height:2px; background:rgba(85, 85, 90, 0.1); border-radius:4px; overflow:hidden;">
+                        <div style="width:100%; height:2px; background:rgba(80, 80, 85, 0.1); border-radius:4px; overflow:hidden;">
                             <div style="width:85%; height:100%; background:var(--text-copper-aaa);"></div>
                         </div>
                     </div>
@@ -924,7 +924,7 @@
                             <span style="font-weight:700; color:var(--obsidian-black);">Inventory Sold</span>
                             <span style="color:var(--neutral-grey);">40%</span>
                         </div>
-                        <div style="width:100%; height:2px; background:rgba(85, 85, 90, 0.1); border-radius:4px; overflow:hidden;">
+                        <div style="width:100%; height:2px; background:rgba(80, 80, 85, 0.1); border-radius:4px; overflow:hidden;">
                             <div style="width:40%; height:100%; background:var(--text-copper-aaa);"></div>
                         </div>
                     </div>
@@ -943,9 +943,9 @@
                     
                     <div style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); display:flex; gap:0.5rem; align-items:center;">
                         <a href="#" style="color:var(--neutral-grey); text-decoration:none; transition:color 0.2s;">Home</a>
-                        <span style="color:rgba(85, 85, 90, 0.3);">/</span>
+                        <span style="color:rgba(80, 80, 85, 0.3);">/</span>
                         <a href="#" style="color:var(--neutral-grey); text-decoration:none; transition:color 0.2s;">Advisory</a>
-                        <span style="color:rgba(85, 85, 90, 0.3);">/</span>
+                        <span style="color:rgba(80, 80, 85, 0.3);">/</span>
                         <span style="color:var(--obsidian-black); font-weight:700;">Prestige Evergreen</span>
                     </div>
                 </div>
@@ -976,7 +976,7 @@
             <h2 class="ds-section-title">Hero Architecture Blueprint</h2>
             <p class="ds-section-desc">The standard V2 entrance. Split layout: Editorial typography on the left, cinematically filtered architectural photography on the right.</p>
             
-            <div style="display:flex; flex-wrap:wrap; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden; background:#FFF;">
+            <div style="display:flex; flex-wrap:wrap; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; overflow:hidden; background:#FFF;">
                 <div style="flex:1; min-width:300px; padding:4rem; display:flex; flex-direction:column; justify-content:center;">
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:1rem;">Pre-Launch Advisory</div>
                     <div class="h1-demo" role="heading" aria-level="1" style="font-family:'Marcellus', serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight: 400; color:var(--obsidian-black); line-height:1.1; margin:0 0 1.5rem 0;">Institutional-Grade Assets in Whitefield.</div>
@@ -994,16 +994,16 @@
             <h2 class="ds-section-title">Forms: Checkboxes &amp; Radios</h2>
             <p class="ds-section-desc">Native browser checkboxes look cheap. We use custom SVGs and pure CSS to ensure strict 4px geometry on checkboxes and sharp circular selections for radios.</p>
             
-            <div style="display:flex; gap:4rem; padding: 2rem; background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px;">
+            <div style="display:flex; gap:4rem; padding: 2rem; background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px;">
                 <!-- Checkbox Custom -->
                 <style>
                     .ds-checkbox-label { display: flex; align-items: center; cursor: pointer; font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: var(--obsidian-black); margin-bottom: 1rem; }
                     .ds-checkbox-input { display: none; }
-                    .ds-checkbox-box { width: 18px; height: 18px; border: 0.5px solid rgba(85, 85, 90, 0.3); border-radius: 4px; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+                    .ds-checkbox-box { width: 18px; height: 18px; border: 0.5px solid rgba(80, 80, 85, 0.3); border-radius: 4px; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
                     .ds-checkbox-input:checked + .ds-checkbox-box { background: var(--text-copper-aaa); border-color: var(--text-copper-aaa); }
                     .ds-checkbox-input:checked + .ds-checkbox-box::after { content: ''; width: 4px; height: 8px; border: solid #FFF; border-width: 0 2px 2px 0; transform: rotate(45deg); margin-bottom: 2px; }
                     
-                    .ds-radio-box { width: 18px; height: 18px; border: 0.5px solid rgba(85, 85, 90, 0.3); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+                    .ds-radio-box { width: 18px; height: 18px; border: 0.5px solid rgba(80, 80, 85, 0.3); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
                     .ds-radio-input:checked + .ds-radio-box { border-color: var(--text-copper-aaa); border-width: 5px; }
                 </style>
                 
@@ -1045,7 +1045,7 @@
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
                 <!-- Alert Box -->
                 <div>
-                    <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-left:3px solid var(--text-copper-aaa); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start;">
+                    <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-left:3px solid var(--text-copper-aaa); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start;">
                         <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.1rem; color:var(--text-copper-aaa); line-height:1;">i</div>
                         <div>
                             <h4 style="font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700; color:var(--obsidian-black); margin:0 0 0.25rem 0;">Report Dispatched</h4>
@@ -1073,13 +1073,13 @@
             <p class="ds-section-desc">Minimalist progression logic for blogs and property listing pages.</p>
             
             <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Manrope',sans-serif; font-size:0.95rem;">
-                <button style="background:transparent; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;">&larr;</button>
+                <button style="background:transparent; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;">&larr;</button>
                 <div style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--obsidian-black);">1</div>
                 <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >2</button>
                 <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >3</button>
                 <span style="color:var(--neutral-grey);">...</span>
                 <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >8</button>
-                <button style="background:transparent; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >&rarr;</button>
+                <button style="background:transparent; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >&rarr;</button>
             </div>
         </section>
 
@@ -1089,16 +1089,16 @@
             <p class="ds-section-desc">Galleries use strict 4px corners and uniform grid gaps. No complex overlapping or rotating images. Pure architectural discipline.</p>
             
             <div style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:150px 150px; gap:1rem;">
-                <div style="grid-row:1 / 3; border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15);">
+                <div style="grid-row:1 / 3; border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15);">
                     <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15);">
+                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15);">
                     <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15);">
+                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15);">
                     <img src="assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                 </div>
-                <div style="grid-column:2 / 4; border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15); position:relative;">
+                <div style="grid-column:2 / 4; border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15); position:relative;">
                     <img src="assets/evergreen/prestige_evergreen_hero_skyline_night_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                     <div style="position:absolute; inset:0; background:rgba(10, 10, 11,0.85); display:flex; align-items:center; justify-content:center; cursor:pointer;">
                         <span style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; border:0.5px solid #FFF; padding:0.5rem 1rem; border-radius:4px;">View All 24 Media</span>
@@ -1111,7 +1111,7 @@
             <h2 class="ds-section-title">Global Header &amp; Navigation</h2>
             <p class="ds-section-desc">The primary structural navigation. It must stick to the top with a 16px blur backdrop and a single 0.5px hairline separating it from the content.</p>
             
-            <div style="width:100%; background:rgba(250, 250, 250, 0.9); backdrop-filter:blur(16px); border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="width:100%; background:rgba(250, 250, 250, 0.9); backdrop-filter:blur(16px); border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;">
                 <!-- Logo -->
                 <div style="font-family:'Josefin Sans', sans-serif; font-size:1.5rem; font-weight: 400; letter-spacing:0.05em; color:var(--obsidian-black);">
                         acre&amp;key
@@ -1134,7 +1134,7 @@
             <h2 class="ds-section-title">Video &amp; Media Players</h2>
             <p class="ds-section-desc">Standard YouTube or Vimeo embeds ruin immersion with heavy branding. All videos must sit behind our custom cinematic overlay with a minimalist play button.</p>
             
-            <div style="position:relative; border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15); height:300px; max-width:600px;">
+            <div style="position:relative; border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15); height:300px; max-width:600px;">
                 <img src="assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                 
                 <!-- Video Overlay -->
@@ -1159,13 +1159,13 @@
                 }
                 .ds-shimmer {
                     animation: shimmer 2s infinite linear;
-                    background: linear-gradient(to right, rgba(85, 85, 90,0.05) 4%, rgba(85, 85, 90,0.12) 25%, rgba(85, 85, 90,0.05) 36%);
+                    background: linear-gradient(to right, rgba(80, 80, 85,0.05) 4%, rgba(80, 80, 85,0.12) 25%, rgba(80, 80, 85,0.05) 36%);
                     background-size: 800px 100%;
                     border-radius: 4px;
                 }
             </style>
             
-            <div style="background:#FFF; padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; max-width:400px;">
+            <div style="background:#FFF; padding:2rem; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; max-width:400px;">
                 <div class="ds-shimmer" style="width:40px; height:40px; border-radius:50%; margin-bottom:1.5rem;"></div>
                 <div class="ds-shimmer" style="width:80%; height:16px; margin-bottom:0.75rem;"></div>
                 <div class="ds-shimmer" style="width:60%; height:16px; margin-bottom:1.5rem;"></div>
@@ -1213,7 +1213,7 @@
             
             <div style="display:flex; justify-content:center;">
                 <!-- Persona Card Component -->
-                <div style="position:relative; width:100%; max-width:400px; aspect-ratio:3/4; border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15); ">
+                <div style="position:relative; width:100%; max-width:400px; aspect-ratio:3/4; border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15); ">
                     <!-- Background Image (Using placeholder, ideally executive shot) -->
                     <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
                     
@@ -1251,7 +1251,7 @@
             
             <div style="display:flex; justify-content:center;">
                 <!-- Data Card Component -->
-                <div style="width:100%; max-width:380px; background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden; display:flex; flex-direction:column; position:relative; ">
+                <div style="width:100%; max-width:380px; background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; overflow:hidden; display:flex; flex-direction:column; position:relative; ">
                     
                     <!-- Header Image -->
                     <div style="height:160px; width:100%; position:relative;">
@@ -1293,7 +1293,7 @@
                     </div>
                     
                     <!-- Footer Block -->
-                    <div style="background:var(--titanium-frost); border-top:0.5px solid rgba(85, 85, 90, 0.15); padding:1.5rem 2rem;">
+                    <div style="background:var(--titanium-frost); border-top:0.5px solid rgba(80, 80, 85, 0.15); padding:1.5rem 2rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.75rem;">
                             Questions We Answer
                         </div>
@@ -1315,7 +1315,7 @@
             
             <div style="display:flex; justify-content:center;">
                 <!-- Process Card Component -->
-                <div style="width:100%; max-width:400px; background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:2.5rem 2rem;  display:flex; flex-direction:column; gap:1.5rem;">
+                <div style="width:100%; max-width:400px; background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:2.5rem 2rem;  display:flex; flex-direction:column; gap:1.5rem;">
                     
                     <!-- Header -->
                     <div style="display:flex; align-items:baseline; gap:1rem;">
@@ -1324,7 +1324,7 @@
                     </div>
                     
                     <!-- Hairline Divider -->
-                    <div style="height:0.5px; background:rgba(85, 85, 90, 0.15); width:100%;"></div>
+                    <div style="height:0.5px; background:rgba(80, 80, 85, 0.15); width:100%;"></div>
                     
                     <!-- Lead Text -->
                     <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--obsidian-black); margin:0; line-height:1.5;">
@@ -1359,10 +1359,10 @@
                     </div>
                     
                     <!-- Dotted Divider -->
-                    <div style="border-top:1px dashed rgba(85, 85, 90, 0.2); width:100%; margin-top:0.5rem;"></div>
+                    <div style="border-top:1px dashed rgba(80, 80, 85, 0.2); width:100%; margin-top:0.5rem;"></div>
                     
                     <!-- Deliverable Tag (Enforcing 4px rule, no pills) -->
-                    <div style="background:rgba(85, 85, 90, 0.04); border-radius:4px; padding:0.85rem; text-align:center; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--obsidian-black);">
+                    <div style="background:rgba(80, 80, 85, 0.04); border-radius:4px; padding:0.85rem; text-align:center; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--obsidian-black);">
                         Deliverable: Buyer Mandate Brief
                     </div>
                     
@@ -1374,22 +1374,22 @@
             <h2 class="ds-section-title">Executive Team Profiles</h2>
             <p class="ds-section-desc">Used for horizontal leadership grids. <strong>Crucial Correction:</strong> Shadows are minimized to retain a flat, editorial aesthetic. and replaced them with our structural 0.5px hairline. All headshots must be passed through the cinematic desaturation filter.</p>
             
-            <div style="background:var(--titanium-frost); padding:3rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.15);">
+            <div style="background:var(--titanium-frost); padding:3rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.15);">
                 <h3 style="font-family:'Marcellus', serif; font-size:2.25rem; font-weight:400; color:var(--obsidian-black); margin:0 0 2rem 0;">Meet The Team</h3>
                 
                 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
                     
                     <!-- Team Card 1 -->
-                    <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
+                    <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
                         <!-- Circular Avatar (Exception to geometry for human faces, but with strict ring) -->
-                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(85, 85, 90, 0.2); flex-shrink:0;">
+                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(80, 80, 85, 0.2); flex-shrink:0;">
                             <img src="assets/Nitin_Kocchar.webp" class="img-filtered" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
                         </div>
                         
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Nitin Kochhar</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1401,14 +1401,14 @@
                     </div>
 
                     <!-- Team Card 2 -->
-                    <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
-                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(85, 85, 90, 0.2); flex-shrink:0;">
+                    <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
+                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(80, 80, 85, 0.2); flex-shrink:0;">
                             <img src="assets/Gaurav_Mongia.webp" class="img-filtered" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
                         </div>
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Gaurav Mongia</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1420,14 +1420,14 @@
                     </div>
 
                     <!-- Team Card 3 -->
-                    <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
-                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(85, 85, 90, 0.2); flex-shrink:0;">
+                    <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:1.5rem; display:flex; gap:1.25rem; align-items:center;">
+                        <div style="width:85px; height:85px; border-radius:50%; padding:4px; border:0.5px solid rgba(80, 80, 85, 0.2); flex-shrink:0;">
                             <img src="assets/Arvind_Patidar.webp" class="img-filtered" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
                         </div>
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Arvind Patidar</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1446,7 +1446,7 @@
             <h2 class="ds-section-title">Cinematic Gallery Player</h2>
             <p class="ds-section-desc">Used for showcasing property renders and imagery. <strong>Crucial Correction:</strong> The raw text over the image violates AAA contrast. We must inject dual Anchored Gradients (top and bottom) to protect the typography and controls, while enforcing 4px geometries on the navigation arrows and thumbnail strips.</p>
             
-            <div style="position:relative; width:100%; height:600px; border-radius:4px; overflow:hidden; border:0.5px solid rgba(85, 85, 90, 0.15);">
+            <div style="position:relative; width:100%; height:600px; border-radius:4px; overflow:hidden; border:0.5px solid rgba(80, 80, 85, 0.15);">
                 
                 <!-- Main Image -->
                 <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
@@ -1517,7 +1517,7 @@
                 
                 
                 <!-- Copper Canvas (CTA) -->
-                <div style="background:var(--text-copper-aaa); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
+                <div style="background:var(--text-copper-aaa); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:0.2em;">Primary Copper Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1;">
                         acre&amp;key
@@ -1525,7 +1525,7 @@
                 </div>
 
                 <!-- Light Canvas (Titanium Frost) -->
-                <div style="background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
+                <div style="background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--neutral-grey); text-transform:uppercase; letter-spacing:0.2em;">Titanium Frost Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:var(--obsidian-black); line-height:1;">
                         acre&amp;key
@@ -1533,7 +1533,7 @@
                 </div>
 
                 <!-- Dark Canvas (Obsidian) -->
-                <div style="background:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
+                <div style="background:var(--obsidian-black); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem;">
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.2em;">Obsidian Environment</div>
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:3.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1;">
                         acre&amp;key
@@ -1545,7 +1545,7 @@
                     <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
                     <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.6) 100%);"></div>
                     
-                    <div style="position:relative; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.2em; z-index:2;">Cinematic Image Overlay</div>
+                    <div style="position:relative; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color: rgba(255, 255, 255, 0.7); text-transform:uppercase; letter-spacing:0.2em; z-index:2;">Cinematic Image Overlay</div>
                     <div style="position:relative; font-family:'Josefin Sans', sans-serif; font-size:4.5rem; font-weight: 400; letter-spacing:0.05em; color:#FFFFFF; line-height:1; z-index:2; text-shadow:0 10px 30px rgba(10,10,11,0.5);">
                         acre&amp;key
                     </div>
@@ -1558,10 +1558,10 @@
             <h2 class="ds-section-title">5. Typography Hierarchy & Guidelines</h2>
             <p class="ds-section-desc">The HNI architecture relies on a strict dual-font system. <strong>Marcellus</strong> provides editorial authority for display and headings. <strong>Manrope</strong> provides extreme technical legibility for data, kickers, and body text.</p>
             
-            <div style="display:flex; flex-direction:column; gap:3rem; margin-top:2rem; background:var(--titanium-frost); border-radius:4px; padding:3rem; border:0.5px solid rgba(85, 85, 90, 0.15);">
+            <div style="display:flex; flex-direction:column; gap:3rem; margin-top:2rem; background:var(--titanium-frost); border-radius:4px; padding:3rem; border:0.5px solid rgba(80, 80, 85, 0.15);">
                 
                 <!-- H1 Display -->
-                <div style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2); padding-bottom:2rem;">
+                <div style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2); padding-bottom:2rem;">
                     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Display Title (H1)</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Marcellus • 400 • LH: 1.1 • LS: -0.02em</div>
@@ -1573,7 +1573,7 @@
                 </div>
 
                 <!-- H2 Section -->
-                <div style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2); padding-bottom:2rem;">
+                <div style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2); padding-bottom:2rem;">
                     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Section Heading (H2/H3)</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Cormorant Garamond • 600 • LH: 1.2 • LS: 0</div>
@@ -1585,7 +1585,7 @@
                 </div>
 
                 <!-- Kicker / Overline -->
-                <div style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2); padding-bottom:2rem;">
+                <div style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2); padding-bottom:2rem;">
                     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Overline Kicker</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Manrope • 700 • Uppercase • LH: 1.2 • LS: 0.15em</div>
@@ -1597,7 +1597,7 @@
                 </div>
 
                 <!-- Body / Lead -->
-                <div style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2); padding-bottom:2rem;">
+                <div style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2); padding-bottom:2rem;">
                     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Body &amp; Lead Text</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Manrope • 400/500 • LH: 1.6 • LS: 0</div>
