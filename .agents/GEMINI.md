@@ -33,3 +33,16 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 7. Global Header & Footer Standard Rule
 - **Header & Footer Consistency**: For all new and existing pages, ALWAYS use the exact standard site header and site footer matching the main architecture. Do NOT create custom or simplified variants.
+
+## 8. Forms & Inputs (Zero Bubbly UIs)
+- **Geometry**: Inputs and Select dropdowns must have strictly `4px` radiuses.
+- **Borders**: Strictly `0.5px` borders (`rgba(51, 65, 76, 0.2)`).
+- **Focus States**: Bottom-border or full-border color shifts to Text Copper (`#804526`) with a 0.4s transition.
+
+## 9. Badges & Tags (The Anti-Pill Rule)
+- **No Pills**: Do NOT use `border-radius: 999px` (pill-shaped tags).
+- **Rectangular Authority**: All status tags, RERA badges, and scoring badges must be `4px` rounded rectangles with a subtle 0.5px border.
+
+## 10. Cinematic Modals & Overlays
+- **Backdrops**: Modals must blur the background natively using `backdrop-filter: blur(8px)`.
+- **Overlay Color**: Use `rgba(10,10,10,0.85)` for a deep, desaturated cinematic dimming effect instead of flat black.

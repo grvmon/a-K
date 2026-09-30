@@ -388,8 +388,54 @@
                 </div>
             </div>
         </section>
-        
-    </div>
 
+        <!-- SECTION 6: FORMS & INPUTS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">6. Input & Form Architecture</h2>
+            <p class="ds-section-desc">HNI clients do not fill out "squeeze pages." Our forms must feel like secure, private banking applications. No bubbly inputs. We use strict 0.5px borders, 4px radiuses, and crisp typography.</p>
+            
+            <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(51, 65, 76, 0.15);">
+                <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--deep-navy); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Full Legal Name</label>
+                <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--deep-navy); background:var(--warm-ivory); border:0.5px solid rgba(51, 65, 76, 0.2); border-radius:4px; outline:none; transition:all 0.4s ease; margin-bottom: 1.5rem;" onfocus="this.style.borderColor='var(--text-copper-aaa)'" onblur="this.style.borderColor='rgba(51, 65, 76, 0.2)'">
+                
+                <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--deep-navy); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.05em;">Advisory Requirement</label>
+                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--deep-navy); background:var(--warm-ivory); border:0.5px solid rgba(51, 65, 76, 0.2); border-radius:4px; outline:none; appearance:none;">
+                    <option>Portfolio Restructuring</option>
+                    <option>Asset Acquisition</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- SECTION 7: BADGES & TAGS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">7. Clinical Badges & Tags (The Anti-Pill Rule)</h2>
+            <p class="ds-section-desc">Standard web design uses rounded "pill" tags (<code>border-radius: 99px</code>). We strictly reject this. All tags (RERA, Status, Scores) must use our rigid <code>4px</code> geometry to maintain an architectural, blueprint-like aesthetic.</p>
+            
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--deep-navy); background:rgba(20, 29, 36, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(20, 29, 36, 0.1); letter-spacing:0.05em; text-transform:uppercase;">Under Construction</span>
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); background:rgba(128, 69, 38, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(128, 69, 38, 0.2); letter-spacing:0.05em; text-transform:uppercase;">RERA Verified</span>
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#182A3D; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(51, 65, 76, 0.2); letter-spacing:0.05em; text-transform:uppercase;">Score: 4.11/5</span>
+            </div>
+        </section>
+
+        <!-- SECTION 8: OVERLAYS & MODALS -->
+        <section class="ds-section" style="border-bottom:none;">
+            <h2 class="ds-section-title">8. Cinematic Modals & Overlays</h2>
+            <p class="ds-section-desc">Pop-ups should not feel like marketing interruptions. Modal backdrops must use a heavy cinematic blur (<code>backdrop-filter: blur(8px)</code>) with a deep, desaturated overlay (<code>rgba(10,10,10,0.85)</code>) to completely focus the user's attention.</p>
+            
+            <div style="position:relative; width:100%; height:300px; border-radius:4px; overflow:hidden; background:url('assets/evergreen/prestige_evergreen_hero_pool_evening.webp') center/cover; border:0.5px solid rgba(51, 65, 76, 0.15);">
+                <!-- Modal Backdrop Overlay -->
+                <div style="position:absolute; inset:0; background:rgba(10,10,10,0.85); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:2rem;">
+                    <!-- Modal Card -->
+                    <div style="background:#FFF; padding:2rem; border-radius:4px; width:100%; max-width:400px; box-shadow:0 20px 50px rgba(0,0,0,0.35);">
+                        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:600; color:var(--deep-navy); margin:0 0 1rem 0;">Floorplan Access</h3>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--muted-slate); margin-bottom:1.5rem; line-height:1.5;">Please confirm your credentials to view the highly detailed architectural layouts.</p>
+                        <button class="ds-card-btn" style="width:100%;">Authenticate &amp; View</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
