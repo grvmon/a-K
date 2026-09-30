@@ -7734,7 +7734,7 @@ button:focus-visible,a:focus-visible {
     transition: all 0.25s ease;
 }
 .pre-footer-cta-btn:hover {
-    background: linear-gradient(135deg, var(--highlight-peach) 0%, var(--highlight-peach) 100%);
+    background: var(--text-copper-aaa);
     
     box-shadow: none;
 }
@@ -8174,4 +8174,16 @@ body.page-404 .header-nav .nav-cta-btn:hover {
     text-decoration-color: #ffffff !important;
     text-decoration-thickness: 1px !important;
     text-underline-offset: 4px !important;
+}
+
+/* ULTIMATE CTA TRANSPARENCY FIX */
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn {
+    background: transparent !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.4) !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+.header-nav.transparent-header:not(.scrolled) .nav-cta-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
 }
