@@ -19,14 +19,13 @@
             height: 100vh;
         }
         
-        /* 1128 x 191 Canvas */
+        /* 1128 x 191 Canvas — no box-shadow per style guide Zero Shadow rule */
         .cover-canvas {
             position: relative;
             width: 1128px;
             height: 191px;
             background-color: var(--obsidian-black);
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
         /* Right Side: Architecture */
@@ -118,8 +117,9 @@
             font-family: 'Manrope', sans-serif;
             font-size: 10px;
             font-weight: 500;
-            color: rgba(250, 250, 250, 0.55);
-            text-transform: none; /* brand guidelines: lowercase */
+            /* Fixed: was rgba(250,250,250,0.55) = ~5.9:1 — FAIL. Now rgba(250,250,250,0.75) ≈ 8.5:1 — AAA PASS */
+            color: rgba(250, 250, 250, 0.75);
+            text-transform: none;
             letter-spacing: 0.05em;
             border-left: 0.5px solid rgba(250,250,250,0.25);
             padding-left: 14px;
