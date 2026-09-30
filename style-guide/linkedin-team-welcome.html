@@ -83,48 +83,48 @@
             z-index: 10;
         }
 
-        /* Hierarchy Step 1 */
-        .eyebrow {
-            font-family: 'Manrope', sans-serif;
-            font-size: 2.2cqw;
-            font-weight: 500;
-            color: rgba(250, 250, 250, 0.65);
-            margin: 0 0 2cqw 0;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        /* Hierarchy Step 2 */
-        .name-primary {
+        /* Hierarchy Step 1: Largest */
+        .h1-primary {
             font-family: 'Marcellus', serif;
-            font-size: 8cqw;
+            font-size: 6cqw;
             color: var(--titanium-frost);
-            margin: 0 0 1cqw 0;
+            margin: 0 0 2cqw 0;
             line-height: 1.1;
             letter-spacing: -0.01em;
         }
 
-        /* Hierarchy Step 3 */
-        .role-secondary {
+        /* Hierarchy Step 2: Medium */
+        .name-secondary {
             font-family: 'Manrope', sans-serif;
-            font-size: 2.8cqw;
-            font-weight: 400;
+            font-size: 3.5cqw;
+            font-weight: 500;
             color: var(--text-copper-aaa);
-            margin: 0 0 4cqw 0;
-            letter-spacing: 0.02em;
+            margin: 0 0 0.5cqw 0;
+            line-height: 1.2;
         }
 
-        /* Hierarchy Step 4 - Clinical Details */
-        .description {
+        /* Hierarchy Step 3: Small */
+        .role-tertiary {
             font-family: 'Manrope', sans-serif;
             font-size: 2cqw;
+            font-weight: 500;
+            color: rgba(250, 250, 250, 0.85);
+            margin: 0 0 3cqw 0;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* Hierarchy Step 4: Smallest */
+        .description {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.6cqw;
             font-weight: 400;
             color: rgba(250, 250, 250, 0.7);
             margin: 0;
             line-height: 1.6;
             max-width: 100%; /* Uses full width of the constrained 50% zone */
             border-left: 0.5px solid rgba(250,250,250,0.2);
-            padding-left: 2.5cqw;
+            padding-left: 2cqw;
         }
 
         /* Bottom Brand Lockup */
@@ -171,9 +171,9 @@
             </div>
             
             <div class="typography-zone">
-                <p class="eyebrow">Welcome to the team</p>
-                <h1 class="name-primary">Piyush<br>Mittal.</h1>
-                <p class="role-secondary">Partner | CBO</p>
+                <h1 class="h1-primary">Welcome to the team.</h1>
+                <h2 class="name-secondary">Piyush Mittal.</h2>
+                <p class="role-tertiary">Partner | CBO</p>
                 
                 <p class="description">Expanding our institutional-grade strategy and advisory desk for ultra-HNI portfolios.</p>
             </div>
