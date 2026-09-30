@@ -2005,50 +2005,108 @@ img[style*="border-radius: 50%"] {
       </div>
 
       <!-- Scrollable Table -->
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:2rem;">
-        <table style="width:100%; min-width:640px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem;">
-          <thead>
-            <tr style="background:#FAF8F5;">
-              <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight:800; color:#2F3B42; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Configuration</th>
-              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Saleable / SBA Range</th>
-              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Indicative ₹/sq.ft.</th>
-              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">All-inclusive Price Range</th>
-            </tr>
-          </thead>
-          <tbody style="color:#374151;">
-            <tr style="transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">1 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">659–976 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,310–16,296</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.07–1.59 Cr</td>
-            </tr>
-            <tr style="background:#FAF8F5; transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">2 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,174–1,526 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,291–16,285</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.91–2.49 Cr</td>
-            </tr>
-            <tr style="transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">3 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,461–1,951 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,286–16,281</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹2.38–3.18 Cr</td>
-            </tr>
-            <tr style="background:#FAF8F5; transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">3 BHK + Study</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,991–2,037 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,281–16,280</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹3.24–3.32 Cr</td>
-            </tr>
-            <tr style="transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42;">4 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">2,271–2,513 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; color:#7D442A; font-weight:700;">₹16,279–16,277</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42;">₹3.70–4.09 Cr</td>
-            </tr>
-          </tbody>
-        </table>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
+      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">1 BHK</h3>
+      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">659–976 SQ.FT</span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
+      <div>
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
+        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,310 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
       </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
+        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹1.07–1.59 Cr</div>
+      </div>
+    </div>
+    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 1 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
+      Request Official Breakdown
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
+      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">2 BHK</h3>
+      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,174–1,526 SQ.FT</span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
+      <div>
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
+        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,291 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
+        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹1.91–2.49 Cr</div>
+      </div>
+    </div>
+    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 2 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
+      Request Official Breakdown
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
+      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">3 BHK</h3>
+      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,461–1,951 SQ.FT</span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
+      <div>
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
+        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,286 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
+        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹2.38–3.18 Cr</div>
+      </div>
+    </div>
+    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 3 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
+      Request Official Breakdown
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
+      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">3 BHK + Study</h3>
+      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,991–2,037 SQ.FT</span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
+      <div>
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
+        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,281 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
+        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹3.24–3.32 Cr</div>
+      </div>
+    </div>
+    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 3 BHK + Study Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
+      Request Official Breakdown
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
+      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">4 BHK</h3>
+      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">2,271–2,513 SQ.FT</span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
+      <div>
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
+        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,279 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
+        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹3.70–4.09 Cr</div>
+      </div>
+    </div>
+    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 4 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
+      Request Official Breakdown
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+</div>
 
       <!-- Interactive Itemized Typology Cost Estimator -->
       <div style="background:#FAF8F5; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
@@ -2790,111 +2848,82 @@ img[style*="border-radius: 50%"] {
     </div>
 
     <!-- Mobile Horizontal Scroll Hint -->
-    
+    <div style="font-size:0.75rem; color:#7D442A; font-weight:700; display:flex; align-items:center; gap:0.35rem; margin-bottom:0.5rem;">
+      <i data-feather="arrow-right" style="width:13px; height:13px;"></i>
+      <span>Swipe horizontally on mobile to compare configurations, pricing &amp; <span class="brand-inline-text">acre&amp;key</span> scores</span>
+    </div>
 
     <!-- Direct Side-by-Side Comparison Table -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 0;">
-  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
-      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">1 BHK</h3>
-      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">659–976 SQ.FT</span>
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:0 !important; box-shadow:0 4px 16px rgba(47, 59, 66, 0.04);">
+      <table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.9rem; min-width:720px;">
+        <thead>
+          <tr style="background:#2F3B42; color:#FFFFFF;">
+            <th style="padding:1rem 1.25rem; font-weight:800;">Project</th>
+            <th style="padding:1rem 1rem; font-weight:800;">Location</th>
+            <th style="padding:1rem 1rem; font-weight:800;">Configs</th>
+            <th style="padding:1rem 1rem; font-weight:800;">Price Range</th>
+            <th style="padding:1rem 1rem; font-weight:800;">Possession</th>
+            <th style="padding:1rem 1.25rem; font-weight:800; text-align:right;"><span class="brand-inline-text">acre&amp;key</span> Score</th>
+          </tr>
+        </thead>
+        <tbody style="color:#374151;">
+          <tr style="background:#FBF6F3; border-bottom:2px solid #7D442A;">
+            <td style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42;">
+              Prestige Evergreen <span style="font-size:0.75rem; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; padding:0.15rem 0.45rem; border-radius:4px; margin-left:4px;">Current</span>
+            </td>
+            <td style="padding:0.95rem 1rem; font-weight:600;">Varthur Junction, SH-35</td>
+            <td style="padding:0.95rem 1rem; font-weight:600;">1, 2, 3, 3+Study, 4 BHK</td>
+            <td style="padding:0.95rem 1rem; font-weight:800; color:#2F3B42;">₹1.07 – 4.09 Cr</td>
+            <td style="padding:0.95rem 1rem; font-weight:700; color:#7D442A;">June 2030</td>
+            <td style="padding:0.95rem 1.25rem; text-align:right;">
+              <span style="background:#1B5E20; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:800; font-size:0.88rem; font-family:'Manrope',sans-serif; display:inline-block;">4.11 / 5</span>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #EAE6DF;">
+            <td style="padding:0.9rem 1.25rem; font-weight:700; color:#2F3B42;">
+              <a href="/property/sumadhura-edition-whitefield/" style="color:#2F3B42; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Sumadhura Edition <span style="color:#7D442A;">→</span>
+              </a>
+            </td>
+            <td style="padding:0.9rem 1rem;">Whitefield (Hope Farm)</td>
+            <td style="padding:0.9rem 1rem;">2, 3 &amp; 4 BHK</td>
+            <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹2.06 – 3.73 Cr</td>
+            <td style="padding:0.9rem 1rem;">Dec 2029</td>
+            <td style="padding:0.9rem 1.25rem; text-align:right;">
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.80 / 5</span>
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid #EAE6DF;">
+            <td style="padding:0.9rem 1.25rem; font-weight:700; color:#2F3B42;">
+              <a href="/property/sumadhura-solace-whitefield/" style="color:#2F3B42; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                Sumadhura Solace <span style="color:#7D442A;">→</span>
+              </a>
+            </td>
+            <td style="padding:0.9rem 1rem;">Whitefield (Near Metro)</td>
+            <td style="padding:0.9rem 1rem;">3 &amp; 4 BHK</td>
+            <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹2.18 – 3.10 Cr</td>
+            <td style="padding:0.9rem 1rem;">Dec 2029</td>
+            <td style="padding:0.9rem 1.25rem; text-align:right;">
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.90 / 5</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0.9rem 1.25rem; font-weight:700; color:#2F3B42;">
+              <a href="/property/one-residences-sobha-oneworld/" style="color:#2F3B42; text-decoration:none; display:inline-flex; align-items:center; gap:0.25rem;">
+                One Residences at SOBHA OneWorld <span style="color:#7D442A;">→</span>
+              </a>
+            </td>
+            <td style="padding:0.9rem 1rem;">Greater Whitefield (Hosakote Rd)</td>
+            <td style="padding:0.9rem 1rem;">1, 2, 3 &amp; 4 BHK</td>
+            <td style="padding:0.9rem 1rem; font-weight:700; color:#2F3B42;">₹1.10 – 3.93 Cr</td>
+            <td style="padding:0.9rem 1rem;">July 2032</td>
+            <td style="padding:0.9rem 1.25rem; text-align:right;">
+              <span style="background:#2F3B42; color:#FFFFFF; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.85rem; font-family:'Manrope',sans-serif; display:inline-block;">3.20 / 5</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
-      <div>
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
-        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,310 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
-      </div>
-      <div style="text-align:right;">
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
-        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹1.07–1.59 Cr</div>
-      </div>
-    </div>
-    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 1 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
-      Request Official Breakdown
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
-      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">2 BHK</h3>
-      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,174–1,526 SQ.FT</span>
-    </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
-      <div>
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
-        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,291 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
-      </div>
-      <div style="text-align:right;">
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
-        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹1.91–2.49 Cr</div>
-      </div>
-    </div>
-    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 2 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
-      Request Official Breakdown
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
-      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">3 BHK</h3>
-      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,461–1,951 SQ.FT</span>
-    </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
-      <div>
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
-        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,286 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
-      </div>
-      <div style="text-align:right;">
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
-        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹2.38–3.18 Cr</div>
-      </div>
-    </div>
-    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 3 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
-      Request Official Breakdown
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
-      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">3 BHK + Study</h3>
-      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">1,991–2,037 SQ.FT</span>
-    </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
-      <div>
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
-        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,281 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
-      </div>
-      <div style="text-align:right;">
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
-        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹3.24–3.32 Cr</div>
-      </div>
-    </div>
-    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 3 BHK + Study Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
-      Request Official Breakdown
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-  <div style="background: #FFFFFF; border: 1px solid rgba(47, 59, 66, 0.12); border-radius: 4px; padding: 1.25rem; box-shadow: 0 4px 16px rgba(15, 31, 61, 0.02); display: flex; flex-direction: column;">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.15rem;">
-      <h3 style="margin:0; font-family:'Cormorant Garamond', serif; font-size:1.65rem; color:#2F3B42; font-weight:700;">4 BHK</h3>
-      <span style="font-size:0.68rem; font-family:'Josefin Sans', sans-serif; letter-spacing:0.06em; background:#FBF6F3; color:#7D442A; padding:0.25rem 0.5rem; border-radius:4px; font-weight:700;">2,271–2,513 SQ.FT</span>
-    </div>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; padding-bottom:1.15rem; border-bottom: 1px dashed rgba(47, 59, 66, 0.15);">
-      <div>
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">Base Rate</div>
-        <div style="font-size:0.95rem; font-weight:700; color:#7D442A;">₹16,279 <span style="font-size:0.75rem; color:#8C95A0; font-weight:600;">/sft</span></div>
-      </div>
-      <div style="text-align:right;">
-        <div style="font-size:0.68rem; font-weight:800; color:#59616B; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.25rem;">All-Inclusive</div>
-        <div style="font-size:1.15rem; font-weight:800; color:#2F3B42;">₹3.70–4.09 Cr</div>
-      </div>
-    </div>
-    <button type="button" class="evergreen-cost-cta-btn" onclick="openAkLeadForm('Prestige Evergreen 4 BHK Cost Sheet')" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 8px 20px rgba(125,68,42,0.3)';" onmouseout="this.style.transform='none'; this.style.boxShadow='none';" style="width:100%; margin-top:auto; padding:0.85rem; background:linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s ease;">
-      Request Official Breakdown
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-</div>
   </div>
 </section>
 
