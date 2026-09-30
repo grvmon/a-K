@@ -70,6 +70,38 @@
         }
 
 
+        
+        /* MENU DEMO CLASSES */
+        .ds-menu-light a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neutral-grey);
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+        .ds-menu-light a.active {
+            color: var(--obsidian-black);
+        }
+        .ds-menu-light a:hover, .ds-menu-light a:focus-visible {
+            color: var(--text-copper-aaa);
+        }
+
+        .ds-menu-dark a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+        .ds-menu-dark a.active {
+            color: #FFFFFF;
+        }
+        .ds-menu-dark a:hover, .ds-menu-dark a:focus-visible {
+            color: var(--highlight-peach);
+        }
+
         /* STATES & ACCESSIBILITY GLOBALS */
         :focus-visible {
             outline: 2px solid var(--text-copper-aaa);
@@ -762,7 +794,42 @@
             </div>
         </section>
 
-        <!-- TABS (TOP & SIDE) -->
+        
+            <div style="margin-top: 4rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Navigation & Menu States</h3>
+                <p class="ds-section-desc" style="margin-bottom:2rem;">Menu items must feel like editorial indexes. No bulky background hovers or pill shapes. We rely on crisp typography, generous spacing, and a subtle 400ms color transition to indicate interactivity.</p>
+                
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+                    
+                    <!-- Light Canvas Menu -->
+                    <div style="background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em;">Titanium Frost (Light) Menu</div>
+                        
+                        <nav class="ds-menu-light" style="display:flex; gap:2rem; align-items:center;" aria-label="Light Demo Navigation">
+                            <a href="#" class="active" aria-current="page">Framework</a>
+                            <a href="#">Advisory</a>
+                            <a href="#">Dossiers</a>
+                            <a href="#">About Us</a>
+                        </nav>
+                    </div>
+
+                    <!-- Dark Canvas Menu -->
+                    <div style="background:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; padding:3rem; display:flex; flex-direction:column; gap:2rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--highlight-peach); text-transform:uppercase; letter-spacing:0.1em;">Obsidian (Dark) Menu</div>
+                        
+                        <nav class="ds-menu-dark" style="display:flex; gap:2rem; align-items:center;" aria-label="Dark Demo Navigation">
+                            <a href="#" class="active" aria-current="page">Framework</a>
+                            <a href="#">Advisory</a>
+                            <a href="#">Dossiers</a>
+                            <a href="#">About Us</a>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- TABS (TOP & SIDE) -->
         <section class="ds-section">
             <h2 class="ds-section-title">Tabs (Top &amp; Side)</h2>
             <p class="ds-section-desc">Tabs are constructed using pure typography and hairline indicators. No chunky background boxes.</p>
