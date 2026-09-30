@@ -693,7 +693,141 @@
                 </div>
             </div>
         </section>
+        <!-- HERO ARCHITECTURE -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Hero Architecture Blueprint</h2>
+            <p class="ds-section-desc">The standard V2 entrance. Split layout: Editorial typography on the left, cinematically filtered architectural photography on the right.</p>
+            
+            <div style="display:flex; flex-wrap:wrap; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px; overflow:hidden; background:#FFF;">
+                <div style="flex:1; min-width:300px; padding:4rem; display:flex; flex-direction:column; justify-content:center;">
+                    <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:1rem;">Pre-Launch Advisory</div>
+                    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight:700; color:var(--deep-navy); line-height:1.1; margin:0 0 1.5rem 0;">Institutional-Grade Assets in Whitefield.</h1>
+                    <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--muted-slate); line-height:1.7; margin:0 0 2rem 0; max-width:400px;">Access proprietary risk-assessment frameworks before allocating capital to under-construction developments.</p>
+                    <div><button class="ds-card-btn">Get Buyer Analysis</button></div>
+                </div>
+                <div style="flex:1; min-width:300px; background:var(--deep-navy); position:relative;">
+                    <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
+                </div>
+            </div>
+        </section>
 
+        <!-- CUSTOM CHECKBOXES & RADIOS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Forms: Checkboxes &amp; Radios</h2>
+            <p class="ds-section-desc">Native browser checkboxes look cheap. We use custom SVGs and pure CSS to ensure strict 4px geometry on checkboxes and sharp circular selections for radios.</p>
+            
+            <div style="display:flex; gap:4rem; padding: 2rem; background:#FFF; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px;">
+                <!-- Checkbox Custom -->
+                <style>
+                    .ds-checkbox-label { display: flex; align-items: center; cursor: pointer; font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: var(--deep-navy); margin-bottom: 1rem; }
+                    .ds-checkbox-input { display: none; }
+                    .ds-checkbox-box { width: 18px; height: 18px; border: 0.5px solid rgba(51, 65, 76, 0.3); border-radius: 4px; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+                    .ds-checkbox-input:checked + .ds-checkbox-box { background: var(--text-copper-aaa); border-color: var(--text-copper-aaa); }
+                    .ds-checkbox-input:checked + .ds-checkbox-box::after { content: ''; width: 4px; height: 8px; border: solid #FFF; border-width: 0 2px 2px 0; transform: rotate(45deg); margin-bottom: 2px; }
+                    
+                    .ds-radio-box { width: 18px; height: 18px; border: 0.5px solid rgba(51, 65, 76, 0.3); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+                    .ds-radio-input:checked + .ds-radio-box { border-color: var(--text-copper-aaa); border-width: 5px; }
+                </style>
+                
+                <div>
+                    <h4 style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Diligence Selection</h4>
+                    <label class="ds-checkbox-label">
+                        <input type="checkbox" class="ds-checkbox-input" checked>
+                        <div class="ds-checkbox-box"></div>
+                        Request Legal Dossier
+                    </label>
+                    <label class="ds-checkbox-label">
+                        <input type="checkbox" class="ds-checkbox-input">
+                        <div class="ds-checkbox-box"></div>
+                        Request Pricing Analytics
+                    </label>
+                </div>
+
+                <div>
+                    <h4 style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--muted-slate); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Timeline Horizon</h4>
+                    <label class="ds-checkbox-label">
+                        <input type="radio" name="horizon" class="ds-checkbox-input ds-radio-input" checked>
+                        <div class="ds-radio-box"></div>
+                        Ready to Move
+                    </label>
+                    <label class="ds-checkbox-label">
+                        <input type="radio" name="horizon" class="ds-checkbox-input ds-radio-input">
+                        <div class="ds-radio-box"></div>
+                        Under Construction (2-3 Yrs)
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALERTS, TOASTS & TOOLTIPS -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Alerts &amp; Tooltips</h2>
+            <p class="ds-section-desc">Success messages and tooltips must avoid standard green/red blocks. We use architectural boxes with sharp copper anchor lines.</p>
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
+                <!-- Alert Box -->
+                <div>
+                    <div style="background:#FFF; border:0.5px solid rgba(51, 65, 76, 0.15); border-left:3px solid var(--text-copper-aaa); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start;">
+                        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.2rem; color:var(--text-copper-aaa); line-height:1;">i</div>
+                        <div>
+                            <h4 style="font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700; color:var(--deep-navy); margin:0 0 0.25rem 0;">Report Dispatched</h4>
+                            <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--muted-slate); margin:0;">The 69-point buyer analysis has been securely emailed to your registered address.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltip Mockup -->
+                <div style="display:flex; align-items:center; justify-content:center;">
+                    <div style="position:relative; display:inline-block; font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700; color:var(--deep-navy); cursor:help; border-bottom:1px dotted var(--text-copper-aaa);">
+                        Hover for Definition
+                        <div style="position:absolute; bottom:150%; left:50%; transform:translateX(-50%); background:rgba(20,29,36,0.95); color:#FFF; font-size:0.75rem; font-weight:400; padding:0.75rem 1rem; border-radius:4px; width:200px; text-align:center; box-shadow:0 10px 30px rgba(20,29,36,0.15); pointer-events:none;">
+                            A highly specific definition of a complex real estate term.
+                            <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); border-width:6px; border-style:solid; border-color:rgba(20,29,36,0.95) transparent transparent transparent;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGINATION -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Pagination</h2>
+            <p class="ds-section-desc">Minimalist progression logic for blogs and property listing pages.</p>
+            
+            <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Manrope',sans-serif; font-size:0.95rem;">
+                <button style="background:transparent; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted-slate); transition:all 0.2s ease;">&larr;</button>
+                <div style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--deep-navy);">1</div>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted-slate); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--muted-slate)'">2</button>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted-slate); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--muted-slate)'">3</button>
+                <span style="color:var(--muted-slate);">...</span>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted-slate); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--muted-slate)'">8</button>
+                <button style="background:transparent; border:0.5px solid rgba(51, 65, 76, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted-slate); transition:all 0.2s ease;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'; this.style.color='var(--text-copper-aaa)';" onmouseout="this.style.borderColor='rgba(51, 65, 76, 0.15)'; this.style.color='var(--muted-slate)';">&rarr;</button>
+            </div>
+        </section>
+
+        <!-- GALLERY & MASONRY -->
+        <section class="ds-section" style="border-bottom:none;">
+            <h2 class="ds-section-title">Gallery &amp; Masonry Grids</h2>
+            <p class="ds-section-desc">Galleries use strict 4px corners and uniform grid gaps. No complex overlapping or rotating images. Pure architectural discipline.</p>
+            
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:150px 150px; gap:1rem;">
+                <div style="grid-row:1 / 3; border-radius:4px; overflow:hidden; border:0.5px solid rgba(51, 65, 76, 0.15);">
+                    <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(51, 65, 76, 0.15);">
+                    <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(51, 65, 76, 0.15);">
+                    <img src="assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="grid-column:2 / 4; border-radius:4px; overflow:hidden; border:0.5px solid rgba(51, 65, 76, 0.15); position:relative;">
+                    <img src="assets/evergreen/prestige_evergreen_hero_skyline_night_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
+                    <div style="position:absolute; inset:0; background:rgba(20,29,36,0.85); display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                        <span style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; border:0.5px solid #FFF; padding:0.5rem 1rem; border-radius:4px;">View All 24 Media</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 </body>
