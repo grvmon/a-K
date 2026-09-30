@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acre&Key Master Design System (The Bible)</title>
+    <title>Acre&Key Master Design System</title>
     <!-- We load the main CSS to ensure our tokens are active -->
     <link rel="stylesheet" href="../website.min.css?v=1790787186000">
     
     <style>
         /* === SYSTEM OVERRIDES FOR THE BIBLE === */
+
+        /* STATES & ACCESSIBILITY GLOBALS */
+        :focus-visible {
+            outline: 2px solid var(--text-copper-aaa);
+            outline-offset: 2px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--text-copper-aaa) !important;
+        }
+        .ds-shimmer {
+            animation: shimmer 2s infinite linear;
+            background: linear-gradient(to right, rgba(85,85,90,0.05) 4%, rgba(85,85,90,0.12) 25%, rgba(85,85,90,0.05) 36%);
+            background-size: 800px 100%;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        /* INLINE LINK FALLBACK */
+        .ds-inline-link {
+            color: var(--text-copper-aaa);
+            text-decoration: underline;
+            text-decoration-color: rgba(128,69,38,0.3);
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            transition: all 0.4s ease;
+        }
+        .ds-inline-link:hover, .ds-inline-link:focus-visible {
+            text-decoration-color: rgba(128,69,38,1);
+        }
+
         body {
             background-color: var(--titanium-frost);
             color: var(--obsidian-black);
@@ -131,7 +167,7 @@
         }
 
         .ds-banned {
-            color: #8A1F1F;
+            color: var(--neutral-grey);
             text-decoration: line-through;
             font-weight: 600;
         }
@@ -246,8 +282,8 @@
 <body>
 
     <header class="ds-bible-header">
-        <h1>The Master Design System</h1>
-        <p>HNI, Clean, Minimalist Luxury. The definitive architecture bible for Acre&amp;Key.</p>
+        <div class="h1-demo" role="heading" aria-level="1">The Master Design System</div>
+        <p>HNI, Clean, Minimalist Luxury. The Master Design System for Acre&amp;Key.</p>
     </header>
 
     <div class="ds-container">
@@ -288,7 +324,7 @@
         <!-- SECTION 2: COLORS -->
         <section class="ds-section">
             <h2 class="ds-section-title">2. WCAG AAA Color Palette</h2>
-            <p class="ds-section-desc">A strict 5-variable system. Every hex code outside of these is purged. Contrast ratios are strictly mathematically verified.</p>
+            <p class="ds-section-desc">A strict 5-variable system. . Contrast ratios are tracked.</p>
             
             <div class="ds-swatch-grid">
                 <div class="ds-swatch">
@@ -331,32 +367,6 @@
 
         <!-- SECTION 3: TYPOGRAPHY -->
         <section class="ds-section">
-            <h2 class="ds-section-title">3. Fluid Typography Architecture</h2>
-            <p class="ds-section-desc">Cormorant Garamond exclusively for editorial authority. Manrope exclusively for functional data and body text. No media query snapping; mathematically fluid scaling.</p>
-            
-            <div class="ds-type-row">
-                <div class="ds-type-meta">H1 Hero Title — clamp(1.75rem, 1.5rem + 1.25vw, 2.1875rem)</div>
-                <h1 style="font-family:'Marcellus', serif; font-size:clamp(1.75rem, 1.5rem + 1.25vw, 2.1875rem); font-weight: 400; color:var(--obsidian-black); margin:0;">Institutional-Grade Assets.</h1>
-            </div>
-            
-            <div class="ds-type-row">
-                <div class="ds-type-meta">H2 Section Title — clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem)</div>
-                <h2 style="font-family:'Marcellus', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:var(--obsidian-black); margin:0;">Objective Evaluation Framework</h2>
-            </div>
-            
-            <div class="ds-type-row">
-                <div class="ds-type-meta">H3 / H4 Modal Title — 1.45rem Static</div>
-                <h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:var(--obsidian-black); margin:0;">75m Lake Buffer Compliance</h3>
-            </div>
-            
-            <div class="ds-type-row" style="border-bottom:none;">
-                <div class="ds-type-meta">Body / Data — 1rem (16px) Static</div>
-                <p style="font-family:'Manrope',sans-serif; font-size:1rem; line-height: 1.7; color:var(--neutral-grey); margin:0; max-width:800px;">The township infrastructure is evaluated across 69 distinct parameters, yielding a clear risk profile before any capital is committed. We utilize raw data to construct our advisory reports.</p>
-            </div>
-        </section>
-
-        <!-- SECTION 4: GEOMETRY & MOTION -->
-        <section class="ds-section">
             <h2 class="ds-section-title">4. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
             
@@ -396,10 +406,10 @@
             
             <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(85, 85, 90, 0.15);">
                 <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing: 0.12em;">Full Legal Name</label>
-                <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; outline:none; transition:all 0.4s ease; margin-bottom: 1.5rem;" onfocus="this.style.borderColor='var(--text-copper-aaa)'" onblur="this.style.borderColor='rgba(85, 85, 90, 0.2)'">
+                <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px;  transition:all 0.4s ease; margin-bottom: 1.5rem;"  >
                 
                 <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing: 0.12em;">Advisory Requirement</label>
-                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px; outline:none; appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23141D24" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
+                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:4px;  appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%230A0A0B" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
                     <option>Portfolio Restructuring</option>
                     <option>Asset Acquisition</option>
                 </select>
@@ -414,7 +424,7 @@
             <div style="display:flex; gap:1rem; flex-wrap:wrap;">
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:rgba(10, 10, 11, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(10, 10, 11, 0.1); letter-spacing: 0.12em; text-transform:uppercase;">Under Construction</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); background:rgba(128, 69, 38, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(128, 69, 38, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">RERA Verified</span>
-                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#0A0A0B; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: 4.11/5</span>
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#0A0A0B; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: [X.XX]/5</span>
             </div>
         </section>
 
@@ -439,14 +449,14 @@
         <!-- SECTION 9: TEXT ON IMAGE -->
         <section class="ds-section">
             <h2 class="ds-section-title">9. Text-on-Image Legibility</h2>
-            <p class="ds-section-desc">Placing raw text directly over a photograph severely compromises legibility. We enforce a strict "Anchored Gradient" rule. Whenever text sits on an image, a deep navy gradient (fading from 95% opacity to 0% at the 60% mark) must anchor the text from the bottom or top, guaranteeing a 7.0:1 AAA contrast ratio.</p>
+            <p class="ds-section-desc">Placing raw text directly over a photograph severely compromises legibility. We enforce a strict "Anchored Gradient" rule. Whenever text sits on an image, a deep navy gradient (fading from 95% opacity to 0% at the 60% mark) must anchor the text from the bottom or top, targeting a 7.0:1 AAA contrast ratio.</p>
             
             <div style="position:relative; border-radius:4px; overflow:hidden; height:250px; border:0.5px solid rgba(85, 85, 90, 0.15); max-width: 600px;">
                 <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover; display:block;">
                 <!-- The HNI Gradient Overlay -->
                 <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:2rem;">
                     <h3 style="color:#FFF; font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; margin:0 0 0.25rem 0;">Protected Legibility</h3>
-                    <p style="color:rgba(248, 246, 241, 0.88); font-family:'Manrope', sans-serif; font-size:0.9rem; margin:0;">Text is anchored perfectly by the navy gradient, ignoring the chaotic image behind it.</p>
+                    <p style="color:rgba(250, 250, 250, 0.88); font-family:'Manrope', sans-serif; font-size:0.9rem; margin:0;">Text is anchored  by the navy gradient, ignoring the chaotic image behind it.</p>
                 </div>
             </div>
         </section>
@@ -481,13 +491,13 @@
             <p class="ds-section-desc">Default web links (blue text, thick underlines) destroy the luxury reading experience. All inline references in body text must use our AAA copper with a heavily offset, semi-transparent underline that solidifies entirely upon a cinematic 400ms hover.</p>
             
             <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--neutral-grey); line-height: 1.7; max-width:800px;">
-                Before allocating capital to this asset, we strongly recommend reviewing our comprehensive <a href="#" style="color:var(--text-copper-aaa); text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; text-decoration-thickness: 1px; transition:all 0.4s ease;" onmouseover="this.style.textDecorationColor='var(--text-copper-aaa)'" onmouseout="this.style.textDecorationColor='rgba(128,69,38,0.3)'">69-point diligence report</a>. The report contains proprietary data regarding the builder's delivery history and <a href="#" style="color:var(--text-copper-aaa); text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; text-decoration-thickness: 1px; transition:all 0.4s ease;" onmouseover="this.style.textDecorationColor='var(--text-copper-aaa)'" onmouseout="this.style.textDecorationColor='rgba(128,69,38,0.3)'">legal land titles</a>.
+                Before allocating capital to this asset, we strongly recommend reviewing our comprehensive <a href="#" style="color:var(--text-copper-aaa); text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; text-decoration-thickness: 1px; transition:all 0.4s ease;"  >69-point diligence report</a>. The report contains proprietary data regarding the builder's delivery history and <a href="#" style="color:var(--text-copper-aaa); text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; text-decoration-thickness: 1px; transition:all 0.4s ease;"  >legal land titles</a>.
             </p>
         </section>
 
         <!-- PART II: THE COMPONENT LIBRARY -->
         <div style="margin: 8rem 0 4rem; padding-top: 4rem; border-top: 2px solid var(--obsidian-black);">
-            <h1 style="font-family:'Marcellus', serif; font-size:3rem; font-weight: 400; color:var(--obsidian-black); margin:0 0 1rem 0;">Part II: The Component Library</h1>
+            <div class="h1-demo" role="heading" aria-level="1" style="font-family:'Marcellus', serif; font-size:3rem; font-weight: 400; color:var(--obsidian-black); margin:0 0 1rem 0;">Part II: The Component Library</div>
             <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--neutral-grey); max-width:800px;">Every standard web component strictly translated into the HNI Architectural standard. Copy and paste these structures directly into production.</p>
         </div>
 
@@ -519,7 +529,7 @@
             <div style="display: flex; gap: 2rem; align-items: center;">
                 <button style="background:var(--cta-gradient); color:#FFF; border:none; border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: opacity 0.4s ease;">Primary Action</button>
                 
-                <button style="background:transparent; color:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.3); border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: all 0.4s ease;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'; this.style.color='var(--text-copper-aaa)';" onmouseout="this.style.borderColor='rgba(85, 85, 90, 0.3)'; this.style.color='var(--obsidian-black)';">Secondary Outline</button>
+                <button style="background:transparent; color:var(--obsidian-black); border:0.5px solid rgba(85, 85, 90, 0.3); border-radius:4px; padding:0.85rem 1.75rem; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.05em; transition: all 0.4s ease;"  >Secondary Outline</button>
 
                 <a href="#" style="font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.05em; text-decoration:underline; text-decoration-color:rgba(128,69,38,0.3); text-underline-offset:6px; transition:all 0.4s ease;">Ghost Link UI</a>
             </div>
@@ -585,35 +595,6 @@
         </section>
 
         <!-- TEAM & TESTIMONIALS -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">Team &amp; Testimonials</h2>
-            <p class="ds-section-desc">Testimonials use large, authoritative serif typography. Team cards are highly structured with sharp geometries.</p>
-            
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
-                <!-- Testimonial -->
-                <div style="border-left:2px solid var(--text-copper-aaa); padding-left:2rem;">
-                    <p style="font-family:'Marcellus', serif; font-size:1.75rem; font-style:italic; color:var(--obsidian-black); line-height:1.4; margin:0 0 1.5rem 0;">"The advisory provided by Acre&amp;Key bypassed the standard developer marketing and provided raw, actionable data on asset appreciation."</p>
-                    <div style="font-family:'Manrope',sans-serif;">
-                        <div style="font-weight:700; font-size:0.95rem; color:var(--obsidian-black); text-transform:uppercase; letter-spacing:0.05em;">Rahul V.</div>
-                        <div style="font-size:0.85rem; color:var(--neutral-grey);">Family Office Director</div>
-                    </div>
-                </div>
-
-                <!-- Team Card -->
-                <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden; display:flex;">
-                    <div style="width:140px; background:rgba(85, 85, 90, 0.05);">
-                        <img src="assets/Nitin_Kocchar.webp" style="width:100%; height:100%; object-fit:cover; display:block; filter:saturate(0.85) contrast(1.05);">
-                    </div>
-                    <div style="padding:1.5rem; display:flex; flex-direction:column; justify-content:center;">
-                        <h4 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:var(--obsidian-black); margin:0 0 0.25rem 0;">Nitin Kochhar</h4>
-                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Managing Partner</div>
-                        <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0; line-height:1.6;">Ex-McKinsey. Specializes in institutional capital allocation and institutional-grade asset evaluation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROGRESS & COUNTERS -->
         <section class="ds-section">
             <h2 class="ds-section-title">Progress Bars &amp; Counters</h2>
             <p class="ds-section-desc">Avoid thick, colorful progress bars. Use ultra-thin (2px) tracks. Counters must pair massive serif numerals with tiny, tracked-out sans-serif labels.</p>
@@ -702,7 +683,7 @@
             <div style="display:flex; flex-wrap:wrap; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden; background:#FFF;">
                 <div style="flex:1; min-width:300px; padding:4rem; display:flex; flex-direction:column; justify-content:center;">
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:1rem;">Pre-Launch Advisory</div>
-                    <h1 style="font-family:'Marcellus', serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight: 400; color:var(--obsidian-black); line-height:1.1; margin:0 0 1.5rem 0;">Institutional-Grade Assets in Whitefield.</h1>
+                    <div class="h1-demo" role="heading" aria-level="1" style="font-family:'Marcellus', serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight: 400; color:var(--obsidian-black); line-height:1.1; margin:0 0 1.5rem 0;">Institutional-Grade Assets in Whitefield.</div>
                     <p style="font-family:'Manrope',sans-serif; font-size:1rem; color:var(--neutral-grey); line-height:1.7; margin:0 0 2rem 0; max-width:400px;">Access proprietary risk-assessment frameworks before allocating capital to under-construction developments.</p>
                     <div><button class="ds-card-btn">Get Buyer Analysis</button></div>
                 </div>
@@ -798,11 +779,11 @@
             <div style="display:flex; align-items:center; gap:0.5rem; font-family:'Manrope',sans-serif; font-size:0.95rem;">
                 <button style="background:transparent; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;">&larr;</button>
                 <div style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--obsidian-black);">1</div>
-                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--neutral-grey)'">2</button>
-                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--neutral-grey)'">3</button>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >2</button>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >3</button>
                 <span style="color:var(--neutral-grey);">...</span>
-                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;" onmouseover="this.style.color='var(--text-copper-aaa)'" onmouseout="this.style.color='var(--neutral-grey)'">8</button>
-                <button style="background:transparent; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'; this.style.color='var(--text-copper-aaa)';" onmouseout="this.style.borderColor='rgba(85, 85, 90, 0.15)'; this.style.color='var(--neutral-grey)';">&rarr;</button>
+                <button style="background:transparent; border:none; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >8</button>
+                <button style="background:transparent; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--neutral-grey); transition:all 0.2s ease;"  >&rarr;</button>
             </div>
         </section>
 
@@ -834,7 +815,7 @@
             <h2 class="ds-section-title">Global Header &amp; Navigation</h2>
             <p class="ds-section-desc">The primary structural navigation. It must stick to the top with a 16px blur backdrop and a single 0.5px hairline separating it from the content.</p>
             
-            <div style="width:100%; background:rgba(248, 246, 241, 0.9); backdrop-filter:blur(16px); border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="width:100%; background:rgba(250, 250, 250, 0.9); backdrop-filter:blur(16px); border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;">
                 <!-- Logo -->
                 <div style="font-family:'Marcellus', serif; font-size:1.5rem; font-weight: 400; letter-spacing:0.05em; color:var(--obsidian-black);">acre<span style="color:var(--text-copper-aaa);">&amp;</span>key</div>
                 
@@ -859,7 +840,7 @@
                 <img src="assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                 
                 <!-- Video Overlay -->
-                <div style="position:absolute; inset:0; background:rgba(10, 10, 11, 0.4); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.4s ease;" onmouseover="this.style.background='rgba(10, 10, 11, 0.2)'" onmouseout="this.style.background='rgba(10, 10, 11, 0.4)'">
+                <div style="position:absolute; inset:0; background:rgba(10, 10, 11, 0.4); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background 0.4s ease;"  >
                     <!-- Minimal Play Button -->
                     <div style="width:60px; height:60px; border:0.5px solid #FFF; border-radius:50%; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
                         <div style="width:0; height:0; border-style:solid; border-width:8px 0 8px 14px; border-color:transparent transparent transparent #FFF; margin-left:4px;"></div>
@@ -928,7 +909,7 @@
         <!-- EDITORIAL PORTRAIT CARDS -->
         <section class="ds-section">
             <h2 class="ds-section-title">Editorial Portrait Cards (Personas)</h2>
-            <p class="ds-section-desc">Used for buyer personas or deep-dive features. This component perfectly executes the Anchored Gradient rule on a portrait aspect ratio, pulling the user into a cinematic story.</p>
+            <p class="ds-section-desc">Used for buyer personas or deep-dive features. This component executes the Anchored Gradient rule on a portrait aspect ratio, pulling the user into a cinematic story.</p>
             
             <div style="display:flex; justify-content:center;">
                 <!-- Persona Card Component -->
@@ -1030,7 +1011,7 @@
         <!-- EDITORIAL PROCESS CARDS (METHODOLOGY) -->
         <section class="ds-section">
             <h2 class="ds-section-title">Editorial Process Cards (Methodology)</h2>
-            <p class="ds-section-desc">Used for step-by-step methodologies. This card perfectly blends Serif numerals with Sans-Serif data blocks, utilizing internal Titanium Frost containers and strict 4px tags (banning standard pill shapes).</p>
+            <p class="ds-section-desc">Used for step-by-step methodologies. This card Blends Serif numerals with Sans-Serif data blocks, utilizing internal Titanium Frost containers and strict 4px tags (banning standard pill shapes).</p>
             
             <div style="display:flex; justify-content:center;">
                 <!-- Process Card Component -->
@@ -1070,7 +1051,7 @@
                             <div>
                                 <h4 style="font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:700; color:var(--obsidian-black); margin:0 0 0.25rem 0;">Micro-Market Universe</h4>
                                 <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0; line-height:1.5;">
-                                    Filtering out 95% noise across Whitefield, North Bangalore &amp; Central
+                                    Filtering out [X]% noise across Whitefield, North Bangalore &amp; Central
                                 </p>
                             </div>
                         </div>
@@ -1091,7 +1072,7 @@
         <!-- EXECUTIVE TEAM PROFILES -->
         <section class="ds-section">
             <h2 class="ds-section-title">Executive Team Profiles</h2>
-            <p class="ds-section-desc">Used for horizontal leadership grids. <strong>Crucial Correction:</strong> We stripped out the generic, fuzzy drop-shadows seen in standard templates and replaced them with our structural 0.5px hairline. All headshots must be passed through the cinematic desaturation filter.</p>
+            <p class="ds-section-desc">Used for horizontal leadership grids. <strong>Crucial Correction:</strong> Shadows are minimized to retain a flat, editorial aesthetic. and replaced them with our structural 0.5px hairline. All headshots must be passed through the cinematic desaturation filter.</p>
             
             <div style="background:var(--titanium-frost); padding:3rem; border-radius:4px; border:0.5px solid rgba(85, 85, 90, 0.15);">
                 <h3 style="font-family:'Marcellus', serif; font-size:2.25rem; font-weight:400; color:var(--obsidian-black); margin:0 0 2rem 0;">Meet The Team</h3>
@@ -1108,7 +1089,7 @@
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Nitin Kochhar</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'" onmouseout="this.style.borderColor='rgba(85, 85, 90, 0.2)'">
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1127,7 +1108,7 @@
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Gaurav Mongia</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'" onmouseout="this.style.borderColor='rgba(85, 85, 90, 0.2)'">
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1146,7 +1127,7 @@
                         <div style="flex:1;">
                             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
                                 <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; font-weight: 400; color:var(--obsidian-black); margin:0;">Arvind Patidar</h4>
-                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--text-copper-aaa)'" onmouseout="this.style.borderColor='rgba(85, 85, 90, 0.2)'">
+                                <a href="#" style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border:0.5px solid rgba(85, 85, 90, 0.2); border-radius:50%; color:var(--neutral-grey); text-decoration:none; transition:border-color 0.2s;"  >
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
                                 </a>
                             </div>
@@ -1193,10 +1174,10 @@
 
                     <!-- Navigation Arrows (Strict 4px Geometry) -->
                     <div style="display:flex; gap:0.5rem;">
-                        <button style="width:40px; height:40px; background:rgba(10, 10, 11,0.6); border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; display:flex; align-items:center; justify-content:center; color:#FFF; cursor:pointer; backdrop-filter:blur(8px); transition:background 0.3s;" onmouseover="this.style.background='rgba(10, 10, 11,0.9)'" onmouseout="this.style.background='rgba(10, 10, 11,0.6)'">
+                        <button style="width:40px; height:40px; background:rgba(10, 10, 11,0.6); border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; display:flex; align-items:center; justify-content:center; color:#FFF; cursor:pointer; backdrop-filter:blur(8px); transition:background 0.3s;"  >
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M15 18l-6-6 6-6"/></svg>
                         </button>
-                        <button style="width:40px; height:40px; background:rgba(10, 10, 11,0.6); border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; display:flex; align-items:center; justify-content:center; color:#FFF; cursor:pointer; backdrop-filter:blur(8px); transition:background 0.3s;" onmouseover="this.style.background='rgba(10, 10, 11,0.9)'" onmouseout="this.style.background='rgba(10, 10, 11,0.6)'">
+                        <button style="width:40px; height:40px; background:rgba(10, 10, 11,0.6); border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; display:flex; align-items:center; justify-content:center; color:#FFF; cursor:pointer; backdrop-filter:blur(8px); transition:background 0.3s;"  >
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M9 18l6-6-6-6"/></svg>
                         </button>
                     </div>
@@ -1210,10 +1191,10 @@
                         <div style="width:70px; height:45px; border-radius:4px; border:1.5px solid #FFF; overflow:hidden; cursor:pointer;">
                             <img src="assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                         </div>
-                        <div style="width:70px; height:45px; border-radius:4px; border:1px solid transparent; overflow:hidden; opacity:0.6; cursor:pointer; transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                        <div style="width:70px; height:45px; border-radius:4px; border:1px solid transparent; overflow:hidden; opacity:0.6; cursor:pointer; transition:opacity 0.3s;"  >
                             <img src="assets/evergreen/prestige_evergreen_hero_skyline_night_aerial.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                         </div>
-                        <div style="width:70px; height:45px; border-radius:4px; border:1px solid transparent; overflow:hidden; opacity:0.6; cursor:pointer; transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                        <div style="width:70px; height:45px; border-radius:4px; border:1px solid transparent; overflow:hidden; opacity:0.6; cursor:pointer; transition:opacity 0.3s;"  >
                             <img src="assets/evergreen/prestige_evergreen_hero_pool_evening.webp" class="img-filtered" style="width:100%; height:100%; object-fit:cover;">
                         </div>
                     </div>
@@ -1276,9 +1257,9 @@
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Display Title (H1)</div>
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Cormorant Garamond • 400/500 • LH: 1.1 • LS: -0.02em</div>
                     </div>
-                    <h1 style="font-family:'Marcellus', serif; font-size:clamp(2.5rem, 2rem + 3vw, 4.5rem); font-weight:400; color:var(--obsidian-black); line-height:1.1; margin:0; letter-spacing:-0.02em;">
+                    <div class="h1-demo" role="heading" aria-level="1" style="font-family:'Marcellus', serif; font-size:clamp(2.5rem, 2rem + 3vw, 4.5rem); font-weight:400; color:var(--obsidian-black); line-height:1.1; margin:0; letter-spacing:-0.02em;">
                         The Architecture of Wealth
-                    </h1>
+                    </div>
                     <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:1rem 0 0 0;"><strong>Usage:</strong> Strictly reserved for Hero sections. Must use <code>clamp()</code> for fluid responsive scaling without breakpoints.</p>
                 </div>
 
@@ -1313,7 +1294,7 @@
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Manrope • 400/500 • LH: 1.6 • LS: 0</div>
                     </div>
                     <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--neutral-grey); line-height:1.6; margin:0; max-width:700px;">
-                        We filter out 95% of the noise in the market to bring you absolute clarity. Our independent advisory evaluates the opportunity, uncovers the risks, and negotiates entirely on your behalf.
+                        We filter out [X]% of the noise in the market to bring you absolute clarity. Our independent advisory evaluates the opportunity, uncovers the risks, and negotiates entirely on your behalf.
                     </p>
                     <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:1rem 0 0 0;"><strong>Usage:</strong> All paragraph text. Use 1.1rem for lead paragraphs (like above), 0.95rem for standard card reading.</p>
                 </div>
@@ -1328,7 +1309,7 @@
                         Deliverable: Buyer Mandate Brief
                     </div>
                     <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:600; color:var(--neutral-grey); margin-top:0.25rem;">
-                        Updated 2 hours ago
+                        Updated [XX] hours ago
                     </div>
                     <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:1rem 0 0 0;"><strong>Usage:</strong> UI elements, footnotes, card tags, timestamps, and utility links.</p>
                 </div>

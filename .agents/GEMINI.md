@@ -27,9 +27,17 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Cinematic Desaturation**: All builder-provided 3D renders must be filtered via CSS (`filter: saturate(0.85) contrast(1.05);`) to ensure a moody, cohesive, high-end editorial grade across the platform.
 
 ## 6. Lexicon & Tone of Voice
-- **BANNED**: "Buy Now", "Submit" -> **USE**: "Request Advisory Call", "Get Buyer Analysis"
-- **BANNED**: "Luxury", "Premium" -> **USE**: "Institutional-Grade", "A-Grade"
-- **BANNED**: "Features", "Amenities" -> **USE**: "Asset Fundamentals", "Township Infrastructure"
+- **Scoped Lexicon Ban:** Standard industry terms like "Amenities", "Features", "Luxury", and "Premium" are **BANNED** in hero headlines, primary CTAs, and large display text (to maintain editorial authority). However, they are **ALLOWED** in metadata, alt-tags, and keyword-led H2s (e.g., "Township Amenities") to ensure SEO is not compromised.
+- **Tone Do/Don't:** 
+  - *Don't (Salesy):* "Buy now to get the best luxury features!"
+  - *Do (Clinical/Advisory):* "Analyze the asset fundamentals and micro-market infrastructure."
+- **Expanded Lexicon Map:**
+  - "Buy Now" -> "Request Advisory Call"
+  - "Submit" -> "Get Buyer Analysis"
+  - "Luxury/Premium" -> "Institutional-Grade", "A-Grade" (in display text)
+  - "Features/Amenities" -> "Asset Fundamentals", "Township Infrastructure" (in display text)
+  - "Price List" -> "Valuation Matrix", "Cost Sheet"
+  - "Brochure" -> "Asset Dossier", "Project Brief"
 
 ## 7. Global Header & Footer Standard Rule
 - **Header & Footer Consistency**: For all new and existing pages, ALWAYS use the exact standard site header and site footer matching the main architecture. Do NOT create custom or simplified variants.
