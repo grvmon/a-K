@@ -560,7 +560,38 @@
                     <li><strong>Blur Scale:</strong> Nav/Glassmorphism uses <code>16px</code> blur. Modals use <code>8px</code> blur.</li>
                     <li><strong>Z-Index:</strong> Modals (1000) > Header (900) > Dropdowns (800) > Tooltips (700) > Base Content (1)</li>
                 </ul>
-            </div></section>
+            </div>
+            <div style="margin-top:4rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Section Theming (Alternating Backgrounds)</h3>
+                <p class="ds-section-desc" style="margin-bottom:2rem;">To create visual pacing on long-scroll pages without relying on harsh drop shadows, we use <strong>Banded Sections</strong>. The page background must strictly alternate between these three environments to delineate different content blocks.</p>
+                
+                <div style="border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden;">
+                    
+                    <!-- Band 1: Titanium Frost -->
+                    <div style="background:var(--titanium-frost); padding:3rem; border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Base Canvas</div>
+                        <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; margin:0 0 0.5rem 0; color:var(--obsidian-black);">Titanium Frost</h4>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0;">The default background for the majority of the page. Creates a soft, premium foundation.</p>
+                    </div>
+
+                    <!-- Band 2: Pure White -->
+                    <div style="background:#FFFFFF; padding:3rem; border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Alternating Canvas</div>
+                        <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; margin:0 0 0.5rem 0; color:var(--obsidian-black);">Pure White</h4>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); margin:0;">Used for the very next section to create subtle, shadow-free separation from the Frost canvas above it.</p>
+                    </div>
+
+                    <!-- Band 3: Obsidian Breakout -->
+                    <div style="background:var(--obsidian-black); padding:3rem;">
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--highlight-peach); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">High-Impact Breakout</div>
+                        <h4 style="font-family:'Marcellus', serif; font-size:1.25rem; margin:0 0 0.5rem 0; color:#FFFFFF;">Obsidian Black</h4>
+                        <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.7); margin:0;">Used sparingly to break the flow. Reserved for footers, lead-generation forms, and massive value propositions.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
 <section class="ds-section" id="motion">
             <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
