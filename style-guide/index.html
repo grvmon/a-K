@@ -950,6 +950,41 @@
             </div>
         </section>
 
+        
+            <div style="margin-top: 4rem;">
+                <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Concierge Advisory Form (Phone + OTP)</h3>
+                <p class="ds-section-desc" style="margin-bottom:2rem;">Replaces standard contact forms with a secure, private-banking style authentication flow.</p>
+                
+                <div style="border: 0.5px solid rgba(80, 80, 85, 0.15); border-radius: 4px; background: #FFF; padding: 3rem; max-width: 480px; display: flex; flex-direction: column; gap: 2.5rem;">
+                    
+                    <!-- Step 1: Phone -->
+                    <div>
+                        <label style="display: block; font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--obsidian-black); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Step 1: Secure Entry</label>
+                        <div style="display: flex; border: 0.5px solid rgba(80, 80, 85, 0.4); border-radius: 4px; overflow: hidden; transition: border-color 0.4s;">
+                            <div style="background: var(--titanium-frost); padding: 1rem; border-right: 0.5px solid rgba(80, 80, 85, 0.4); font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: var(--obsidian-black); font-weight: 600;">+91</div>
+                            <input type="tel" placeholder="Enter mobile number" style="flex: 1; border: none; padding: 1rem; font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: var(--obsidian-black); outline: none;">
+                        </div>
+                    </div>
+
+                    <!-- Step 2: OTP -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                            <label style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--obsidian-black); text-transform: uppercase; letter-spacing: 0.1em;">Step 2: Verification</label>
+                            <span style="font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--text-copper-aaa); cursor: pointer;">Resend Code</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; justify-content: space-between;">
+                            <input type="text" maxlength="1" value="4" style="width: 4rem; height: 4rem; text-align: center; font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--obsidian-black); border: 0.5px solid var(--text-copper-aaa); border-radius: 4px; outline: none; background: #FFF;">
+                            <input type="text" maxlength="1" value="0" style="width: 4rem; height: 4rem; text-align: center; font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--obsidian-black); border: 0.5px solid var(--text-copper-aaa); border-radius: 4px; outline: none; background: #FFF;">
+                            <input type="text" maxlength="1" placeholder="-" style="width: 4rem; height: 4rem; text-align: center; font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--obsidian-black); border: 0.5px solid rgba(80, 80, 85, 0.4); border-radius: 4px; outline: none; background: #FFF;">
+                            <input type="text" maxlength="1" placeholder="-" style="width: 4rem; height: 4rem; text-align: center; font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--obsidian-black); border: 0.5px solid rgba(80, 80, 85, 0.4); border-radius: 4px; outline: none; background: #FFF;">
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <button style="width: 100%; padding: 1.25rem; background: var(--cta-gradient); color: #FFF; border: none; border-radius: 4px; font-family: 'Manrope', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; transition: opacity 0.4s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Request Advisory Call</button>
+                </div>
+            </div>
+
         <!-- BUTTONS & LINKS -->
         <section class="ds-section">
             <h2 class="ds-section-title">Button Hierarchy</h2>
