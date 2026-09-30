@@ -440,32 +440,32 @@
         btnLabel = customOptions.btnText || "";
         if (formNameInput) formNameInput.value = formName || "custom_enquiry";
       } else if (ctx === 'analysis' || ctx === 'buyer-analysis' || ctx === 'diligence' || fn.indexOf('buyer_analysis') !== -1 || fn.indexOf('diligence') !== -1) {
-        mainText = proj ? "Get " + proj + " Buyer Analysis" : "Get Independent Buyer Analysis";
+        mainText = "Get Buyer Analysis";
         subText = "Access unit-wise pricing breakdown, high-floor premium analysis, RERA timeline risks, and independent Acre&Key score.";
         btnLabel = "Download Buyer Analysis (PDF)";
         if (formNameInput) formNameInput.value = formName || "buyer_analysis";
       } else if (ctx === 'brochure' || ctx.indexOf('brochure') !== -1 || fn.indexOf('brochure') !== -1) {
-        mainText = proj ? "Download " + proj + " Official Brochure" : "Download Official Brochure";
+        mainText = "Get Official Brochure";
         subText = "Get the complete project dossier, masterplan layouts, specification sheet, and high-res floor configurations.";
         btnLabel = "Download Brochure (PDF)";
         if (formNameInput) formNameInput.value = formName || "brochure_download";
       } else if (ctx === 'pricing' || ctx === 'cost' || fn.indexOf('cost_sheet') !== -1 || fn.indexOf('cost_estimator') !== -1) {
-        mainText = proj ? "Get " + proj + " Cost Breakdown" : "Get Detailed Cost Breakdown";
+        mainText = "Get Cost Breakdown";
         subText = "Receive unit-wise all-inclusive pricing, floor-rise & PLC charges, GST schedule, and payment milestones.";
         btnLabel = "Get Detailed Cost Sheet";
         if (formNameInput) formNameInput.value = formName || "pricing_enquiry";
       } else if (ctx === 'floorplan' || ctx === 'availability' || fn.indexOf('availability') !== -1) {
-        mainText = proj ? "Check " + proj + " Unit Availability" : "Check Unit Availability";
+        mainText = "Check Unit Availability";
         subText = "Get real-time 1 to 4 BHK unit availability, tower layout plans, and floor selection guidance.";
         btnLabel = "Check Available Units";
         if (formNameInput) formNameInput.value = formName || "floorplan_enquiry";
       } else if (ctx === 'sitevisit' || ctx === 'visit' || fn.indexOf('visit') !== -1) {
-        mainText = proj ? "Schedule " + proj + " Site Visit" : "Schedule a Site Visit";
+        mainText = "Schedule a Site Visit";
         subText = "Book an accompanied private site visit with an Acre&Key project specialist.";
         btnLabel = "Schedule Private Visit";
         if (formNameInput) formNameInput.value = formName || "site_visit";
       } else {
-        mainText = proj ? "Talk to a " + proj + " Advisor" : "Talk to an Expert Advisor";
+        mainText = "Talk to an Expert Advisor";
         subText = proj ? "Get unbiased property guidance, verified unit pricing, and independent Acre&Key diligence for " + proj + "." : "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
         btnLabel = proj ? "Request Advisor Callback" : "Request Callback";
         if (formNameInput) formNameInput.value = formName || "general_enquiry";
