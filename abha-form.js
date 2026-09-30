@@ -43,6 +43,19 @@ var akGetBasePath = function() {
   var nameRx  = /^[\p{Letter}\p{Mark}\p{Number}\s.'-]{2,60}$/u;
   var emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+  
+  var getAbhaProjectName = function() {
+    if (window.akProjectName) return window.akProjectName;
+    var path = window.location.pathname.toLowerCase();
+    if (path.indexOf("prestige-evergreen") !== -1) return "Prestige Evergreen";
+    if (path.indexOf("sumadhura-folium") !== -1) return "Sumadhura Folium";
+    if (path.indexOf("sattva-songbird") !== -1) return "Sattva Songbird";
+    if (path.indexOf("brigade-belvedere") !== -1) return "Brigade Belvedere";
+    if (path.indexOf("riviera-uno") !== -1) return "Riviera Uno";
+    if (path.indexOf("sumadhura-solace") !== -1) return "Sumadhura Solace";
+    return "";
+  };
+
   var abhaFormOpenTime = null;
   var isSubmitting = false;
   var submitted = false;
@@ -490,7 +503,7 @@ var akGetBasePath = function() {
             "</div>" +
             "<div class=\"abha-header-text\">" +
               "<h2 class=\"abha-modal-title\" id=\"abhaHeading\">Talk to Abha</h2>" +
-              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">Your dedicated property concierge. Share your details and we'll be in touch.</p>" +
+              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">" + (getAbhaProjectName() ? "Your dedicated " + getAbhaProjectName() + " concierge. Share your details and we'll be in touch." : "Your dedicated property concierge. Share your details and we'll be in touch.") + "</p>" +
             "</div >" +
           "</div>" +
           "<form class=\"lf-form\" id=\"abhaForm\" novalidate>" +
