@@ -10,6 +10,66 @@
     <style>
         /* === SYSTEM OVERRIDES FOR THE BIBLE === */
 
+        /* SIDEBAR LAYOUT */
+        .ds-layout {
+            display: flex;
+            flex-direction: column;
+        }
+        .ds-nav {
+            display: none; /* hidden on mobile by default, or converted to drawer */
+        }
+        .ds-main-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .ds-layout {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .ds-nav {
+                display: block;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                overflow: auto;
+                padding: 2rem 1.5rem;
+                border-right: 0.5px solid var(--divider);
+                font-family: 'Manrope', sans-serif;
+                width: 250px;
+                flex-shrink: 0;
+            }
+        }
+        
+        .ds-nav a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--neutral-grey);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .ds-nav a[aria-current="true"] {
+            color: var(--text-copper-aaa);
+            font-weight: 700;
+        }
+        .ds-nav a:hover, .ds-nav a:focus-visible {
+            color: var(--text-copper-aaa);
+        }
+        .ds-nav-group {
+            margin: 1.5rem 0 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-copper-aaa);
+        }
+        section[id] {
+            scroll-margin-top: 2rem;
+        }
+
+
         /* STATES & ACCESSIBILITY GLOBALS */
         :focus-visible {
             outline: 2px solid var(--text-copper-aaa);
@@ -286,11 +346,41 @@
         <p>HNI, Clean, Minimalist Luxury. The Master Design System for Acre&amp;Key.</p>
     </header>
 
-    <div class="ds-container">
+    
+    <div class="ds-layout">
+        <nav class="ds-nav" aria-label="Design system">
+            <p class="ds-nav-group">Foundations</p>
+            <a href="#brand">Brand</a>
+            <a href="#voice">Voice</a>
+            <a href="#identity">Identity</a>
+            <a href="#color">Color</a>
+            
+            <p class="ds-nav-group">Visual Language</p>
+            <a href="#type">Typography</a>
+            <a href="#layout">Layout</a>
+            <a href="#motion">Motion & Geometry</a>
+            <a href="#imagery">Imagery</a>
+            
+            <p class="ds-nav-group">Components</p>
+            <a href="#components">Actions & Inputs</a>
+            <a href="#data">Data & Tools</a>
+            
+            <p class="ds-nav-group">Patterns</p>
+            <a href="#patterns">Templates</a>
+            
+            <p class="ds-nav-group">Standards</p>
+            <a href="#accessibility">Accessibility</a>
+            <a href="#trust">Trust & Compliance</a>
+            <a href="#governance">Governance</a>
+        </nav>
+        
+        <div class="ds-main-content">
+
+<div class="ds-container">
         
         <!-- SECTION 1: ETHOS & LEXICON -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">1. Clinical Lexicon & Tone</h2>
+        <section class="ds-section" id="voice">
+            <h2 class="ds-section-title">2. Clinical Lexicon & Tone</h2>
             <p class="ds-section-desc">HNI buyers ignore generic marketing jargon. We operate as independent, data-driven advisors. Never use terms that imply urgency or generic "luxury".</p>
             
             <table class="ds-table">
@@ -322,8 +412,8 @@
         </section>
 
         <!-- SECTION 2: COLORS -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">2. WCAG AAA Color Palette</h2>
+        <section class="ds-section" id="color">
+            <h2 class="ds-section-title">4. WCAG AAA Color Palette</h2>
             <p class="ds-section-desc">A strict 5-variable system. . Contrast ratios are tracked.</p>
             
             <div class="ds-swatch-grid">
@@ -366,8 +456,8 @@
         </section>
 
         <!-- SECTION 3: TYPOGRAPHY -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">4. Geometry & Motion Physics</h2>
+        <section class="ds-section" id="motion">
+            <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses. Strictly <code>0.5px</code> hairlines. Hover interactions are "Cinematic & Flat" (no bouncy shadows, just a luxurious 400ms visual dimming).</p>
             
             <div class="ds-card-demo">
@@ -400,8 +490,8 @@
         </section>
 
         <!-- SECTION 6: FORMS & INPUTS -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">6. Input & Form Architecture</h2>
+        <section class="ds-section" id="components">
+            <h2 class="ds-section-title">9. Components (Inputs & Forms) Architecture</h2>
             <p class="ds-section-desc">HNI clients do not fill out "squeeze pages." Our forms must feel like secure, private banking applications. No bubbly inputs. We use strict 0.5px borders, 4px radiuses, and crisp typography.</p>
             
             <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(85, 85, 90, 0.15);">
@@ -565,8 +655,8 @@
         </section>
 
         <!-- PRICING TABLES -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">Pricing &amp; Data Tables</h2>
+        <section class="ds-section" id="data">
+            <h2 class="ds-section-title">10. Data & Tools (Pricing Tables) Tables</h2>
             <p class="ds-section-desc">Tables must feel like high-end financial documents. Use muted slate headers, 0.5px dividers, and right-aligned numerical data.</p>
             
             <div style="background:#FFF; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; overflow:hidden;">
@@ -907,8 +997,8 @@
             </div>
         </section>
         <!-- EDITORIAL PORTRAIT CARDS -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">Editorial Portrait Cards (Personas)</h2>
+        <section class="ds-section" id="patterns">
+            <h2 class="ds-section-title">11. Patterns (Editorial Cards) Cards (Personas)</h2>
             <p class="ds-section-desc">Used for buyer personas or deep-dive features. This component executes the Anchored Gradient rule on a portrait aspect ratio, pulling the user into a cinematic story.</p>
             
             <div style="display:flex; justify-content:center;">
@@ -1209,8 +1299,8 @@
             </div>
         </section>
         <!-- LOGO ARCHITECTURE & ADAPTABILITY -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">Logo Architecture &amp; Background Adaptability</h2>
+        <section class="ds-section" id="identity">
+            <h2 class="ds-section-title">3. Identity (Logo Architecture) &amp; Background Adaptability</h2>
             <p class="ds-section-desc">The typographic mark must maintain strict aesthetic authority across all environments. Notice how the ampersand shifts from deep Copper on light backgrounds to the High-Contrast Peach on dark backgrounds to ensure WCAG AAA compliance without losing the brand identity.</p>
             
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;">
@@ -1245,8 +1335,8 @@
             </div>
         </section>
         <!-- TYPOGRAPHY HIERARCHY -->
-        <section class="ds-section">
-            <h2 class="ds-section-title">Typography Hierarchy & Guidelines</h2>
+        <section class="ds-section" id="type">
+            <h2 class="ds-section-title">5. Typography Hierarchy & Guidelines</h2>
             <p class="ds-section-desc">The HNI architecture relies on a strict dual-font system. <strong>Cormorant Garamond</strong> provides editorial authority for display and headings. <strong>Manrope</strong> provides extreme technical legibility for data, kickers, and body text.</p>
             
             <div style="display:flex; flex-direction:column; gap:3rem; margin-top:2rem; background:var(--titanium-frost); border-radius:4px; padding:3rem; border:0.5px solid rgba(85, 85, 90, 0.15);">
@@ -1318,5 +1408,34 @@
         </section>
 
     </div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.ds-nav a');
+    
+    const observer = new IntersectionObserver((entries) => {
+        let visibleSection = null;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) visibleSection = entry.target;
+        });
+        
+        if (visibleSection) {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + visibleSection.id) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+    }, { rootMargin: '-20% 0px -80% 0px' });
+    
+    sections.forEach(sec => observer.observe(sec));
+});
+</script>
 </body>
+
 </html>
