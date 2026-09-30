@@ -47,7 +47,7 @@
             padding: 0.4rem 0;
             color: var(--neutral-grey);
             text-decoration: none;
-            font-size:0.95rem;
+            font-size:0.85rem;
             transition: color 0.2s;
         }
         .ds-nav a[aria-current="true"] {
@@ -154,7 +154,7 @@
             opacity: 0;
             transform: translateY(10px);
             transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            
         }
         .demo-blur-container:hover .demo-blur-backdrop {
             background: rgba(10, 10, 11, 0.75);
@@ -274,7 +274,7 @@
         .ds-bible-header h1 {
             font-family: 'Marcellus', serif;
             font-size: clamp(2rem, 1.5rem + 3vw, 4rem);
-            font-weight: 700;
+            font-weight: 400;
             margin: 0 0 1rem 0;
             letter-spacing: -0.02em;
         }
@@ -303,7 +303,7 @@
         .ds-section-title {
             font-family: 'Marcellus', serif;
             font-size: clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem);
-            font-weight: 700;
+            font-weight: 400;
             color: var(--obsidian-black);
             margin-bottom: 0.5rem;
         }
@@ -431,7 +431,7 @@
         .ds-card-title {
             font-family: 'Marcellus', serif;
             font-size:1.5rem;
-            font-weight: 600;
+            font-weight: 400;
             color: var(--obsidian-black);
             margin: 0 0 1rem 0;
         }
@@ -576,8 +576,6 @@
         </section>
 
 
-<div class="ds-container">
-        
         <!-- SECTION 1: ETHOS & LEXICON -->
         <section class="ds-section" id="voice">
             <h2 class="ds-section-title">2. Clinical Lexicon & Tone</h2>
@@ -613,8 +611,8 @@
 
         <!-- SECTION 2: COLORS -->
         <section class="ds-section" id="color">
-            <h2 class="ds-section-title">4. WCAG AAA Color Palette</h2>
-            <p class="ds-section-desc">A strict 5-variable system. . Contrast ratios are tracked.</p>
+            <h2 class="ds-section-title">3. WCAG AAA Color Palette</h2>
+            <p class="ds-section-desc">A strict 5-variable system. Contrast ratios are tracked.</p>
             
             <div class="ds-swatch-grid">
                 <div class="ds-swatch">
@@ -701,9 +699,10 @@
                 </div>
             </div>
 
-        </section>
+
         <section class="ds-section" id="layout">
-<h2 class="ds-section-title">6. Layout & Spacing</h2><p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p>
+<h2 class="ds-section-title">4. Layout & Spacing</h2>
+            <p class="ds-section-desc">Fibonacci grids and 1280px max-width container structures.</p>
 <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; margin-bottom:2rem;">
                 <h3 style="font-family:'Marcellus',serif; font-size:1.5rem; margin:0 0 1rem 0;">Spatial & Layout Variables</h3>
                 <ul style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:var(--neutral-grey); line-height:1.6; margin:0; padding-left:1.2rem;">
@@ -746,7 +745,7 @@
 
         </section>
 <section class="ds-section" id="motion">
-            <h2 class="ds-section-title">7. Geometry & Motion Physics</h2>
+            <h2 class="ds-section-title">5. Geometry & Motion Physics</h2>
             <p class="ds-section-desc">Strictly <code>4px</code> border radiuses and <code>0.5px</code> hairlines. All movement runs on <strong>Acre&amp;Key Motion Physics</strong>: a suite of cinematic, gravity-weighted CSS animations that avoid cheap "bouncy" effects in favor of slow, deliberate reveals.</p>
             <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
                 <!-- Pillar 1: Cinematic Reveal -->
@@ -800,8 +799,8 @@
         </section>
 
         <!-- SECTION 5: ART DIRECTION -->
-        <section class="ds-section" style="border-bottom:none;">
-            <h2 class="ds-section-title">5. Photographic Art Direction</h2>
+        <section class="ds-section">
+            <h2 class="ds-section-title">6. Photographic Art Direction</h2>
             <p class="ds-section-desc">Builder 3D renders natively look cheap and hyper-saturated. We enforce a global <code>filter: saturate(0.85) contrast(1.05);</code> to establish a cohesive, moody, high-end editorial grade.</p>
             
             <div class="ds-photo-grid">
@@ -821,7 +820,7 @@
 
         <!-- SECTION 6: FORMS & INPUTS -->
         <section class="ds-section" id="components">
-            <h2 class="ds-section-title">9. Components (Inputs & Forms) Architecture</h2>
+            <h2 class="ds-section-title">7. Components & Inputs</h2>
             <p class="ds-section-desc">HNI clients do not fill out "squeeze pages." Our forms must feel like secure, private banking applications. No bubbly inputs. We use strict 0.5px borders, 4px radiuses, and crisp typography.</p>
             
             <div style="max-width: 400px; background: #FFF; padding: 2rem; border-radius: 4px; border: 0.5px solid rgba(80, 80, 85, 0.15);">
@@ -838,7 +837,7 @@
 
         <!-- SECTION 7: BADGES & TAGS -->
         <section class="ds-section">
-            <h2 class="ds-section-title">7. Clinical Badges & Tags (The Anti-Pill Rule)</h2>
+            <h2 class="ds-section-title">Clinical Badges & Tags (The Anti-Pill Rule)</h2>
             <p class="ds-section-desc">Standard web design uses rounded "pill" tags (<code>border-radius: 4px</code>). We strictly reject this. All tags (RERA, Status, Scores) must use our rigid <code>4px</code> geometry to maintain an architectural, blueprint-like aesthetic.</p>
             
             <div style="display:flex; gap:1rem; flex-wrap:wrap;">
@@ -849,8 +848,8 @@
         </section>
 
         <!-- SECTION 8: OVERLAYS & MODALS -->
-        <section class="ds-section" style="border-bottom:none;">
-            <h2 class="ds-section-title">8. Cinematic Modals & Overlays</h2>
+        <section class="ds-section">
+            <h2 class="ds-section-title">Cinematic Modals & Overlays</h2>
             <p class="ds-section-desc">Pop-ups should not feel like marketing interruptions. Modal backdrops must use a heavy cinematic blur (<code>backdrop-filter: blur(8px)</code>) with a deep, desaturated overlay (<code>rgba(10,10,10,0.85)</code>) to completely focus the user's attention.</p>
             
             <div style="position:relative; width:100%; height:300px; border-radius:4px; overflow:hidden; background:url('assets/evergreen/prestige_evergreen_hero_pool_evening.webp') center/cover; border:0.5px solid rgba(80, 80, 85, 0.15);">
@@ -868,7 +867,7 @@
 
         <!-- SECTION 9: TEXT ON IMAGE -->
         <section class="ds-section">
-            <h2 class="ds-section-title">9. Text-on-Image Legibility</h2>
+            <h2 class="ds-section-title">Text-on-Image Legibility</h2>
             <p class="ds-section-desc">Placing raw text directly over a photograph severely compromises legibility. We enforce a strict "Anchored Gradient" rule. Whenever text sits on an image, a deep navy gradient (fading from 95% opacity to 0% at the 60% mark) must anchor the text from the bottom or top, targeting a 7.0:1 AAA contrast ratio.</p>
             
             <div style="position:relative; border-radius:4px; overflow:hidden; height:250px; border:0.5px solid rgba(80, 80, 85, 0.15); max-width: 600px;">
@@ -883,7 +882,7 @@
 
         <!-- SECTION 10: EDITORIAL CARDS -->
         <section class="ds-section">
-            <h2 class="ds-section-title">10. The "Editorial Card" Standard</h2>
+            <h2 class="ds-section-title">The "Editorial Card" Standard</h2>
             <p class="ds-section-desc">Data cards should never use default CSS box-shadows. Shadows look like generic web templates. Our cards use strict 0.5px hairlines, generous internal padding (min 1.5rem), and rely entirely on typography sizing to establish hierarchy.</p>
             
             <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; padding:2rem; max-width: 450px;">
@@ -906,8 +905,8 @@
         </section>
 
         <!-- SECTION 11: INLINE LINKS -->
-        <section class="ds-section" style="border-bottom:none;">
-            <h2 class="ds-section-title">11. Inline Link Behavior</h2>
+        <section class="ds-section">
+            <h2 class="ds-section-title">Inline Link Behavior</h2>
             <p class="ds-section-desc">Default web links (blue text, thick underlines) destroy the luxury reading experience. All inline references in body text must use our AAA copper with a heavily offset, semi-transparent underline that solidifies entirely upon a cinematic 400ms hover.</p>
             
             <p style="font-family:'Manrope',sans-serif; font-size:1.1rem; color:var(--neutral-grey); line-height: 1.7; max-width:800px;">
@@ -1067,7 +1066,7 @@
 
         <!-- PRICING TABLES -->
         <section class="ds-section" id="data">
-            <h2 class="ds-section-title">10. Data & Tools (Pricing Tables) Tables</h2>
+            <h2 class="ds-section-title">8. Data & Tools</h2>
             <p class="ds-section-desc">Tables must feel like high-end financial documents. Use muted slate headers, 0.5px dividers, and right-aligned numerical data.</p>
             
             <div style="background:#FFF; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; overflow:hidden;">
@@ -1138,7 +1137,7 @@
         </section>
 
         <!-- LISTS & BREADCRUMBS -->
-        <section class="ds-section" style="border-bottom:none;">
+        <section class="ds-section">
             <h2 class="ds-section-title">Lists &amp; Breadcrumbs</h2>
             
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:2rem;">
@@ -1289,7 +1288,7 @@
         </section>
 
         <!-- GALLERY & MASONRY -->
-        <section class="ds-section" style="border-bottom:none;">
+        <section class="ds-section">
             <h2 class="ds-section-title">Gallery &amp; Masonry Grids</h2>
             <p class="ds-section-desc">Galleries use strict 4px corners and uniform grid gaps. No complex overlapping or rotating images. Pure architectural discipline.</p>
             
@@ -1357,18 +1356,7 @@
             <h2 class="ds-section-title">Loading &amp; Shimmer States</h2>
             <p class="ds-section-desc">Spinning wheels are unacceptable. When calculators or APIs load data, use structural shimmer skeletons that mimic the exact geometry of the incoming content.</p>
             
-            <style>
-                @keyframes shimmer {
-                    0% { background-position: -400px 0; }
-                    100% { background-position: 400px 0; }
-                }
-                .ds-shimmer {
-                    animation: shimmer 2s infinite linear;
-                    background: linear-gradient(to right, rgba(80, 80, 85,0.05) 4%, rgba(80, 80, 85,0.12) 25%, rgba(80, 80, 85,0.05) 36%);
-                    background-size: 800px 100%;
-                    border-radius: 4px;
-                }
-            </style>
+
             
             <div style="background:#FFF; padding:2rem; border:0.5px solid rgba(80, 80, 85, 0.15); border-radius:4px; max-width:400px;">
                 <div class="ds-shimmer" style="width:40px; height:40px; border-radius:50%; margin-bottom:1.5rem;"></div>
@@ -1379,7 +1367,7 @@
         </section>
 
         <!-- GLOBAL FOOTER -->
-        <section class="ds-section" style="border-bottom:none;">
+        <section class="ds-section">
             <h2 class="ds-section-title">Global Footer Architecture</h2>
             <p class="ds-section-desc">The footer acts as the anchor. It uses the deep navy background. Links are strictly organized in grid columns without bulky separators.</p>
             
@@ -1389,7 +1377,7 @@
                     <div style="font-family:'Josefin Sans', sans-serif; font-size:2rem; font-weight: 400; letter-spacing:0.05em; color:#FFF; margin-bottom:1rem;">
                         acre&amp;key
                     </div>
-                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:300px;">Institutional-grade real estate advisory for the institutional investor investor. Data-driven allocation.</p>
+                    <p style="font-family:'Manrope',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.72); line-height:1.7; max-width:300px;">Institutional-grade real estate advisory for the institutional investor. Data-driven allocation.</p>
                 </div>
                 
                 <div style="flex:1;">
@@ -1445,10 +1433,10 @@
                 </div>
             </div>
 
-        </section>
+
 
         <section class="ds-section" id="patterns">
-            <h2 class="ds-section-title">11. Patterns (Editorial Cards) Cards (Personas)</h2>
+            <h2 class="ds-section-title">9. Templates & Patterns</h2>
             <p class="ds-section-desc">Used for buyer personas or deep-dive features. This component executes the Anchored Gradient rule on a portrait aspect ratio, pulling the user into a cinematic story.</p>
             
             <div style="display:flex; justify-content:center;">
@@ -1682,7 +1670,7 @@
             </div>
         </section>
         <!-- CINEMATIC PROPERTY GALLERY PLAYER -->
-        <section class="ds-section" style="border-bottom:none;">
+        <section class="ds-section">
             <h2 class="ds-section-title">Cinematic Gallery Player</h2>
             <p class="ds-section-desc">Used for showcasing property renders and imagery. <strong>Crucial Correction:</strong> The raw text over the image violates AAA contrast. We must inject dual Anchored Gradients (top and bottom) to protect the typography and controls, while enforcing 4px geometries on the navigation arrows and thumbnail strips.</p>
             
@@ -1750,7 +1738,7 @@
         </section>
         <!-- LOGO ARCHITECTURE & ADAPTABILITY -->
         <section class="ds-section" id="identity">
-            <h2 class="ds-section-title">3. Identity (Logo Architecture) &amp; Background Adaptability</h2>
+            <h2 class="ds-section-title">10. Identity & Logo Architecture</h2>
             <p class="ds-section-desc">The typographic mark must maintain strict aesthetic authority across all environments. We enforce a <strong>Strict Monochrome Architecture</strong> (pure Obsidian Black on light canvases, pure White on dark canvases) to prevent the mark from feeling like a startup. The ampersand is never colorized.</p>
             
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;">
@@ -1795,7 +1783,7 @@
         </section>
         <!-- TYPOGRAPHY HIERARCHY -->
         <section class="ds-section" id="type">
-            <h2 class="ds-section-title">5. Typography Hierarchy & Guidelines</h2>
+            <h2 class="ds-section-title">11. Typography Hierarchy & Guidelines</h2>
             <p class="ds-section-desc">The HNI architecture relies on a strict dual-font system. <strong>Marcellus</strong> provides editorial authority for display and headings. <strong>Manrope</strong> provides extreme technical legibility for data, kickers, and body text.</p>
             
             <div style="display:flex; flex-direction:column; gap:3rem; margin-top:2rem; background:var(--titanium-frost); border-radius:4px; padding:3rem; border:0.5px solid rgba(80, 80, 85, 0.15);">
@@ -1816,7 +1804,7 @@
                 <div style="border-bottom:0.5px solid rgba(80, 80, 85, 0.2); padding-bottom:2rem;">
                     <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:1rem;">
                         <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); text-transform:uppercase; letter-spacing:0.15em;">Section Heading (H2/H3)</div>
-                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Cormorant Garamond • 600 • LH: 1.2 • LS: 0</div>
+                        <div style="font-family:'Manrope',sans-serif; font-size:0.75rem; color:var(--neutral-grey);">Marcellus • 400 • LH: 1.2 • LS: 0</div>
                     </div>
                     <h2 style="font-family:'Marcellus', serif; font-size:clamp(2rem, 1.5rem + 2vw, 3rem); font-weight: 400; color:var(--obsidian-black); line-height:1.2; margin:0;">
                         Institutional Grade diligence.
@@ -1914,7 +1902,7 @@
                 </div>
             </div>
 
-        </section>
+
 
         <section class="ds-section" id="accessibility">
             <h2 class="ds-section-title">12. Accessibility Standards</h2>
@@ -1943,7 +1931,7 @@
 
         <!-- SECTION: GOVERNANCE -->
         <section class="ds-section" id="governance">
-            <h2 class="ds-section-title">15. Governance & Contribution</h2>
+            <h2 class="ds-section-title">14. Governance & Contribution</h2>
             <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid var(--divider); border-radius:4px; margin-bottom:2rem;">
                 <ul style="font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--neutral-grey); line-height:1.8; margin:0; padding-left:1.5rem;">
                     <li><strong>Version:</strong> 2.0.1 (Apple-Grade Architectural Release).</li>
@@ -1955,8 +1943,8 @@
         </section>
 
     </div>
-</div>
-</div>
+
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
