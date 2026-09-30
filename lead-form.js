@@ -465,9 +465,9 @@
         btnLabel = "Schedule Private Visit";
         if (formNameInput) formNameInput.value = formName || "site_visit";
       } else {
-        mainText = "Request a Property Audit";
+        mainText = "Talk to an Expert Advisor";
         subText = proj ? "Get unbiased property guidance, verified unit pricing, and independent Acre&Key diligence for " + proj + "." : "Get unbiased property guidance, detailed pricing, and independent diligence reports.";
-        btnLabel = proj ? "Request Advisor Callback" : "Get Custom Action Plan";
+        btnLabel = proj ? "Request Advisor Callback" : "Request Callback";
         if (formNameInput) formNameInput.value = formName || "general_enquiry";
       }
 
