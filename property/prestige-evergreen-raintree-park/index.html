@@ -2210,47 +2210,42 @@ img[style*="border-radius: 50%"] {
   var costData = {
     '1bhk': {
       title: '1 BHK Residence (Typ. 659 sq.ft. SBA)',
-      base: '₹1.04 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹8.5 Lakhs (Clubhouse, BESCOM & BWSSB)',
-      preTax: '₹1.12 Cr',
-      gst: '~₹5.6 Lakhs (5% GST)',
-      stamp: '~₹7.4 Lakhs (~6.6% Duty & Registration)',
+      base: '₹1.04 Cr', baseDesc: '~₹15,800/sq.ft.',
+      infra: '₹8.5 Lakhs', infraDesc: 'Clubhouse, BESCOM & BWSSB',
+      gst: '₹5.6 Lakhs', gstDesc: '5% GST',
+      stamp: '₹7.4 Lakhs', stampDesc: '~6.6% Duty & Reg.',
       total: '₹1.25 Cr'
     },
     '2bhk': {
       title: '2 BHK Residence (Typ. 1,174 sq.ft. SBA)',
-      base: '₹1.85 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹14.0 Lakhs (Club, Parking & Infra)',
-      preTax: '₹1.99 Cr',
-      gst: '~₹9.9 Lakhs (5% GST)',
-      stamp: '~₹13.1 Lakhs (~6.6% Duty & Registration)',
+      base: '₹1.85 Cr', baseDesc: '~₹15,800/sq.ft.',
+      infra: '₹14.0 Lakhs', infraDesc: 'Club, Parking & Infra',
+      gst: '₹9.9 Lakhs', gstDesc: '5% GST',
+      stamp: '₹13.1 Lakhs', stampDesc: '~6.6% Duty & Reg.',
       total: '₹2.22 Cr'
     },
     '3bhk': {
       title: '3 BHK Residence (Typ. 1,461 sq.ft. SBA)',
-      base: '₹2.30 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹16.5 Lakhs (Club, Parking & Infra)',
-      preTax: '₹2.46 Cr',
-      gst: '~₹12.3 Lakhs (5% GST)',
-      stamp: '~₹16.2 Lakhs (~6.6% Duty & Registration)',
+      base: '₹2.30 Cr', baseDesc: '~₹15,800/sq.ft.',
+      infra: '₹16.5 Lakhs', infraDesc: 'Club, Parking & Infra',
+      gst: '₹12.3 Lakhs', gstDesc: '5% GST',
+      stamp: '₹16.2 Lakhs', stampDesc: '~6.6% Duty & Reg.',
       total: '₹2.75 Cr'
     },
     '3bhk_study': {
       title: '3 BHK + Study Residence (Typ. 1,991 sq.ft. SBA)',
-      base: '₹3.14 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹19.0 Lakhs (Club, Parking & Infra)',
-      preTax: '₹3.33 Cr',
-      gst: '~₹16.6 Lakhs (5% GST)',
-      stamp: '~₹22.0 Lakhs (~6.6% Duty & Registration)',
+      base: '₹3.14 Cr', baseDesc: '~₹15,800/sq.ft.',
+      infra: '₹19.0 Lakhs', infraDesc: 'Club, Parking & Infra',
+      gst: '₹16.6 Lakhs', gstDesc: '5% GST',
+      stamp: '₹22.0 Lakhs', stampDesc: '~6.6% Duty & Reg.',
       total: '₹3.72 Cr'
     },
     '4bhk': {
       title: '4 BHK Luxury Residence (Typ. 2,271 sq.ft. SBA)',
-      base: '₹3.58 Cr (~₹15,800/sq.ft.)',
-      infra: '~₹22.5 Lakhs (Club, 2 Car Parks & Infra)',
-      preTax: '₹3.80 Cr',
-      gst: '~₹19.0 Lakhs (5% GST)',
-      stamp: '~₹25.1 Lakhs (~6.6% Duty & Registration)',
+      base: '₹3.58 Cr', baseDesc: '~₹15,800/sq.ft.',
+      infra: '₹22.5 Lakhs', infraDesc: 'Club, 2 Car Parks & Infra',
+      gst: '₹19.0 Lakhs', gstDesc: '5% GST',
+      stamp: '₹25.1 Lakhs', stampDesc: '~6.6% Duty & Reg.',
       total: '₹4.24 Cr'
     }
   };
@@ -2274,21 +2269,26 @@ img[style*="border-radius: 50%"] {
         '<div style="font-size:0.75rem; color:#182A3D; font-weight:800; background:rgba(24,42,61,0.05); padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
       '</div>' +
       '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:\'Manrope\',sans-serif;">' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border: 1px solid rgba(24, 42, 61, 0.08);">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:1rem; border: 1px solid rgba(24, 42, 61, 0.08); display:flex; flex-direction:column; justify-content:center;">' +
           '<div style="font-size:0.72rem; color:#5E4119; font-weight:800; text-transform:uppercase;">1. Base Construction</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#182A3D; margin-top:0.2rem;">' + item.base + '</div>' +
+          '<div style="font-size:1.15rem; font-weight:800; color:#182A3D; margin-top:0.35rem;">' + item.base + '</div>' +
+          '<div style="font-size:0.8rem; font-weight:500; color:#374151; margin-top:0.2rem;">' + item.baseDesc + '</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border: 1px solid rgba(24, 42, 61, 0.08);">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:1rem; border: 1px solid rgba(24, 42, 61, 0.08); display:flex; flex-direction:column; justify-content:center;">' +
           '<div style="font-size:0.72rem; color:#5E4119; font-weight:800; text-transform:uppercase;">2. Infra, Club &amp; Parking</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#182A3D; margin-top:0.2rem;">' + item.infra + '</div>' +
+          '<div style="font-size:1.15rem; font-weight:800; color:#182A3D; margin-top:0.35rem;">' + item.infra + '</div>' +
+          '<div style="font-size:0.8rem; font-weight:500; color:#374151; margin-top:0.2rem;">' + item.infraDesc + '</div>' +
         '</div>' +
-        '<div style="background:#FAF8F5; border-radius: 4px; padding:0.85rem; border: 1px solid rgba(24, 42, 61, 0.08);">' +
+        '<div style="background:#FAF8F5; border-radius: 4px; padding:1rem; border: 1px solid rgba(24, 42, 61, 0.08); display:flex; flex-direction:column; justify-content:center;">' +
           '<div style="font-size:0.72rem; color:#5E4119; font-weight:800; text-transform:uppercase;">3. Statutory Taxes (GST + Reg)</div>' +
-          '<div style="font-size:1.05rem; font-weight:800; color:#5E4119; margin-top:0.2rem;">' + item.gst + ' + ' + item.stamp + '</div>' +
+          '<div style="display:flex; flex-direction:column; gap:0.25rem; margin-top:0.35rem;">' +
+            '<div style="font-size:0.95rem; font-weight:800; color:#5E4119;">' + item.gst + ' <span style="font-size:0.75rem; font-weight:500; color:#8C6734;">(' + item.gstDesc + ')</span></div>' +
+            '<div style="font-size:0.95rem; font-weight:800; color:#5E4119;">' + item.stamp + ' <span style="font-size:0.75rem; font-weight:500; color:#8C6734;">(' + item.stampDesc + ')</span></div>' +
+          '</div>' +
         '</div>' +
-        '<div style="background:#182A3D; border-radius: 4px; padding:0.85rem; border:1px solid #8C6734;">' +
+        '<div style="background:#182A3D; border-radius: 4px; padding:1rem; border:1px solid #8C6734; display:flex; flex-direction:column; justify-content:center;">' +
           '<div style="font-size:0.72rem; color:rgba(255,255,255,0.75); font-weight:800; text-transform:uppercase;">Total Estimated Outlay</div>' +
-          '<div style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-top:0.2rem;">' + item.total + '</div>' +
+          '<div style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-top:0.35rem;">' + item.total + '</div>' +
         '</div>' +
       '</div>';
   };
