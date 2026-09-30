@@ -5,9 +5,9 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #be7555 0%, #9f5334 100%)`
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
-- **Warm Ivory Canvas Base (`--warm-ivory`)**: `#FAFAFA`
-- **Deep Midnight Navy (`--deep-navy`)**: `#0A0A0B` / `#0A0A0B`
-- **Muted Slate (`--muted-slate`)**: `#6E6E73` (Body paragraphs)
+- **Titanium Frost Canvas Base (`--warm-ivory`)**: `#FAFAFA`
+- **Obsidian Black (`--deep-navy`)**: `#0A0A0B` / `#0A0A0B`
+- **Muted Slate (`--muted-slate`)**: `#55555A` (Body paragraphs)
 
 ## 2. Typography
 - **Headings & Display**: `'Cormorant Garamond', serif` (Weight 400/500/700, editorial architectural luxury)
@@ -36,7 +36,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 8. Forms & Inputs (Zero Bubbly UIs)
 - **Geometry**: Inputs and Select dropdowns must have strictly `4px` radiuses.
-- **Borders**: Strictly `0.5px` borders (`rgba(110, 110, 115, 0.2)`).
+- **Borders**: Strictly `0.5px` borders (`rgba(85, 85, 90, 0.2)`).
 - **Focus States**: Bottom-border or full-border color shifts to Text Copper (`#804526`) with a 0.4s transition.
 
 ## 9. Badges & Tags (The Anti-Pill Rule)
