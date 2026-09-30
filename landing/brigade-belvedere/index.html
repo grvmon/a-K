@@ -14,7 +14,7 @@ html { scroll-behavior: auto !important; }
 }
 .prop-hero-section {
   padding: 2rem 0 !important;
-  border-bottom: 1px solid rgba(47, 59, 66, 0.08) !important;
+  border-bottom: 0.5px solid rgba(47, 59, 66, 0.08) !important;
 }
 @media (min-width: 769px) {
   .prop-hero-section {
@@ -53,7 +53,7 @@ html { scroll-behavior: auto !important; }
 .advisor-status-text { color: #374151 !important; }
 .advisor-status-text strong { color: #7D442A !important; }
 .ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
-.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 260px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 260px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1); }
 .ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2F3B42 transparent transparent transparent; }
 .ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
 .local-nav-link {
@@ -91,7 +91,7 @@ html { scroll-behavior: auto !important; }
   
   /* Grid & Layout Adjustments */
   .ak-pros-cons-grid { grid-template-columns: 1fr !important; gap: 0.85rem !important; }
-  .prop-section-nav-sticky { top: 60px !important; background: #FFFFFF !important; border-bottom: 1px solid rgba(47, 59, 66, 0.08) !important; box-shadow: 0 4px 12px rgba(15, 31, 61, 0.05) !important; z-index: 990 !important; }
+  .prop-section-nav-sticky { top: 60px !important; background: #FFFFFF !important; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08) !important; box-shadow: 0 4px 12px rgba(15, 31, 61, 0.05) !important; z-index: 990 !important; }
   .local-nav-link { padding: 0.4rem 0.75rem !important; font-size: 0.82rem !important; }
   .prop-snapshot-grid-v2 { grid-template-columns: repeat(2, 1fr) !important; gap: 0.65rem !important; }
   .prop-snapshot-item-v2 { padding: 0.65rem 0.5rem !important; }
@@ -151,11 +151,11 @@ img[style*="border-radius: 50%"] {
 .prop-section, #closing-cta {
   padding: clamp(2.5rem, 3.5vw, 3.25rem) 0 !important;
   border-top: none !important;
-  border-bottom: 1px solid #E5E0D8 !important;
+  border-bottom: 0.5px solid #E5E0D8 !important;
 }
 .ak-card-dossier {
   background: #FFFFFF !important;
-  border: 1px solid rgba(47, 59, 66, 0.08) !important;
+  border: 0.5px solid rgba(47, 59, 66, 0.08) !important;
   border-radius: 4px !important;
   padding: clamp(1.25rem, 2.5vw, 1.85rem) !important;
   box-shadow: 0 4px 20px rgba(15, 31, 61, 0.04) !important;
@@ -171,7 +171,7 @@ img[style*="border-radius: 50%"] {
 }
 .ak-diligence-card {
   background: #FFFFFF !important;
-  border: 1px solid #E5E0D8 !important;
+  border: 0.5px solid #E5E0D8 !important;
   border-radius: 4px !important;
   padding: 0.85rem 0.95rem !important;
   box-shadow: 0 2px 6px rgba(15, 31, 61, 0.03) !important;
@@ -268,8 +268,8 @@ img[style*="border-radius: 50%"] {
   .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
   .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 4px; overflow: hidden; margin-bottom: 0.85rem; }
   .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; }
-  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(15, 31, 61, 0.75); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 3px; backdrop-filter: blur(4px); }
-  .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.95); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(15, 31, 61, 0.75); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px; backdrop-filter: blur(4px); }
+  .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.95); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1); }
   .desktop-only-nav { display: none !important; }
   .mobile-only-nav { display: flex !important; overflow-x: auto !important; white-space: nowrap !important; padding: 0.35rem 0.5rem !important; gap: 0.4rem !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .mobile-only-nav::-webkit-scrollbar { display: none; }
@@ -330,7 +330,7 @@ img[style*="border-radius: 50%"] {
   color: #FFFFFF;
   line-height: 1;
   margin-bottom: 8px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 4px rgba(20, 29, 36, 0.08);
 }
 .ak-editorial-counter {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -339,14 +339,14 @@ img[style*="border-radius: 50%"] {
   letter-spacing: 0.05em;
   color: #FFFFFF;
   line-height: 1;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 4px rgba(20, 29, 36, 0.08);
 }
 .ak-editorial-line {
   width: 44px;
   height: 1.5px;
   background: #FFFFFF;
   margin-top: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
 }
 .ak-editorial-top-right {
   position: absolute;
@@ -363,7 +363,7 @@ img[style*="border-radius: 50%"] {
   background: rgba(18, 26, 32, 0.4);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  border: 0.5px solid rgba(255, 255, 255, 0.75);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -387,7 +387,7 @@ img[style*="border-radius: 50%"] {
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.45) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(20, 29, 36, 0.08) 0%, rgba(20, 29, 36, 0.08) 60%, transparent 100%);
   z-index: 5;
   display: flex;
   align-items: flex-end;
@@ -413,7 +413,7 @@ img[style*="border-radius: 50%"] {
 .ak-editorial-thumb {
   width: 52px;
   height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 0.5px solid rgba(255, 255, 255, 0.45);
   border-radius: 4px;
   overflow: hidden;
   padding: 0;
@@ -437,17 +437,17 @@ img[style*="border-radius: 50%"] {
   opacity: 1;
   border-color: rgba(255, 255, 255, 0.95);
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
 }
 .ak-editorial-thumb.active {
   border: 2px solid #FFFFFF !important;
   opacity: 1 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
   transform: translateY(-2px);
 }
 .ak-editorial-thumb.active:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
 }
 .ak-editorial-gallery-trigger {
   display: flex;
@@ -509,8 +509,8 @@ body.property-page .header-nav.scrolled {
   background: rgba(13, 27, 36, 0.96) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1) !important;
 }
 
 /* Acre & Key Brand Logo */
@@ -575,8 +575,8 @@ body.property-page .header-nav.scrolled {
   background: rgba(13, 27, 36, 0.96) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1) !important;
 }
 
 body.property-page {
@@ -660,9 +660,9 @@ body.property-page .header-nav .nav-links a.local-nav-link {
   text-transform: none !important;
   color: rgba(255, 255, 255, 0.72) !important;
   padding: 0.42rem 0.82rem !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   background: transparent !important;
-  border: 1px solid transparent !important;
+  border: 0.5px solid transparent !important;
   position: relative !important;
   text-decoration: none !important;
   white-space: nowrap !important;
@@ -709,7 +709,7 @@ body.property-page .header-nav .nav-links a.local-nav-link.active {
   color: #FFFFFF !important;
   font-weight: 600 !important;
   background: rgba(255, 255, 255, 0.10) !important;
-  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.09) !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
   border-bottom: none !important;
 }
@@ -736,7 +736,7 @@ body.property-page .header-nav.scrolled .nav-cta-btn {
   gap: 10px !important;
   border-radius: 4px !important;
   background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
-  border: 1px solid #9f5334 !important;
+  border: 0.5px solid #9f5334 !important;
   color: #FFFFFF !important;
   font-family: var(--font-body), 'Manrope', sans-serif !important;
   font-size: 14px !important;
@@ -785,7 +785,7 @@ body.property-page .header-nav .cta-arrow-badge {
   min-width: 22px !important;
   min-height: 22px !important;
   border-radius: 50% !important;
-  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  border: 0.5px solid rgba(255, 255, 255, 0.45) !important;
   background: rgba(255, 255, 255, 0.08) !important;
   color: #FFFFFF !important;
   margin: 0 !important;
@@ -821,7 +821,7 @@ body.property-page .header-nav .mobile-toggle {
   background: transparent !important;
   border: none !important;
   cursor: pointer !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   transition: background 0.2s ease !important;
   flex-shrink: 0 !important;
 }
@@ -1018,13 +1018,13 @@ body.property-page .header-nav .mobile-toggle {
 }
 .mobile-drawer .mobile-nav-item.local-nav-link {
   color: #141D24 !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   transition: all 0.2s ease !important;
   display: flex !important;
   align-items: center !important;
   padding: 0.85rem 1rem !important;
   text-decoration: none !important;
-  border-bottom: 1px solid #F5F2EC !important;
+  border-bottom: 0.5px solid #F5F2EC !important;
 }
 .mobile-drawer .mobile-nav-item.local-nav-link:hover {
   background: rgba(125, 68, 42, 0.04) !important;
@@ -1048,7 +1048,7 @@ body.property-page .header-nav .mobile-toggle {
 <header class="header-nav" id="header-nav"><div class="container nav-container"><a href="/" class="nav-brand"><span class="brand-logo-text">acre&amp;key</span></a><ul class="nav-links"><li><a href="/#who-were-for">Who We Serve</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#about-us">About Us</a></li><li><a href="/#testimonials">Testimonials</a></li></ul><a href="/#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div><div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu"><div class="mobile-drawer-inner"><div class="mobile-drawer-header"><a href="/" class="mobile-drawer-brand" aria-label="Acre and Key Home"><span class="brand-logo-text">acre&amp;key</span></a><button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--deep-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><nav class="mobile-nav-list"><a href="/#who-were-for" class="mobile-nav-item"><span class="mobile-nav-label">Who We Serve</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class="mobile-nav-item"><span class="mobile-nav-label">Decision Framework</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class="mobile-nav-item"><span class="mobile-nav-label">Core</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class="mobile-nav-item"><span class="mobile-nav-label">About Us</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class="mobile-nav-item"><span class="mobile-nav-label">Testimonials</span><svg class="mobile-nav-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class="mobile-drawer-footer"><a href="/#" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal(); return false;"><span>Talk to an Advisor</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><span class="mobile-drawer-subtext">Expert Property Guidance</span><div class="mobile-drawer-socials"><a href="https://www.linkedin.com/company/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg></a><a href="https://www.instagram.com/acrenkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a><a href="https://x.com/acreNkey" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a></div></div></div></div></header>
 
 <main>
-<section class="prop-hero-section" style="background:#FAF8F5; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">
+<section class="prop-hero-section" style="background:#FAF8F5; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">
 <div class="prop-container">
 
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
@@ -1073,7 +1073,7 @@ body.property-page .header-nav .mobile-toggle {
           Possession: March 2031
         </div>
 
-        <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal();" style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
+        <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal();" style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
           <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0;">
             <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1; color:#FFFFFF;">3.35</div>
             <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
@@ -1092,13 +1092,13 @@ body.property-page .header-nav .mobile-toggle {
           <button type="button" class="sd-btn-gold" onclick="window.openModal('analysis', 'mobile_hero_buyer_analysis'); return false;" style="width:100%; padding:0.9rem; font-size:0.95rem; font-weight:700; border-radius: 4px; text-align:center; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 12px rgba(125, 68, 42, 0.25); display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
             <span>Get Buyer Analysis →</span>
           </button>
-          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" style="width:100%; padding:0.75rem; font-size:0.9rem; font-weight:600; border-radius: 4px; text-align:center; background:#FFFFFF; color:#2F3B42; border: 1px solid rgba(47, 59, 66, 0.08); font-family:'Manrope',sans-serif; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:0.45rem; box-sizing:border-box;">
+          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" style="width:100%; padding:0.75rem; font-size:0.9rem; font-weight:600; border-radius: 4px; text-align:center; background:#FFFFFF; color:#2F3B42; border: 0.5px solid rgba(47, 59, 66, 0.08); font-family:'Manrope',sans-serif; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:0.45rem; box-sizing:border-box;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F3B42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
             <span>View Floor Plans →</span>
           </a>
         </div>
 
-        <div class="ak-summary-assessment-card" style="background:#FAF8F5; border:1px solid #E5E0D8; border-radius:4px; padding:0.85rem 0.75rem; font-family:'Manrope',sans-serif;">
+        <div class="ak-summary-assessment-card" style="background:#FAF8F5; border:0.5px solid #E5E0D8; border-radius:4px; padding:0.85rem 0.75rem; font-family:'Manrope',sans-serif;">
           <div style="display:grid; grid-template-columns: 1fr 1px 1fr; gap:0.6rem; align-items:stretch;">
             
             <!-- Left Column: WHAT WE LIKE -->
@@ -1208,7 +1208,7 @@ body.property-page .header-nav .mobile-toggle {
       </button>
       <button type="button" class="ak-editorial-thumb video-thumb" onclick="event.stopPropagation(); akGallerySelect(4);" aria-label="Play Walkthrough Video" title="Play Walkthrough Video" style="position:relative;">
         <img src="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp" alt="Official Walkthrough Video" loading="lazy">
-        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.45);">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(20, 29, 36, 0.08);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#BE7555" stroke="#FFFFFF" stroke-width="1.5">
             <circle cx="12" cy="12" r="10" fill="rgba(24, 42, 61, 0.75)"></circle>
             <polygon points="10 8 16 12 10 16 10 8" fill="#BE7555"></polygon>
@@ -1234,7 +1234,7 @@ body.property-page .header-nav .mobile-toggle {
     </div>
   </div>
 
-  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:1px solid rgba(213,209,200,0.85); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#7D442A';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
+  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(213,209,200,0.85); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#7D442A';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
     <div style="display:flex; align-items:baseline; gap:0.15rem;">
       <span style="font-size:1.55rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.35</span>
       <span style="font-size:0.82rem; color:#374151; font-weight:500;">/5</span>
@@ -1250,7 +1250,7 @@ body.property-page .header-nav .mobile-toggle {
   </div>
 
   <!-- Editorial Pricing Strip -->
-  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:1px solid #EAE6DF; border-bottom:1px solid #EAE6DF; padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid #EAE6DF; border-bottom:0.5px solid #EAE6DF; padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
     <span style="font-size:1.48rem; font-weight:700; color:#111827; letter-spacing:-0.01em; line-height:1.2;">₹0.93 – 2.79 Cr</span>
     <span style="font-size:1.25rem; font-weight:400; color:#374151; margin:0 0.75rem; user-select:none;">|</span>
     <span style="font-size:1.1rem; font-weight:500; color:#374151; line-height:1.2;">₹12.45 K – 14.34 K/sq.ft*</span>
@@ -1279,7 +1279,7 @@ body.property-page .header-nav .mobile-toggle {
       padding: 0 1.25rem;
       background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
       color: #FFFFFF !important;
-      border: 1px solid #9f5334 !important;
+      border: 0.5px solid #9f5334 !important;
       border-radius: 4px !important;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
       font-size: 0.92rem !important;
@@ -1308,7 +1308,7 @@ body.property-page .header-nav .mobile-toggle {
       padding: 0 1.25rem;
       background: #FFFFFF !important;
       color: #2F3B42 !important;
-      border: 1px solid #D5C7B8 !important;
+      border: 0.5px solid #D5C7B8 !important;
       border-radius: 4px !important;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
       font-size: 0.92rem !important;
@@ -1330,17 +1330,17 @@ body.property-page .header-nav .mobile-toggle {
     }
   </style>
   <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:0.85rem; margin-bottom:10px;">
-    <a href="#" class="sd-btn-gold ak-hero-btn-primary" onclick="window.openModal('analysis', 'desktop_hero_buyer_analysis'); return false;" style="background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important; color:#FFFFFF !important; border:1px solid #9f5334 !important;">
+    <a href="#" class="sd-btn-gold ak-hero-btn-primary" onclick="window.openModal('analysis', 'desktop_hero_buyer_analysis'); return false;" style="background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important;">
       <span>Get Buyer Analysis</span>
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
-    <a href="#floor-plans" class="ak-hero-btn-secondary" onclick="window.scrollToFloorPlans(event);" style="background:#FFFFFF !important; color:#2F3B42 !important; border:1px solid #D5C7B8 !important;">
+    <a href="#floor-plans" class="ak-hero-btn-secondary" onclick="window.scrollToFloorPlans(event);" style="background:#FFFFFF !important; color:#2F3B42 !important; border:0.5px solid #D5C7B8 !important;">
       <span>View Floor Plans</span>
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
     </a>
   </div>
 
-  <div class="ak-info-insight" style="background:#FAF8F5; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:1px solid #E5E0D8; box-shadow:none; font-family:'Manrope',sans-serif;">
+  <div class="ak-info-insight" style="background:#FAF8F5; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:0.5px solid #E5E0D8; box-shadow:none; font-family:'Manrope',sans-serif;">
     <div style="display:grid; grid-template-columns: 1fr 1px 1fr; gap:0.75rem; align-items:stretch;">
       
       <!-- Left Column: WHAT WE LIKE -->
@@ -1453,7 +1453,7 @@ body.property-page .header-nav .mobile-toggle {
 
 
 
-<section id="about" class="prop-section prop-about-fold-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="about" class="prop-section prop-about-fold-section" style="background:#FAF8F5; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <style>
     @media (min-width: 901px) {
       .prop-about-fold-section {
@@ -1483,7 +1483,7 @@ body.property-page .header-nav .mobile-toggle {
     }
     .about-pillar-card {
       background: #FFFFFF;
-      border: 1px solid #E2DDD5;
+      border: 0.5px solid #E2DDD5;
       border-radius: 4px;
       padding: clamp(0.75rem, 1.4vh, 1.05rem) clamp(0.85rem, 1.2vw, 1.15rem);
       box-shadow: 0 2px 8px rgba(15, 31, 61, 0.03);
@@ -1523,7 +1523,7 @@ body.property-page .header-nav .mobile-toggle {
           <!-- Pillar 1 -->
           <div class="about-pillar-card">
             <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
-              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">01</span>
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius: 4px;">01</span>
               <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">14 Towers</strong>
             </div>
             <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">2B + G + 19 floors with 1 to 3.5 BHK flexible layouts.</p>
@@ -1532,7 +1532,7 @@ body.property-page .header-nav .mobile-toggle {
           <!-- Pillar 2 -->
           <div class="about-pillar-card">
             <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
-              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">02</span>
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius: 4px;">02</span>
               <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">70% Open Area</strong>
             </div>
             <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Expansive greenery, courtyard lawns &amp; tree avenues.</p>
@@ -1541,7 +1541,7 @@ body.property-page .header-nav .mobile-toggle {
           <!-- Pillar 3 -->
           <div class="about-pillar-card">
             <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
-              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">03</span>
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius: 4px;">03</span>
               <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">~86k sq.ft. Club</strong>
             </div>
             <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Dual lifestyle hubs with 40+ resort-grade amenities.</p>
@@ -1550,7 +1550,7 @@ body.property-page .header-nav .mobile-toggle {
           <!-- Pillar 4 -->
           <div class="about-pillar-card">
             <div style="display:flex; align-items:center; gap:0.45rem; margin-bottom:0.25rem;">
-              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius:3px;">04</span>
+              <span style="font-family:'Josefin Sans',sans-serif; font-size:0.7rem; font-weight:700; color:#7D442A; letter-spacing:0.08em; background:#FBF6F3; padding:0.15rem 0.4rem; border-radius: 4px;">04</span>
               <strong style="font-size:0.95rem; color:#2F3B42; font-weight:700;">107-Acre Master</strong>
             </div>
             <p style="font-size:0.84rem; color:#59616B; line-height:1.4; margin:0;">Integrated live-work township with internal transit.</p>
@@ -1558,7 +1558,7 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Footnote Callout Box -->
-        <div style="display:flex; align-items:flex-start; gap:0.6rem; background:rgba(255,255,255,0.75); border: 1px solid rgba(47, 59, 66, 0.08); border-left:3px solid #7D442A; border-radius:4px; padding:clamp(0.6rem, 1.2vh, 0.8rem) clamp(0.75rem, 1.5vw, 1.0rem); margin-bottom:1.25rem;">
+        <div style="display:flex; align-items:flex-start; gap:0.6rem; background:rgba(255,255,255,0.75); border: 0.5px solid rgba(47, 59, 66, 0.08); border-left:3px solid #7D442A; border-radius:4px; padding:clamp(0.6rem, 1.2vh, 0.8rem) clamp(0.75rem, 1.5vw, 1.0rem); margin-bottom:1.25rem;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D442A" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           <span style="font-size:0.88rem; color:#2F3B42; line-height:1.5;">The scale of the development makes the masterplan and execution an important part of understanding the project.</span>
         </div>
@@ -1574,8 +1574,8 @@ body.property-page .header-nav .mobile-toggle {
 
       <!-- Right Column: Cinematic Walkthrough Video Player -->
       <div style="display: flex; flex-direction: column; justify-content: center;">
-        <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius:12px; overflow:hidden; border: 1px solid rgba(47, 59, 66, 0.08); box-shadow:0 8px 30px rgba(15, 31, 61, 0.08); width:100%; aspect-ratio:16/9; background:#2B2B2B;">
-          <video id="overviewVideoPlayer" controls="" playsinline="" preload="metadata" poster="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp?v=1790786325000_v1" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; background:#2B2B2B; display:block;">
+        <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius: 4px; overflow:hidden; border: 0.5px solid rgba(47, 59, 66, 0.08); box-shadow:0 8px 30px rgba(15, 31, 61, 0.08); width:100%; aspect-ratio:16/9; background:#2B2B2B;">
+          <video id="overviewVideoPlayer" controls="" playsinline="" preload="metadata" poster="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp?v=1790786325000_v1" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius: 4px; background:#2B2B2B; display:block;">
             <source src="../../style-guide/assets/brigade_belvedere_walkthrough.mp4?v=1790786325000_v1" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -1592,7 +1592,7 @@ body.property-page .header-nav .mobile-toggle {
 
 
 
-<section id="floor-plans" class="prop-section prop-fp-fold-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="floor-plans" class="prop-section prop-fp-fold-section" style="background:#FAF8F5; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <style>
     @media (min-width: 901px) {
       .prop-fp-fold-section {
@@ -1724,7 +1724,7 @@ body.property-page .header-nav .mobile-toggle {
     }
     .evergreen-tower-btn {
       background: #FFFFFF;
-      border: 1px solid rgba(47, 59, 66, 0.08);
+      border: 0.5px solid rgba(47, 59, 66, 0.08);
       color: #2F3B42;
       font-family: 'Manrope', sans-serif;
       font-size: 0.88rem;
@@ -1756,7 +1756,7 @@ body.property-page .header-nav .mobile-toggle {
     }
     .evergreen-chip-btn {
       background: #FFFFFF;
-      border: 1px solid rgba(47, 59, 66, 0.08);
+      border: 0.5px solid rgba(47, 59, 66, 0.08);
       color: #374151;
       font-family: 'Manrope', sans-serif;
       font-size: 0.82rem;
@@ -1784,7 +1784,7 @@ body.property-page .header-nav .mobile-toggle {
     .evergreen-chip-btn.active {
       background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
       color: #FFFFFF !important;
-      border: 1px solid #9f5334 !important;
+      border: 0.5px solid #9f5334 !important;
       font-weight: 700 !important;
       box-shadow: 0 2px 6px rgba(159, 83, 52, 0.2) !important;
     }
@@ -1797,7 +1797,7 @@ body.property-page .header-nav .mobile-toggle {
       border-radius: 4px !important;
       background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
       color: #FFFFFF !important;
-      border: 1px solid #9f5334 !important;
+      border: 0.5px solid #9f5334 !important;
       cursor: pointer !important;
       box-shadow: 0 3px 10px rgba(125, 68, 42, 0.22) !important;
       transition: all 0.2s ease !important;
@@ -1810,7 +1810,7 @@ body.property-page .header-nav .mobile-toggle {
     }
     .evergreen-zoom-btn {
       background: #FBF6F3;
-      border: 1px solid rgba(47, 59, 66, 0.08);
+      border: 0.5px solid rgba(47, 59, 66, 0.08);
       color: #2F3B42;
       font-weight: 700;
       width: 30px;
@@ -1852,7 +1852,7 @@ body.property-page .header-nav .mobile-toggle {
     <!-- Controls Bar (Strict Fixed 44px Height - Zero Jerk) -->
     <div class="evergreen-controls-bar">
       <!-- Primary Selector: BHK Tabs -->
-      <div class="evergreen-tower-selector-bar" style="display:inline-flex; align-items:center; background:#EAE4DC; padding:3px; border-radius:8px; gap:2px;">
+      <div class="evergreen-tower-selector-bar" style="display:inline-flex; align-items:center; background:#EAE4DC; padding:3px; border-radius: 4px; gap:2px;">
       <button type="button" class="evergreen-tower-btn active" onclick="songbirdSelectCategory('bhk1', this)" style="border:none;">1 BHK</button>
       <button type="button" class="evergreen-tower-btn" onclick="songbirdSelectCategory('bhk2', this)" style="border:none;">2 BHK</button>
       <button type="button" class="evergreen-tower-btn" onclick="songbirdSelectCategory('bhk3', this)" style="border:none;">3 BHK</button>
@@ -1871,10 +1871,10 @@ body.property-page .header-nav .mobile-toggle {
     <div class="evergreen-main-grid">
       
       <!-- LEFT COLUMN: Visual Hero & Image Viewer -->
-      <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:6px; padding:clamp(0.85rem, 1.4vh, 1.1rem) clamp(0.95rem, 1.4vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:clamp(0.85rem, 1.4vh, 1.1rem) clamp(0.95rem, 1.4vw, 1.25rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
         
         <!-- Viewer Top Bar -->
-        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem 0.75rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; flex-wrap:wrap;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem 0.75rem; margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:0.5px solid #F0ECE6; flex-wrap:wrap;">
           <div style="font-size:0.75rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Josefin Sans',sans-serif; flex:1 1 auto; white-space:nowrap; min-width:140px;">
             SANCTIONED ARCHITECTURAL BLUEPRINT
           </div>
@@ -1885,7 +1885,7 @@ body.property-page .header-nav .mobile-toggle {
             <button type="button" class="evergreen-zoom-btn" onclick="window.songbirdZoom(-0.15)" title="Zoom Out">
               −
             </button>
-            <button type="button" onclick="window.songbirdResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; outline:none; white-space:nowrap; flex-shrink:0;">
+            <button type="button" onclick="window.songbirdResetZoom()" title="Reset Zoom" style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); color:#7D442A; font-size:0.75rem; font-weight:700; padding:0 0.65rem; height:30px; border-radius:4px; cursor:pointer; font-family:'Manrope',sans-serif; outline:none; white-space:nowrap; flex-shrink:0;">
               Reset
             </button>
             <button type="button" class="evergreen-fullscreen-btn" onclick="window.songbirdTriggerFullscreen()" style="background:#182A3D; color:#FFFFFF; border:none; padding:0 0.75rem; height:30px; font-size:0.78rem; font-weight:600; border-radius:4px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; font-family:'Manrope',sans-serif; outline:none; white-space:nowrap !important; flex-shrink:0 !important;">
@@ -1907,7 +1907,7 @@ body.property-page .header-nav .mobile-toggle {
       </div>
 
       <!-- RIGHT COLUMN: PLAN AT A GLANCE Card -->
-      <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:6px; padding:clamp(0.95rem, 1.6vh, 1.25rem) clamp(1.05rem, 1.5vw, 1.35rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
+      <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:clamp(0.95rem, 1.6vh, 1.25rem) clamp(1.05rem, 1.5vw, 1.35rem); box-shadow:0 4px 16px rgba(15, 31, 61, 0.04); display:flex; flex-direction:column; justify-content:space-between;">
         <div>
           <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.12em; color:#7D442A; text-transform:uppercase; margin-bottom:0.2rem; font-family:'Josefin Sans',sans-serif;">
             PLAN AT A GLANCE
@@ -1921,20 +1921,20 @@ body.property-page .header-nav .mobile-toggle {
           </div>
 
           <!-- Key Metrics Grid (2x2 Grid) -->
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.55rem; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); padding-bottom:clamp(0.65rem, 1.2vh, 0.95rem); border-bottom:1px solid #F0ECE6;">
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.55rem; margin-bottom:clamp(0.65rem, 1.2vh, 0.95rem); padding-bottom:clamp(0.65rem, 1.2vh, 0.95rem); border-bottom:0.5px solid #F0ECE6;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
               <div id="songbirdGlanceSbua" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">659 sq.ft.</div>
               <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">SBUA</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
               <div id="songbirdGlanceCarpet" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">419 sq.ft.</div>
               <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Carpet Area</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
               <div id="songbirdGlanceBalcony" style="font-size:1.08rem; font-weight:800; color:#182A3D; font-family:'Manrope',sans-serif; line-height:1.2;">28 sq.ft.</div>
               <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Balcony &amp; Utility</div>
             </div>
-            <div style="background:#FBF6F3; border:1px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(125, 68, 42,0.14); border-radius:4px; padding:0.45rem 0.65rem;">
               <div id="songbirdGlanceFacing" style="font-size:1.05rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif; line-height:1.2;">East Facing</div>
               <div style="font-size:0.66rem; color:#7D442A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; margin-top:0.1rem;">Orientation</div>
             </div>
@@ -1954,8 +1954,8 @@ body.property-page .header-nav .mobile-toggle {
             </div>
             
             <!-- Dynamic Dual-Tone Progress Bar -->
-            <div style="margin-top:0.35rem; width:100%; height:6px; background:#0F1B24; border-radius:3px; overflow:hidden; display:flex;">
-              <div id="songbirdGlanceEffBar" style="width:63.6%; height:100%; background:#22C55E; border-radius:3px 0 0 3px; transition:width 0.3s ease;"></div>
+            <div style="margin-top:0.35rem; width:100%; height:6px; background:#0F1B24; border-radius: 4px; overflow:hidden; display:flex;">
+              <div id="songbirdGlanceEffBar" style="width:63.6%; height:100%; background:#22C55E; border-radius: 4px 0 0 3px; transition:width 0.3s ease;"></div>
               <div id="songbirdGlanceNonCarpetBar" style="width:36.4%; height:100%; background:#E2B77B; border-radius:0 3px 3px 0; transition:width 0.3s ease;"></div>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.66rem; color:rgba(255,255,255,0.7); margin-top:0.35rem; font-family:'Manrope',sans-serif;">
@@ -2292,7 +2292,7 @@ body.property-page .header-nav .mobile-toggle {
 
 
 
-<section id="configuration" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="configuration" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <div class="prop-container">
     <div style="margin-bottom:1.5rem;">
       <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">
@@ -2308,40 +2308,40 @@ body.property-page .header-nav .mobile-toggle {
     </div>
 
     <!-- Scrollable Table -->
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:2rem;">
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:2rem;">
         <table style="width:100%; min-width:640px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem;">
           <thead>
             <tr style="background:#FAF8F5;">
-              <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight:800; color:#2F3B42; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Configuration</th>
-              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Saleable / SBA Range</th>
-              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Indicative ₹/sq.ft.</th>
-              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">All-inclusive Price Range</th>
+              <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight:800; color:#2F3B42; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Configuration</th>
+              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Saleable / SBA Range</th>
+              <th style="padding:0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Indicative ₹/sq.ft.</th>
+              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">All-inclusive Price Range</th>
             </tr>
           </thead>
           <tbody style="color:#374151;">
             <tr style="transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">1 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">659–976 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,310–16,296</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.07–1.59 Cr</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">1 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">659–976 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,310–16,296</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹1.07–1.59 Cr</td>
             </tr>
             <tr style="background:#FAF8F5; transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">2 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,174–1,526 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,291–16,285</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.91–2.49 Cr</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">2 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">1,174–1,526 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,291–16,285</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹1.91–2.49 Cr</td>
             </tr>
             <tr style="transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">3 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,461–1,951 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,286–16,281</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹2.38–3.18 Cr</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">3 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">1,461–1,951 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,286–16,281</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹2.38–3.18 Cr</td>
             </tr>
             <tr style="background:#FAF8F5; transition:background 0.2s;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">3 BHK + Study</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,991–2,037 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,281–16,280</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹3.24–3.32 Cr</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">3 BHK + Study</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">1,991–2,037 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF; color:#7D442A; font-weight:700;">₹16,281–16,280</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹3.24–3.32 Cr</td>
             </tr>
             <tr style="transition:background 0.2s;">
               <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2F3B42;">4 BHK</td>
@@ -2353,7 +2353,7 @@ body.property-page .header-nav .mobile-toggle {
         </table>
       </div>
 
-    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem 1.25rem;">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem 1.25rem;">
       <div>
         <div style="font-size:0.95rem; font-weight:700; color:#2F3B42; font-family:'Manrope',sans-serif;">Request Exact Tower &amp; Floor-Wise Allocation</div>
         <div style="font-size:0.85rem; color:#374151; font-family:'Manrope',sans-serif;">Get unit availability status, high-floor premium breakdown, and payment milestones.</div>
@@ -2367,7 +2367,7 @@ body.property-page .header-nav .mobile-toggle {
 
 
 
-<section id="cost-sheet" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="cost-sheet" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <div class="prop-container">
     <div class="ak-card-dossier">
       <div style="margin-bottom:1.75rem;">
@@ -2410,7 +2410,7 @@ body.property-page .header-nav .mobile-toggle {
           height: 34px;
           border-radius: 50%;
           background: #FAF8F5;
-          border: 1px solid rgba(47, 59, 66, 0.08);
+          border: 0.5px solid rgba(47, 59, 66, 0.08);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -2436,7 +2436,7 @@ body.property-page .header-nav .mobile-toggle {
         }
       </style>
       <div class="price-journey-grid">
-        <div class="price-journey-card" style="background:#FAF8F5; border: 1px solid rgba(47, 59, 66, 0.08);">
+        <div class="price-journey-card" style="background:#FAF8F5; border: 0.5px solid rgba(47, 59, 66, 0.08);">
           <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.35rem;">STAGE 1 • BASE QUOTE</span>
           <div style="font-size:1.2rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹11,000–19,000/sq.ft.</div>
           <div style="font-size:0.75rem; color:#667085; margin-top:0.35rem;">Advertised Base Rate</div>
@@ -2448,7 +2448,7 @@ body.property-page .header-nav .mobile-toggle {
           </div>
         </div>
 
-        <div class="price-journey-card" style="background:#FAF8F5; border:1px solid rgba(125, 68, 42, 0.3);">
+        <div class="price-journey-card" style="background:#FAF8F5; border:0.5px solid rgba(125, 68, 42, 0.3);">
           <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.35rem;">STAGE 2 • LOADED RATE</span>
           <div style="font-size:1.2rem; font-weight:800; color:#7D442A; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹16.2K–₹16.3K/sq.ft.</div>
           <div style="font-size:0.75rem; color:#667085; margin-top:0.35rem;">Includes Infra, Club &amp; Parking</div>
@@ -2460,7 +2460,7 @@ body.property-page .header-nav .mobile-toggle {
           </div>
         </div>
 
-        <div class="price-journey-card" style="background:#2F3B42; border:1px solid #7D442A; box-shadow:0 4px 16px rgba(47, 59, 66, 0.16);">
+        <div class="price-journey-card" style="background:#2F3B42; border:0.5px solid #7D442A; box-shadow:0 4px 16px rgba(47, 59, 66, 0.16);">
           <span style="font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#D4AF37; margin-bottom:0.35rem;">STAGE 3 • PROPERTY OUTLAY</span>
           <div style="font-size:1.35rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹0.93–₹2.79 Cr</div>
           <div style="font-size:0.72rem; color:rgba(255,255,255,0.75); margin-top:0.35rem;">+ Stamp Duty &amp; Reg (~6.6%)</div>
@@ -2472,8 +2472,8 @@ body.property-page .header-nav .mobile-toggle {
         <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; color:#2F3B42; margin-top:0; margin-bottom:1rem; line-height:1.25;">What Gets Added to the Headline Price?</h3>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem;">
           <!-- Column 1: Project Charges -->
-          <div style="background:#FAF8F5; border:1px solid rgba(125, 68, 42, 0.2); border-radius: 4px; padding:1.35rem;">
-            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.85rem; border-bottom:1px solid rgba(125, 68, 42, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FAF8F5; border:0.5px solid rgba(125, 68, 42, 0.2); border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.85rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); display:inline-block;"></span> PROJECT INCLUSIONS
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.92rem; line-height:1.6; color:#374151; display:flex; flex-direction:column; gap:0.65rem;">
@@ -2485,8 +2485,8 @@ body.property-page .header-nav .mobile-toggle {
           </div>
 
           <!-- Column 2: Unit-Dependent Premiums -->
-          <div style="background:#FAF8F5; border:1px solid rgba(125, 68, 42, 0.2); border-radius: 4px; padding:1.35rem;">
-            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.85rem; border-bottom:1px solid rgba(125, 68, 42, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FAF8F5; border:0.5px solid rgba(125, 68, 42, 0.2); border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; margin-bottom:0.85rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.15); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); display:inline-block;"></span> UNIT-DEPENDENT PREMIUMS
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.92rem; line-height:1.6; color:#374151; display:flex; flex-direction:column; gap:0.65rem;">
@@ -2497,8 +2497,8 @@ body.property-page .header-nav .mobile-toggle {
           </div>
 
           <!-- Column 3: Government Charges — Additional -->
-          <div style="background:#FAF8F5; border:1px solid rgba(125, 68, 42, 0.25); border-radius: 4px; padding:1.35rem;">
-            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#B76E00; margin-bottom:0.85rem; border-bottom:1px solid rgba(183, 110, 0, 0.2); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FAF8F5; border:0.5px solid rgba(125, 68, 42, 0.25); border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#B76E00; margin-bottom:0.85rem; border-bottom:0.5px solid rgba(183, 110, 0, 0.2); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="width:6px; height:6px; border-radius:50%; background:#B76E00; display:inline-block;"></span> GOVERNMENT STATUTORY LEVIES
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.92rem; line-height:1.6; color:#374151; display:flex; flex-direction:column; gap:0.65rem;">
@@ -2532,29 +2532,29 @@ body.property-page .header-nav .mobile-toggle {
 
       
 <!-- Interactive Itemized Typology Cost Estimator -->
-      <div class="evergreen-cost-card-outer" style="background:#FAF8F5; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
+      <div class="evergreen-cost-card-outer" style="background:#FAF8F5; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:clamp(1.25rem, 3vw, 1.75rem); margin-bottom:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
           <div>
             <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0;">Select Configuration for Cost Breakdown</h4>
           </div>
           <!-- Selector Pills -->
           <div id="evergreenCostTabs" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:1px solid #7D442A; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">1 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">2 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK + Study</button>
-            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK</button>
+            <button type="button" class="ak-cost-tab active" onclick="selectEvergreenCostTab('1bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border:0.5px solid #7D442A; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; cursor:pointer; font-family:'Manrope',sans-serif;">1 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('2bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">2 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('3bhk_study', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">3 BHK + Study</button>
+            <button type="button" class="ak-cost-tab" onclick="selectEvergreenCostTab('4bhk', this)" style="padding:0.45rem 0.85rem; font-size:0.82rem; font-weight:700; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); background:#FFFFFF; color:#2F3B42; cursor:pointer; font-family:'Manrope',sans-serif;">4 BHK</button>
           </div>
         </div>
 
         <!-- Dynamic Content Box -->
-        <div id="evergreenCostBreakdownContent" style="background:#FFFFFF; border:1px solid #EAE6DF; border-radius: 4px; padding:1.25rem;">
+        <div id="evergreenCostBreakdownContent" style="background:#FFFFFF; border:0.5px solid #EAE6DF; border-radius: 4px; padding:1.25rem;">
           <!-- Injected via JavaScript -->
         </div>
       </div>
 
       <!-- Concierge Callout Strip -->
-      <div style="background:linear-gradient(135deg, #FAF8F5 0%, #F5F0EB 100%); border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+      <div style="background:linear-gradient(135deg, #FAF8F5 0%, #F5F0EB 100%); border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
         <div>
           <div style="font-weight:800; font-size:0.95rem; color:#2F3B42; margin-bottom:0.2rem;">Looking for an exact tower &amp; floor cost sheet?</div>
           <div style="font-size:0.85rem; color:#374151;">Get unit-level quotation including precise floor-rise, preferred view PLC, and payment milestone schedule.</div>
@@ -2565,7 +2565,7 @@ body.property-page .header-nav .mobile-toggle {
       </div>
 
       <!-- Mandatory Disclaimer -->
-      <div style="font-size:0.82rem; color:#667085; line-height:1.5; border-top: 1px solid rgba(47, 59, 66, 0.08); padding-top:1rem;">
+      <div style="font-size:0.82rem; color:#667085; line-height:1.5; border-top: 0.5px solid rgba(47, 59, 66, 0.08); padding-top:1rem;">
         Pricing shown is based on <span class="brand-inline-text">acre&amp;key</span>'s independent research and prevailing builder cost benchmarks. Final pricing varies by unit number, floor height, orientation, PLC, GST rate applicable at billing, and developer policies. Buyers should verify the latest official builder cost sheet before booking.
       </div>
     </div>
@@ -2633,12 +2633,12 @@ body.property-page .header-nav .mobile-toggle {
     tabs.forEach(function(t) {
       t.style.background = '#FFFFFF';
       t.style.color = '#2F3B42';
-      t.style.border = '1px solid #DDD7CF';
+      t.style.border = '0.5px solid #DDD7CF';
     });
     if (btn) {
       btn.style.background = '#7D442A';
       btn.style.color = '#FFFFFF';
-      btn.style.border = '1px solid #7D442A';
+      btn.style.border = '0.5px solid #7D442A';
     }
 
     var item = costData[key] || costData['1bhk'];
@@ -2646,13 +2646,13 @@ body.property-page .header-nav .mobile-toggle {
     if (!container) return;
 
     container.innerHTML = 
-      '<div style="margin-bottom:0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #EAE6DF;">' +
+      '<div style="margin-bottom:0.75rem; padding-bottom:0.5rem; border-bottom:0.5px solid #EAE6DF;">' +
         '<div style="font-family:\'Cormorant Garamond\',serif; font-size:1.25rem; font-weight:700; color:#2F3B42; line-height:1.2;">' + item.title + '</div>' +
       '</div>' +
 
       '<div style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:0.85rem; font-family:\'Manrope\',sans-serif;">' +
         
-        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:0.5px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
             '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">1. Base Construction</div>' +
             '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.baseSub + '</div>' +
@@ -2660,7 +2660,7 @@ body.property-page .header-nav .mobile-toggle {
           '<div style="font-size:0.92rem; font-weight:800; color:#2F3B42; white-space:nowrap; flex-shrink:0;">' + item.base + '</div>' +
         '</div>' +
 
-        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:0.5px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
             '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">2. Infra, Club &amp; Parking</div>' +
             '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.infraSub + '</div>' +
@@ -2668,7 +2668,7 @@ body.property-page .header-nav .mobile-toggle {
           '<div style="font-size:0.92rem; font-weight:800; color:#2F3B42; white-space:nowrap; flex-shrink:0;">' + item.infra + '</div>' +
         '</div>' +
 
-        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:1px solid #F0ECE6; gap:0.5rem;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.45rem; border-bottom:0.5px solid #F0ECE6; gap:0.5rem;">' +
           '<div>' +
             '<div style="font-size:0.82rem; font-weight:700; color:#2F3B42;">3. Statutory Taxes</div>' +
             '<div style="font-size:0.73rem; color:#667085; margin-top:1px;">' + item.taxSub + '</div>' +
@@ -2697,12 +2697,12 @@ body.property-page .header-nav .mobile-toggle {
 </script>
 
 
-<section id="amenities" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="amenities" class="prop-section" style="background:#FAF8F5; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <div class="prop-container">
     <div class="ak-card-dossier">
       
       <!-- Section Heading -->
-      <div style="margin-bottom:1.35rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:0.9rem;">
+      <div style="margin-bottom:1.35rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:0.9rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0; line-height:1.2;">A 10.7-Acre High-Rise Community at Budigere Cross</h2>
         <p style="font-size:0.92rem; line-height:1.6; color:#374151; margin:0;">~~75,000 sq.ft. dual clubhouse hubs and 40+ resort-grade wellness, sports, and social precincts.</p>
       </div>
@@ -2711,9 +2711,9 @@ body.property-page .header-nav .mobile-toggle {
       <div class="ak-amenities-cat-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin-bottom:1.25rem;">
         
         <!-- Category 1: FITNESS & WELLNESS -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
               <i data-feather="heart" style="width:15px; height:15px; color:#7D442A;"></i>
               <h3 style="font-size:0.88rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#2F3B42; margin:0; font-family:'Manrope',sans-serif;">FITNESS &amp; AQUATICS</h3>
             </div>
@@ -2728,9 +2728,9 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Category 2: SPORTS & RECREATION -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
               <i data-feather="activity" style="width:15px; height:15px; color:#7D442A;"></i>
               <h3 style="font-size:0.88rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#2F3B42; margin:0; font-family:'Manrope',sans-serif;">SPORTS &amp; ATHLETICS</h3>
             </div>
@@ -2745,9 +2745,9 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Category 3: FAMILY & SOCIAL -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
               <i data-feather="users" style="width:15px; height:15px; color:#7D442A;"></i>
               <h3 style="font-size:0.88rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#2F3B42; margin:0; font-family:'Manrope',sans-serif;">SOCIAL &amp; ENTERTAINMENT</h3>
             </div>
@@ -2762,9 +2762,9 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Category 4: OUTDOORS & CONVENIENCE -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:1px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem; border-bottom:0.5px solid rgba(125, 68, 42, 0.2); padding-bottom:0.45rem;">
               <i data-feather="sun" style="width:15px; height:15px; color:#7D442A;"></i>
               <h3 style="font-size:0.88rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#2F3B42; margin:0; font-family:'Manrope',sans-serif;">ECO-LIVING &amp; CONVENIENCE</h3>
             </div>
@@ -2781,7 +2781,7 @@ body.property-page .header-nav .mobile-toggle {
       </div>
 
       <!-- Action Bar: Download Complete Amenity Dossier -->
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.85rem; background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.9rem 1.25rem; margin-bottom:1rem;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.85rem; background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.9rem 1.25rem; margin-bottom:1rem;">
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div style="width:34px; height:34px; border-radius:50%; background:rgba(125, 68, 42, 0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <i data-feather="file-text" style="width:16px; height:16px; color:#7D442A;"></i>
@@ -2807,10 +2807,10 @@ body.property-page .header-nav .mobile-toggle {
   </div>
 </section>
 
-<section id="location" class="prop-section" style="background:#F5F2EB; border-top:none; border-bottom:1px solid #E5E0D8;">
+<section id="location" class="prop-section" style="background:#F5F2EB; border-top:none; border-bottom:0.5px solid #E5E0D8;">
   <div class="prop-container">
     <div class="ak-card-dossier">
-      <div style="margin-bottom:1.5rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+      <div style="margin-bottom:1.5rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight:700; color:#2F3B42; margin:0 0 0.4rem 0; line-height:1.2;">
           Tech Corridor Catchment vs Peak-Hour Traffic Realities
         </h2>
@@ -2828,17 +2828,17 @@ body.property-page .header-nav .mobile-toggle {
           <i data-feather="arrow-right" style="width:13px; height:13px;"></i>
           <span>Swipe horizontally on mobile to view distance &amp; typical drive time</span>
         </div>
-        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF;">
+        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF;">
           <table style="width:100%; min-width:540px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.9rem;">
             <thead>
               <tr style="background:#FBF6F3;">
-                <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Key Destination &amp; Corridor</th>
-                <th style="padding:0.9rem 1rem; font-weight:800; color:#2F3B42; border-bottom: 1px solid rgba(47, 59, 66, 0.08); text-align:center;">Distance</th>
-                <th style="padding:0.9rem 1.25rem; font-weight:800; color:#7D442A; border-bottom: 1px solid rgba(47, 59, 66, 0.08); text-align:center;">Typical Drive</th>
+                <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Key Destination &amp; Corridor</th>
+                <th style="padding:0.9rem 1rem; font-weight:800; color:#2F3B42; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); text-align:center;">Distance</th>
+                <th style="padding:0.9rem 1.25rem; font-weight:800; color:#7D442A; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); text-align:center;">Typical Drive</th>
               </tr>
             </thead>
             <tbody style="color:#374151;">
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Brigade Signature Towers</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Commercial &amp; retail precinct via Old Madras Road / NH-75</div>
@@ -2846,7 +2846,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~2.2 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~4–6 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Old Madras Road / NH-75</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Arterial highway connecting East Bengaluru to arterial hubs</div>
@@ -2854,7 +2854,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~3 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~5–8 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Outer Ring Road (ORR)</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Major orbital corridor connecting Marathahalli &amp; Hebbal</div>
@@ -2862,7 +2862,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~8 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~15–20 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">KR Puram Railway / Metro</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Major transit interchange &amp; Namma Metro Purple Line station</div>
@@ -2870,7 +2870,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~10–12 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~20–30 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Whitefield / ITPL Corridor</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Primary IT employment zone via Hoodi / Hope Farm link</div>
@@ -2878,7 +2878,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~12–14 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~20–30 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Bagmane Tech Park</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Major tech park hub at C.V. Raman Nagar / Outer Ring Road</div>
@@ -2886,7 +2886,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~14 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~30–35 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">EPIP Zone, Whitefield</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">Established industrial &amp; IT campus enclave</div>
@@ -2894,7 +2894,7 @@ body.property-page .header-nav .mobile-toggle {
                 <td style="padding:0.85rem 1rem; text-align:center; font-weight:700; color:#2F3B42;">~15 km</td>
                 <td style="padding:0.85rem 1.25rem; text-align:center;"><span style="background:#F0EBE1; color:#2F3B42; padding:0.25rem 0.6rem; border-radius: 4px; font-weight:700; font-size:0.82rem; display:inline-block;">~30–35 min</span></td>
               </tr>
-              <tr style="border-bottom:1px solid #EAE6DF;">
+              <tr style="border-bottom:0.5px solid #EAE6DF;">
                 <td style="padding:0.85rem 1.25rem;">
                   <div style="font-weight:700; color:#2F3B42;">Manyata Tech Park</div>
                   <div style="font-size:0.75rem; color:#667085; font-weight:500;">North Bengaluru IT hub via Hennur / Ring Road connection</div>
@@ -2919,22 +2919,22 @@ body.property-page .header-nav .mobile-toggle {
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
         
         <!-- Schools Card -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#7D442A; text-transform:uppercase; margin-bottom:0.75rem; font-family:'Josefin Sans',sans-serif; letter-spacing:0.06em;">TOP REPUTED SCHOOLS</div>
           <div style="display:flex; flex-direction:column; gap:0.55rem; font-size:0.85rem; color:#374151; font-family:'Manrope',sans-serif;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Auxilium School</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~1.5–2 km · ~5–7 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">New Baldwin International School</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~3–4 km · ~8–12 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">VIBGYOR High School</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~3.2 km · ~8–12 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Narayana Olympiad School</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~3.5 km · ~8–12 min</span>
             </div>
@@ -2946,22 +2946,22 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Healthcare Card -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#7D442A; text-transform:uppercase; margin-bottom:0.75rem; font-family:'Josefin Sans',sans-serif; letter-spacing:0.06em;">HEALTHCARE &amp; EMERGENCY</div>
           <div style="display:flex; flex-direction:column; gap:0.55rem; font-size:0.85rem; color:#374151; font-family:'Manrope',sans-serif;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Sathya Sai Orthopaedic &amp; Multispeciality Hospital</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~4 km · ~8–12 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Omega Multispeciality Hospital</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~4.1 km · ~10–12 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">East Point Hospital</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~6–7 km · ~12–18 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Aster CMI Hospital</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~9.5 km · ~18–25 min</span>
             </div>
@@ -2973,22 +2973,22 @@ body.property-page .header-nav .mobile-toggle {
         </div>
 
         <!-- Retail Card -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius:4px; padding:1.15rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#7D442A; text-transform:uppercase; margin-bottom:0.75rem; font-family:'Josefin Sans',sans-serif; letter-spacing:0.06em;">RETAIL &amp; ENTERTAINMENT</div>
           <div style="display:flex; flex-direction:column; gap:0.55rem; font-size:0.85rem; color:#374151; font-family:'Manrope',sans-serif;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Decathlon – Old Madras Road</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~0.6–1 km · ~2–5 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Orion Uptown Mall</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~2.6 km · ~5–10 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">The Galleria Mall</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~2.6 km · ~7–10 min</span>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:1px solid rgba(221,215,207,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:0.5rem; padding-bottom:0.4rem; border-bottom:0.5px solid rgba(221,215,207,0.5);">
               <span style="font-weight:600; line-height:1.35; color:#2F3B42;">Nexus Shantiniketan</span>
               <span style="background:#F0EBE1; color:#2F3B42; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:1px;">~12–14 km · ~20–30 min</span>
             </div>
@@ -3015,7 +3015,7 @@ body.property-page .header-nav .mobile-toggle {
       </p>
 
       <!-- Location Action Bar -->
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.85rem; background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1rem 1.25rem;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.85rem; background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1rem 1.25rem;">
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div style="width:34px; height:34px; border-radius:50%; background:rgba(125, 68, 42, 0.12); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <i data-feather="map-pin" style="width:16px; height:16px; color:#7D442A;"></i>
@@ -3034,9 +3034,9 @@ body.property-page .header-nav .mobile-toggle {
 </section>
 
 <!-- Final Catch-All Brochure Strip -->
-<section style="background:#FAF8F5; border-bottom:1px solid #E5E0D8; padding:clamp(2rem, 4vh, 3.5rem) 0;">
+<section style="background:#FAF8F5; border-bottom:0.5px solid #E5E0D8; padding:clamp(2rem, 4vh, 3.5rem) 0;">
   <div class="prop-container">
-    <div style="background:#2F3B42; border-radius:6px; padding:clamp(1.5rem, 3vw, 2.5rem); display:flex; flex-direction:column; align-items:center; text-align:center; box-shadow:0 8px 24px rgba(47, 59, 66, 0.15);">
+    <div style="background:#2F3B42; border-radius: 4px; padding:clamp(1.5rem, 3vw, 2.5rem); display:flex; flex-direction:column; align-items:center; text-align:center; box-shadow:0 8px 24px rgba(47, 59, 66, 0.15);">
       <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.75rem, 2.2vw, 2.2rem); font-weight:700; color:#FFFFFF; margin:0 0 0.5rem 0; line-height:1.2;">Need the complete project dossier?</h2>
       <p style="font-size:0.95rem; line-height:1.6; color:rgba(255,255,255,0.85); margin:0 0 1.5rem 0; max-width:600px; font-family:'Manrope',sans-serif;">
         Download the official Brigade Belvedere brochure. Includes high-resolution masterplan, detailed floor configurations, and the complete 40+ amenity list.
@@ -3053,7 +3053,7 @@ body.property-page .header-nav .mobile-toggle {
 
 
 <!-- STICKY MOBILE CONVERSION TRAY (<= 900px) -->
-<div class="prop-mobile-sticky-bar" style="position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,0.98); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top: 1px solid rgba(47, 59, 66, 0.08); padding:0.5rem 0.85rem; z-index:9999; align-items:center; justify-content:center; box-shadow:0 -4px 16px rgba(0,0,0,0.08); box-sizing:border-box;">
+<div class="prop-mobile-sticky-bar" style="position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,0.98); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top: 0.5px solid rgba(47, 59, 66, 0.08); padding:0.5rem 0.85rem; z-index:9999; align-items:center; justify-content:center; box-shadow:0 -4px 16px rgba(0,0,0,0.08); box-sizing:border-box;">
   <button type="button" onclick="window.openModal('brochure', 'mobile_sticky_brochure'); return false;" class="sd-btn-gold" style="width:100%; height:44px; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; font-size:0.92rem; font-weight:700; border-radius:4px; border:none; box-shadow:0 3px 12px rgba(125,68,42,0.3); cursor:pointer; font-family:'Manrope',sans-serif; text-decoration:none;">
     <span>Download Brochure →</span>
   </button>
@@ -3202,7 +3202,7 @@ function updateAkGalleryUI() {
       topLeft.style.webkitBackdropFilter = 'blur(8px)';
       topLeft.style.padding = '10px 14px';
       topLeft.style.borderRadius = '6px';
-      topLeft.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
+      topLeft.style.boxShadow = '0 4px 12px rgba(20, 29, 36, 0.08)';
     } else {
       topLeft.style.background = 'transparent';
       topLeft.style.backdropFilter = 'none';
@@ -3386,7 +3386,7 @@ function akGallerySelect(idx) {
 }
 </style>
 <div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(13, 27, 36,0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
-  <div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius: 4px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
+  <div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative; box-shadow:0 24px 60px rgba(13,27,36,0.28); box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
     <button type="button" class="ak-score-modal-close" onclick="closeAkScoreModal();" style="position:absolute; top:1rem; right:1rem; background:rgba(13, 27, 36,0.06); border:none; width:30px; height:30px; border-radius:50%; font-size:1.2rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s ease;" aria-label="Close Score Breakup Modal" title="Close">×</button>
     
     <div style="margin-bottom:0.75rem; padding-right:2.5rem;">
@@ -3396,7 +3396,7 @@ function akGallerySelect(idx) {
 
     <table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope', sans-serif;">
       <thead>
-        <tr style="border-bottom: 1px solid rgba(47, 59, 66, 0.08);">
+        <tr style="border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">
           <th style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:#59616B; padding-bottom:0.4rem; font-weight:800;">Audit Parameter</th>
           <th style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:#59616B; padding-bottom:0.4rem; text-align:right; font-weight:800; padding-right:0.85rem;">Score</th>
           <th style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:#59616B; padding-bottom:0.4rem; text-align:right; font-weight:800; width:88px;">Rating</th>
@@ -3404,103 +3404,103 @@ function akGallerySelect(idx) {
       </thead>
       <tbody>
         <!-- Builder -->
-        <tr style="border-bottom:1px solid #F4F1EA;">
+        <tr style="border-bottom:0.5px solid #F4F1EA;">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Builder</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">Listed Developer</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">Listed Developer</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Developer solvency, execution track record &amp; market standing</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">4.50 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:90%; height:100%; background:#1B5E20; border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:90%; height:100%; background:#1B5E20; border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
 
         <!-- Approvals -->
-        <tr style="border-bottom:1px solid #F4F1EA;">
+        <tr style="border-bottom:0.5px solid #F4F1EA;">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Approvals</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">RERA Validated</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">RERA Validated</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Clean land title, sanction plans &amp; PRM/KA/RERA registration</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">4.00 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:80%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:80%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
 
         <!-- Location -->
-        <tr style="border-bottom:1px solid #F4F1EA;">
+        <tr style="border-bottom:0.5px solid #F4F1EA;">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Location</span>
-              <span style="background:#FBF6F3; color:#7D442A; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">Budigere Cross / NH75</span>
+              <span style="background:#FBF6F3; color:#7D442A; border:0.5px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">Budigere Cross / NH75</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Direct NH75 access vs distance to operational metro</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">3.10 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:62%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:62%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
 
         <!-- Masterplan -->
-        <tr style="border-bottom:1px solid #F4F1EA;">
+        <tr style="border-bottom:0.5px solid #F4F1EA;">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Masterplan</span>
-              <span style="background:#FBF6F3; color:#7D442A; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">High Density</span>
+              <span style="background:#FBF6F3; color:#7D442A; border:0.5px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">High Density</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">10.7-acre precinct, ~163 homes/acre &amp; ~75,000 sq.ft. clubhouse</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">3.15 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:63%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:63%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
 
         <!-- Delivery -->
-        <tr style="border-bottom:1px solid #F4F1EA;">
+        <tr style="border-bottom:0.5px solid #F4F1EA;">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Delivery</span>
-              <span style="background:#FBF6F3; color:#7D442A; border:1px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">March 2031 Horizon</span>
+              <span style="background:#FBF6F3; color:#7D442A; border:0.5px solid #EADBCE; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">March 2031 Horizon</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">G+43 construction velocity aligned to statutory completion date</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">2.95 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:59%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:59%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
 
         <!-- Liquidity -->
-        <tr style="border-bottom: 1px solid rgba(47, 59, 66, 0.08);">
+        <tr style="border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2F3B42;">Liquidity</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 3px; letter-spacing:0.02em;">Budigere Corridor</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">Budigere Corridor</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Outer Whitefield secondary sales liquidity &amp; rental pool</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2F3B42; text-align:right; padding-right:0.85rem; white-space:nowrap;">3.25 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
-            <div style="width:100%; height:5px; background:#EAEFF5; border-radius:3px; overflow:hidden;">
-              <div style="width:65%; height:100%; background:#1B5E20; border-radius:3px;"></div>
+            <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
+              <div style="width:65%; height:100%; background:#1B5E20; border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
@@ -3508,14 +3508,14 @@ function akGallerySelect(idx) {
     </table>
 
     <!-- Summary Box -->
-    <div style="margin-top:0.75rem; background:#FBF6F3; padding:0.65rem 0.95rem; border-radius: 4px; border:1px solid rgba(125, 68, 42,0.25); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+    <div style="margin-top:0.75rem; background:#FBF6F3; padding:0.65rem 0.95rem; border-radius: 4px; border:0.5px solid rgba(125, 68, 42,0.25); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
       <div>
         <span style="font-size:0.62rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#7D442A; display:block; font-family:'Manrope',sans-serif;">COMPOSITE VERDICT</span>
         <div style="font-weight:800; color:#2F3B42; font-size:0.9rem;"><span class="brand-inline-text">acre&amp;key</span> Overall Score</div>
       </div>
       <div style="display:flex; align-items:center; gap:0.5rem;">
         <span style="background:#1B5E20; color:#FFFFFF; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.04em;">Strong Buy</span>
-        <div style="font-size:1.05rem; font-weight:800; color:#2F3B42; background:#FFFFFF; padding:0.25rem 0.65rem; border-radius: 4px; border: 1px solid rgba(47, 59, 66, 0.08); box-shadow:0 2px 5px rgba(0,0,0,0.04); font-family:'Manrope',sans-serif;">
+        <div style="font-size:1.05rem; font-weight:800; color:#2F3B42; background:#FFFFFF; padding:0.25rem 0.65rem; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); box-shadow:0 2px 5px rgba(0,0,0,0.04); font-family:'Manrope',sans-serif;">
           4.11 <span style="font-size:0.7rem; color:#667085; font-weight:600;">/ 5.0</span>
         </div>
       </div>
@@ -3533,18 +3533,18 @@ function akGallerySelect(idx) {
 
 <!-- Floor Plan Modal -->
 <div id="propFloorPlanModal" class="prop-fp-modal-overlay" onclick="closeFloorPlanModal(event);" style="display:none; position:fixed; inset:0; background:rgba(13,27,36,0.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
-  <div class="prop-fp-modal-content" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius:6px; max-width:860px; width:100%; max-height:92vh; padding:1.25rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.35); box-sizing:border-box; display:flex; flex-direction:column; overflow:hidden;">
+  <div class="prop-fp-modal-content" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius: 4px; max-width:860px; width:100%; max-height:92vh; padding:1.25rem; position:relative; box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1); box-sizing:border-box; display:flex; flex-direction:column; overflow:hidden;">
     <button type="button" class="prop-fp-modal-close" onclick="closeFloorPlanModal();" style="position:absolute; top:0.85rem; right:0.85rem; background:rgba(13,27,36,0.06); border:none; width:34px; height:34px; border-radius:50%; font-size:1.4rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s ease; z-index:10;" aria-label="Close Lightbox">×</button>
 
     <div style="display:flex; align-items:flex-start; justify-content:space-between; width:100%; margin-bottom:0.75rem; padding-right:2.5rem; box-sizing:border-box;">
       <h3 id="propFpModalTitle" class="prop-fp-modal-title" style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem, 1.1rem + 0.5vw, 1.55rem); color:#2F3B42; margin:0; font-weight:700; line-height:1.25; word-break:break-word;">Brigade Belvedere Floor Plan</h3>
     </div>
 
-    <div class="prop-fp-modal-img-wrapper" style="width:100%; height:auto; max-height:65vh; min-height:160px; background:#FAF8F5; border:1px solid #E5E0D8; border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:0.35rem; box-sizing:border-box;">
-      <img id="propFpModalImg" src="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp" alt="Floor Plan View" style="max-width:100%; max-height:62vh; width:auto; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius:2px;" loading="lazy">
+    <div class="prop-fp-modal-img-wrapper" style="width:100%; height:auto; max-height:65vh; min-height:160px; background:#FAF8F5; border:0.5px solid #E5E0D8; border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:0.35rem; box-sizing:border-box;">
+      <img id="propFpModalImg" src="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp" alt="Floor Plan View" style="max-width:100%; max-height:62vh; width:auto; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius: 4px;" loading="lazy">
     </div>
 
-    <div style="margin-top:0.85rem; padding-top:0.5rem; border-top:1px solid #F0ECE6; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.65rem;">
+    <div style="margin-top:0.85rem; padding-top:0.5rem; border-top:0.5px solid #F0ECE6; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.65rem;">
       <span style="font-size:0.82rem; color:#667085; font-weight:500;">Official Sanctioned Architectural Layout</span>
       <button type="button" class="sd-btn-gold" onclick="closeFloorPlanModal(); window.openModal('pricing', 'floorplan_lightbox_cost_sheet');" style="padding:0.65rem 1.35rem; font-size:0.88rem; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer; box-shadow:0 3px 10px rgba(125,68,42,0.25); white-space:nowrap;">
         <span>Get Verified Cost Sheet →</span>
@@ -3580,7 +3580,7 @@ function akGallerySelect(idx) {
   .ak-lightbox-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(20, 29, 36, 0.08) 0%, transparent 100%);
     z-index: 1;
   }
   .ak-lb-ambient {
@@ -3605,7 +3605,7 @@ function akGallerySelect(idx) {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 2.5rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(20, 29, 36, 0.08) 0%, transparent 100%);
   }
   .ak-lb-brand-wrap {
     display: flex;
@@ -3631,11 +3631,11 @@ function akGallerySelect(idx) {
   }
   .ak-lb-counter-pill {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 6px 16px;
-    border-radius: 3px;
+    border-radius: 4px;
     font-family: 'Manrope', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
@@ -3659,7 +3659,7 @@ function akGallerySelect(idx) {
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -3697,7 +3697,7 @@ function akGallerySelect(idx) {
     height: 52px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     color: #FFFFFF;
@@ -3707,7 +3707,7 @@ function akGallerySelect(idx) {
     cursor: pointer;
     z-index: 15;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
   }
   .ak-lb-nav-btn.prev { left: 2.2rem; }
   .ak-lb-nav-btn.next { right: 2.2rem; }
@@ -3742,15 +3742,15 @@ function akGallerySelect(idx) {
     max-height: 100%;
     object-fit: contain;
     border-radius: 4px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
   .ak-lb-media-viewport.floorplan-mode #akLbMainImg {
     background: #FAF8F5;
     padding: 1.5rem;
     border-radius: 4px;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
   }
   .ak-lb-caption-row {
     display: inline-flex;
@@ -3758,12 +3758,12 @@ function akGallerySelect(idx) {
     gap: 0.75rem;
     margin-top: 1rem;
     padding: 0.4rem 1.15rem;
-    border-radius: 30px;
+    border-radius: 4px;
     background: rgba(20, 20, 20, 0.65);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
   }
   .ak-lb-tag-pill {
     font-family: 'Josefin Sans', sans-serif;
@@ -3773,7 +3773,7 @@ function akGallerySelect(idx) {
     text-transform: uppercase;
     color: #7D442A;
     background: rgba(125, 68, 42, 0.22);
-    border: 1px solid rgba(216, 165, 102, 0.35);
+    border: 0.5px solid rgba(216, 165, 102, 0.35);
     padding: 3px 8px;
     border-radius: 4px;
     line-height: 1.2;
@@ -3793,16 +3793,16 @@ function akGallerySelect(idx) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    background: linear-gradient(0deg, rgba(20, 29, 36, 0.08) 0%, transparent 100%);
   }
   .ak-lb-thumb-tray {
     background: rgba(15, 15, 15, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     padding: 6px 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
     display: inline-flex;
     max-width: 90vw;
   }
@@ -3842,7 +3842,7 @@ function akGallerySelect(idx) {
     opacity: 1;
     border-color: #FFFFFF;
     transform: translateY(-3px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
   }
   .ak-lb-footer-hint {
     margin-top: 0.55rem;
@@ -3856,7 +3856,7 @@ function akGallerySelect(idx) {
   }
   .ak-lb-footer-hint kbd {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     border-radius: 4px;
     padding: 1px 5px;
     font-family: inherit;
@@ -4098,7 +4098,7 @@ function akGallerySelect(idx) {
             btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
             btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
             if (media.type === 'video') {
-                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
+                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '" loading="lazy"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(20, 29, 36, 0.08);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(20, 29, 36, 0.08)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
             } else {
                 btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '" loading="lazy">';
             }

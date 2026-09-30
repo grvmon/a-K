@@ -7,13 +7,13 @@
 
 <style>
 html { scroll-behavior: smooth; }
-.prop-snapshot-strip-v2 { border-radius: 8px !important; }
+.prop-snapshot-strip-v2 { border-radius: 4px !important; }
 .prop-snap-num-v2 { font-weight: 600 !important; }
 .prop-snap-lbl-v2 { color: #667085 !important; font-weight: 500 !important; }
 .prop-snap-icon-v2 { color: #2B2B2B !important; }
 .prop-snapshot-item-v2:not(:last-child)::after { right: -0.5rem !important; }
 .ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
-.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 250px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 6px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; }
+.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 250px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.2s, visibility 0.2s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; }
 .ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2F3B42 transparent transparent transparent; }
 .ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
 .local-nav-link {
@@ -53,7 +53,7 @@ html { scroll-behavior: smooth; }
   div[style*="padding:2rem"],
   div[style*="padding: 2rem"] {
     padding: 1.25rem 1rem !important;
-    border-radius: 12px !important;
+    border-radius: 4px !important;
   }
 
   h2, h2[style*="font-size:2rem"], h2[style*="font-size: 2rem"],
@@ -83,7 +83,7 @@ html { scroll-behavior: smooth; }
   .prop-section-nav-sticky {
     top: 68px !important;
     background: #FFFFFF !important;
-    border-bottom: 1px solid rgba(47, 59, 66, 0.08) !important;
+    border-bottom: 0.5px solid rgba(47, 59, 66, 0.08) !important;
     box-shadow: 0 4px 12px rgba(15, 31, 61, 0.05) !important;
     z-index: 990 !important;
   }
@@ -174,7 +174,7 @@ html { scroll-behavior: smooth; }
     height: 32vh;
     min-height: 210px;
     max-height: 270px;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     margin-bottom: 0.85rem;
   }
@@ -192,7 +192,7 @@ html { scroll-behavior: smooth; }
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.65rem;
-    border-radius: 20px;
+    border-radius: 4px;
     backdrop-filter: blur(4px);
   }
   .ak-mobile-share-btn {
@@ -208,7 +208,7 @@ html { scroll-behavior: smooth; }
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1);
   }
 
   .desktop-only-nav { display: none !important; }
@@ -275,8 +275,8 @@ html { scroll-behavior: smooth; }
           Delivery: July 2032 – September 2033 (6 RERA phases)
         </div>
 
-        <div style="background:#FFFFFF; border:1px solid rgba(140, 103, 52, 0.3); border-radius:10px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.05); display:flex; align-items:center; gap:0.85rem;">
-          <div style="background:#2F3B42; color:#9B6248; border-radius:8px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0; border:1px solid rgba(140, 103, 52, 0.35);">
+        <div style="background:#FFFFFF; border:0.5px solid rgba(140, 103, 52, 0.3); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.05); display:flex; align-items:center; gap:0.85rem;">
+          <div style="background:#2F3B42; color:#9B6248; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0; border:0.5px solid rgba(140, 103, 52, 0.35);">
             <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1;">★ 3.24</div>
             <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
           </div>
@@ -286,7 +286,7 @@ html { scroll-behavior: smooth; }
           </div>
         </div>
 
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.95rem; font-size:0.98rem; font-weight:700; border-radius:8px; margin-bottom:0.5rem; text-align:center; background:#8C6734; color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(140, 103, 52, 0.25);">
+        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.95rem; font-size:0.98rem; font-weight:700; border-radius: 4px; margin-bottom:0.5rem; text-align:center; background:#8C6734; color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(140, 103, 52, 0.25);">
           Get Buyer Analysis
         </button>
 
@@ -320,9 +320,9 @@ html { scroll-behavior: smooth; }
 <button class="ak-thumb-btn" onclick="akGallerySelect(1)" aria-label="View photo 2"><img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_night.webp?v=1790786325000_v1" alt="Elevation - Night View"></button>
 <button class="ak-thumb-btn" onclick="akGallerySelect(2)" aria-label="View photo 3"><img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_oneworld_plaza.webp?v=1790786325000_v1" alt="OneWorld Plaza"></button>
 <button class="ak-thumb-btn" onclick="akGallerySelect(3)" aria-label="View photo 4"><img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_world_stadium.webp?v=1790786325000_v1" alt="World Stadium"></button>
-<button class="ak-thumb-btn" onclick="akGallerySelect(4)" aria-label="Play video" style="position:relative;"><img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp?v=1790786325000_v1" alt="SOBHA OneWorld Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.3);"><i data-feather="play-circle" style="color:#FFF; width:24px; height:24px;"></i></div></button>
+<button class="ak-thumb-btn" onclick="akGallerySelect(4)" aria-label="Play video" style="position:relative;"><img src="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp?v=1790786325000_v1" alt="SOBHA OneWorld Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(20, 29, 36, 0.08);"><i data-feather="play-circle" style="color:#FFF; width:24px; height:24px;"></i></div></button>
 </div>
-<button class="ak-view-all-text-btn" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="background:#2F3B42; color:#FFF; border:none; padding:0.55rem 1.15rem; font-size:0.9rem; font-weight:600; font-family:'Manrope',sans-serif; border-radius:24px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:background 0.2s ease;" onmouseover="this.style.background='#2F3B42'" onmouseout="this.style.background='#2F3B42'">View all photos →</button>
+<button class="ak-view-all-text-btn" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="background:#2F3B42; color:#FFF; border:none; padding:0.55rem 1.15rem; font-size:0.9rem; font-weight:600; font-family:'Manrope',sans-serif; border-radius: 4px; cursor:pointer; box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1); transition:background 0.2s ease;" onmouseover="this.style.background='#2F3B42'" onmouseout="this.style.background='#2F3B42'">View all photos →</button>
 </div>
 </div>
 <div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:flex-start; padding-top:0; height: 100%;">
@@ -334,7 +334,7 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:1px solid #EAE6DF; border-radius:8px; box-shadow:0 2px 8px rgba(15,31,61,0.04); cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(15,31,61,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(15,31,61,0.04)';">
+  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:0.5px solid #EAE6DF; border-radius: 4px; box-shadow:0 2px 8px rgba(15,31,61,0.04); cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(15,31,61,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(15,31,61,0.04)';">
     <div style="display:flex; align-items:baseline; gap:0.2rem;">
       <span style="font-size:1.75rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.24</span>
       <span style="font-size:0.9rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">/5</span>
@@ -378,12 +378,12 @@ html { scroll-behavior: smooth; }
     <a href="#" class="sd-btn-gold" onclick="window.openModal(); return false;" style="text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
       Get Analysis
     </a>
-    <a href="#floor-plans" class="sd-btn-gold" onclick="window.scrollToFloorPlans(event);" style="background: transparent !important; color: var(--prop-navy) !important; border: 1px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
+    <a href="#floor-plans" class="sd-btn-gold" onclick="window.scrollToFloorPlans(event);" style="background: transparent !important; color: var(--prop-navy) !important; border: 0.5px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
       View Floor Plans
     </a>
   </div>
 
-  <div class="ak-info-insight" style="background:var(--white); border-radius:8px; padding:1.15rem 1.25rem; margin-bottom:0; border:1px solid rgba(221, 215, 207, 0.35);">
+  <div class="ak-info-insight" style="background:var(--white); border-radius: 4px; padding:1.15rem 1.25rem; margin-bottom:0; border:0.5px solid rgba(221, 215, 207, 0.35);">
     <div class="ak-view-row">
       <div class="ak-view-col">
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.35rem;">
@@ -447,11 +447,11 @@ html { scroll-behavior: smooth; }
 </div></div>
 
 <!-- Section 1: Overview / About One Residences at SOBHA OneWorld -->
-<section id="overview" class="prop-section"><div class="prop-container"><h2 class="prop-section-title" style="font-size:2rem; font-weight:700; color:#2F3B42; margin-bottom:1.5rem;">About One Residences at SOBHA OneWorld</h2><div class="prop-overview-grid-v2"><div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">One Residences at SOBHA OneWorld is positioned as part of a large integrated township in the OMR / Greater Whitefield corridor. The proposition is less about immediate convenience and more about long-term township scale, construction quality and a broad residential ecosystem.</p><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">The supplied research highlights SOBHA's integrated construction platform, a large masterplan, multiple configurations and a global landscape identity built around five themed zones.</p><div id="aboutSolaceExpandedContent" style="display:none;"><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">For buyers, this creates a clear trade-off: the project offers future scale and a wide choice of homes, but the surrounding catchment and township infrastructure will mature over a longer period across six RERA phases extending into 2032–2033.</p></div><button type="button" id="aboutSolaceReadMoreBtn" onclick="window.toggleAboutSolaceText(event);" style="display:inline-flex; align-items:center; gap:0.4rem; color:#2B2B2B; font-weight:700; font-size:0.95rem; background:none; border:none; padding:0; cursor:pointer; font-family:'Manrope',sans-serif; margin-top:0.25rem; margin-bottom:1.25rem;"><span id="aboutSolaceBtnText">Read More →</span></button></div><div id="propVideoBox" class="prop-overview-video-box"><video id="overviewVideoPlayer" controls="" playsinline="" preload="metadata" poster="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp?v=1790786325000_v1" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; background:#2F3B42; display:block;"><source src="../../style-guide/assets/sobha_oneworld_walkthrough.mp4?v=1790786325000_v1" type="video/mp4"> Your browser does not support HTML5 video. </video></div></div><div class="prop-diff-grid-v2"><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="maximize-2" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Integrated Township</div><div class="prop-diff-desc-v2">48-acre masterplan</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="grid" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Broad Configuration Range</div><div class="prop-diff-desc-v2">1–4 BHK</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="award" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">SOBHA Construction Platform</div><div class="prop-diff-desc-v2">Integrated construction capability</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="coffee" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Future-Scale Amenities</div><div class="prop-diff-desc-v2">~100,000 sq.ft. reported across six amenity zones</div></div></div></div>
+<section id="overview" class="prop-section"><div class="prop-container"><h2 class="prop-section-title" style="font-size:2rem; font-weight:700; color:#2F3B42; margin-bottom:1.5rem;">About One Residences at SOBHA OneWorld</h2><div class="prop-overview-grid-v2"><div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">One Residences at SOBHA OneWorld is positioned as part of a large integrated township in the OMR / Greater Whitefield corridor. The proposition is less about immediate convenience and more about long-term township scale, construction quality and a broad residential ecosystem.</p><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">The supplied research highlights SOBHA's integrated construction platform, a large masterplan, multiple configurations and a global landscape identity built around five themed zones.</p><div id="aboutSolaceExpandedContent" style="display:none;"><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">For buyers, this creates a clear trade-off: the project offers future scale and a wide choice of homes, but the surrounding catchment and township infrastructure will mature over a longer period across six RERA phases extending into 2032–2033.</p></div><button type="button" id="aboutSolaceReadMoreBtn" onclick="window.toggleAboutSolaceText(event);" style="display:inline-flex; align-items:center; gap:0.4rem; color:#2B2B2B; font-weight:700; font-size:0.95rem; background:none; border:none; padding:0; cursor:pointer; font-family:'Manrope',sans-serif; margin-top:0.25rem; margin-bottom:1.25rem;"><span id="aboutSolaceBtnText">Read More →</span></button></div><div id="propVideoBox" class="prop-overview-video-box"><video id="overviewVideoPlayer" controls="" playsinline="" preload="metadata" poster="../../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp?v=1790786325000_v1" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; border-radius: 4px; background:#2F3B42; display:block;"><source src="../../style-guide/assets/sobha_oneworld_walkthrough.mp4?v=1790786325000_v1" type="video/mp4"> Your browser does not support HTML5 video. </video></div></div><div class="prop-diff-grid-v2"><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="maximize-2" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Integrated Township</div><div class="prop-diff-desc-v2">48-acre masterplan</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="grid" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Broad Configuration Range</div><div class="prop-diff-desc-v2">1–4 BHK</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="award" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">SOBHA Construction Platform</div><div class="prop-diff-desc-v2">Integrated construction capability</div></div></div><div class="prop-diff-card-v2"><div class="prop-diff-icon-v2"><i data-feather="coffee" style="width:24px;height:24px;"></i></div><div><div class="prop-diff-title-v2">Future-Scale Amenities</div><div class="prop-diff-desc-v2">~100,000 sq.ft. reported across six amenity zones</div></div></div></div>
 
 <!-- Section 2: Acre&Key Verdict -->
-<div id="verdict" class="ak-verdict-section-box" style="background:#FBF6F3; border:1px solid rgba(155, 98, 72, 0.28); border-radius:14px; padding:2rem; margin-top:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.05);">
-<div class="ak-desktop-verdict-v5" style="display:block !important;"><div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; border-bottom:1px solid rgba(155, 98, 72, 0.18); padding-bottom:1.25rem; margin-bottom:1.5rem;"><div><span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; display:block; margin-bottom:0.35rem;">INDEPENDENT ADVISORY VERDICT</span><h3 style="font-family:'Cormorant Garamond',serif; font-size: 2.07rem; font-weight:700; color:#2F3B42; margin:0; line-height:1.2;"><span class="brand-inline-text">acre&amp;key</span> Verdict</h3><div style="font-size:1.1rem; font-weight:700; color:#684A20; margin-top:0.4rem;">Future Township Scale. Long-Term Bet.</div></div></div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">One Residences at SOBHA OneWorld is best viewed as a long-horizon township proposition. Its strongest attributes are SOBHA's execution capability, integrated planning and broad product choice. Its weakest points are the long delivery horizon, six-phase complexity, current ecosystem maturity and future competing supply.</p><div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.35rem; margin-top:1.25rem;"><h4 style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; letter-spacing:0.02em;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8C6734" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Our View </h4><div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;"><div style="background:#E8F5E9; border:1px solid #A5D6A7; border-radius:8px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#1B5E20; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">✓</span> Buy for:</div><div style="font-size:0.92rem; color:#1B5E20; font-weight:700; line-height:1.6;">Long-term township vision + SOBHA construction reputation / integrated construction platform + Large integrated masterplan + Broad 1–4 BHK choice + Future community scale + Large clubhouse and amenity proposition.</div></div><div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:8px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#B76E00; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">!</span> Be cautious about:</div><div style="font-size:0.92rem; color:#9B6248; font-weight:700; line-height:1.6;">Longest delivery horizon among the projects assessed in the supplied research + Six-phase delivery complexity + Current social/rental catchment still maturing + No current walk-to-metro advantage + High-rise 45–46 floor towers + Large future resale pool + Competing supply.</div></div></div></div></div>
+<div id="verdict" class="ak-verdict-section-box" style="background:#FBF6F3; border:0.5px solid rgba(155, 98, 72, 0.28); border-radius: 4px; padding:2rem; margin-top:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.05);">
+<div class="ak-desktop-verdict-v5" style="display:block !important;"><div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; border-bottom:0.5px solid rgba(155, 98, 72, 0.18); padding-bottom:1.25rem; margin-bottom:1.5rem;"><div><span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; display:block; margin-bottom:0.35rem;">INDEPENDENT ADVISORY VERDICT</span><h3 style="font-family:'Cormorant Garamond',serif; font-size: 2.07rem; font-weight:700; color:#2F3B42; margin:0; line-height:1.2;"><span class="brand-inline-text">acre&amp;key</span> Verdict</h3><div style="font-size:1.1rem; font-weight:700; color:#684A20; margin-top:0.4rem;">Future Township Scale. Long-Term Bet.</div></div></div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">One Residences at SOBHA OneWorld is best viewed as a long-horizon township proposition. Its strongest attributes are SOBHA's execution capability, integrated planning and broad product choice. Its weakest points are the long delivery horizon, six-phase complexity, current ecosystem maturity and future competing supply.</p><div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.35rem; margin-top:1.25rem;"><h4 style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42; margin-top:0; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; letter-spacing:0.02em;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8C6734" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Our View </h4><div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;"><div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#1B5E20; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">✓</span> Buy for:</div><div style="font-size:0.92rem; color:#1B5E20; font-weight:700; line-height:1.6;">Long-term township vision + SOBHA construction reputation / integrated construction platform + Large integrated masterplan + Broad 1–4 BHK choice + Future community scale + Large clubhouse and amenity proposition.</div></div><div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#B76E00; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">!</span> Be cautious about:</div><div style="font-size:0.92rem; color:#9B6248; font-weight:700; line-height:1.6;">Longest delivery horizon among the projects assessed in the supplied research + Six-phase delivery complexity + Current social/rental catchment still maturing + No current walk-to-metro advantage + High-rise 45–46 floor towers + Large future resale pool + Competing supply.</div></div></div></div></div>
 </div></div></section>
 
 
@@ -554,8 +554,8 @@ html { scroll-behavior: smooth; }
 <!-- Section 5: Floor Plans -->
 <section id="floor-plans" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.75rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.75rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">LAYOUT &amp; SPACE ANALYSIS</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">Official Floor Plans &amp; Space Analysis</h2>
         <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">From compact 1 BHKs to large 4 BHK family homes.</div>
@@ -563,7 +563,7 @@ html { scroll-behavior: smooth; }
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
         <!-- 1 BHK -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">ENTRY FORMAT</div>
             <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0;">1 BHK</h3>
@@ -572,13 +572,13 @@ html { scroll-behavior: smooth; }
               Entry / investor format; assess rental demand against the long delivery horizon.
             </div>
           </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius: 4px;">
             Request 1 BHK Plan
           </button>
         </div>
 
         <!-- 2 BHK -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">FAMILY FORMAT</div>
             <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0;">2 BHK</h3>
@@ -587,13 +587,13 @@ html { scroll-behavior: smooth; }
               Compact family / investor segment; compare layout efficiency and future rental pool.
             </div>
           </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius: 4px;">
             Request 2 BHK Plan
           </button>
         </div>
 
         <!-- 3 BHK -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">CORE FAMILY</div>
             <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0;">3 BHK</h3>
@@ -602,13 +602,13 @@ html { scroll-behavior: smooth; }
               Core family format; broad likely end-user appeal.
             </div>
           </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius: 4px;">
             Request 3 BHK Plan
           </button>
         </div>
 
         <!-- 4 BHK -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#9B6248; margin-bottom:0.25rem;">PREMIUM FORMAT</div>
             <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:700; color:#2F3B42; margin:0 0 0.35rem 0;">4 BHK</h3>
@@ -617,14 +617,14 @@ html { scroll-behavior: smooth; }
               Premium family format; evaluate actual usable space versus total loading.
             </div>
           </div>
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius:6px;">
+          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.65rem; font-size:0.82rem; border-radius: 4px;">
             Request 4 BHK Plan
           </button>
         </div>
       </div>
 
       <!-- Buyer Diligence checklist -->
-      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem;">
+      <div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.25rem 1.5rem;">
         <div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.5rem;">High-Rise Floor-Plan Diligence Checklist:</div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:0.4rem 1rem; font-size:0.85rem; color:#9B6248; font-weight:600;">
           <div>• Carpet-to-saleable efficiency</div>
@@ -649,7 +649,7 @@ html { scroll-behavior: smooth; }
 <!-- Section 7: True Cost -->
 <section id="true-cost" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; margin-bottom:2rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="margin-bottom:1.75rem;">
         <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.35rem;">
           <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.3rem; font-weight:700; color:#2F3B42; margin:0;">True Cost Analysis</h2>
@@ -674,7 +674,7 @@ html { scroll-behavior: smooth; }
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border-radius: 8px;
+          border-radius: 4px;
           padding: 1.25rem 1rem;
           text-align: center;
           box-sizing: border-box;
@@ -701,7 +701,7 @@ html { scroll-behavior: smooth; }
         }
       </style>
       <div class="price-journey-grid">
-        <div class="price-journey-card" style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08);">
+        <div class="price-journey-card" style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08);">
           <div style="font-size:1.3rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹13,555/sq.ft.</div>
           <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-top:0.35rem;">Advertised Base Rate</div>
         </div>
@@ -710,7 +710,7 @@ html { scroll-behavior: smooth; }
           <span class="arrow-symbol"></span>
         </div>
 
-        <div class="price-journey-card" style="background:#FBF6F3; border:1px solid #FEF3C7;">
+        <div class="price-journey-card" style="background:#FBF6F3; border:0.5px solid #FEF3C7;">
           <div style="font-size:clamp(1rem, 1.15vw, 1.25rem); font-weight:800; color:#684A20; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹15.0K–₹16.3K/sq.ft.</div>
           <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-top:0.35rem;">Estimated Effective Rate</div>
         </div>
@@ -719,7 +719,7 @@ html { scroll-behavior: smooth; }
           <span class="arrow-symbol"></span>
         </div>
 
-        <div class="price-journey-card" style="background:#2F3B42; border:1px solid #8C6734; box-shadow:0 4px 16px rgba(47, 59, 66, 0.14);">
+        <div class="price-journey-card" style="background:#2F3B42; border:0.5px solid #8C6734; box-shadow:0 4px 16px rgba(47, 59, 66, 0.14);">
           <div style="font-size:1.4rem; font-weight:800; color:#FFFFFF; font-family:'Manrope',sans-serif; line-height:1.2; white-space:nowrap;">₹1.10–₹3.93 Cr</div>
           <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.85); margin-top:0.35rem;">Estimated Property Cost</div>
           <div style="font-size:0.65rem; color:#D4AF37; font-weight:700; margin-top:0.25rem;">+ Stamp Duty &amp; Registration (7.6% Additional)</div>
@@ -731,8 +731,8 @@ html { scroll-behavior: smooth; }
         <h3 style="font-family:'Cormorant Garamond',serif; font-size: 1.72rem; font-weight:700; color:#2F3B42; margin-top:0; margin-bottom:1rem;">What Gets Added?</h3>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem;">
           <!-- Column 1: Project Charges -->
-          <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.2); border-radius:10px; padding:1.35rem;">
-            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.18); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:0.5px solid rgba(140, 103, 52, 0.18); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="color:#8C6734; font-weight:800;">•</span> PROJECT CHARGES
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#374151; display:flex; flex-direction:column; gap:0.55rem; font-weight:600;">
@@ -744,8 +744,8 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Column 2: Unit-Dependent Premiums -->
-          <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.2); border-radius:10px; padding:1.35rem;">
-            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:1px solid rgba(140, 103, 52, 0.18); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:0.5px solid rgba(140, 103, 52, 0.18); padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="color:#8C6734; font-weight:800;">•</span> UNIT-DEPENDENT PREMIUMS
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#374151; display:flex; flex-direction:column; gap:0.55rem; font-weight:600;">
@@ -756,8 +756,8 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Column 3: Government Charges — Additional -->
-          <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.35rem;">
-            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:1px solid #FEF3C7; padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
+          <div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.35rem;">
+            <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.75rem; border-bottom:0.5px solid #FEF3C7; padding-bottom:0.5rem; display:flex; align-items:center; gap:0.45rem;">
               <span style="color:#B76E00; font-weight:800;">•</span> GOVERNMENT CHARGES — ADDITIONAL
             </div>
             <ul style="list-style:none; padding:0; margin:0; font-size:0.92rem; color:#9B6248; display:flex; flex-direction:column; gap:0.55rem; font-weight:600;">
@@ -773,34 +773,34 @@ html { scroll-behavior: smooth; }
       </div>
 
       <!-- Configuration Cost Summary Table -->
-      <div style="overflow-x:auto; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; background:#FFFFFF; margin-bottom:1.5rem;">
+      <div style="overflow-x:auto; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:1.5rem;">
         <table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.95rem;">
           <thead>
             <tr style="background:#FBF6F3;">
-              <th style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:800; color:#2F3B42; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Configuration</th>
-              <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Saleable / SBA</th>
-              <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">Indicative ₹/sq.ft.</th>
-              <th style="padding:0.9rem 1.5rem 0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 1px solid rgba(47, 59, 66, 0.08);">All-inclusive Price Range</th>
+              <th style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:800; color:#2F3B42; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Configuration</th>
+              <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Saleable / SBA</th>
+              <th style="padding:0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">Indicative ₹/sq.ft.</th>
+              <th style="padding:0.9rem 1.5rem 0.9rem 1.25rem; font-weight:800; color:#2F3B42; text-align:right; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);">All-inclusive Price Range</th>
             </tr>
           </thead>
           <tbody style="color:#374151;">
             <tr>
-              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">1 BHK</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">734 sq.ft.</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">₹14,986–15,818</td>
-              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.10–1.16 Cr</td>
+              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">1 BHK</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">734 sq.ft.</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">₹14,986–15,818</td>
+              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹1.10–1.16 Cr</td>
             </tr>
             <tr>
-              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">2 BHK</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,063–1,205 sq.ft.</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">₹14,986–16,284</td>
-              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹1.59–1.96 Cr</td>
+              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">2 BHK</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">1,063–1,205 sq.ft.</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">₹14,986–16,284</td>
+              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹1.59–1.96 Cr</td>
             </tr>
             <tr>
-              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:1px solid #EAE6DF;">3 BHK</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">1,510–1,820 sq.ft.</td>
-              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:1px solid #EAE6DF;">₹14,986–16,284</td>
-              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:1px solid #EAE6DF;">₹2.26–2.96 Cr</td>
+              <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">3 BHK</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">1,510–1,820 sq.ft.</td>
+              <td style="padding:0.85rem 1.25rem; text-align:right; border-bottom:0.5px solid #EAE6DF;">₹14,986–16,284</td>
+              <td style="padding:0.85rem 1.5rem 0.85rem 1.25rem; text-align:right; font-weight:800; color:#2F3B42; border-bottom:0.5px solid #EAE6DF;">₹2.26–2.96 Cr</td>
             </tr>
             <tr>
               <td style="padding:0.85rem 1.25rem 0.85rem 1.5rem; font-weight:700; color:#2F3B42;">4 BHK</td>
@@ -813,7 +813,7 @@ html { scroll-behavior: smooth; }
       </div>
 
       <!-- Mandatory Disclaimer -->
-      <div style="font-size:0.82rem; color:#667085; line-height:1.5; border-top: 1px solid rgba(47, 59, 66, 0.08); padding-top:1rem;">
+      <div style="font-size:0.82rem; color:#667085; line-height:1.5; border-top: 0.5px solid rgba(47, 59, 66, 0.08); padding-top:1rem;">
         Pricing shown is based on <span class="brand-inline-text">acre&amp;key</span>'s current research and is indicative. Final pricing varies by unit, floor, orientation, PLC, floor-rise, applicable taxes and builder charges. Buyers should verify the latest official cost sheet before booking.
       </div>
     </div>
@@ -823,7 +823,7 @@ html { scroll-behavior: smooth; }
 <!-- Section 8: Area Appreciation -->
 <section id="appreciation" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
       <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-size: 2.13rem; font-weight:700; color:#2F3B42; margin:0;">Area Appreciation</h2>
         <span style="font-size:1.25rem;" aria-hidden="true">⭐</span>
@@ -832,7 +832,7 @@ html { scroll-behavior: smooth; }
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
         <!-- Left: SVG Chart -->
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.98rem; font-weight:800; color:#2F3B42; margin-bottom:0.25rem;">OMR / Greater Whitefield – Historical Price Trend</div>
             <div style="font-size:0.8rem; color:#667085; margin-bottom:1.25rem;">(Avg. Price/Sq.ft.)</div>
@@ -858,7 +858,7 @@ html { scroll-behavior: smooth; }
               <text x="290" y="140" font-size="10" fill="#667085" text-anchor="middle">2025</text>
             </svg>
           </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:0.9rem 1.1rem;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.9rem 1.1rem;">
             <div>
               <div style="font-size:0.72rem; color:#9B6248; text-transform:uppercase; font-weight:800; letter-spacing:0.05em;">5-YR CAGR</div>
               <div style="font-size:1.2rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.15rem;">~14.3%</div>
@@ -872,7 +872,7 @@ html { scroll-behavior: smooth; }
 
         <!-- Right: Growth Drivers & Takeaway -->
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
-          <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.2); border-radius:12px; padding:1.5rem;">
+          <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.5rem;">
             <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#9B6248; margin-bottom:0.6rem;">Interpretation</div>
             <div style="font-size:0.98rem; font-weight:800; color:#2F3B42; margin-bottom:0.75rem;">OMR / Greater Whitefield has benefited from:</div>
             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:0.65rem 1rem; font-size:0.92rem; color:#374151; margin-bottom:1rem;">
@@ -883,12 +883,12 @@ html { scroll-behavior: smooth; }
               <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Social infrastructure</div>
               <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Retail &amp; hospitality</div>
             </div>
-            <div style="font-size:0.9rem; line-height:1.55; color:#9B6248; background:#FBF6F3; border:1px solid #FEF3C7; border-radius:8px; padding:0.75rem 1rem; font-weight:600;">
+            <div style="font-size:0.9rem; line-height:1.55; color:#9B6248; background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:0.75rem 1rem; font-weight:600;">
               ⚠️ Historical appreciation should not be extrapolated mechanically into future returns.
             </div>
           </div>
 
-          <div style="background:#2F3B42; color:#FFFFFF; border-radius:12px; padding:1.35rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.12);">
+          <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:1.35rem 1.5rem; box-shadow:0 4px 14px rgba(47, 59, 66, 0.12);">
             <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">Investment Takeaway</div>
             <div style="font-size:0.96rem; line-height:1.6; color:rgba(255,255,255,0.92); font-weight:500;">
               The strongest investment case is based on <strong>long-term employment-led housing demand</strong>, rather than speculative short-term appreciation.
@@ -903,33 +903,33 @@ html { scroll-behavior: smooth; }
 <!-- Section 9: Amenities & Lifestyle -->
 <section id="amenities" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.75rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.75rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">AMENITIES &amp; LIFESTYLE</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">Township-scale amenities with a global landscape identity.</h2>
         <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">48-Acre Integrated Masterplan</div>
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; margin-bottom:1.75rem;">
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem; text-align:center;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; text-align:center;">
           <div style="font-size:1.6rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">~100,000 sq.ft.</div>
           <div style="font-size:0.78rem; font-weight:700; color:#9B6248; text-transform:uppercase; margin-top:0.25rem;">Clubhouse / Amenities Reported</div>
         </div>
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem; text-align:center;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; text-align:center;">
           <div style="font-size:1.6rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">6</div>
           <div style="font-size:0.78rem; font-weight:700; color:#9B6248; text-transform:uppercase; margin-top:0.25rem;">Amenity Zones</div>
         </div>
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem; text-align:center;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; text-align:center;">
           <div style="font-size:1.6rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">5</div>
           <div style="font-size:0.78rem; font-weight:700; color:#9B6248; text-transform:uppercase; margin-top:0.25rem;">Themed Landscape Zones</div>
         </div>
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem; text-align:center;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem; text-align:center;">
           <div style="font-size:1.6rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif;">~72.6</div>
           <div style="font-size:0.78rem; font-weight:700; color:#9B6248; text-transform:uppercase; margin-top:0.25rem;">Homes / Acre (Project-wide)</div>
         </div>
       </div>
 
-      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem;">
+      <div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.25rem 1.5rem;">
         <div style="font-size:0.9rem; font-weight:700; color:#9B6248; line-height:1.5; margin-bottom:0.35rem;">
           <strong>Amenity Ecosystem &amp; Phase Diligence:</strong> The amenity proposition is meaningful at township scale, but buyers should treat it as a future ecosystem rather than assuming every component will be operational immediately.
         </div>
@@ -944,8 +944,8 @@ html { scroll-behavior: smooth; }
 <!-- Section 10: RERA & Legal -->
 <section id="rera-legal" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.5rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.5rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
         <div>
           <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">REGULATORY &amp; LEGAL INFORMATION</div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">RERA &amp; Legal Due Diligence</h2>
@@ -955,58 +955,58 @@ html { scroll-behavior: smooth; }
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.5rem; align-items:stretch; margin-bottom:1.5rem;">
         <!-- Left Box: RERA Registration 2-column grid of 6 phase cards -->
-        <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.2); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.85rem;">
+        <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.2); border-radius: 4px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.85rem;">
           <div style="font-size:0.95rem; font-weight:800; color:#2F3B42; display:flex; align-items:center; gap:0.4rem;">
             <span style="color:#1B5E20; font-weight:800;">✓</span> RERA Registration (Six Phases)
           </div>
 
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:0.65rem;">
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 1 (Wings 1 &amp; 2)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008634</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
 
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 2 (Wings 3 &amp; 4)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008637</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
 
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 3 (Wings 5 &amp; 6)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008635</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
 
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 4 (Wings 7 &amp; 8)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008636</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
 
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 5 (Wings 9, 10 &amp; 11)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008638</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
 
-            <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; display:flex; justify-content:space-between; align-items:center;">
               <div>
                 <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:#9B6248;">PHASE 6 (Wings 12, 13 &amp; 14)</div>
                 <div style="font-size:0.76rem; font-weight:800; color:#2F3B42; font-family:'Manrope',sans-serif; margin-top:0.1rem; word-break:break-all;">PRM/KA/RERA/1250/304/PR/080526/008639</div>
               </div>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:6px; border:1px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
+              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.68rem; font-weight:800; padding:0.2rem 0.45rem; border-radius: 4px; border:0.5px solid #A5D6A7; white-space:nowrap; margin-left:0.35rem;">Registered ✓</span>
             </div>
           </div>
 
@@ -1016,7 +1016,7 @@ html { scroll-behavior: smooth; }
         </div>
 
         <!-- Right Box: Dark Midnight Navy RERA Target Possession -->
-        <div style="background:#2F3B42; color:#FFFFFF; border-radius:12px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box;">
+        <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:1.5rem; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box;">
           <div>
             <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#8C6734; margin-bottom:0.35rem;">RERA TARGET POSSESSION</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:1.85rem; font-weight:700; color:#FFFFFF; line-height:1.15; margin-bottom:0.25rem;">
@@ -1026,13 +1026,13 @@ html { scroll-behavior: smooth; }
               Stated RERA Completion Timeline across Six Phases
             </div>
 
-            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(140,103,52,0.3); border-radius:8px; padding:1rem;">
+            <div style="background:rgba(255,255,255,0.06); border:0.5px solid rgba(140,103,52,0.3); border-radius: 4px; padding:1rem;">
               <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:rgba(255,255,255,0.7); margin-bottom:0.4rem; font-weight:600;">
                 <span>Registration (May 2026)</span>
                 <span>Target (July 2032–Sept 2033)</span>
               </div>
-              <div style="width:100%; height:4px; background:rgba(255,255,255,0.15); border-radius:2px; position:relative;">
-                <div style="width:100%; height:100%; background:#8C6734; border-radius:2px;"></div>
+              <div style="width:100%; height:4px; background:rgba(255,255,255,0.15); border-radius: 4px; position:relative;">
+                <div style="width:100%; height:100%; background:#8C6734; border-radius: 4px;"></div>
                 <div style="position:absolute; right:0; top:-4px; width:12px; height:12px; background:#D4AF37; border:2px solid #2F3B42; border-radius:50%;"></div>
               </div>
             </div>
@@ -1045,14 +1045,14 @@ html { scroll-behavior: smooth; }
       </div>
 
       <!-- Masterplan vs Phase Distinction Box -->
-      <div style="background:#FBF6F3; border:1px solid rgba(140,103,52,0.25); border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="background:#FBF6F3; border:0.5px solid rgba(140,103,52,0.25); border-radius: 4px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
         <div style="font-size:0.9rem; font-weight:800; color:#2F3B42; margin-bottom:0.35rem;">Masterplan vs. Selected Phase Distinction Note:</div>
         <div style="font-size:0.85rem; color:#374151; line-height:1.55;">
           The supplied research presents overall 48-acre masterplan details (3,484 homes across 14 towers). Buyers must distinguish between the specific phase/tower they are purchasing and the overall township delivery timeline.
         </div>
       </div>
 
-      <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem 1.5rem;">
+      <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem 1.5rem;">
         <div style="font-size:0.9rem; font-weight:800; color:#2F3B42; margin-bottom:0.75rem;">Essential Buyer Legal Checklist:</div>
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:0.5rem 1rem; font-size:0.85rem; color:#374151; font-weight:600;">
           <div>• Verify RERA registration number</div>
@@ -1075,8 +1075,8 @@ html { scroll-behavior: smooth; }
 <!-- Section 13: Location & Commute -->
 <section id="location" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.5rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.5rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">MICRO-MARKET CONNECTIVITY</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">A future-growth corridor, not a current convenience-first location.</h2>
         <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">OMR / Greater Whitefield</div>
@@ -1087,18 +1087,18 @@ html { scroll-behavior: smooth; }
       </p>
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#9B6248; text-transform:uppercase;">PROPOSED PURPLE LINE METRO</div>
           <div style="font-size:1.35rem; font-weight:800; color:#2F3B42; margin-top:0.25rem;">~4.3 km reported</div>
         </div>
 
-        <div style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:10px; padding:1.25rem;">
+        <div style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:1.25rem;">
           <div style="font-size:0.75rem; font-weight:800; color:#9B6248; text-transform:uppercase;">ITPL TECH PARK</div>
           <div style="font-size:1.35rem; font-weight:800; color:#2F3B42; margin-top:0.25rem;">~25 mins off-peak</div>
         </div>
       </div>
 
-      <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:10px; padding:1.25rem 1.5rem;">
+      <div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.25rem 1.5rem;">
         <div style="font-size:0.9rem; font-weight:700; color:#9B6248; line-height:1.5;">
           <strong>Commute Reality:</strong> ITPL marketed at roughly 25 minutes off-peak · Proposed Purple Line station reported ~4.3 km away · No current walk-to-metro advantage · No current walk-to-work advantage · Road dependence remains important.
         </div>
@@ -1110,8 +1110,8 @@ html { scroll-behavior: smooth; }
 <!-- Section 14: Locality Overview -->
 <section id="locality" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.5rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.5rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">LOCALITY OVERVIEW</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">OMR / Greater Whitefield</h2>
         <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">Future corridor potential, with current ecosystem maturity as the trade-off.</div>
@@ -1122,7 +1122,7 @@ html { scroll-behavior: smooth; }
       </p>
 
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
-        <div style="background:#E8F5E9; border:1px solid #A5D6A7; border-radius:12px; padding:1.5rem;">
+        <div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.5rem;">
           <div style="font-size:1.05rem; font-weight:800; color:#1B5E20; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
             <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">✓</span> Pros
           </div>
@@ -1135,7 +1135,7 @@ html { scroll-behavior: smooth; }
           </ul>
         </div>
 
-        <div style="background:#FBF6F3; border:1px solid #FEF3C7; border-radius:12px; padding:1.5rem;">
+        <div style="background:#FBF6F3; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.5rem;">
           <div style="font-size:1.05rem; font-weight:800; color:#B76E00; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
             <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#B76E00; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">!</span> Cons
           </div>
@@ -1157,140 +1157,140 @@ html { scroll-behavior: smooth; }
 <!-- Section 16: FAQs -->
 <section id="faqs" class="prop-section">
   <div class="prop-container">
-    <div style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:14px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
-      <div style="margin-bottom:1.5rem; border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
+    <div style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.04);">
+      <div style="margin-bottom:1.5rem; border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding-bottom:1.25rem;">
         <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#9B6248; margin-bottom:0.35rem;">FREQUENTLY ASKED QUESTIONS</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.13rem; font-weight:700; color:#2F3B42; margin:0;">SOBHA OneWorld FAQs</h2>
         <div style="font-size:0.95rem; font-weight:600; color:#667085; margin-top:0.25rem;">Essential answers for prospective buyers</div>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:0.75rem;">
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What is the price of One Residences at SOBHA OneWorld?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             The supplied primary pricing table reports approximately ₹1.10–1.16 Cr for 1 BHK, ₹1.59–1.96 Cr for 2 BHK, ₹2.26–2.96 Cr for 3 BHK and ₹3.14–3.93 Cr for 4 BHK.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What configurations are available?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             1 BHK, 2 BHK, 3 BHK and 4 BHK.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What are the sizes?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             1 BHK: 734 sq.ft. · 2 BHK: 1,063–1,205 sq.ft. · 3 BHK: 1,510–1,820 sq.ft. · 4 BHK: 2,096–2,415 sq.ft.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What is the base price?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             ₹13,555/sq.ft.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What are the additional charges?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             PLC is reported up to ₹888/sq.ft.; floor rise up to ₹570/sq.ft.; power/infrastructure ₹432/sq.ft.; deposit/corpus ₹300/sq.ft. Car parking and clubhouse are reported as included.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>How close is the metro?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             The proposed Purple Line station is reported at approximately 4.3 km. It is not currently a walk-to-metro proposition.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>How far is ITPL?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             The source markets ITPL at roughly 25 minutes off-peak.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>When is possession?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             The supplied research describes a six-phase completion horizon extending from July 2032 to September 2033. The exact phase-specific RERA date should be verified before booking.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>Is it good for end use?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             It is best suited to buyers comfortable waiting for a future township ecosystem and who value SOBHA execution, broad home choices and long-term community scale over immediate convenience.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>Is it good for investment?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             It is more suitable as a long-horizon investment thesis than as a near-term rental play, given the source's weaker liquidity score and immature rental/social catchment.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What are the biggest risks?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             Long delivery horizon, six-phase complexity, current ecosystem maturity, high competing supply, high-rise lift/liveability considerations and future township dependency.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>How large is the township?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             The supplied research describes a 48-acre masterplan with 3,484 homes across 14 wings.
           </div>
         </details>
 
-        <details style="background:#FBF6F3; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; padding:0.85rem 1rem;">
+        <details style="background:#FBF6F3; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; padding:0.85rem 1rem;">
           <summary style="font-weight:800; color:#2F3B42; font-size:0.92rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
             <span>What is the <span class="brand-inline-text">acre&amp;key</span> score?</span>
             <span style="color:#9B6248; font-weight:700;">+</span>
           </summary>
-          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:1px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
+          <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.6; border-top:0.5px solid rgba(140,103,52,0.15); padding-top:0.65rem;">
             3.24 / 5
           </div>
         </details>
@@ -1306,7 +1306,7 @@ html { scroll-behavior: smooth; }
 
 
 <!-- SECTION 9: SIMILAR PROPERTIES YOU MAY ALSO WANT TO COMPARE -->
-<section class="prop-section" style="background:#FBF6F3; border-top: 1px solid rgba(47, 59, 66, 0.08); border-bottom: 1px solid rgba(47, 59, 66, 0.08); padding: 3.5rem 0;">
+<section class="prop-section" style="background:#FBF6F3; border-top: 0.5px solid rgba(47, 59, 66, 0.08); border-bottom: 0.5px solid rgba(47, 59, 66, 0.08); padding: 3.5rem 0;">
   <div class="container" style="max-width:1280px; margin:0 auto; padding:0 1.5rem;">
     <div style="text-align:center; max-width:760px; margin:0 auto 2.5rem auto;">
       <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:#5E4119; display:block; margin-bottom:0.4rem;">EXPLORE ALTERNATIVES</span>
@@ -1317,10 +1317,10 @@ html { scroll-behavior: smooth; }
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
       
       <a href="/property/brigade-belvedere-budigere-cross/" class="ak-card-anchor" aria-label="View Brigade Belvedere property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
+        <article class="ak-property-card" style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
           <div style="position:relative; width:100%; height:180px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/belvedere/brigade_belvedere_hero_towers_elevation.webp" alt="Brigade Belvedere Budigere Cross, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">Brigade Group</span>
+            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:0.5px solid rgba(255,255,255,0.15);">Brigade Group</span>
           </div>
           <div style="padding:1.15rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -1328,7 +1328,7 @@ html { scroll-behavior: smooth; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.8rem; color:#5E4119; font-weight:600; display:flex; align-items:center; gap:0.3rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Budigere Cross, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:6px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:600; text-transform:uppercase; color:#374151;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹0.93 – 2.79 Cr</span>
             </div>
@@ -1340,8 +1340,8 @@ html { scroll-behavior: smooth; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">3.3</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -1351,7 +1351,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
 
-            <div style="padding-top:0.65rem; border-top:1px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
+            <div style="padding-top:0.65rem; border-top:0.5px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; font-weight:700; color:#8C6734;">View Property →</span>
             </div>
           </div>
@@ -1359,10 +1359,10 @@ html { scroll-behavior: smooth; }
       </a>
 
       <a href="/property/prestige-evergreen-raintree-park" class="ak-card-anchor" aria-label="View Evergreen at Prestige Raintree Park property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
+        <article class="ak-property-card" style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
           <div style="position:relative; width:100%; height:180px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp" alt="Evergreen at Prestige Raintree Park Varthur, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">Prestige Group</span>
+            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:0.5px solid rgba(255,255,255,0.15);">Prestige Group</span>
           </div>
           <div style="padding:1.15rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -1370,7 +1370,7 @@ html { scroll-behavior: smooth; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.8rem; color:#5E4119; font-weight:600; display:flex; align-items:center; gap:0.3rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Varthur, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:6px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:600; text-transform:uppercase; color:#374151;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹1.07 – 4.09 Cr</span>
             </div>
@@ -1382,8 +1382,8 @@ html { scroll-behavior: smooth; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">4.11</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -1393,7 +1393,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
 
-            <div style="padding-top:0.65rem; border-top:1px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
+            <div style="padding-top:0.65rem; border-top:0.5px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; font-weight:700; color:#8C6734;">View Property →</span>
             </div>
           </div>
@@ -1401,10 +1401,10 @@ html { scroll-behavior: smooth; }
       </a>
 
       <a href="/property/sattva-songbird-budigere-road/" class="ak-card-anchor" aria-label="View Sattva Songbird property details" style="text-decoration:none; color:inherit; display:block; height:100%;">
-        <article class="ak-property-card" style="background:#FFFFFF; border: 1px solid rgba(47, 59, 66, 0.08); border-radius:8px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
+        <article class="ak-property-card" style="background:#FFFFFF; border: 0.5px solid rgba(47, 59, 66, 0.08); border-radius: 4px; overflow:hidden; box-shadow:0 4px 16px rgba(47, 59, 66, 0.05); display:flex; flex-direction:column; height:100%;">
           <div style="position:relative; width:100%; height:180px; overflow:hidden; background:#2F3B42;">
             <img src="../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp" alt="Sattva Songbird Budigere Road, Bengaluru" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">Sattva Group</span>
+            <span style="position:absolute; top:10px; left:10px; background:rgba(47, 59, 66, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius: 4px; border:0.5px solid rgba(255,255,255,0.15);">Sattva Group</span>
           </div>
           <div style="padding:1.15rem; display:flex; flex-direction:column; flex:1;">
             <div style="margin-bottom:0.75rem;">
@@ -1412,7 +1412,7 @@ html { scroll-behavior: smooth; }
               <span style="font-family:'Manrope',sans-serif; font-size:0.8rem; color:#5E4119; font-weight:600; display:flex; align-items:center; gap:0.3rem;"><i data-feather="map-pin" style="width:13px;height:13px;"></i> Budigere Road, Bengaluru</span>
             </div>
             
-            <div style="background:#FBF6F3; border:1px solid rgba(221, 215, 207, 0.6); border-radius:6px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(221, 215, 207, 0.6); border-radius: 4px; padding:0.5rem 0.75rem; margin-bottom:0.85rem; display:flex; align-items:center; justify-content:space-between;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.72rem; font-weight:600; text-transform:uppercase; color:#374151;">Price Range</span>
               <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2F3B42;">₹0.72 – 2.67 Cr</span>
             </div>
@@ -1424,8 +1424,8 @@ html { scroll-behavior: smooth; }
             </div>
 
             <!-- Acre&Key Research Assessment Box -->
-            <div style="background:#FBF6F3; border:1px solid rgba(140, 103, 52, 0.25); border-radius:8px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
-              <div style="background:#2F3B42; color:#FFFFFF; border-radius:6px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
+            <div style="background:#FBF6F3; border:0.5px solid rgba(140, 103, 52, 0.25); border-radius: 4px; padding:0.75rem 0.85rem; margin-top:auto; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.75rem;">
+              <div style="background:#2F3B42; color:#FFFFFF; border-radius: 4px; padding:0.35rem 0.55rem; text-align:center; flex-shrink:0;">
                 <span style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; line-height:1; display:block;">3.2</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.6rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1; display:block; margin-top:2px;">/ 5</span>
               </div>
@@ -1435,7 +1435,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
 
-            <div style="padding-top:0.65rem; border-top:1px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
+            <div style="padding-top:0.65rem; border-top:0.5px solid rgba(47, 59, 66, 0.08); display:flex; align-items:center; justify-content:flex-end;">
               <span style="font-family:'Manrope',sans-serif; font-size:0.82rem; font-weight:700; color:#8C6734;">View Property →</span>
             </div>
           </div>
@@ -1453,7 +1453,7 @@ html { scroll-behavior: smooth; }
     <p style="font-size:1.05rem; color:rgba(255,255,255,0.85); line-height:1.65; margin:0 auto 2rem auto; max-width:720px;">
       Explore <span class="brand-inline-text">acre&amp;key</span>-assessed projects across Bengaluru. Compare pricing, configurations, possession timelines, key risks and our independent project score.
     </p>
-    <a href="/properties/" class="sd-btn-gold" data-no-modal="true" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; background:#8C6734; color:#FFFFFF; padding:0.85rem 1.85rem; border-radius:8px; font-weight:600; font-size:1rem;">
+    <a href="/properties/" class="sd-btn-gold" data-no-modal="true" style="display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none; background:#8C6734; color:#FFFFFF; padding:0.85rem 1.85rem; border-radius: 4px; font-weight:600; font-size:1rem;">
       <span>Explore All Properties →</span>
     </a>
   </div>
@@ -1620,7 +1620,7 @@ function calculateEMI() {
 </script>
 
 <!-- Score Breakdown Modal -->
-<div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(13, 27, 36,0.7); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;"><div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius:12px; max-width:540px; width:100%; padding:1.75rem; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.3); box-sizing:border-box;"><button type="button" class="ak-score-modal-close" onclick="closeAkScoreModal();" style="position:absolute; top:1.25rem; right:1.25rem; background:rgba(13, 27, 36,0.06); border:none; width:32px; height:32px; border-radius:50%; font-size:1.25rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Score Breakup Modal" title="Close">×</button><div style="margin-bottom:1.25rem;"><h3 id="akScoreModalTitle" style="font-family:'Cormorant Garamond', serif; font-size: 1.78rem; color:#2F3B42; margin:0 0 0.35rem 0; font-weight:400;">AcreNKey Score Breakdown</h3><p style="font-family:'Manrope', sans-serif; font-size:0.85rem; color:#59616B; margin:0;"> One Residences at SOBHA OneWorld receives an AcreNKey Score of <strong style="color:#2B2B2B; font-size:0.95rem;">3.24 / 5</strong> evaluated across key parameters. </p></div><table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope', sans-serif;"><thead><tr style="border-bottom: 1px solid rgba(47, 59, 66, 0.08);"><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; font-weight:700;">Parameters</th><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; padding-right:1rem;">Score</th><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; width:110px;">Rating</th></tr></thead><tbody><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Builder</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Developer pedigree, past track record &amp; market standing</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">4.50 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:90%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Approvals</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Clear land title, RERA registration &amp; statutory clearances</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">4.00 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:80%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Location</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">OMR / Greater Whitefield road-led access &amp; proposed metro</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">2.55 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:51%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Masterplan</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">48-acre layout, 3,484 homes &amp; ~100k sq.ft. clubhouse</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">3.38 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:68%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Delivery</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Construction progress &amp; 2032–2033 six-phase RERA timeline</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">3.50 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:70%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr><tr style="border-bottom:1px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Liquidity</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Micro-market demand, resale potential &amp; rental yields</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">2.54 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius:3px; overflow:hidden;"><div style="width:51%; height:100%; background:#2B2B2B; border-radius:3px;"></div></div></td></tr></tbody></table><div style="margin-top:1.15rem; padding-top:0.75rem; border-top: 1px solid rgba(47, 59, 66, 0.08);"><div style="display:flex; align-items:center; justify-style:space-between; background:#f8f6f1; padding:0.75rem 1rem; border-radius:8px; border: 1px solid rgba(47, 59, 66, 0.08); font-weight:700; color:#2F3B42; font-size:0.9rem;"><span>Overall AcreNKey Quality Score</span><span style="font-size:1.05rem; font-weight:800; color:#2B2B2B; background:#FFFFFF; padding:0.25rem 0.75rem; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">3.24 / 5</span></div></div></div></div>
+<div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(13, 27, 36,0.7); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1.5rem; box-sizing:border-box;"><div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border-radius: 4px; max-width:540px; width:100%; padding:1.75rem; position:relative; box-shadow: 0 10px 30px -10px rgba(20, 29, 36, 0.1); box-sizing:border-box;"><button type="button" class="ak-score-modal-close" onclick="closeAkScoreModal();" style="position:absolute; top:1.25rem; right:1.25rem; background:rgba(13, 27, 36,0.06); border:none; width:32px; height:32px; border-radius:50%; font-size:1.25rem; line-height:1; color:#2F3B42; cursor:pointer; display:flex; align-items:center; justify-content:center;" aria-label="Close Score Breakup Modal" title="Close">×</button><div style="margin-bottom:1.25rem;"><h3 id="akScoreModalTitle" style="font-family:'Cormorant Garamond', serif; font-size: 1.78rem; color:#2F3B42; margin:0 0 0.35rem 0; font-weight:400;">AcreNKey Score Breakdown</h3><p style="font-family:'Manrope', sans-serif; font-size:0.85rem; color:#59616B; margin:0;"> One Residences at SOBHA OneWorld receives an AcreNKey Score of <strong style="color:#2B2B2B; font-size:0.95rem;">3.24 / 5</strong> evaluated across key parameters. </p></div><table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Manrope', sans-serif;"><thead><tr style="border-bottom: 0.5px solid rgba(47, 59, 66, 0.08);"><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; font-weight:700;">Parameters</th><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; padding-right:1rem;">Score</th><th style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#59616B; padding-bottom:0.5rem; text-align:right; font-weight:700; width:110px;">Rating</th></tr></thead><tbody><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Builder</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Developer pedigree, past track record &amp; market standing</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">4.50 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:90%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Approvals</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Clear land title, RERA registration &amp; statutory clearances</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">4.00 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:80%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Location</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">OMR / Greater Whitefield road-led access &amp; proposed metro</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">2.55 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:51%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Masterplan</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">48-acre layout, 3,484 homes &amp; ~100k sq.ft. clubhouse</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">3.38 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:68%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Delivery</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Construction progress &amp; 2032–2033 six-phase RERA timeline</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">3.50 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:70%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr><tr style="border-bottom:0.5px solid #f8f6f1;"><td style="padding:0.6rem 0;"><div style="font-weight:700; font-size:0.88rem; color:#2F3B42;">Liquidity</div><div style="font-size:0.75rem; color:#59616B; margin-top:0.05rem;">Micro-market demand, resale potential &amp; rental yields</div></td><td style="font-weight:800; font-size:0.92rem; color:#2B2B2B; text-align:right; padding-right:1rem;">2.54 / 5</td><td style="width:110px; text-align:right;"><div style="width:100%; height:6px; background:#EAEFF5; border-radius: 4px; overflow:hidden;"><div style="width:51%; height:100%; background:#2B2B2B; border-radius: 4px;"></div></div></td></tr></tbody></table><div style="margin-top:1.15rem; padding-top:0.75rem; border-top: 0.5px solid rgba(47, 59, 66, 0.08);"><div style="display:flex; align-items:center; justify-style:space-between; background:#f8f6f1; padding:0.75rem 1rem; border-radius: 4px; border: 0.5px solid rgba(47, 59, 66, 0.08); font-weight:700; color:#2F3B42; font-size:0.9rem;"><span>Overall AcreNKey Quality Score</span><span style="font-size:1.05rem; font-weight:800; color:#2B2B2B; background:#FFFFFF; padding:0.25rem 0.75rem; border-radius: 4px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">3.24 / 5</span></div></div></div></div>
 
 <!-- Floor Plan Modal -->
 <div id="propFloorPlanModal" class="prop-fp-modal-overlay" onclick="closeFloorPlanModal(event);"><div class="prop-fp-modal-content" onclick="event.stopPropagation();"><button type="button" class="prop-fp-modal-close" onclick="closeFloorPlanModal();" aria-label="Close Lightbox">×</button><h3 id="propFpModalTitle" class="prop-fp-modal-title">One Residences at SOBHA OneWorld Floor Plan</h3><div class="prop-fp-modal-img-wrapper"><img id="propFpModalImg" src="../../style-guide/assets/sumadhura_solace_hero_masterplan.webp?v=1790786325000_v1" alt="Floor Plan View"></div><div style="margin-top:1.25rem; display:flex; gap:1rem;"><button type="button" class="sd-btn-gold" onclick="closeFloorPlanModal(); window.openModal();" style="padding:0.65rem 1.5rem; font-size:0.9rem;"><span>Download Full Brochure &amp; Cost Sheet</span></button></div></div></div>
