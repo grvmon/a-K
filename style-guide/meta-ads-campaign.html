@@ -3,401 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meta Ads – Three Creative Directions – acre&key</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Meta Ads Campaign – acre&key</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-        --copper:  #804526;
-        --peach:   #e5b899;
-        --frost:   #FAFAFA;
-        --obsidian:#0A0A0B;
-        --slate:   #55555A;
-        --cta-bg:  linear-gradient(135deg, #be7555 0%, #9f5334 100%);
+        --titanium-frost: #FAFAFA;
+        --obsidian-black: #0A0A0B;
     }
 
-    body { background: #EDEBE7; font-family: 'Manrope', sans-serif; padding: 3rem 2rem; }
-
-    /* ── Page header ── */
-    .page-header {
-        max-width: 1600px; margin: 0 auto 3.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 0.5px solid rgba(85,85,90,0.3);
+    body {
+        background-color: var(--obsidian-black);
+        font-family: 'Manrope', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 4rem 2rem;
     }
-    .page-header h1 { font-family:'Marcellus',serif; font-size:1.6rem; font-weight:400; color:var(--obsidian); }
-    .page-header p  { font-size:0.75rem; color:var(--slate); margin-top:0.4rem; letter-spacing:0.05em; }
 
-    /* ── Variant label ── */
-    
-    .variants-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-    .variant { width: 100%; margin: 0; }
-
-    .variant-label {
-        display:flex; align-items:baseline; gap:1rem;
-        border-left:2px solid var(--copper); padding-left:0.75rem;
-        margin-bottom:1.2rem;
-    }
-    .variant-label h2 { font-family:'Marcellus',serif; font-size:1.1rem; font-weight:400; color:var(--obsidian); }
-    .variant-label p  { font-size:0.7rem; color:var(--slate); letter-spacing:0.07em; text-transform:uppercase; }
-
-    /* ── Frame shell ── */
-    .frame {
-        position:relative; overflow:hidden; width:100%;
-        container-type:inline-size;
-        aspect-ratio:1080/1350;
-        border:0.5px solid rgba(85,85,90,0.2);
-    }
-    /* safe-zone dashed */
-    .frame::before {
-        content:''; position:absolute; z-index:200; pointer-events:none;
-        left:8.333cqw; right:8.333cqw;
-        top:10.185cqw; bottom:10.185cqw;
-        border:1px dashed rgba(255,255,255,0.18);
-    }
-    .frame-a::before { border-color: rgba(255,255,255,0.18); }
-    .frame-b::before { border-color: rgba(255,255,255,0.12); }
-    .frame-c::before { border-color: rgba(128,69,38,0.22); }
-
-    /* grain */
-    .frame::after {
-        content:''; position:absolute; top:0; left:0; width:100%; height:100%;
-        background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-        opacity:0.13; mix-blend-mode:overlay; pointer-events:none; z-index:10;
+    .frame-container {
+        width: 100%;
+        max-width: 540px;
+        aspect-ratio: 1080 / 1350;
+        position: relative;
+        border-radius: 4px;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        overflow: hidden;
+        container-type: inline-size;
     }
 
     .frame-img {
-        position:absolute; top:0; left:0; width:100%; height:100%;
-        object-fit:cover; object-position:center;
-        filter:saturate(0.8) contrast(1.1);
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
     }
 
-    /* ════════════════════════════════════════════
-       OPTION A — FULL BLEED CINEMATIC
-    ════════════════════════════════════════════ */
-    .frame-a .frame-img { object-position: 60% center; }
-
-    /* Top dark band — anchors headline */
-    .a-top-grad {
-        position:absolute; top:0; left:0; width:100%; height:42cqw;
-        background:linear-gradient(to bottom, rgba(10,10,11,0.94) 0%, rgba(10,10,11,0.7) 60%, rgba(10,10,11,0) 100%);
-        z-index:5;
-    }
-    /* Bottom dark band — anchors brand */
-    .a-bot-grad {
-        position:absolute; bottom:0; left:0; width:100%; height:30cqw;
-        background:linear-gradient(to top, rgba(10,10,11,0.96) 0%, rgba(10,10,11,0) 100%);
-        z-index:5;
+    .frame-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        /* Adjusted gradient to cover slightly more so all text fits */
+        background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 60%, rgba(10, 10, 11, 0) 80%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10cqw 10cqw 15cqw 10cqw;
+        box-sizing: border-box;
     }
 
-    /* text elements */
-    .a-top {
-        position:absolute; z-index:20;
-        left:8.33cqw; right:8.33cqw; top:10.18cqw;
-    }
-    .a-eyebrow {
-        font-family:'Manrope',sans-serif; font-size:1.6cqw; font-weight:700;
-        color:var(--peach); text-transform:uppercase; letter-spacing:0.25em;
-        margin-bottom:1.5cqw;
-    }
-    .a-headline {
-        font-family:'Marcellus',serif; font-size:7.4cqw; white-space:nowrap; letter-spacing:-0.02em; line-height:1.05;
-        color:#FFF; font-weight:400;
-    }
-    .a-headline em { font-style:normal; color:var(--peach); }
-
-    .a-find {
-        position:absolute; z-index:20;
-        left:8.33cqw; top:46cqw;
-    }
-    .a-find-label {
-        font-family:'Marcellus',serif; font-size:2.5cqw; font-weight:400;
-        color:rgba(250,250,250,0.85); letter-spacing:0.02em;
-        margin-bottom:1.5cqw; border-bottom: 0.5px solid rgba(229,184,153,0.3); padding-bottom: 0.8cqw; width: 80%;
-    }
-    .a-find-list { display:flex; flex-direction:column; gap:0.6cqw; }
-    .a-find-item {
-        font-family:'Marcellus',serif; font-size:9cqw; line-height:1;
-        color:rgba(250,250,250,0.92); font-weight:400; letter-spacing:-0.02em;
-    }
-    .a-find-item span { color:var(--peach); }
-
-    .a-bottom {
-        position:absolute; z-index:20;
-        left:8.33cqw; right:8.33cqw; bottom:10.18cqw;
-        display:flex; align-items:flex-end; justify-content:space-between;
-    }
-    .a-brand-name {
-        font-family:'Marcellus',serif; font-size:5.5cqw; color:#FFF;
-        font-weight:400; line-height:1;
-    }
-    .a-brand-sub {
-        font-family:'Manrope',sans-serif; font-size:1.4cqw; color:rgba(250,250,250,0.55);
-        letter-spacing:0.1em; text-transform:uppercase; margin-top:0.6cqw;
-    }
-    .a-fee {
-        font-family:'Manrope',sans-serif; font-size:1.4cqw; font-weight:700;
-        color:var(--peach); text-transform:uppercase; letter-spacing:0.22em;
-        text-align:right;
+    .headline {
+        font-family: 'Marcellus', serif;
+        font-size: 7.4cqw;
+        font-weight: 400;
+        color: var(--titanium-frost);
+        margin: 0 0 4cqw 0;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
     }
 
-    /* ════════════════════════════════════════════
-       OPTION B — PURE TYPOGRAPHY, NO PHOTO
-    ════════════════════════════════════════════ */
-    .frame-b { background: var(--obsidian); }
-
-    /* subtle architectural line texture in bg */
-    .b-texture {
-        position:absolute; top:0; left:0; width:100%; height:100%;
-        background:
-            repeating-linear-gradient(0deg, transparent, transparent 6cqw, rgba(255,255,255,0.015) 6cqw, rgba(255,255,255,0.015) 6.05cqw),
-            radial-gradient(ellipse at 80% 20%, rgba(128,69,38,0.08) 0%, transparent 60%);
-        z-index:1;
+    .find-block {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5cqw;
+        margin-bottom: 6cqw;
     }
 
-    /* horizontal hairline rule at 38% from top */
-    .b-rule {
-        position:absolute; z-index:5;
-        left:8.33cqw; right:8.33cqw; top:38cqw;
-        height:0.5px; background:rgba(229,184,153,0.3);
+    .we-help-you {
+        font-family: 'Marcellus', serif;
+        font-size: 3.5cqw;
+        font-weight: 400;
+        color: rgba(250, 250, 250, 0.85);
+        margin-bottom: 1.5cqw;
     }
 
-    .b-top {
-        position:absolute; z-index:20;
-        left:8.33cqw; right:8.33cqw; top:10.18cqw;
+    .find-item {
+        font-family: 'Marcellus', serif;
+        font-size: 6cqw;
+        font-weight: 400;
+        color: rgba(250, 250, 250, 0.95);
+        line-height: 1.1;
     }
-    .b-eyebrow {
-        font-family:'Manrope',sans-serif; font-size:1.4cqw; font-weight:600;
-        color:rgba(229,184,153,0.5); text-transform:uppercase; letter-spacing:0.3em;
-        margin-bottom:2cqw;
-    }
-    .b-headline {
-        font-family:'Marcellus',serif; font-size:7.4cqw; white-space:nowrap; letter-spacing:-0.02em; line-height:1.05;
-        color:var(--frost); font-weight:400;
-    }
-    .b-headline em { font-style:normal; color:var(--peach); }
-
-    .b-find {
-        position:absolute; z-index:20;
-        left:8.33cqw; right:8.33cqw; top:44cqw;
-    }
-    .b-find-label {
-        font-family:'Marcellus',serif; font-size:2.5cqw; font-weight:400;
-        color:rgba(250,250,250,0.7); letter-spacing:0.02em;
-        margin-bottom:2cqw;
-    }
-    .b-find-list { display:flex; flex-direction:column; gap:0.6cqw; }
-    .b-find-item {
-        font-family:'Marcellus',serif; font-size:11cqw; line-height:1;
-        color:rgba(250,250,250,0.92); font-weight:400; letter-spacing:-0.02em;
-    }
-    .b-find-item span { color:var(--peach); }
-
-    .b-bottom {
-        position:absolute; z-index:20;
-        left:8.33cqw; right:8.33cqw; bottom:10.18cqw;
-        display:flex; align-items:flex-end; justify-content:space-between;
-    }
-    .b-brand-name { font-family:'Marcellus',serif; font-size:5cqw; color:var(--frost); font-weight:400; }
-    .b-brand-sub  { font-family:'Manrope',sans-serif; font-size:1.3cqw; color:rgba(250,250,250,0.4); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5cqw; }
-    .b-fee { font-family:'Manrope',sans-serif; font-size:1.3cqw; font-weight:700; color:var(--peach); letter-spacing:0.2em; text-transform:uppercase; text-align:right; }
-
-    /* ════════════════════════════════════════════
-       OPTION C — HARD SPLIT (50/50)
-    ════════════════════════════════════════════ */
-    /* Photo fills frame, clipped to right 50% only */
-    .frame-c .frame-img {
-        left:50%; width:50%;
-        object-position:left center;
-        filter:saturate(0.78) contrast(1.1);
+    .find-item strong {
+        font-weight: bold;
     }
 
-    /* Left charcoal panel */
-    .c-panel {
-        position:absolute; top:0; left:0;
-        width:50%; height:100%;
-        background:#1A1714;
-        z-index:5;
+    .bottom-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    /* Hairline divider between panel and photo */
-    .c-divider {
-        position:absolute; top:0; left:50%;
-        width:0.5px; height:100%;
-        background:rgba(229,184,153,0.25);
-        z-index:30;
+    .brand-logo-josefin {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 8cqw;
+        color: var(--titanium-frost);
+        margin: 0 0 0.5cqw 0;
+        letter-spacing: -0.02em;
     }
-
-    .c-content {
-        position:absolute; z-index:20;
-        left:8.33cqw;
-        top:10.18cqw; bottom:10.18cqw;
-        width:38cqw;
-        display:flex; flex-direction:column; justify-content:space-between;
+    .brand-sub {
+        font-family: 'Manrope', sans-serif;
+        font-size: 3cqw;
+        color: rgba(250, 250, 250, 0.85);
+        letter-spacing: 0.03em;
+        font-weight: 500;
     }
-
-    .c-eyebrow {
-        font-family:'Manrope',sans-serif; font-size:1.3cqw; font-weight:700;
-        color:rgba(229,184,153,0.55); text-transform:uppercase; letter-spacing:0.28em;
-        margin-bottom:1.5cqw;
-    }
-    .c-headline {
-        font-family:'Marcellus',serif; font-size:4.5cqw; white-space:nowrap; letter-spacing:-0.03em; line-height:1.08;
-        color:var(--frost); font-weight:400;
-    }
-    .c-headline em { font-style:normal; color:var(--peach); }
-
-    .c-find { display:flex; flex-direction:column; gap:0; }
-    .c-find-label {
-        font-family:'Marcellus',serif; font-size:2cqw; font-weight:400;
-        color:rgba(250,250,250,0.6); letter-spacing:0.02em;
-        margin-bottom:1.5cqw; border-bottom: 0.5px solid rgba(229,184,153,0.2); padding-bottom: 0.6cqw; width: 90%;
-    }
-    .c-find-list { display:flex; flex-direction:column; gap:1.2cqw; }
-    .c-find-item {
-        font-family:'Marcellus',serif; font-size:6.5cqw; line-height:1;
-        color:rgba(250,250,250,0.9); font-weight:400;
-    }
-    .c-find-item span { color:var(--peach); }
-
-    .c-bottom { display:flex; flex-direction:column; gap:0.8cqw; }
-    .c-fee {
-        font-family:'Manrope',sans-serif; font-size:1.2cqw; font-weight:700;
-        color:var(--peach); text-transform:uppercase; letter-spacing:0.22em;
-        padding-bottom:1.5cqw;
-        border-bottom:0.5px solid rgba(229,184,153,0.2);
-        margin-bottom:0.5cqw;
-    }
-    .c-brand-name { font-family:'Marcellus',serif; font-size:4.5cqw; color:var(--frost); font-weight:400; line-height:1; }
-    .c-brand-sub  { font-family:'Manrope',sans-serif; font-size:1.2cqw; color:rgba(250,250,250,0.35); letter-spacing:0.1em; text-transform:uppercase; }
 
 </style>
 </head>
 <body>
 
-<div class="page-header">
-    <h1>Meta Ads — Three Creative Directions</h1>
-    <p>Feed 1080 × 1350 &nbsp;·&nbsp; Safe zone x: 90–990, y: 110–1240 &nbsp;·&nbsp; Dashed line = Meta safe boundary</p>
-</div>
-
-<div class="variants-grid">
-<!-- ══════════════════════════════════════════════
-     OPTION A — FULL BLEED CINEMATIC
-══════════════════════════════════════════════ -->
-<div class="variant">
-    <div class="variant-label">
-        <h2>Option A — Full Bleed Cinematic</h2>
-        <p>Full photograph · Dark gradient top & bottom · White + Peach type · Lodha/Sotheby's register</p>
-    </div>
-    <div class="frame frame-a">
-        <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="">
-        <div class="a-top-grad"></div>
-        <div class="a-bot-grad"></div>
-
-        <div class="a-top">
-                        <h1 class="a-headline">Buying a home in <em>Bengaluru?</em></h1>
-        </div>
-
-        <div class="a-find">
-            <div class="a-find-label">We help you</div>
-            <div class="a-find-list">
-                <div class="a-find-item"><span>F</span>ind</div>
-                <div class="a-find-item"><span>I</span>nspect</div>
-                <div class="a-find-item"><span>N</span>egotiate</div>
-                <div class="a-find-item"><span>D</span>ecide</div>
-            </div>
-        </div>
-
-        <div class="a-bottom">
-            <div>
-                <div class="a-brand-name">acre&amp;key</div>
-                <div class="a-brand-sub">Home Buying Concierge</div>
-            </div>
+    <div class="frame-container">
+        <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Background">
+        <div class="frame-overlay">
             
-        </div>
-    </div>
-</div>
+            <h1 class="headline">Buying a home in Bengaluru?</h1>
 
-<!-- ══════════════════════════════════════════════
-     OPTION B — PURE TYPOGRAPHY
-══════════════════════════════════════════════ -->
-<div class="variant">
-    <div class="variant-label">
-        <h2>Option B — Pure Typography</h2>
-        <p>No photo · Obsidian canvas · Ivory + Copper type · Private banking / FT register</p>
-    </div>
-    <div class="frame frame-b">
-        <div class="b-texture"></div>
-        <div class="b-rule"></div>
-
-        <div class="b-top">
-                        <h1 class="b-headline">Buying a home in <em>Bengaluru?</em></h1>
-        </div>
-
-        <div class="b-find">
-            <div class="b-find-label">We help you</div>
-            <div class="b-find-list">
-                <div class="b-find-item"><span>F</span>ind</div>
-                <div class="b-find-item"><span>I</span>nspect</div>
-                <div class="b-find-item"><span>N</span>egotiate</div>
-                <div class="b-find-item"><span>D</span>ecide</div>
-            </div>
-        </div>
-
-        <div class="b-bottom">
-            <div>
-                <div class="b-brand-name">acre&amp;key</div>
-                <div class="b-brand-sub">Home Buying Concierge</div>
-            </div>
-            
-        </div>
-    </div>
-</div>
-
-<!-- ══════════════════════════════════════════════
-     OPTION C — HARD SPLIT
-══════════════════════════════════════════════ -->
-<div class="variant">
-    <div class="variant-label">
-        <h2>Option C — Hard Editorial Split</h2>
-        <p>50% charcoal panel · 50% unfiltered photo · 0.5px hairline divider · WSJ / Architectural Digest register</p>
-    </div>
-    <div class="frame frame-c">
-        <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="">
-        <div class="c-panel"></div>
-        <div class="c-divider"></div>
-
-        <div class="c-content">
-            <div>
-                                <h1 class="c-headline">Buying a home in <em>Bengaluru?</em></h1>
+            <div class="find-block">
+                <div class="we-help-you">We help you</div>
+                <div class="find-item"><strong>F</strong>ind</div>
+                <div class="find-item"><strong>I</strong>nspect</div>
+                <div class="find-item"><strong>N</strong>egotiate</div>
+                <div class="find-item"><strong>D</strong>ecide</div>
             </div>
 
-            <div class="c-find">
-                <div class="c-find-label">We help you</div>
-                <div class="c-find-list">
-                    <div class="c-find-item"><span>F</span>ind</div>
-                    <div class="c-find-item"><span>I</span>nspect</div>
-                    <div class="c-find-item"><span>N</span>egotiate</div>
-                    <div class="c-find-item"><span>D</span>ecide</div>
-                </div>
+            <div class="bottom-block">
+                <div class="brand-logo-josefin">acre&key</div>
+                <div class="brand-sub">Home Buying Concierge</div>
             </div>
 
-            <div class="c-bottom">
-                
-                <div class="c-brand-name">acre&amp;key</div>
-                <div class="c-brand-sub">Home Buying Concierge</div>
-            </div>
         </div>
     </div>
-</div>
 
-</div>
 </body>
 </html>
