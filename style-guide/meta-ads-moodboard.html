@@ -26,12 +26,30 @@
             gap: 4rem;
             padding: 4rem 2rem;
         }
+        .slider-container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 100%;
+            max-width: 600px; /* Scaled down for preview */
+            aspect-ratio: 1080 / 1350;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            border-radius: 4px; /* Brand Rule: strictly 4px radius */
+            border: 0.5px solid rgba(85, 85, 90, 0.2); /* Brand Rule: strictly 0.5px hairlines */
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        
         .frame {
             position: relative;
-            /* Scaled down to 50% for preview (540x675). Export scripts will still render correctly based on aspect ratio or override. */
+            flex: 0 0 100%;
             width: 100%;
-            max-width: 600px; /* Reduced from 1200px so it fits on screen visually */
-            aspect-ratio: 1080 / 1350;
+            height: 100%;
+            scroll-snap-align: start;
             overflow: hidden;
             background: #000;
             container-type: inline-size;
@@ -180,6 +198,8 @@
 </head>
 <body>
 
+<div class="slider-container">
+
     <!-- 01 -->
     <div class="frame">
         <img class="frame-img" src="assets/riviera/riviera_villa_exterior.webp" alt="01">
@@ -242,12 +262,14 @@
         </div>
     </div>
 
-    <script>
+    </div>
+
+<script>
         document.querySelectorAll('.carousel-arrow-right').forEach((arrow, index) => {
             arrow.addEventListener('click', () => {
                 const frames = document.querySelectorAll('.frame');
                 if (frames[index + 1]) {
-                    frames[index + 1].scrollIntoView({ behavior: 'smooth' });
+                    frames[index + 1].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
                 }
             });
         });
