@@ -12,6 +12,15 @@
         --obsidian-black: #0A0A0B;
     }
 
+    
+    .variants-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 4rem;
+        width: 100%;
+        max-width: 1280px;
+    }
+
     body {
         background-color: var(--obsidian-black);
         font-family: 'Manrope', sans-serif;
@@ -22,10 +31,15 @@
         padding: 4rem 2rem;
     }
 
+    
+    .frame-square { aspect-ratio: 1080 / 1080; }
+    .frame-feed {  }
+    .frame-reels { aspect-ratio: 1080 / 1920; }
+
     .frame-container {
         width: 100%;
-        max-width: 540px;
-        aspect-ratio: 1080 / 1350;
+        /* max-width: 540px; */
+        
         position: relative;
         border-radius: 4px;
         border: 0.5px solid rgba(85, 85, 90, 0.2);
@@ -123,31 +137,81 @@
         font-weight: 500;
     }
 
+
+    /* Placement-specific Safe Zones */
+    .frame-square .bottom-block { bottom: 5cqw; }
+    .frame-square .frame-overlay { padding-bottom: 25cqw; }
+
+    .frame-feed .bottom-block { bottom: 10.185cqw; }
+    .frame-feed .frame-overlay { padding-bottom: 35cqw; }
+
+    .frame-reels .bottom-block { bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
+    .frame-reels .frame-overlay { padding-bottom: 55cqw; } /* Push text higher up in Reels */
+
 </style>
 </head>
 <body>
 
-    <div class="frame-container">
-        <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Background">
-        <div class="frame-overlay">
-            
-            <h1 class="headline">Buying a home in Bengaluru?</h1>
-
-            <div class="find-block">
-                <div class="we-help-you">We help you</div>
-                <div class="find-item"><strong>F</strong>ind</div>
-                <div class="find-item"><strong>I</strong>nspect</div>
-                <div class="find-item"><strong>N</strong>egotiate</div>
-                <div class="find-item"><strong>D</strong>ecide</div>
+    
+    <div class="variants-grid">
+        <!-- 1:1 Square -->
+        <div class="frame-container frame-square">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
             </div>
+        </div>
 
-            <div class="bottom-block">
-                <div class="brand-logo-josefin">acre&key</div>
-                <div class="brand-sub">Home Buying Concierge</div>
+        <!-- 4:5 Feed -->
+        <div class="frame-container frame-feed">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
             </div>
+        </div>
 
+        <!-- 9:16 Reels/Stories -->
+        <div class="frame-container frame-reels">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
+            </div>
         </div>
     </div>
+
 
 </body>
 </html>
