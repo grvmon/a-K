@@ -68,7 +68,7 @@
         top: 0; left: 0;
         width: 100%; height: 100%;
         /* Targeted Top & Bottom edge protection for 7AAA */
-        background: linear-gradient(to bottom, rgba(10, 10, 11, 0.65) 0%, rgba(10, 10, 11, 0) 25%), linear-gradient(to top, rgba(10, 10, 11, 0.8) 0%, rgba(10, 10, 11, 0) 20%);
+        background: linear-gradient(to bottom, rgba(10, 10, 11, 0.65) 0, rgba(10, 10, 11, 0) 30cqw), linear-gradient(to top, rgba(10, 10, 11, 0.8) 0, rgba(10, 10, 11, 0) 45cqw);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -76,7 +76,7 @@
         box-sizing: border-box;
     }
 
-    .headline {
+    .headline { backface-visibility: hidden;
         font-family: 'Marcellus', serif;
         font-size: 6.0cqw;
         font-weight: 400;
@@ -100,16 +100,16 @@
     .find-block::before {
         content: '';
         position: absolute;
-        top: 50%; left: 30%;
+        top: 45%; left: 30%;
         transform: translate(-50%, -50%);
         width: 150cqw;
-        height: 150cqw;
-        background: radial-gradient(circle at center, rgba(10, 10, 11, 0.75) 0%, rgba(10, 10, 11, 0.4) 25%, rgba(10, 10, 11, 0) 50%);
+        height: 170cqw;
+        background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.80) 0%, rgba(10, 10, 11, 0.4) 30%, rgba(10, 10, 11, 0) 55%);
         pointer-events: none;
         z-index: -1;
     }
 
-    .we-help-you {
+    .we-help-you { backface-visibility: hidden;
         font-family: 'Marcellus', serif;
         font-size: 3.5cqw;
         font-weight: 400;
@@ -117,7 +117,7 @@
         margin-bottom: 1.5cqw;
     }
 
-    .find-item {
+    .find-item { backface-visibility: hidden;
         font-family: 'Marcellus', serif;
         font-size: 6cqw;
         font-weight: 400;
@@ -129,7 +129,7 @@
         color: var(--highlight-peach); /* Used on dark backgrounds to pass AAA */
     }
 
-    .bottom-block {
+    .bottom-block { backface-visibility: hidden;
         position: absolute;
         bottom: 10.185cqw;
         left: 8.33cqw;
@@ -171,36 +171,36 @@
         animation: slowPan 25s ease-in-out infinite alternate;
     }
 
-    .headline {
+    .headline { backface-visibility: hidden;
         opacity: 0;
         animation: cinematicFade 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
     }
 
-    .we-help-you {
+    .we-help-you { backface-visibility: hidden;
         opacity: 0;
         animation: cinematicFade 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
     }
 
-    .find-item { opacity: 0; }
+    .find-item { backface-visibility: hidden; opacity: 0; }
     .find-item:nth-child(2) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards; }
     .find-item:nth-child(3) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.0s forwards; }
     .find-item:nth-child(4) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.2s forwards; }
     .find-item:nth-child(5) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.4s forwards; }
 
-    .bottom-block {
+    .bottom-block { backface-visibility: hidden;
         opacity: 0;
         animation: cinematicFade 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.8s forwards;
     }
 
 /* Placement-specific Safe Zones */
-    .frame-square .bottom-block { bottom: 5cqw; }
+    .frame-square .bottom-block { backface-visibility: hidden; bottom: 5cqw; }
     .frame-square .frame-overlay { padding-bottom: 25cqw; }
     .frame-square::before { top: 5cqw; bottom: 5cqw; left: 5cqw; right: 5cqw; }
 
-    .frame-feed .bottom-block { bottom: 10.185cqw; }
+    .frame-feed .bottom-block { backface-visibility: hidden; bottom: 10.185cqw; }
     .frame-feed .frame-overlay { padding-bottom: 35cqw; }
 
-    .frame-reels .bottom-block { bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
+    .frame-reels .bottom-block { backface-visibility: hidden; bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
     .frame-reels .frame-overlay { padding-bottom: 55cqw; padding-top: 20cqw; } /* Reels safe zone top */
     .frame-reels::before { bottom: 30cqw; top: 15cqw; } /* Adjust Reels dashed safe line */
 
