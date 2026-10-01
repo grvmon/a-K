@@ -195,6 +195,19 @@
         animation: cinematicFade 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.8s forwards;
     }
 
+
+    .bottom-block::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120cqw;
+        height: 60cqw;
+        background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
 /* Placement-specific Safe Zones */
     .frame-square .bottom-block { backface-visibility: hidden; bottom: 5cqw; }
     .frame-square .frame-overlay { padding-bottom: 25cqw; }
