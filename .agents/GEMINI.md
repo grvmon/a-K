@@ -1,5 +1,4 @@
 # Acre & Key Brand & Design Guidelines (100% WCAG AAA Certified)
-Reference: https://aabhisrv.github.io/ackey/style-guide/
 
 ## 1. Master Color Palette (Strict WCAG AAA Certified)
 - **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #be7555 0%, #9f5334 100%)`
