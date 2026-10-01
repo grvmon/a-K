@@ -90,23 +90,30 @@
         }
 
         
+        /* Safe Zone Overlay Helper */
+        .frame::before {
+            content: '';
+            position: absolute;
+            left: 8.333cqw; /* 90px */
+            right: 8.333cqw; /* 90px */
+            top: 10.185cqw; /* 110px */
+            bottom: 10.185cqw; /* 110px */
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            pointer-events: none;
+            z-index: 100;
+        }
+
         .frame-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* QC Fix: Extended dark zone to 40% to cover text that is pushed higher up */
-            background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 40%, rgba(10, 10, 11, 0) 60%);
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            /* Typography Safe Zone: Pushed in from the sides to survive Meta 9:16 auto-cropping (Stories/Reels) */
-            padding-top: 15%;
-            padding-bottom: 25%;
-            padding-left: 20%;
-            padding-right: 20%;
             box-sizing: border-box;
+            /* Strict Meta Feed 4:5 Safe Zone Padding */
+            padding: 10.185cqw 8.333cqw;
         }
 
         .frame-text {
@@ -209,7 +216,7 @@
     <!-- Ad Variation 01: Z-Pattern (Authority) -->
     <div class="frame">
         <img class="frame-img" src="assets/riviera/riviera_villa_exterior.webp" alt="Ad 01">
-        <div class="frame-overlay" style="background: linear-gradient(to bottom, rgba(10, 10, 11, 0.85) 0%, rgba(10, 10, 11, 0.2) 30%, rgba(10, 10, 11, 0.4) 60%, rgba(10, 10, 11, 0.95) 100%); justify-content: space-between; padding-top: 10%; padding-bottom: 15%; padding-left: 10%; padding-right: 10%;">
+        <div class="frame-overlay" style="background: linear-gradient(to bottom, rgba(10, 10, 11, 0.85) 0%, rgba(10, 10, 11, 0.2) 30%, rgba(10, 10, 11, 0.4) 60%, rgba(10, 10, 11, 0.95) 100%); justify-content: space-between; ">
             
             <!-- Top Hook (Z Pattern Top Bar) -->
             <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
@@ -238,7 +245,7 @@
     <!-- Ad Variation 02: F-Pattern (Value Props) -->
     <div class="frame">
         <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="Ad 02">
-        <div class="frame-overlay" style="background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 40%, rgba(10, 10, 11, 0) 100%); justify-content: center; align-items: flex-start; padding-left: 10%; padding-right: 15%;">
+        <div class="frame-overlay" style="background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 40%, rgba(10, 10, 11, 0) 100%); justify-content: center; align-items: flex-start; ">
             
             <h1 class="frame-text" style="font-size: 8cqw; line-height: 1.1; white-space: normal; text-align: left; margin-bottom: 5cqw;">
                 <span style="color: var(--highlight-peach);">Independent</span><br>Home Buying.
