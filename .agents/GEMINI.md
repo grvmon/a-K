@@ -6,7 +6,7 @@ Reference: https://aabhisrv.github.io/ackey/style-guide/
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
 - **Titanium Frost Canvas Base (`--titanium-frost`)**: `#FAFAFA`
-- **Obsidian Black (`--obsidian-black`)**: `#0A0A0B` / `#0A0A0B`
+- **Obsidian Black (`--obsidian-black`)**: `#1C1C1E`
 - **Muted Slate (`--neutral-grey`)**: `#55555A` (Body paragraphs)
 
 ## 2. Typography

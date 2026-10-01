@@ -326,8 +326,8 @@
         /* Swatches */
         .ds-swatch-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
         }
 
         .ds-swatch {
@@ -567,7 +567,7 @@
                         <td style="padding:0.75rem 0;">Canvas Light</td><td><code>--titanium-frost</code></td><td>#FAFAFA</td><td>N/A</td>
                     </tr>
                     <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
-                        <td style="padding:0.75rem 0;">Canvas Dark (Anchor)</td><td><code>--obsidian-black</code></td><td>#0A0A0B</td><td>18.9:1 (AAA)</td>
+                        <td style="padding:0.75rem 0;">Canvas Dark (Anchor)</td><td><code>--obsidian-black</code></td><td>#1C1C1E</td><td>18.9:1 (AAA)</td>
                     </tr>
                     <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Primary Accent</td><td><code>--text-copper-aaa</code></td><td>#804526</td><td>7.2:1 (AAA)</td>
@@ -576,7 +576,7 @@
                         <td style="padding:0.75rem 0;">Highlight Accent</td><td><code>--highlight-peach</code></td><td>#e5b899</td><td>10.9:1 (On Obsidian)</td>
                     </tr>
                     <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
-                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#505055</td><td>7.1:1 (AAA)</td>
+                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#55555A</td><td>7.1:1 (AAA)</td>
                     </tr>
                     <tr style="border-bottom:0.5px solid rgba(80, 80, 85, 0.15);">
                         <td style="padding:0.75rem 0;">Hairline Divider</td><td><code>--divider</code></td><td>rgba(80, 80, 85, 0.15)</td><td>Structural</td>
@@ -631,7 +631,7 @@
                     <div class="ds-swatch-color" style="background: var(--obsidian-black);"></div>
                     <div class="ds-swatch-meta">
                         <div class="ds-swatch-name">Obsidian Black (Anchor)</div>
-                        <div class="ds-swatch-hex">#0A0A0B</div>
+                        <div class="ds-swatch-hex">#1C1C1E</div>
                     </div>
                 </div>
                 <div class="ds-swatch">
@@ -659,7 +659,7 @@
                     <div class="ds-swatch-color" style="background: var(--neutral-grey);"></div>
                     <div class="ds-swatch-meta">
                         <div class="ds-swatch-name">Muted Slate (Body)</div>
-                        <div class="ds-swatch-hex">#505055</div>
+                        <div class="ds-swatch-hex">#55555A</div>
                     </div>
                 </div>
             </div>
@@ -859,7 +859,7 @@
                 <input type="text" placeholder="e.g. Jonathan Doe" style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px;  transition:all 0.4s ease; margin-bottom: 1.5rem;"  >
                 
                 <label style="display:block; font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing: 0.12em;">Advisory Requirement</label>
-                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px;  appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%230A0A0B" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
+                <select style="width:100%; box-sizing:border-box; padding:0.75rem 1rem; font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--obsidian-black); background:var(--titanium-frost); border:0.5px solid rgba(80, 80, 85, 0.2); border-radius:4px;  appearance:none; background-image:url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%231C1C1E" stroke-width="1.5" stroke-linecap="square"/></svg>'); background-repeat:no-repeat; background-position:right 1rem center; padding-right:3rem;">
                     <option>Portfolio Restructuring</option>
                     <option>Asset Acquisition</option>
                 </select>
@@ -874,7 +874,7 @@
             <div style="display:flex; gap:1rem; flex-wrap:wrap;">
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--obsidian-black); background:rgba(10, 10, 11, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(10, 10, 11, 0.1); letter-spacing: 0.12em; text-transform:uppercase;">Under Construction</span>
                 <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:var(--text-copper-aaa); background:rgba(128, 69, 38, 0.06); padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(128, 69, 38, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">RERA Verified</span>
-                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#0A0A0B; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: [X.XX]/5</span>
+                <span style="font-family:'Manrope',sans-serif; font-size:0.75rem; font-weight:700; color:#1C1C1E; background:#FFF; padding:0.4rem 0.8rem; border-radius:4px; border:0.5px solid rgba(80, 80, 85, 0.2); letter-spacing: 0.12em; text-transform:uppercase;">Score: [X.XX]/5</span>
             </div>
         </section>
 
