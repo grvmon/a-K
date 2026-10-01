@@ -55,7 +55,7 @@
         content: '';
         position: absolute;
         left: 8.333cqw; right: 8.333cqw;
-        top: 10.185cqw; bottom: 10.185cqw;
+        top: 10.185cqw; bottom: calc(10.185cqw + 10px);
         border: 1px dashed rgba(255,255,255,0.3);
         pointer-events: none; z-index: 100;
     }
@@ -142,7 +142,7 @@
 
     .bottom-block { backface-visibility: hidden;
         position: absolute;
-        bottom: 10.185cqw;
+        bottom: calc(10.185cqw + 10px);
         left: calc(8.33cqw + 10px);
         display: flex;
         flex-direction: column;
@@ -218,16 +218,16 @@
     }
 
 /* Placement-specific Safe Zones */
-    .frame-square .bottom-block { backface-visibility: hidden; bottom: 5cqw; }
-    .frame-square .frame-overlay { padding-bottom: 25cqw; }
-    .frame-square::before { top: 5cqw; bottom: 5cqw; left: 5cqw; right: 5cqw; }
+    .frame-square .bottom-block { backface-visibility: hidden; bottom: calc(5cqw + 10px); }
+    .frame-square .frame-overlay { padding-bottom: calc(25cqw + 10px); }
+    .frame-square::before { top: 5cqw; bottom: calc(5cqw + 10px); left: 5cqw; right: 5cqw; }
 
-    .frame-feed .bottom-block { backface-visibility: hidden; bottom: 10.185cqw; }
-    .frame-feed .frame-overlay { padding-bottom: 30cqw; }
+    .frame-feed .bottom-block { backface-visibility: hidden; bottom: calc(10.185cqw + 10px); }
+    .frame-feed .frame-overlay { padding-bottom: calc(30cqw + 10px); }
 
-    .frame-reels .bottom-block { backface-visibility: hidden; bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
-    .frame-reels .frame-overlay { padding-bottom: 50cqw; padding-top: 10.185cqw; } /* Reels safe zone top */
-    .frame-reels::before { bottom: 30cqw; top: 15cqw; } /* Adjust Reels dashed safe line */
+    .frame-reels .bottom-block { backface-visibility: hidden; bottom: calc(30cqw + 10px); } /* Reels have tall UI overlays at the bottom */
+    .frame-reels .frame-overlay { padding-bottom: calc(50cqw + 10px); padding-top: 10.185cqw; } /* Reels safe zone top */
+    .frame-reels::before { bottom: calc(30cqw + 10px); top: 15cqw; } /* Adjust Reels dashed safe line */
 
 
     .headline::before {
