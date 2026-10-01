@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcreNKey — Meta Ads Campaign (4:5) (4:5)</title>
+    <title>AcreNKey — Meta Ads Campaign Placements</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,6 +12,7 @@
             --titanium-frost: #FAFAFA;
             --obsidian-black: #0A0A0B;
             --neutral-grey: #55555A;
+            --highlight-peach: #e5b899;
         }
         
         body {
@@ -20,39 +21,95 @@
             font-family: 'Manrope', sans-serif;
             color: var(--titanium-frost);
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            gap: 4rem;
-            padding: 4rem 2rem;
+            align-items: center;
+            gap: 6rem;
+            padding: 4rem 2rem 8rem 2rem;
         }
-        .slider-container {
+        
+        .placement-section {
             display: flex;
-            flex-direction: row;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
             max-width: 540px; /* Scaled down 50% for screen preview */
-            aspect-ratio: 1080 / 1350;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            border-radius: 4px; /* Brand Rule: strictly 4px radius */
-            border: 0.5px solid rgba(85, 85, 90, 0.2); /* Brand Rule: strictly 0.5px hairlines */
+            gap: 1.5rem;
         }
-        .slider-container::-webkit-scrollbar {
-            display: none;
+
+        .placement-labels {
+            text-align: center;
+            width: 100%;
+        }
+
+        .placement-title {
+            font-family: 'Marcellus', serif;
+            font-size: 1.8rem;
+            color: var(--highlight-peach);
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 0.02em;
+        }
+
+        .placement-desc {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(250,250,250,0.6);
+            margin: 0;
+            line-height: 1.5;
         }
         
         .frame {
             position: relative;
-            flex: 0 0 100%;
             width: 100%;
-            height: 100%;
-            scroll-snap-align: start;
             overflow: hidden;
             background: #000;
             container-type: inline-size;
+            border-radius: 4px;
+            border: 0.5px solid rgba(85, 85, 90, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        
+        /* 1. Feed Frame (1080 x 1350) */
+        .frame-feed { aspect-ratio: 1080 / 1350; }
+        .frame-feed::before {
+            content: ''; position: absolute; pointer-events: none; z-index: 100;
+            left: 8.333cqw; right: 8.333cqw; top: 10.185cqw; bottom: 10.185cqw; /* 90px / 110px */
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        .frame-feed .frame-overlay {
+            padding: 10.185cqw 8.333cqw;
+        }
+
+        /* 2. Reels / Stories Frame (1080 x 1920) */
+        .frame-reels { aspect-ratio: 1080 / 1920; }
+        .frame-reels::before {
+            content: ''; position: absolute; pointer-events: none; z-index: 100;
+            left: 8.333cqw; right: 8.333cqw; top: 23.148cqw; bottom: 23.148cqw; /* 90px / 250px */
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        .frame-reels .frame-overlay {
+            padding: 23.148cqw 8.333cqw;
+        }
+
+        /* 3. Square Frame (1080 x 1080) */
+        .frame-square { aspect-ratio: 1080 / 1080; }
+        .frame-square::before {
+            content: ''; position: absolute; pointer-events: none; z-index: 100;
+            left: 8.333cqw; right: 8.333cqw; top: 8.333cqw; bottom: 8.333cqw; /* 90px / 90px */
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        .frame-square .frame-overlay {
+            padding: 8.333cqw 8.333cqw;
+        }
+
+        .frame-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
         }
         
         .frame-img {
@@ -66,168 +123,59 @@
             animation: slowPan 25s ease-in-out infinite alternate;
         }
 
-        /* Luxury 35mm Film Grain Overlay */
         .frame::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.12; /* Perfectly balanced subtle grain */
-            mix-blend-mode: overlay;
-            pointer-events: none;
-            z-index: 5;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.12; mix-blend-mode: overlay; pointer-events: none; z-index: 5;
         }
+        
         @keyframes slowPan {
             0% { transform: scale(1.0); }
             100% { transform: scale(1.08); }
         }
-        .frame-text, .brand-logo-josefin, .brand-sub {
-            /* Editorial Crispness */
-            text-shadow: 0 4px 32px rgba(0,0,0,0.5);
-        }
 
-        
-        /* Safe Zone Overlay Helper */
-        .frame::before {
-            content: '';
-            position: absolute;
-            left: 8.333cqw; /* 90px */
-            right: 8.333cqw; /* 90px */
-            top: 10.185cqw; /* 110px */
-            bottom: 10.185cqw; /* 110px */
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            pointer-events: none;
-            z-index: 100;
-        }
-
-        .frame-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            /* Strict Meta Feed 4:5 Safe Zone Padding */
-            padding: 10.185cqw 8.333cqw;
-        }
-
-        .frame-text {
-            font-family: 'Marcellus', serif;
-            font-size: 5.2cqw; /* Reduced from 6.5cqw so 'We help you buy right.' fits in the 60% safe zone */
-            font-weight: 400;
-            color: var(--titanium-frost);
-            margin: 0;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            white-space: nowrap; /* Enforce strict single line */
-        }
-        .center-overlay {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.75) 30%, rgba(10, 10, 11, 0.1) 70%, rgba(10, 10, 11, 0) 100%);
-        }
-        
         .brand-logo-josefin {
             font-family: 'Josefin Sans', sans-serif;
-            font-size: 15cqw; /* Significantly increased to make acre&key text bigger */
             color: var(--titanium-frost);
-            margin: 0 0 1.5cqw 0;
             letter-spacing: -0.02em;
         }
-
-        .brand-logo {
-            font-family: 'Marcellus', serif;
-            font-size: 8cqw;
-            color: var(--titanium-frost);
-            
-        }
-        .brand-sub {
-            font-family: 'Manrope', sans-serif;
-            font-size: 4.5cqw; /* Increased to balance the massive 15cqw logo above it */
-            color: rgba(250, 250, 250, 0.85); /* Slightly brightened */
-            text-transform: none; /* Changed from uppercase */
-            letter-spacing: 0.03em; /* Tightened from 0.15em */
-            font-weight: 500; /* Increased weight for better presence */
-        }
-
-    
-        
-        
-        
-        /* Carousel Navigation */
-        .carousel-nav-container {
-            position: absolute;
-            bottom: 10%; /* 160px from bottom (Critical Safe Area) */
-            left: 10%; /* 120px from left */
-            right: 10%; /* 120px from right */
-
-            height: 48px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10;
-        }
-        .carousel-dots {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-        }
-        .carousel-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.9);
-            box-sizing: border-box;
-        }
-        .carousel-dot.active {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        .carousel-arrow-right {
-            width: 48px;
-            height: 48px;
-            color: rgba(255, 255, 255, 0.9);
-            transition: transform 0.4s ease;
-            cursor: pointer;
-        }
-        .carousel-arrow-right:hover {
-            transform: translateX(5px);
-        }
-
-
-
     </style>
 </head>
 <body>
 
-    <a href="index.html" style="position: absolute; top: 2rem; left: 2rem; color: var(--neutral-grey); text-decoration: none; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+    <a href="index.html" style="position: absolute; top: 2rem; left: 2rem; color: var(--neutral-grey); text-decoration: none; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease; z-index: 1000;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         Back to Styleguide
     </a>
 
+    <div style="text-align: center; margin-bottom: -2rem;">
+        <h1 style="font-family: 'Marcellus', serif; font-size: 2.5rem; margin: 0; letter-spacing: 0.05em;">Meta Ads Formatting</h1>
+        <p style="font-family: 'Manrope', sans-serif; color: rgba(250,250,250,0.6); margin-top: 0.5rem;">F.I.N.D. Campaign mapped across all 3 algorithmic placements</p>
+    </div>
 
-<div class="slider-container">
 
-    <!-- Ad Variation 01: Full Copy (F-Pattern) -->
-    <div class="frame">
-        <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="Ad 01">
+    <!-- 1. FEED -->
+    <div class="placement-section">
+        <div class="placement-labels">
+            <h2 class="placement-title">Feed <span style="font-family:'Manrope',sans-serif;font-size:1rem;color:#888;">(1080 &times; 1350)</span></h2>
+            <p class="placement-desc">Safe area: <strong>~900 &times; 1130</strong><br>Keep critical text/logo inside <strong>x: 90–990, y: 110–1240</strong></p>
+        </div>
+        <div class="frame frame-feed">
+
+        <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="Background">
         <div class="frame-overlay" style="background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 50%, rgba(10, 10, 11, 0) 100%); justify-content: space-between; align-items: flex-start;">
             
             <!-- Top Hook -->
             <div style="display: flex; flex-direction: column; gap: 1cqw;">
                 <h2 style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 700; color: var(--highlight-peach); text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Buying a home in Bengaluru?</h2>
-                <h1 class="frame-text" style="font-size: 8cqw; line-height: 1.1; white-space: normal; text-align: left; margin: 0;">
+                <h1 style="font-family: 'Marcellus', serif; font-size: 8cqw; line-height: 1.1; color: #FFF; white-space: normal; text-align: left; margin: 0; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
                     We help you
                 </h1>
             </div>
             
             <!-- Bullet Points (FIND) -->
-            <div style="display: flex; flex-direction: column; gap: 3cqw; margin: 4cqw 0;">
+            <div style="display: flex; flex-direction: column; gap: 3cqw; margin: auto 0;">
                 <div style="display: flex; align-items: flex-start; gap: 2cqw;">
                     <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">F</span>
                     <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">ind the right home.</span>
@@ -261,106 +209,125 @@
             </div>
             
         </div>
-    </div>
 
-    <!-- Ad Variation 02: Full Copy (Z-Pattern / High Contrast) -->
-    <div class="frame">
-        <img class="frame-img" src="assets/riviera/riviera_villa_exterior.webp" alt="Ad 02">
-        <div class="frame-overlay" style="background: linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.3) 40%, rgba(10, 10, 11, 0.6) 70%, rgba(10, 10, 11, 0.95) 100%); justify-content: space-between;">
-            
-            <!-- Top Hook (Z-Pattern Top) -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
-                <div style="display: flex; flex-direction: column; gap: 0.5cqw;">
-                    <div class="brand-logo-josefin" style="font-size: 4cqw; margin: 0; opacity: 0.9;">acre&key</div>
-                    <div style="font-family: 'Manrope', sans-serif; font-size: 2cqw; color: rgba(250,250,250,0.7); font-weight: 500;">Independent Buyer-Side Broker</div>
-                </div>
-                <div style="font-family: 'Manrope', sans-serif; font-size: 2.5cqw; font-weight: 700; color: #FFF; background: var(--cta-gradient); padding: 1cqw 2cqw; border-radius: 4px;">NO ADVISORY FEE</div>
-            </div>
-
-            <!-- Middle Text (Z-Pattern Diagonal) -->
-            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; margin-top: auto; margin-bottom: 4cqw; gap: 2cqw;">
-                <h2 style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 600; color: #FAFAFA; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Buying a home in Bengaluru?</h2>
-                <h1 class="frame-text" style="font-size: 7cqw; line-height: 1.1; white-space: normal; margin: 0; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">
-                    We help you <span style="color: var(--highlight-peach);">buy right.</span>
-                </h1>
-            </div>
-
-            <!-- Bottom Grid (Z-Pattern Bottom) -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; width: 100%; background: rgba(10,10,11,0.6); padding: 4cqw; border-radius: 4px; border: 0.5px solid rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-family: 'Marcellus', serif; font-size: 4.5cqw; color: var(--highlight-peach); line-height: 1;">F<span style="font-family: 'Manrope', sans-serif; font-size: 3cqw; color: #FAFAFA; font-weight: 500;">ind</span></span>
-                    <span style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); margin-top: 0.5cqw;">the right home.</span>
-                </div>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-family: 'Marcellus', serif; font-size: 4.5cqw; color: var(--highlight-peach); line-height: 1;">I<span style="font-family: 'Manrope', sans-serif; font-size: 3cqw; color: #FAFAFA; font-weight: 500;">nspect</span></span>
-                    <span style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); margin-top: 0.5cqw;">what matters.</span>
-                </div>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-family: 'Marcellus', serif; font-size: 4.5cqw; color: var(--highlight-peach); line-height: 1;">N<span style="font-family: 'Manrope', sans-serif; font-size: 3cqw; color: #FAFAFA; font-weight: 500;">egotiate</span></span>
-                    <span style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); margin-top: 0.5cqw;">the right price.</span>
-                </div>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="font-family: 'Marcellus', serif; font-size: 4.5cqw; color: var(--highlight-peach); line-height: 1;">D<span style="font-family: 'Manrope', sans-serif; font-size: 3cqw; color: #FAFAFA; font-weight: 500;">ecide</span></span>
-                    <span style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); margin-top: 0.5cqw;">with confidence.</span>
-                </div>
-            </div>
-            
         </div>
     </div>
 
-    <!-- Ad Variation 03: Full Copy (Editorial Focus) -->
-    <div class="frame">
-        <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="Ad 03">
-        <div class="frame-overlay center-overlay" style="background: radial-gradient(circle at center, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.75) 40%, rgba(10, 10, 11, 0.4) 100%);">
-            
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 6cqw;">
-                
-                <h2 style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; text-transform: uppercase; letter-spacing: 0.05em; margin: 0; opacity: 0.9;">Buying a home in Bengaluru?</h2>
-                
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 2cqw;">
-                    <h1 class="frame-text" style="font-size: 6cqw; margin: 0;">We help you</h1>
-                    <div style="display: flex; gap: 2cqw; margin-top: 1cqw;">
-                        <div style="font-family: 'Marcellus', serif; font-size: 4cqw; color: var(--highlight-peach); border: 0.5px solid rgba(255,255,255,0.2); padding: 2cqw; border-radius: 4px; display: flex; flex-direction: column; align-items: center; background: rgba(10,10,11,0.5);">
-                            F<span style="font-family: 'Manrope', sans-serif; font-size: 1.5cqw; color: #FAFAFA; letter-spacing: 0.1em; margin-top: 1cqw;">IND</span>
-                        </div>
-                        <div style="font-family: 'Marcellus', serif; font-size: 4cqw; color: var(--highlight-peach); border: 0.5px solid rgba(255,255,255,0.2); padding: 2cqw; border-radius: 4px; display: flex; flex-direction: column; align-items: center; background: rgba(10,10,11,0.5);">
-                            I<span style="font-family: 'Manrope', sans-serif; font-size: 1.5cqw; color: #FAFAFA; letter-spacing: 0.1em; margin-top: 1cqw;">NSPECT</span>
-                        </div>
-                        <div style="font-family: 'Marcellus', serif; font-size: 4cqw; color: var(--highlight-peach); border: 0.5px solid rgba(255,255,255,0.2); padding: 2cqw; border-radius: 4px; display: flex; flex-direction: column; align-items: center; background: rgba(10,10,11,0.5);">
-                            N<span style="font-family: 'Manrope', sans-serif; font-size: 1.5cqw; color: #FAFAFA; letter-spacing: 0.1em; margin-top: 1cqw;">EGOTIATE</span>
-                        </div>
-                        <div style="font-family: 'Marcellus', serif; font-size: 4cqw; color: var(--highlight-peach); border: 0.5px solid rgba(255,255,255,0.2); padding: 2cqw; border-radius: 4px; display: flex; flex-direction: column; align-items: center; background: rgba(10,10,11,0.5);">
-                            D<span style="font-family: 'Manrope', sans-serif; font-size: 1.5cqw; color: #FAFAFA; letter-spacing: 0.1em; margin-top: 1cqw;">ECIDE</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- 2. REELS / STORIES -->
+    <div class="placement-section">
+        <div class="placement-labels">
+            <h2 class="placement-title">Reels / Stories <span style="font-family:'Manrope',sans-serif;font-size:1rem;color:#888;">(1080 &times; 1920)</span></h2>
+            <p class="placement-desc">Safe area: <strong>~900 &times; 1420</strong><br>Keep critical text/logo inside <strong>x: 90–990, y: 250–1670</strong></p>
+        </div>
+        <div class="frame frame-reels">
 
-                <div style="font-family: 'Manrope', sans-serif; font-size: 3cqw; font-weight: 700; background: var(--cta-gradient); color: #FFF; padding: 1.5cqw 4cqw; border-radius: 4px; letter-spacing: 0.05em; margin-top: 2cqw;">
+        <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="Background">
+        <div class="frame-overlay" style="background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 50%, rgba(10, 10, 11, 0) 100%); justify-content: space-between; align-items: flex-start;">
+            
+            <!-- Top Hook -->
+            <div style="display: flex; flex-direction: column; gap: 1cqw;">
+                <h2 style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 700; color: var(--highlight-peach); text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Buying a home in Bengaluru?</h2>
+                <h1 style="font-family: 'Marcellus', serif; font-size: 8cqw; line-height: 1.1; color: #FFF; white-space: normal; text-align: left; margin: 0; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                    We help you
+                </h1>
+            </div>
+            
+            <!-- Bullet Points (FIND) -->
+            <div style="display: flex; flex-direction: column; gap: 3cqw; margin: auto 0;">
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">F</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">ind the right home.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">I</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">nspect what matters.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">N</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">egotiate the right price.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">D</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">ecide with confidence.</span>
+                </div>
+            </div>
+
+            <!-- Bottom CTA / Branding -->
+            <div style="display: flex; flex-direction: column; gap: 3cqw; width: 100%;">
+                <div style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 700; background: var(--cta-gradient); color: #FFF; padding: 1.5cqw 3cqw; border-radius: 4px; display: inline-flex; align-items: center; width: fit-content; letter-spacing: 0.05em;">
                     NO ADVISORY FEE
                 </div>
-
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5cqw; margin-top: auto;">
-                    <div class="brand-logo-josefin" style="font-size: 4cqw; letter-spacing: 0.02em; margin: 0; opacity: 0.95;">acre&key</div>
-                    <div style="font-family: 'Manrope', sans-serif; font-size: 1.8cqw; color: rgba(250,250,250,0.6); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;">
+                
+                <div style="display: flex; flex-direction: column; gap: 0.5cqw; margin-top: 1cqw;">
+                    <div class="brand-logo-josefin" style="font-size: 5cqw; letter-spacing: 0.02em; margin: 0; opacity: 0.95;">acre&key</div>
+                    <div style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); font-weight: 500; letter-spacing: 0.02em;">
                         Home Buying Concierge &middot; Independent Buyer-Side Broker
                     </div>
                 </div>
-
             </div>
+            
+        </div>
+
         </div>
     </div>
 
+    <!-- 3. SQUARE -->
+    <div class="placement-section">
+        <div class="placement-labels">
+            <h2 class="placement-title">Square <span style="font-family:'Manrope',sans-serif;font-size:1rem;color:#888;">(1080 &times; 1080)</span></h2>
+            <p class="placement-desc">Safe area: <strong>~900 &times; 900</strong><br>Keep critical text/logo inside <strong>x: 90–990, y: 90–990</strong></p>
+        </div>
+        <div class="frame frame-square">
+
+        <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="Background">
+        <div class="frame-overlay" style="background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 50%, rgba(10, 10, 11, 0) 100%); justify-content: space-between; align-items: flex-start;">
+            
+            <!-- Top Hook -->
+            <div style="display: flex; flex-direction: column; gap: 1cqw;">
+                <h2 style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 700; color: var(--highlight-peach); text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Buying a home in Bengaluru?</h2>
+                <h1 style="font-family: 'Marcellus', serif; font-size: 8cqw; line-height: 1.1; color: #FFF; white-space: normal; text-align: left; margin: 0; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                    We help you
+                </h1>
+            </div>
+            
+            <!-- Bullet Points (FIND) -->
+            <div style="display: flex; flex-direction: column; gap: 3cqw; margin: auto 0;">
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">F</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">ind the right home.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">I</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">nspect what matters.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">N</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">egotiate the right price.</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 2cqw;">
+                    <span style="font-family: 'Marcellus', serif; font-size: 5cqw; color: var(--highlight-peach); line-height: 1;">D</span>
+                    <span style="font-family: 'Manrope', sans-serif; font-size: 4cqw; font-weight: 500; color: #FAFAFA; line-height: 1.2;">ecide with confidence.</span>
+                </div>
+            </div>
+
+            <!-- Bottom CTA / Branding -->
+            <div style="display: flex; flex-direction: column; gap: 3cqw; width: 100%;">
+                <div style="font-family: 'Manrope', sans-serif; font-size: 3.5cqw; font-weight: 700; background: var(--cta-gradient); color: #FFF; padding: 1.5cqw 3cqw; border-radius: 4px; display: inline-flex; align-items: center; width: fit-content; letter-spacing: 0.05em;">
+                    NO ADVISORY FEE
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 0.5cqw; margin-top: 1cqw;">
+                    <div class="brand-logo-josefin" style="font-size: 5cqw; letter-spacing: 0.02em; margin: 0; opacity: 0.95;">acre&key</div>
+                    <div style="font-family: 'Manrope', sans-serif; font-size: 2.2cqw; color: rgba(250,250,250,0.7); font-weight: 500; letter-spacing: 0.02em;">
+                        Home Buying Concierge &middot; Independent Buyer-Side Broker
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
     </div>
 
-<script>
-        document.querySelectorAll('.carousel-arrow-right').forEach((arrow, index) => {
-            arrow.addEventListener('click', () => {
-                const frames = document.querySelectorAll('.frame');
-                if (frames[index + 1]) {
-                    frames[index + 1].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
