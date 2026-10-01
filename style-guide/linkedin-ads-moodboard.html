@@ -111,14 +111,13 @@
 
         .frame-text {
             font-family: 'Marcellus', serif;
-            font-size: 6.5cqw;
+            font-size: 5.2cqw; /* Reduced from 6.5cqw so 'We help you buy right.' fits in the 60% safe zone */
             font-weight: 400;
             color: var(--titanium-frost);
             margin: 0;
-            line-height: 1.15; /* Slightly increased for wrapped lines */
+            line-height: 1.1;
             letter-spacing: -0.02em;
-            white-space: normal; /* Allow wrapping for longer text */
-            max-width: 85%; /* Prevent text from hitting the arrow */
+            white-space: nowrap; /* Enforce strict single line */
         }
         .center-overlay {
             justify-content: center;
