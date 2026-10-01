@@ -26,12 +26,30 @@
             gap: 4rem;
             padding: 4rem 2rem;
         }
+        .slider-container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 100%;
+            max-width: 1080px; /* Scaled up to native Instagram resolution */
+            aspect-ratio: 1080 / 1350;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            border-radius: 4px; /* Brand Rule: strictly 4px radius */
+            border: 0.5px solid rgba(85, 85, 90, 0.2); /* Brand Rule: strictly 0.5px hairlines */
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        
         .frame {
             position: relative;
-            /* Scaled down to 50% for preview (600x600) */
+            flex: 0 0 100%;
             width: 100%;
-            max-width: 600px;
-            aspect-ratio: 1200 / 1200;
+            height: 100%;
+            scroll-snap-align: start;
             overflow: hidden;
             background: #000;
             container-type: inline-size;
@@ -46,6 +64,21 @@
             transform: scale(1.01);
             transition: transform 1s ease-out;
             animation: slowPan 25s ease-in-out infinite alternate;
+        }
+
+        /* Luxury 35mm Film Grain Overlay */
+        .frame::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.12; /* Perfectly balanced subtle grain */
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            z-index: 5;
         }
         @keyframes slowPan {
             0% { transform: scale(1.0); }
@@ -63,40 +96,42 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 35%, rgba(10, 10, 11, 0) 70%);
+            /* QC Fix: Extended dark zone to 40% to cover text that is pushed higher up */
+            background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.85) 40%, rgba(10, 10, 11, 0) 60%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            /* Typography Safe Zone (150px/200px) */
-            padding-top: 10%;
-            padding-bottom: 10%;
-            padding-left: 10%;
-            padding-right: 10%;
+            /* Typography Safe Zone: Pushed in from the sides to survive Meta 9:16 auto-cropping (Stories/Reels) */
+            padding-top: 15%;
+            padding-bottom: 25%;
+            padding-left: 20%;
+            padding-right: 20%;
             box-sizing: border-box;
         }
 
         .frame-text {
             font-family: 'Marcellus', serif;
-            font-size: 6.5cqw; /* Scales perfectly with width to stay on 1 line */
+            font-size: 6.5cqw;
             font-weight: 400;
             color: var(--titanium-frost);
             margin: 0;
-            line-height: 1.1;
+            line-height: 1.15; /* Slightly increased for wrapped lines */
             letter-spacing: -0.02em;
-            white-space: nowrap; /* Force one line */
+            white-space: normal; /* Allow wrapping for longer text */
+            max-width: 85%; /* Prevent text from hitting the arrow */
         }
         .center-overlay {
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: rgba(10, 10, 11, 0.75);
+            background: radial-gradient(circle at center, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.75) 30%, rgba(10, 10, 11, 0.1) 70%, rgba(10, 10, 11, 0) 100%);
         }
         
         .brand-logo-josefin {
             font-family: 'Josefin Sans', sans-serif;
-            font-size: 8cqw;
+            font-size: 15cqw; /* Significantly increased to make acre&key text bigger */
             color: var(--titanium-frost);
-            margin-bottom: 0.5rem;
+            margin: 0 0 1.5cqw 0;
             letter-spacing: -0.02em;
         }
 
@@ -104,15 +139,15 @@
             font-family: 'Marcellus', serif;
             font-size: 8cqw;
             color: var(--titanium-frost);
-            margin-bottom: 0.5rem;
+            
         }
         .brand-sub {
             font-family: 'Manrope', sans-serif;
-            font-size: 2.5cqw;
-            color: rgba(250, 250, 250, 0.8);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-weight: 600;
+            font-size: 4.5cqw; /* Increased to balance the massive 15cqw logo above it */
+            color: rgba(250, 250, 250, 0.85); /* Slightly brightened */
+            text-transform: none; /* Changed from uppercase */
+            letter-spacing: 0.03em; /* Tightened from 0.15em */
+            font-weight: 500; /* Increased weight for better presence */
         }
 
     
@@ -122,9 +157,9 @@
         /* Carousel Navigation */
         .carousel-nav-container {
             position: absolute;
-            bottom: 5%; /* 60px from bottom */
-            left: 10%;
-            right: 10%;
+            bottom: 10%; /* 160px from bottom (Critical Safe Area) */
+            left: 10%; /* 120px from left */
+            right: 10%; /* 120px from right */
 
             height: 48px;
             display: flex;
@@ -164,14 +199,16 @@
 </head>
 <body>
 
+<div class="slider-container">
+
     <!-- 01 -->
     <div class="frame">
-        <img class="frame-img" src="assets/images/moodboard/frame1_3x4.jpg" alt="01">
+        <img class="frame-img" src="assets/riviera/riviera_villa_exterior.webp" alt="01">
         <div class="frame-overlay">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <h1 class="frame-text">Buying a home?</h1>
                 
-        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; margin-bottom: 0.5rem;">
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; ">
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <polyline points="15 5 22 12 15 19"></polyline>
         </svg>
@@ -182,12 +219,12 @@
 
     <!-- 02 -->
     <div class="frame">
-        <img class="frame-img" src="assets/images/moodboard/frame2_3x4.jpg" alt="02">
+        <img class="frame-img" src="assets/riviera/riviera_luna_villa.webp" alt="02">
         <div class="frame-overlay">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <h1 class="frame-text">We help you buy right.</h1>
                 
-        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; margin-bottom: 0.5rem;">
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; ">
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <polyline points="15 5 22 12 15 19"></polyline>
         </svg>
@@ -199,17 +236,16 @@
     <!-- 03 -->
     <div class="frame">
         <img class="frame-img" src="assets/images/moodboard/frame3_3x4.jpg" alt="03">
-        <div class="frame-overlay">
+        <div class="frame-overlay" style="background: radial-gradient(circle at center, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.75) 25%, rgba(10, 10, 11, 0.2) 60%, rgba(10, 10, 11, 0) 100%);">
             <h1 class="frame-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: normal; text-align: left; line-height: 1.25; width: fit-content; margin: 0;">
-                Find.<br>
-                Check.<br>
-                Inspect.<br>
-                Negotiate.<br>
-                Decide.
+                <strong style="font-weight: bold;">F</strong>ind.<br>
+                <strong style="font-weight: bold;">I</strong>nspect.<br>
+                <strong style="font-weight: bold;">N</strong>egotiate.<br>
+                <strong style="font-weight: bold;">D</strong>ecide.
             </h1>
-            <div style="display: flex; justify-content: flex-end; align-items: flex-end; width: 100%;">
-                
-        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; margin-bottom: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <h1 class="frame-text" style="visibility: hidden; pointer-events: none;">Hidden</h1>
+        <svg class="carousel-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: transform 0.4s ease; ">
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <polyline points="15 5 22 12 15 19"></polyline>
         </svg>
@@ -222,17 +258,19 @@
     <div class="frame">
         <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg" alt="04">
         <div class="frame-overlay center-overlay">
-            <div class="brand-logo-josefin" style="margin-bottom: 0.5rem;">acre&key</div>
-            <div class="brand-sub">Home-buying concierge.</div>
+            <div class="brand-logo-josefin" style="">acre&key</div>
+            <div class="brand-sub">Home Buying Concierge</div>
         </div>
     </div>
 
-    <script>
+    </div>
+
+<script>
         document.querySelectorAll('.carousel-arrow-right').forEach((arrow, index) => {
             arrow.addEventListener('click', () => {
                 const frames = document.querySelectorAll('.frame');
                 if (frames[index + 1]) {
-                    frames[index + 1].scrollIntoView({ behavior: 'smooth' });
+                    frames[index + 1].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
                 }
             });
         });
