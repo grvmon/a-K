@@ -71,7 +71,7 @@
         background: linear-gradient(to bottom, rgba(10, 10, 11, 0.65) 0%, rgba(10, 10, 11, 0) 25%), linear-gradient(to top, rgba(10, 10, 11, 0.8) 0%, rgba(10, 10, 11, 0) 20%);
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
         padding: 10.185cqw 8.33cqw 35cqw 8.33cqw;
         box-sizing: border-box;
     }
@@ -126,7 +126,7 @@
     }
     .find-item strong {
         font-weight: 600;
-        color: var(--text-copper-aaa);
+        color: var(--highlight-peach); /* Used on dark backgrounds to pass AAA */
     }
 
     .bottom-block {
@@ -201,7 +201,7 @@
     .frame-feed .frame-overlay { padding-bottom: 35cqw; }
 
     .frame-reels .bottom-block { bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
-    .frame-reels .frame-overlay { padding-bottom: 55cqw; } /* Push text higher up in Reels */
+    .frame-reels .frame-overlay { padding-bottom: 55cqw; padding-top: 20cqw; } /* Reels safe zone top */
     .frame-reels::before { bottom: 30cqw; top: 15cqw; } /* Adjust Reels dashed safe line */
 
 </style>
