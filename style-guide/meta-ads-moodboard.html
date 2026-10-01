@@ -111,13 +111,14 @@
 
         .frame-text {
             font-family: 'Marcellus', serif;
-            font-size: 6.5cqw; /* Scales perfectly with width to stay on 1 line */
+            font-size: 6.5cqw;
             font-weight: 400;
             color: var(--titanium-frost);
             margin: 0;
-            line-height: 1.1;
+            line-height: 1.15; /* Slightly increased for wrapped lines */
             letter-spacing: -0.02em;
-            white-space: nowrap; /* Force one line */
+            white-space: normal; /* Allow wrapping for longer text */
+            max-width: 85%; /* Prevent text from hitting the arrow */
         }
         .center-overlay {
             justify-content: center;
