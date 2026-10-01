@@ -33,7 +33,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 70%;
+            width: 100%; /* FIXED: Was 70%, causing the harsh black band on the right */
             height: 100%;
         }
         
@@ -52,7 +52,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to left, rgba(10,10,11,0.78) 0%, rgba(10,10,11,0.4) 30%, rgba(10,10,11,0.1) 55%, rgba(10,10,11,0) 100%);
+            /* 90% opacity behind the text (0% to 45%), fading out into the house */
+            background: linear-gradient(to left, rgba(10,10,11,0.9) 0%, rgba(10,10,11,0.9) 45%, rgba(10,10,11,0) 80%);
         }
 
         /* Luxury 35mm Film Grain Overlay */
