@@ -67,8 +67,8 @@
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
-        /* Adjusted gradient to cover slightly more so all text fits */
-        background: radial-gradient(circle at center, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.75) 30%, rgba(10, 10, 11, 0.1) 70%, rgba(10, 10, 11, 0) 100%), linear-gradient(to top, rgba(10, 10, 11, 0.8) 0%, rgba(10, 10, 11, 0) 20%);
+        /* Targeted Top & Bottom edge protection for 7AAA */
+        background: linear-gradient(to bottom, rgba(10, 10, 11, 0.65) 0%, rgba(10, 10, 11, 0) 25%), linear-gradient(to top, rgba(10, 10, 11, 0.8) 0%, rgba(10, 10, 11, 0) 20%);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -85,6 +85,7 @@
         line-height: 1.1;
         letter-spacing: -0.02em;
         white-space: nowrap;
+        
     }
 
     .find-block {
@@ -92,6 +93,20 @@
         flex-direction: column;
         gap: 0.5cqw;
         margin-bottom: 6cqw;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .find-block::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 30%;
+        transform: translate(-50%, -50%);
+        width: 150cqw;
+        height: 150cqw;
+        background: radial-gradient(circle at center, rgba(10, 10, 11, 0.75) 0%, rgba(10, 10, 11, 0.4) 25%, rgba(10, 10, 11, 0) 50%);
+        pointer-events: none;
+        z-index: -1;
     }
 
     .we-help-you {
@@ -129,6 +144,7 @@
         color: var(--titanium-frost);
         margin: 0 0 0.5cqw 0;
         letter-spacing: -0.02em;
+        
     }
     .brand-sub {
         font-family: 'Manrope', sans-serif;
@@ -136,6 +152,7 @@
         color: rgba(250, 250, 250, 0.85);
         letter-spacing: 0.03em;
         font-weight: 500;
+        
     }
 
 
