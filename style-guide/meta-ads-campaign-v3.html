@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Ads Campaign – acre&key</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --titanium-frost: #FAFAFA;
+        --obsidian-black: #0A0A0B;
+    }
+
+    
+    .variants-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+        max-width: 1400px;
+        align-items: center;
+    }
+
+    body {
+        background-color: var(--obsidian-black);
+        font-family: 'Manrope', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+
+    
+    .frame-square { aspect-ratio: 1080 / 1080; }
+    .frame-feed { aspect-ratio: 1080 / 1350; }
+    .frame-reels { aspect-ratio: 1080 / 1920; }
+
+    .frame-container {
+        width: 100%;
+        /* max-width: 540px; */
+        
+        position: relative;
+        border-radius: 4px;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        overflow: hidden;
+        container-type: inline-size;
+    }
+
+    .frame-container::before {
+        content: '';
+        position: absolute;
+        left: 8.333cqw; right: 8.333cqw;
+        top: 10.185cqw; bottom: calc(10.185cqw + 10px);
+        border: 1px dashed rgba(255,255,255,0.3);
+        pointer-events: none; z-index: 100;
+    }
+    .frame-img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        filter: saturate(0.85) contrast(1.05); /* Rule #5 Art Direction */
+    }
+
+    .frame-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        /* Targeted Top & Bottom edge protection for 7AAA */
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10.185cqw 8.33cqw 35cqw calc(8.33cqw + 10px);
+        box-sizing: border-box;
+    }
+
+    .headline { backface-visibility: hidden; align-self: flex-start;
+        font-family: 'Marcellus', serif;
+        font-size: 6.0cqw;
+        font-weight: 400;
+        color: var(--titanium-frost);
+        margin: 0 0 5cqw 0;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    .find-block { align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5cqw;
+        margin-bottom: 6cqw;
+        position: relative;
+        z-index: 1;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .find-block::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 45%;
+        transform: translate(-50%, -50%);
+        width: 150%;
+        height: 180%;
+        background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .we-help-you { backface-visibility: hidden;
+        text-shadow: 0 2px 12px rgba(10, 10, 11, 1), 0 1px 4px rgba(10, 10, 11, 0.8);
+        font-family: 'Marcellus', serif;
+        font-size: 3.5cqw;
+        font-weight: 400;
+        color: rgba(250, 250, 250, 0.85);
+        margin-bottom: 1.5cqw;
+    }
+
+    .find-item { backface-visibility: hidden;
+        text-shadow: 0 2px 12px rgba(10, 10, 11, 1), 0 1px 4px rgba(10, 10, 11, 0.8);
+        font-family: 'Marcellus', serif;
+        font-size: 5.1cqw;
+        font-weight: 400;
+        color: rgba(250, 250, 250, 0.95);
+        line-height: 1.1;
+    }
+    .find-item strong {
+        font-weight: 600;
+        color: var(--highlight-peach); /* Used on dark backgrounds to pass AAA */
+    }
+
+    .bottom-block { backface-visibility: hidden;
+        position: absolute;
+        bottom: calc(10.185cqw + 10px);
+        left: calc(8.33cqw + 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-logo-josefin {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 8cqw;
+        color: var(--titanium-frost);
+        margin: 0 0 0.5cqw 0;
+        letter-spacing: -0.02em;
+        
+    }
+    .brand-sub {
+        font-family: 'Manrope', sans-serif;
+        font-size: 3cqw;
+        color: rgba(250, 250, 250, 0.85);
+        letter-spacing: 0.03em;
+        font-weight: 500;
+        
+    }
+
+
+    
+    /* --- Cinematic Animations --- */
+    @keyframes slowPan {
+        0% { transform: scale(1.0); }
+        100% { transform: scale(1.08); }
+    }
+    @keyframes cinematicFade {
+        0% { opacity: 0; transform: translateY(15px); filter: blur(2px); }
+        100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+
+    .frame-img {
+        animation: slowPan 25s ease-in-out infinite alternate;
+    }
+
+    .headline { backface-visibility: hidden; align-self: flex-start;
+        opacity: 0;
+        animation: cinematicFade 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
+    }
+
+    .we-help-you { backface-visibility: hidden;
+        text-shadow: 0 2px 12px rgba(10, 10, 11, 1), 0 1px 4px rgba(10, 10, 11, 0.8);
+        opacity: 0;
+        animation: cinematicFade 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
+    }
+
+    .find-item { backface-visibility: hidden; opacity: 0; }
+    .find-item:nth-child(2) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards; }
+    .find-item:nth-child(3) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.0s forwards; }
+    .find-item:nth-child(4) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.2s forwards; }
+    .find-item:nth-child(5) { animation: cinematicFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 1.4s forwards; }
+
+    .bottom-block { backface-visibility: hidden;
+        opacity: 0;
+        animation: cinematicFade 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.8s forwards;
+    }
+
+
+    .bottom-block::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140%;
+        height: 180%;
+        background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+/* Placement-specific Safe Zones */
+    .frame-square .bottom-block { backface-visibility: hidden; bottom: calc(5cqw + 10px); }
+    .frame-square .frame-overlay { padding-bottom: calc(25cqw + 10px); }
+    .frame-square::before { top: 5cqw; bottom: calc(5cqw + 10px); left: 5cqw; right: 5cqw; }
+
+    .frame-feed .bottom-block { backface-visibility: hidden; bottom: calc(10.185cqw + 10px); }
+    .frame-feed .frame-overlay { padding-bottom: calc(30cqw + 10px); }
+
+    .frame-reels .bottom-block { backface-visibility: hidden; bottom: calc(30cqw + 10px); } /* Reels have tall UI overlays at the bottom */
+    .frame-reels .frame-overlay { padding-bottom: calc(50cqw + 10px); padding-top: 10.185cqw; } /* Reels safe zone top */
+    .frame-reels::before { bottom: calc(30cqw + 10px); top: 15cqw; } /* Adjust Reels dashed safe line */
+
+
+    .headline::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150cqw;
+        height: 40cqw;
+        background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+</style>
+</head>
+<body>
+
+    
+    <div class="variants-grid">
+        <!-- 1:1 Square -->
+        <div class="frame-container frame-square">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg?v=1790852775" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4:5 Feed -->
+        <div class="frame-container frame-feed">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg?v=1790852775" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9:16 Reels/Stories -->
+        <div class="frame-container frame-reels">
+            <img class="frame-img" src="assets/images/moodboard/frame5_3x4.jpg?v=1790852775" alt="Background">
+            <div class="frame-overlay">
+                <h1 class="headline">Buying a home in Bengaluru?</h1>
+                <div class="find-block">
+                    <div class="we-help-you">We help you</div>
+                    <div class="find-item"><strong>F</strong>ind</div>
+                    <div class="find-item"><strong>I</strong>nspect</div>
+                    <div class="find-item"><strong>N</strong>egotiate</div>
+                    <div class="find-item"><strong>D</strong>ecide</div>
+                </div>
+                <div class="bottom-block">
+                    <div class="brand-logo-josefin">acre&key</div>
+                    <div class="brand-sub">Home Buying Concierge</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
