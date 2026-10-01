@@ -75,11 +75,11 @@
             left: 0;
             width: 50%; /* Constrained to prevent overlapping the suit */
             height: 100%;
-            padding: 10cqw; /* Equal 10% padding on all sides */
+            padding: 30cqw 10cqw 10cqw 10cqw; /* Moved down by 30% from the top */
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Moved from center to top to clear his shoulder */
+            justify-content: flex-start; 
             align-items: flex-start;
             z-index: 10;
         }
@@ -89,7 +89,7 @@
             font-family: 'Marcellus', serif;
             font-size: 4.5cqw;
             color: var(--titanium-frost);
-            margin: 0 0 2cqw 0;
+            margin: 0 0 3cqw 0; /* Increased to 3cqw for breathing room */
             line-height: 1.1;
             letter-spacing: -0.01em;
             white-space: nowrap;
@@ -101,7 +101,7 @@
             font-size: 5cqw; /* Exactly ~10% larger than the 4.5cqw H1 */
             font-weight: 500;
             color: var(--titanium-frost); /* Changed to white per request */
-            margin: 0 0 0.5cqw 0;
+            margin: 0 0 1cqw 0; /* Increased to 1cqw to separate name from role clearly */
             line-height: 1.2;
             white-space: nowrap;
         }
