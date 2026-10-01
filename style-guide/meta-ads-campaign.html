@@ -80,7 +80,7 @@
         box-sizing: border-box;
     }
 
-    .headline { backface-visibility: hidden;
+    .headline { backface-visibility: hidden; align-self: flex-start;
         font-family: 'Marcellus', serif;
         font-size: 6.0cqw;
         font-weight: 400;
@@ -95,7 +95,7 @@
         z-index: 1;
     }
 
-    .find-block {
+    .find-block { align-self: flex-start;
         display: flex;
         flex-direction: column;
         gap: 0.5cqw;
@@ -109,10 +109,10 @@
     .find-block::before {
         content: '';
         position: absolute;
-        top: 50%; left: 40%;
+        top: 50%; left: 45%;
         transform: translate(-50%, -50%);
-        width: 150cqw;
-        height: 120cqw;
+        width: 140%;
+        height: 140%;
         background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
         pointer-events: none;
         z-index: -1;
@@ -180,7 +180,7 @@
         animation: slowPan 25s ease-in-out infinite alternate;
     }
 
-    .headline { backface-visibility: hidden;
+    .headline { backface-visibility: hidden; align-self: flex-start;
         opacity: 0;
         animation: cinematicFade 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
     }
@@ -207,8 +207,8 @@
         position: absolute;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
-        width: 120cqw;
-        height: 60cqw;
+        width: 140%;
+        height: 180%;
         background: radial-gradient(ellipse at center, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 65%);
         pointer-events: none;
         z-index: -1;
