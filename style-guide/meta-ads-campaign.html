@@ -78,7 +78,7 @@
 
     .headline {
         font-family: 'Marcellus', serif;
-        font-size: 6.5cqw;
+        font-size: 6.0cqw;
         font-weight: 400;
         color: var(--titanium-frost);
         margin: 0 0 5cqw 0;
@@ -175,15 +175,17 @@
         animation: cinematicFade 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.8s forwards;
     }
 
-    /* Placement-specific Safe Zones */
+/* Placement-specific Safe Zones */
     .frame-square .bottom-block { bottom: 5cqw; }
     .frame-square .frame-overlay { padding-bottom: 25cqw; }
+    .frame-square::before { top: 5cqw; bottom: 5cqw; left: 5cqw; right: 5cqw; }
 
     .frame-feed .bottom-block { bottom: 10.185cqw; }
     .frame-feed .frame-overlay { padding-bottom: 35cqw; }
 
     .frame-reels .bottom-block { bottom: 30cqw; } /* Reels have tall UI overlays at the bottom */
     .frame-reels .frame-overlay { padding-bottom: 55cqw; } /* Push text higher up in Reels */
+    .frame-reels::before { bottom: 30cqw; top: 15cqw; } /* Adjust Reels dashed safe line */
 
 </style>
 </head>
