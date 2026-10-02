@@ -627,77 +627,26 @@
             <strong>Changelog:</strong> Pivot from Warm Ivory to Titanium Frost, shift from Cormorant to Marcellus, implementation of strict 7.0:1 AAA contrast and 4px micro-edge geometry.</p>
         </section>
 
-        <!-- P0 FOUNDATIONS -->
-        <section class="ds-section" id="brand">
-            <h2 class="ds-section-title">1. P0 Foundations — Token Map &amp; Contrast Matrix</h2>
-            <p class="ds-section-desc">The absolute root parameters that govern the entire design system.</p>
-            
-            <div style="background:var(--titanium-frost); padding:2rem; border:0.5px solid rgba(85, 85, 90, 0.15); border-radius:4px; margin-bottom:2rem;">
-                <h3 style="font-weight: 400; color: var(--obsidian-black); font-family:'Marcellus',serif; font-size: 1.15rem; margin:0 0 1rem 0;">Token Map & Contrast Matrix</h3>
-                <table style="width:100%; border-collapse:collapse; font-family:'Manrope',sans-serif; font-size:0.85rem; text-align:left;">
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.2);">
-                        <th style="padding:0.75rem 0;">Role</th>
-                        <th>Token Name</th>
-                        <th>Hex/Value</th>
-                        <th>Contrast (vs Canvas)</th>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Canvas Light</td><td><code>--titanium-frost</code></td><td>#FAFAFA</td><td>N/A</td>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Canvas Dark (Anchor)</td><td><code>--obsidian-black</code></td><td>#1C1C1E</td><td>18.9:1 (AAA)</td>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Primary Accent</td><td><code>--text-copper-aaa</code></td><td>#804526</td><td>7.2:1 (AAA)</td>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Highlight Accent</td><td><code>--highlight-peach</code></td><td>#e5b899</td><td>10.9:1 (On Obsidian)</td>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Secondary Text</td><td><code>--neutral-grey</code></td><td>#55555A</td><td>7.1:1 (AAA)</td>
-                    </tr>
-                    <tr style="border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
-                        <td style="padding:0.75rem 0;">Hairline Divider</td><td><code>--divider</code></td><td>rgba(85, 85, 90, 0.15)</td><td>Structural</td>
-                    </tr>
-                </table>
-            </div>
-            
-            
-        </section>
-
 
         <!-- SECTION 1: ETHOS & LEXICON -->
+        
+        <!-- SECTION: VERBAL IDENTITY -->
         <section class="ds-section" id="voice">
             <h2 class="ds-section-title">02. Verbal Identity &amp; Lexicon</h2>
             <p class="ds-section-desc">HNI buyers ignore generic marketing jargon. We operate as independent, data-driven advisors. Never use terms that imply urgency or generic "luxury".</p>
-            
-            <table class="ds-table">
-                <thead>
-                    <tr>
-                        <th>Banned Marketing Fluff</th>
-                        <th>Approved Clinical Terminology</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="ds-banned">"Buy Now" / "Submit"</td>
-                        <td class="ds-approved">"Request Advisory Call" / "Get Buyer Analysis"</td>
-                    </tr>
-                    <tr>
-                        <td class="ds-banned">"Luxury" / "Premium"</td>
-                        <td class="ds-approved">"Institutional-Grade" / "A-Grade"</td>
-                    </tr>
-                    <tr>
-                        <td class="ds-banned">"Features" / "Amenities"</td>
-                        <td class="ds-approved">"Asset Fundamentals" / "Township Infrastructure"</td>
-                    </tr>
-                    <tr>
-                        <td class="ds-banned">"Best" / "Perfect"</td>
-                        <td class="ds-approved">"Objective Evaluation" / "Data-Driven"</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">Voice & Tone</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:3rem;">
+                <div style="background:rgba(139,58,58,0.05);border:0.5px solid #8B3A3A;border-radius:4px;padding:1.5rem;"><div style="font-family:'Manrope',sans-serif;font-size:0.7rem;font-weight:700;color:#8B3A3A;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">✕ BAD</div><p style="font-family:'Manrope',sans-serif;font-size:0.95rem;color:var(--obsidian-black);font-style:italic;line-height:1.5;">"Don't miss out on this breathtaking, ultra-luxury masterpiece in Whitefield! Perfect for your dream lifestyle!"</p><p style="font-family:'Manrope',sans-serif;font-size:0.85rem;color:#8B3A3A;margin:1rem 0 0 0;font-weight:600;">Why it fails: Sounds like every generic broker. Reeks of desperation.</p></div>
+                <div style="background:rgba(44,76,59,0.05);border:0.5px solid #2C4C3B;border-radius:4px;padding:1.5rem;"><div style="font-family:'Manrope',sans-serif;font-size:0.7rem;font-weight:700;color:#2C4C3B;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">✓ GOOD</div><p style="font-family:'Manrope',sans-serif;font-size:0.95rem;color:var(--obsidian-black);font-style:italic;line-height:1.5;">"A Grade-A asset in the Whitefield micro-market. Strong capital appreciation fundamentals supported by Phase 2 metro connectivity."</p><p style="font-family:'Manrope',sans-serif;font-size:0.85rem;color:#2C4C3B;margin:1rem 0 0 0;font-weight:600;">Why it works: Objective, data-driven, emotionally detached.</p></div>
+            </div>
+            <div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">Mechanics</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:3rem;">
+                <div style="background:#fff;border:0.5px solid rgba(85,85,90,0.2);border-radius:4px;padding:1.5rem 2rem;"><div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">Currency & Pricing</div><p style="font-family:'Manrope',sans-serif;font-size:0.85rem;color:var(--neutral-grey);line-height:1.5;margin:0;">Rule: Always use ₹ with spaces. Use 'Cr' and 'L'. Always include decimals.</p><div style="margin-top:1rem;"><p style="text-decoration:line-through;color:#8B3A3A;font-family:'Manrope',sans-serif;font-size:0.85rem;margin:0 0 0.25rem 0;">3.1Cr, Rs 3.10 Cr, 3,10,00,000</p><p style="color:#2C4C3B;font-weight:700;font-family:'Manrope',sans-serif;font-size:0.95rem;margin:0;">₹ 3.10 Cr</p></div></div><div style="background:#fff;border:0.5px solid rgba(85,85,90,0.2);border-radius:4px;padding:1.5rem 2rem;"><div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">Area & Measurements</div><p style="font-family:'Manrope',sans-serif;font-size:0.85rem;color:var(--neutral-grey);line-height:1.5;margin:0;">Rule: Title Case with periods. Commas for >999.</p><div style="margin-top:1rem;"><p style="text-decoration:line-through;color:#8B3A3A;font-family:'Manrope',sans-serif;font-size:0.85rem;margin:0 0 0.25rem 0;">3150 sqft, 3,150 Sqft</p><p style="color:#2C4C3B;font-weight:700;font-family:'Manrope',sans-serif;font-size:0.95rem;margin:0;">3,150 Sq.Ft.</p></div></div><div style="background:#fff;border:0.5px solid rgba(85,85,90,0.2);border-radius:4px;padding:1.5rem 2rem;"><div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">Headlines & Body</div><p style="font-family:'Manrope',sans-serif;font-size:0.85rem;color:var(--neutral-grey);line-height:1.5;margin:0;">Rule: Strictly Sentence case. Never exclamation marks.</p><div style="margin-top:1rem;"><p style="text-decoration:line-through;color:#8B3A3A;font-family:'Manrope',sans-serif;font-size:0.85rem;margin:0 0 0.25rem 0;">Secure Your Asset Today!</p><p style="color:#2C4C3B;font-weight:700;font-family:'Manrope',sans-serif;font-size:0.95rem;margin:0;">Schedule a clinical analysis.</p></div></div>
+            </div>
+            <div style="font-family:'Manrope',sans-serif;font-size:0.75rem;font-weight:700;color:var(--text-copper-aaa);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;">The Master Lexicon</div>
+            <div style="overflow-x:auto;margin-bottom:2rem;"><table style="width:100%;border-collapse:collapse;background:#FFF;"><tr><th style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;color:var(--neutral-grey);text-transform:uppercase;letter-spacing:0.1em;background:#FAFAFA;">Banned Marketing Fluff</th><th style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;color:var(--neutral-grey);text-transform:uppercase;letter-spacing:0.1em;background:#FAFAFA;">Approved Clinical Terminology</th><th style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;color:var(--neutral-grey);text-transform:uppercase;letter-spacing:0.1em;background:#FAFAFA;">Context/Usage</th></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Buy Now" / "Submit"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Request Advisory Call"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">CTA Language. We do not sell; we advise.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Luxury" / "Premium"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Institutional-Grade" / "A-Grade"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Real estate descriptors. Luxury is cheap.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Features" / "Amenities"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Asset Fundamentals"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Describing the physical property.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Best" / "Perfect"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Objective Evaluation"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Avoid superlatives. Present data instead.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Price List"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Valuation Matrix" / "Cost Sheet"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Pricing communication.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Brochure"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Asset Dossier" / "Project Brief"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Document naming.</td></tr><tr><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Submit"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">"Get Buyer Analysis"</td><td style="text-align:left;padding:0.85rem 1rem;border:0.5px solid rgba(85,85,90,0.15);font-family:'Manrope',sans-serif;font-size:0.9rem;color:var(--obsidian-black);">Form CTAs.</td></tr></table></div>
         </section>
+
 
         <!-- SECTION 2: COLORS -->
         <section class="ds-section" id="color">
