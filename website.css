@@ -4773,3 +4773,28 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
         transform: none !important;
     }
 }
+
+/* Minimal Editorial Typography Overrides */
+.hero-title, .premium-title { 
+    font-size: 32px !important;
+    font-weight: 300 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+}
+.hero-subtitle, .premium-subtitle {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.6 !important;
+    max-width: 580px !important; /* Keep line length readable */
+}
+
+/* Mobile Minimal Scale */
+@media (max-width: 768px) {
+    .hero-title, .premium-title { 
+        font-size: 26px !important; 
+    }
+    .hero-subtitle, .premium-subtitle {
+        font-size: 14px !important;
+    }
+}
