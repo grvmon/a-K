@@ -847,10 +847,9 @@ window.addEventListener('hashchange', function () {
 
         function onScrollCheckFold() {
             var scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-            var isDesktop = window.innerWidth >= 992;
-            var threshold = isDesktop ? getFoldThreshold() : 0;
+            var threshold = getFoldThreshold();
             
-            if (scrollY >= threshold || !isDesktop) {
+            if (scrollY >= threshold) {
                 if (aside && !aside.classList.contains("is-visible")) {
                     aside.classList.add("is-visible");
                     if (!bubblePopped) {
