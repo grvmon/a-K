@@ -8515,7 +8515,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     @media (min-width: 1024px) {
         .luxury-approach-grid {
             grid-template-columns: 480px 1fr !important;
-            gap: min(89px, 6vw) !important; 
+            gap: min(89px, 6vw) !important;
+            align-items: center !important; 
         }
     }
     
@@ -8526,4 +8527,19 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 /* Vercel Web Interface Guidelines: Add scroll-margin-top to all anchorable IDs to prevent sticky header overlap */
 section[id] {
     scroll-margin-top: 80px !important; 
+}
+
+
+/* =========================================
+   APPROVED: VERTICAL ALIGNMENT FIX FOR CHECKLIST
+   ========================================= */
+.luxury-approach-right {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+@media (min-width: 1024px) {
+    .luxury-approach-grid {
+        align-items: center !important;
+    }
 }
