@@ -5386,16 +5386,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 }
 
 /* Buyer Checklist Internal Spacing */
-.luxury-approach-item {
-    /* Scale vertical gaps dynamically: 34px on big screens, tightens on laptops */
-    padding-bottom: min(34px, 3vh) !important; 
-    margin-bottom: min(34px, 3vh) !important;
-}
 
-.luxury-approach-item:last-child {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
 
 /* Scale the image height dynamically so it doesn't push the grid past 100vh */
 .luxury-approach-img-wrapper {
@@ -5432,4 +5423,26 @@ section[id] {
     .luxury-approach-grid {
         align-items: center !important;
     }
+}
+
+
+/* =========================================
+   APPROVED: EXACT BORDER CENTERING FIX
+   ========================================= */
+.luxury-approach-item {
+    /* Replace margin/padding split with exact top/bottom padding to center the border */
+    padding-top: min(21px, 2.5vh) !important;
+    padding-bottom: min(21px, 2.5vh) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: 0.5px solid rgba(85, 85, 90, 0.2) !important; /* Standard hairline divider */
+}
+
+.luxury-approach-item:first-child {
+    padding-top: 0 !important;
+}
+
+.luxury-approach-item:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
 }
