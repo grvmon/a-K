@@ -5556,3 +5556,48 @@ section[id] {
 .framework-card-num-badge {
     background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
 }
+
+
+/* =========================================
+   APPROVED: STRICT FIBONACCI MICRO-SPACING (CARD UI)
+   ========================================= */
+
+/* Overriding previous 24px padding with strict 21px Fibonacci padding */
+.framework-card {
+    padding: 21px !important; 
+}
+
+/* Header Spacing */
+.framework-card-header {
+    margin-top: 0 !important;
+    margin-bottom: 21px !important; /* 21px below header block */
+    min-height: auto !important; 
+}
+
+.framework-card-sub {
+    margin-top: 5px !important; /* 5px between title and sub */
+}
+
+/* Bullets Spacing */
+.framework-bullets {
+    gap: 8px !important; /* 8px between bullets */
+    margin-bottom: 21px !important; /* 21px below bullets before the questions box */
+}
+
+/* Questions Box Spacing */
+.framework-questions-box {
+    margin-left: -21px !important; /* Bleed to 21px padding */
+    margin-right: -21px !important; 
+    margin-bottom: -21px !important; 
+    padding: 13px 21px 13px 21px !important; /* 13px top/bottom, 21px sides */
+}
+
+.framework-questions-header {
+    margin-bottom: 8px !important; /* 8px below questions header */
+}
+
+.framework-questions-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important; /* 5px between questions */
+}
