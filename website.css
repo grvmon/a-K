@@ -5492,3 +5492,18 @@ section[id] {
 .author-avatar img {
     filter: saturate(0.85) contrast(1.05) !important;
 }
+
+
+/* =========================================
+   APPROVED: DYNAMIC WHO-CARD HEIGHT (1-FOLD)
+   ========================================= */
+.who-card {
+    /* Scale the card height dynamically so it fits in 1-fold on small laptops, capping at 520px on huge screens */
+    height: min(520px, 55vh) !important;
+}
+
+@media (max-width: 768px) {
+    .who-card {
+        height: min(450px, 60vh) !important;
+    }
+}
