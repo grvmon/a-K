@@ -8170,13 +8170,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
 .luxury-approach-desc {
     margin-bottom: 1.5rem !important;
 }
-@media (min-width: 1024px) {
-    .luxury-approach-grid {
-        grid-template-columns: 380px 1fr !important;
-        gap: 40px !important;
-        align-items: center !important;
-    }
-}
+
 
 /* =========================================
    APPROVED: HEADER TEXT CONTRAST FIX
@@ -8454,4 +8448,29 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
         padding-bottom: 8px !important;
         margin-bottom: 8px !important;
     }
+}
+
+
+/* =========================================
+   APPROVED: LUXURIOUS BUYER CHECKLIST SPACING
+   ========================================= */
+@media (min-width: 1024px) {
+    .luxury-approach-grid {
+        /* Increase image size to dominate the left side */
+        grid-template-columns: 480px 1fr !important;
+        /* Beautiful Fibonacci gap between image and content */
+        gap: 89px !important; 
+    }
+}
+
+/* Better vertical rhythm for the text items */
+.luxury-approach-item {
+    padding-bottom: 34px !important; 
+    margin-bottom: 34px !important;
+}
+
+/* Ensure the last item doesn't push the section height */
+.luxury-approach-item:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
