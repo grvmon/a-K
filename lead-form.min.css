@@ -620,64 +620,13 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
     border-radius: 4px !important;
 }
 
-.lf-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 26px;
-  text-align: left;
-}
-.lf-profile-wrap {
-  position: relative;
-  flex-shrink: 0;
-  width: 76px;
-  height: 76px;
-}
-.lf-profile-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.lf-online-dot {
-  position: absolute;
-  bottom: 2px;
-  right: 2px;
-  width: 16px;
-  height: 16px;
-  background-color: #00C853;
-  border: 2.5px solid #FFFFFF;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-.lf-header-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.lf-main-heading { 
-  font-family: var(--lf-font-sans); 
-  font-size: 24px; 
-  font-weight: 700; 
-  margin: 0; 
-  color: var(--lf-ink); 
-  letter-spacing: -0.01em; 
-  line-height: 1.2; 
-}
-.lf-sub-heading { 
-  font-family: var(--lf-font-sans); 
-  font-size:  18px; 
-  color: var(--lf-muted); 
-  line-height: 1.45; 
-  margin: 0; 
-}
+.lf-header { text-align: center; margin-bottom: 24px; }
+
+
+
+
+.lf-main-heading { font-family: var(--lf-font-serif); font-size: 28px; font-weight: 400; margin: 0 0 8px 0; color: var(--lf-ink); line-height: 1.25; }
+.lf-sub-heading { font-family: var(--lf-font-sans); font-size: 15px; color: var(--lf-muted); line-height: 1.5; margin: 0 auto; max-width: 360px; text-align: center; }
 /* Exception for the Chat Arrow SVG */
-.lf-chat-arrow {
-  width: 20px;
-  height: 20px;
-  margin-left: 6px;
-  transition: transform 0.4s ease;
-}
-.primary-cta-btn:hover .lf-chat-arrow {
-  transform: translateX(4px);
-}
+
+.primary-cta-btn:hover 
