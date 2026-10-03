@@ -104,10 +104,13 @@ h3.framework-card-title, .roadmap-stage-title { font-size: 17px !important; }
         line-height: 1.4;
     }
     
-    /* Ensure hero image doesn't stretch weirdly */
-    .hero-bg-image {
-        object-position: center;
+    /* Ensure hero image doesn't stretch weirdly, crop out family */
+    .hero-bg-image { object-position: right center !important; }
+    /* Darken the hero background slightly with a black layover on mobile */
+    .hero-section::before {
+        background: linear-gradient(180deg, rgba(10, 10, 11, 0.88) 0%, rgba(10, 10, 11, 0.75) 100%) !important;
     }
+
     
     /* Ensure modal doesn't stick to the absolute edges on tiny screens like iPhone SE */
     .lf-wrap {
