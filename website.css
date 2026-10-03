@@ -5507,3 +5507,44 @@ section[id] {
         height: min(450px, 60vh) !important;
     }
 }
+
+
+/* =========================================
+   APPROVED: CORE FRAMEWORK UI/UX QC FIXES
+   ========================================= */
+
+/* 1. Heading Typography: Marcellus 400 weight (No faux-bold) */
+.framework-card-title {
+    font-family: 'Marcellus', serif !important;
+    font-weight: 400 !important;
+    font-size: 1.35rem !important; /* Slight bump for elegant serif sizing */
+    letter-spacing: 0.02em !important;
+}
+
+/* 2. Checkmark Icon Contrast: Force Text Copper AAA (#804526) for 7.0:1 contrast */
+.bullet-check-brass {
+    stroke: #804526 !important;
+}
+
+/* Subtitles/Headers contrast fix */
+.framework-questions-header {
+    color: #804526 !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 600 !important;
+}
+
+/* 3. Internal Whitespace & Hairline Borders */
+.framework-card {
+    padding: 1.5rem !important; /* Pure whitespace rule */
+    border: 0.5px solid rgba(85, 85, 90, 0.2) !important; /* Strict 0.5px hairline */
+    border-radius: 4px !important; /* Ensure strict 4px corners */
+}
+
+/* Adjust the questions box bleed margins to match the new 1.5rem card padding */
+.framework-questions-box {
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+    margin-bottom: -1.5rem !important;
+    padding: 1rem 1.5rem 1.25rem !important;
+    border-top: 0.5px solid rgba(85, 85, 90, 0.2) !important; /* Replace peach border with muted hairline */
+}
