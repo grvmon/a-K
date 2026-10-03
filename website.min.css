@@ -3215,8 +3215,7 @@ to {
     max-width:360px;
     flex-shrink:0;
     scroll-snap-align:start;
-    height:fit-content
-}
+    height:auto;}
 
 .testimonials-carousel-dots {
     display:flex;
@@ -9252,4 +9251,16 @@ h3.framework-card-title {
 /* Ensure main title is standard 400 weight Marcellus */
 .consultant-main-title {
     font-weight: 400 !important;
+}
+
+@media (max-width: 768px) {
+    .credentials-col {
+        align-items: stretch !important;
+    }
+    .testimonial-card {
+        height: auto !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
 }
