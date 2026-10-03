@@ -574,3 +574,90 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   transform: translateY(-1px) !important;
 }
 
+
+/* =========================================
+   ACRE & KEY LUXURY UI OVERRIDES (QC FIXES)
+   ========================================= */
+
+/* 1. Global Border Radius (Strictly 4px, No Bubbly UI) */
+.lf-wrap, .lf-input-box, .lf-btn, .lf-btn .cta-arrow-badge, .lf-modal-close-icon {
+    border-radius: 4px !important;
+}
+
+/* 2. Remove "SaaS" Drop Shadows */
+.lf-btn, .lf-btn:hover, .lf-btn:active, .lf-btn:focus-visible {
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* 3. True Master Color Palette for CTA */
+.lf-btn {
+    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%) !important;
+    color: #FFFFFF !important;
+}
+.lf-btn:hover {
+    background: linear-gradient(135deg, #c47c5d 0%, #a55a3a 100%) !important;
+}
+
+/* 4. Fix Close Button (Remove Pill Shape) */
+.lf-modal-close-icon {
+    background: transparent !important;
+    border: none !important;
+    color: #1C1C1E !important;
+}
+.lf-modal-close-icon:hover {
+    background: rgba(0,0,0,0.04) !important;
+}
+
+/* 5. Inputs (Remove Material Notched Outline, Use 0.5px Hairline) */
+.lf-input-box {
+    border: 0.5px solid rgba(85,85,90,0.2) !important;
+    box-shadow: none !important;
+    background: #FAFAFA !important;
+}
+.lf-field.lf-focused .lf-input-box {
+    border-color: #804526 !important;
+    box-shadow: none !important;
+}
+
+/* Stop Floating Labels, Make Them Static Minimal Architecture */
+.lf-wrap .lf-label,
+.lf-field.lf-focused .lf-label,
+.lf-field.lf-has-value .lf-label,
+.lf-field.lf-autofilled .lf-label,
+.lf-field-phone.lf-focused .lf-label,
+.lf-field-phone.lf-has-value .lf-label,
+.lf-field-phone.lf-autofilled .lf-label,
+.lf-field-phone .lf-label {
+    position: static !important;
+    transform: none !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.05em !important;
+    color: #804526 !important;
+    background: transparent !important;
+    padding: 0 0 8px 0 !important;
+    display: block !important;
+    text-transform: uppercase !important;
+    pointer-events: auto !important;
+    left: 0 !important;
+    top: auto !important;
+}
+
+/* Adjust Phone Field padding since label is now outside */
+.lf-phone-row .lf-input {
+    padding-left: 0 !important;
+}
+
+/* 6. Fix Privacy Policy Inline Link Underline */
+.lf-privacy-consent a, .lf-privacy-text a {
+    color: #804526 !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 4px !important;
+    text-decoration-color: #804526 !important;
+}
+.lf-privacy-consent a:hover, .lf-privacy-text a:hover {
+    color: #9f5334 !important;
+    text-decoration-color: #9f5334 !important;
+}
