@@ -718,8 +718,8 @@ window.addEventListener('hashchange', function () {
             "<div class=\"advisor-speech-desc\">How can I help you today?</div>" +
             "<div class=\"advisor-bubble-tail\" aria-hidden=\"true\">" +
               "<svg width=\"16\" height=\"9\" viewBox=\"0 0 16 9\" fill=\"none\">" +
-                "<path d=\"M0 0H16L8.8 7.6C8.4 8 7.6 8 7.2 7.6L0 0Z\" fill=\"#F7F1EA\"/>" +
-                "<path d=\"M0 0L7.2 7.6C7.6 8 8.4 8 8.8 7.6L16 0\" stroke=\"rgba(220, 215, 208, 0.5)\" stroke-width=\"1\" fill=\"none\"/>" +
+                "<path d=\"M0 0H16L8.8 7.6C8.4 8 7.6 8 7.2 7.6L0 0Z\" fill=\"#FAFAFA\"/>" +
+                "<path d=\"M0 0L7.2 7.6C7.6 8 8.4 8 8.8 7.6L16 0\" stroke=\"rgba(229, 184, 153, 0.5)\" stroke-width=\"1\" fill=\"none\"/>" +
               "</svg>" +
             "</div>" +
           "</div>" +
