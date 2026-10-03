@@ -8474,3 +8474,48 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
+
+
+/* =========================================
+   APPROVED: DYNAMIC 1-FOLD FIBONACCI SCALING
+   ========================================= */
+/* Protects the 1-fold rule by allowing Fibonacci values to gracefully scale down on short screens */
+
+.framework-section,
+.core-framework-section,
+.who-are-we-section,
+.credentials-section,
+.consultant-info-section,
+.who-were-for-section,
+.luxury-approach-section {
+    padding-top: min(89px, 8vh) !important;
+    padding-bottom: min(89px, 8vh) !important;
+    min-height: 100svh !important;
+    
+    
+}
+
+/* Buyer Checklist Internal Spacing */
+.luxury-approach-item {
+    /* Scale vertical gaps dynamically: 34px on big screens, tightens on laptops */
+    padding-bottom: min(34px, 3vh) !important; 
+    margin-bottom: min(34px, 3vh) !important;
+}
+
+.luxury-approach-item:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Scale the image height dynamically so it doesn't push the grid past 100vh */
+.luxury-approach-img-wrapper {
+    max-height: min(500px, 60vh) !important;
+}
+
+    @media (min-width: 1024px) {
+        .luxury-approach-grid {
+            grid-template-columns: 480px 1fr !important;
+            gap: min(89px, 6vw) !important; 
+        }
+    }
+    
