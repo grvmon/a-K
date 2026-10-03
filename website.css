@@ -5696,3 +5696,62 @@ section[id] {
     font-size: 1rem !important; /* Decreased to compensate for Manrope's larger x-height */
     letter-spacing: 0.02em !important;
 }
+
+
+/* =========================================
+   APPROVED: QC ROADMAP SECTION (1-FOLD & STYLEGUIDE)
+   ========================================= */
+
+/* 1. Constrain Section to 1-Fold using dynamic viewport units and strict Fibonacci padding */
+.core-framework-section {
+    padding-top: min(89px, 8vh) !important;
+    padding-bottom: min(89px, 8vh) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto !important; /* Ensure it doesn't stretch past content unnecessarily */
+    height: auto !important;
+}
+
+@media (min-width: 992px) {
+    .core-framework-section {
+        height: min(800px, 95vh) !important; /* Force 1-fold constraint on desktop */
+    }
+}
+
+/* 2. Card Geometry (Strict 4px radius, 0.5px hairline, 21px Fibonacci padding, Zero Shadows) */
+.roadmap-stage-card {
+    border-radius: 4px !important;
+    border: 0.5px solid rgba(85, 85, 90, 0.2) !important;
+    padding: 21px !important;
+    box-shadow: none !important;
+    background: #FFFFFF !important;
+}
+
+/* 3. Highlight Card (Fix thick border violation) */
+.roadmap-stage-card.roadmap-stage-highlight {
+    border: 0.5px solid #be7555 !important; /* Was 1.5px, violating hairline rule */
+    background: #FAF8F5 !important;
+    box-shadow: none !important;
+}
+
+/* 4. Grid Spacing (Fibonacci 21px gap) */
+.roadmap-grid {
+    gap: 21px !important;
+}
+
+/* 5. Internal Spacing adjustments for compactness */
+.roadmap-stage-header {
+    margin-bottom: 13px !important; /* Fibonacci */
+    padding-bottom: 13px !important;
+    border-bottom: 0.5px solid rgba(47, 59, 66, 0.08) !important; /* Hairline */
+}
+
+.roadmap-stage-desc {
+    margin-bottom: 13px !important;
+}
+
+.roadmap-deliverables-list {
+    gap: 8px !important; /* Fibonacci */
+    margin-bottom: 13px !important;
+}
