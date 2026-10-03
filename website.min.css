@@ -8879,3 +8879,33 @@ section[id] {
     font-weight: 400 !important; /* Marcellus must never be bolded */
     font-size: 1.15rem !important; /* Shrunk from 1.25rem */
 }
+
+
+/* =========================================
+   APPROVED: FOUNDERS GRID 2x2 & QC
+   ========================================= */
+.waw-founders-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+@media (max-width: 991px) {
+    .waw-founders-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.waw-founder-card {
+    border: 0.5px solid rgba(85,85,90,0.2) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+
+.founder-linkedin-link {
+    border-radius: 4px !important; /* Anti-Pill Rule */
+}
+
+
+/* Cinematic Desaturation for Founders */
+.waw-founder-img {
+    filter: saturate(0.85) contrast(1.05) !important;
+}
