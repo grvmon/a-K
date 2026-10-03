@@ -7362,7 +7362,7 @@ button:focus-visible,a:focus-visible {
     align-items: center;
     gap: 5px;
     font-family: var(--font-body), 'Manrope', sans-serif;
-    font-size: 0.74rem;
+    font-size: clamp(0.62rem, 2.8vw, 0.74rem); white-space: nowrap;
     font-weight: 600;
     color: #743d24;
     background: rgba(132, 66, 34, 0.08);
@@ -9262,5 +9262,14 @@ h3.framework-card-title {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-outcome-tag {
+        font-size: clamp(0.55rem, 2.8vw, 0.74rem) !important;
+        white-space: nowrap !important;
+        padding: 3px 6px !important;
+        letter-spacing: 0 !important;
     }
 }
