@@ -5926,3 +5926,73 @@ section[id] {
     color: #804526 !important;
     border-color: #804526 !important;
 }
+
+
+/* =========================================
+   APPROVED: VERTICAL TEAM CARD UI (1x3)
+   ========================================= */
+
+.waw-founders-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+@media (max-width: 991px) {
+    .waw-founders-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Transform the internal layout to a clean Vertical Stack */
+.waw-founder-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 1.25rem !important;
+}
+
+/* Make image take full width of the card for editorial look */
+.waw-founder-photo-wrap {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+.waw-founder-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+}
+
+.waw-founder-details {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+}
+
+.waw-founder-name-row {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.waw-founder-name {
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+.waw-founder-role {
+    margin: 0 !important;
+}
+.waw-founder-bio {
+    margin: 0.5rem 0 0 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* Remove the broken ring completely */
+.waw-founder-photo-ring {
+    display: none !important;
+}
