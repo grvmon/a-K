@@ -8556,3 +8556,49 @@ section[id] {
     padding-bottom: 0 !important;
     border-bottom: none !important;
 }
+
+
+/* =========================================
+   APPROVED: GLOBAL CINEMATIC GRAIN (ANTI-AI)
+   ========================================= */
+/* Apply a soft film grain overlay to all structural image wrappers to give a high-end, editorial photographic texture and mask any AI-generated smoothness */
+
+
+
+
+/* =========================================
+   APPROVED: GLOBAL CINEMATIC GRAIN (ANTI-AI)
+   ========================================= */
+/* Apply a soft film grain overlay to all structural image wrappers using ::before to avoid clashing with existing ::after gradients */
+
+.luxury-approach-img-wrapper,
+.framework-card-image-wrap,
+.who-card-media,
+.waw-founder-photo-wrap,
+.author-avatar {
+    position: relative;
+}
+
+.luxury-approach-img-wrapper::before,
+.framework-card-image-wrap::before,
+.who-card-media::before,
+.waw-founder-photo-wrap::before,
+.author-avatar::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0; left: 0; width: 100%; height: 100% !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    opacity: 0.25 !important;
+    mix-blend-mode: overlay !important;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
+}
+
+/* Also apply the styleguide Cinematic Desaturation to all images */
+.luxury-approach-img-wrapper img,
+.framework-card-image-wrap img,
+.who-card-media img,
+.waw-founder-photo-wrap img,
+.author-avatar img {
+    filter: saturate(0.85) contrast(1.05) !important;
+}
