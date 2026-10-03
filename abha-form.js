@@ -503,7 +503,7 @@ var akGetBasePath = function() {
             "</div>" +
             "<div class=\"abha-header-text\">" +
               "<h2 class=\"abha-modal-title\" id=\"abhaHeading\">Talk to Abha</h2>" +
-              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">" + (getAbhaProjectName() ? "Your dedicated " + getAbhaProjectName() + " concierge. Share your details and we'll be in touch." : "Your dedicated property concierge. Share your details and we'll be in touch.") + "</p>" +
+              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">" + (getAbhaProjectName() ? "Your dedicated " + getAbhaProjectName() + " concierge is online. Share your details and we'll call you instantly." : "Your dedicated property concierge is online. Share your details and we'll call you instantly.") + "</p>" +
             "</div >" +
           "</div>" +
           "<form class=\"lf-form\" id=\"abhaForm\" novalidate>" +
