@@ -106,6 +106,33 @@ h3.framework-card-title, .roadmap-stage-title { font-size: 17px !important; }
     
     /* Ensure hero image doesn't stretch weirdly, crop out family */
     .hero-bg-image { object-position: right center !important; }
+
+    /* Ensure hero content is perfectly centered vertically on all mobile devices */
+    .hero-section {
+        justify-content: center !important;
+    }
+    .hero-section .container {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        flex: 1 !important;
+        height: 100% !important;
+    }
+    .hero-grid {
+        justify-content: center !important;
+        flex: 1 !important;
+    }
+
+    .hero-content {
+        padding-top: 0 !important;
+        justify-content: center !important;
+    }
+    .hero-section {
+        padding-top: 60px !important; /* Just enough to clear the fixed header */
+        padding-bottom: 20px !important;
+    }
+
+
     /* Darken the hero background slightly with a black layover on mobile */
     .hero-section::before {
         background: linear-gradient(180deg, rgba(10, 10, 11, 0.88) 0%, rgba(10, 10, 11, 0.75) 100%) !important;
