@@ -4814,3 +4814,16 @@ p, span, div, a, button, li {
   border-color: rgba(128, 69, 38, 0.4);
   
 }
+
+/* Rule 5: Cinematic Desaturation for 3D Renders */
+.ak-editorial-media-canvas img,
+.ak-mobile-img-box img,
+.ak-editorial-thumb img,
+.prop-hero-grid img {
+  filter: saturate(0.85) contrast(1.05);
+}
+
+/* Hide any remaining slide counters to match desktop */
+.ak-mobile-badge-top-left, .ak-photo-count-badge, .prop-photo-count-badge {
+  display: none !important;
+}

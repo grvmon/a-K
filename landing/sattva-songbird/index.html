@@ -1105,8 +1105,9 @@ body.property-page .header-nav .mobile-toggle {
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
         <div class="ak-mobile-img-box" onclick="openAkLightbox(0);">
+          <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
           <img src="../../style-guide/assets/songbird/sattva_songbird_hero_elevation_day.webp?v=FLUSH_1791020747" alt="Sattva Songbird Evening View" loading="lazy">
-          <div class="ak-mobile-badge-top-left">1 / 8</div>
+          
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#2F3B42;"></i>
           </button>
@@ -1144,7 +1145,7 @@ body.property-page .header-nav .mobile-toggle {
             <span>Get Buyer Analysis →</span>
           </button>
           <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">
-            <span>View Floor Plans →</span>
+            <span>View Floor Plans</span>
           </a>
         </div>
 
@@ -2067,8 +2068,8 @@ body.property-page .header-nav .mobile-toggle {
             
             <!-- Dynamic Dual-Tone Progress Bar -->
             <div style="margin-top:0.35rem; width:100%; height:6px; background:#0F1B24; border-radius: 4px; overflow:hidden; display:flex;">
-              <div id="songbirdGlanceEffBar" style="width:63.6%; height:100%; background:#22C55E; border-radius: 4px 0 0 3px; transition:width 0.3s ease;"></div>
-              <div id="songbirdGlanceNonCarpetBar" style="width:36.4%; height:100%; background:#E2B77B; border-radius:0 3px 3px 0; transition:width 0.3s ease;"></div>
+              <div id="songbirdGlanceEffBar" style="width:63.6%; height:100%; background:#22C55E; border-radius:4px 0 0 4px; transition:width 0.3s ease;"></div>
+              <div id="songbirdGlanceNonCarpetBar" style="width:36.4%; height:100%; background:#E2B77B; border-radius:0 4px 4px 0; transition:width 0.3s ease;"></div>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.66rem; color:rgba(255,255,255,0.7); margin-top:0.35rem; font-family:'Manrope',sans-serif;">
               <span style="display:inline-flex; align-items:center; gap:0.3rem;"><span style="width:6px; height:6px; border-radius:50%; background:#22C55E; display:inline-block;"></span> Usable Carpet</span>

@@ -566,8 +566,9 @@ img[style*="border-radius: 50%"] {
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
         <div class="ak-mobile-img-box" onclick="openAkLightbox(0);">
-          <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Evening View">
-          <div class="ak-mobile-badge-top-left">1 / 8</div>
+          <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
+          <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Evening View" width="800" height="533" style="width:100%; height:100%; object-fit:cover;">
+          
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#1C1C1E;"></i>
           </button>
@@ -585,28 +586,29 @@ img[style*="border-radius: 50%"] {
           Possession: June 2030
         </div>
 
-        <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal();" style="background:#FFFFFF; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
-          <div style="background:#FAFAFA; border:0.5px solid rgba(85, 85, 90, 0.2); color:#FFFFFF; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0;">
-            <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1; color:#FFFFFF;">4.11</div>
-            <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
-          </div>
-          <div style="flex:1;">
-            <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.2rem;">
-              <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#8C6734; font-family:'Marcellus', serif; text-transform:uppercase;"><span class="brand-inline-text" style="font-weight:400 !important; text-transform:lowercase !important; font-size:1.25em !important; letter-spacing:normal !important;">acre&amp;key</span> ASSESSMENT</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8C6734" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.openAkScoreModal && window.openAkScoreModal();" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.6rem 0.95rem; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.95rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+          <div style="text-align:center; padding-right:0.95rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
+            <div style="font-size:1.85rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#1C1C1E; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
+              4.11<span style="font-size:1.15rem; color:#1C1C1E; font-weight:400; opacity:0.8;">/5</span>
             </div>
-            <div style="font-family:'Marcellus', serif; font-size: 1.18rem; font-weight: 400; color:#1C1C1E; line-height:1.2; margin-bottom:0.2rem;">A Strong Township Bet</div>
-            <div style="font-size:0.82rem; color:#374151; line-height:1.35; font-weight:500;">A large Prestige township proposition with strong brand pull — but Varthur traffic, delivery horizon and shared-infrastructure questions deserve careful diligence.</div>
           </div>
-        </div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.15rem;">
+            <div style="display:flex; align-items:center; gap:0.35rem;">
+              <span style="font-family:'Manrope', sans-serif; font-weight:800; color:#804526; font-size:0.8rem; letter-spacing:-0.01em;">acre&amp;key</span>
+              <span style="font-family:'Manrope', sans-serif; font-size:0.7rem; font-weight: 500; letter-spacing:0.04em; color:#804526; text-transform:uppercase;">Assessment</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; margin-top:-1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div style="font-family:'Marcellus', serif; font-size: 1.35rem; font-weight: 400; color:#1C1C1E; line-height:1.1;">A Strong Township Bet</div>
+          </div>
+        </button>
 
         <div style="display:flex; flex-direction:column; gap:0.55rem; margin-bottom:0.85rem;">
           <button type="button" onclick="window.openModal('analysis'); return false;" class="ak-hero-btn-primary">
             <span>Get Buyer Analysis →</span>
           </button>
           <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-            <span>View Floor Plans →</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>View Floor Plans</span>
           </a>
         </div>
 
@@ -1176,7 +1178,7 @@ img[style*="border-radius: 50%"] {
         </div>
       </div>
 
-      <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 8px 8px 0; padding:0.85rem 1.15rem; margin-top:1.25rem; font-size:0.85rem; color:#374151; line-height:1.55; display:flex; align-items:flex-start; gap:0.65rem;">
+      <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 4px 4px 0; padding:0.85rem 1.15rem; margin-top:1.25rem; font-size:0.85rem; color:#374151; line-height:1.55; display:flex; align-items:flex-start; gap:0.65rem;">
         <span style="color:#8C6734; font-size:1rem; line-height:1; flex-shrink:0;">ℹ</span>
         <div>
           <strong style="color:#1C1C1E;">Township Integration Advisory:</strong> Both phases share the wider 107-acre integrated internal road boulevards, landscaped water bodies, and retail high street, while maintaining autonomous boom-barrier residential security.
@@ -1220,7 +1222,7 @@ img[style*="border-radius: 50%"] {
         </div>
         
         <div>
-          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 6px 6px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
+          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 4px 4px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
             <strong><span class="brand-inline-text">acre&amp;key</span> Tip:</strong> Floor 10 and above is optimal to avoid road elevation glare and capture uninterrupted lake horizons.
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:0.5px solid #FAFAFA; display:flex; justify-content:space-between; align-items:center;">
@@ -1258,7 +1260,7 @@ img[style*="border-radius: 50%"] {
         </div>
 
         <div>
-          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 6px 6px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
+          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 4px 4px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
             <strong><span class="brand-inline-text">acre&amp;key</span> Tip:</strong> Shielded completely from external SH-35 traffic noise; highly recommended for families with elders or young children.
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:0.5px solid #FAFAFA; display:flex; justify-content:space-between; align-items:center;">
@@ -1293,7 +1295,7 @@ img[style*="border-radius: 50%"] {
         </div>
 
         <div>
-          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 6px 6px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
+          <div style="background:#FAFAFA; border-left:3px solid #8C6734; border-radius:0 4px 4px 0; padding:0.7rem 0.85rem; font-size:0.82rem; color:#8C6734; line-height:1.45;">
             <strong><span class="brand-inline-text">acre&amp;key</span> Tip:</strong> Request double-glazed window specifications on road-facing balconies to ensure acoustic insulation during rush hours.
           </div>
           <div style="margin-top:0.85rem; padding-top:0.65rem; border-top:0.5px solid #FAFAFA; display:flex; justify-content:space-between; align-items:center;">
@@ -1537,8 +1539,8 @@ img[style*="border-radius: 50%"] {
             
             <!-- Dynamic Dual-Tone Progress Bar -->
             <div style="margin-top:0.5rem; width:100%; height:6px; background:#1C1C1E; border-radius: 4px; overflow:hidden; display:flex;">
-              <div id="evergreenGlanceEffBar" style="width:63.6%; height:100%; background:#1C1C1E; border-radius: 4px 0 0 3px; transition:width 0.3s ease;"></div>
-              <div id="evergreenGlanceNonCarpetBar" style="width:36.4%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:0 3px 3px 0; transition:width 0.3s ease;"></div>
+              <div id="evergreenGlanceEffBar" style="width:63.6%; height:100%; background:#1C1C1E; border-radius:4px 0 0 4px; transition:width 0.3s ease;"></div>
+              <div id="evergreenGlanceNonCarpetBar" style="width:36.4%; height:100%; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); border-radius:0 4px 4px 0; transition:width 0.3s ease;"></div>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.68rem; color:rgba(255,255,255,0.65); margin-top:0.35rem;">
               <span style="display:inline-flex; align-items:center; gap:0.25rem;"><span style="width:6px; height:6px; border-radius:50%; background:#1C1C1E; display:inline-block;"></span> Usable Carpet</span>
