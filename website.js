@@ -842,7 +842,7 @@ window.addEventListener('hashchange', function () {
 
         function getFoldThreshold() {
             var vh = window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || 800;
-            return Math.max(Math.min(Math.round(vh * 0.45), 450), 260);
+            return Math.round(vh * 0.90);
         }
 
         function onScrollCheckFold() {
