@@ -4014,6 +4014,14 @@ function akGallerySelect(idx) {
         }
     };
 
+    window.scrollToVerdict = function(e) {
+        if (e) e.preventDefault();
+        var sec = document.getElementById('verdict');
+        if (sec) {
+            sec.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     // Social Sharing Dialog
     var shareTriggerBtnEl = null;
     function openShareModal(btnEl) {

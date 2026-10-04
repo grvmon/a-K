@@ -586,7 +586,7 @@ img[style*="border-radius: 50%"] {
           Possession: June 2030
         </div>
 
-        <button type="button" aria-label="View acre&key Assessment" onclick="window.openAkScoreModal && window.openAkScoreModal();" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.6rem 0.95rem; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.95rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.scrollToVerdict(event);" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.6rem 0.95rem; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.95rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
           <div style="text-align:center; padding-right:0.95rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
             <div style="font-size:1.85rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#1C1C1E; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
               4.11<span style="font-size:1.15rem; color:#1C1C1E; font-weight:400; opacity:0.8;">/5</span>
@@ -600,6 +600,7 @@ img[style*="border-radius: 50%"] {
             </div>
             <div style="font-family:'Marcellus', serif; font-size: 1.35rem; font-weight: 400; color:#1C1C1E; line-height:1.1;">A Strong Township Bet</div>
           </div>
+          <div style="flex-shrink:0; color:#804526; display:flex; align-items:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
         </button>
 
         <div style="display:flex; flex-direction:column; gap:0.55rem; margin-bottom:0.85rem;">
@@ -4402,6 +4403,14 @@ function akGallerySelect(idx) {
     window.scrollToFloorPlans = function(e) {
         if (e) e.preventDefault();
         var sec = document.getElementById('floor-plans');
+        if (sec) {
+            sec.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    window.scrollToVerdict = function(e) {
+        if (e) e.preventDefault();
+        var sec = document.getElementById('verdict');
         if (sec) {
             sec.scrollIntoView({ behavior: 'smooth' });
         }
