@@ -56,16 +56,16 @@ html { scroll-behavior: auto !important; }
   padding: 0.95rem 1.15rem;
   font-size: 0.88rem;
   font-weight: 600;
-  color: #1C1C1E;
+  color: #55555A;
   text-decoration: none;
   white-space: nowrap;
-  border-bottom: none !important;
-  transition: all 0.4s ease;
+  border-bottom: 1px solid transparent !important;
+  transition: color 0.4s ease, border-bottom-color 0.4s ease;
   position: relative;
 }
-.local-nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: #804526; transform: scaleX(0); transform-origin: center; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-.local-nav-link:hover::after, .local-nav-link.active::after { transform: scaleX(1); }
-.local-nav-link:hover, .local-nav-link.active { color: #1C1C1E !important; }
+
+
+.local-nav-link:hover, .local-nav-link.active { color: #804526 !important; border-bottom: 1px solid #804526 !important; }
 .prop-section-nav-sticky { top: 80px !important; }
 .prop-section, #verdict, #masterplan { scroll-margin-top: 140px; }
 
