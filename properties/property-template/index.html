@@ -36,11 +36,11 @@ html { scroll-behavior: auto !important; }
 .prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; }
 .prop-glance-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; }
 .prop-glance-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 10%; height: 80%; width: 1px; background: rgba(85, 85, 90, 0.2); }
-.prop-glance-num { font-family: 'Marcellus', serif; font-size: 2.2rem; font-weight: 700; color: #1C1C1E; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
-.prop-glance-lbl { font-family: 'Marcellus', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: #1C1C1E; text-transform: uppercase; line-height: 1.2; }
+
+
 .prop-glance-sup { font-size: 0.7em; font-weight: 600; color: #804526; vertical-align: super; margin-left: 2px; }
 .prop-glance-footnote { text-align: right; margin-top: 0.45rem; font-size: 0.72rem; color: #1C1C1E; font-family: 'Manrope', sans-serif; font-weight: 500; }
- @media (max-width: 900px) {   .prop-glance-num { font-size: 2rem; }   .prop-glance-lbl { font-size: 0.65rem; }   .prop-glance-grid { grid-template-columns: repeat(3, 1fr); row-gap: 1.5rem; }   .prop-glance-item:nth-child(3n)::after { display: none; }   .prop-glance-item:last-child::after { display: none; } } @media (max-width: 500px) {   .prop-glance-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1.5rem; }   .prop-glance-item:nth-child(3n)::after { display: block; } /* reset */   .prop-glance-item:nth-child(2n)::after { display: none; }   .prop-glance-item:last-child { grid-column: span 2; }   .prop-glance-item:last-child::after { display: none; } } 
+ @media (max-width: 900px) {         .prop-glance-grid { grid-template-columns: repeat(3, 1fr); row-gap: 1.5rem; }   .prop-glance-item:nth-child(3n)::after { display: none; }   .prop-glance-item:last-child::after { display: none; } } @media (max-width: 500px) {   .prop-glance-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1.5rem; }   .prop-glance-item:nth-child(3n)::after { display: block; } /* reset */   .prop-glance-item:nth-child(2n)::after { display: none; }   .prop-glance-item:last-child { grid-column: span 2; }   .prop-glance-item:last-child::after { display: none; } } 
 .page-breadcrumb a { color: #1C1C1E !important; font-weight: 500; }
 .page-breadcrumb a:hover { color: #804526 !important; }
 .page-breadcrumb .separator { color: #1C1C1E !important; font-weight: 600; }
@@ -756,7 +756,7 @@ img[style*="border-radius: 50%"] {
 <div class="prop-snapshot-strip-v2">
   <div class="prop-glance-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
     <div style="display:flex; align-items:center; gap:1rem;">
-      <span class="prop-glance-tag" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#804526; text-transform:uppercase;">PROPERTY AT A GLANCE</span>
+      <span class="prop-glance-tag" style="font-family:'Manrope',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#804526; text-transform:uppercase;">PROPERTY AT A GLANCE</span>
       <span class="prop-glance-rule"></span>
     </div>
     <div class="prop-glance-footnote" style="margin-top:0; font-size:0.72rem; color:#1C1C1E; font-family:'Manrope', sans-serif; font-weight:500;">
@@ -766,24 +766,24 @@ img[style*="border-radius: 50%"] {
 
   <div class="prop-glance-grid">
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:\'Manrope\',sans-serif; font-weight:500; letter-spacing:-0.03em;">24</span>
-      <span class="prop-glance-lbl" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A;">ACRES</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:2.1rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">24</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">ACRES</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:\'Manrope\',sans-serif; font-weight:500; letter-spacing:-0.03em;">14</span>
-      <span class="prop-glance-lbl" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A;">TOWERS</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:2.1rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">14</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">TOWERS</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:\'Manrope\',sans-serif; font-weight:500; letter-spacing:-0.03em;">~2,000</span>
-      <span class="prop-glance-lbl" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A;">HOMES</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:2.1rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">~2,000</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">HOMES</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:\'Manrope\',sans-serif; font-weight:500; letter-spacing:-0.03em;">70%</span>
-      <span class="prop-glance-lbl" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A;">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:2.1rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">70%</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:\'Manrope\',sans-serif; font-weight:500; letter-spacing:-0.03em;">~86,000</span>
-      <span class="prop-glance-lbl" style="font-family:\'Manrope\',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A;">SQ.FT. CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:2.1rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">~86,000</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">SQ.FT. CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
     </div>
   </div>
 </div>
@@ -2187,7 +2187,7 @@ img[style*="border-radius: 50%"] {
         '<div style="font-weight: 700; color:#1C1C1E; font-size:1.02rem;">' + item.title + '</div>' +
         '<div style="font-size:0.75rem; color:#1C1C1E; font-weight: 700; background:rgba(10, 10, 11,0.05); padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
       '</div>' +
-      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:\'Manrope\',sans-serif;">' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:'Manrope',sans-serif;">' +
         '<div style="background:#FAFAFA; border-radius: 4px; padding:1rem; border: 0.5px solid rgba(10, 10, 11, 0.08); display:flex; flex-direction:column; justify-content:center;">' +
           '<div style="font-size:0.72rem; color:#804526; font-weight: 700; text-transform:uppercase;">1. Base Construction</div>' +
           '<div style="font-size:1.15rem; font-weight: 700; color:#1C1C1E; margin-top:0.35rem;">' + item.base + '</div>' +
