@@ -607,7 +607,23 @@ img[style*="border-radius: 50%"] {
       <span>Reviewed by <strong style="color:#1C1C1E;">Gaurav Mongia</strong></span>
     </div>
     <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
-    <span>Last Updated: <strong style="color:#1C1C1E;"><time datetime="2026-09-30">30 September 2026</time></strong></span>
+    <span>Last Updated: <strong style="color:#1C1C1E;"><time id="ak-last-updated" datetime="2026-09-30">30 September 2026</time>
+    <script>
+      (function() {
+        try {
+          var date = new Date(document.lastModified);
+          if (!isNaN(date) && date.getFullYear() > 2000) {
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formatted = date.toLocaleDateString('en-GB', options);
+            var el = document.getElementById('ak-last-updated');
+            if (el) {
+              el.textContent = formatted;
+              el.setAttribute('datetime', date.toISOString().split('T')[0]);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script></strong></span>
     <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
     <div style="position:relative;">
       <button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger" style="display:flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:0.5px solid rgba(85, 85, 90, 0.2); padding:0.35rem 0.65rem; border-radius:4px; font-weight:600; cursor:pointer; color:#1C1C1E;">
