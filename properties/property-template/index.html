@@ -626,10 +626,10 @@ img[style*="border-radius: 50%"] {
 
 <div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr); gap: 24px; align-items: stretch;">
 <div class="ak-hero-editorial-gallery" id="akHeroGallery">
-  <div class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);">
+  <div role="button" tabindex="0" aria-label="Open Image Gallery" class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openAkLightbox(window.akGalleryIndex || 0); }">
 <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10,10,11,0.85) 0%, rgba(10,10,11,0) 100%); z-index:1; pointer-events:none; border-radius: 4px 4px 0 0;"></div>
 <div style="position:absolute; bottom:0; left:0; width:100%; height:120px; background:linear-gradient(to top, rgba(10,10,11,0.85) 0%, rgba(10,10,11,0) 100%); z-index:1; pointer-events:none; border-radius: 0 0 4px 4px;"></div>
-    <img id="akMainHeroImage" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Evening Pool View" loading="eager" fetchpriority="high">
+    <img id="akMainHeroImage" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Evening Pool View" loading="eager" fetchpriority="high" width="1600" height="1066">
     <video id="akMainHeroVideo" style="display:none;" muted="" loop="" playsinline=""></video>
   </div>
 
@@ -696,11 +696,11 @@ img[style*="border-radius: 50%"] {
         <div style="display:grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.9fr); gap:0.4rem; margin-bottom:1.15rem; padding-bottom:0.85rem; border-bottom:0.5px solid rgba(10,10,11,0.08);">
           <div>
             <div style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.25rem;">Config</div>
-            <div style="font-size:0.8rem; font-weight:600; color:#1C1C1E; line-height:1.3; white-space:nowrap;">1 · 2 · 3 · 3+Study · 4 BHK</div>
+            <div style="font-size:0.8rem; font-weight:600; color:#1C1C1E; line-height:1.3; white-space:nowrap;">1 · 2 · 3 · 3+Study · 4&nbsp;BHK</div>
           </div>
           <div>
             <div style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.25rem;">Size</div>
-            <div style="font-size:0.8rem; font-weight:600; color:#1C1C1E; line-height:1.3;">659–2,513 sq.ft.</div>
+            <div style="font-size:0.8rem; font-weight:600; color:#1C1C1E; line-height:1.3;">659–2,513&nbsp;sq.ft.</div>
           </div>
           <div>
             <div style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.25rem;">Possession</div>
@@ -708,7 +708,7 @@ img[style*="border-radius: 50%"] {
           </div>
         </div>
 
-        <div onclick="window.openAkScoreModal && window.openAkScoreModal();" style="background:#FAFAFA; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; margin-bottom:1.15rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:border 0.3s ease;" onmouseover="this.style.borderColor='#804526'" onmouseout="this.style.borderColor='rgba(10, 10, 11, 0.08)'">
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.openAkScoreModal && window.openAkScoreModal();" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FAFAFA; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; margin-bottom:1.15rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:border 0.3s ease;" onmouseover="this.style.borderColor='#804526'" onmouseout="this.style.borderColor='rgba(10, 10, 11, 0.08)'">
           <div style="text-align:center; padding-right:0.85rem; border-right:0.5px solid rgba(10,10,11,0.12); flex-shrink:0;">
             <div style="font-size:1.25rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#1C1C1E;">4.11<span style="font-size:0.75rem; color:#55555A; font-weight:500;">/5</span></div>
           </div>
@@ -721,7 +721,7 @@ img[style*="border-radius: 50%"] {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             </div>
           </div>
-        </div>
+        </button>
 
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.75rem; margin-bottom:1.15rem;">
           <button type="button" onclick="window.openModal('analysis'); return false;" style="width:100%; border-radius: 4px; padding:0.75rem; text-align:center; background: linear-gradient(135deg, #be7555 0%, #9f5334 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:0.4rem; transition:transform 0.4s ease;">
@@ -768,23 +768,23 @@ img[style*="border-radius: 50%"] {
   <div class="prop-glance-grid">
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">24</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">ACRES</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">&nbsp;ACRES</span>
     </div>
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">14</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">TOWERS</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">&nbsp;TOWERS</span>
     </div>
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">~2,000</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">HOMES</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">&nbsp;HOMES</span>
     </div>
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">70%</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">&nbsp;OPEN&nbsp;AREA<sup class="prop-glance-sup">1</sup></span>
     </div>
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.85rem; font-weight:400; color:#1C1C1E; line-height:1; margin-bottom:0.15rem;">~86,000</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">SQ.FT. CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase;">&nbsp;SQ.FT.&nbsp;CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
     </div>
   </div>
 </div>
@@ -4082,7 +4082,7 @@ function akGallerySelect(idx) {
 </div>
 
 <!-- Share Modal -->
-<div id="akShareModal" class="ak-share-modal-overlay" onclick="if(event.target===this) closeShareModal();" role="dialog" aria-modal="true" aria-labelledby="akShareModalTitle" style="display:none;"><div class="ak-share-modal-card" onclick="event.stopPropagation();"><button type="button" class="ak-share-close-btn" onclick="closeShareModal();" aria-label="Close Share Dialog" title="Close">×</button><div class="ak-share-header"><h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:#1C1C1E; margin-bottom:0.5rem;" id="akShareModalTitle" class="ak-share-title">Share Prestige Evergreen</h3><p class="ak-share-subtitle">Varthur Junction, Bengaluru</p></div><div class="ak-share-preview-card"><img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Preview" class="ak-share-preview-img"><div class="ak-share-preview-info"><div class="ak-share-preview-name">Prestige Evergreen</div><div class="ak-share-preview-loc">Varthur Junction</div><div class="ak-share-preview-details">₹1.07–₹4.09 Cr · 1 to 4 BHK</div><div class="ak-share-preview-score"><span class="brand-inline-text">acre&amp;key</span> Score: 4.11/5</div></div></div><div class="ak-share-options-grid"><button type="button" class="ak-share-opt-btn whatsapp" onclick="shareWhatsApp();" aria-label="Share on WhatsApp"><i data-feather="message-circle" style="width:20px;height:20px;"></i><span>WhatsApp</span></button><button type="button" class="ak-share-opt-btn copy" onclick="copyShareLink();" aria-label="Copy Property Link"><i data-feather="copy" style="width:20px;height:20px;"></i><span>Copy Link</span></button><button type="button" class="ak-share-opt-btn email" onclick="shareEmail();" aria-label="Share via Email"><i data-feather="mail" style="width:20px;height:20px;"></i><span>Email</span></button></div></div></div>
+<div id="akShareModal" class="ak-share-modal-overlay" onclick="if(event.target===this) closeShareModal();" role="dialog" aria-modal="true" aria-labelledby="akShareModalTitle" style="display:none;"><div class="ak-share-modal-card" onclick="event.stopPropagation();"><button type="button" class="ak-share-close-btn" onclick="closeShareModal();" aria-label="Close Share Dialog" title="Close">×</button><div class="ak-share-header"><h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:#1C1C1E; margin-bottom:0.5rem;" id="akShareModalTitle" class="ak-share-title">Share Prestige Evergreen</h3><p class="ak-share-subtitle">Varthur Junction, Bengaluru</p></div><div class="ak-share-preview-card"><img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=FLUSH_1791020747" alt="Prestige Evergreen Preview" class="ak-share-preview-img"><div class="ak-share-preview-info"><div class="ak-share-preview-name">Prestige Evergreen</div><div class="ak-share-preview-loc">Varthur Junction</div><div class="ak-share-preview-details">₹1.07–₹4.09 Cr · 1 to 4&nbsp;BHK</div><div class="ak-share-preview-score"><span class="brand-inline-text">acre&amp;key</span> Score: 4.11/5</div></div></div><div class="ak-share-options-grid"><button type="button" class="ak-share-opt-btn whatsapp" onclick="shareWhatsApp();" aria-label="Share on WhatsApp"><i data-feather="message-circle" style="width:20px;height:20px;"></i><span>WhatsApp</span></button><button type="button" class="ak-share-opt-btn copy" onclick="copyShareLink();" aria-label="Copy Property Link"><i data-feather="copy" style="width:20px;height:20px;"></i><span>Copy Link</span></button><button type="button" class="ak-share-opt-btn email" onclick="shareEmail();" aria-label="Share via Email"><i data-feather="mail" style="width:20px;height:20px;"></i><span>Email</span></button></div></div></div>
 
 <div id="akShareToast" class="ak-toast-notification" role="status" aria-live="polite"><i data-feather="check-circle" style="width:16px;height:16px;color:#804526;"></i><span>Link copied to clipboard</span></div>
 
