@@ -1,7 +1,7 @@
 # Acre & Key Brand & Design Guidelines (100% WCAG AAA Certified)
 
 ## 1. Master Color Palette (Strict WCAG AAA Certified)
-- **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #be7555 0%, #9f5334 100%)`
+- **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #E88D67 0%, #9E3F23 100%)`
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
 - **Titanium Frost Canvas Base (`--titanium-frost`)**: `#FAFAFA`
