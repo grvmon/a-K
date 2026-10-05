@@ -6163,3 +6163,19 @@ h3.framework-card-title {
     color: #E5B899 !important; /* Highlight Peach */
     text-decoration-color: #E5B899 !important; /* Solid Peach */
 }
+
+/* SAFE FOOTER LAYOUT OVERRIDE - STACKS LINKS ABOVE COPYRIGHT ON THE LEFT */
+.footer-bottom-line {
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+}
+
+@media (max-width: 600px) {
+    .footer-bottom-line {
+        flex-direction: column-reverse !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+}
