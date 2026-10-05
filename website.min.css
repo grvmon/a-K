@@ -9274,3 +9274,22 @@ h3.framework-card-title {
         letter-spacing: 0 !important;
     }
 }
+
+/* LUXURY UNDERLINE OVERRIDES FOR FOOTER LEGAL LINKS (RULE 13 + DARK BACKGROUND) */
+.footer-bottom-links a,
+.footer-legal-links a {
+    color: rgba(255,255,255,0.72) !important;
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(229, 184, 153, 0.3) !important; /* Highlight Peach 30% */
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 4px !important;
+    transition: color 0.4s ease, text-decoration-color 0.4s ease !important;
+}
+
+.footer-bottom-links a:hover, .footer-bottom-links a:focus, .footer-bottom-links a:active,
+.footer-legal-links a:hover, .footer-legal-links a:focus, .footer-legal-links a:active {
+    color: #E5B899 !important; /* Highlight Peach */
+    text-decoration-color: #E5B899 !important; /* Solid Peach */
+}
