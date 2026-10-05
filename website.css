@@ -2348,8 +2348,7 @@ body.page-404 .error-404-section {
     box-shadow: none !important
 }
 
-.header-nav.transparent-header:not(.scrolled) {
-    background: rgba(28, 28, 30, 0.90) !important;
+.header-nav.transparent-header:not(.scrolled) { background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: blur(16px) !important;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
@@ -4564,7 +4563,7 @@ button:focus-visible,a:focus-visible {
     box-shadow: none !important
 }
 
-.header-nav:not(.transparent-header),.header-nav:not(.transparent-header).scrolled,body.property-page .header-nav,body.property-page .header-nav:not(.scrolled),body.property-page .header-nav.scrolled,body.page-404 .header-nav {
+.header-nav:not(.transparent-header),.header-nav:not(.transparent-header).scrolled,body.page-404 .header-nav {
     background:rgba(28, 28, 30, 0.90)!important; backdrop-filter:blur(8px)!important; -webkit-backdrop-filter:blur(8px)!important;
     background-image:none!important;
     backdrop-filter:blur(16px)!important;
@@ -4573,21 +4572,21 @@ button:focus-visible,a:focus-visible {
     box-shadow:none!important
 }
 
-.header-nav:not(.transparent-header) .nav-container .brand-logo-text,body.property-page .header-nav .nav-container .brand-logo-text,body.property-page .header-nav:not(.scrolled) .brand-logo-text,body.property-page .header-nav.scrolled .brand-logo-text,body.page-404 .header-nav .nav-container .brand-logo-text {
+.header-nav:not(.transparent-header) .nav-container .brand-logo-text,body.property-page .header-nav .nav-container .brand-logo-text,body.property-page .header-nav.scrolled .brand-logo-text,body.page-404 .header-nav .nav-container .brand-logo-text {
     color:#ffffff!important
 }
 
-.header-nav:not(.transparent-header) .nav-container .nav-links a,body.property-page .header-nav .nav-container .nav-links a,body.property-page .header-nav:not(.scrolled) .nav-links a,body.property-page .header-nav.scrolled .nav-links a,body.page-404 .header-nav .nav-container .nav-links a {
+.header-nav:not(.transparent-header) .nav-container .nav-links a,body.property-page .header-nav .nav-container .nav-links a,body.property-page .header-nav.scrolled .nav-links a,body.page-404 .header-nav .nav-container .nav-links a {
     color:#ffffff!important;
     opacity:0.9!important
 }
 
-.header-nav:not(.transparent-header) .nav-container .nav-links a:hover,body.property-page .header-nav .nav-container .nav-links a:hover,body.property-page .header-nav:not(.scrolled) .nav-links a:hover,body.property-page .header-nav.scrolled .nav-links a:hover,body.page-404 .header-nav .nav-container .nav-links a:hover {
+.header-nav:not(.transparent-header) .nav-container .nav-links a:hover,body.property-page .header-nav .nav-container .nav-links a:hover,body.property-page .header-nav.scrolled .nav-links a:hover,body.page-404 .header-nav .nav-container .nav-links a:hover {
     color:var(--highlight-peach) !important;
     opacity:1!important
 }
 
-.header-nav:not(.transparent-header) .hamburger-line,body.property-page .header-nav .hamburger-line,body.property-page .header-nav:not(.scrolled) .hamburger-line,body.property-page .header-nav.scrolled .hamburger-line,body.page-404 .header-nav .hamburger-line {
+.header-nav:not(.transparent-header) .hamburger-line,body.property-page .header-nav .hamburger-line,body.property-page .header-nav.scrolled .hamburger-line,body.page-404 .header-nav .hamburger-line {
     background-color:#ffffff!important
 }
 
@@ -6184,7 +6183,6 @@ h3.framework-card-title {
 .header-nav:not(.transparent-header), 
 .header-nav:not(.transparent-header).scrolled, 
 body.property-page .header-nav, 
-body.property-page .header-nav:not(.scrolled), 
 body.property-page .header-nav.scrolled, 
 body.page-404 .header-nav {
     background: rgba(28, 28, 30, 0.90) !important;
@@ -6194,8 +6192,7 @@ body.page-404 .header-nav {
 @media (max-width: 991px) {
     .header-nav:not(.transparent-header), 
     .header-nav:not(.transparent-header).scrolled,
-    body.property-page .header-nav,
-    body.property-page .header-nav.scrolled {
+    {
         background-color: rgba(28, 28, 30, 0.95) !important;
         background: rgba(28, 28, 30, 0.95) !important;
     }
