@@ -3,7 +3,7 @@
 ## 1. Master Color Palette (Strict WCAG AAA Certified)
 - **Primary CTA Copper Gradient (`--cta-gradient`)**: `linear-gradient(135deg, #E88D67 0%, #9E3F23 100%)`
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
-- **Highlight Peach (`--highlight-peach`)**: `#e5b899` (Used only on dark backgrounds).
+- **Highlight Peach (`--highlight-peach`)**: `#E88D67` (Used only on dark backgrounds).
 - **Titanium Frost Canvas Base (`--titanium-frost`)**: `#FAFAFA`
 - **Obsidian Black (`--obsidian-black`)**: `#1C1C1E`
 - **Muted Slate (`--neutral-grey`)**: `#55555A` (Body paragraphs)
