@@ -761,35 +761,71 @@ img[style*="border-radius: 50%"] {
   }
   
   @media (max-width: 768px) {
-    /* Create a 3-column grid for mobile */
+    /* 1. Reorder Footnote to the Bottom */
+    .prop-snapshot-strip-v2 {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .prop-glance-header {
+      display: contents !important; /* Unwrap header to allow reordering */
+    }
+    .prop-glance-header > div:first-child {
+      order: 1 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .prop-snapshot-strip-v2 .prop-glance-grid {
+      order: 2 !important;
+    }
+    .prop-glance-header .prop-glance-footnote {
+      order: 3 !important;
+      margin-top: 1rem !important;
+      text-align: center !important;
+      opacity: 0.7 !important;
+      font-size: 0.65rem !important;
+      width: 100% !important;
+    }
+
+    /* 2. Fix Grid Geometry & Borders */
     .prop-snapshot-strip-v2 .prop-glance-grid {
       grid-template-columns: repeat(3, 1fr) !important;
-      row-gap: 1.5rem !important;
-      padding-top: 1rem !important;
+      row-gap: 0 !important; /* Removed to allow borders to touch */
+      padding-top: 0 !important;
+    }
+    .prop-snapshot-strip-v2 .prop-glance-item {
+      padding: 0.85rem 0 !important; /* Use padding for height instead of row-gap */
     }
     
-    /* Remove borders on the 3rd and 6th item to prevent trailing dividers */
-    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(3),
-    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(6) {
+    /* Clean Right Borders (Targeting 3n catches item 3 and 6 seamlessly) */
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(3n) {
       border-right: none !important;
     }
     
-    /* Make the text slightly smaller on mobile to fit 3 cols */
-    .prop-snapshot-strip-v2 .prop-glance-num {
-      font-size: 1.25rem !important;
-    }
-    .prop-snapshot-strip-v2 .prop-glance-lbl {
-      font-size: 0.45rem !important;
+    /* Add subtle horizontal divider between Row 1 and Row 2 */
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(1),
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(2),
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(3) {
+      border-bottom: 0.5px solid rgba(255,255,255,0.15) !important;
     }
     
-    /* Hide the 68% EFFICIENCY item (7th item) specifically on mobile */
+    /* 3. Optimize Typography */
+    .prop-snapshot-strip-v2 .prop-glance-num {
+      font-size: clamp(1.15rem, 4vw, 1.35rem) !important;
+      letter-spacing: -0.03em !important; /* Slightly tighten for ~86,000 */
+    }
+    .prop-snapshot-strip-v2 .prop-glance-lbl {
+      font-size: clamp(0.45rem, 2vw, 0.55rem) !important;
+      white-space: normal !important; /* Allow wrapping */
+      line-height: 1.25 !important;
+      padding: 0 4px !important;
+    }
+    
+    /* Hide the 68% EFFICIENCY item */
     .prop-snapshot-strip-v2 .prop-glance-item.mobile-hide-efficiency {
       display: none !important;
     }
     
-    /* Adjust padding of the wrapper so it doesn't consume half the mobile screen */
     .prop-glance-mobile-wrapper {
-      padding: 1rem 0 1rem 0 !important;
+      padding: 1.25rem 0 1rem 0 !important;
     }
   }
 </style>
