@@ -248,7 +248,7 @@ img[style*="border-radius: 50%"] {
   .desktop-only-nav { display: flex !important; }
 }
 @media (max-width: 768px) {
-  .prop-hero-grid, .prop-snapshot-strip-v2 { display: none !important; }
+  .prop-hero-grid { display: none !important; }
   .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
   .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 4px; overflow: hidden; margin-bottom: 0.85rem; }
   .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -749,7 +749,7 @@ img[style*="border-radius: 50%"] {
 
 
     <!-- Property At A Glance Bottom Strip (Raw from Template) -->
-  <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(10, 10, 11,0.98) 0%, rgba(10, 10, 11,0.8) 40%, rgba(10, 10, 11,0) 100%); z-index: 10; padding: 2.5rem 0 1.5rem 0; border-top: none;">
+  <div class="prop-glance-mobile-wrapper" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(10, 10, 11,0.98) 0%, rgba(10, 10, 11,0.8) 60%, rgba(10, 10, 11,0) 100%); z-index: 10; padding: 2.5rem 0 1.5rem 0; border-top: none;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
 
 <style>
@@ -758,6 +758,39 @@ img[style*="border-radius: 50%"] {
   }
   .prop-snapshot-strip-v2 .prop-glance-item:last-child {
     border-right: none !important;
+  }
+  
+  @media (max-width: 768px) {
+    /* Create a 3-column grid for mobile */
+    .prop-snapshot-strip-v2 .prop-glance-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      row-gap: 1.5rem !important;
+      padding-top: 1rem !important;
+    }
+    
+    /* Remove borders on the 3rd and 6th item to prevent trailing dividers */
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(3),
+    .prop-snapshot-strip-v2 .prop-glance-item:nth-child(6) {
+      border-right: none !important;
+    }
+    
+    /* Make the text slightly smaller on mobile to fit 3 cols */
+    .prop-snapshot-strip-v2 .prop-glance-num {
+      font-size: 1.25rem !important;
+    }
+    .prop-snapshot-strip-v2 .prop-glance-lbl {
+      font-size: 0.45rem !important;
+    }
+    
+    /* Hide the 68% EFFICIENCY item (7th item) specifically on mobile */
+    .prop-snapshot-strip-v2 .prop-glance-item.mobile-hide-efficiency {
+      display: none !important;
+    }
+    
+    /* Adjust padding of the wrapper so it doesn't consume half the mobile screen */
+    .prop-glance-mobile-wrapper {
+      padding: 1rem 0 1rem 0 !important;
+    }
   }
 </style>
 <div class="prop-snapshot-strip-v2" style="background: transparent !important; box-shadow: none !important; border: none !important;">
@@ -796,7 +829,7 @@ img[style*="border-radius: 50%"] {
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">G+19</span>
       <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">FLOORS</span>
     </div>
-    <div class="prop-glance-item">
+    <div class="prop-glance-item mobile-hide-efficiency">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">68%</span>
       <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">EFFICIENCY</span>
     </div>
