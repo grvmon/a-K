@@ -661,6 +661,17 @@ img[style*="border-radius: 50%"] {
               background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.6) 50%, rgba(10, 10, 11, 0) 90%) !important;
             }
             
+            /* Enforce 16px minimums on main hero text for readability (without breaking micro-UI) */
+            .hero-content .hero-kicker,
+            .hero-content .hero-subtitle,
+            .hero-cta-group .nav-cta-btn {
+              font-size: 1rem !important;
+            }
+            .hero-content .hero-kicker svg {
+              width: 16px !important;
+              height: 16px !important;
+            }
+            
             /* Apply aggressive text-shadow to make text pop without darkening the background image */
             .hero-content .hero-title,
             .hero-content .hero-subtitle,
