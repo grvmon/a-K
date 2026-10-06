@@ -746,16 +746,23 @@ img[style*="border-radius: 50%"] {
             
             /* ── FIX #13: prefers-reduced-motion — disable hero animations ── */
             
-            /* ── FIX #6: Enforce 16px minimums on main hero text ── */
-            .hero-content .hero-kicker,
+            /* ── FIX #6: 16px minimums on body-reading text only ── */
             .hero-content .hero-subtitle,
             .hero-cta-group .nav-cta-btn,
             .hero-cta-group .hero-main-cta {
               font-size: 1rem !important;
             }
+            
+            /* ── Kicker is metadata — keep compact, not a headline ── */
+            .hero-content .hero-kicker {
+              font-size: 0.68rem !important;
+              font-weight: 600 !important;
+              letter-spacing: 0.12em !important;
+              opacity: 0.85;
+            }
             .hero-content .hero-kicker svg {
-              width: 16px !important;
-              height: 16px !important;
+              width: 12px !important;
+              height: 12px !important;
             }
             
             /* Apply aggressive text-shadow to make text pop without darkening the background image */
