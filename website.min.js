@@ -832,6 +832,8 @@ window.addEventListener('hashchange', function () {
         var bubblePopped = false;
         function triggerBubblePop() {
             if (bubblePopped) return;
+            // On mobile: suppress auto-pop to prevent blocking primary CTAs
+            if (window.innerWidth <= 768) return;
             var bubble = document.getElementById("advisorSpeechBubble") || (aside ? aside.querySelector(".advisor-speech-bubble") : null);
             if (bubble) {
                 bubblePopped = true;
