@@ -621,7 +621,7 @@ img[style*="border-radius: 50%"] {
   <img src="../../style-guide/assets/evergreen/prestige_evergreen_balcony_sunset_v2.webp?v=9" alt="Prestige Evergreen Balcony View" width="1920" height="1080" fetchpriority="high" decoding="async" class="hero-bg-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center right; z-index: 0; filter: saturate(0.85) contrast(1.05);">
   
   <!-- Dark overlay to ensure white text pops exactly like the homepage -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.75) 40%, rgba(10,10,11,0) 80%); z-index: 1;"></div>
+  <div class="hero-gradient-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.75) 40%, rgba(10,10,11,0) 80%); z-index: 1;"></div>
   <!-- Render Disclaimer -->
   <div style="position: absolute; top: 1.5rem; right: 2rem; z-index: 5; font-family: 'Manrope', sans-serif; font-size: 0.65rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Visual Representation</div>
   
@@ -650,10 +650,15 @@ img[style*="border-radius: 50%"] {
               bottom: 0;
               left: 0;
               width: 100%;
-              height: 80%;
-              background: linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 100%);
+              height: 100%; /* Cover full height to ensure text is protected */
+              background: linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0.6) 60%, rgba(10, 10, 11,0.2) 100%);
               z-index: 1;
               pointer-events: none;
+            }
+            
+            /* Ensure the left-to-right gradient doesn't drop to 0% opacity on the right side of mobile */
+            .hero-gradient-overlay {
+              background: linear-gradient(to right, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0.85) 100%) !important;
             }
             /* Force Left Alignment on Mobile to Match Desktop */
             .hero-content {
