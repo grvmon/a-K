@@ -2639,7 +2639,7 @@ function akGallerySelect(idx) {
             clearInterval(hookInterval);
             var originalOpenModal = window.openModal;
             window.openModal = function(context, formName, customOptions) {
-                var type = context || '';
+                                var type = (typeof context === 'string' ? context : '').trim().toLowerCase();
                 var proj = 'Prestige Evergreen';
                 
                 customOptions = customOptions || {};
@@ -2676,12 +2676,27 @@ function akGallerySelect(idx) {
                 
                 originalOpenModal(context, formName || type, customOptions);
                 // Force DOM override synchronously in case lead-form.min.js ignores customOptions
-                var mh = document.getElementById('lfMainHeading');
+                                var mh = document.getElementById('lfMainHeading');
                 var sh = document.getElementById('lfSubHeading');
                 var bt = document.getElementById('lfBtnText');
-                if (mh) mh.textContent = customOptions.heading;
-                if (sh) sh.textContent = customOptions.subHeading;
-                if (bt) bt.textContent = customOptions.btnText;
+                
+                if (mh && customOptions.heading) { 
+                    mh.textContent = customOptions.heading; 
+                    mh.style.display = 'block'; 
+                    mh.style.color = '#1C1C1E'; 
+                    mh.style.visibility = 'visible';
+                }
+                if (sh && customOptions.subHeading) { 
+                    sh.textContent = customOptions.subHeading; 
+                    sh.style.display = 'block'; 
+                    sh.style.color = '#55555A'; 
+                    sh.style.visibility = 'visible';
+                }
+                if (bt && customOptions.btnText) { 
+                    bt.textContent = customOptions.btnText; 
+                }
+
+
 
             };
             window.openModal.isHooked = true;
