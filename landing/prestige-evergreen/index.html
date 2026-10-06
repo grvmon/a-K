@@ -790,12 +790,17 @@ img[style*="border-radius: 50%"] {
         </div>
       </div>
 
-      <div class="prop-table-scroll-hint" style="display:none; font-size:0.75rem; color:#804526; font-weight:700; margin-bottom:0.4rem;">
-        ← Scroll horizontally to view complete table columns →
-      </div>
+      
 
       <!-- Scrollable Table -->
-      <div class="prop-table-scroll-hint" style="font-size:0.75rem; color:#804526; font-weight:700; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.35rem;">
+      
+      <style>
+        .prop-table-scroll-hint { display: none !important; }
+        @media (max-width: 768px) {
+          .prop-table-scroll-hint { display: flex !important; font-size:0.75rem; color:#804526; font-weight:700; margin-bottom:0.4rem; align-items:center; gap:0.35rem; }
+        }
+      </style>
+      <div class="prop-table-scroll-hint">
         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         <span>Scroll horizontally to view complete table</span>
       </div>
