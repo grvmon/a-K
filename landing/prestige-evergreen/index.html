@@ -650,15 +650,15 @@ img[style*="border-radius: 50%"] {
               bottom: 0;
               left: 0;
               width: 100%;
-              height: 100%; /* Cover full height to ensure text is protected */
-              background: linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0.6) 60%, rgba(10, 10, 11,0.2) 100%);
+              height: 70%; /* Only cover the bottom 70% where the text lives */
+              background: linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.75) 50%, rgba(10, 10, 11, 0) 100%);
               z-index: 1;
               pointer-events: none;
             }
             
-            /* Ensure the left-to-right gradient doesn't drop to 0% opacity on the right side of mobile */
+            /* Revert left-to-right gradient so the top right of the image breathes freely */
             .hero-gradient-overlay {
-              background: linear-gradient(to right, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0.85) 100%) !important;
+              background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.6) 50%, rgba(10, 10, 11, 0) 90%) !important;
             }
             /* Force Left Alignment on Mobile to Match Desktop */
             .hero-content {
