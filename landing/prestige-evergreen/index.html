@@ -2641,30 +2641,31 @@ document.addEventListener("DOMContentLoaded", function() {
             var btn = document.getElementById('lfBtnText') || document.querySelector('#lfSubmitBtn span');
             
             var type = context || '';
+            var proj = 'Prestige Evergreen';
             
             if (heading && sub) {
                 if (type === 'pricing') {
-                    heading.innerText = 'Cost Sheet & Pricing';
+                    heading.innerText = proj + ' Cost Sheet';
                     sub.innerText = 'Unlock the complete, all-inclusive pricing breakdown.';
                     if(btn) btn.innerText = 'Get Cost Sheet';
                 } else if (type === 'floorplan') {
-                    heading.innerText = 'Master Floor Plans';
+                    heading.innerText = proj + ' Floor Plans';
                     sub.innerText = 'Download high-resolution floor plans and exact dimensions.';
                     if(btn) btn.innerText = 'Download Floor Plans';
                 } else if (type === 'amenities') {
-                    heading.innerText = 'Amenities & Masterplan';
+                    heading.innerText = proj + ' Masterplan';
                     sub.innerText = 'Download the complete masterplan and amenity layouts.';
                     if(btn) btn.innerText = 'Download Masterplan';
                 } else if (type === 'location') {
-                    heading.innerText = 'Location & Connectivity';
+                    heading.innerText = proj + ' Connectivity';
                     sub.innerText = 'Get detailed commute times and infrastructure data.';
                     if(btn) btn.innerText = 'Get Location Report';
                 } else if (type === 'legal') {
-                    heading.innerText = 'Legal & Title Report';
+                    heading.innerText = proj + ' Legal Report';
                     sub.innerText = 'Review RERA certificates and independent legal checks.';
                     if(btn) btn.innerText = 'Download Legal Report';
                 } else {
-                    heading.innerText = 'Download Brochure';
+                    heading.innerText = proj + ' Brochure';
                     sub.innerText = 'Download the official project brochure and details.';
                     if(btn) btn.innerText = 'Download Brochure';
                 }
