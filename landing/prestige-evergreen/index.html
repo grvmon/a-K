@@ -591,6 +591,12 @@ img[style*="border-radius: 50%"] {
 </script>
 
 <style>#lfSubHeading { max-width: 360px; margin-left: auto; margin-right: auto; line-height: 1.5; }</style>
+<style>
+  /* Mobile Viewport Failsafes */
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, picture, video { max-width: 100%; height: auto; }
+  .ak-container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; box-sizing: border-box; }
+</style>
 </head>
 <body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header-nav transparent-header" id=header-nav><div class="container nav-container"><div style="display: flex; align-items: center; gap: 1rem;">
@@ -893,7 +899,7 @@ img[style*="border-radius: 50%"] {
       </p>
     </div>
 
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap:1.5rem;">
       
       <!-- 1 BHK -->
       <div style="border:0.5px solid rgba(85,85,90,0.2); border-radius:4px; padding:1.5rem; background:#FAFAFA; text-align:center; transition:all 0.4s ease; cursor:pointer;" onmouseover="this.style.borderColor='#E88D67'" onmouseout="this.style.borderColor='rgba(85,85,90,0.2)'" onclick="window.openModal && window.openModal(\'floorplan\')">
@@ -1061,7 +1067,7 @@ img[style*="border-radius: 50%"] {
       </div>
 
       <!-- 4 Category Cards in Dynamic Grid -->
-      <div class="ak-township infrastructure-cat-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; margin-bottom:1.25rem;">
+      <div class="ak-township infrastructure-cat-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap:1rem; margin-bottom:1.25rem;">
         
         <!-- Category 1: FITNESS & WELLNESS -->
         <div style="background:#FAFAFA; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
@@ -1175,7 +1181,7 @@ img[style*="border-radius: 50%"] {
 
     <!-- Future Infrastructure Timeline -->
     <div style="max-width:960px; margin: 0 auto 1.5rem auto; border-top:0.5px solid rgba(85,85,90,0.2); border-bottom:0.5px solid rgba(85,85,90,0.2); padding:1.25rem 0;">
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:2rem;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:2rem;">
         <!-- Metro -->
         <div style="border-left:0.5px solid #E88D67; padding-left:1.25rem;">
           <div style="font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; color:#E88D67; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.25rem;">Operational Phase</div>
@@ -1198,7 +1204,7 @@ img[style*="border-radius: 50%"] {
     </div>
 
     <!-- 2x2 Image Grid -->
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:1rem;">
       
       <!-- Tech Parks -->
       <div style="position:relative; border-radius:4px; overflow:hidden; height:280px; border:0.5px solid rgba(10,10,11,0.08);">
@@ -1366,7 +1372,7 @@ img[style*="border-radius: 50%"] {
       </div>
 
       <!-- RERA Cards Grid -->
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin-bottom:1.25rem;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:1rem; margin-bottom:1.25rem;">
         <!-- Phase 2 (Evergreen) RERA Card -->
         <div style="background:#FAFAFA; border:0.5px solid rgba(128, 69, 38, 0.3); border-radius: 4px; padding:1.1rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
@@ -1761,7 +1767,7 @@ function akGallerySelect(idx) {
   }
 }
 </style>
-<div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10, 10, 11, 0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
+<div id="akScoreBreakupModal" class="ak-score-modal-overlay" onclick="if(event.target===this) closeAkScoreModal();" role="dialog" aria-modal="true" aria-labelledby="akScoreModalTitle" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10, 10, 11, 0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:1rem; box-sizing:border-box;">
   <div class="ak-score-modal-card" onclick="event.stopPropagation();" style="background:#FFFFFF; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; max-width:540px; width:100%; padding:1.25rem 1.5rem; position:relative;  box-sizing:border-box; max-height:calc(100vh - 2rem); overflow-y:auto;">
     <button type="button" class="ak-score-modal-close" onclick="closeAkScoreModal();" style="position:absolute; top:1rem; right:1rem; background:rgba(10, 10, 11, 0.06); border:none; width:30px; height:30px; border-radius:50%; font-size:1.2rem; line-height:1; color:#1C1C1E; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s ease;" aria-label="Close Score Breakup Modal" title="Close">×</button>
     
@@ -1914,8 +1920,8 @@ function akGallerySelect(idx) {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 999999;
     display: flex;
     flex-direction: column;
