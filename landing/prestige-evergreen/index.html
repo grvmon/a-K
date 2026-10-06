@@ -641,7 +641,70 @@ img[style*="border-radius: 50%"] {
         
         <p class="hero-subtitle premium-subtitle" style="color: rgba(255,255,255,0.85); font-weight: 400;">Expansive 1 to 4 BHK residences within a master-planned township, delivering seamless connectivity and exceptional lifestyle infrastructure.</p>
         
-        <div class="hero-trust-bar" style="border-top: 0.5px solid rgba(255,255,255,0.2); border-bottom: 0.5px solid rgba(255,255,255,0.2); padding: 1.5rem 0; margin-top: 2rem;">
+        <style>
+          @media (max-width: 768px) {
+            /* Force Left Alignment on Mobile to Match Desktop */
+            .hero-content {
+              text-align: left !important;
+              align-items: flex-start !important;
+            }
+            .hero-content .hero-kicker, 
+            .hero-content .hero-title, 
+            .hero-content .hero-subtitle {
+              text-align: left !important;
+              justify-content: flex-start !important;
+            }
+            .hero-content .hero-cta-group {
+              justify-content: flex-start !important;
+            }
+            .hero-kicker {
+              flex-wrap: wrap !important;
+            }
+            #desktop-sync-trust-bar {
+              display: flex !important;
+              flex-direction: row !important;
+              justify-content: space-between !important;
+              align-items: center !important;
+              flex-wrap: nowrap !important;
+              gap: 0.25rem !important;
+              width: 100% !important;
+              border-top: 0.5px solid rgba(255,255,255,0.2) !important;
+              border-bottom: 0.5px solid rgba(255,255,255,0.2) !important;
+              padding: 1.25rem 0 !important;
+              margin-bottom: 2rem !important;
+              grid-template-columns: none !important;
+            }
+            #desktop-sync-trust-bar .trust-item {
+              display: flex !important;
+              flex-direction: column !important;
+              align-items: flex-start !important;
+              text-align: left !important;
+              flex: 1 1 0 !important;
+              min-width: 0 !important;
+            }
+            #desktop-sync-trust-bar .trust-divider {
+              display: block !important;
+              width: 1px !important;
+              height: 36px !important;
+              background: rgba(255,255,255,0.2) !important;
+              margin: 0 !important;
+              flex-shrink: 0 !important;
+            }
+            #desktop-sync-trust-bar .trust-number {
+              font-size: clamp(0.75rem, 3.5vw, 1.25rem) !important;
+              line-height: 1.2 !important;
+              white-space: nowrap !important;
+            }
+            #desktop-sync-trust-bar .trust-label {
+              font-size: clamp(0.55rem, 2.5vw, 0.75rem) !important;
+              white-space: nowrap !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+              max-width: 100% !important;
+            }
+          }
+        </style>
+        <div id="desktop-sync-trust-bar" class="hero-trust-bar" style="border-top: 0.5px solid rgba(255,255,255,0.2); border-bottom: 0.5px solid rgba(255,255,255,0.2); padding: 1.5rem 0; margin-top: 2rem;">
           <div class="trust-item">
             <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">₹1.07 Cr</span>
             <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Onwards*</span>
