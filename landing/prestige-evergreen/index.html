@@ -2626,53 +2626,50 @@ function akGallerySelect(idx) {
 
 <!-- DYNAMIC MODAL TEXT INJECTION -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var originalOpenModal = window.openModal;
-    window.openModal = function(context, formName, customOptions) {
-        // Call the original modal first so it does its setup
-        if (typeof originalOpenModal === 'function') {
-            originalOpenModal(context, formName, customOptions);
-        }
-        
-        // Wait 10ms for original function to finish overwriting the DOM, then inject our custom text
-        setTimeout(function() {
-            var heading = document.getElementById('lfMainHeading');
-            var sub = document.getElementById('lfSubHeading');
-            var btn = document.getElementById('lfBtnText') || document.querySelector('#lfSubmitBtn span');
-            
-            var type = context || '';
-            var proj = 'Prestige Evergreen';
-            
-            if (heading && sub) {
+(function() {
+    var hookInterval = setInterval(function() {
+        if (typeof window.openModal === 'function' && !window.openModal.isHooked) {
+            clearInterval(hookInterval);
+            var originalOpenModal = window.openModal;
+            window.openModal = function(context, formName, customOptions) {
+                var type = context || '';
+                var proj = 'Prestige Evergreen';
+                
+                customOptions = customOptions || {};
+                
                 if (type === 'pricing') {
-                    heading.innerText = proj + ' Cost Sheet';
-                    sub.innerText = 'Unlock the complete, all-inclusive pricing breakdown.';
-                    if(btn) btn.innerText = 'Get Cost Sheet';
+                    customOptions.heading = proj + ' Cost Sheet';
+                    customOptions.subHeading = 'Unlock the complete, all-inclusive pricing breakdown.';
+                    customOptions.btnText = 'Get Cost Sheet';
                 } else if (type === 'floorplan') {
-                    heading.innerText = proj + ' Floor Plans';
-                    sub.innerText = 'Download high-resolution floor plans and exact dimensions.';
-                    if(btn) btn.innerText = 'Download Floor Plans';
+                    customOptions.heading = proj + ' Floor Plans';
+                    customOptions.subHeading = 'Download high-resolution floor plans and exact dimensions.';
+                    customOptions.btnText = 'Download Floor Plans';
                 } else if (type === 'amenities') {
-                    heading.innerText = proj + ' Masterplan';
-                    sub.innerText = 'Download the complete masterplan and amenity layouts.';
-                    if(btn) btn.innerText = 'Download Masterplan';
+                    customOptions.heading = proj + ' Masterplan';
+                    customOptions.subHeading = 'Download the complete masterplan and amenity layouts.';
+                    customOptions.btnText = 'Download Masterplan';
                 } else if (type === 'location') {
-                    heading.innerText = proj + ' Connectivity';
-                    sub.innerText = 'Get detailed commute times and infrastructure data.';
-                    if(btn) btn.innerText = 'Get Location Report';
+                    customOptions.heading = proj + ' Connectivity';
+                    customOptions.subHeading = 'Get detailed commute times and infrastructure data.';
+                    customOptions.btnText = 'Get Location Report';
                 } else if (type === 'legal') {
-                    heading.innerText = proj + ' Legal Report';
-                    sub.innerText = 'Review RERA certificates and independent legal checks.';
-                    if(btn) btn.innerText = 'Download Legal Report';
-                } else {
-                    heading.innerText = proj + ' Brochure';
-                    sub.innerText = 'Download the official project brochure and details.';
-                    if(btn) btn.innerText = 'Download Brochure';
+                    customOptions.heading = proj + ' Legal Report';
+                    customOptions.subHeading = 'Review RERA certificates and independent legal checks.';
+                    customOptions.btnText = 'Download Legal Report';
+                } else if (type === 'dossier') {
+                    customOptions.heading = proj + ' Brochure';
+                    customOptions.subHeading = 'Download the official project brochure and details.';
+                    customOptions.btnText = 'Download Brochure';
                 }
-            }
-        }, 10);
-    };
-});
+                
+                // Use the type as the formName for analytics if not provided
+                originalOpenModal(context, formName || type, customOptions);
+            };
+            window.openModal.isHooked = true;
+        }
+    }, 50);
+})();
 </script>
 </body>
 </html>
