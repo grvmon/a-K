@@ -753,14 +753,15 @@ img[style*="border-radius: 50%"] {
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
 
 <style>
-  .prop-snapshot-strip-v2 .prop-glance-item {
-    border-right: 0.5px solid rgba(255,255,255,0.15) !important;
-  }
-  .prop-snapshot-strip-v2 .prop-glance-item:last-child {
-    border-right: none !important;
-  }
-  
   @media (max-width: 768px) {
+    /* Base right borders for mobile (overriding desktop pseudo-elements) */
+    .prop-snapshot-strip-v2 .prop-glance-item {
+      border-right: 0.5px solid rgba(255,255,255,0.15) !important;
+    }
+    .prop-snapshot-strip-v2 .prop-glance-item:last-child {
+      border-right: none !important;
+    }
+    
     /* 1. Reorder Footnote to the Bottom */
     .prop-snapshot-strip-v2 {
       display: flex !important;
@@ -821,6 +822,11 @@ img[style*="border-radius: 50%"] {
     
     /* Hide the 68% EFFICIENCY item */
     .prop-snapshot-strip-v2 .prop-glance-item.mobile-hide-efficiency {
+      display: none !important;
+    }
+    
+    /* Nuke the old pseudo-element borders that are causing double-lines and broken trailing lines */
+    .prop-snapshot-strip-v2 .prop-glance-item::after {
       display: none !important;
     }
     
