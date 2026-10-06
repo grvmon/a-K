@@ -2675,6 +2675,14 @@ function akGallerySelect(idx) {
                 }
                 
                 originalOpenModal(context, formName || type, customOptions);
+                // Force DOM override synchronously in case lead-form.min.js ignores customOptions
+                var mh = document.getElementById('lfMainHeading');
+                var sh = document.getElementById('lfSubHeading');
+                var bt = document.getElementById('lfBtnText');
+                if (mh) mh.textContent = customOptions.heading;
+                if (sh) sh.textContent = customOptions.subHeading;
+                if (bt) bt.textContent = customOptions.btnText;
+
             };
             window.openModal.isHooked = true;
         }
