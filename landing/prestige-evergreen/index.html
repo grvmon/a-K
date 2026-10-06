@@ -2873,27 +2873,14 @@ function akGallerySelect(idx) {
     function checkMobile() {
         if (window.innerWidth <= 768) {
             bar.style.display = 'flex';
+            document.body.classList.add('has-mobile-sticky-bar');
         } else {
             bar.style.display = 'none';
+            document.body.classList.remove('has-mobile-sticky-bar');
         }
     }
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    // Hide when modal is open
-    document.addEventListener('click', function(e) {
-        if (e.target && e.target.closest && e.target.closest('#lfModalOverlay')) {
-            bar.style.opacity = '0';
-            bar.style.pointerEvents = 'none';
-        }
-    });
-    window.addEventListener('lf:modal:open', function() {
-        bar.style.opacity = '0';
-        bar.style.pointerEvents = 'none';
-    });
-    window.addEventListener('lf:modal:close', function() {
-        bar.style.opacity = '1';
-        bar.style.pointerEvents = 'auto';
-    });
 })();
 </script>
 
