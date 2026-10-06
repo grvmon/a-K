@@ -2629,42 +2629,48 @@ function akGallerySelect(idx) {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var originalOpenModal = window.openModal;
-    window.openModal = function(type) {
-        var heading = document.getElementById('lfMainHeading');
-        var sub = document.getElementById('lfSubHeading');
-        var btn = document.getElementById('lfBtnText');
-        
-        if (heading && sub) {
-            if (type === 'pricing') {
-                heading.innerText = 'Cost Sheet & Pricing';
-                sub.innerText = 'Unlock the complete, all-inclusive pricing breakdown.';
-                if(btn) btn.innerText = 'Get Cost Sheet';
-            } else if (type === 'floorplan') {
-                heading.innerText = 'Master Floor Plans';
-                sub.innerText = 'Download high-resolution floor plans and exact dimensions.';
-                if(btn) btn.innerText = 'Download Floor Plans';
-            } else if (type === 'amenities') {
-                heading.innerText = 'Amenities & Masterplan';
-                sub.innerText = 'Download the complete masterplan and amenity layouts.';
-                if(btn) btn.innerText = 'Download Masterplan';
-            } else if (type === 'location') {
-                heading.innerText = 'Location & Connectivity';
-                sub.innerText = 'Get detailed commute times and infrastructure data.';
-                if(btn) btn.innerText = 'Get Location Report';
-            } else if (type === 'legal') {
-                heading.innerText = 'Legal & Title Report';
-                sub.innerText = 'Review RERA certificates and independent legal checks.';
-                if(btn) btn.innerText = 'Download Legal Report';
-            } else {
-                heading.innerText = 'Download Brochure';
-                sub.innerText = 'Download the official project brochure and details.';
-                if(btn) btn.innerText = 'Download Brochure';
-            }
-        }
-        
+    window.openModal = function(context, formName, customOptions) {
+        // Call the original modal first so it does its setup
         if (typeof originalOpenModal === 'function') {
-            originalOpenModal(type);
+            originalOpenModal(context, formName, customOptions);
         }
+        
+        // Wait 10ms for original function to finish overwriting the DOM, then inject our custom text
+        setTimeout(function() {
+            var heading = document.getElementById('lfMainHeading');
+            var sub = document.getElementById('lfSubHeading');
+            var btn = document.getElementById('lfBtnText') || document.querySelector('#lfSubmitBtn span');
+            
+            var type = context || '';
+            
+            if (heading && sub) {
+                if (type === 'pricing') {
+                    heading.innerText = 'Cost Sheet & Pricing';
+                    sub.innerText = 'Unlock the complete, all-inclusive pricing breakdown.';
+                    if(btn) btn.innerText = 'Get Cost Sheet';
+                } else if (type === 'floorplan') {
+                    heading.innerText = 'Master Floor Plans';
+                    sub.innerText = 'Download high-resolution floor plans and exact dimensions.';
+                    if(btn) btn.innerText = 'Download Floor Plans';
+                } else if (type === 'amenities') {
+                    heading.innerText = 'Amenities & Masterplan';
+                    sub.innerText = 'Download the complete masterplan and amenity layouts.';
+                    if(btn) btn.innerText = 'Download Masterplan';
+                } else if (type === 'location') {
+                    heading.innerText = 'Location & Connectivity';
+                    sub.innerText = 'Get detailed commute times and infrastructure data.';
+                    if(btn) btn.innerText = 'Get Location Report';
+                } else if (type === 'legal') {
+                    heading.innerText = 'Legal & Title Report';
+                    sub.innerText = 'Review RERA certificates and independent legal checks.';
+                    if(btn) btn.innerText = 'Download Legal Report';
+                } else {
+                    heading.innerText = 'Download Brochure';
+                    sub.innerText = 'Download the official project brochure and details.';
+                    if(btn) btn.innerText = 'Download Brochure';
+                }
+            }
+        }, 10);
     };
 });
 </script>
