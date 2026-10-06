@@ -2873,8 +2873,23 @@ function akGallerySelect(idx) {
 (function() {
     var bar = document.getElementById('propMobileStickyBar');
     if (!bar) return;
+    var isMobile = false;
+
     function checkMobile() {
-        if (window.innerWidth <= 768) {
+        isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            bar.style.display = 'none';
+            document.body.classList.remove('has-mobile-sticky-bar');
+        }
+        // On mobile: visibility is controlled by scroll (below)
+    }
+
+    function onScroll() {
+        if (!isMobile) return;
+        // Show bar only after user scrolls past 90% of viewport height (past the hero fold)
+        var scrolled = window.scrollY || document.documentElement.scrollTop || 0;
+        var heroHeight = window.innerHeight * 0.9;
+        if (scrolled > heroHeight) {
             bar.style.display = 'flex';
             document.body.classList.add('has-mobile-sticky-bar');
         } else {
@@ -2882,8 +2897,11 @@ function akGallerySelect(idx) {
             document.body.classList.remove('has-mobile-sticky-bar');
         }
     }
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener('resize', function() { checkMobile(); onScroll(); });
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run once on load
 })();
 </script>
 
