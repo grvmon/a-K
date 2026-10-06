@@ -660,6 +660,19 @@ img[style*="border-radius: 50%"] {
             .hero-gradient-overlay {
               background: linear-gradient(to right, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0.6) 50%, rgba(10, 10, 11, 0) 90%) !important;
             }
+            
+            /* Apply aggressive text-shadow to make text pop without darkening the background image */
+            .hero-content .hero-title,
+            .hero-content .hero-subtitle,
+            .hero-content .hero-kicker,
+            #desktop-sync-trust-bar .trust-number,
+            #desktop-sync-trust-bar .trust-label,
+            .prop-snapshot-strip-v2 .prop-glance-num,
+            .prop-snapshot-strip-v2 .prop-glance-lbl,
+            .prop-snapshot-strip-v2 .prop-glance-tag,
+            .prop-snapshot-strip-v2 .prop-glance-footnote {
+              text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+            }
             /* Force Left Alignment on Mobile to Match Desktop */
             .hero-content {
               text-align: left !important;
