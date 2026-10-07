@@ -1,0 +1,351 @@
+<style>
+  .hero-rethink-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-rethink-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../../style-guide/assets/evergreen/prestige_evergreen_balcony_sunset_v2.jpg?v=6');
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  .hero-rethink-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, #FAFAFA 0%, rgba(250,250,250,0.9) 35%, rgba(250,250,250,0) 65%),
+                linear-gradient(to top, #FAFAFA 0%, rgba(250,250,250,0.95) 15%, rgba(250,250,250,0) 40%);
+    z-index: 1;
+  }
+  .hero-rethink-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: 1;
+  }
+  .hero-left-copy {
+    flex: 1;
+    max-width: 700px;
+    padding-top: 2rem;
+  }
+  .hero-kicker {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #804526;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .hero-title {
+    font-family: 'Marcellus', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 400;
+    color: #1C1C1E;
+    line-height: 1.1;
+    margin: 0 0 0.25rem 0;
+  }
+  .hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1C1C1E;
+    margin-bottom: 1rem;
+  }
+  .hero-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #55555A;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+  .hero-meta-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 0.5px solid rgba(85,85,90,0.2);
+    border-bottom: 0.5px solid rgba(85,85,90,0.2);
+    padding: 1.25rem 0;
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-meta-value {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1C1C1E;
+    line-height: 1.2;
+  }
+  .hero-meta-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #55555A;
+    margin-top: 0.2rem;
+  }
+  .hero-meta-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(85,85,90,0.2);
+  }
+  
+  .hero-right-form {
+    width: 380px;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(85,85,90,0.2);
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    flex-shrink: 0;
+    margin-top: 1rem;
+  }
+  .hero-form-title {
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;
+    color: #1C1C1E;
+    margin: 0 0 0.5rem 0;
+  }
+  .hero-form-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    color: #55555A;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+  .hero-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    color: #1C1C1E;
+    border: 0.5px solid rgba(85,85,90,0.2);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: #FAFAFA;
+    transition: all 0.3s ease;
+  }
+  .hero-input:focus {
+    outline: none;
+    border-color: #804526;
+    background: #FFFFFF;
+  }
+  .hero-submit {
+    width: 100%;
+    padding: 0.85rem;
+    background: #804526;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  .hero-submit:hover {
+    background: #68361C;
+  }
+  .hero-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    color: #55555A;
+    margin-top: 1rem;
+  }
+
+  .hero-bottom-strip {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: transparent;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .hero-bottom-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .hero-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-highlight-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(128,69,38,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #804526;
+    flex-shrink: 0;
+  }
+  .hero-highlight-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1C1C1E;
+    line-height: 1.3;
+    max-width: 150px;
+  }
+  
+  @media (max-width: 900px) {
+    .hero-rethink-content {
+      flex-direction: column;
+      padding-top: 4rem;
+    }
+    .hero-right-form {
+      width: 100%;
+      margin-top: 0;
+    }
+    .hero-meta-strip {
+      gap: 1rem;
+    }
+    .hero-meta-divider {
+      display: none;
+    }
+    .hero-bottom-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-rethink-overlay {
+      background: linear-gradient(to top, #FAFAFA 0%, rgba(250,250,250,0.95) 70%, rgba(250,250,250,0.4) 100%);
+    }
+  }
+</style>
+
+<div class="hero-rethink-wrapper">
+  <div class="hero-rethink-bg"></div>
+  <div class="hero-rethink-overlay"></div>
+  
+  <div class="hero-rethink-content">
+    <div class="hero-left-copy">
+      <div class="hero-kicker">A-Grade Residential Asset</div>
+      <h1 class="hero-title">Prestige Evergreen</h1>
+      <div class="hero-subtitle">Varthur Junction, Bengaluru</div>
+      
+      <div class="hero-desc">
+        Spacious 1, 2, 3 & 4 BHK residences in a well-connected township with institutional-grade infrastructure and robust micro-market fundamentals.
+      </div>
+      
+      <div class="hero-meta-strip">
+        <div class="hero-meta-item">
+          <span class="hero-meta-value">₹1.07 – 4.09 Cr</span>
+          <span class="hero-meta-label">Onwards*</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-value">1 to 4 BHK</span>
+          <span class="hero-meta-label">659–2,513 sq.ft.</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-value">June 2030</span>
+          <span class="hero-meta-label">Possession (Expected)</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-value">RERA Registered</span>
+          <span class="hero-meta-label">PRM/KA/RERA/1251/446/PR/100924/007026</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-right-form">
+      <h2 class="hero-form-title">Get Price &amp; Availability</h2>
+      <div class="hero-form-desc">Receive the latest price, available units, floor plans and our independent assessment of this project.</div>
+      
+      <form onsubmit="event.preventDefault(); window.openModal();">
+        <input type="text" class="hero-input" placeholder="Your Name*" required>
+        <div style="display:flex; gap:0.5rem;">
+          <select class="hero-input" style="width:80px; padding:0.75rem 0.5rem;"><option>+91</option></select>
+          <input type="tel" class="hero-input" placeholder="Your WhatsApp Number*" required>
+        </div>
+        <select class="hero-input">
+          <option value="" disabled selected>Preferred Configuration</option>
+          <option>1 BHK</option>
+          <option>2 BHK</option>
+          <option>3 BHK</option>
+          <option>4 BHK</option>
+        </select>
+        <select class="hero-input">
+          <option value="" disabled selected>Budget Range (Optional)</option>
+          <option>₹1 - 2 Cr</option>
+          <option>₹2 - 3 Cr</option>
+          <option>₹3+ Cr</option>
+        </select>
+        <button type="submit" class="hero-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Get Project Details &rarr;
+        </button>
+      </form>
+      
+      <div class="hero-form-footer">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span>Your details are confidential. No spam.</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-bottom-strip">
+    <div class="hero-bottom-container">
+      <div class="hero-highlight-item">
+        <div class="hero-highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <div class="hero-highlight-text">Adjoining Tech Forest<br><span style="font-weight:400; color:#55555A;">Varthur-SH-35</span></div>
+      </div>
+      
+      <div class="hero-highlight-item">
+        <div class="hero-highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+        </div>
+        <div class="hero-highlight-text">Spacious Layouts<br><span style="font-weight:400; color:#55555A;">659–2,513 sq.ft.</span></div>
+      </div>
+      
+      <div class="hero-highlight-item">
+        <div class="hero-highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <div class="hero-highlight-text">Institutional Grade<br><span style="font-weight:400; color:#55555A;">Township Infrastructure</span></div>
+      </div>
+      
+      <div class="hero-highlight-item">
+        <div class="hero-highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        </div>
+        <div class="hero-highlight-text">Strong Fundamentals<br><span style="font-weight:400; color:#55555A;">High rental demand</span></div>
+      </div>
+    </div>
+  </div>
+</div>
