@@ -703,6 +703,7 @@ img[style*="border-radius: 50%"] {
             /* ── FIX #5: Full-width CTA on mobile for thumb tap coverage ── */
             .hero-cta-group {
               width: 100% !important;
+              margin-top: 1.5rem !important;
             }
             .hero-main-cta {
               width: 100% !important;
@@ -731,7 +732,7 @@ img[style*="border-radius: 50%"] {
             }
             #hero-main-content {
               margin-top: 0 !important;
-              padding-top: 3.5rem !important;
+              padding-top: 2rem !important;
             }
             
             /* ── FIX #11: Trust bar numbers minimum 16px ── */
@@ -807,8 +808,9 @@ img[style*="border-radius: 50%"] {
               width: 100% !important;
               border-top: 0.5px solid rgba(255,255,255,0.2) !important;
               border-bottom: 0.5px solid rgba(255,255,255,0.2) !important;
-              padding: 1.25rem 0 !important;
-              margin-bottom: 2rem !important;
+              padding: 0.85rem 0 !important;
+              margin-top: 1rem !important;
+              margin-bottom: 1rem !important;
               grid-template-columns: none !important;
             }
             #desktop-sync-trust-bar .trust-item {
@@ -925,6 +927,7 @@ img[style*="border-radius: 50%"] {
     }
     .prop-snapshot-strip-v2 .prop-glance-item {
       padding: 0.85rem 0 !important; /* Use padding for height instead of row-gap */
+      grid-column: auto !important;
     }
     
     /* Clean Right Borders (Targeting 3n catches item 3 and 6 seamlessly) */
@@ -1002,6 +1005,10 @@ img[style*="border-radius: 50%"] {
     <div class="prop-glance-item">
       <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.5rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">EOI STAGE</span>
       <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">RERA TO BE VERIFIED</span>
+    </div>
+    <div class="prop-glance-item mobile-hide-efficiency">
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">68%</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">EFFICIENCY</span>
     </div>
   </div>
 </div>
