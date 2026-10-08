@@ -888,6 +888,7 @@ img[style*="border-radius: 50%"] {
     /* Base right borders for mobile (overriding desktop pseudo-elements) */
     .prop-snapshot-strip-v2 .prop-glance-item {
       border-right: 0.5px solid rgba(255,255,255,0.15) !important;
+      grid-column: auto !important;
     }
     .prop-snapshot-strip-v2 .prop-glance-item:last-child {
       border-right: none !important;
@@ -925,6 +926,7 @@ img[style*="border-radius: 50%"] {
     }
     .prop-snapshot-strip-v2 .prop-glance-item {
       padding: 0.85rem 0 !important; /* Use padding for height instead of row-gap */
+      grid-column: auto !important;
     }
     
     /* Clean Right Borders (Targeting 3n catches item 3 and 6 seamlessly) */
@@ -1000,8 +1002,12 @@ img[style*="border-radius: 50%"] {
       <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;SQ.FT.&nbsp;CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">2B + G + 19</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">2B+G+19</span>
       <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">FLOORS</span>
+    </div>
+    <div class="prop-glance-item mobile-hide-efficiency">
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">68%</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">EFFICIENCY</span>
     </div>
   </div>
 </div>
