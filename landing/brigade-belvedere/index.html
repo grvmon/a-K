@@ -875,8 +875,9 @@ img[style*="border-radius: 50%"] {
           </div>
         </div>
         
-        <div class="hero-cta-group" style="margin-top: 3rem;">
-          <button type="button" data-no-modal="true" class="nav-cta-btn primary-cta-btn hero-main-cta" style="height: 50px !important; min-height: 50px !important; padding: 0 24px !important; cursor: pointer; border: none; background: var(--cta-gradient, linear-gradient(135deg, #E88D67 0%, #9E3F23 100%));" onclick="window.openModal('brief_pricing');" aria-label="Get Brochure & Pricing"><span>Get Brochure & Pricing</span>
+        <div class="hero-cta-group" style="margin-top: 3rem; position: relative; z-index: 25;">
+          <button type="button" data-no-modal="true" class="nav-cta-btn primary-cta-btn hero-main-cta" style="height: 50px !important; min-height: 50px !important; padding: 0 24px !important; cursor: pointer; border: none; background: var(--cta-gradient, linear-gradient(135deg, #E88D67 0%, #9E3F23 100%)); position: relative; z-index: 25; touch-action: manipulation;" onclick="window.openModal ? window.openModal('pricing') : (window.openAbhaModal && window.openAbhaModal());" aria-label="Get Brochure & Pricing — opens enquiry form">
+            <span>Get Brochure & Pricing</span>
             <span class="cta-arrow-badge"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
           </button>
         </div>
@@ -887,8 +888,8 @@ img[style*="border-radius: 50%"] {
 
 
     <!-- Property At A Glance Bottom Strip (Raw from Template) -->
-  <div class="prop-glance-mobile-wrapper" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(10, 10, 11,0.98) 0%, rgba(10, 10, 11,0.8) 60%, rgba(10, 10, 11,0) 100%); z-index: 10; padding: 2.5rem 0 1.5rem 0; border-top: none;">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
+  <div class="prop-glance-mobile-wrapper" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(10, 10, 11,0.98) 0%, rgba(10, 10, 11,0.8) 60%, rgba(10, 10, 11,0) 100%); z-index: 10; padding: 2.5rem 0 1.5rem 0; border-top: none; pointer-events: none;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; pointer-events: auto;">
 
 <style>
   @media (max-width: 768px) {
