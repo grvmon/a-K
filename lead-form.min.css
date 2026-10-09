@@ -641,3 +641,26 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   transform: translateX(4px);
 }
 
+.mobile-br { display: none; }
+
+@media (max-width: 768px) {
+  .mobile-br { display: inline; }
+  .lf-sub-heading {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+  .lf-privacy-consent {
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.01em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .lf-privacy-consent {
+    font-size: 10.5px !important;
+  }
+}
+

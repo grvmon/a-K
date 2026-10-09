@@ -2877,7 +2877,7 @@ function akGallerySelect(idx) {
                     customOptions.btnText = 'Download Diligence Report';
                 } else if (type === 'brief_pricing') {
                     customOptions.heading = 'Brochure & Pricing';
-                    customOptions.subHeading = 'Download the official project brochure, masterplan layouts, and unit-wise pricing breakdown.';
+                    customOptions.subHeading = 'Download the official project brochure, masterplan layouts,<br class="mobile-br">and unit-wise pricing breakdown.';
                     customOptions.btnText = 'Get Brochure & Prices';
                 } else if (type === 'dossier') {
                     customOptions.heading = proj + ' Brochure';
@@ -2898,7 +2898,7 @@ function akGallerySelect(idx) {
                     mh.style.visibility = 'visible';
                 }
                 if (sh && customOptions.subHeading) { 
-                    sh.textContent = customOptions.subHeading; 
+                    sh.innerHTML = customOptions.subHeading; 
                     sh.style.display = 'block'; 
                     sh.style.color = '#55555A'; 
                     sh.style.visibility = 'visible';
