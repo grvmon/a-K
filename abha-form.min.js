@@ -694,6 +694,17 @@ var akGetBasePath = function() {
       if (payload[k]) fields.push({ name: k, value: payload[k] });
     });
 
+    // Hidden field / Note injection
+    var leadMessage = "";
+    if (window.abhaLeadNote) {
+      leadMessage = window.abhaLeadNote;
+    } else if (window.location.search.includes('gclid')) {
+      leadMessage = "User clicked Google Ad and submitted a lead on " + document.title;
+    }
+    if (leadMessage) {
+      fields.push({ name: "message", value: leadMessage });
+    }
+
     var hutkCookie = getCookie("hubspotutk");
     var contextObj = {
       pageUri: (window.location.protocol === "file:") ? "https://acrenkey.com/lead-form" : (payload.source_url || window.location.href),
