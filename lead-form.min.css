@@ -644,7 +644,7 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
 .mobile-br { display: none; }
 
 @media (max-width: 768px) {
-  .mobile-br { display: inline; }
+  .mobile-br { display: inline !important; }
   .lf-wrap {
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -652,22 +652,25 @@ input:-webkit-autofill { animation-name: lfAutofillDetected; animation-duration:
   .lf-sub-heading {
     font-size: 11.5px !important;
     line-height: 1.35 !important;
-    max-width: 340px !important;
+    max-width: 360px !important;
+    width: 100% !important;
     margin: 0 auto !important;
   }
   .lf-privacy-consent {
-    font-size: 11.5px !important;
+    font-size: 11px !important;
     white-space: nowrap !important;
-    letter-spacing: -0.01em !important;
+    letter-spacing: -0.015em !important;
+    text-align: center !important;
   }
 }
 
 @media (max-width: 360px) {
   .lf-privacy-consent {
-    font-size: 10.5px !important;
+    font-size: 9.8px !important;
+    white-space: nowrap !important;
   }
   .lf-sub-heading {
-    font-size: 11px !important;
+    font-size: 10.5px !important;
   }
 }
 

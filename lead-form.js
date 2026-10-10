@@ -474,7 +474,13 @@
       currentModalBtnText = btnLabel;
 
       if (mainHeading) mainHeading.textContent = mainText;
-      if (subHeading) subHeading.textContent = subText;
+      if (subHeading) {
+        if (subText && subText.indexOf('<') !== -1) {
+          subHeading.innerHTML = subText;
+        } else {
+          subHeading.textContent = subText;
+        }
+      }
       if (btnTextEl) btnTextEl.textContent = btnLabel;
 
       if (showingSuccess) exitSuccessState();
