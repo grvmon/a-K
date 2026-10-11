@@ -10,8 +10,8 @@ mapping = {
     '#33414C': '#55555A',
     
     # Dark to Obsidian Black
-    '#2B2B2B': '#1C1C1E',
-    '#0f161c': '#1C1C1E',
+    '#2B2B2B': '#2B2D31',
+    '#0f161c': '#2B2D31',
     
     # Oranges/Golds to Peach/Copper
     '#d8a878': '#e5b899',

@@ -1,6 +1,6 @@
 import re
 
-allowed_hex = {'#be7555', '#9f5334', '#804526', '#e5b899', '#fafafa', '#1c1c1e', '#55555a', '#ffffff', '#000000'}
+allowed_hex = {'#be7555', '#9f5334', '#804526', '#e5b899', '#fafafa', '#2B2D31', '#55555a', '#ffffff', '#000000'}
 
 with open('website.css', 'r') as f:
     css = f.read()

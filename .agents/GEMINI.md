@@ -5,7 +5,7 @@
 - **Text Copper AAA (`--text-copper-aaa`)**: `#804526` (Must be used for all colored text on light backgrounds to pass 7.0:1 contrast).
 - **Highlight Peach (`--highlight-peach`)**: `#E88D67` (Used only on dark backgrounds).
 - **Titanium Frost Canvas Base (`--titanium-frost`)**: `#FAFAFA`
-- **Obsidian Black (`--obsidian-black`)**: `#1C1C1E`
+- **Obsidian Black (`--obsidian-black`)**: `#2B2D31`
 - **Muted Slate (`--neutral-grey`)**: `#55555A` (Body paragraphs)
 
 ## 2. Typography
@@ -56,7 +56,7 @@
 
 ## 11. Text-on-Image Legibility (The Anchored Gradient Rule)
 - **No Raw Text**: Never place text directly over an image without protection.
-- **Gradient Anchors**: Always apply a deep navy linear gradient overlay (`linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%)`) anchoring the text from the bottom (or top) to guarantee 7.0:1 AAA contrast.
+- **Gradient Anchors**: Always apply an Obsidian Black linear gradient overlay (`linear-gradient(to top, rgba(10, 10, 11,0.95) 0%, rgba(10, 10, 11,0) 60%)`) anchoring the text from the bottom (or top) to guarantee 7.0:1 AAA contrast.
 
 ## 12. Editorial Cards (Zero Default Shadows)
 - **No Floating Cards**: Do NOT use default CSS drop shadows on static data cards. It looks like a cheap SaaS dashboard.
@@ -71,7 +71,7 @@
 ## 14. Typography Updates
 - **Headings**: `Marcellus`, serif (Must always be weight 400. Do not faux-bold).
 - **Body**: `Manrope`, sans-serif.
-- **Icons**: Line icons • 2px stroke • Navy. Use only when they add clarity.
+- **Icons**: Line icons • 2px stroke • Obsidian Black. Use only when they add clarity.
 
 ## 15. Layout & Fibonacci Structure
 - **Fibonacci Sequence**: Utilize the golden ratio sequence (1, 1, 2, 3, 5, 8...) for natural, aesthetically pleasing proportions in layout sizing, padding, and margins.

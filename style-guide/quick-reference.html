@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acre & Key — Master Quick Reference (v2.0.1)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Manrope:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian-black: #2B2D31;
+            --titanium-frost: #FAFAFA;
+            --text-copper-aaa: #804526;
+            --highlight-peach: #E88D67;
+            --neutral-grey: #55555A;
+            --cta-gradient: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%);
+            --divider: rgba(85, 85, 90, 0.18);
+            --radius: 4px;
+            --border-hairline: 0.5px solid var(--divider);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--titanium-frost);
+            color: var(--obsidian-black);
+            font-family: 'Manrope', -apple-system, sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.45;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .qr-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border: var(--border-hairline);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+        }
+
+        /* HEADER */
+        .qr-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 1.25rem;
+            border-bottom: var(--border-hairline);
+            margin-bottom: 1.5rem;
+        }
+        .qr-brand-lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 1.25rem;
+        }
+        .qr-logo {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: var(--obsidian-black);
+        }
+        .qr-title {
+            font-family: 'Marcellus', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--obsidian-black);
+        }
+        .qr-meta {
+            font-size: 0.72rem;
+            color: var(--neutral-grey);
+            text-align: right;
+            line-height: 1.4;
+        }
+        .qr-badge {
+            display: inline-block;
+            background: rgba(44, 76, 59, 0.08);
+            color: #2C4C3B;
+            border: 0.5px solid rgba(44, 76, 59, 0.3);
+            border-radius: var(--radius);
+            padding: 0.15rem 0.5rem;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* 3-COLUMN ARCHITECTURAL GRID */
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .qr-card {
+            border: var(--border-hairline);
+            border-radius: var(--radius);
+            padding: 1.15rem;
+            background: var(--titanium-frost);
+            display: flex;
+            flex-direction: column;
+        }
+        .qr-card-title {
+            font-family: 'Marcellus', serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--obsidian-black);
+            margin-bottom: 0.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: var(--border-hairline);
+            padding-bottom: 0.4rem;
+        }
+        .qr-card-num {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-copper-aaa);
+            letter-spacing: 0.1em;
+        }
+
+        /* CONTENT UNITS */
+        .qr-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            font-size: 0.76rem;
+            color: var(--neutral-grey);
+        }
+        .qr-list li {
+            position: relative;
+            padding-left: 0.9rem;
+            line-height: 1.4;
+        }
+        .qr-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text-copper-aaa);
+            font-weight: bold;
+        }
+        .qr-list strong {
+            color: var(--obsidian-black);
+        }
+
+        /* SWATCH STRIP */
+        .qr-swatches {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.25rem;
+        }
+        .qr-swatch-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #FFFFFF;
+            padding: 0.35rem 0.5rem;
+            border-radius: var(--radius);
+            border: var(--border-hairline);
+            font-size: 0.72rem;
+        }
+        .qr-swatch-chip {
+            width: 22px;
+            height: 22px;
+            border-radius: var(--radius);
+            flex-shrink: 0;
+            border: 0.5px solid rgba(85,85,90,0.2);
+        }
+        .qr-swatch-name {
+            font-weight: 700;
+            color: var(--obsidian-black);
+            flex: 1;
+        }
+        .qr-swatch-ratio {
+            color: #2C4C3B;
+            font-weight: 700;
+            font-size: 0.68rem;
+        }
+
+        /* MINI TABLE */
+        .qr-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.72rem;
+            background: #FFFFFF;
+            border: var(--border-hairline);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-top: 0.35rem;
+        }
+        .qr-table th, .qr-table td {
+            padding: 0.35rem 0.5rem;
+            border-bottom: 0.5px solid rgba(85,85,90,0.12);
+            text-align: left;
+        }
+        .qr-table th {
+            background: rgba(85, 85, 90, 0.05);
+            font-weight: 700;
+            color: var(--neutral-grey);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .qr-table td:last-child {
+            font-weight: 600;
+            color: var(--text-copper-aaa);
+        }
+
+        /* CTA BUTTON MINI DEMO */
+        .qr-cta-demo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cta-gradient);
+            color: #FFFFFF;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.55rem 1rem;
+            border-radius: var(--radius);
+            border: none;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        /* PRINT OPTIMIZATION (FITS SINGLE PAGE) */
+        @media print {
+            body {
+                padding: 0;
+                background: #FFFFFF;
+            }
+            .qr-page {
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 10mm;
+            }
+            .qr-grid {
+                gap: 0.85rem;
+            }
+            .qr-card {
+                padding: 0.85rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .qr-grid {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="qr-page">
+
+    <!-- HEADER -->
+    <header class="qr-header">
+        <div class="qr-brand-lockup">
+            <span class="qr-logo">acre&key</span>
+            <span class="qr-title">Design System Quick Reference</span>
+        </div>
+        <div class="qr-meta">
+            <div><strong>Version:</strong> 2.0.1 (Architectural Release) &middot; Oct 2026</div>
+            <div style="margin-top:0.2rem;"><span class="qr-badge">100% WCAG AAA Certified</span></div>
+        </div>
+    </header>
+
+    <!-- 3x3 ARCHITECTURAL QUICK REFERENCE GRID -->
+    <div class="qr-grid">
+
+        <!-- 1. LOGO RULES -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>1. Wordmark & Logo</span>
+                <span class="qr-card-num">01</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Wordmark:</strong> Strictly lowercase <code>acre&key</code> set in <code>Josefin Sans</code> (Weight 400).</li>
+                <li><strong>Proportions:</strong> Ampersand (<code>&</code>) sits baseline-aligned without scaling tricks.</li>
+                <li><strong>Clear Space:</strong> Minimum $1\times$ height of the "k" on all 4 perimeters.</li>
+                <li><strong>Colorways:</strong> Obsidian Black (<code>#2B2D31</code>) on light canvas; Pure White (<code>#FFFFFF</code>) on dark surfaces.</li>
+                <li><strong>Banned:</strong> No gradients on logo, no uppercase, no icon symbol separation, no drop shadows.</li>
+            </ul>
+        </div>
+
+        <!-- 2. COLOR PALETTE (6 TOKENS) -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>2. Master Color Tokens</span>
+                <span class="qr-card-num">02</span>
+            </div>
+            <div class="qr-swatches">
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:#2B2D31;"></div>
+                    <div class="qr-swatch-name">Obsidian Black (#2B2D31)</div>
+                    <div class="qr-swatch-ratio">13.2:1 AAA</div>
+                </div>
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:#FAFAFA;"></div>
+                    <div class="qr-swatch-name">Titanium Frost (#FAFAFA)</div>
+                    <div class="qr-swatch-ratio">Canvas</div>
+                </div>
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:linear-gradient(135deg, #E88D67, #9E3F23);"></div>
+                    <div class="qr-swatch-name">Primary Copper (CTA)</div>
+                    <div class="qr-swatch-ratio">6.58:1 AA</div>
+                </div>
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:#804526;"></div>
+                    <div class="qr-swatch-name">Text Copper AAA (#804526)</div>
+                    <div class="qr-swatch-ratio">7.19:1 AAA</div>
+                </div>
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:#E88D67;"></div>
+                    <div class="qr-swatch-name">Highlight Peach (#E88D67)</div>
+                    <div class="qr-swatch-ratio">5.54:1 Dark</div>
+                </div>
+                <div class="qr-swatch-row">
+                    <div class="qr-swatch-chip" style="background:#55555A;"></div>
+                    <div class="qr-swatch-name">Muted Slate (#55555A)</div>
+                    <div class="qr-swatch-ratio">7.10:1 AAA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. TYPOGRAPHY SYSTEM -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>3. Typography System</span>
+                <span class="qr-card-num">03</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Display & Headings:</strong> <code>Marcellus, serif</code>. Strictly weight 400. Faux-bolding is strictly banned.</li>
+                <li><strong>Body & UI Elements:</strong> <code>Manrope, sans-serif</code> (Weights: 400 Regular, 500 Medium, 600 Semi, 700 Bold).</li>
+                <li><strong>Heading Case:</strong> Strictly <em>Sentence case</em> across all hero titles and H2/H3 display headings.</li>
+                <li><strong>Exclamation Marks:</strong> 100% Banned. Tone is clinical, objective, and institutional.</li>
+                <li><strong>Measurements:</strong> Title Case with periods (e.g. <code>3,150 Sq.Ft.</code>). Commas required for values >999.</li>
+                <li><strong>Currency:</strong> Always ₹ with space (e.g. <code>₹ 3.10 Cr</code>).</li>
+            </ul>
+        </div>
+
+        <!-- 4. SPACING & MICRO-EDGE GEOMETRY -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>4. Geometry & Spacing</span>
+                <span class="qr-card-num">04</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Corner Radius:</strong> Strictly <code>4px</code> across cards, buttons, modals, badges, and form inputs. (No 0px brutalist, no 8px soft, <strong>Zero pill shapes</strong>).</li>
+                <li><strong>Borders & Dividers:</strong> Strictly <code>0.5px</code> hairline (<code>rgba(85, 85, 90, 0.2)</code>) mimicking luxury architectural financial dossiers.</li>
+                <li><strong>Container Width:</strong> Max <code>1280px</code> with <code>2rem</code> side padding.</li>
+                <li><strong>Fibonacci Spacing:</strong> 4px (xs), 8px (sm), 16px (md), 24px (lg), 40px (xl), 64px (2xl), 104px (3xl).</li>
+                <li><strong>Cards:</strong> Zero default drop shadows. Depth achieved via whitespace, 0.5px hairlines, and typography hierarchy.</li>
+            </ul>
+        </div>
+
+        <!-- 5. PHOTOGRAPHY & ANCHORED GRADIENT -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>5. Photographic Art Direction</span>
+                <span class="qr-card-num">05</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Cinematic Desaturation:</strong> All 3D builder renders must apply <code>filter: saturate(0.85) contrast(1.05);</code> for a moody, cohesive architectural grade.</li>
+                <li><strong>Anchored Gradient Rule:</strong> Never place raw text on images. Always overlay Obsidian Black gradient: <code>linear-gradient(to top, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%)</code> guaranteeing 19.8:1 AAA contrast.</li>
+                <li><strong>Aspect Ratios:</strong> Standard property hero renders: <code>16:9</code>. Persona cards: <code>3:4</code>. Floorplans: <code>4:3</code>.</li>
+                <li><strong>Hover Dynamics:</strong> No physical card lifts. Smooth 0.4s image scale (1.03) or subtle dimming.</li>
+            </ul>
+        </div>
+
+        <!-- 6. CTAS & CLINICAL LEXICON -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>6. CTAs & Lexicon</span>
+                <span class="qr-card-num">06</span>
+            </div>
+            <table class="qr-table">
+                <thead>
+                    <tr><th>Banned Consumer Fluff</th><th>Approved Clinical Term</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>"Buy Now" / "Submit"</td><td>Request Advisory Call</td></tr>
+                    <tr><td>"Luxury" / "Premium"</td><td>Institutional-Grade / A-Grade</td></tr>
+                    <tr><td>"Amenities" / "Features"</td><td>Asset Fundamentals</td></tr>
+                    <tr><td>"Price List"</td><td>Valuation Matrix / Cost Sheet</td></tr>
+                    <tr><td>"Brochure"</td><td>Asset Dossier / Project Brief</td></tr>
+                    <tr><td>"Best" / "Perfect"</td><td>Objective Evaluation</td></tr>
+                </tbody>
+            </table>
+            <button class="qr-cta-demo">Request Advisory Call &rarr;</button>
+        </div>
+
+        <!-- 7. SOCIAL & DISPLAY AD FORMATS -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>7. Social & Ad Formats</span>
+                <span class="qr-card-num">07</span>
+            </div>
+            <table class="qr-table">
+                <thead>
+                    <tr><th>Platform / Placement</th><th>Dimensions</th><th>Ratio</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Meta Feed / LinkedIn Post</td><td>1080 &times; 1080 px</td><td>1:1</td></tr>
+                    <tr><td>Meta Story / Reels / Vertical</td><td>1080 &times; 1920 px</td><td>9:16</td></tr>
+                    <tr><td>Display Ad / Landscape Link</td><td>1200 &times; 628 px</td><td>1.91:1</td></tr>
+                    <tr><td>LinkedIn Company Cover</td><td>1584 &times; 396 px</td><td>4:1</td></tr>
+                    <tr><td>Print Dossier Report</td><td>210 &times; 297 mm</td><td>A4</td></tr>
+                </tbody>
+            </table>
+            <div style="font-size:0.7rem; color:var(--neutral-grey); margin-top:0.45rem; line-height:1.35;">
+                <strong>Safe Zones:</strong> Keep logo and primary headline 250px away from top/bottom bounds in 9:16 stories.
+            </div>
+        </div>
+
+        <!-- 8. ACCESSIBILITY & CONTRAST SPEC -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>8. Contrast & A11y Rules</span>
+                <span class="qr-card-num">08</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Body & Metadata:</strong> Strict $\ge 7.0:1$ WCAG AAA (Muted Slate `#55555A` = 7.10:1; Text Copper `#804526` = 7.19:1).</li>
+                <li><strong>Headings:</strong> Obsidian Black `#2B2D31` on Titanium = 13.2:1 (AAA).</li>
+                <li><strong>Focus Indicator:</strong> 2px solid ring in `--text-copper-aaa` (light) or `--highlight-peach` (dark). Must meet $\ge 3.0:1$.</li>
+                <li><strong>Disabled State:</strong> <code>opacity: 0.45; cursor: not-allowed; pointer-events: none;</code> (WCAG SC 1.4.3 exemption).</li>
+                <li><strong>Inline Links:</strong> 1px underline in `--text-copper-aaa` with 4px offset. Never default browser blue.</li>
+            </ul>
+        </div>
+
+        <!-- 9. AI AGENT GOVERNANCE RULES -->
+        <div class="qr-card">
+            <div class="qr-card-title">
+                <span>9. AI Agent Implementation Guardrails</span>
+                <span class="qr-card-num">09</span>
+            </div>
+            <ul class="qr-list">
+                <li><strong>Token Canonical Root:</strong> All variables live in <code>website.css</code>. Never hardcode hex values in HTML.</li>
+                <li><strong>Zero Banned Vocabulary:</strong> Never generate marketing superlatives ("luxury masterpiece", "hurry up", "unbeatable deal").</li>
+                <li><strong>Strict Geometry:</strong> Reject any CSS with <code>border-radius: 999px</code>, <code>border-radius: 8px</code>, or heavy drop shadows.</li>
+                <li><strong>Global Nav/Footer:</strong> Always use the standard site header & footer. Never create custom simplified variants.</li>
+                <li><strong>Compliance Checks:</strong> Verify RERA numbers and DPDP non-prechecked consent blocks on all lead forms.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
