@@ -54,6 +54,9 @@
   - `--space-2xl`: `64px` (section margins)
   - `--space-3xl`: `104px` (hero vertical breathing room)
 - **Zero Default Drop Shadows:** Do not use CSS drop shadows on data cards. Hierarchy is built using whitespace and 0.5px hairlines.
+- **Functional Iconography (Strict 2px Stroke):**
+  - Exclusively un-filled line icons with a strict `2px` stroke in Obsidian Black (`#2B2D31`) or Slate (`#55555A`).
+  - Permitted only when they add analytical clarity (Diligence Checks, Statutory Fees & Costs, Asset Dimensions, Possession Timeline, RERA Verification, Corridor Nodes). Decorative or filled icons are strictly prohibited.
 
 ---
 
