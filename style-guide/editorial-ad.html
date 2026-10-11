@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acre & Key — Editorial Creative (100% Brand Certified)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Manrope:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --obsidian-black: #2B2D31;
+            --titanium-frost: #FAFAFA;
+            --text-copper-aaa: #804526;
+            --neutral-grey: #55555A;
+        }
+
+        html, body {
+            width: 819px;
+            height: 1024px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #FAFAFA;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 4:5 Vertical Creative Canvas */
+        .ad-container {
+            width: 819px;
+            height: 1024px;
+            position: relative;
+            overflow: hidden;
+            background: #FAFAFA;
+        }
+
+        /* Photographic Base with Architectural Grade Filter */
+        .ad-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.85) contrast(1.05);
+            z-index: 1;
+        }
+
+        /* Seamless Ambient Light Wash - 100% Bleed, Zero Hard Edges */
+        .gradient-ambient-scrim {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.15) 52%, rgba(255, 255, 255, 0) 68%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Bottom Dark Gradient for RERA Legibility - Smooth Unbroken Fade */
+        .gradient-bottom-scrim {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 22%;
+            background: linear-gradient(to top, rgba(10, 10, 11, 0.90) 0%, rgba(10, 10, 11, 0.40) 50%, rgba(10, 10, 11, 0) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Editorial Content Overlay */
+        .ad-content {
+            position: absolute;
+            inset: 0;
+            padding: 56px 56px 42px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Top Brand Block */
+        .top-block {
+            max-width: 490px;
+        }
+
+        .brand-logo {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2.35rem;
+            font-weight: 400;
+            color: var(--obsidian-black);
+            letter-spacing: -0.02em;
+            margin-bottom: 2.25rem;
+            display: inline-block;
+        }
+
+        .brand-headline {
+            font-family: 'Marcellus', serif;
+            font-size: 3.35rem;
+            font-weight: 400;
+            line-height: 1.08;
+            color: var(--obsidian-black);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* Subhead: Strict Sentence Case */
+        .brand-subhead {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--neutral-grey);
+            letter-spacing: 0.01em;
+            margin-bottom: 1.65rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .subhead-symbol {
+            color: var(--text-copper-aaa);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Kicker Tag: Refined Swiss Architectural Weight & Tracking */
+        .kicker-tag {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-copper-aaa);
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Metrics Strip */
+        .metrics-strip {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(85, 85, 90, 0.22);
+            border-radius: 4px;
+            padding: 0.8rem 1.35rem;
+            gap: 1.35rem;
+        }
+
+        .metric-item {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--obsidian-black);
+        }
+
+        .metric-icon {
+            width: 19px;
+            height: 19px;
+            color: var(--text-copper-aaa);
+            flex-shrink: 0;
+        }
+
+        /* Vertical Divider: Crisp Contrast */
+        .metric-divider {
+            width: 1px;
+            height: 18px;
+            background: rgba(85, 85, 90, 0.25);
+        }
+
+        /* Bottom Regulatory Strip: Clean & Unbroken */
+        .bottom-block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.74rem;
+            color: rgba(255, 255, 255, 0.88);
+            letter-spacing: 0.02em;
+        }
+
+        .rera-label {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .legal-note {
+            font-size: 0.70rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-container">
+        <!-- Base Photography -->
+        <img src="assets/balcony-editorial-base.jpg" alt="Balcony skyline editorial render" class="ad-background">
+
+        <!-- 100% Seamless Ambient Light Wash -->
+        <div class="gradient-ambient-scrim"></div>
+        <div class="gradient-bottom-scrim"></div>
+
+        <!-- Editorial Graphic Elements -->
+        <div class="ad-content">
+            <div class="top-block">
+                <!-- Wordmark -->
+                <div class="brand-logo">acre&amp;key</div>
+
+                <!-- Display Headline: Sentence Case Marcellus 400 -->
+                <h2 class="brand-headline">Buying a home?</h2>
+
+                <!-- Subhead: Consistent Sentence Case -->
+                <div class="brand-subhead">
+                    <span>Good project</span>
+                    <span class="subhead-symbol">≠</span>
+                    <span>right home.</span>
+                </div>
+
+                <!-- Refined Kicker: Weight 600, 0.04em Tracking, Copper AAA -->
+                <div class="kicker-tag">Independent micro-market &amp; asset diligence</div>
+
+                <!-- Metrics Strip with Custom 2px Stroke Line Icons -->
+                <div class="metrics-strip">
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="m9 14 2 2 4-4"></path>
+                        </svg>
+                        <span>69 Diligence checks*</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path>
+                            <line x1="8" y1="7" x2="16" y2="7"></line>
+                            <line x1="8" y1="11" x2="16" y2="11"></line>
+                            <line x1="8" y1="15" x2="13" y2="15"></line>
+                        </svg>
+                        <span>₹0 Advisory retainer*</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Regulatory Strip -->
+            <div class="bottom-block">
+                <div>
+                    <span class="rera-label">RERA Registration No.</span> PRM/KA/RERA/1251/446/AG/260814/007659
+                </div>
+                <div class="legal-note">
+                    *T&amp;C Apply · Institutional Buyer Advisory
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
