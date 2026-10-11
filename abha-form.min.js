@@ -48,12 +48,22 @@ var akGetBasePath = function() {
     if (window.akProjectName) return window.akProjectName;
     var path = window.location.pathname.toLowerCase();
     if (path.indexOf("prestige-evergreen") !== -1) return "Prestige Evergreen";
+    if (path.indexOf("prestige-parklane") !== -1) return "Prestige Parklane";
     if (path.indexOf("sumadhura-folium") !== -1) return "Sumadhura Folium";
     if (path.indexOf("sattva-songbird") !== -1) return "Sattva Songbird";
     if (path.indexOf("brigade-belvedere") !== -1) return "Brigade Belvedere";
     if (path.indexOf("riviera-uno") !== -1) return "Riviera Uno";
     if (path.indexOf("sumadhura-solace") !== -1) return "Sumadhura Solace";
     return "";
+  };
+
+  var getAbhaSubtitle = function() {
+    if (window.abhaSubtitle) return window.abhaSubtitle;
+    var proj = getAbhaProjectName();
+    if (proj) {
+      return "Your dedicated " + proj + " concierge. Share your details and we'll be in touch.";
+    }
+    return "Property Expert.";
   };
 
   var abhaFormOpenTime = null;
@@ -503,7 +513,7 @@ var akGetBasePath = function() {
             "</div>" +
             "<div class=\"abha-header-text\">" +
               "<h2 class=\"abha-modal-title\" id=\"abhaHeading\">Talk to Abha</h2>" +
-              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">" + (getAbhaProjectName() ? getAbhaProjectName() + " Expert." : "Property Expert.") + "</p>" +
+              "<p class=\"abha-modal-subtitle\" id=\"abhaSubheading\">" + getAbhaSubtitle() + "</p>" +
             "</div >" +
           "</div>" +
           "<form class=\"lf-form\" id=\"abhaForm\" novalidate>" +
@@ -1038,6 +1048,8 @@ var akGetBasePath = function() {
     if (!modalOverlay) return;
 
     if (globalErr) globalErr.classList.remove("lf-show");
+    var subEl = document.getElementById("abhaSubheading");
+    if (subEl) subEl.textContent = getAbhaSubtitle();
     abhaFormOpenTime = Date.now();
     submitted = false;
     isSubmitting = false;
