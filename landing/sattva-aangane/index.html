@@ -45,7 +45,7 @@ html { scroll-behavior: auto !important; }
 .prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
 .prop-glance-tag { font-family: 'Marcellus', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; color: #804526; text-transform: uppercase; }
 .prop-glance-rule { width: 80px; height: 1px; background: #FAFAFA; }
-.prop-glance-grid { display: grid; grid-template-columns: repeat(7, 1fr); align-items: center; }
+.prop-glance-grid { display: grid; grid-template-columns: repeat(6, 1fr); align-items: center; }
 .prop-glance-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.1rem 0.25rem; position: relative; }
 .prop-glance-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 10%; height: 80%; width: 1px; background: rgba(255, 255, 255, 0.15); }
 
@@ -657,7 +657,7 @@ img[style*="border-radius: 50%"] {
   <!-- Full Screen Background Image -->
   <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
   <source media="(max-width: 768px)" srcset="../../style-guide/assets/evergreen/prestige_evergreen_balcony_sunset_v2_mobile.webp?v=9">
-  <img src="../../style-guide/assets/evergreen/prestige_evergreen_balcony_sunset_v2.webp?v=9" alt="Prestige Evergreen Balcony View" width="1920" height="1080" fetchpriority="high" decoding="async" class="hero-bg-image" style="width: 100%; height: 100%; object-fit: cover; object-position: center right; filter: saturate(0.85) contrast(1.05);">
+  <img src="../../style-guide/assets/evergreen/prestige_evergreen_balcony_sunset_v2.webp?v=9" alt="Sattva Aangane View" width="1920" height="1080" fetchpriority="high" decoding="async" class="hero-bg-image" style="width: 100%; height: 100%; object-fit: cover; object-position: center right; filter: saturate(0.85) contrast(1.05);">
 </picture>
   
   <!-- Dark overlay to ensure white text pops exactly like the homepage -->
@@ -672,14 +672,12 @@ img[style*="border-radius: 50%"] {
         <div class="hero-kicker premium-kicker" style="display: flex; align-items: center; gap: 0.75rem; color: #E88D67; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75rem;">
           <div style="display: flex; align-items: center; gap: 0.35rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Varthur, Bengaluru</span>
+            <span>OLD MADRAS ROAD · NEAR BUDIGERE CROSS</span>
           </div>
-          <span class="mobile-hidden-kicker" style="color: rgba(255,255,255,0.3);">|</span>
-          <span class="mobile-hidden-kicker">A-Grade Signature Residences</span>
         </div>
-        <h1 class="hero-title premium-title">Prestige Evergreen</h1>
+        <h1 class="hero-title premium-title">Sattva Aangane</h1>
         
-        <p class="hero-subtitle premium-subtitle" style="color: rgba(255,255,255,0.85); font-weight: 400;">1 to 4 BHK homes across a 24-acre township, with great connectivity and 80+ lifestyle amenities.</p>
+        <p class="hero-subtitle premium-subtitle" style="color: rgba(255,255,255,0.85); font-weight: 400;">3 &amp; 4 BHK residences and duplexes beside Cheemasandra Lake, with expansive green spaces and access to NH75.</p>
         
         <style>
           @media (max-width: 768px) {
@@ -712,7 +710,8 @@ img[style*="border-radius: 50%"] {
             }
             
             /* ── FIX #4: Focus-visible ring for keyboard users on hero CTA ── */
-            .hero-main-cta:focus-visible {
+            .hero-main-cta:focus-visible,
+            .secondary-cta-btn:focus-visible {
               outline: 2px solid #E88D67 !important;
               outline-offset: 3px !important;
             }
@@ -720,16 +719,24 @@ img[style*="border-radius: 50%"] {
             /* ── FIX #5: Full-width CTA on mobile for thumb tap coverage ── */
             .hero-cta-group {
               width: 100% !important;
+              display: flex !important;
+              flex-direction: column !important;
+              gap: 0.65rem !important;
+              margin-top: 1.5rem !important;
             }
-            .hero-main-cta {
+            .hero-main-cta,
+            .hero-cta-group .secondary-cta-btn {
               width: 100% !important;
               justify-content: center !important;
               text-align: center !important;
+              box-sizing: border-box !important;
             }
             
             /* ── FIX #7: Trust bar labels at minimum 12px (readable, won't break layout) ── */
             #desktop-sync-trust-bar .trust-label {
-              font-size: clamp(0.75rem, 2.5vw, 0.85rem) !important;
+              font-size: clamp(0.6rem, 2.3vw, 0.75rem) !important;
+              white-space: normal !important;
+              line-height: 1.25 !important;
             }
             
             /* ── FIX #8: Hide "Visual Representation" disclaimer on mobile (10px is unreadable) ── */
@@ -753,7 +760,7 @@ img[style*="border-radius: 50%"] {
             
             /* ── FIX #11: Trust bar numbers minimum 16px ── */
             #desktop-sync-trust-bar .trust-number {
-              font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
+              font-size: clamp(0.85rem, 3.5vw, 1.25rem) !important;
             }
             
             /* ── FIX #12: Glance grid labels — bump to minimum readable size ── */
@@ -825,7 +832,7 @@ img[style*="border-radius: 50%"] {
               border-top: 0.5px solid rgba(255,255,255,0.2) !important;
               border-bottom: 0.5px solid rgba(255,255,255,0.2) !important;
               padding: 1.25rem 0 !important;
-              margin-bottom: 2rem !important;
+              margin-bottom: 1.25rem !important;
               grid-template-columns: none !important;
             }
             #desktop-sync-trust-bar .trust-item {
@@ -845,15 +852,14 @@ img[style*="border-radius: 50%"] {
               flex-shrink: 0 !important;
             }
             #desktop-sync-trust-bar .trust-number {
-              font-size: clamp(0.75rem, 3.5vw, 1.25rem) !important;
+              font-size: clamp(0.85rem, 3.5vw, 1.25rem) !important;
               line-height: 1.2 !important;
               white-space: nowrap !important;
             }
             #desktop-sync-trust-bar .trust-label {
-              font-size: clamp(0.55rem, 2.5vw, 0.75rem) !important;
-              white-space: nowrap !important;
-              overflow: hidden !important;
-              text-overflow: ellipsis !important;
+              font-size: clamp(0.58rem, 2.3vw, 0.75rem) !important;
+              white-space: normal !important;
+              line-height: 1.25 !important;
               max-width: 100% !important;
             }
           }
@@ -866,28 +872,36 @@ img[style*="border-radius: 50%"] {
     transition: none !important;
   }
 }
+.hero-cta-group .secondary-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #E88D67 !important;
+  color: #FAFAFA !important;
+}
 </style>
         <div id="desktop-sync-trust-bar" class="hero-trust-bar" style="border-top: 0.5px solid rgba(255,255,255,0.2); border-bottom: 0.5px solid rgba(255,255,255,0.2); padding: 1.5rem 0; margin-top: 2rem;">
           <div class="trust-item">
-            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">₹1.07 Cr</span>
-            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Onwards*</span>
+            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">10 ACRES</span>
+            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Residential Development</span>
           </div>
           <div class="trust-divider" style="background: rgba(255,255,255,0.2);"></div>
           <div class="trust-item">
-            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">1 to 4 BHK</span>
-            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">659–2,513 sq.ft.</span>
+            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">3 &amp; 4 BHK</span>
+            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Residences &amp; Duplexes</span>
           </div>
           <div class="trust-divider" style="background: rgba(255,255,255,0.2);"></div>
           <div class="trust-item">
-            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">June 2030</span>
-            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Possession</span>
+            <span class="trust-number" style="color: #FAFAFA !important; font-size: 1.25rem;">80%</span>
+            <span class="trust-label" style="color: rgba(255,255,255,0.7) !important; font-size: 0.75rem;">Reported Open Green Space</span>
           </div>
         </div>
         
-        <div class="hero-cta-group" style="margin-top: 3rem;">
-          <button type="button" data-no-modal="true" class="nav-cta-btn primary-cta-btn hero-main-cta" style="height: 50px !important; min-height: 50px !important; padding: 0 24px !important; cursor: pointer; border: none; background: var(--cta-gradient, linear-gradient(135deg, #E88D67 0%, #9E3F23 100%));" onclick="window.openModal('brief_pricing');" aria-label="Get Brochure & Pricing"><span>Get Brochure & Pricing</span>
+        <div class="hero-cta-group" style="margin-top: 2.25rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <button type="button" data-no-modal="true" class="nav-cta-btn primary-cta-btn hero-main-cta" style="height: 50px !important; min-height: 50px !important; padding: 0 24px !important; cursor: pointer; border: none; background: var(--cta-gradient, linear-gradient(135deg, #E88D67 0%, #9E3F23 100%));" onclick="window.openModal('brief_pricing');" aria-label="GET PROJECT DETAILS"><span>GET PROJECT DETAILS</span>
             <span class="cta-arrow-badge"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
           </button>
+          <a href="#floor-plans" class="nav-cta-btn secondary-cta-btn" style="height: 50px !important; min-height: 50px !important; padding: 0 24px !important; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.4); background: rgba(10,10,11,0.5); color: #FAFAFA; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; text-decoration: none; border-radius: 4px; font-size: 0.85rem; letter-spacing: 0.04em; transition: all 0.4s ease;">
+            <span>VIEW FLOOR PLANS</span>
+          </a>
         </div>
         
       </div>
@@ -900,6 +914,11 @@ img[style*="border-radius: 50%"] {
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
 
 <style>
+  @media (min-width: 769px) {
+    .prop-snapshot-strip-v2 .prop-glance-grid {
+      grid-template-columns: repeat(6, 1fr) !important;
+    }
+  }
   @media (max-width: 768px) {
     /* Base right borders for mobile (overriding desktop pseudo-elements) */
     .prop-snapshot-strip-v2 .prop-glance-item {
@@ -940,7 +959,7 @@ img[style*="border-radius: 50%"] {
       padding-top: 0 !important;
     }
     .prop-snapshot-strip-v2 .prop-glance-item {
-      padding: 0.85rem 0 !important; /* Use padding for height instead of row-gap */
+      padding: 0.85rem 0.25rem !important; /* Use padding for height instead of row-gap */
     }
     
     /* Clean Right Borders (Targeting 3n catches item 3 and 6 seamlessly) */
@@ -957,19 +976,15 @@ img[style*="border-radius: 50%"] {
     
     /* 3. Optimize Typography */
     .prop-snapshot-strip-v2 .prop-glance-num {
-      font-size: clamp(1.15rem, 4vw, 1.35rem) !important;
-      letter-spacing: -0.03em !important; /* Slightly tighten for ~86,000 */
+      font-size: clamp(1.02rem, 3.2vw, 1.25rem) !important;
+      letter-spacing: -0.02em !important;
+      white-space: nowrap !important;
     }
     .prop-snapshot-strip-v2 .prop-glance-lbl {
-      font-size: clamp(0.45rem, 2vw, 0.55rem) !important;
+      font-size: clamp(0.48rem, 1.8vw, 0.56rem) !important;
       white-space: normal !important; /* Allow wrapping */
       line-height: 1.25 !important;
       padding: 0 4px !important;
-    }
-    
-    /* Hide the 68% EFFICIENCY item */
-    .prop-snapshot-strip-v2 .prop-glance-item.mobile-hide-efficiency {
-      display: none !important;
     }
     
     /* Nuke the old pseudo-element borders that are causing double-lines and broken trailing lines */
@@ -996,32 +1011,28 @@ img[style*="border-radius: 50%"] {
 
   <div class="prop-glance-grid">
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">24</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;ACRES</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">10 ACRES</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">DEVELOPMENT</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">14</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;TOWERS</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">625</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">RESIDENCES</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">~2,000</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;HOMES</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">5 TOWERS</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">UP TO G+42 FLOORS</span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">70%</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;OPEN&nbsp;AREA<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">80%</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">REPORTED OPEN GREEN SPACE<sup class="prop-glance-sup">1</sup></span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">~86,000</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">&nbsp;SQ.FT.&nbsp;CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">40,355 SQ.FT.</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">CENTRAL CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
     </div>
     <div class="prop-glance-item">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">G+19</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">FLOORS</span>
-    </div>
-    <div class="prop-glance-item mobile-hide-efficiency">
-      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.7rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">68%</span>
-      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">EFFICIENCY</span>
+      <span class="prop-glance-num" style="font-family:'Marcellus', serif; font-size:1.55rem; font-weight:400; color:#FFFFFF; line-height:1; margin-bottom:0.15rem;">500 M</span>
+      <span class="prop-glance-lbl" style="font-family:'Manrope', sans-serif; font-size:0.55rem; font-weight:700; letter-spacing:0.06em; color:rgba(255,255,255,0.8); text-transform:uppercase;">FROM BUDIGERE CROSS</span>
     </div>
   </div>
 </div>
