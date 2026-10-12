@@ -1099,85 +1099,62 @@ img[style*="border-radius: 50%"] {
       <!-- Configuration Cost Summary Table Header & Scroll Hint -->
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
         <div>
-          <h3 style="font-family:'Marcellus', serif; font-size:1.45rem; font-weight: 400; color:#2B2D31; margin:0 0 0.25rem 0; line-height:1.25;">
-            Pricing
-          </h3>
-          <p style="font-size:0.92rem; line-height:1.6; color:#2B2D31; margin:0;">Standardized SBA and indicative all-inclusive price brackets.</p>
+          <h2 style="font-family:'Marcellus', serif; font-size:clamp(1.5rem, 1.1rem + 0.8vw, 1.9rem); font-weight: 400; color:#2B2D31; margin:0 0 0.25rem 0; line-height:1.25;">
+            Sattva Aangane Price &amp; Configuration
+          </h2>
+          <p style="font-size:0.92rem; line-height:1.6; color:#55555A; margin:0;">Spacious 3 &amp; 4 BHK residences, with larger duplex options.</p>
         </div>
         <div style="display:flex; align-items:center; gap:0.5rem;">
-          <span style="font-size:0.75rem; font-weight: 700; text-transform:uppercase; letter-spacing:0.06em; color:#2B2D31; background:rgba(10, 10, 11,0.05); padding:0.25rem 0.65rem; border-radius:4px;">
-            RERA Validated
+          <span style="font-size:0.75rem; font-weight: 700; text-transform:uppercase; letter-spacing:0.06em; color:#804526; background:rgba(128,69,38,0.08); border:0.5px solid rgba(128,69,38,0.2); padding:0.25rem 0.65rem; border-radius:4px;">
+            Indicative Pricing
           </span>
         </div>
       </div>
 
-      
-
       <!-- Scrollable Table -->
-      
       <style>
         .prop-table-scroll-hint { display: none !important; }
         @media (max-width: 768px) {
           .prop-table-scroll-hint { display: flex !important; font-size:0.75rem; color:#804526; font-weight:700; margin-bottom:0.4rem; align-items:center; gap:0.35rem; }
+          #true-cost table th, #true-cost table td { white-space: nowrap !important; }
+          #true-cost table .ak-sm-btn { white-space: nowrap !important; }
         }
       </style>
       <div class="prop-table-scroll-hint">
         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         <span>Scroll horizontally to view complete table</span>
       </div>
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:2rem; ">
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:1rem;">
         <table style="width:100%; min-width:640px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem;">
           <thead>
             <tr style="background:#FAFAFA;">
               <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight: 700; color:#2B2D31; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Configuration</th>
-              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">SBA Range</th>
-              
-              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Starting Price</th>
+              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Approx. Saleable Area</th>
+              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Indicative Starting Price</th>
               <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:center; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Cost Sheet</th>
             </tr>
           </thead>
           <tbody style="color:#2B2D31;">
             <tr style="border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">1 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">659–976 sq.ft.</td>
-              
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹1.07 Cr Onwards</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">3 BHK Premium</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right;">2,311 sq. ft.</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹2.66 Cr onwards</td>
               <td style="padding:0.6rem 1.25rem; text-align:center;">
                 <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
               </td>
             </tr>
             <tr style="background:#FAFAFA; border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">2 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,174–1,526 sq.ft.</td>
-              
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹1.91 Cr Onwards</td>
-              <td style="padding:0.6rem 1.25rem; text-align:center;">
-                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
-              </td>
-            </tr>
-            <tr style="border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">3 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,461–1,951 sq.ft.</td>
-              
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹2.38 Cr Onwards</td>
-              <td style="padding:0.6rem 1.25rem; text-align:center;">
-                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
-              </td>
-            </tr>
-            <tr style="background:#FAFAFA; border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">3 BHK + Study</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,991–2,037 sq.ft.</td>
-              
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹3.24 Cr Onwards</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">4 BHK + Staff</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right;">2,991 sq. ft.</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹3.44 Cr onwards</td>
               <td style="padding:0.6rem 1.25rem; text-align:center;">
                 <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
               </td>
             </tr>
             <tr>
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">4 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">2,271–2,513 sq.ft.</td>
-              
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹3.70 Cr Onwards</td>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">Duplex</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right;">Up to 5,150 sq. ft.</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹5.92 Cr*</td>
               <td style="padding:0.6rem 1.25rem; text-align:center;">
                 <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
               </td>
@@ -1186,15 +1163,19 @@ img[style*="border-radius: 50%"] {
         </table>
       </div>
 
-      <!-- Interactive Itemized Typology Cost Estimator -->
+      <!-- Pricing Disclaimer Note -->
+      <p style="font-size:0.78rem; color:#55555A; line-height:1.6; margin:0 0 1.25rem 0; font-family:'Manrope',sans-serif;">
+        Final pricing may vary by tower, floor, orientation, views and unit availability. GST, stamp duty, registration, parking, floor-rise premiums and other applicable charges may be additional. Obtain the latest unit-specific cost sheet before making a booking decision.
+      </p>
+
       <!-- Concierge Callout Strip -->
       <div style="background:linear-gradient(135deg, #FAFAFA 0%, #FAFAFA 100%); border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; padding:1.25rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
         <div>
           <div style="font-weight: 700; font-size:0.95rem; color:#2B2D31; margin-bottom:0.2rem;">Looking for an exact tower &amp; floor cost sheet?</div>
           <div style="font-size:0.85rem; color:#2B2D31;">Get unit-level quotation including precise floor-rise, preferred view PLC, and payment milestone schedule.</div>
         </div>
-        <button data-no-modal="true" type="button" onclick="window.openModal('pricing'); return false;" style="display:inline-flex; align-items:center; gap:0.4rem; border-radius: 4px; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; cursor:pointer; text-decoration:none; padding:0.5rem 1rem; font-size:0.82rem; font-weight:700; font-family:'Manrope',sans-serif; transition: opacity 0.3s ease;">
-          <span>Unit Level Cost Sheet</span>
+        <button data-no-modal="true" type="button" onclick="window.openModal('pricing'); return false;" style="display:inline-flex; align-items:center; gap:0.4rem; border-radius: 4px; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; cursor:pointer; text-decoration:none; padding:0.6rem 1.2rem; font-size:0.82rem; font-weight:700; font-family:'Manrope',sans-serif; transition: opacity 0.3s ease;">
+          <span>GET DETAILED COST SHEET</span>
         </button>
       </div>
 
