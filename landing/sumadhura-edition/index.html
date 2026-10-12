@@ -1089,6 +1089,8 @@ img[style*="border-radius: 50%"] {
         .prop-table-scroll-hint { display: none !important; }
         @media (max-width: 768px) {
           .prop-table-scroll-hint { display: flex !important; font-size:0.75rem; color:#804526; font-weight:700; margin-bottom:0.4rem; align-items:center; gap:0.35rem; }
+          #true-cost table th, #true-cost table td { white-space: nowrap !important; }
+          #true-cost table .ak-sm-btn { white-space: nowrap !important; }
         }
       </style>
       <div class="prop-table-scroll-hint">
@@ -1096,42 +1098,42 @@ img[style*="border-radius: 50%"] {
         <span>Scroll horizontally to view complete table</span>
       </div>
       <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; border: 0.5px solid rgba(10, 10, 11, 0.08); border-radius: 4px; background:#FFFFFF; margin-bottom:1.5rem;">
-        <table style="width:100%; min-width:640px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem;">
+        <table style="width:100%; min-width:700px; border-collapse:collapse; text-align:left; font-family:'Manrope',sans-serif; font-size:0.92rem; white-space:nowrap;">
           <thead>
             <tr style="background:#FAFAFA;">
-              <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight: 700; color:#2B2D31; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Configuration</th>
-              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Size</th>
-              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Indicative ₹/sq.ft.</th>
-              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Indicative Price</th>
-              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:center; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08);">Cost Sheet</th>
+              <th style="padding:0.95rem 1.25rem 0.95rem 1.5rem; font-weight: 700; color:#2B2D31; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08); white-space:nowrap;">Configuration</th>
+              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08); white-space:nowrap;">SBA Range</th>
+              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08); white-space:nowrap;">Indicative ₹/sq.ft.</th>
+              <th style="padding:0.95rem 1.5rem 0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:right; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08); white-space:nowrap;">Indicative Price</th>
+              <th style="padding:0.95rem 1.25rem; font-weight: 700; color:#2B2D31; text-align:center; border-bottom: 0.5px solid rgba(10, 10, 11, 0.08); white-space:nowrap;">Cost Sheet</th>
             </tr>
           </thead>
           <tbody style="color:#2B2D31;">
             <tr style="border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">2 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,280–1,360 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A;">₹15.9K–16.8K</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹2.06–2.28 Cr</td>
-              <td style="padding:0.6rem 1.25rem; text-align:center;">
-                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31; white-space:nowrap;">2 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; white-space:nowrap;">1,280–1,360 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A; white-space:nowrap;">₹15.9K–16.8K</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31; white-space:nowrap;">₹2.06–2.28 Cr</td>
+              <td style="padding:0.6rem 1.25rem; text-align:center; white-space:nowrap;">
+                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer; white-space:nowrap;">Get Cost Sheet</button>
               </td>
             </tr>
             <tr style="background:#FAFAFA; border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">3 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,490–1,920 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A;">₹15.9K–16.8K</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹2.37–3.23 Cr</td>
-              <td style="padding:0.6rem 1.25rem; text-align:center;">
-                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31; white-space:nowrap;">3 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; white-space:nowrap;">1,490–1,920 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A; white-space:nowrap;">₹15.9K–16.8K</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31; white-space:nowrap;">₹2.37–3.23 Cr</td>
+              <td style="padding:0.6rem 1.25rem; text-align:center; white-space:nowrap;">
+                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer; white-space:nowrap;">Get Cost Sheet</button>
               </td>
             </tr>
             <tr style="border-bottom:0.5px solid #FAFAFA;">
-              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31;">4 BHK</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right;">1,960–2,295 sq.ft.</td>
-              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A;">₹15.9K–16.8K</td>
-              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31;">₹3.12–3.73 Cr</td>
-              <td style="padding:0.6rem 1.25rem; text-align:center;">
-                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Get Cost Sheet</button>
+              <td style="padding:0.9rem 1.25rem 0.9rem 1.5rem; font-weight:700; color:#2B2D31; white-space:nowrap;">4 BHK</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; white-space:nowrap;">1,960–2,295 sq.ft.</td>
+              <td style="padding:0.9rem 1.25rem; text-align:right; font-weight:600; color:#55555A; white-space:nowrap;">₹15.9K–16.8K</td>
+              <td style="padding:0.9rem 1.5rem 0.9rem 1.25rem; text-align:right; font-weight: 700; color:#2B2D31; white-space:nowrap;">₹3.12–3.73 Cr</td>
+              <td style="padding:0.6rem 1.25rem; text-align:center; white-space:nowrap;">
+                <button data-no-modal="true" type="button" class="ak-sm-btn" onclick="window.openModal('pricing')" style="padding:0.4rem 0.8rem; font-size:0.75rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; border-radius:4px; font-weight:700; cursor:pointer; white-space:nowrap;">Get Cost Sheet</button>
               </td>
             </tr>
           </tbody>
