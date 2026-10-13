@@ -50,7 +50,7 @@ const newStyles = `
             box-sizing: border-box;
         }
         .frame-text {
-            font-family: 'Marcellus', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 6.5cqw; /* Scales perfectly with width to stay on 1 line */
             font-weight: 400;
             color: var(--titanium-frost);
@@ -66,7 +66,7 @@ const newStyles = `
             background: rgba(10, 10, 11, 0.75);
         }
         .brand-logo {
-            font-family: 'Marcellus', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 8cqw;
             color: var(--titanium-frost);
             margin-bottom: 0.5rem;

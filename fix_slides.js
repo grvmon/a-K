@@ -4,8 +4,8 @@ let html = fs.readFileSync(file, 'utf8');
 
 // 1. Add Josefin Sans to Google Fonts
 html = html.replace(
-    /family=Marcellus&display=swap/,
-    'family=Marcellus&family=Josefin+Sans:wght@400;500;600&display=swap'
+    /family=Cormorant+Garamond:wght@400;500;600;700&display=swap/,
+    'family=Cormorant+Garamond:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600&display=swap'
 );
 
 // 2. Add Josefin Sans CSS class

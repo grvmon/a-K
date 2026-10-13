@@ -69,7 +69,7 @@
 
 
 ## 14. Typography Updates
-- **Headings**: `Marcellus`, serif (Must always be weight 400. Do not faux-bold).
+- **Headings**: `Cormorant Garamond`, serif (Must always be weight 400. Do not faux-bold).
 - **Body**: `Manrope`, sans-serif.
 - **Icons**: Line icons • 2px stroke • Obsidian Black. Use only when they add clarity.
 

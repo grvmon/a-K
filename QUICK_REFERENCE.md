@@ -31,7 +31,7 @@
 ---
 
 ## 3. Typography Hierarchy & Rules
-- **Display & Headings:** `Marcellus`, serif. Strictly Weight 400. Faux-bolding is banned.
+- **Display & Headings:** `Cormorant Garamond`, serif. Strictly Weight 400. Faux-bolding is banned.
 - **Body & UI Elements:** `Manrope`, sans-serif (Weights 400 Regular, 500 Medium, 600 Semi-Bold, 700 Bold).
 - **Heading Case:** Strictly **Sentence case** across all hero headlines, section H2s, and subheadings.
 - **Exclamation Marks:** 100% Banned. Tone is clinical, objective, and institutional.
