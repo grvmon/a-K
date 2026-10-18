@@ -588,6 +588,10 @@ img[style*="border-radius: 50%"] {
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#2B2D31;"></i>
           </button>
+          <button type="button" onclick="event.stopPropagation(); openAkLightbox(5);" style="position:absolute; bottom:10px; left:10px; z-index:2; background:rgba(10, 10, 11, 0.85); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); color:#FFFFFF; border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.35rem 0.65rem; font-size:0.75rem; font-weight:700; display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFFFFF"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Watch Video</span>
+          </button>
         </div>
 
         <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; margin:0 0 0.25rem 0; line-height:1.2; letter-spacing:0.02em; text-transform:none;">Prestige Evergreen</h1>
@@ -642,14 +646,15 @@ img[style*="border-radius: 50%"] {
 
 <div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
 <div class="ak-hero-editorial-gallery" id="akHeroGallery">
-  <div class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);">
+  <div class="ak-editorial-media-canvas" onclick="if(window.akGalleryMedia &amp;&amp; window.akGalleryMedia[window.akGalleryIndex] &amp;&amp; (window.akGalleryMedia[window.akGalleryIndex].type==='video'||window.akGalleryMedia[window.akGalleryIndex].type==='youtube')){ return; } openAkLightbox(window.akGalleryIndex || 0);">
     <img id="akMainHeroImage" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=1791220494" alt="Prestige Evergreen Evening Pool View">
     <video id="akMainHeroVideo" style="display:none;" muted="" loop="" playsinline=""></video>
+    <iframe id="akMainHeroIframe" src="" style="display:none; position:absolute; inset:0; width:100%; height:100%; border:none; z-index:2;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
   </div>
 
   <div class="ak-editorial-top-left">
     <div class="ak-editorial-tag">PRESTIGE RAINTREE PARK · EVERGREEN</div>
-    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">05</span></div>
+    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">06</span></div>
     <div class="ak-editorial-line"></div>
   </div>
 
@@ -679,8 +684,12 @@ img[style*="border-radius: 50%"] {
       <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(4);" aria-label="View photo 5">
         <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp?v=1791220494" alt="Central Clubhouse View">
       </button>
-      
-
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(5);" aria-label="Play project walkthrough video" style="position:relative;">
+        <img src="https://img.youtube.com/vi/A1qwK_THy9Q/hqdefault.jpg" alt="Prestige Evergreen Video">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.45);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg>
+        </div>
+      </button>
     </div>
 
     <div class="ak-editorial-gallery-trigger">
@@ -948,12 +957,8 @@ img[style*="border-radius: 50%"] {
         </p>
       </div>
 
-      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius: 4px; overflow:hidden; border: 0.5px solid rgba(10, 10, 11, 0.08); box-shadow:0 4px 16px rgba(15, 31, 61, 0.05);">
-        <!-- Top-left category badge -->
-        <div style="position:absolute; top:12px; left:12px; z-index:3; background:rgba(10, 10, 11, 0.88); color:#FFFFFF; font-family:'Manrope',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.25rem 0.65rem; border-radius:4px; border:0.5px solid rgba(255,255,255,0.15); pointer-events:none;">
-          Township Architecture
-        </div>
-        <img src="../../style-guide/assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp?v=1791220494" alt="Prestige Evergreen Architecture" style="width:100%; height:100%; aspect-ratio:16/9; object-fit:cover; background:#2B2D31; display:block;">
+      <div id="propVideoBox" class="prop-overview-video-box" style="position:relative; border-radius: 4px; overflow:hidden; border: 0.5px solid rgba(10, 10, 11, 0.08); box-shadow:0 4px 16px rgba(15, 31, 61, 0.05); aspect-ratio:16/9; background:#2B2D31;">
+        <iframe width="100%" height="100%" style="width:100%; height:100%; aspect-ratio:16/9; border:none; display:block;" src="https://www.youtube.com/embed/A1qwK_THy9Q" title="Prestige Evergreen Walkthrough &amp; Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
       </div>
     </div>
     <script>
@@ -2808,7 +2813,7 @@ img[style*="border-radius: 50%"] {
           </summary>
           <div style="font-size:0.88rem; color:#374151; margin-top:0.65rem; line-height:1.65; border-top:0.5px solid rgba(140, 103, 52,0.15); padding-top:0.65rem;">
             The advertised base price is only one component of the total acquisition cost. Buyers must account for infrastructure/clubhouse charges (~₹8.5L–₹12.5L), covered parking slots (~₹4L–₹7.5L), floor-rise or preferential location charges (PLC), advance maintenance &amp; corpus deposits, GST at 5%, and Karnataka Stamp Duty + Registration at 6.6%.<br><br>
-            Use <span class="brand-inline-text">acre&amp;key</span>’s interactive True Cost Analysis section above to review itemized breakdowns for 1 BHK, 2 BHK, 3 BHK, and 4 BHK configurations.
+            Use <span class="brand-inline-text">acre&amp;key</span>’s configuration breakdown table above to review pricing for 1 BHK, 2 BHK, 3 BHK, and 4 BHK configurations.
           </div>
         </details>
 
@@ -3226,23 +3231,37 @@ const akGalleryMedia = [
   { type: 'image', src: '../../style-guide/assets/evergreen/prestige_evergreen_hero_skyline_night_aerial.webp?v=1791220494', alt: 'Night Skyline Aerial View of Township', category: 'Aerial' },
   { type: 'image', src: '../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_tower_elevation.webp?v=1791220494', alt: 'Pool & Tower Elevation View', category: 'Amenities' },
   { type: 'image', src: '../../style-guide/assets/evergreen/prestige_evergreen_hero_tower_facade_day.webp?v=1791220494', alt: 'Daytime High-Rise Tower Facade View', category: 'Architecture' },
-  { type: 'image', src: '../../style-guide/assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp?v=1791220494', alt: 'Central Clubhouse & Swimming Pool Courtyard Aerial View', category: 'Masterplan' }
+  { type: 'image', src: '../../style-guide/assets/evergreen/prestige_evergreen_hero_clubhouse_courtyard_aerial.webp?v=1791220494', alt: 'Central Clubhouse & Swimming Pool Courtyard Aerial View', category: 'Masterplan' },
+  { type: 'youtube', src: 'https://www.youtube.com/embed/A1qwK_THy9Q', poster: 'https://img.youtube.com/vi/A1qwK_THy9Q/hqdefault.jpg', alt: 'Prestige Evergreen Project Walkthrough & Review', category: 'Video' }
 ];
 
 function updateAkGalleryUI() {
   const media = akGalleryMedia[window.akGalleryIndex];
   const mainImg = document.getElementById('akMainHeroImage');
   const mainVid = document.getElementById('akMainHeroVideo');
-  if (mainImg && mainVid) {
-    if (media.type === 'video') {
+  const mainIframe = document.getElementById('akMainHeroIframe');
+  if (mainImg) {
+    if (media.type === 'youtube') {
       mainImg.style.display = 'none';
-      mainVid.style.display = 'block';
-      mainVid.src = media.src;
-      mainVid.poster = media.poster || '';
-      mainVid.play().catch(e => console.log(e));
+      if (mainVid) { mainVid.style.display = 'none'; mainVid.pause(); }
+      if (mainIframe) {
+        mainIframe.style.display = 'block';
+        if (!mainIframe.src || mainIframe.src.indexOf('A1qwK_THy9Q') === -1) {
+          mainIframe.src = 'https://www.youtube.com/embed/A1qwK_THy9Q?autoplay=1&rel=0';
+        }
+      }
+    } else if (media.type === 'video') {
+      if (mainIframe) { mainIframe.style.display = 'none'; mainIframe.src = ''; }
+      mainImg.style.display = 'none';
+      if (mainVid) {
+        mainVid.style.display = 'block';
+        mainVid.src = media.src;
+        mainVid.poster = media.poster || '';
+        mainVid.play().catch(e => console.log(e));
+      }
     } else {
-      mainVid.style.display = 'none';
-      mainVid.pause();
+      if (mainIframe) { mainIframe.style.display = 'none'; mainIframe.src = ''; }
+      if (mainVid) { mainVid.style.display = 'none'; mainVid.pause(); }
       mainImg.style.display = 'block';
       mainImg.src = media.src;
       mainImg.alt = media.alt;
@@ -3943,6 +3962,7 @@ function akGallerySelect(idx) {
       <div class="ak-lb-media-viewport" id="akLbMediaViewport">
         <img id="akLbMainImg" src="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=1791220494" alt="Prestige Evergreen Full View">
         <video id="akLbMainVideo" style="display: none; width: 100%; height: 100%; object-fit: contain;" controls="" playsinline=""></video>
+        <iframe id="akLbMainIframe" src="" style="display: none; width: 100%; height: 100%; max-width: 960px; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
       </div>
 
       <div class="ak-lb-caption-row">
@@ -4034,6 +4054,8 @@ function akGallerySelect(idx) {
             lb.classList.remove('active');
             document.body.style.overflow = '';
         }
+        var lbIframe = document.getElementById('akLbMainIframe');
+        if (lbIframe) { lbIframe.style.display = 'none'; lbIframe.src = ''; }
         var mainVid = document.getElementById('akMainHeroVideo');
         if (mainVid) mainVid.pause();
         var lbVid = document.getElementById('akLbMainVideo');
@@ -4055,20 +4077,35 @@ function akGallerySelect(idx) {
         var media = akGalleryMedia[window.akGalleryIndex];
         var lbImg = document.getElementById('akLbMainImg');
         var lbVid = document.getElementById('akLbMainVideo');
+        var lbIframe = document.getElementById('akLbMainIframe');
         var viewport = document.getElementById('akLbMediaViewport');
         var ambient = document.getElementById('akLbAmbient');
 
-        if (lbImg && lbVid) {
-            if (media.type === 'video') {
+        if (lbImg) {
+            if (media.type === 'youtube') {
                 lbImg.style.display = 'none';
-                lbVid.style.display = 'block';
-                lbVid.src = media.src;
-                lbVid.play().catch(function(e) { console.log(e); });
+                if (lbVid) { lbVid.style.display = 'none'; lbVid.pause(); }
+                if (lbIframe) {
+                    lbIframe.style.display = 'block';
+                    if (!lbIframe.src || lbIframe.src.indexOf('A1qwK_THy9Q') === -1) {
+                        lbIframe.src = 'https://www.youtube.com/embed/A1qwK_THy9Q?autoplay=1&rel=0';
+                    }
+                }
+                if (viewport) viewport.classList.remove('floorplan-mode');
+                if (ambient) ambient.style.backgroundImage = 'none';
+            } else if (media.type === 'video') {
+                if (lbIframe) { lbIframe.style.display = 'none'; lbIframe.src = ''; }
+                lbImg.style.display = 'none';
+                if (lbVid) {
+                    lbVid.style.display = 'block';
+                    lbVid.src = media.src;
+                    lbVid.play().catch(function(e) { console.log(e); });
+                }
                 if (viewport) viewport.classList.remove('floorplan-mode');
                 if (ambient) ambient.style.backgroundImage = 'none';
             } else {
-                lbVid.style.display = 'none';
-                lbVid.pause();
+                if (lbIframe) { lbIframe.style.display = 'none'; lbIframe.src = ''; }
+                if (lbVid) { lbVid.style.display = 'none'; lbVid.pause(); }
                 lbImg.style.display = 'block';
                 lbImg.src = media.src;
                 lbImg.alt = media.alt;
@@ -4128,8 +4165,8 @@ function akGallerySelect(idx) {
             btn.className = 'ak-lb-thumb' + (idx === window.akGalleryIndex ? ' active' : '');
             btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
             btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
-            if (media.type === 'video') {
-                btn.innerHTML = '<img src="' + media.poster + '" alt="' + media.alt + '"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.08);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.08)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
+            if (media.type === 'youtube' || media.type === 'video') {
+                btn.innerHTML = '<img src="' + (media.poster || 'https://img.youtube.com/vi/A1qwK_THy9Q/hqdefault.jpg') + '" alt="' + media.alt + '"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.45);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
             } else {
                 btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '">';
             }
