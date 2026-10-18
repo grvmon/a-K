@@ -74,9 +74,22 @@
           },
           "datePublished": "2025-01-15T09:00:00+05:30",
           "dateModified": "2026-10-18T10:00:00+05:30",
+          "author": {
+            "@id": "https://acrenkey.com/#gaurav-mongia"
+          },
           "publisher": {
             "@id": "https://acrenkey.com/#organization"
           }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://acrenkey.com/#gaurav-mongia",
+          "name": "Gaurav Mongia",
+          "jobTitle": "Founding Partner & Advisory Head",
+          "worksFor": {
+            "@id": "https://acrenkey.com/#organization"
+          },
+          "url": "https://acrenkey.com/#gaurav-mongia"
         },
         {
           "@type": "WebApplication",
@@ -93,6 +106,9 @@
             "priceCurrency": "INR"
           },
           "description": "Calculate Karnataka stamp duty (5.6%), registration fees (1%), and total government charges for buying property in Bengaluru with acre&key.",
+          "author": {
+            "@id": "https://acrenkey.com/#gaurav-mongia"
+          },
           "publisher": {
             "@id": "https://acrenkey.com/#organization"
           },
@@ -124,18 +140,10 @@
           ]
         },
         {
-          "@type": "WebSite",
-          "@id": "https://acrenkey.com/#website",
-          "name": "acre&key",
-          "url": "https://acrenkey.com/",
-          "publisher": {
-            "@id": "https://acrenkey.com/#organization"
-          }
-        },
-        {
           "@type": "Organization",
           "@id": "https://acrenkey.com/#organization",
-          "name": "acre&key",
+          "name": "Acrenkey Realty LLP",
+          "alternateName": "acre&key",
           "url": "https://acrenkey.com/",
           "logo": {
             "@type": "ImageObject",
@@ -148,8 +156,7 @@
             "addressRegion": "Karnataka",
             "postalCode": "560048",
             "addressCountry": "IN"
-          },
-          "legalName": "Acrenkey Realty LLP"
+          }
         },
         {
           "@type": "FAQPage",
@@ -251,13 +258,64 @@
         font-family: var(--font-body, 'Manrope', sans-serif);
     }
 
-    /* Hero Fold Optimized Layout Wrapper */
-    .ak-calc-wrapper {
-        max-width: 1280px;
-        width: 100%;
-        margin: 72px auto 0 auto;
+    /* Byline & Links */
+    .ak-calc-byline {
+        font-size: 0.75rem;
+        color: var(--neutral-grey, #55555A);
+        margin-top: 0.15rem;
+        margin-bottom: 0.4rem;
+    }
+    .ak-link-copper {
+        color: var(--refined-brass, #804526);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: color 0.4s ease;
+    }
+    .ak-link-copper:hover {
+        color: var(--obsidian-black, #2B2D31);
+    }
+
+    /* --- ACRE&KEY 2026 STAMP DUTY CALCULATOR UI (100% MATCHED TO DOWN-PAYMENT-CALCULATOR) --- */
+    .dp-calc-container {
+        max-width: 1240px;
+        margin: 90px auto 0 auto;
         padding: 0 1.5rem;
-        box-sizing: border-box;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        color: var(--obsidian-black, #2B2D31);
+    }
+    .dp-header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.45rem;
+        gap: 1rem;
+    }
+    .ak-calc-kicker {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--refined-brass, #804526);
+        margin-bottom: 0.2rem;
+        display: block;
+    }
+    .dp-h1 {
+        font-family: var(--font-heading), 'Cormorant Garamond', serif !important;
+        font-size: 31px !important;
+        font-weight: 400 !important;
+        color: var(--obsidian-black, #2B2D31) !important;
+        letter-spacing: -0.015em !important;
+        margin: 0 0 0.2rem 0 !important;
+        line-height: 1.15 !important;
+    }
+    .dp-subtitle {
+        font-family: var(--font-body), 'Manrope', sans-serif !important;
+        font-size: 0.85rem !important;
+        font-weight: 400 !important;
+        color: var(--deep-slate, #55555A) !important;
+        max-width: 680px;
+        line-height: 1.45 !important;
+        margin-bottom: 0 !important;
     }
 
     .page-breadcrumb {
@@ -266,8 +324,8 @@
         gap: 0.5rem;
         list-style: none;
         padding: 0;
-        margin: 0 0 0.4rem 0;
-        font-size: 0.8rem;
+        margin: 0;
+        font-size: 0.85rem;
         flex-wrap: wrap;
     }
     .page-breadcrumb a {
@@ -279,7 +337,7 @@
         color: var(--refined-brass, #804526);
     }
     .page-breadcrumb .separator {
-        color: rgba(85, 85, 90, 0.35);
+        color: rgba(85, 85, 90, 0.3);
         font-size: 0.85rem;
     }
     .page-breadcrumb .current {
@@ -287,202 +345,165 @@
         font-weight: 600;
     }
 
-    .ak-calc-header-row {
-        margin-bottom: 0.75rem;
-    }
-    .ak-calc-h1 {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: clamp(1.45rem, 2vw, 1.85rem);
-        font-weight: 400;
-        color: var(--obsidian-black, #2B2D31);
-        letter-spacing: -0.02em;
-        margin: 0;
-        line-height: 1.15;
-    }
-    .ak-calc-sub-text {
-        font-size: 0.88rem;
-        color: var(--deep-slate, #55555A);
-        max-width: 860px;
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    /* Main Grid */
-    .ak-calc-main-grid {
+    /* Two-column layout */
+    .dp-main-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.25rem;
+        grid-template-columns: 390px 1fr;
+        gap: 1.15rem;
         align-items: stretch;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
-    /* Left Panel (Inputs) */
-    .ak-calc-left-panel {
+    /* Left Card: Inputs */
+    .dp-inputs-card {
         background: #FFFFFF;
         border: 0.5px solid rgba(85, 85, 90, 0.2);
         border-radius: 4px;
-        padding: 1rem 1.15rem;
+        padding: 0.95rem 1.15rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .ak-panel-header {
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.4rem;
-        border-bottom: 0.5px solid var(--divider);
+    .dp-inputs-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        min-height: 26px;
+        margin-bottom: 0.45rem;
     }
-    .ak-panel-header h2 {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.15rem;
-        color: var(--obsidian-black, #2B2D31);
-        font-weight: 400;
-        margin: 0;
-    }
-    .ak-slab-badge {
+    .dp-inputs-badge {
         font-size: 0.75rem;
         font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
         color: var(--refined-brass, #804526);
         background: var(--titanium-frost, #FAFAFA);
         border: 0.5px solid rgba(85, 85, 90, 0.2);
-        padding: 3px 8px;
         border-radius: 4px;
+        padding: 0.18rem 0.5rem;
     }
-
-    /* Mobile Quick Results HUD (Visible only on mobile <= 768px) */
-    .ak-mobile-quick-hud {
-        display: none;
-        background: var(--obsidian-black, #2B2D31);
-        color: #FFFFFF;
-        border-radius: 4px;
-        padding: 0.75rem 0.85rem;
-        margin-bottom: 0.85rem;
-        border: 0.5px solid rgba(85, 85, 90, 0.2);
-        box-sizing: border-box;
-        width: 100%;
-    }
-    .ak-hud-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    .ak-hud-label {
-        font-size: 0.72rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        opacity: 0.85;
-    }
-    .ak-hud-amount {
+    .dp-card-title {
         font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.45rem;
-        color: #FFFFFF;
+        font-size: 1.35rem;
         font-weight: 400;
-        line-height: 1;
-        white-space: nowrap;
+        color: var(--obsidian-black, #2B2D31);
+        margin-bottom: 0.45rem;
     }
-    .ak-hud-sub {
-        font-size: 0.72rem;
-        color: var(--highlight-peach, #E88D67);
-        margin-top: 4px;
-        line-height: 1.3;
+    .dp-field-group {
+        margin-bottom: 0.55rem;
     }
-
-    .ak-table-responsive {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: 1.25rem 0 2rem 0;
-    }
-
-    .ak-field-group {
-        margin-bottom: 0.65rem;
-    }
-    .ak-field-header-row {
+    .dp-field-header-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.2rem;
     }
-    .ak-field-label {
-        font-size: 0.82rem;
+    .dp-field-label {
+        display: block;
+        font-size: 0.88rem;
         font-weight: 600;
         color: var(--obsidian-black, #2B2D31);
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
+        margin-bottom: 0.2rem;
     }
-    .ak-field-badge {
+    .dp-field-badge {
         font-size: 0.78rem;
         font-weight: 600;
         color: var(--refined-brass, #804526);
     }
-
-    .ak-input-wrapper {
+    .dp-input-wrapper {
         position: relative;
         display: flex;
         align-items: center;
         border: 0.5px solid rgba(85, 85, 90, 0.2);
         border-radius: 4px;
         background: #FFFFFF;
-        padding: 0 10px;
-        height: 36px;
         transition: border-color 0.4s ease;
+        overflow: hidden;
     }
-    .ak-input-wrapper:focus-within {
+    .dp-input-wrapper:focus-within {
         border-color: var(--refined-brass, #804526);
     }
-    .ak-input-prefix, .ak-input-suffix {
-        font-size: 0.85rem;
-        color: var(--neutral-grey, #55555A);
-        font-weight: 500;
-    }
-    .ak-text-input {
-        flex: 1;
-        border: none;
-        outline: none;
-        background: transparent;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
+    .dp-input-prefix {
+        padding-left: 0.75rem;
+        font-size: 0.88rem;
         font-weight: 600;
         color: var(--obsidian-black, #2B2D31);
-        text-align: right;
-        padding: 0 6px;
     }
-
-    .ak-slider-wrap {
+    .dp-input-suffix {
+        padding-right: 0.75rem;
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: var(--neutral-grey, #55555A);
+    }
+    .dp-text-input {
+        width: 100%;
+        height: 38px;
+        border: none;
+        outline: none;
+        padding: 0 0.75rem;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--obsidian-black, #2B2D31);
+        background: transparent;
+    }
+    .dp-slider-wrap {
         margin-top: 0.35rem;
     }
-    .ak-slider {
+    .dp-slider {
         -webkit-appearance: none;
         appearance: none;
         width: 100%;
-        height: 4px;
-        border-radius: 2px;
+        height: 5px;
+        border-radius: 4px;
         background: rgba(85, 85, 90, 0.2);
         outline: none;
         cursor: pointer;
     }
-    .ak-slider::-webkit-slider-thumb {
+    .dp-slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
         background: var(--refined-brass, #804526);
+        border: 1px solid #FFFFFF;
         cursor: pointer;
-        border: 2px solid #FFFFFF;
+    }
+    .dp-slider::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--refined-brass, #804526);
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
     }
 
-    /* Jurisdiction Selection Pills */
+    /* Quick Value Presets */
+    .ak-preset-btn {
+        background: #FFFFFF;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--obsidian-black, #2B2D31);
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+    .ak-preset-btn:hover, .ak-preset-btn.active {
+        background: var(--titanium-frost, #FAFAFA);
+        border-color: var(--refined-brass, #804526);
+        color: var(--refined-brass, #804526);
+        font-weight: 600;
+    }
+
+    /* Jurisdiction Grid */
     .ak-jurisdiction-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.4rem;
+        gap: 0.35rem;
         margin-top: 0.2rem;
     }
     .ak-jur-btn {
@@ -492,247 +513,375 @@
         padding: 5px 7px;
         text-align: left;
         cursor: pointer;
-        font-family: var(--font-body);
-        font-size: 0.72rem;
+        font-family: var(--font-body, 'Manrope', sans-serif);
+        font-size: 0.75rem;
         color: var(--obsidian-black, #2B2D31);
-        line-height: 1.2;
+        line-height: 1.25;
         transition: all 0.4s ease;
     }
     .ak-jur-btn strong {
         display: block;
-        font-size: 0.76rem;
+        font-size: 0.78rem;
         margin-bottom: 1px;
     }
-    .ak-jur-btn.active {
+    .ak-jur-btn span {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--deep-slate, #55555A);
+    }
+    .ak-jur-btn:hover, .ak-jur-btn.active {
         background: var(--titanium-frost, #FAFAFA);
         border-color: var(--refined-brass, #804526);
         color: var(--refined-brass, #804526);
     }
+    .ak-jur-btn:hover span, .ak-jur-btn.active span {
+        color: var(--refined-brass, #804526);
+    }
 
-    /* Right Panel (Results Card) */
-    .ak-calc-right-panel {
-        background: var(--obsidian-black, #2B2D31);
+    /* Right Card: Results */
+    .dp-results-card {
+        background: #FFFFFF;
         border: 0.5px solid rgba(85, 85, 90, 0.2);
         border-radius: 4px;
-        padding: 1rem 1.15rem;
-        color: #FFFFFF;
+        padding: 0.95rem 1.15rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .ak-results-header {
+    .dp-results-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.55rem;
-    }
-    .ak-results-title {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.15rem;
-        font-weight: 400;
-        color: #FFFFFF;
-        margin: 0;
-    }
-    .ak-indicative-tag {
-        font-size: 0.72rem;
-        color: #FFFFFF;
-        border: 0.5px solid rgba(255, 255, 255, 0.3);
-        padding: 2px 7px;
-        border-radius: 4px;
+        min-height: 26px;
+        margin-bottom: 0.45rem;
     }
 
-    /* Hero Total Box */
-    .ak-hero-box {
-        background: rgba(255, 255, 255, 0.05);
-        border: 0.5px solid rgba(255, 255, 255, 0.15);
+    /* Hero Box with Capital Stack Bar */
+    .dp-hero-box {
+        background: var(--titanium-frost, #FAFAFA);
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
         border-radius: 4px;
-        padding: 0.75rem 0.95rem;
-        margin-bottom: 0.6rem;
+        padding: 0.65rem 0.85rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 0.45rem;
+        position: relative;
     }
-    .ak-hero-label {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
+    .dp-hero-left {
+        flex: 1;
+    }
+    .dp-hero-label {
+        font-size: 0.75rem;
+        font-weight: 700;
         text-transform: uppercase;
-        color: #FFFFFF;
-        opacity: 0.8;
-        margin-bottom: 0.15rem;
+        letter-spacing: 0.12em;
+        color: var(--obsidian-black, #2B2D31);
+        margin-bottom: 0.12rem;
     }
-    .ak-hero-amount {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 2.15rem;
+    .dp-hero-amount {
+        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-size: 2.05rem;
         font-weight: 400;
-        color: #FFFFFF;
+        color: var(--obsidian-black, #2B2D31);
         line-height: 1.05;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.12rem;
     }
-    .ak-hero-desc {
+    .dp-hero-desc {
         font-size: 0.74rem;
-        color: #FFFFFF;
-        opacity: 0.85;
+        color: var(--deep-slate, #55555A);
         line-height: 1.35;
-        margin-bottom: 0.5rem;
+        max-width: 330px;
     }
-
-    /* Stack Bar */
-    .ak-stack-header {
+    .dp-hero-right {
+        background: #FFFFFF;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        border-radius: 4px;
+        padding: 0.45rem 0.75rem;
+        min-width: 235px;
+        flex-shrink: 0;
+    }
+    .dp-stack-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 0.72rem;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.35rem;
+        gap: 0.5rem;
     }
-    .ak-stack-title {
-        color: #FFFFFF;
-        opacity: 0.8;
+    .dp-stack-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--deep-slate, #55555A);
+        white-space: nowrap;
     }
-    .ak-stack-ratio {
-        font-weight: 600;
-        color: var(--highlight-peach, #E88D67);
+    .dp-stack-ratio {
+        font-weight: 700;
+        color: var(--refined-brass, #804526);
+        white-space: nowrap;
     }
-    .ak-stack-bar {
+    .dp-capital-bar-track {
         display: flex;
-        height: 5px;
-        border-radius: 2.5px;
+        height: 6px;
+        width: 100%;
+        border-radius: 4px;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(85, 85, 90, 0.2);
         margin-bottom: 0.35rem;
     }
-    .ak-bar-prop {
-        background: #FFFFFF;
+    .dp-bar-seg {
         height: 100%;
         transition: width 0.4s ease;
     }
-    .ak-bar-govt {
-        background: var(--highlight-peach, #E88D67);
-        height: 100%;
-        transition: width 0.4s ease;
+    .dp-seg-equity {
+        background: var(--obsidian-black, #2B2D31);
     }
-    .ak-stack-legend {
+    .dp-seg-stamp {
+        background: var(--refined-brass, #804526);
+    }
+    .dp-capital-legend {
         display: flex;
-        gap: 0.85rem;
+        justify-content: space-between;
+        align-items: center;
         font-size: 0.72rem;
-        color: #FFFFFF;
-        opacity: 0.8;
+        color: var(--neutral-grey, #55555A);
+        font-weight: 500;
     }
-    .ak-legend-dot {
+    .dp-leg-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    .dp-leg-dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
         display: inline-block;
-        margin-right: 4px;
     }
-    .ak-legend-dot.prop { background: #FFFFFF; }
-    .ak-legend-dot.govt { background: var(--highlight-peach, #E88D67); }
+    .dp-leg-dot.equity { background: var(--obsidian-black, #2B2D31); }
+    .dp-leg-dot.stamp { background: var(--refined-brass, #804526); }
 
-    /* 3 Stats Grid */
-    .ak-3-stats-grid {
+    /* 3 Stat Cards */
+    .dp-stats-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.45rem;
     }
-    .ak-stat-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 0.5px solid rgba(255, 255, 255, 0.12);
+    .dp-stat-card {
+        background: #FFFFFF;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
         border-radius: 4px;
-        padding: 0.5rem 0.4rem;
-        text-align: center;
+        padding: 0.4rem 0.6rem;
+        text-align: left;
+        transition: border-color 0.4s ease;
     }
-    .ak-stat-card-val {
-        font-family: var(--font-heading, 'Cormorant Garamond', serif);
-        font-size: 1.15rem;
+    .dp-stat-card:hover {
+        border-color: var(--refined-brass, #804526);
+    }
+    .dp-stat-value {
+        font-family: var(--font-heading), 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
         font-weight: 400;
-        color: #FFFFFF;
+        color: var(--obsidian-black, #2B2D31);
+        line-height: 1.1;
         margin-bottom: 0.1rem;
     }
-    .ak-stat-card-label {
-        font-size: 0.72rem;
-        color: #FFFFFF;
-        opacity: 0.8;
-        line-height: 1.15;
+    .dp-stat-name {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--obsidian-black, #2B2D31);
     }
-    .ak-stat-card-sub {
-        font-size: 0.72rem;
-        color: var(--highlight-peach, #E88D67);
-        margin-top: 1px;
+    .dp-stat-sub {
+        font-size: 0.75rem;
+        color: var(--neutral-grey, #55555A);
     }
 
-    /* Breakdown Box */
-    .ak-breakdown-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 0.5px solid rgba(255, 255, 255, 0.12);
-        border-radius: 4px;
-        padding: 0.6rem 0.85rem;
-        margin-bottom: 0.6rem;
+    /* Cost Breakdown */
+    .dp-breakdown-box {
+        border-top: 0.5px solid rgba(85, 85, 90, 0.2);
+        padding-top: 0.35rem;
+        margin-bottom: 0.45rem;
     }
-    .ak-breakdown-title {
-        font-size: 0.72rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: #FFFFFF;
-        opacity: 0.85;
-        margin-bottom: 0.35rem;
-        padding-bottom: 0.25rem;
-        border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+    .dp-breakdown-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--obsidian-black, #2B2D31);
+        margin-bottom: 0.2rem;
     }
-    .ak-breakdown-row {
+    .dp-cost-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.75rem;
-        color: #FFFFFF;
-        opacity: 0.9;
-        margin-bottom: 0.2rem;
+        padding: 0.1rem 0;
+        font-size: 0.78rem;
     }
-    .ak-breakdown-row:last-child {
-        margin-bottom: 0;
+    .dp-cost-label-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--deep-slate, #55555A);
     }
-    .ak-breakdown-row.total-row {
-        margin-top: 0.35rem;
-        padding-top: 0.35rem;
-        border-top: 0.5px dashed rgba(255, 255, 255, 0.2);
+    .dp-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .dp-dot.green { background: var(--obsidian-black, #2B2D31); }
+    .dp-dot.brass { background: var(--refined-brass, #804526); }
+    .dp-dot.amber { background: var(--neutral-grey, #55555A); }
+
+    .dp-cost-val {
         font-weight: 600;
-        color: #FFFFFF;
-        opacity: 1;
+        color: var(--obsidian-black, #2B2D31);
+    }
+    .dp-cost-total-row {
+        border-top: 0.5px solid rgba(85, 85, 90, 0.2);
+        margin-top: 0.15rem;
+        padding-top: 0.2rem;
+        font-size: 0.88rem;
+        font-weight: 700;
+    }
+    .dp-cost-total-row .dp-cost-label-group {
+        color: var(--obsidian-black, #2B2D31);
+        font-weight: 700;
+    }
+    .dp-cost-total-row .dp-cost-val {
+        font-size: 0.98rem;
+        color: var(--obsidian-black, #2B2D31);
     }
 
-    /* Feasibility Cash Warning Callout */
-    .ak-cash-callout {
-        background: rgba(232, 141, 103, 0.08);
-        border: 0.5px solid rgba(232, 141, 103, 0.35);
-        border-radius: 4px;
-        padding: 0.55rem 0.75rem;
+    /* Feasibility Callout */
+    .dp-feasibility-alert {
         display: flex;
-        gap: 0.55rem;
-        align-items: flex-start;
+        align-items: center;
+        gap: 0.65rem;
+        background: var(--titanium-frost, #FAFAFA);
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        border-radius: 4px;
+        padding: 0.45rem 0.75rem;
     }
-    .ak-callout-icon {
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        background: var(--refined-brass, #804526);
+    .dp-check-icon {
+        width: 22px;
+        height: 22px;
+        background: var(--obsidian-black, #2B2D31);
         color: #FFFFFF;
+        border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 700;
-        font-size: 0.72rem;
-        flex-shrink: 0;
-        margin-top: 1px;
-    }
-    .ak-callout-title {
         font-size: 0.75rem;
-        font-weight: 600;
-        color: #FFFFFF;
-        margin-bottom: 1px;
+        font-weight: 700;
+        flex-shrink: 0;
     }
-    .ak-callout-desc {
-        font-size: 0.72rem;
+    .dp-alert-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--obsidian-black, #2B2D31);
+        line-height: 1.25;
+    }
+    .dp-alert-sub {
+        font-size: 0.75rem;
+        color: var(--deep-slate, #55555A);
+        margin-top: 2px;
+        line-height: 1.25;
+    }
+
+    /* Affordability Banner */
+    .dp-afford-card {
+        background: #FFFFFF;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        border-radius: 4px;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+    }
+    .dp-afford-left {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .dp-afford-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background: var(--titanium-frost, #FAFAFA);
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        color: var(--refined-brass, #804526);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .dp-afford-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--obsidian-black, #2B2D31);
+        margin-bottom: 0.25rem;
+    }
+    .dp-afford-sub {
+        font-size: 0.88rem;
+        color: var(--deep-slate, #55555A);
+    }
+    .dp-afford-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 0.5px solid var(--obsidian-black, #2B2D31);
+        background: transparent;
+        color: var(--obsidian-black, #2B2D31);
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.4s ease, color 0.4s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .dp-afford-btn:hover {
+        background: var(--obsidian-black, #2B2D31);
         color: #FFFFFF;
-        opacity: 0.85;
-        line-height: 1.3;
+    }
+
+    /* Explore More Bar */
+    .dp-explore-section {
+        margin: 2.5rem 0 3.5rem 0;
+    }
+    .dp-explore-heading {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--obsidian-black, #2B2D31);
+        margin-bottom: 1rem;
+    }
+    .dp-explore-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .dp-explore-card {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: #FFFFFF;
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
+        border-radius: 4px;
+        text-decoration: none;
+        color: var(--obsidian-black, #2B2D31);
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: border-color 0.4s ease, color 0.4s ease;
+    }
+    .dp-explore-card:hover {
+        border-color: var(--refined-brass, #804526);
+        color: var(--refined-brass, #804526);
     }
 
     /* Educational Section */
@@ -762,8 +911,15 @@
     }
 
     /* Tables */
+    .ak-table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1.25rem 0 2rem 0;
+    }
     .ak-ltv-table {
         width: 100%;
+        min-width: 560px;
         border-collapse: collapse;
         font-size: 0.88rem;
         text-align: left;
@@ -794,6 +950,9 @@
         border-radius: 4px;
         padding: 1.25rem;
         margin: 1.25rem 0 2rem 0;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: hidden;
     }
     .ak-formula-card h3 {
         font-family: var(--font-heading, 'Cormorant Garamond', serif);
@@ -817,16 +976,20 @@
     .ak-formula-num {
         width: 24px;
         height: 24px;
-        border-radius: 50%;
+        border-radius: 4px;
         background: var(--titanium-frost, #FAFAFA);
-        border: 0.5px solid var(--refined-brass, #804526);
+        border: 0.5px solid rgba(85, 85, 90, 0.2);
         color: var(--refined-brass, #804526);
-        font-weight: 600;
+        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
         font-size: 0.78rem;
+    }
+    .ak-formula-content {
+        flex: 1;
+        min-width: 0;
     }
     .ak-formula-content strong {
         color: var(--obsidian-black, #2B2D31);
@@ -835,15 +998,19 @@
         font-size: 0.88rem;
     }
     .ak-formula-content code {
-        font-family: monospace;
+        display: inline-block;
+        max-width: 100%;
+        word-break: break-word;
+        white-space: normal;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         background: var(--titanium-frost, #FAFAFA);
         border: 0.5px solid rgba(85, 85, 90, 0.2);
-        padding: 2px 7px;
+        padding: 4px 8px;
         border-radius: 4px;
         font-size: 0.82rem;
         color: var(--refined-brass, #804526);
-        display: inline-block;
         margin-top: 3px;
+        line-height: 1.45;
     }
 
     /* FAQ Section */
@@ -968,45 +1135,110 @@
     }
 
     /* Mobile Responsive Optimizations */
-    @media (max-width: 900px) {
-        .ak-calc-main-grid {
+    @media (max-width: 991px) {
+        .dp-main-grid {
             grid-template-columns: 1fr;
-            gap: 1.25rem;
+            gap: 1.5rem;
+        }
+        .dp-afford-card {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .dp-explore-row {
+            grid-template-columns: repeat(2, 1fr);
         }
         .ak-feature-cards {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
-    @media (max-width: 600px) {
-        .ak-calc-wrapper {
+    @media (max-width: 768px) {
+        .dp-h1 {
+            font-size: 26px !important;
+            line-height: 1.25 !important;
+        }
+        .dp-subtitle {
+            font-size: 0.88rem !important;
+            line-height: 1.5 !important;
+        }
+        .ak-calc-article {
+            padding: 0 1rem;
+            margin: 1.5rem auto 0 auto;
+        }
+        .ak-more-calcs-section {
+            padding: 1.5rem 1rem 2rem 1rem;
+            margin-bottom: 0;
+        }
+        .ak-calc-article h2,
+        .ak-more-calcs-title {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 20px !important;
+        }
+        .ak-calc-article h2:first-of-type {
+            margin-top: 0;
+        }
+        .ak-feature-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (max-width: 640px) {
+        .dp-calc-container {
             margin-top: 85px;
             padding: 0 1rem;
         }
-        .ak-calc-h1 {
-            font-size: 1.45rem;
-            margin-bottom: 0.2rem;
+        .dp-h1 {
+            font-size: 25px !important;
+            line-height: 1.25 !important;
+            word-break: break-word;
         }
-        .ak-calc-sub-text {
-            font-size: 0.82rem;
-            line-height: 1.4;
-            margin-bottom: 0.5rem;
+        .dp-subtitle {
+            font-size: 0.84rem !important;
+            line-height: 1.48 !important;
+            margin-bottom: 1rem;
         }
-        .ak-calc-header-row {
-            margin-bottom: 0.65rem;
+        .dp-inputs-card,
+        .dp-results-card {
+            padding: 1.25rem 1rem;
+            max-width: 100%;
+            box-sizing: border-box;
         }
-        .ak-calc-left-panel, .ak-calc-right-panel {
-            padding: 0.85rem;
+        .dp-inputs-header,
+        .dp-results-header {
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            align-items: flex-start;
         }
-        .ak-mobile-quick-hud {
-            display: block;
+        .dp-inputs-badge {
+            font-size: 0.72rem;
+            max-width: 100%;
+            white-space: normal;
+        }
+        .dp-field-header-row {
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            align-items: baseline;
+        }
+        .dp-hero-box {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 1rem;
+            gap: 0.85rem;
+        }
+        .dp-hero-amount {
+            font-size: 2.1rem;
+        }
+        .dp-hero-right {
+            min-width: unset;
+            width: 100%;
+        }
+        .dp-stats-grid {
+            grid-template-columns: 1fr;
+            gap: 0.65rem;
         }
         .ak-jurisdiction-grid {
             grid-template-columns: 1fr;
         }
-        .ak-3-stats-grid {
-            grid-template-columns: 1fr;
-        }
-        .ak-feature-cards {
+        .dp-explore-row {
             grid-template-columns: 1fr;
         }
     }
@@ -1063,203 +1295,266 @@
     </header>
 
     <!-- Main Calculator Wrapper -->
-    <main class="ak-calc-wrapper">
+    <main class="dp-calc-container" id="calculator">
         <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb" style="width: 100%;">
-            <ol class="page-breadcrumb">
-                <li><a href="../../">Home</a></li>
-                <li><span class="separator" aria-hidden="true">›</span></li>
-                <li><a href="../">Calculators</a></li>
-                <li><span class="separator" aria-hidden="true">›</span></li>
-                <li class="current" aria-current="page">Stamp Duty &amp; Registration Calculator</li>
-            </ol>
-        </nav>
+        <ul class="page-breadcrumb" style="margin-bottom: 0.55rem;">
+            <li><a href="../../">Home</a></li>
+            <li class="separator">/</li>
+            <li><a href="../">Calculators</a></li>
+            <li class="separator">/</li>
+            <li class="current">Stamp Duty &amp; Registration</li>
+        </ul>
 
         <!-- Header -->
-        <div class="ak-calc-header-row">
-            <h1 class="ak-calc-h1">Stamp Duty &amp; Registration Calculator Bengaluru (2026)</h1>
+        <div class="dp-header-bar">
+            <div>
+                <span class="ak-calc-kicker">KARNATAKA STAMP DUTY &amp; REGISTRATION</span>
+                <h1 class="dp-h1">Karnataka Stamp Duty &amp; Registration Calculator</h1>
+                <p class="dp-subtitle">Calculate exact Kaveri 2.0 stamp duty, registration fees, BBMP cess, and total liquid cash required at property registration in Bengaluru.</p>
+            </div>
         </div>
 
         <!-- Calculator Main Grid -->
-        <div class="ak-calc-main-grid">
+        <div class="dp-main-grid">
             <!-- Left Panel: Inputs -->
-            <div class="ak-calc-left-panel">
-                <div>
-                    <!-- Mobile Quick HUD Banner (Shown on screens <= 768px for immediate results) -->
-                    <div class="ak-mobile-quick-hud" id="mobileQuickHud">
-                        <div class="ak-hud-row">
-                            <span class="ak-hud-label">Total Govt Charges</span>
-                            <span class="ak-hud-amount" id="mobileHudAmount">₹ 6.6 L</span>
-                        </div>
-                        <div class="ak-hud-sub" id="mobileHudSub">5.6% Duty (₹ 5.6 L) + 1.0% Reg (₹ 1.0 L)</div>
-                    </div>
+            <div class="dp-inputs-card" id="inputsCard">
+                <div class="dp-inputs-header">
+                    <h2 class="dp-card-title" style="margin-bottom: 0;">Property Details</h2>
+                    <span class="dp-inputs-badge" id="activeSlabBadge">Standard Slab (5.6% + 1%)</span>
+                </div>
 
-                    <div class="ak-panel-header">
-                        <h2>Property &amp; Location Details</h2>
-                        <span class="ak-slab-badge" id="activeSlabBadge">Standard Slab (5.6% + 1%)</span>
+                <!-- Input 1: Property Value -->
+                <div class="dp-field-group">
+                    <div class="dp-field-header-row">
+                        <label class="dp-field-label" style="margin-bottom:0;" for="propValueInput">Property Agreement Value</label>
+                        <span class="dp-field-badge" id="propValueBadge">₹ 1.00 Cr</span>
                     </div>
+                    <div class="dp-input-wrapper">
+                        <span class="dp-input-prefix">₹</span>
+                        <input type="text" id="propValueInput" class="dp-text-input" value="1,00,00,000" oninput="onPropValueInputChange(this.value)">
+                    </div>
+                    <div class="dp-slider-wrap">
+                        <input type="range" id="propValueSlider" class="dp-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropValueSliderChange(this.value)">
+                    </div>
+                </div>
 
-                    <!-- Input 1: Property Value -->
-                    <div class="ak-field-group">
-                        <div class="ak-field-header-row">
-                            <label class="ak-field-label" for="propValueInput">Property Value (Agreement or Guidance Value)</label>
-                            <span class="ak-field-badge" id="propValueBadge">₹ 1.00 Cr</span>
+                <!-- Quick Value Presets -->
+                <div class="dp-field-group" style="margin-bottom: 0.75rem;">
+                    <label class="dp-field-label" style="margin-bottom:0.25rem;">Quick Presets</label>
+                    <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+                        <button type="button" class="ak-preset-btn" onclick="setPresetValue(5000000)">₹ 50 L</button>
+                        <button type="button" class="ak-preset-btn" onclick="setPresetValue(7500000)">₹ 75 L</button>
+                        <button type="button" class="ak-preset-btn active" onclick="setPresetValue(10000000)">₹ 1.0 Cr</button>
+                        <button type="button" class="ak-preset-btn" onclick="setPresetValue(15000000)">₹ 1.5 Cr</button>
+                        <button type="button" class="ak-preset-btn" onclick="setPresetValue(20000000)">₹ 2.0 Cr</button>
+                        <button type="button" class="ak-preset-btn" onclick="setPresetValue(30000000)">₹ 3.0 Cr</button>
+                    </div>
+                </div>
+
+                <!-- Input 2: Jurisdiction Selection -->
+                <div class="dp-field-group" style="margin-bottom: 0.5rem;">
+                    <div class="dp-field-header-row">
+                        <label class="dp-field-label" style="margin-bottom:0;">Property Jurisdiction</label>
+                        <span class="dp-field-badge" id="rateSummaryBadge">5.6% Duty + 1% Reg</span>
+                    </div>
+                    <div class="ak-jurisdiction-grid">
+                        <button type="button" class="ak-jur-btn active" id="jurBbmp" onclick="selectJurisdiction('bbmp')">
+                            <strong>BBMP / Urban Bengaluru</strong>
+                            <span>5.6% Duty + 1.0% Reg (6.6%)</span>
+                        </button>
+                        <button type="button" class="ak-jur-btn" id="jurBmrda" onclick="selectJurisdiction('bmrda')">
+                            <strong>BMRDA / Town Panchayat</strong>
+                            <span>5.6% Duty + 1.0% Reg (6.6%)</span>
+                        </button>
+                        <button type="button" class="ak-jur-btn" id="jurRural" onclick="selectJurisdiction('rural')">
+                            <strong>Gram Panchayat / Rural</strong>
+                            <span>5.65% Duty + 1.0% Reg (6.65%)</span>
+                        </button>
+                        <button type="button" class="ak-jur-btn" id="jurCustom" onclick="selectJurisdiction('custom')">
+                            <strong>Custom State Rates</strong>
+                            <span>Configure Duty &amp; Reg %</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Optional Custom Inputs (Hidden by default, shown when Custom is active) -->
+                <div id="customRatesBlock" style="display: none; padding-top: 0.5rem; border-top: 0.5px dashed rgba(85, 85, 90, 0.2); margin-top: 0.5rem;">
+                    <div class="dp-field-group">
+                        <div class="dp-field-header-row">
+                            <label class="dp-field-label" style="margin-bottom:0;" for="customDutyInput">Custom Stamp Duty Rate</label>
+                            <span class="dp-field-badge" id="customDutyBadge">5.6%</span>
                         </div>
-                        <div class="ak-input-wrapper">
-                            <span class="ak-input-prefix">₹</span>
-                            <input type="text" id="propValueInput" class="ak-text-input" value="1,00,00,000" onchange="onPropValueInputChange(this.value)" onkeyup="if(event.key==='Enter') this.blur()">
-                        </div>
-                        <div class="ak-slider-wrap">
-                            <input type="range" id="propValueSlider" class="ak-slider" min="1000000" max="100000000" step="500000" value="10000000" oninput="onPropValueSliderChange(this.value)">
+                        <div class="dp-input-wrapper">
+                            <input type="number" id="customDutyInput" class="dp-text-input" min="1" max="15" step="0.1" value="5.6" oninput="onCustomDutyChange(this.value)">
+                            <span class="dp-input-suffix">%</span>
                         </div>
                     </div>
-
-                    <!-- Input 2: Jurisdiction Selection -->
-                    <div class="ak-field-group">
-                        <div class="ak-field-header-row">
-                            <label class="ak-field-label">Jurisdiction &amp; Local Body</label>
-                            <span class="ak-field-badge" id="rateSummaryBadge">5.6% Duty + 1% Reg</span>
+                    <div class="dp-field-group">
+                        <div class="dp-field-header-row">
+                            <label class="dp-field-label" style="margin-bottom:0;" for="customRegInput">Custom Registration Fee Rate</label>
+                            <span class="dp-field-badge" id="customRegBadge">1.0%</span>
                         </div>
-                        <div class="ak-jurisdiction-grid">
-                            <button type="button" class="ak-jur-btn active" id="jurBbmp" onclick="selectJurisdiction('bbmp')">
-                                <strong>BBMP / Urban Bengaluru</strong>
-                                <span>5.6% Duty + 1.0% Reg (6.6%)</span>
-                            </button>
-                            <button type="button" class="ak-jur-btn" id="jurBmrda" onclick="selectJurisdiction('bmrda')">
-                                <strong>BMRDA / Town Panchayat</strong>
-                                <span>5.6% Duty + 1.0% Reg (6.6%)</span>
-                            </button>
-                            <button type="button" class="ak-jur-btn" id="jurRural" onclick="selectJurisdiction('rural')">
-                                <strong>Gram Panchayat / Rural</strong>
-                                <span>5.65% Duty + 1.0% Reg (6.65%)</span>
-                            </button>
-                            <button type="button" class="ak-jur-btn" id="jurCustom" onclick="selectJurisdiction('custom')">
-                                <strong>Custom State Rates</strong>
-                                <span>Configure Duty &amp; Reg %</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Optional Custom Inputs (Hidden by default, shown when Custom is active) -->
-                    <div id="customRatesBlock" style="display: none; padding-top: 0.5rem; border-top: 0.5px dashed rgba(85, 85, 90, 0.2); margin-top: 0.75rem;">
-                        <div class="ak-field-group">
-                            <div class="ak-field-header-row">
-                                <label class="ak-field-label" for="customDutyInput">Custom Stamp Duty Rate</label>
-                                <span class="ak-field-badge" id="customDutyBadge">5.6%</span>
-                            </div>
-                            <div class="ak-input-wrapper">
-                                <input type="number" id="customDutyInput" class="ak-text-input" min="1" max="15" step="0.1" value="5.6" oninput="onCustomDutyChange(this.value)">
-                                <span class="ak-input-suffix">%</span>
-                            </div>
-                        </div>
-                        <div class="ak-field-group">
-                            <div class="ak-field-header-row">
-                                <label class="ak-field-label" for="customRegInput">Custom Registration Fee Rate</label>
-                                <span class="ak-field-badge" id="customRegBadge">1.0%</span>
-                            </div>
-                            <div class="ak-input-wrapper">
-                                <input type="number" id="customRegInput" class="ak-text-input" min="0" max="5" step="0.1" value="1.0" oninput="onCustomRegChange(this.value)">
-                                <span class="ak-input-suffix">%</span>
-                            </div>
+                        <div class="dp-input-wrapper">
+                            <input type="number" id="customRegInput" class="dp-text-input" min="0" max="5" step="0.1" value="1.0" oninput="onCustomRegChange(this.value)">
+                            <span class="dp-input-suffix">%</span>
                         </div>
                     </div>
                 </div>
 
-                <div style="font-size: 0.75rem; color: var(--neutral-grey, #55555A); line-height: 1.45; border-top: 0.5px solid var(--divider); padding-top: 0.75rem; margin-top: 0.85rem;">
+                <div style="font-size: 0.75rem; color: var(--neutral-grey, #55555A); line-height: 1.45; border-top: 0.5px solid rgba(85, 85, 90, 0.2); padding-top: 0.65rem; margin-top: 0.65rem;">
                     <strong>Kaveri 2.0 Statutory Note:</strong> Under the Karnataka Stamp Act, duties are levied on the higher of the sale consideration or government guidance value. Karnataka maintains no gender concessions.
                 </div>
             </div>
 
             <!-- Right Panel: Results -->
-            <div class="ak-calc-right-panel" id="resultsPanel">
-                <div class="ak-results-header">
-                    <h2 class="ak-results-title">Your Results</h2>
-                    <span class="ak-indicative-tag">Indicative</span>
+            <div class="dp-results-card" id="resultsCard">
+                <div class="dp-results-header">
+                    <h2 class="dp-card-title" style="margin-bottom: 0;">Your Results</h2>
+                    <span class="dp-inputs-badge">Kaveri 2.0 Slabs</span>
                 </div>
 
                 <!-- Hero Box -->
-                <div class="ak-hero-box">
-                    <div class="ak-hero-label">TOTAL GOVERNMENT CHARGES</div>
-                    <div class="ak-hero-amount" id="heroTotalGovt">₹ 6.6 L</div>
-                    <div class="ak-hero-desc" id="heroGovtDesc">Statutory fees payable at registration: Karnataka effective stamp duty (5.6%) + deed registration fee (1.0%).</div>
-                    
-                    <div class="ak-stack-header">
-                        <span class="ak-stack-title">Government Outflow Ratio</span>
-                        <span class="ak-stack-ratio" id="heroRatioText">Govt charges ₹ 6.6 L / Base property ₹ 1.00 Cr</span>
+                <div class="dp-hero-box">
+                    <div class="dp-hero-left">
+                        <div class="dp-hero-label">TOTAL GOVERNMENT CHARGES</div>
+                        <div class="dp-hero-amount" id="heroTotalGovt">₹ 6.6 L</div>
+                        <div class="dp-hero-desc" id="heroGovtDesc">Statutory fees payable at registration: Karnataka effective stamp duty (5.6%) + deed registration fee (1.0%).</div>
                     </div>
-                    <div class="ak-stack-bar">
-                        <div class="ak-bar-prop" id="stackBarProp" style="width: 93.8%;"></div>
-                        <div class="ak-bar-govt" id="stackBarGovt" style="width: 6.2%;"></div>
-                    </div>
-                    <div class="ak-stack-legend">
-                        <span><span class="ak-legend-dot prop"></span>Base Property (<span id="legendPropVal">₹ 1.00 Cr</span>)</span>
-                        <span><span class="ak-legend-dot govt"></span>Govt Charges (<span id="legendGovtVal">₹ 6.6 L</span>)</span>
+                    <div class="dp-hero-right">
+                        <div class="dp-stack-header">
+                            <span class="dp-stack-title">Govt Outflow</span>
+                            <span class="dp-stack-ratio" id="heroRatioText">₹ 6.6 L / ₹ 1.00 Cr (6.6%)</span>
+                        </div>
+                        <div class="dp-capital-bar-track">
+                            <div class="dp-bar-seg dp-seg-equity" id="stackBarProp" style="width: 93.8%;" title="Property Base Value"></div>
+                            <div class="dp-bar-seg dp-seg-stamp" id="stackBarGovt" style="width: 6.2%;" title="Government Charges"></div>
+                        </div>
+                        <div class="dp-capital-legend">
+                            <span class="dp-leg-item"><span class="dp-leg-dot equity"></span>Base (<span id="legendPropVal">₹ 1.00 Cr</span>)</span>
+                            <span class="dp-leg-item"><span class="dp-leg-dot stamp"></span>Govt (<span id="legendGovtVal">₹ 6.6 L</span>)</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 3 Stats Grid -->
-                <div class="ak-3-stats-grid">
-                    <div class="ak-stat-card">
-                        <div class="ak-stat-card-val" id="statStampDuty">₹ 5.6 L</div>
-                        <div class="ak-stat-card-label">Stamp Duty Payable</div>
-                        <div class="ak-stat-card-sub" id="statStampDutyPct">(5.6% effective)</div>
+                <div class="dp-stats-grid">
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="statStampDuty">₹ 5.6 L</div>
+                        <div class="dp-stat-name">Stamp Duty</div>
+                        <div class="dp-stat-sub" id="statStampDutyPct">(5.6% effective)</div>
                     </div>
-                    <div class="ak-stat-card">
-                        <div class="ak-stat-card-val" id="statRegFee">₹ 1.0 L</div>
-                        <div class="ak-stat-card-label">Registration Fee</div>
-                        <div class="ak-stat-card-sub" id="statRegFeePct">(1.0% flat)</div>
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="statRegFee">₹ 1.0 L</div>
+                        <div class="dp-stat-name">Registration Fee</div>
+                        <div class="dp-stat-sub" id="statRegFeePct">(1.0% flat)</div>
                     </div>
-                    <div class="ak-stat-card">
-                        <div class="ak-stat-card-val" id="statTotalCost">₹ 1.066 Cr</div>
-                        <div class="ak-stat-card-label">Total Outflow</div>
-                        <div class="ak-stat-card-sub">(Base + Govt)</div>
+                    <div class="dp-stat-card">
+                        <div class="dp-stat-value" id="statTotalCost">₹ 1.066 Cr</div>
+                        <div class="dp-stat-name">Total Outflow</div>
+                        <div class="dp-stat-sub">(Base + Govt)</div>
                     </div>
                 </div>
 
                 <!-- Breakdown Box -->
-                <div class="ak-breakdown-card">
-                    <div class="ak-breakdown-title">Itemized Statutory Cost Breakdown</div>
-                    <div class="ak-breakdown-row">
-                        <span id="rowBaseStampLabel">Base Stamp Duty (5.0%)</span>
-                        <span id="rowBaseStampVal">₹ 5.0 L</span>
+                <div class="dp-breakdown-box">
+                    <div class="dp-breakdown-title">Itemized Statutory Cost Breakdown</div>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot green"></span>
+                            <span id="rowBaseStampLabel">Base Stamp Duty (5.0%)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowBaseStampVal">₹ 5.0 L</div>
                     </div>
-                    <div class="ak-breakdown-row">
-                        <span id="rowCessLabel">Infrastructure / BMRDA Cess (10% of Duty)</span>
-                        <span id="rowCessVal">₹ 50,000</span>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot amber"></span>
+                            <span id="rowCessLabel">Infrastructure / BMRDA Cess (10% of Duty)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowCessVal">₹ 50,000</div>
                     </div>
-                    <div class="ak-breakdown-row">
-                        <span id="rowSurchargeLabel">BBMP Municipal Surcharge (2% of Duty)</span>
-                        <span id="rowSurchargeVal">₹ 10,000</span>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot amber"></span>
+                            <span id="rowSurchargeLabel">BBMP Municipal Surcharge (2% of Duty)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowSurchargeVal">₹ 10,000</div>
                     </div>
-                    <div class="ak-breakdown-row">
-                        <span id="rowRegFeeLabel">Government Registration Fee (1.0%)</span>
-                        <span id="rowRegFeeVal">₹ 1.0 L</span>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot brass"></span>
+                            <span id="rowRegFeeLabel">Government Registration Fee (1.0%)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowRegFeeVal">₹ 1.0 L</div>
                     </div>
-                    <div class="ak-breakdown-row">
-                        <span>SRO Scanning &amp; E-Stamping Charges (Est.)</span>
-                        <span id="rowScanningVal">₹ 1,000</span>
+                    <div class="dp-cost-row">
+                        <div class="dp-cost-label-group">
+                            <span class="dp-dot amber"></span>
+                            <span>SRO Scanning &amp; E-Stamping Charges (Est.)</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowScanningVal">₹ 1,000</div>
                     </div>
-                    <div class="ak-breakdown-row total-row">
-                        <span>Total Statutory Payable</span>
-                        <span id="rowTotalStatutoryVal">₹ 6.6 L</span>
+                    <div class="dp-cost-row dp-cost-total-row">
+                        <div class="dp-cost-label-group">
+                            <span>Total Statutory Payable</span>
+                        </div>
+                        <div class="dp-cost-val" id="rowTotalStatutoryVal">₹ 6.6 L</div>
                     </div>
                 </div>
 
-                <!-- Cash Funding Callout -->
-                <div class="ak-cash-callout">
-                    <div class="ak-callout-icon">!</div>
+                <!-- Feasibility Alert Callout -->
+                <div class="dp-feasibility-alert">
+                    <div class="dp-check-icon" id="feasibilityIcon" style="background:#804526;">!</div>
                     <div>
-                        <div class="ak-callout-title">Must be paid from personal savings</div>
-                        <div class="ak-callout-desc">RBI regulations exclude stamp duty and registration fees from home loan LTV caps. You cannot borrow this ₹ 6.6 L, so have it ready in liquid cash before deed execution.</div>
+                        <div class="dp-alert-title" id="feasibilityTitle">Must be paid from personal savings</div>
+                        <div class="dp-alert-sub" id="feasibilitySub">RBI regulations exclude stamp duty and registration fees from home loan LTV caps. You cannot borrow this <span id="alertCashVal">₹ 6.6 L</span>, so have it ready in liquid cash before deed execution.</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Affordability Analysis Banner -->
+        <div class="dp-afford-card">
+            <div class="dp-afford-left">
+                <div class="dp-afford-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <div>
+                    <div class="dp-afford-title">Calculate your down payment requirements</div>
+                    <div class="dp-afford-sub">Plan the full personal equity stack needed for your Bengaluru home purchase, including RBI LTV thresholds and bank limits.</div>
+                </div>
+            </div>
+            <a href="../down-payment-calculator/" class="dp-afford-btn">
+                <span>Down Payment Calculator</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+
+        <!-- Explore More Row -->
+        <div class="dp-explore-section">
+            <div class="dp-explore-heading">Explore More Calculators</div>
+            <div class="dp-explore-row">
+                <a href="../down-payment-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <span>Down Payment Calculator →</span>
+                </a>
+                <a href="../home-loan-emi-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                    <span>EMI Calculator →</span>
+                </a>
+                <a href="../home-affordability-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home Loan Eligibility →</span>
+                </a>
+                <a href="../total-cost-of-buying-a-home-calculator/" class="dp-explore-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Total Purchase Cost →</span>
+                </a>
             </div>
         </div>
     </main>
 
     <!-- Educational Content Section -->
     <article class="ak-calc-article container">
-        <p class="ak-calc-direct-lead" style="font-size: 0.95rem; line-height: 1.6; color: var(--obsidian-black, #2B2D31); margin-bottom: 1.75rem; font-weight: 500;">In Karnataka, property buyers in Bengaluru pay 6.6% in mandatory government charges on apartments above ₹ 45 L: 5.6% effective stamp duty (5% base + 10% cess + 2% municipal surcharge) and a 1.0% registration fee. On a ₹ 1 Cr home, that comes to ₹ 5.6 L in stamp duty and ₹ 1 L in registration fees, requiring ₹ 6.6 L in cash when you register the deed.</p>
         <h2>How Karnataka Calculates Stamp Duty and Registration Fees</h2>
         <p>In Karnataka, stamp duty and registration charges are statutory taxes governed by the Karnataka Stamp Act, 1957 and the Registration Act, 1908. Rather than charging a single flat rate, Karnataka calculates your government fee in four layers: a base stamp duty, an infrastructure cess, a municipal or gram panchayat surcharge, and a title registration fee.</p>
 
@@ -1592,62 +1887,59 @@
 
     <!-- Footer -->
     <footer class="site-footer" id="footer">
-        <div class="container">
-            <div class="footer-main-grid">
-                <!-- Left Column: Brand, Mission, Contact & Office -->
-                <div class="footer-brand-col">
-                    <a href="../../" class="footer-logo-wordmark">acre&amp;key</a>
-                    <div class="footer-tagline">Home Buyer Concierge</div>
-                    <p class="footer-mission">
-                        Buyer-first home buying advisory in Bengaluru. We help home buyers, HNI investors and corporate leaders shortlist and check properties with structured due diligence.
-                    </p>
-                    <div class="footer-address-text">
-                        <strong>Acrenkey Realty LLP</strong><br>
-                        8th floor, Summit A, Brigade Tech Gardens, Mahadevapura, Whitefield, Bengaluru, Karnataka 560048
-                    </div>
-                    <div class="footer-rera-info">
-                        RERA Registration No.: <strong>PRM/KA/RERA/1251/446/AG/260814/007659</strong>
-                    </div>
+    <div class="container">
+        <div class="footer-main-grid">
+            <!-- Left Column: Brand, Mission, Contact & Office (Image 2) -->
+            <div class="footer-brand-col">
+                <a href="../../" class="footer-logo-wordmark">acre&amp;key</a>
+                <div class="footer-tagline">Home Buyer Concierge</div>
+                <div class="footer-address-text">
+                    <strong>Acrenkey Realty LLP</strong><br>
+                    8th floor, Summit A, Brigade Tech Gardens, Mahadevapura, Whitefield, Bengaluru, Karnataka 560048
                 </div>
-
-                <!-- Right Column: Navigation Links, Social Icons & RERA -->
-                <div class="footer-right-col">
-                    <div class="footer-links-cluster">
-                        <div class="footer-link-line">
-                            <a href="../../properties/">Properties</a>
-                            <span class="footer-dot">•</span>
-                            <a href="../../calculators/">Calculators</a>
-                        </div>
-                    </div>
-
-                    <div class="footer-social-cluster">
-                        <a href="https://www.facebook.com/profile.php?id=61589792184848" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                        <a href="https://www.instagram.com/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                        <a href="https://x.com/acreNkey" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                        <a href="https://www.linkedin.com/company/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
-                        <a href="https://www.reddit.com/user/acreNkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
-                        <a href="https://www.quora.com/profile/AcreNkey" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Quora"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.002 0C5.373 0 0 5.372 0 12.001c0 6.626 5.373 12 12.002 12 2.378 0 4.59-.693 6.452-1.891l2.458 1.837c.379.283.914.07.97-.398l.381-3.181C23.364 18.27 24 15.244 24 12.001 24 5.372 18.63 0 12.002 0zm1.758 17.587l-.297 1.801c-.05.3-.398.435-.635.251l-1.341-1.042c-.477.065-.967.101-1.487.101-4.708 0-8.525-3.031-8.525-6.697 0-3.667 3.817-6.699 8.525-6.699 4.709 0 8.527 3.032 8.527 6.699 0 1.576-.708 3.023-1.902 4.167l.117.893c.036.275-.126.541-.383.626l-2.724.8z"/></svg></a>
-                        <a href="https://pin.it/58qQo3rsD" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.18c-.07-.98-.13-2.48.03-3.55l1.04-4.42s-.26-.52-.26-1.3c0-1.22.71-2.13 1.59-2.13.75 0 1.11.56 1.11 1.24 0 .75-.48 1.88-.73 2.92-.21.88.44 1.6 1.31 1.6 1.57 0 2.78-1.66 2.78-4.05 0-2.12-1.52-3.6-3.7-3.6-2.52 0-4 1.89-4 3.85 0 .76.29 1.58.66 2.02.07.09.08.17.06.26l-.25 1.02c-.04.16-.14.2-.32.12-1.19-.55-1.93-2.29-1.93-3.69 0-3 2.18-5.76 6.29-5.76 3.3 0 5.87 2.35 5.87 5.5 0 3.28-2.07 5.92-4.94 5.92-.96 0-1.87-.5-2.18-1.09l-.59 2.27c-.22.83-.8 1.88-1.19 2.51A12 12 0 1 0 12 0z"/></svg></a>
-                    </div>
+                <div class="footer-rera-info">
+                    RERA Registration No.: <strong>PRM/KA/RERA/1251/446/AG/260814/007659</strong>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
-            <div class="footer-bottom-line">
-                <div>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</div>
-                <div class="footer-bottom-links">
-                    <a href="../../careers">Careers</a>
-                    <span class="footer-dot">•</span>
-                    <a href="../../privacy-policy/">Privacy Policy</a>
-                    <span class="footer-dot">•</span>
-                    <a href="../../terms-of-service/">Terms of Service</a>
-                    <span class="footer-dot">•</span>
-                    <a href="../../rera-disclaimer/">RERA Disclaimer</a>
+            <!-- Right Column: Navigation Links, Social Icons & RERA (Image 1) -->
+            <div class="footer-right-col">
+                <div class="footer-links-cluster">
+                    <div class="footer-link-line">
+                        <a href="../../properties/">Properties</a>
+                        <span class="footer-dot">•</span>
+                        <a href="../../calculators/">Calculators</a>
+                    </div>
+                </div>
+
+                <div class="footer-social-cluster">
+                    <a href="https://www.facebook.com/profile.php?id=61589792184848" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://www.instagram.com/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    <a href="https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    <a href="https://x.com/acreNkey" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/acrenkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                    <a href="https://www.reddit.com/user/acreNkey/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+                    <a href="https://www.quora.com/profile/AcreNkey" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Quora"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.002 0C5.373 0 0 5.372 0 12.001c0 6.626 5.373 12 12.002 12 2.378 0 4.59-.693 6.452-1.891l2.458 1.837c.379.283.914.07.97-.398l.381-3.181C23.364 18.27 24 15.244 24 12.001 24 5.372 18.63 0 12.002 0zm1.758 17.587l-.297 1.801c-.05.3-.398.435-.635.251l-1.341-1.042c-.477.065-.967.101-1.487.101-4.708 0-8.525-3.031-8.525-6.697 0-3.667 3.817-6.699 8.525-6.699 4.709 0 8.527 3.032 8.527 6.699 0 1.576-.708 3.023-1.902 4.167l.117.893c.036.275-.126.541-.383.626l-2.724.8z"/></svg></a>
+                    <a href="https://pin.it/58qQo3rsD" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.18c-.07-.98-.13-2.48.03-3.55l1.04-4.42s-.26-.52-.26-1.3c0-1.22.71-2.13 1.59-2.13.75 0 1.11.56 1.11 1.24 0 .75-.48 1.88-.73 2.92-.21.88.44 1.6 1.31 1.6 1.57 0 2.78-1.66 2.78-4.05 0-2.12-1.52-3.6-3.7-3.6-2.52 0-4 1.89-4 3.85 0 .76.29 1.58.66 2.02.07.09.08.17.06.26l-.25 1.02c-.04.16-.14.2-.32.12-1.19-.55-1.93-2.29-1.93-3.69 0-3 2.18-5.76 6.29-5.76 3.3 0 5.87 2.35 5.87 5.5 0 3.28-2.07 5.92-4.94 5.92-.96 0-1.87-.5-2.18-1.09l-.59 2.27c-.22.83-.8 1.88-1.19 2.51A12 12 0 1 0 12 0z"/></svg></a>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-line">
+            <div>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</div>
+            <div class="footer-bottom-links">
+                <a href="../../careers">Careers</a>
+                <span class="footer-dot">•</span>
+                <a href="../../privacy-policy/">Privacy Policy</a>
+                <span class="footer-dot">•</span>
+                <a href="../../terms-of-service/">Terms of Service</a>
+                <span class="footer-dot">•</span>
+                <a href="../../rera-disclaimer/">RERA Disclaimer</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- INTERACTIVE CALCULATOR ENGINE SCRIPT -->
     <script>
@@ -1706,11 +1998,28 @@
         if (!el) return;
         var min = parseFloat(el.min || 0);
         var max = parseFloat(el.max || 100);
-        var val = parseFloat(el.value);
+        var val = parseFloat(el.value || 0);
         var pct = ((val - min) / (max - min)) * 100;
-        var thumbWidth = 16;
-        var offset = (thumbWidth / 2) - (thumbWidth * (pct / 100));
-        el.style.background = 'linear-gradient(to right, #804526 calc(' + pct + '% + ' + offset + 'px), rgba(85, 85, 90, 0.2) calc(' + pct + '% + ' + offset + 'px))';
+        el.style.background = 'linear-gradient(to right, #804526 ' + pct + '%, rgba(85, 85, 90, 0.2) ' + pct + '%)';
+    }
+
+    function setPresetValue(val) {
+        calcState.propValue = val;
+        document.getElementById('propValueInput').value = formatIndian(val);
+        document.getElementById('propValueSlider').value = val;
+        updateSliderFill('propValueSlider');
+        syncPresetButtons(val);
+        calculateAll();
+    }
+
+    function syncPresetButtons(val) {
+        document.querySelectorAll('.ak-preset-btn').forEach(function(btn) {
+            btn.classList.remove('active');
+            var shortVal = formatShortIndian(val).replace('₹ ', '').trim();
+            if (btn.innerText.indexOf(shortVal) !== -1) {
+                btn.classList.add('active');
+            }
+        });
     }
 
     function calculateAll() {
@@ -1739,7 +2048,7 @@
 
             document.getElementById('heroTotalGovt').innerText = formatShortIndian(totalGovt);
             document.getElementById('heroGovtDesc').innerText = "Statutory fees: Custom stamp duty (" + dutyTotalPct.toFixed(1) + "%) + registration fee (" + regPct.toFixed(1) + "%).";
-            document.getElementById('heroRatioText').innerText = "Govt charges " + formatShortIndian(totalGovt) + " / Base property " + formatShortIndian(price);
+            document.getElementById('heroRatioText').innerText = formatShortIndian(totalGovt) + " / " + formatShortIndian(price) + " (" + (dutyTotalPct + regPct).toFixed(1) + "%)";
 
             document.getElementById('rowBaseStampLabel').innerText = "Custom Stamp Duty (" + dutyTotalPct.toFixed(1) + "%)";
             document.getElementById('rowBaseStampVal').innerText = formatShortIndian(stampDuty);
@@ -1751,9 +2060,14 @@
             document.getElementById('rowRegFeeVal').innerText = formatShortIndian(regFee);
             document.getElementById('rowTotalStatutoryVal').innerText = formatShortIndian(totalGovt);
 
-            // Update Mobile Quick HUD
-            document.getElementById('mobileHudAmount').innerText = formatShortIndian(totalGovt);
-            document.getElementById('mobileHudSub').innerText = dutyTotalPct.toFixed(1) + "% Duty (" + formatShortIndian(stampDuty) + ") + " + regPct.toFixed(1) + "% Reg (" + formatShortIndian(regFee) + ")";
+            var alertCashVal = document.getElementById('alertCashVal');
+            if (alertCashVal) alertCashVal.innerText = formatShortIndian(totalGovt);
+
+            // Update Mobile Quick HUD if present
+            var hudAmt = document.getElementById('mobileHudAmount');
+            if (hudAmt) hudAmt.innerText = formatShortIndian(totalGovt);
+            var hudSub = document.getElementById('mobileHudSub');
+            if (hudSub) hudSub.innerText = dutyTotalPct.toFixed(1) + "% Duty (" + formatShortIndian(stampDuty) + ") + " + regPct.toFixed(1) + "% Reg (" + formatShortIndian(regFee) + ")";
 
             renderBarsAndBadges(price, totalGovt, totalPropCost, slabName, dutyTotalPct.toFixed(1) + "% Duty + " + regPct.toFixed(1) + "% Reg");
             return;
@@ -1803,7 +2117,7 @@
 
         document.getElementById('heroTotalGovt').innerText = formatShortIndian(totalGovt);
         document.getElementById('heroGovtDesc').innerText = "Statutory fees payable at registration: Karnataka effective stamp duty (" + effectiveDutyPct.toFixed(1) + "%) + deed registration fee (" + regPct.toFixed(1) + "%).";
-        document.getElementById('heroRatioText').innerText = "Govt charges " + formatShortIndian(totalGovt) + " / Base property " + formatShortIndian(price);
+        document.getElementById('heroRatioText').innerText = formatShortIndian(totalGovt) + " / " + formatShortIndian(price) + " (" + (effectiveDutyPct + regPct).toFixed(1) + "%)";
 
         document.getElementById('rowBaseStampLabel').innerText = "Base Stamp Duty (" + baseDutyPct.toFixed(1) + "%)";
         document.getElementById('rowBaseStampVal').innerText = formatShortIndian(baseDutyAmount);
@@ -1815,9 +2129,14 @@
         document.getElementById('rowRegFeeVal').innerText = formatShortIndian(regFee);
         document.getElementById('rowTotalStatutoryVal').innerText = formatShortIndian(totalGovt);
 
-        // Update Mobile Quick HUD
-        document.getElementById('mobileHudAmount').innerText = formatShortIndian(totalGovt);
-        document.getElementById('mobileHudSub').innerText = effectiveDutyPct.toFixed(1) + "% Duty (" + formatShortIndian(totalStampDuty) + ") + " + regPct.toFixed(1) + "% Reg (" + formatShortIndian(regFee) + ")";
+        var alertCashVal = document.getElementById('alertCashVal');
+        if (alertCashVal) alertCashVal.innerText = formatShortIndian(totalGovt);
+
+        // Update Mobile Quick HUD if present
+        var hudAmt = document.getElementById('mobileHudAmount');
+        if (hudAmt) hudAmt.innerText = formatShortIndian(totalGovt);
+        var hudSub = document.getElementById('mobileHudSub');
+        if (hudSub) hudSub.innerText = effectiveDutyPct.toFixed(1) + "% Duty (" + formatShortIndian(totalStampDuty) + ") + " + regPct.toFixed(1) + "% Reg (" + formatShortIndian(regFee) + ")";
 
         renderBarsAndBadges(price, totalGovt, totalPropCost, slabName, effectiveDutyPct.toFixed(1) + "% Duty + " + regPct.toFixed(1) + "% Reg");
     }
@@ -1844,6 +2163,7 @@
         document.getElementById('propValueInput').value = formatIndian(num);
         document.getElementById('propValueSlider').value = num;
         updateSliderFill('propValueSlider');
+        syncPresetButtons(num);
         calculateAll();
     }
 
@@ -1852,6 +2172,7 @@
         calcState.propValue = num;
         document.getElementById('propValueInput').value = formatIndian(num);
         updateSliderFill('propValueSlider');
+        syncPresetButtons(num);
         calculateAll();
     }
 
@@ -1879,6 +2200,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         updateSliderFill('propValueSlider');
+        syncPresetButtons(calcState.propValue);
         calculateAll();
     });
     </script>
@@ -1969,5 +2291,16 @@
     <script src="../../website.min.js?v=1791757042" defer=""></script>
     <script src="../../lead-form.min.js?v=1791755621" defer=""></script>
     <script src="../../abha-form.min.js?v=1791755621" defer=""></script>
+
+<script>
+window.addEventListener('load', () => {
+    console.log('DOC_SCROLL_WIDTH:', document.documentElement.scrollWidth);
+    console.log('BODY_SCROLL_WIDTH:', document.body.scrollWidth);
+    let el = document.querySelector('.mobile-drawer');
+    if (el) console.log('DRAWER:', el.getBoundingClientRect());
+    let tblWrap = document.querySelector('.ak-table-responsive');
+    if (tblWrap) console.log('TBL_WRAP:', tblWrap.getBoundingClientRect(), 'scrollW:', tblWrap.scrollWidth, 'clientW:', tblWrap.clientWidth);
+});
+</script>
 </body>
 </html>
