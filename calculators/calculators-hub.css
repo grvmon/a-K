@@ -1,29 +1,29 @@
 /* ==========================================================================
-   acreNkey Calculator Hub & Directory — Global Stylesheet
+   acre&key Calculator Hub & Directory — Global Stylesheet
    Master Reference: /calculators/
-   WCAG AAA Certified | Cormorant Garamond + Manrope Typography | 8px Radius
+   WCAG AAA Certified | Cormorant Garamond 400 + Manrope | Strictly 4px Radius
    ========================================================================== */
 
 /* --- 1. HUB SPECIFIC TOKENS & CANVAS --- */
 :root {
-    --hub-bg-canvas: #FAF7F2;
+    --hub-bg-canvas: #FAFAFA;
     --hub-navy: #2B2D31;
-    --hub-navy-muted: rgba(10, 10, 11, 0.72);
+    --hub-navy-muted: rgba(43, 45, 49, 0.72);
     --hub-slate: #55555A;
-    --hub-slate-muted: #384654;
-    --hub-brass: #7d442a;
-    --hub-brass-hover: #9e5535;
-    --hub-brass-light: rgba(125, 68, 42, 0.08);
-    --hub-border-light: #E7E0D6;
-    --hub-border-soft: rgba(10, 10, 11, 0.08);
+    --hub-slate-muted: #55555A;
+    --hub-brass: #804526;
+    --hub-brass-hover: #9E3F23;
+    --hub-brass-light: rgba(128, 69, 38, 0.08);
+    --hub-border-light: rgba(85, 85, 90, 0.18);
+    --hub-border-soft: rgba(85, 85, 90, 0.15);
     --hub-card-bg: #FFFFFF;
-    --hub-card-shadow: 0 4px 16px rgba(13, 27, 36, 0.03);
-    --hub-card-hover-shadow: 0 12px 28px rgba(13, 27, 36, 0.08);
-    --hub-radius: 8px;
-    --hub-radius-sm: 6px;
-    --hub-radius-pill: 999px;
-    --hub-font-heading: 'Cormorant Garamond', Georgia, serif;
-    --hub-font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --hub-card-shadow: none;
+    --hub-card-hover-shadow: none;
+    --hub-radius: 4px;
+    --hub-radius-sm: 4px;
+    --hub-radius-pill: 4px;
+    --hub-font-heading: 'Cormorant Garamond', serif;
+    --hub-font-body: 'Manrope', -apple-system, sans-serif;
 }
 
 body.calc-hub-body {
@@ -79,8 +79,8 @@ body.calc-hub-body {
     position: relative;
     padding-top: 125px;
     padding-bottom: 3.25rem;
-    background: radial-gradient(circle at 75% 30%, rgba(240, 230, 216, 0.55) 0%, transparent 60%), var(--hub-bg-canvas);
-    border-bottom: 1px solid var(--hub-border-soft);
+    background: radial-gradient(circle at 75% 30%, rgba(232, 141, 103, 0.08) 0%, transparent 60%), var(--hub-bg-canvas);
+    border-bottom: 0.5px solid var(--hub-border-soft);
 }
 
 .ak-hub-hero-grid {
@@ -104,13 +104,13 @@ body.calc-hub-body {
 .ak-hub-breadcrumb a {
     color: var(--hub-slate-muted);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
 }
 .ak-hub-breadcrumb a:hover {
     color: var(--hub-brass);
 }
 .ak-hub-breadcrumb .sep {
-    color: #475467;
+    color: var(--hub-slate-muted);
     font-size: 0.75rem;
 }
 .ak-hub-breadcrumb li[aria-current="page"] {
@@ -148,7 +148,7 @@ body.calc-hub-body {
     font-family: var(--hub-font-body, 'Manrope', sans-serif);
     font-size: 0.92rem;
     line-height: 1.55;
-    color: var(--deep-slate, #4A5568);
+    color: var(--hub-slate, #55555A);
     max-width: 660px;
     margin: 0 0 1.5rem 0;
     font-weight: 400;
@@ -166,20 +166,20 @@ body.calc-hub-body {
     display: flex;
     align-items: center;
     background: #FFFFFF;
-    border: 1.5px solid rgba(43, 43, 43, 0.18);
-    border-radius: 8px;
+    border: 0.5px solid rgba(85, 85, 90, 0.25);
+    border-radius: 4px;
     padding: 0.45rem 0.85rem 0.45rem 1.15rem;
-    box-shadow: 0 2px 8px rgba(10, 10, 11, 0.03);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: none;
+    transition: border-color 0.4s ease;
 }
 
 .ak-hub-search-box:hover {
-    border-color: rgba(125, 68, 42, 0.4);
+    border-color: rgba(128, 69, 38, 0.4);
 }
 
 .ak-hub-search-box:focus-within {
-    border-color: var(--hub-brass, #7d442a);
-    box-shadow: 0 0 0 3px rgba(125, 68, 42, 0.12), 0 4px 16px rgba(10, 10, 11, 0.06);
+    border-color: var(--hub-brass, #804526);
+    box-shadow: none;
 }
 
 .ak-hub-search-icon {
@@ -217,20 +217,20 @@ body.calc-hub-body {
 }
 
 .ak-hub-search-input::placeholder {
-    color: #8C96A5;
+    color: rgba(85, 85, 90, 0.75);
 }
 
 .ak-hub-search-clear {
     border: none;
     background: transparent;
-    color: #94A3B8;
+    color: var(--hub-slate, #55555A);
     cursor: pointer;
     padding: 0.4rem;
     display: none;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
+    transition: color 0.4s ease, background-color 0.4s ease;
 }
 .ak-hub-search-clear:hover {
     color: var(--hub-navy);
@@ -241,9 +241,9 @@ body.calc-hub-body {
 }
 
 .ak-hub-search-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
     border: none;
     background: transparent;
     color: var(--hub-brass);
@@ -252,7 +252,7 @@ body.calc-hub-body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 .ak-hub-search-btn svg {
     width: 18px;
@@ -261,7 +261,6 @@ body.calc-hub-body {
 .ak-hub-search-btn:hover {
     background: var(--hub-brass-light);
     color: var(--hub-navy);
-    transform: translateX(2px);
 }
 
 /* Popular Intent Tags Row */
@@ -291,16 +290,16 @@ body.calc-hub-body {
     align-items: center;
     gap: 0.45rem;
     background: #FFFFFF;
-    border: 1px solid rgba(125, 68, 42, 0.2);
-    border-radius: 6px;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
+    border-radius: 4px;
     padding: 0.34rem 0.72rem;
     font-family: var(--hub-font-body);
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--obsidian-black, #2B2D31);
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(10, 10, 11, 0.03);
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+    transition: border-color 0.4s ease, color 0.4s ease, background-color 0.4s ease;
     white-space: nowrap;
     text-decoration: none;
     line-height: 1.35;
@@ -310,7 +309,7 @@ body.calc-hub-body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--hub-brass, #7d442a);
+    color: var(--hub-brass, #804526);
 }
 .ak-hub-pop-chip .chip-icon svg {
     width: 13px;
@@ -324,17 +323,17 @@ body.calc-hub-body {
     display: inline-block;
     font-size: 0.82rem;
     line-height: 1;
-    color: var(--hub-brass, #7d442a);
-    transition: transform 0.2s ease;
+    color: var(--hub-brass, #804526);
+    transition: transform 0.4s ease;
     margin-left: 0.05rem;
 }
 
 .ak-hub-pop-chip:hover {
-    background: #FAF7F4;
-    border-color: var(--hub-brass, #7d442a);
-    color: var(--hub-brass, #7d442a);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(125, 68, 42, 0.12);
+    background: #FAFAFA;
+    border-color: var(--hub-brass, #804526);
+    color: var(--hub-brass, #804526);
+    transform: none;
+    box-shadow: none;
 }
 .ak-hub-pop-chip:hover .chip-arrow {
     transform: translateX(2px);
@@ -376,12 +375,12 @@ body.calc-hub-body {
     position: sticky;
     top: 70px;
     z-index: 90;
-    background: rgba(250, 247, 242, 0.95);
+    background: rgba(250, 250, 250, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--hub-border-soft);
+    border-bottom: 0.5px solid var(--hub-border-soft);
     padding: 0;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.4s ease;
 }
 
 .ak-hub-nav-wrap {
@@ -420,7 +419,7 @@ body.calc-hub-body {
     font-weight: 500;
     padding: 0.5rem 0;
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
     outline: none;
     user-select: none;
     position: relative;
@@ -443,9 +442,9 @@ body.calc-hub-body {
     bottom: -0.75rem;
     left: 0;
     right: 0;
-    height: 2.5px;
-    background-color: var(--hub-brass);
-    border-radius: 2px;
+    height: 2px;
+    background-color: var(--hub-brass, #804526);
+    border-radius: 0;
 }
 
 .ak-hub-pill-count, .ak-hub-tab-count {
@@ -462,10 +461,10 @@ body.calc-hub-body {
     align-items: center;
     gap: 2px;
     background: #FFFFFF;
-    border: 1px solid rgba(43, 43, 43, 0.18);
-    border-radius: 6px;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
+    border-radius: 4px;
     padding: 3px;
-    box-shadow: 0 1px 4px rgba(10, 10, 11, 0.04);
+    box-shadow: none;
     flex-shrink: 0;
 }
 
@@ -480,7 +479,7 @@ body.calc-hub-body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .ak-hub-nav-arrow-btn:hover {
@@ -503,18 +502,18 @@ body.calc-hub-body {
     justify-content: space-between;
     margin-bottom: 2rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--hub-border-soft);
+    border-bottom: 0.5px solid var(--hub-border-soft);
     font-size: 0.88rem;
     color: var(--hub-navy-muted);
 }
 
 .ak-hub-count-badge {
     font-weight: 600;
-    color: var(--hub-brass);
+    color: var(--hub-brass, #804526);
     background: var(--hub-brass-light);
     padding: 0.25rem 0.75rem;
-    border-radius: 6px;
-    border: 1px solid rgba(125, 68, 42, 0.15);
+    border-radius: 4px;
+    border: 0.5px solid rgba(128, 69, 38, 0.25);
 }
 
 /* --- 4. FEATURED PROPERTY DECISION TOOLS SECTION --- */
@@ -568,31 +567,32 @@ body.calc-hub-body {
 
 .ak-featured-tool-card {
     background: #FFFFFF;
-    border: 1px solid var(--hub-border-light);
-    border-radius: var(--hub-radius);
+    border: 0.5px solid var(--hub-border-light);
+    border-radius: 4px;
     padding: 1.85rem 1.65rem 1.65rem 1.65rem;
-    box-shadow: var(--hub-card-shadow);
+    box-shadow: none;
     display: flex;
     gap: 1.25rem;
     align-items: flex-start;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
     box-sizing: border-box;
 }
 
 .ak-featured-tool-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--hub-card-hover-shadow);
-    border-color: rgba(125, 68, 42, 0.35);
+    transform: none;
+    box-shadow: none;
+    border-color: #804526;
+    background-color: #FAFAFA;
 }
 
 .ak-featured-tool-icon-wrap {
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    background: #F4EDE5;
-    color: var(--hub-brass);
+    border-radius: 4px;
+    background: rgba(128, 69, 38, 0.06);
+    color: #804526;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,27 +614,27 @@ body.calc-hub-body {
     font-family: var(--hub-font-heading);
     font-size: 1.35rem;
     line-height: 1.25;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--hub-navy);
     margin: 0 0 0.45rem 0;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
 }
 
 .ak-featured-tool-card:hover .ak-featured-tool-title {
-    color: var(--hub-brass);
+    color: #804526;
 }
 
 .ak-featured-tool-desc {
     font-size: 0.88rem;
     line-height: 1.5;
-    color: var(--hub-slate-muted);
+    color: var(--hub-slate);
     margin: 0 0 1.15rem 0;
 }
 
 .ak-featured-tool-link {
     font-size: 0.88rem;
     font-weight: 600;
-    color: var(--hub-brass);
+    color: #804526;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -644,7 +644,7 @@ body.calc-hub-body {
 .ak-featured-tool-link svg {
     width: 14px;
     height: 14px;
-    transition: transform 0.25s ease;
+    transition: transform 0.4s ease;
 }
 
 .ak-featured-tool-card:hover .ak-featured-tool-link svg {
@@ -696,19 +696,39 @@ body.calc-hub-body {
     font-family: var(--hub-font-body);
     font-size: 0.92rem;
     line-height: 1.55;
-    color: var(--deep-slate, #4A5568);
+    color: var(--hub-slate, #55555A);
     margin: 0;
     font-weight: 400;
 }
 
-.ak-hub-grid {
+.ak-hub-grid,
+.ak-calc-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.ak-calc-card {
+    list-style: none;
+    margin: 0;
+}
+
+li.ak-calc-card .ak-calc-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+li.ak-calc-card:hover .ak-calc-card-title a {
+    color: #804526;
 }
 
 @media (max-width: 991px) {
-    .ak-hub-grid {
+    .ak-hub-grid,
+    .ak-calc-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -724,7 +744,8 @@ body.calc-hub-body {
         line-height: 1.48 !important;
         margin-bottom: 1rem !important;
     }
-    .ak-hub-grid {
+    .ak-hub-grid,
+    .ak-calc-grid {
         grid-template-columns: 1fr;
     }
     .ak-hub-search-meta {
@@ -739,28 +760,29 @@ body.calc-hub-body {
     }
 }
 
-/* --- 5. CARD DESIGN (100% matched to down-payment-calculator cards) --- */
+/* --- 5. CARD DESIGN (Strictly 100% WCAG AAA & Architectural Editorial Standard) --- */
 .ak-calc-card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #FFFFFF;
-    border: 1.5px solid rgba(43, 43, 43, 0.18);
-    border-radius: 12px;
+    border: 0.5px solid rgba(85, 85, 90, 0.18);
+    border-radius: 4px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(10, 10, 11, 0.03);
+    box-shadow: none;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
     box-sizing: border-box;
     height: 100%;
 }
 
 .ak-calc-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(13, 27, 36, 0.08);
-    border-color: var(--hub-brass, #7d442a);
+    transform: none;
+    box-shadow: none;
+    border-color: #804526;
+    background-color: #FAFAFA;
 }
 
 .ak-calc-card-header-flex {
@@ -773,19 +795,19 @@ body.calc-hub-body {
 .ak-calc-card-icon {
     width: 38px;
     height: 38px;
-    border-radius: 8px;
-    background: rgba(43, 43, 43, 0.08);
-    color: var(--hub-brass, #7d442a);
+    border-radius: 4px;
+    background: rgba(128, 69, 38, 0.06);
+    color: #804526;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.4s ease;
 }
 
 .ak-calc-card:hover .ak-calc-card-icon {
-    background: #EFE8E1;
-    transform: scale(1.04);
+    background: rgba(128, 69, 38, 0.12);
+    transform: none;
 }
 
 .ak-calc-card-icon svg {
@@ -799,20 +821,20 @@ body.calc-hub-body {
     font-family: var(--hub-font-heading, 'Cormorant Garamond', serif);
     font-size: 1.2rem;
     line-height: 1.3;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--hub-navy, #2B2D31);
     margin: 0;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
 }
 
 .ak-calc-card:hover .ak-calc-card-title {
-    color: var(--hub-brass, #7d442a);
+    color: #804526;
 }
 
 .ak-calc-card-desc {
     font-size: 0.86rem;
     line-height: 1.52;
-    color: var(--deep-slate, #4A5568);
+    color: #55555A;
     margin: 0 0 1.25rem 0;
     flex-grow: 1;
 }
@@ -820,29 +842,30 @@ body.calc-hub-body {
 .ak-calc-card-link {
     font-size: 0.88rem;
     font-weight: 600;
-    color: var(--hub-brass, #7d442a);
+    color: #804526;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.4s ease;
     margin-top: auto;
 }
 
 .ak-calc-card:hover .ak-calc-card-link {
-    color: #9e5535;
-    transform: translateX(2px);
+    color: #804526;
+    transform: none;
 }
 
 /* Featured Card subtle accent */
 .ak-calc-card.featured-card {
-    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
-    border: 1.5px solid rgba(125, 68, 42, 0.3);
-    box-shadow: 0 3px 12px rgba(125, 68, 42, 0.05);
+    background: #FFFFFF;
+    border: 0.5px solid rgba(128, 69, 38, 0.4);
+    box-shadow: none;
 }
 
 .ak-calc-card.featured-card:hover {
-    border-color: var(--hub-brass, #7d442a);
-    box-shadow: 0 8px 24px rgba(125, 68, 42, 0.12);
+    border-color: #804526;
+    box-shadow: none;
+    background-color: #FAFAFA;
 }
 
 /* --- 6. NO RESULTS EMPTY STATE --- */
@@ -851,8 +874,8 @@ body.calc-hub-body {
     text-align: center;
     padding: 4rem 1.5rem;
     background: #FFFFFF;
-    border: 1px dashed var(--hub-border-light);
-    border-radius: var(--hub-radius);
+    border: 0.5px dashed var(--hub-border-light);
+    border-radius: 4px;
     margin: 2rem 0;
 }
 
@@ -863,7 +886,7 @@ body.calc-hub-body {
 .ak-hub-empty-icon {
     width: 56px;
     height: 56px;
-    border-radius: 50%;
+    border-radius: 4px;
     background: var(--hub-brass-light);
     color: var(--hub-brass);
     display: inline-flex;
@@ -903,16 +926,16 @@ body.calc-hub-body {
 }
 
 .ak-hub-empty-tag-btn {
-    border: 1px solid var(--hub-border-light);
+    border: 0.5px solid var(--hub-border-light);
     background: var(--hub-bg-canvas);
     color: var(--hub-navy);
     font-family: var(--hub-font-body);
     font-size: 0.82rem;
     font-weight: 600;
     padding: 0.4rem 0.85rem;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
 .ak-hub-empty-tag-btn:hover {
     border-color: var(--hub-brass);
@@ -934,29 +957,30 @@ body.calc-hub-body {
 .ak-bento-card {
     position: relative;
     background: #FFFFFF;
-    border: 1px solid var(--hub-border-light);
-    border-radius: var(--hub-radius);
+    border: 0.5px solid var(--hub-border-light);
+    border-radius: 4px;
     padding: 2rem;
-    box-shadow: var(--hub-card-shadow);
+    box-shadow: none;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
     box-sizing: border-box;
 }
 
 .ak-bento-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--hub-card-hover-shadow);
-    border-color: rgba(125, 68, 42, 0.4);
+    transform: none;
+    box-shadow: none;
+    border-color: #804526;
+    background-color: #FAFAFA;
 }
 
 .ak-bento-primary {
     grid-column: span 7;
-    background: linear-gradient(145deg, #FFFFFF 0%, #FAF6F2 100%);
-    border-color: rgba(125, 68, 42, 0.25);
+    background: #FFFFFF;
+    border-color: rgba(128, 69, 38, 0.25);
 }
 
 .ak-bento-secondary {
@@ -997,10 +1021,10 @@ body.calc-hub-body {
     font-family: var(--hub-font-heading);
     font-size: clamp(1.45rem, 2.2vw, 1.85rem);
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--hub-navy);
     margin: 0 0 0.65rem 0;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
 }
 
 .ak-bento-card:hover .ak-bento-title {
@@ -1016,8 +1040,8 @@ body.calc-hub-body {
 
 .ak-bento-preview-box {
     background: #FFFFFF;
-    border: 1px dashed var(--hub-border-light);
-    border-radius: 6px;
+    border: 0.5px dashed var(--hub-border-light);
+    border-radius: 4px;
     padding: 0.85rem 1rem;
     margin-bottom: 1.25rem;
     display: flex;
@@ -1037,7 +1061,7 @@ body.calc-hub-body {
     align-items: center;
     justify-content: space-between;
     padding-top: 1rem;
-    border-top: 1px solid var(--hub-border-soft);
+    border-top: 0.5px solid var(--hub-border-soft);
 }
 
 .ak-bento-cta {
@@ -1052,17 +1076,18 @@ body.calc-hub-body {
 /* In-Stream Advisory Breakout */
 .ak-hub-advisory-breakout {
     margin: 4.5rem 0;
-    background: linear-gradient(135deg, #2B2D31 0%, #1c2730 100%);
-    border-radius: var(--hub-radius);
+    background: var(--hub-navy, #2B2D31);
+    border-radius: 4px;
     padding: 2.75rem 3rem;
     color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
-    box-shadow: 0 12px 36px rgba(10, 10, 11, 0.16);
+    box-shadow: none;
     position: relative;
     overflow: hidden;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
 }
 
 .ak-hub-advisory-breakout::before {
@@ -1070,9 +1095,9 @@ body.calc-hub-body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
+    width: 3px;
     height: 100%;
-    background: linear-gradient(180deg, #be7555 0%, #7d442a 100%);
+    background: #804526;
 }
 
 .ak-hub-advisory-breakout-content {
@@ -1084,7 +1109,7 @@ body.calc-hub-body {
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #be7555;
+    color: #E88D67;
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -1101,7 +1126,7 @@ body.calc-hub-body {
 .ak-hub-advisory-breakout-desc {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.85);
     margin: 0;
 }
 
@@ -1122,14 +1147,15 @@ body.calc-hub-body {
 /* --- 7. ADVISORY CTA SECTION --- */
 .ak-hub-cta-section {
     margin-top: 5rem;
-    background: var(--hub-navy);
+    background: var(--hub-navy, #2B2D31);
     color: #FFFFFF;
-    border-radius: var(--hub-radius);
+    border-radius: 4px;
     padding: 3.5rem 2.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(10, 10, 11, 0.15);
+    box-shadow: none;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
 }
 
 .ak-hub-cta-section::before {
@@ -1139,7 +1165,7 @@ body.calc-hub-body {
     left: -20%;
     width: 140%;
     height: 200%;
-    background: radial-gradient(circle at 50% 50%, rgba(140, 103, 52, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 50%, rgba(128, 69, 38, 0.12) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -1162,7 +1188,7 @@ body.calc-hub-body {
 .ak-hub-cta-desc {
     font-size: 1.02rem;
     line-height: 1.65;
-    color: rgba(251, 246, 243, 0.85);
+    color: rgba(250, 250, 250, 0.85);
     margin: 0 0 2rem 0;
 }
 
@@ -1173,21 +1199,21 @@ body.calc-hub-body {
     height: 48px;
     padding: 0 1.5rem 0 1.75rem;
     gap: 12px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-family: var(--hub-font-body);
     font-size: 0.95rem;
     font-weight: 600;
     color: #FFFFFF;
-    background: linear-gradient(135deg, #be7555 0%, #9f5334 100%);
+    background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%);
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: none;
+    transition: background 0.4s ease;
 }
 
 .ak-hub-cta-btn:hover {
-    background: linear-gradient(135deg, #c78162 0%, #9f5334 100%);
-    box-shadow: 0 10px 25px rgba(125, 68, 42, 0.4);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #9E3F23 0%, #804526 100%);
+    box-shadow: none;
+    transform: none;
 }
 
 /* Accessible focus ring */
@@ -1213,7 +1239,7 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     color: #55555A !important;
 }
 .advisor-status-text strong {
-    color: #7D442A !important;
+    color: #804526 !important;
 }
 
 /* --- 8. MOBILE FOOTER CLEARANCE & ZERO-OVERFLOW SAFEGUARD --- */
@@ -1231,3 +1257,222 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     visibility: hidden !important;
     pointer-events: none !important;
 }
+
+/* --- 9. BUYER DECISION FRAMEWORK & FAQ SECTIONS --- */
+.ak-hub-framework-section {
+    padding: 3rem 0;
+    border-bottom: 0.5px solid var(--hub-border-light);
+    background-color: #FAFAFA;
+}
+
+.ak-hub-framework-header,
+.ak-hub-faq-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.ak-hub-subheading {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--hub-brass);
+    margin-bottom: 0.5rem;
+}
+
+.ak-hub-framework-h2,
+.ak-hub-faq-h2 {
+    font-family: var(--hub-font-heading);
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--hub-navy);
+    margin: 0 0 0.75rem 0;
+}
+
+.ak-hub-framework-p,
+.ak-hub-faq-sub {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--hub-slate);
+    margin: 0;
+}
+
+.ak-hub-framework-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+@media (max-width: 991px) {
+    .ak-hub-framework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .ak-hub-framework-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ak-hub-framework-card {
+    background: #FFFFFF;
+    border: 0.5px solid var(--hub-border-light);
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.4s ease;
+}
+
+.ak-hub-framework-card:hover {
+    border-color: var(--hub-brass);
+}
+
+.framework-step-num {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--hub-brass);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.framework-card-h3 {
+    font-family: var(--hub-font-heading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--hub-navy);
+    margin: 0 0 0.5rem 0;
+}
+
+.framework-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--hub-slate);
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1;
+}
+
+.framework-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-top: 0.5px solid var(--hub-border-soft);
+    padding-top: 0.85rem;
+}
+
+.framework-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--hub-brass);
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.framework-link:hover {
+    color: var(--hub-brass-hover);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* FAQ Accordion Section */
+.ak-hub-faq-section {
+    padding: 4rem 0;
+    background-color: #FAFAFA;
+    border-top: 0.5px solid var(--hub-border-light);
+}
+
+.ak-hub-faq-accordion {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ak-faq-item {
+    background: #FFFFFF;
+    border: 0.5px solid var(--hub-border-light);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: border-color 0.4s ease;
+}
+
+.ak-faq-item[open] {
+    border-color: rgba(128, 69, 38, 0.4);
+}
+
+.ak-faq-summary {
+    padding: 1.25rem 1.5rem;
+    font-family: var(--hub-font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--hub-navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    user-select: none;
+}
+
+.ak-faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.ak-faq-question {
+    flex-grow: 1;
+    line-height: 1.35;
+}
+
+.ak-faq-icon {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--hub-brass);
+    transition: transform 0.4s ease;
+    line-height: 1;
+}
+
+.ak-faq-item[open] .ak-faq-icon {
+    transform: rotate(45deg);
+}
+
+.ak-faq-answer {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--hub-slate);
+    border-top: 0.5px solid var(--hub-border-soft);
+    margin-top: 0.25rem;
+    padding-top: 1rem;
+}
+
+.ak-faq-answer p {
+    margin: 0 0 0.75rem 0;
+}
+
+.ak-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.ak-inline-link {
+    color: var(--hub-brass);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(128, 69, 38, 0.35);
+    font-weight: 600;
+    transition: text-decoration-color 0.4s ease, color 0.4s ease;
+}
+
+.ak-inline-link:hover {
+    color: var(--hub-brass-hover);
+    text-decoration-color: var(--hub-brass-hover);
+}
+
