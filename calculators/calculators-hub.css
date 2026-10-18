@@ -1444,14 +1444,7 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     transform: rotate(45deg);
 }
 
-.ak-faq-item[open] > .ak-faq-answer,
-details[open] > .ak-faq-answer,
-.ak-faq-item.active .ak-faq-answer {
-    display: block !important;
-}
-
 .ak-faq-answer {
-    display: none;
     padding: 0 1.5rem 1.25rem 1.5rem;
     font-size: 0.92rem;
     line-height: 1.65;
@@ -1459,6 +1452,20 @@ details[open] > .ak-faq-answer,
     border-top: 0.5px solid var(--hub-border-soft);
     margin-top: 0.25rem;
     padding-top: 1rem;
+}
+
+details:not([open]) > .ak-faq-answer,
+.ak-faq-item:not([open]):not(.active) .ak-faq-answer {
+    display: none;
+}
+
+.ak-faq-item[open] > .ak-faq-answer,
+details[open] > .ak-faq-answer,
+.ak-faq-item.active > .ak-faq-answer,
+.ak-faq-item.active .ak-faq-answer {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .ak-faq-answer p {

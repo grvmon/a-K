@@ -48,8 +48,17 @@
   <link rel="stylesheet" href="../website.min.css?v=1791757042">
   <link rel="stylesheet" href="../lead-form.min.css?v=1791755621">
   <link rel="stylesheet" href="../abha-form.min.css?v=1791755621">
-  <link rel="stylesheet" href="calculator-design-system.css?v=1792318450">
-  <link rel="stylesheet" href="calculators-hub.css?v=1792318450">
+  <link rel="stylesheet" href="calculator-design-system.css?v=1792318550">
+  <link rel="stylesheet" href="calculators-hub.css?v=1792318550">
+  <style>
+    .ak-faq-item[open] > .ak-faq-answer,
+    details[open] > .ak-faq-answer,
+    .ak-faq-item.active > .ak-faq-answer {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  </style>
 
     <!-- Structured Data (JSON-LD) Authoritative Schema.org Graph -->
   <script type="application/ld+json">
@@ -197,7 +206,7 @@
           "name": "How is property stamp duty and registration fee calculated in Karnataka?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Karnataka, stamp duty on residential property is structured in three slabs: 2% for properties valued up to ₹20 Lakhs, 3% for properties between ₹21 Lakhs and ₹45 Lakhs, and 5% for properties above ₹45 Lakhs. In addition, there is a 10% cess on the stamp duty (0.5% of property value) and a 2% municipal surcharge within BBMP limits (0.1% of property value), bringing the effective stamp duty to 5.6% for properties above ₹45 Lakhs. Property registration fees are charged at 2% of the registered value, making the total statutory transfer cost 7.6% for properties above ₹45 Lakhs. Buyers should also budget for scanning fees and document drafting charges. (Source: Inspector General of Registration & Commissioner of Stamps / IGR Karnataka, verified October 2026). Indicative only. Verify with your lawyer before acting."
+            "text": "In Karnataka, stamp duty on residential property is structured in three slabs: 2% for properties valued up to ₹20 Lakhs, 3% for properties between ₹21 Lakhs and ₹45 Lakhs, and 5% for properties above ₹45 Lakhs. In addition, there is a 10% cess on the stamp duty (0.5% of property value) and a 2% municipal surcharge within BBMP limits (0.1% of property value), bringing the effective stamp duty to 5.6% for properties above ₹45 Lakhs. Property registration fees are charged at 2% of the registered value, making the total statutory transfer cost 7.6% for properties above ₹45 Lakhs. Buyers should also budget for scanning fees and document drafting charges. (Source: Inspector General of Registration & Commissioner of Stamps / IGR Karnataka, verified October 2026). Estimate your exact municipal registration outlay with our Stamp Duty Calculator or explore our guides at answers.acrenkey.com. Indicative only. Verify with your lawyer before acting."
           }
         },
         {
@@ -283,9 +292,6 @@
           
           <h1 class="ak-hub-hero-h1">Property Calculators for Bengaluru Home Buyers</h1>
           <p class="ak-hub-hero-sub" style="font-size:1.1rem; color:var(--hub-slate); margin:0.35rem 0 1rem 0;">Make better property decisions.</p>
-          <div class="ak-hub-byline" style="display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; color:#55555A; margin-bottom:1rem;">
-            <span>By</span> <a href="/#about-us" class="ak-inline-link" style="color:#804526; font-weight:600; text-decoration:underline; text-underline-offset:4px;">Gaurav Mongia</a><span>, Market Strategy &middot; Product &middot; Tech, acre&amp;key</span>
-          </div>
           <p class="ak-hub-hero-lead" style="font-family:'Manrope',sans-serif; font-size:0.95rem; line-height:1.6; color:#55555A; max-width:760px; margin:0 0 1.5rem 0;">acre&amp;key has 68 free property calculators for Bengaluru home buyers. Use them to estimate your home loan EMI, how much home you can afford, Karnataka stamp duty and registration, the total cost of buying, rental yield and returns, and tax on property. Results are indicative; check tax figures with your CA.</p>
           <!-- Search Capsule Box -->
           <div class="ak-hub-search-wrapper">
@@ -2270,6 +2276,31 @@
       // Initial Execution
       updateCategoryPillCounts();
       renderDirectory();
+
+      // Bulletproof FAQ Accordion Toggle across all browsers & caches
+      document.querySelectorAll('.ak-faq-item').forEach(function(item) {
+        var summary = item.querySelector('.ak-faq-summary');
+        if (summary) {
+          summary.addEventListener('click', function() {
+            setTimeout(function() {
+              var ans = item.querySelector('.ak-faq-answer');
+              if (item.hasAttribute('open')) {
+                item.classList.add('active');
+                if (ans) {
+                  ans.style.display = 'block';
+                  ans.style.visibility = 'visible';
+                  ans.style.opacity = '1';
+                }
+              } else {
+                item.classList.remove('active');
+                if (ans) {
+                  ans.style.display = 'none';
+                }
+              }
+            }, 10);
+          });
+        }
+      });
     })();
   </script>
 
