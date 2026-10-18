@@ -1444,7 +1444,14 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     transform: rotate(45deg);
 }
 
+.ak-faq-item[open] > .ak-faq-answer,
+details[open] > .ak-faq-answer,
+.ak-faq-item.active .ak-faq-answer {
+    display: block !important;
+}
+
 .ak-faq-answer {
+    display: none;
     padding: 0 1.5rem 1.25rem 1.5rem;
     font-size: 0.92rem;
     line-height: 1.65;
