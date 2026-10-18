@@ -130,7 +130,7 @@
     border: 1.5px solid var(--calc-border-color);
     border-radius: var(--calc-panel-radius);
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(13, 27, 36, 0.04);
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -210,7 +210,7 @@
 .ak-new-input:focus, .ak-new-select:focus {
     outline: none;
     border-color: var(--calc-input-focus);
-    box-shadow: 0 0 0 3px rgba(43, 43, 43, 0.15);
+    box-shadow: none;
 }
 .ak-new-input.readonly {
     background: #FAFAFA;
@@ -244,7 +244,7 @@
     border-radius: 50%;
     background: var(--text-copper-aaa, #804526);
     border: 2px solid #FFFFFF;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     cursor: pointer;
     transition: transform 0.15s ease;
 }
@@ -307,7 +307,7 @@
     font-weight: 400;
 }
 .ak-indicative-outline {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 3px 8px;
@@ -367,7 +367,7 @@
     width: 100%;
     height: 10px;
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     margin-bottom: 0.6rem;
@@ -506,7 +506,7 @@
     border: 1px solid var(--text-copper-aaa, #804526);
     color: var(--dark-brass, #804526);
     font-family: var(--font-heading, 'Cormorant Garamond', serif);
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -638,7 +638,7 @@ details[open] > .ak-faq-answer,
     font-family: var(--font-heading, 'Cormorant Garamond', serif);
     font-size: 1.1rem;
     color: var(--obsidian-black, #2B2D31);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.3;
 }
 .ak-fcard-desc {
@@ -759,3 +759,288 @@ details[open] > .ak-faq-answer,
         font-size: 0.82rem;
     }
 }
+
+/* ==========================================================================
+   ACRE&KEY MASTER DESIGN SYSTEM SPECIFICATION (WCAG AAA CERTIFIED)
+   ========================================================================== */
+
+/* --- 6-STEP TYPOGRAPHY SCALE (12px Minimum) --- */
+/* Step 1: 12px (0.75rem) - Secondary metadata, badges, kickers, legends, sub-labels */
+.ak-text-step-1,
+.ak-preset-label,
+.ak-preset-chip,
+.ak-calc-kicker,
+.dp-inputs-badge,
+.dp-hero-label,
+.dp-hero-desc,
+.dp-stack-header,
+.dp-capital-legend,
+.dp-stat-sub,
+.dp-stat-name,
+.dp-alert-sub,
+.dp-salary-qual-tag,
+.ak-sources-bar,
+.ak-calc-sources-bar,
+.ak-slider-labels-inline,
+.ak-audit-badge,
+.ak-calc-byline {
+    font-size: 0.75rem !important; /* 12px absolute minimum */
+}
+
+/* Step 2: 14px (0.875rem) - UI body, input labels, table cell values, buttons, pills */
+.ak-text-step-2,
+.dp-field-label,
+.dp-text-input,
+.dp-cost-row,
+.dp-cost-val,
+.dp-cost-label-group,
+.ak-res-tab-btn,
+.ak-sim-pill,
+.ak-calc-article-table td,
+.ak-calc-article-table th,
+.dp-salary-qual-desc,
+.ak-bengaluru-desc {
+    font-size: 0.875rem !important; /* 14px */
+}
+
+/* Step 3: 16px (1rem) - Article body, FAQ answers, card descriptions */
+.ak-text-step-3,
+.ak-calc-article p,
+.ak-calc-article li,
+.ak-faq-answer,
+.ak-fcard-desc,
+.ak-more-calcs-sub {
+    font-size: 1rem !important; /* 16px */
+}
+
+/* Step 4: 18px (1.125rem) - Card titles, stat values, table headers, large callout numbers */
+.ak-text-step-4,
+.dp-card-title,
+.dp-stat-value,
+.dp-cost-total-row .dp-cost-val,
+.ak-fcard-title,
+.ak-explore-heading,
+.dp-afford-title,
+.dp-auto-loan-val {
+    font-size: 1.125rem !important; /* 18px */
+}
+
+/* Step 5: 24px-28px (clamp) - Section H2 titles, accordion headers */
+.ak-text-step-5,
+.ak-calc-article h2,
+.ak-more-calcs-title,
+.ak-faq-question,
+.ak-bengaluru-title {
+    font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.75rem) !important;
+}
+
+/* Step 6: 32px-36px (clamp) - Main H1 display title */
+.ak-text-step-6,
+.ak-calc-h1,
+.dp-h1 {
+    font-size: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem) !important;
+}
+
+/* Cormorant Garamond Strict Weight 400 Mandate */
+h1, h2, h3, .ak-calc-h1, .dp-h1, .dp-card-title, .ak-panel-header h2,
+.ak-more-calcs-title, .ak-fcard-title, .ak-calc-article h2,
+.ak-bengaluru-title {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif);
+    font-weight: 400 !important;
+}
+
+/* Zero Shadow Rule & Strict 4px Radius Mandate */
+.ak-calc-left-panel,
+.ak-calc-right-panel,
+.dp-inputs-card,
+.dp-results-card,
+.dp-stat-card,
+.dp-hero-box,
+.dp-hero-right,
+.dp-stack-container,
+.dp-afford-card,
+.ak-fcard,
+.dp-explore-card,
+.ak-table-responsive,
+.ak-preset-strip {
+    box-shadow: none !important;
+    border-radius: 4px !important;
+}
+
+.ak-tradeoff-box,
+blockquote {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+/* Shared Reusable Component Classes (Eliminates Inline Styles) */
+.ak-breadcrumb-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.45rem;
+    gap: 0.5rem;
+}
+
+.ak-audit-badge {
+    font-size: 0.75rem;
+    color: #55555A;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 0.5px solid rgba(85, 85, 90, 0.25);
+    border-radius: 4px;
+    padding: 2px 8px;
+    background: #FFFFFF;
+}
+
+.ak-audit-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #804526;
+}
+
+.ak-field-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.18rem;
+}
+
+.ak-field-tag {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #804526;
+}
+
+.ak-auto-calc-box {
+    background: #FAFAFA;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
+    border-radius: 4px;
+    padding: 0.32rem 0.65rem;
+    margin-bottom: 0.38rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ak-auto-calc-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #2B2D31;
+}
+
+.ak-auto-calc-sub {
+    font-size: 0.75rem;
+    color: #55555A;
+}
+
+.ak-auto-calc-val {
+    font-family: var(--font-body, 'Manrope', sans-serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #804526;
+}
+
+.ak-bengaluru-context-section {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: #FAFAFA;
+    border: 0.5px solid rgba(85, 85, 90, 0.2);
+    border-radius: 4px;
+}
+
+.ak-bengaluru-title {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif);
+    font-size: 1.5rem;
+    color: #2B2D31;
+    margin: 0 0 0.6rem 0;
+    font-weight: 400 !important;
+}
+
+.ak-bengaluru-desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #55555A;
+    margin-bottom: 0.8rem;
+}
+
+.ak-link-copper {
+    color: #804526;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(128, 69, 38, 0.3);
+    transition: text-decoration-color 0.4s ease;
+}
+.ak-link-copper:hover {
+    text-decoration-color: #804526;
+}
+
+.ak-bank-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(128, 69, 38, 0.3);
+    transition: text-decoration-color 0.4s ease;
+}
+.ak-bank-link:hover {
+    text-decoration-color: #804526;
+}
+
+.ak-calc-sources-bar {
+    margin: 2.5rem 0 1rem 0;
+    padding: 1.25rem 0;
+    border-top: 0.5px solid rgba(85, 85, 90, 0.2);
+    border-bottom: 0.5px solid rgba(85, 85, 90, 0.2);
+    font-size: 0.75rem;
+    color: #55555A;
+    line-height: 1.6;
+}
+
+.ak-sources-title {
+    color: #2B2D31;
+    font-weight: 700;
+}
+
+.ak-sources-link {
+    color: #804526;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ak-nested-list {
+    margin: 0.35rem 0 0.35rem 1.25rem;
+    padding: 0;
+}
+.ak-nested-list li {
+    margin-bottom: 0.35rem;
+}
+
+.dp-hero-unit {
+    font-size: 0.45em;
+    font-weight: 500;
+    font-family: var(--font-body, 'Manrope', sans-serif);
+    color: #55555A;
+}
+
+.ak-faq-chevron {
+    width: 18px;
+    height: 18px;
+    stroke: #804526;
+    transition: transform 0.4s ease;
+    flex-shrink: 0;
+}
+.ak-faq-item.active .ak-faq-chevron {
+    transform: rotate(180deg);
+}
+
+.footer-social-row {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
