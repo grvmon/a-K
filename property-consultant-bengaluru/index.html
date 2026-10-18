@@ -40,8 +40,8 @@
   left: 12px;
   top: -48px;
   z-index: 10001;
-  background: #163126;
-  color: #F7F4EE;
+  background: #2B2D31;
+  color: #FAFAFA;
   padding: 8px 12px;
   border-radius: 4px;
   font-family: Manrope, sans-serif;
@@ -51,17 +51,14 @@
 .pc-skip:focus { top: 12px; }
 
 body {
-  background: #F6F3EC !important;
+  background: #FAFAFA !important;
   background-image: none !important;
-  color: #24302A;
+  color: #55555A;
 }
-main { overflow-x: clip; }
-.pc-hero, .pc-invest, .pc-faq-sec { background: #F6F3EC; }
-.pc-about, .pc-places, .pc-process { background: #FBF9F4; }
-.pc-services-sec { background: #F3F0E8; }
-.pc-hero { padding: 28px 0 56px; }
-.pc-block { padding: 72px 0; }
-.pc-hero, .pc-block, .pc-band, .pc-final, .pc-disclaimer { scroll-margin-top: 96px; }
+main { overflow-x: clip; background: #FAFAFA; }
+.pc-hero { padding: 28px 0 0; background: #FAFAFA; }
+.pc-block { padding: 89px 0; background: #FAFAFA; }
+.pc-hero, .pc-block, .pc-disclaimer { scroll-margin-top: 96px; }
 
 .pc-meta-row {
   display: flex;
@@ -69,305 +66,158 @@ main { overflow-x: clip; }
   justify-content: space-between;
   align-items: baseline;
   gap: 8px 20px;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 .pc-meta-row .page-breadcrumb { margin: 0; font-size: 14px; }
-.page-breadcrumb .separator { color: #163126 !important; font-size: 14px !important; line-height: 1; }
-.page-breadcrumb a { color: #163126 !important; }
-.page-breadcrumb .current { color: #24302A !important; }
+.page-breadcrumb .separator { color: #804526 !important; font-size: 14px !important; line-height: 1; }
+.page-breadcrumb a { color: #804526 !important; }
+.page-breadcrumb .current { color: #55555A !important; }
 .pc-updated {
   margin: 0;
   font-family: Manrope, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  color: #24302A;
+  color: #55555A;
 }
 
 .pc-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 21px;
   align-items: stretch;
+}
+.pc-hero-copy {
+  background: #2B2D31;
+  border-radius: 4px;
+  padding: 32px 32px 28px;
 }
 .pc-kicker {
   margin: 0 0 12px;
   font-family: Manrope, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #163126;
+  color: #E88D67;
   line-height: 1.4;
 }
 .pc-h1 {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   font-family: "Cormorant Garamond", serif !important;
   font-weight: 400 !important;
-  font-size: 52px !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.02em;
-  color: #163126 !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.015em;
+  color: #FAFAFA !important;
 }
 .pc-h2 {
-  margin: 0 0 14px !important;
-  max-width: 16em;
+  margin: 0 0 16px !important;
+  max-width: 22em;
   font-family: "Cormorant Garamond", serif !important;
   font-weight: 400 !important;
-  font-size: 42px !important;
-  line-height: 1.12 !important;
-  letter-spacing: -0.02em !important;
-  color: #163126 !important;
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.015em !important;
+  color: #2B2D31 !important;
 }
-.pc-lead, .pc-prose p, .pc-card p, .pc-place p, .pc-step p, .pc-faq p, .pc-points li, .pc-start li, .pc-disclaimer p, .pc-final p {
+.pc-lead {
+  margin: 0 0 20px;
+  max-width: 38rem;
   font-family: Manrope, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #24302A;
+  color: rgba(250, 250, 250, 0.92);
 }
-.pc-lead { margin: 0 0 18px; max-width: 38rem; }
-.pc-prose p { margin: 0 0 14px; }
-
-.pc-hero-photo, .pc-life {
+.pc-trust {
+  margin: 18px 0 0;
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(250, 250, 250, 0.92);
+}
+.pc-trust span { color: #E88D67; }
+.pc-hero-photo {
   position: relative;
   margin: 0;
-  min-height: 480px;
-  height: 100%;
+  min-height: 320px;
   border-radius: 4px;
   overflow: hidden;
 }
-.pc-hero-photo img, .pc-life img {
+.pc-hero-photo img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.pc-photo-label {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  margin: 0;
-  max-width: 11em;
-  padding: 6px 10px;
-  border-radius: 4px;
-  background: #163126;
-  color: #F7F4EE;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.1;
-}
 
-main a.primary-cta-btn.pc-cta {
+main a.primary-cta-btn {
   width: auto !important;
   max-width: 100%;
   height: 48px !important;
   min-height: 48px !important;
-  padding: 0 22px !important;
-  background: #163126 !important;
-  background-image: none !important;
-  color: #F7F4EE !important;
-  border: 0.5px solid #163126 !important;
+  padding: 0 16px 0 22px !important;
+  background-color: #9E3F23 !important;
+  background-image: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  color: #FAFAFA !important;
+  border: none !important;
   border-radius: 4px !important;
   box-shadow: none !important;
-  text-shadow: none !important;
+  text-shadow: 0 1px 2px rgba(43, 45, 49, 0.35);
   font-size: 15px !important;
 }
-main a.primary-cta-btn.pc-cta > span {
-  color: #F7F4EE !important;
-  text-shadow: none !important;
-}
-main a.primary-cta-btn.pc-cta:hover,
-main a.primary-cta-btn.pc-cta:focus-visible {
-  background: #0F241C !important;
-  background-image: none !important;
-  border-color: #0F241C !important;
-}
-main a.primary-cta-btn.pc-cta.pc-cta-light {
-  background: #F7F4EE !important;
-  background-image: none !important;
-  color: #163126 !important;
-  border: 0.5px solid #F7F4EE !important;
-}
-main a.primary-cta-btn.pc-cta.pc-cta-light > span { color: #163126 !important; }
-main a.primary-cta-btn.pc-cta.pc-cta-light:hover,
-main a.primary-cta-btn.pc-cta.pc-cta-light:focus-visible {
-  background: #FFFFFF !important;
-  background-image: none !important;
-  border-color: #FFFFFF !important;
-}
+main a.primary-cta-btn > span { color: #FAFAFA !important; text-shadow: none !important; }
 
-.pc-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 20px;
-  border-radius: 4px;
-  border: 0.5px solid #163126;
-  background: transparent;
-  color: #163126 !important;
+.pc-prose p, .pc-card p, .pc-place p, .pc-step p, .pc-faq p, .pc-close p, .pc-disclaimer p, .pc-intro {
   font-family: Manrope, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration: none !important;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #55555A;
 }
-.pc-outline:hover { background: #163126; color: #F7F4EE !important; }
-
-.pc-trusts {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 26px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.pc-trusts li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  font-family: Manrope, sans-serif;
-  font-size: 13px;
-  line-height: 1.35;
-  color: #24302A;
-}
-.pc-trusts svg, .pc-card-icon, .pc-feat svg { display: block; }
-.pc-trusts svg { width: 22px; height: 22px; color: #163126; }
+.pc-prose p { margin: 0 0 14px; max-width: 40rem; }
+.pc-prose p:last-child { margin-bottom: 0; }
+.pc-intro { margin: 0 0 18px; max-width: 42rem; }
 
 .pc-media-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 48px;
   align-items: center;
 }
-.pc-media { margin: 0; min-height: 420px; height: 100%; border-radius: 4px; overflow: hidden; }
-.pc-media img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; display: block; }
-.pc-start, .pc-points, .pc-steps, .pc-trusts { list-style: none; }
-.pc-start {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 18px;
-  margin: 4px 0 16px;
-  padding: 0;
-}
-.pc-start li { border-top: 0.5px solid rgba(22, 49, 38, 0.18); padding-top: 8px; }
-.pc-start-label {
-  display: block;
-  margin-bottom: 2px;
-  font-family: Manrope, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #163126;
-}
+.pc-media { margin: 0; border-radius: 4px; overflow: hidden; }
+.pc-media img { display: block; width: 100%; height: 320px; object-fit: cover; }
 
 .pc-cards {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px;
+  margin-top: 8px;
 }
 .pc-card {
-  position: relative;
-  padding: 22px 18px 20px;
-  background: #FBF9F4;
-  border: 0.5px solid rgba(22, 49, 38, 0.18);
+  padding: 21px;
+  background: #FAFAFA;
+  border: 0.5px solid rgba(85, 85, 90, 0.2);
   border-radius: 4px;
 }
-.pc-card-icon { width: 28px; height: 28px; color: #163126; margin-bottom: 16px; }
-.pc-card-arrow {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  color: #163126;
-}
-.pc-card h3, .pc-place h3, .pc-feat h3, .pc-step h3 {
+.pc-card h3, .pc-place h3, .pc-step h3 {
+  margin: 0 0 8px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
-  color: #163126;
-}
-.pc-card h3 {
-  margin: 0 36px 8px 0;
-  font-family: Manrope, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #2B2D31;
 }
 .pc-card p { margin: 0 0 12px; }
 .pc-card p:last-child { margin-bottom: 0; }
 .pc-note {
-  margin: 16px 0 0;
-  padding: 12px 14px;
-  border: 0.5px solid rgba(22, 49, 38, 0.18);
-  border-radius: 4px;
-  background: #F3F0E8;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 0.5px solid rgba(85, 85, 90, 0.2);
   font-size: 14px !important;
   line-height: 1.5;
-  color: #24302A;
 }
-main a:not(.primary-cta-btn):not(.pc-outline) { color: #163126; text-underline-offset: 3px; }
-main a:not(.primary-cta-btn):not(.pc-outline):hover { text-decoration: underline; }
-
-.pc-band, .pc-final { background: #163126; color: #F7F4EE; }
-.pc-band { padding: 72px 0; }
-.pc-band-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 48px;
-  align-items: start;
-}
-.pc-band .pc-h2, .pc-final .pc-h2 { color: #F7F4EE !important; }
-.pc-band-lead {
-  margin: 0;
-  max-width: 22rem;
-  font-family: Manrope, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #F7F4EE;
-}
-.pc-feats { margin: 0; padding: 0; list-style: none; }
-.pc-feat {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 14px 0;
-  border-bottom: 0.5px solid rgba(247, 244, 238, 0.28);
-}
-.pc-feat:first-child { border-top: 0.5px solid rgba(247, 244, 238, 0.28); }
-.pc-feat svg { width: 26px; height: 26px; flex: 0 0 26px; margin-top: 2px; color: #F7F4EE; }
-.pc-feat h3 {
-  margin: 0 0 4px;
-  font-family: Manrope, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.35;
-  color: #F7F4EE;
-}
-.pc-band .pc-feat p { margin: 0; color: #F7F4EE; font-size: 15px; line-height: 1.5; }
-.pc-band .pc-cta, .pc-feat-cta { margin-top: 22px; }
-
-.pc-points { margin: 0 0 8px; padding: 0; }
-.pc-points li {
-  position: relative;
-  margin: 0 0 8px;
-  padding-left: 16px;
-}
-.pc-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border: 0.5px solid #163126;
-  border-radius: 4px;
-}
-.pc-cta-row { margin: 18px 0 0; }
+main a:not(.primary-cta-btn) { color: #804526; text-underline-offset: 3px; }
+main a:not(.primary-cta-btn):hover { text-decoration: underline; }
 
 .pc-section-head {
   display: flex;
@@ -377,15 +227,14 @@ main a:not(.primary-cta-btn):not(.pc-outline):hover { text-decoration: underline
   margin-bottom: 8px;
 }
 .pc-section-head .pc-h2 { margin-bottom: 0 !important; }
-.pc-intro { margin: 8px 0 18px; max-width: 44rem; }
 .pc-carousel-nav { display: flex; gap: 8px; flex: 0 0 auto; }
 .pc-carousel-nav button {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
-  border: 0.5px solid #163126;
-  background: transparent;
-  color: #163126;
+  border: 0.5px solid rgba(85, 85, 90, 0.45);
+  background: #FAFAFA;
+  color: #2B2D31;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -395,78 +244,44 @@ main a:not(.primary-cta-btn):not(.pc-outline):hover { text-decoration: underline
 .pc-carousel-nav button:disabled { opacity: 0.35; cursor: default; }
 .pc-carousel-nav svg { width: 18px; height: 18px; display: block; }
 .pc-carousel-viewport { overflow: hidden; width: 100%; }
-.pc-carousel-track {
-  display: flex;
-  gap: 16px;
-  transition: transform 0.35s ease;
-}
+.pc-carousel-track { display: flex; gap: 21px; transition: transform 0.4s ease; }
 .pc-place {
-  flex: 0 0 calc((100% - 32px) / 3);
-  background: #FBF9F4;
-  border: 0.5px solid rgba(22, 49, 38, 0.18);
+  flex: 0 0 calc((100% - 42px) / 3);
+  background: #FAFAFA;
+  border: 0.5px solid rgba(85, 85, 90, 0.2);
   border-radius: 4px;
   overflow: hidden;
 }
-.pc-place-photo { position: relative; }
-.pc-place-photo img { width: 100%; height: 230px; object-fit: cover; display: block; }
-.pc-place h3 {
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  margin: 0;
-  padding: 3px 8px;
-  border-radius: 4px;
-  background: #163126;
-  color: #F7F4EE;
-  font-size: 26px;
-  line-height: 1.15;
-}
-.pc-place p { margin: 0; padding: 14px 14px 16px; font-size: 15px; line-height: 1.5; }
+.pc-place img { display: block; width: 100%; height: 180px; object-fit: cover; }
+.pc-place div { padding: 16px 16px 18px; }
+.pc-place p { margin: 0; }
 
 .pc-steps {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 21px;
+  margin: 8px 0 0;
   padding: 0;
+  list-style: none;
 }
-.pc-step { flex: 1 1 0; min-width: 0; }
+.pc-step { border-top: 0.5px solid rgba(85, 85, 90, 0.2); padding-top: 12px; }
 .pc-step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-  border: 0.5px solid rgba(22, 49, 38, 0.4);
-  border-radius: 4px;
+  display: block;
+  margin-bottom: 8px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
-  color: #163126;
+  color: #804526;
 }
 .pc-step h3 {
-  margin: 0 0 6px;
   font-family: Manrope, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.35;
 }
 .pc-step p { margin: 0; }
-.pc-step-arrow {
-  flex: 0 0 18px;
-  padding-top: 11px;
-  color: #163126;
-}
-.pc-step-arrow svg { width: 18px; height: 18px; display: block; }
 
-.pc-faq-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 40px;
-  align-items: stretch;
-}
-.pc-faq details { border-bottom: 0.5px solid rgba(22, 49, 38, 0.18); }
+.pc-faq { max-width: 760px; }
+.pc-faq details { border-bottom: 0.5px solid rgba(85, 85, 90, 0.2); }
 .pc-faq summary {
   display: flex;
   align-items: center;
@@ -479,25 +294,24 @@ main a:not(.primary-cta-btn):not(.pc-outline):hover { text-decoration: underline
   font-size: 16px;
   font-weight: 600;
   line-height: 1.45;
-  color: #163126;
+  color: #2B2D31;
 }
 .pc-faq summary::-webkit-details-marker { display: none; }
 .pc-faq summary::after {
   content: "+";
   flex: 0 0 auto;
+  color: #804526;
   font-weight: 500;
   font-size: 22px;
   line-height: 1;
-  color: #163126;
 }
+.pc-faq details[open] summary { color: #804526; }
 .pc-faq details[open] summary::after { content: "\2013"; }
 .pc-faq p { margin: 0 0 16px; }
 
-.pc-final { padding: 80px 0; text-align: center; }
-.pc-final .pc-h2 { max-width: 14em; margin-left: auto !important; margin-right: auto !important; }
-.pc-final p { max-width: 38rem; margin: 0 auto 12px; color: #F7F4EE; }
-.pc-final .pc-cta-row { margin-top: 22px; }
-.pc-disclaimer { padding: 28px 0 48px; background: #F6F3EC; }
+.pc-close { padding-bottom: 34px; }
+.pc-close p { max-width: 36rem; margin: 0 0 20px; }
+.pc-disclaimer { padding: 0 0 48px; background: #FAFAFA; }
 .pc-disclaimer p { margin: 0; font-size: 14px; }
 
 .nav-links a { font-size: 13px !important; letter-spacing: 0.04em !important; }
@@ -529,7 +343,7 @@ main a:not(.primary-cta-btn):not(.pc-outline):hover { text-decoration: underline
 }
 .lf-privacy-consent a { color: #804526 !important; }
 main a:focus-visible, .pc-carousel-nav button:focus-visible, .pc-faq summary:focus-visible {
-  outline: 2px solid #163126;
+  outline: 2px solid #804526;
   outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -537,36 +351,22 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .pc-faq summary:foc
 }
 
 @media (max-width: 1100px) {
-  .pc-h1 { font-size: 44px !important; }
-  .pc-cards { grid-template-columns: 1fr 1fr; }
-  .pc-place { flex-basis: calc((100% - 16px) / 2); }
-}
-@media (max-width: 900px) {
-  .pc-hero-grid, .pc-media-grid, .pc-band-grid, .pc-faq-grid { grid-template-columns: 1fr; gap: 22px; }
-  .pc-hero-photo, .pc-life { height: 280px; min-height: 280px; }
-  .pc-media, .pc-media img { min-height: 0; height: 240px; }
-  .pc-faq-grid .pc-life { order: 2; }
+  .pc-steps { grid-template-columns: 1fr 1fr; }
+  .pc-steps .pc-step:last-child { grid-column: 1 / -1; }
+  .pc-place { flex-basis: calc((100% - 21px) / 2); }
 }
 @media (max-width: 800px) {
-  .pc-hero { padding: 18px 0 36px; }
-  .pc-block, .pc-band { padding: 48px 0; }
-  .pc-final { padding: 56px 0; }
-  .pc-h1 { font-size: 32px !important; }
-  .pc-h2 { font-size: 30px !important; }
+  .pc-block { padding: 55px 0; }
+  .pc-hero { padding-top: 18px; }
+  .pc-hero-grid, .pc-media-grid, .pc-cards, .pc-steps { grid-template-columns: 1fr; }
+  .pc-steps .pc-step:last-child { grid-column: auto; }
+  .pc-h1 { font-size: 26px !important; }
+  .pc-h2 { font-size: 21px !important; }
   .pc-kicker { font-size: 14px; letter-spacing: 0.08em; }
-  .pc-photo-label { font-size: 26px; }
-  .pc-trusts { grid-template-columns: 1fr 1fr; }
-  .pc-trusts li { flex-direction: row; align-items: center; font-size: 14px; }
-  .pc-start { grid-template-columns: 1fr; }
-  .pc-start-label { font-size: 14px; }
-  .pc-cards { grid-template-columns: 1fr; }
-  .pc-steps { flex-direction: column; }
-  .pc-step-arrow { transform: rotate(90deg); padding-top: 0; margin: 2px 0 2px 11px; }
-  .nav-links a { font-size: 14px !important; }
-}
-@media (max-width: 700px) {
+  .pc-hero-photo { height: 220px; min-height: 220px; }
+  .pc-media img { height: 220px; }
   .pc-place { flex-basis: 100%; }
-  .container { padding-left: 20px; padding-right: 20px; }
+  .nav-links a { font-size: 14px !important; }
 }
 @media (min-width: 801px) {
   .footer-tagline,
@@ -826,163 +626,57 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .pc-faq summary:foc
           <div class="pc-hero-copy">
             <p class="pc-kicker">Buyer-first property consultant in Bengaluru</p>
             <h1 id="pc-h1" class="pc-h1">Property consultant in Bengaluru, working for the buyer</h1>
-            <p class="pc-lead">A property consultant helps you pick the right home and avoid the wrong one. acre&amp;key shortlists homes that fit your budget and commute, checks the project and its paperwork, adds up the real cost and helps you negotiate. You talk to us before you talk to a sales team.</p>
-            <a href="#" class="primary-cta-btn pc-cta" onclick="window.openModal(); return false;"><span>Book a Consultation</span></a>
-            <ul class="pc-trusts">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 19 6v6c0 4-3 6.5-7 8-4-1.5-7-4-7-8V6z"/></svg>
-                <span>Buyer-first advice</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h8v2H8z"/><path d="M7 5h10v15H7z"/><path d="M9.5 11h5M9.5 14.5h3.5"/></svg>
-                <span>Structured evaluation</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 7.5 12 12 4 7.5z"/><path d="M4 12l8 4.5L20 12"/><path d="M4 16.5 12 21l8-4.5"/></svg>
-                <span>End-to-end support</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 9.5h8M8 12.5h8M8 9.5c3.2 0 5.2 1.4 5.2 3S11.2 15.5 8 15.5l6.2 3"/></svg>
-                <span>₹0 buyer fee</span>
-              </li>
-            </ul>
+            <p class="pc-lead">A property consultant in Bengaluru helps you choose a home and buy it on fair terms. acre&amp;key shortlists homes for your budget and commute, checks the project and the paperwork, adds up the full cost and helps you negotiate. You talk to us before you talk to a sales team.</p>
+            <a href="#" class="primary-cta-btn" onclick="window.openModal(); return false;"><span>Book a Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a>
+            <p class="pc-trust">Buyer-first advice <span aria-hidden="true">·</span> Structured evaluation <span aria-hidden="true">·</span> ₹0 advisory fee for buyers</p>
           </div>
           <figure class="pc-hero-photo">
             <img src="../style-guide/assets/approach-balcony.webp" width="1024" height="682" alt="Balcony looking over trees and homes in Bengaluru" fetchpriority="high" decoding="async">
-            <p class="pc-photo-label">Homes in Bengaluru</p>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="pc-block pc-about" id="advisory" aria-labelledby="about-heading">
+    <section class="pc-block" aria-labelledby="about-heading">
       <div class="container pc-media-grid">
         <figure class="pc-media">
           <img src="../style-guide/assets/capitol/sumadhura_capitol_hero_courtyard.webp" width="1024" height="544" alt="A landscaped courtyard between residential buildings in Bengaluru" loading="lazy" decoding="async">
         </figure>
         <div class="pc-prose">
-          <h2 id="about-heading" class="pc-h2">Real estate consultancy services for homebuyers</h2>
-          <p>Most buyers start with a list of projects. We start with you: your budget, where you work, who lives with you, and when you need to move.</p>
-          <p>Then we cut the list down. Usually to a handful of homes worth visiting, not 20. For each one we look at the layout, the location, the developer's record and the risks, and tell you plainly what we found.</p>
-          <ul class="pc-start">
-            <li><span class="pc-start-label">Budget</span><span>What you can pay, including the charges beyond the quoted price.</span></li>
-            <li><span class="pc-start-label">Commute</span><span>Where you work, and how you actually get there on a weekday.</span></li>
-            <li><span class="pc-start-label">Household</span><span>Who lives with you, and what the home has to support.</span></li>
-            <li><span class="pc-start-label">Timeline</span><span>When you need to move, and how firm that date is.</span></li>
-          </ul>
-          <p>Before you put down money, we go through whether the home and layout suit how you live, the developer's track record and the project's approvals, the price and every extra cost, location and commute, the possession timeline and what the agreement says if it slips, and where to negotiate. You leave each review knowing what to ask the developer next.</p>
-          <a class="pc-outline" href="#services">See what we do</a>
+          <h2 id="about-heading" class="pc-h2">How is buying with a consultant different?</h2>
+          <p>Most buyers start with a list of projects. We start with your budget, where you work, who lives with you, and when you need to move.</p>
+          <p>The list then gets short. For each home we look at the layout, the location, the developer's record and the risks, and tell you what we found.</p>
         </div>
       </div>
     </section>
 
-    <section class="pc-block pc-services-sec" id="services" aria-labelledby="services-heading">
+    <section class="pc-block" id="services" aria-labelledby="services-heading">
       <div class="container">
         <h2 id="services-heading" class="pc-h2">What real estate consultancy services do you offer?</h2>
         <div class="pc-cards">
           <article class="pc-card">
-            <svg class="pc-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-6h4v6"/></svg>
-            <svg class="pc-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M13 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Property shortlisting</h3>
-            <p>Homes that match your budget, commute and lifestyle. You spend weekends on serious options, not on sites you'd rule out in five minutes.</p>
+            <p>Homes matched to your budget, commute and household. You spend site visits on a few serious options.</p>
           </article>
           <article class="pc-card">
-            <svg class="pc-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V7l7-3 7 3v13"/><path d="M3 20h18"/><path d="M9 10h.5M12 10h.5M15 10h.5M9 14h.5M12 14h.5M15 14h.5"/></svg>
-            <svg class="pc-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M13 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Project and developer checks</h3>
-            <p>Layouts, specifications, amenities, Karnataka Real Estate Regulatory Authority (K-RERA) registration and the developer's delivery history, laid side by side so the differences are easy to see. The <a href="../calculators/builder-trust-score-calculator/">builder trust score</a> is a useful place to start.</p>
+            <p>Layouts, specifications, amenities, Karnataka Real Estate Regulatory Authority (K-RERA) registration and the developer's delivery record, set side by side. The <a href="../calculators/builder-trust-score-calculator/">builder trust score</a> is a useful place to start.</p>
           </article>
           <article class="pc-card">
-            <svg class="pc-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h4"/></svg>
-            <svg class="pc-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M13 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Due diligence</h3>
-            <p>We work through a structured evaluation and hand you a list of what checks out, what's unclear, and which documents your lawyer should verify. You can also <a href="../calculators/property-risk-assessment-calculator/">check a property's risk score</a> before a visit.</p>
+            <p>A structured evaluation of what checks out, what is unclear, and which documents your lawyer should verify. You can <a href="../calculators/property-risk-assessment-calculator/">check a property's risk score</a> before a visit.</p>
             <p class="pc-note">General information, not legal advice. Please consult a property lawyer before you sign.</p>
           </article>
           <article class="pc-card">
-            <svg class="pc-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 9.5h8M8 12.5h8M8 9.5c3.2 0 5.2 1.4 5.2 3S11.2 15.5 8 15.5l6.2 3"/></svg>
-            <svg class="pc-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M13 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3>Price, total cost and negotiation</h3>
-            <p>The quoted price is rarely what you pay. We add stamp duty, registration, GST, parking, maintenance deposits and other charges, compare the deal with similar homes, and negotiate price and terms where there's room.</p>
-            <p>Work through the <a href="../calculators/total-cost-of-buying-a-home-calculator/">total cost of buying a home calculator</a>, including <a href="../calculators/stamp-duty-registration-calculator/">stamp duty and registration charges in Karnataka</a>.</p>
+            <p>The quoted price is rarely what you pay. We add stamp duty, registration, GST and other charges, compare similar homes, and negotiate price and terms where there is room.</p>
+            <p>Use the <a href="../calculators/total-cost-of-buying-a-home-calculator/">total cost of buying a home calculator</a>, including <a href="../calculators/stamp-duty-registration-calculator/">stamp duty and registration charges in Karnataka</a>. If you may rent the home out, the <a href="../calculators/rental-yield-calculator/">rental yield calculator</a> shows the arithmetic. Rent and price growth are not assured.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="pc-band" id="why" aria-labelledby="why-heading">
-      <div class="container pc-band-grid">
-        <div>
-          <h2 id="why-heading" class="pc-h2">Buyer-first advice. Structured decisions.</h2>
-          <p class="pc-band-lead">The projects on sale are a starting point, not the answer. Your budget and priorities decide what you see.</p>
-        </div>
-        <div>
-          <ul class="pc-feats">
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-6h4v6"/></svg>
-              <div>
-                <h3>Property shortlisting</h3>
-                <p>Shortlists built around you. Homes matched to your budget, commute and lifestyle.</p>
-              </div>
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h8v2H8z"/><path d="M7 5h10v15H7z"/><path d="M9.5 11h5M9.5 14.5h3.5"/></svg>
-              <div>
-                <h3>Structured evaluation</h3>
-                <p>One framework for every home, so you compare like with like.</p>
-              </div>
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 9.5h8M8 12.5h8M8 9.5c3.2 0 5.2 1.4 5.2 3S11.2 15.5 8 15.5l6.2 3"/></svg>
-              <div>
-                <h3>Cost assessment</h3>
-                <p>The full cost, upfront. Price, extra charges and the payment schedule, before you pay a token amount.</p>
-              </div>
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14v8H8l-3 3z"/></svg>
-              <div>
-                <h3>Negotiation support</h3>
-                <p>Help at the table. We look for room on price, payment plan and terms.</p>
-              </div>
-            </li>
-            <li class="pc-feat">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v18l-2-1.2-2 1.2-2-1.2L9 21l-2-1.2z"/><path d="M10 8h4M10 12h4"/></svg>
-              <div>
-                <h3>Transparent fees</h3>
-                <p>acre&amp;key doesn't charge homebuyers an advisory fee. Any commercial arrangements are disclosed on request.</p>
-              </div>
-            </li>
-          </ul>
-          <p class="pc-feat-cta"><a href="#" class="primary-cta-btn pc-cta pc-cta-light" onclick="window.openModal(); return false;"><span>Book a Consultation</span></a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="pc-block pc-invest" id="investment" aria-labelledby="investment-heading">
-      <div class="container pc-media-grid">
-        <figure class="pc-media">
-          <img src="../style-guide/assets/alembic/alembic_hero_tower_elevation.webp" width="910" height="856" alt="A residential tower seen from ground level in Bengaluru" loading="lazy" decoding="async">
-        </figure>
-        <div>
-          <h2 id="investment-heading" class="pc-h2">Evaluate today. Build for tomorrow.</h2>
-          <p class="pc-lead">Can a real estate investment consultant help with buying to rent or resell? Yes. Buying to live in and buying to invest need different maths. For an investment we look past the brochure at:</p>
-          <ul class="pc-points">
-            <li>The price against comparable homes nearby</li>
-            <li>Likely rent and indicative rental yield. The <a href="../calculators/rental-yield-calculator/">rental yield calculator</a> shows the arithmetic.</li>
-            <li>Total cost to buy and hold (stamp duty, interest, maintenance, tax)</li>
-            <li>Jobs and infrastructure coming to the area, using official project status</li>
-            <li>How much competing supply is being built</li>
-            <li>How easy the home will be to resell</li>
-            <li>What happens if things go badly</li>
-          </ul>
-          <p class="pc-note">Investment risk: rent and price growth are not guaranteed, and property can lose value or take time to sell. Our analysis is indicative and not a promise of returns. Tax points are indicative only; please verify with your Chartered Accountant before acting.</p>
-          <p class="pc-cta-row"><a href="#" class="primary-cta-btn pc-cta" onclick="window.openModal(); return false;"><span>Talk through your investment</span></a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="pc-block pc-places" id="neighbourhoods" aria-labelledby="areas-heading">
+    <section class="pc-block" id="neighbourhoods" aria-labelledby="areas-heading">
       <div class="container">
         <div class="pc-section-head">
           <h2 id="areas-heading" class="pc-h2">Which Bengaluru neighbourhoods do you cover?</h2>
@@ -995,143 +689,131 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .pc-faq summary:foc
             </button>
           </div>
         </div>
-        <p class="pc-intro">The right area comes down to budget, commute and how long you plan to stay. We focus on east and south-east Bengaluru, including Whitefield, Sarjapur Road, Varthur, Gunjur, KR Puram, Mahadevapura, Bellandur, Brookefield and Marathahalli.</p>
+        <p class="pc-intro">We work in east and south-east Bengaluru. The right area depends on your budget, commute and how long you plan to stay.</p>
         <div class="pc-carousel" data-carousel>
           <div class="pc-carousel-viewport">
             <div class="pc-carousel-track">
               <article class="pc-place">
-                <div class="pc-place-photo">
-                  <img src="../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp" width="1024" height="544" alt="Residential towers among trees at a Whitefield project in Bengaluru" loading="lazy" decoding="async">
+                <img src="../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp" width="1024" height="544" alt="Residential towers among trees at a Whitefield project in Bengaluru" loading="lazy" decoding="async">
+                <div>
                   <h3>Whitefield</h3>
+                  <p>Close to the ITPL and EPIP tech parks. We compare projects on metro access and the daily commute.</p>
                 </div>
-                <p>Close to the ITPL and EPIP tech parks; we compare projects on metro access and daily commute.</p>
               </article>
               <article class="pc-place">
-                <div class="pc-place-photo">
-                  <img src="../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp" width="1024" height="1024" alt="Apartment towers and landscaping at a project in east Bengaluru" loading="lazy" decoding="async">
+                <img src="../style-guide/assets/sobha_oneworld/sobha_oneworld_hero_elevation_day.webp" width="1024" height="1024" alt="Apartment towers and landscaping at a project in east Bengaluru" loading="lazy" decoding="async">
+                <div>
                   <h3>Sarjapur Road</h3>
+                  <p>Many new launches. We weigh the roads, schools and possession dates.</p>
                 </div>
-                <p>Many new launches; we weigh road infrastructure, schools and possession dates.</p>
               </article>
               <article class="pc-place">
-                <div class="pc-place-photo">
-                  <img src="../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp" width="1024" height="742" alt="Evening pool and homes at a Varthur project in Bengaluru" loading="lazy" decoding="async">
+                <img src="../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp" width="1024" height="742" alt="Evening pool and homes at a Varthur project in Bengaluru" loading="lazy" decoding="async">
+                <div>
                   <h3>Varthur</h3>
+                  <p>Newer communities, including Gunjur. Access roads and handover dates matter most here.</p>
                 </div>
-                <p>Newer communities around Varthur and Gunjur; access roads and handover timelines matter most here.</p>
               </article>
               <article class="pc-place">
-                <div class="pc-place-photo">
-                  <img src="../style-guide/assets/belvedere/brigade_belvedere_hero_balcony_facade.webp" width="1024" height="534" alt="Balcony facade of a residential tower in east Bengaluru" loading="lazy" decoding="async">
+                <img src="../style-guide/assets/belvedere/brigade_belvedere_hero_balcony_facade.webp" width="1024" height="534" alt="Balcony facade of a residential tower in east Bengaluru" loading="lazy" decoding="async">
+                <div>
                   <h3>KR Puram</h3>
+                  <p>Metro and Outer Ring Road (ORR) links, including Mahadevapura. We check which projects shorten the commute.</p>
                 </div>
-                <p>Metro and Outer Ring Road (ORR) links with Mahadevapura; we check which projects actually shorten your commute.</p>
               </article>
               <article class="pc-place">
-                <div class="pc-place-photo">
-                  <img src="../style-guide/assets/bliss/sattva_bliss_hero_pool_walkway.webp" width="1024" height="771" alt="A pool walkway between homes at a project in east Bengaluru" loading="lazy" decoding="async">
+                <img src="../style-guide/assets/bliss/sattva_bliss_hero_pool_walkway.webp" width="1024" height="771" alt="A pool walkway between homes at a project in east Bengaluru" loading="lazy" decoding="async">
+                <div>
                   <h3>Bellandur</h3>
+                  <p>Near the ORR tech corridor, with Brookefield and Marathahalli. Shops and schools are already in place.</p>
                 </div>
-                <p>Established area near the ORR tech corridor, with Brookefield and Marathahalli nearby, for buyers who want shops and schools already in place.</p>
               </article>
             </div>
           </div>
         </div>
-        <p class="pc-intro">If you'd rather look elsewhere in the city, tell us. We'll say honestly whether we can help.</p>
-        <a href="#" class="primary-cta-btn pc-cta" onclick="window.openModal(); return false;"><span>Find the right area</span></a>
       </div>
     </section>
 
-    <section class="pc-block pc-process" id="process" aria-labelledby="process-heading">
+    <section class="pc-block" id="process" aria-labelledby="process-heading">
       <div class="container">
         <h2 id="process-heading" class="pc-h2">How does the home-buying process work?</h2>
         <ol class="pc-steps">
           <li class="pc-step">
             <span class="pc-step-num">01</span>
             <h3>Tell us what you need.</h3>
-            <p>A call about budget, areas, family needs and timeline.</p>
+            <p>A call about budget, areas, family and timeline.</p>
           </li>
-          <li class="pc-step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
           <li class="pc-step">
             <span class="pc-step-num">02</span>
             <h3>Get a shortlist.</h3>
             <p>A few homes that fit, and what sets each apart.</p>
           </li>
-          <li class="pc-step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
           <li class="pc-step">
             <span class="pc-step-num">03</span>
             <h3>Visit with a checklist.</h3>
-            <p>We plan site visits so you know what to look at and what to ask.</p>
+            <p>Site visits with a note of what to look at and what to ask.</p>
           </li>
-          <li class="pc-step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
           <li class="pc-step">
             <span class="pc-step-num">04</span>
             <h3>Check before you commit.</h3>
-            <p>We compare the options, review the documents available and list what still needs verifying by your lawyer.</p>
+            <p>We compare the options and list what your lawyer still needs to verify.</p>
           </li>
-          <li class="pc-step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
           <li class="pc-step">
             <span class="pc-step-num">05</span>
             <h3>Negotiate and close.</h3>
-            <p>We help with price and terms, then stay with you up to booking.</p>
+            <p>Help on price and terms, through to booking.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="pc-block pc-faq-sec" id="faq" aria-labelledby="faq-heading">
-      <div class="container pc-faq-grid">
-        <div>
-          <h2 id="faq-heading" class="pc-h2">Frequently asked questions about property consultants in Bengaluru</h2>
-          <div class="pc-faq">
-            <details open>
-              <summary>What does a real estate consultant do?</summary>
-              <p>A real estate consultant helps you choose a property and buy it on fair terms. That usually means shortlisting homes, checking projects and developers, working out the total cost, flagging risks and negotiating. What's included varies, so ask any consultant for their exact scope before you start.</p>
-            </details>
-            <details>
-              <summary>How do I choose a property consultant in Bengaluru?</summary>
-              <p>Choose a property consultant in Bengaluru who knows the areas you're considering, explains how they assess a property, and tells you clearly how they get paid. Ask to see a sample evaluation and a clear account of how they are paid.</p>
-            </details>
-            <details>
-              <summary>What are real estate consultancy services?</summary>
-              <p>Real estate consultancy services are the help a consultant gives a buyer before purchase: shortlisting, project and developer checks, due diligence support, cost and price analysis, and negotiation. Legal title checks should still be done by a qualified property lawyer.</p>
-            </details>
-            <details>
-              <summary>How do I find a real estate consultant near me?</summary>
-              <p>To find a real estate consultant near you, search for consultants who actively work in the areas where you want to buy, then compare their services, experience and fee disclosures. acre&amp;key works across east and south-east Bengaluru, including Whitefield, Sarjapur Road and Bellandur.</p>
-            </details>
-            <details>
-              <summary>What is the difference between a real estate consultant and a property broker?</summary>
-              <p>A broker mainly helps a deal happen, while a consultant spends more time helping you decide which property to buy and whether the terms are fair. The roles often overlap, so ask exactly what is included and how the consultant is paid.</p>
-            </details>
-            <details>
-              <summary>Does acre&amp;key charge buyers an advisory fee?</summary>
-              <p>No. acre&amp;key doesn't charge homebuyers an advisory fee. Any commercial arrangements are disclosed on request.</p>
-            </details>
-            <details>
-              <summary>Can a real estate investment consultant estimate my returns?</summary>
-              <p>A real estate investment consultant can estimate likely rent, rental yield, total costs, competing supply and resale demand, and show you a downside case. These are estimates, not promises. Actual returns depend on the market and the property, and tax points should be checked with a Chartered Accountant.</p>
-            </details>
-          </div>
+    <section class="pc-block" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="pc-h2">Frequently asked questions about property consultants in Bengaluru</h2>
+        <div class="pc-faq">
+          <details>
+            <summary>What does a real estate consultant do?</summary>
+            <p>A real estate consultant helps you choose a property and buy it on fair terms. That usually means shortlisting homes, checking projects and developers, working out the total cost, flagging risks and negotiating. What's included varies, so ask any consultant for their exact scope before you start.</p>
+          </details>
+          <details>
+            <summary>How do I choose a property consultant in Bengaluru?</summary>
+            <p>Choose a property consultant in Bengaluru who knows the areas you're considering, explains how they assess a property, and tells you clearly how they get paid. Ask to see a sample evaluation and a clear account of how they are paid.</p>
+          </details>
+          <details>
+            <summary>What are real estate consultancy services?</summary>
+            <p>Real estate consultancy services are the help a consultant gives a buyer before purchase: shortlisting, project and developer checks, due diligence support, cost and price analysis, and negotiation. Legal title checks should still be done by a qualified property lawyer.</p>
+          </details>
+          <details>
+            <summary>How do I find a real estate consultant near me?</summary>
+            <p>To find a real estate consultant near you, search for consultants who actively work in the areas where you want to buy, then compare their services, experience and fee disclosures. acre&amp;key works across east and south-east Bengaluru, including Whitefield, Sarjapur Road and Bellandur.</p>
+          </details>
+          <details>
+            <summary>What is the difference between a real estate consultant and a property broker?</summary>
+            <p>A broker mainly helps a deal happen, while a consultant spends more time helping you decide which property to buy and whether the terms are fair. The roles often overlap, so ask exactly what is included and how the consultant is paid.</p>
+          </details>
+          <details>
+            <summary>Does acre&amp;key charge buyers an advisory fee?</summary>
+            <p>No. acre&amp;key doesn't charge homebuyers an advisory fee. Any commercial arrangements are disclosed on request.</p>
+          </details>
+          <details>
+            <summary>Can a real estate investment consultant estimate my returns?</summary>
+            <p>A real estate investment consultant can estimate likely rent, rental yield, total costs, competing supply and resale demand, and show you a downside case. These are estimates, not promises. Actual returns depend on the market and the property, and tax points should be checked with a Chartered Accountant.</p>
+          </details>
         </div>
-        <figure class="pc-life">
-          <img src="../style-guide/assets/folium/sumadhura_folium_hero_sunset_pool.webp" width="1024" height="544" alt="A pool and homes at sunset in Bengaluru" loading="lazy" decoding="async">
-          <figcaption class="pc-photo-label">Homes that fit your life</figcaption>
-        </figure>
       </div>
     </section>
 
-    <section class="pc-final" aria-labelledby="close-heading">
+    <section class="pc-block pc-close" aria-labelledby="close-heading">
       <div class="container">
-        <h2 id="close-heading" class="pc-h2">Buy with clarity. Choose with confidence.</h2>
-        <p>You don't need more listings. You need to know which few make sense for you. Tell us what matters, and we'll do the checking.</p>
-        <p class="pc-cta-row"><a href="#" class="primary-cta-btn pc-cta pc-cta-light" onclick="window.openModal(); return false;"><span>Book a Consultation</span></a></p>
+        <h2 id="close-heading" class="pc-h2">Talk through the home you are considering</h2>
+        <p>Tell us your budget, commute and timeline. We will shortlist a few homes and walk through the full cost.</p>
+        <a href="#" class="primary-cta-btn" onclick="window.openModal(); return false;"><span>Book a Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a>
       </div>
     </section>
 
     <section class="pc-disclaimer" aria-label="Disclaimer">
       <div class="container">
-        <p>acre&amp;key (Acrenkey Realty LLP, K-RERA agent reg. no. PRM/KA/RERA/1251/446/AG/260814/007659) gives buyer-side property evaluation and negotiation support. acre&amp;key doesn't charge homebuyers an advisory fee. Availability, verification needs and outcomes vary by property. Investment returns and negotiated savings are not guaranteed. Legal points are general information, not legal advice; please consult a property lawyer. Tax points are indicative only; please verify with your Chartered Accountant before acting.</p>
+        <p>acre&amp;key (Acrenkey Realty LLP, K-RERA agent reg. no. PRM/KA/RERA/1251/446/AG/260814/007659) gives buyer-side property evaluation and negotiation support. acre&amp;key doesn't charge homebuyers an advisory fee. Availability, verification needs and outcomes vary by property. Investment returns and negotiated savings are not assured. Legal points are general information, not legal advice; please consult a property lawyer. Tax points are indicative only; please verify with your Chartered Accountant before acting.</p>
       </div>
     </section>
   </main>
@@ -1245,7 +927,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var index = 0;
   function perView() {
     var w = root.clientWidth;
-    if (w <= 700) return 1;
+    if (w <= 800) return 1;
     if (w <= 1100) return 2;
     return 3;
   }
@@ -1256,7 +938,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var card = track.children[0];
     if (!card) return;
     index = Math.max(0, Math.min(i, maxIndex()));
-    var gap = 16;
+    var gap = 21;
     var step = card.getBoundingClientRect().width + gap;
     track.style.transform = 'translateX(' + (-index * step) + 'px)';
     prev.disabled = index === 0;
