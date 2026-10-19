@@ -1291,16 +1291,21 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     background-color: #FAFAFA;
 }
 
-.ak-hub-framework-header,
-.ak-hub-faq-header {
+.ak-hub-framework-header {
     text-align: center;
     max-width: 720px;
     margin: 0 auto 2.5rem auto;
 }
 
+.ak-hub-faq-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2rem auto;
+}
+
 .ak-hub-subheading {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -1308,8 +1313,7 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     margin-bottom: 0.5rem;
 }
 
-.ak-hub-framework-h2,
-.ak-hub-faq-h2 {
+.ak-hub-framework-h2 {
     font-family: var(--hub-font-heading);
     font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     font-weight: 400;
@@ -1318,10 +1322,32 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     margin: 0 0 0.75rem 0;
 }
 
-.ak-hub-framework-p,
-.ak-hub-faq-sub {
+.ak-hub-faq-h2 {
+    font-family: var(--hub-font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--hub-navy);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+    .ak-hub-faq-h2 {
+        font-size: 21px;
+    }
+}
+
+.ak-hub-framework-p {
     font-size: 0.95rem;
     line-height: 1.6;
+    color: var(--hub-slate);
+    margin: 0;
+}
+
+.ak-hub-faq-sub {
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--hub-slate);
     margin: 0;
 }
@@ -1408,7 +1434,7 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
 
 /* FAQ Accordion Section */
 .ak-hub-faq-section {
-    padding: 4rem 0;
+    padding: 3rem 0 3.5rem 0;
     background-color: #FAFAFA;
     border-top: 0.5px solid var(--hub-border-light);
 }
@@ -1418,7 +1444,7 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .ak-faq-item {
@@ -1436,13 +1462,13 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
 }
 
 .ak-faq-summary {
-    padding: 1.15rem 1.4rem;
+    padding: 0.85rem 1.15rem;
     cursor: pointer;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.25rem;
+    gap: 1rem;
     user-select: none;
     transition: background-color 0.4s ease;
 }
@@ -1457,12 +1483,12 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
 
 .ak-faq-question {
     font-family: var(--hub-font-body, 'Manrope', sans-serif) !important;
-    font-size: 1.02rem !important;
+    font-size: 14.5px !important;
     font-weight: 600 !important;
     color: var(--hub-navy, #2B2D31) !important;
     display: block !important;
     flex-grow: 1;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0;
     transition: color 0.4s ease;
 }
@@ -1475,9 +1501,9 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    font-size: 1.25rem;
+    width: 20px;
+    height: 20px;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--hub-brass, #804526);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
@@ -1490,8 +1516,8 @@ a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-vis
 }
 
 .ak-faq-answer {
-    padding: 1rem 1.4rem 1.25rem 1.4rem !important;
-    font-size: 0.95rem !important;
+    padding: 0.75rem 1.15rem 1.15rem 1.15rem !important;
+    font-size: 14px !important;
     line-height: 1.65 !important;
     color: var(--hub-slate, #55555A) !important;
     border-top: 0.5px solid var(--hub-border-soft);
