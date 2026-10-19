@@ -9453,3 +9453,25 @@ h1.hero-title, .hero-title, .hero-headline, .display-title, .brand-headline {
 
 /* Mobile drawer: keep logo dark on white drawer bg */
 .header-nav .mobile-drawer-brand .brand-logo-text,.mobile-drawer .mobile-drawer-brand .brand-logo-text{color:var(--deep-navy)!important}
+
+/* footer NAP + contact page */
+.footer-address-text{font-style:normal}
+.footer-rera-entity{color:#e1e6ebcc}
+.footer-address-link{color:inherit;text-decoration:none}
+.footer-address-link:hover{text-decoration:underline;text-underline-offset:3px}
+.footer-nav-grid.footer-nav-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (width<=600px){.footer-nav-grid.footer-nav-grid-3{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.contact-page-container{max-width:960px;margin:0 auto;padding:140px 24px 80px}
+.contact-title{font-family:var(--font-heading);font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:.5rem 0 1rem}
+.contact-lead{font-size:1.05rem;line-height:1.65;color:#3a3f45;max-width:640px;margin:0 0 2rem}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-bottom:2.5rem}
+.contact-card{border:1px solid #e3e1dc;border-radius:6px;padding:1.4rem 1.5rem;background:#fff}
+.contact-card h2{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#c46a45;margin:0 0 .6rem;font-weight:700}
+.contact-card p,.contact-card address{font-style:normal;margin:0;line-height:1.6;color:#22262b;font-size:.95rem}
+.contact-card a{color:#22262b;font-weight:600;text-underline-offset:3px}
+.contact-card a:hover{color:#c46a45}
+.contact-cta-block{border-radius:6px;background:#1c2128;color:#fafafa;padding:2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem}
+.contact-cta-block h2{font-family:var(--font-heading);font-size:1.6rem;margin:0 0 .35rem;color:#fafafa}
+.contact-cta-block p{margin:0;color:#e1e6ebb3;font-size:.92rem;line-height:1.5}
+.contact-note{font-size:.8rem;color:#5d636a;line-height:1.55;margin-top:1.75rem}
+@media (width<=600px){.contact-page-container{padding:110px 18px 56px}.contact-grid{grid-template-columns:1fr}.contact-cta-block{padding:1.5rem}}
