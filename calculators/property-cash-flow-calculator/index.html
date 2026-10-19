@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/property-cash-flow-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-23T19:13:02+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-23", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1609,7 +1609,7 @@
                 <tr><th scope="row">25% down</th><td class="num">−₹ 50,503</td><td class="num">−₹ 45,753</td><td class="num">−₹ 36,253</td></tr>
                 <tr><th scope="row">50% down</th><td class="num">−₹ 28,808</td><td class="num">−₹ 24,058</td><td class="num">−₹ 14,558</td></tr>
                 <tr><th scope="row">75% down</th><td class="num">−₹ 7,112</td><td class="num">−₹ 2,362</td><td class="num">+₹ 7,138</td></tr>
-                <tr><th scope="row">100% down</th><td class="num">+₹ 14,583</td><td class="num">+₹ 19,333</td><td class="num">+₹ 28,833</td></tr>
+                <tr><th scope="row">All cash</th><td class="num">+₹ 14,583</td><td class="num">+₹ 19,333</td><td class="num">+₹ 28,833</td></tr>
             </tbody>
         </table>
         </div>
@@ -1774,7 +1774,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1941,7 +1941,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akRun() {
         var s = akRead();
