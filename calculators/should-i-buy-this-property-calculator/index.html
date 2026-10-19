@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/should-i-buy-this-property-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-23T18:29:35+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-23", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1442,7 +1442,7 @@
                         <input type="range" class="akc-range akc-m-noslider" data-for="dpIn" min="0" max="100" step="1" value="25" aria-label="Down payment slider">
                     </div>
                     <div class="akc-field half">
-                        <div class="akc-field-top"><label for="incomeIn">Take-home pay</label><span class="akc-hint" id="incomeInHint">monthly</span></div>
+                        <div class="akc-field-top"><label for="incomeIn">Monthly take-home</label><span class="akc-hint" id="incomeInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="2,00,000" autocomplete="off"></div>
                     </div>
                     <div class="akc-field half">
@@ -1532,7 +1532,7 @@
                     <div class="akc-stat"><div class="akc-stat-v" id="stShare">32.5%</div><div class="akc-stat-n" id="stShareN">EMIs ÷ pay (limit 40%)</div></div>
                     <div class="akc-stat"><div class="akc-stat-v" id="stLeft">—</div><div class="akc-stat-n" id="stLeftN">Add savings</div></div>
                 </div>
-                <div class="akc-alert" id="heroAlert">On these numbers the EMI, cash and buffer all fit. Add savings or a fair value to check the rest.</div>
+                <div class="akc-alert" id="heroAlert">Fits so far. Add savings to check the cash.</div>
                 </div>
             </section>
         </div>
@@ -1782,7 +1782,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1951,7 +1951,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     var SB_WORD = { fits: 'Fits', stretch: 'A stretch', no: 'Not yet', none: '—' };
     var SB_MARK = { pass: '✓ Pass', caution: '! Check', fail: '✗ Fails', unknown: 'Not checked' };
@@ -1960,7 +1960,7 @@
         var r = computeBuyCheck(s);
         akSet('priceInHint', s.price > 1e10 ? 'Max ₹ 1,000 Cr used' : (r.price > 0 ? akShort(r.price) : 'Enter a price'));
         akSet('dpInHint', akShort(r.down));
-        akSet('incomeInHint', r.income > 0 ? 'monthly' : 'Enter your income');
+        akSet('incomeInHint', r.income > 0 ? '' : 'Enter your income');
         akSet('savingsInHint', r.savings > 0 ? akShort(r.savings) : 'optional');
         akSet('yearsInHint', (r.years * 12) + ' months');
         akSet('heroAmt', SB_WORD[r.verdict]);
@@ -1978,7 +1978,7 @@
         if (r.checks.cash === 'fail') a.push('You are ' + akShort(-r.left) + ' short of the cash needed.');
         if (r.checks.cash === 'caution') a.push('After buying you keep ' + akShort(r.left) + ', less than ' + r.bufMonths + ' months of outgo (' + akShort(r.bufNeed) + ').');
         if (r.checks.price === 'caution') a.push('The price is ' + r.premium.toFixed(1) + '% above your fair-value estimate.');
-        if (!a.length && r.verdict === 'fits') a.push('On these numbers the EMI, cash and buffer all fit.' + (r.unknown ? ' Add savings or a fair value to check the rest.' : ''));
+        if (!a.length && r.verdict === 'fits') a.push(r.unknown ? 'Fits so far. ' + (r.checks.cash === 'unknown' ? 'Add savings to check the cash.' : 'Add a fair value to check the price.') : 'The EMI, cash and buffer all fit.');
         if (!a.length) a.push(r.verdict === 'none' ? sub : 'Add your savings to check the cash.');
         akSet('heroAlert', a.join(' '));
         akSet('cEmi', SB_MARK[r.checks.emi]); akSet('cCash', SB_MARK[r.checks.cash]); akSet('cPrice', SB_MARK[r.checks.price]);

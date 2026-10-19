@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/property-appreciation-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-13T22:04:48+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-13", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1492,9 +1492,9 @@
                     <p class="akc-hero-sub" id="heroSub">Up ₹ 79.08 L (79.1%) on the ₹ 1.00 Cr price.</p>
                 </div>
                 <div class="akc-stats">
-                    <div class="akc-stat"><div class="akc-stat-v" id="stGain">₹ 79.08 L</div><div class="akc-stat-n" id="stGainN">Gain on price (79.1%)</div></div>
-                    <div class="akc-stat"><div class="akc-stat-v" id="stNet">₹ 71.48 L</div><div class="akc-stat-n" id="stNetN">Gain after buying costs</div></div>
-                    <div class="akc-stat"><div class="akc-stat-v" id="stCagrC">5.23%</div><div class="akc-stat-n">Yearly growth on total cost</div></div>
+                    <div class="akc-stat"><div class="akc-stat-v" id="stGain">₹ 79.08 L</div><div class="akc-stat-n" id="stGainN">Gain (79.1%)</div></div>
+                    <div class="akc-stat"><div class="akc-stat-v" id="stNet">₹ 71.48 L</div><div class="akc-stat-n" id="stNetN">Gain after costs</div></div>
+                    <div class="akc-stat"><div class="akc-stat-v" id="stCagrC">5.23%</div><div class="akc-stat-n">Yearly, after costs</div></div>
                     <div class="akc-stat"><div class="akc-stat-v" id="stGovt">₹ 7.60 L</div><div class="akc-stat-n" id="stGovtN">Buying costs (7.60%)</div></div>
                 </div>
                 <div class="akc-alert" id="heroAlert">At 6% a year, it takes 1.3 years just to recover stamp duty and registration.</div>
@@ -1549,7 +1549,7 @@
         </div>
 
         <h3>Worked example: ₹ 50 L to ₹ 1 Cr in 10 years</h3>
-        <p>A resale flat bought for ₹ 50,00,000 is worth ₹ 1,00,00,000 ten years later. The value has doubled, a 100% gain, and the yearly growth is (2)^(1/10) − 1 = 7.18%.</p>
+        <p>A resale flat bought for ₹ 50,00,000 is worth ₹ 1,00,00,000 ten years later. The value has doubled (a gain of ₹ 50,00,000), and the yearly growth is (2)^(1/10) − 1 = 7.18%.</p>
         <p>Stamp duty, cess, surcharge and registration at 7.6% added ₹ 3,80,000 when you bought, so the flat really cost ₹ 53,80,000. On that figure the yearly growth is 6.40%, and the gain is ₹ 46,20,000 rather than ₹ 50,00,000.</p>
 
         <h2>What would ₹ 1 crore be worth at different growth rates?</h2>
@@ -1729,7 +1729,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1883,7 +1883,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akPct(x) { return x === null || !isFinite(x) ? '—' : x.toFixed(2) + '%'; }
     function akRun() {
@@ -1905,8 +1905,8 @@
             akSet('heroAmt', akPct(r.cagr));
             akSet('heroSub', akShort(r.price) + ' to ' + akShort(r.fv) + ': ' + (r.gain >= 0 ? 'up ' : 'down ') + akShort(Math.abs(r.gain)) + '.');
         }
-        akSet('stGain', akShort(r.gain)); akSet('stGainN', 'Gain on price (' + r.gainPct.toFixed(1) + '%)');
-        akSet('stNet', akShort(r.netGain)); akSet('stNetN', 'Gain after buying costs');
+        akSet('stGain', akShort(r.gain)); akSet('stGainN', 'Gain (' + r.gainPct.toFixed(1) + '%)');
+        akSet('stNet', akShort(r.netGain)); akSet('stNetN', 'Gain after costs');
         akSet('stCagrC', akPct(r.cagrOnCost)); akSet('stGovt', akShort(r.govt)); akSet('stGovtN', 'Buying costs (' + r.govtPct.toFixed(2) + '%)');
         var a = [];
         if (r.price > 0 && r.breakEvenYears !== null) a.push('At ' + (fvMode ? r.growth : r.cagr.toFixed(2)) + '% a year, it takes ' + r.breakEvenYears.toFixed(1) + ' years just to recover stamp duty and registration.');

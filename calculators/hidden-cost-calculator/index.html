@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/hidden-cost-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-15T11:05:25+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-15", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1413,7 +1413,7 @@
 
         <div class="dp-header-bar">
             <div>
-                <h1 class="dp-h1">Hidden Cost Calculator (Bengaluru, 2026)</h1>
+                <h1 class="dp-h1">Hidden Cost Calculator, Bengaluru</h1>
                 <p class="dp-subtitle">Every cost you pay on top of the flat’s price.</p>
             </div>
         </div>
@@ -1517,7 +1517,7 @@
                     <div class="akc-stat"><div class="akc-stat-v" id="stYours">₹ 0</div><div class="akc-stat-n">Your other costs</div></div>
                     <div class="akc-stat"><div class="akc-stat-v" id="stCash">₹ 32.60 L</div><div class="akc-stat-n">Cash needed upfront</div></div>
                 </div>
-                <div class="akc-alert" id="heroAlert">Add your own quotes under “Add your other costs”. Deduct 1% TDS (₹ 1.00 L) from the seller’s payment; it is not an extra cost.</div>
+                <div class="akc-alert" id="heroAlert">TDS of ₹ 1.00 L comes off the seller’s payment.</div>
                 </div>
             </section>
         </div>
@@ -1752,7 +1752,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1907,7 +1907,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akRun() {
         var s = akRead();
@@ -1922,8 +1922,8 @@
         akSet('stYours', akShort(r.yours)); akSet('stCash', akShort(r.cashUpfront));
         var a = [];
         if (r.capped) a.push('RBI limit: a bank can lend at most ' + akShort(r.maxLoan) + ' (' + r.maxLtvPct.toFixed(0) + '%), so the down payment is ' + r.dpPctEffective.toFixed(1) + '%.');
-        if (r.price > 0 && r.yours === 0) a.push('Add your own quotes under “Add your other costs”.');
-        if (r.tds > 0) a.push('Deduct 1% TDS (' + akShort(r.tds) + ') from the seller’s payment; it is not an extra cost.');
+        if (r.price > 0 && r.yours === 0 && !(r.tds > 0)) a.push('Add quotes under “Add your other costs”.');
+        if (r.tds > 0) a.push('TDS of ' + akShort(r.tds) + ' comes off the seller’s payment.');
         if (!a.length) a.push('Figures are indicative. The Sub-Registrar’s calculation is final.');
         akSet('heroAlert', a.join(' '));
         akSet('bDutyL', 'Stamp duty (' + r.stampPct + '% of price' + (r.band !== 'standard' ? ', ' + r.band : '') + ')');

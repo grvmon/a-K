@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/home-loan-tax-benefit-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-23T21:49:51+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-23", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1444,7 +1444,7 @@
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="principalIn" data-key="principal" data-money="1" value="1,00,000" autocomplete="off"></div>
                     </div>
                     <div class="akc-field half">
-                        <div class="akc-field-top"><label for="other123In">Other 80C savings</label><span class="akc-hint" id="other123InHint">PF, PPF, ELSS</span></div>
+                        <div class="akc-field-top"><label for="other123In">Other 80C savings</label><span class="akc-hint" id="other123InHint">PF, ELSS</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="other123In" data-key="other123" data-money="1" value="50,000" autocomplete="off"></div>
                     </div>
                     <div class="akc-field half" id="rentField" hidden>
@@ -1714,7 +1714,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1906,7 +1906,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akRun() {
         var s = akRead();

@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/monthly-home-ownership-cost-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-23T18:22:38+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "author": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -89,7 +89,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-23", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1481,7 +1481,7 @@
                     <div class="akc-stat"><div class="akc-stat-v" id="stYear">₹ 7.81 L</div><div class="akc-stat-n">A year in all</div></div>
                     <div class="akc-stat"><div class="akc-stat-v" id="stInt">₹ 81.21 L</div><div class="akc-stat-n" id="stIntN">Interest, 20 years</div></div>
                 </div>
-                <div class="akc-alert" id="heroAlert">Add maintenance and other bills to see the full monthly cost.</div>
+                <div class="akc-alert" id="heroAlert">Add maintenance and bills for the full cost.</div>
                 </div>
             </section>
         </div>
@@ -1707,7 +1707,7 @@
     <div class="footer-bottom-line">
       <div>© 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-legal-links" style="display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap;">
-        <a href="https://grvmon.github.io/careers">Careers</a>
+        <a href="../../careers/">Careers</a>
         <a href="/privacy-policy/">Privacy Policy</a>
         <a href="/terms-of-service/">Terms of Service</a>
         <a href="/rera-disclaimer/">RERA Disclaimer</a>
@@ -1860,7 +1860,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akRun() {
         var s = akRead();
@@ -1874,7 +1874,7 @@
         akSet('stRun', akINR(r.running)); akSet('stYear', akShort(r.yearly)); akSet('stInt', akShort(r.totalInterest)); akSet('stIntN', 'Interest, ' + r.years + ' years');
         var a = [];
         if (r.capped) a.push('RBI limit: a bank can lend at most ' + akShort(r.maxLoan) + ' (' + r.maxLtvPct.toFixed(0) + '%), so the down payment is ' + r.dpPctEffective.toFixed(1) + '%.');
-        if (r.price > 0 && r.running === 0) a.push('Add maintenance and other bills to see the full monthly cost.');
+        if (r.price > 0 && r.running === 0) a.push('Add maintenance and bills for the full cost.');
         if (!a.length) a.push(r.price > 0 ? 'The EMI is ' + r.emiShare.toFixed(0) + '% of the monthly cost.' : 'Enter the property price.');
         akSet('heroAlert', a.join(' '));
         akSet('bEmi', akINR(r.emi)); akSet('bMaint', akINR(r.maint)); akSet('bTax', akINR(r.taxM)); akSet('bIns', akINR(r.insM)); akSet('bOther', akINR(r.other));
