@@ -7549,7 +7549,13 @@ button:focus-visible,a:focus-visible {
     box-shadow: none !important;
 }
 
-/* Site Footer: Minimal Editorial 2-Column Split */
+/* Site Footer: Minimal Editorial 2-Column Split & Institutional Hierarchy */
+.site-footer,
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+    box-sizing: border-box !important;
+}
 .site-footer {
     background: #2B2D31;
     border-top: 0.5px solid rgba(255, 255, 255, 0.08);
@@ -7562,7 +7568,7 @@ button:focus-visible,a:focus-visible {
     grid-template-columns: 1.15fr 1fr;
     gap: 4rem;
     align-items: start;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
 }
 .footer-brand-col {
     max-width: 520px;
@@ -7585,23 +7591,29 @@ button:focus-visible,a:focus-visible {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #E88D67;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 .footer-mission {
-    font-size: 0.92rem;
-    line-height: 1.7;
-    color: rgba(225, 230, 235, 0.82);
-    margin: 0 0 1.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(250, 250, 250, 0.85);
+    margin: 0 0 1.25rem 0;
+}
+.footer-contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 .footer-email-link {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     color: #FFFFFF;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.88rem;
+    font-weight: 500;
     text-decoration: none;
-    margin-bottom: 0.85rem;
     transition: color 0.4s ease;
 }
 .footer-email-link:hover {
@@ -7610,50 +7622,135 @@ button:focus-visible,a:focus-visible {
 .footer-email-link svg {
     stroke: #E88D67;
 }
+.footer-cta-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #E88D67;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.4s ease;
+}
+.footer-cta-link:hover {
+    color: #FFFFFF;
+}
+.footer-cta-arrow {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+.footer-cta-link:hover .footer-cta-arrow {
+    transform: translateX(3px);
+}
 .footer-address-text {
     font-size: 0.82rem;
     line-height: 1.6;
     color: rgba(225, 230, 235, 0.65);
 }
 
-/* Right Column: Navigation Links, Social Icons & RERA */
+/* Right Column: Navigation Grid, K-RERA Credential Card & Socials */
 .footer-right-col {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
     padding-top: 0.25rem;
 }
-.footer-links-cluster {
+.footer-nav-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+}
+.footer-nav-group {
+    min-width: 0;
+}
+.footer-group-heading {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E88D67;
+    margin-bottom: 0.75rem;
+}
+.footer-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.45rem;
 }
-.footer-link-line {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.footer-link-line a {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.88rem;
-    font-weight: 500;
+.footer-nav-list a {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.85rem;
+    line-height: 1.45;
     text-decoration: none;
     transition: color 0.4s ease;
 }
-.footer-link-line a:hover {
+.footer-nav-list a:hover {
     color: #E88D67;
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
-.footer-dot {
-    color: rgba(255, 255, 255, 0.3);
+.footer-view-all-link {
+    color: #E88D67 !important;
+    font-weight: 600;
+}
+
+/* Institutional K-RERA Credential Card */
+.footer-rera-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 1rem 1.15rem;
+}
+.footer-rera-kicker {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #E88D67;
+    margin-bottom: 0.35rem;
+}
+.footer-rera-reg {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 0.25rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+.footer-rera-reg strong {
+    color: #FAFAFA;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    word-break: break-all;
+}
+.footer-rera-entity {
+    font-size: 0.75rem;
+    color: rgba(225, 230, 235, 0.55);
+    line-height: 1.4;
+}
+
+/* Social Channels */
+.footer-social-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.footer-social-heading {
     font-size: 0.7rem;
-    user-select: none;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
 }
 .footer-social-cluster {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 .footer-social-btn {
@@ -7675,18 +7772,19 @@ button:focus-visible,a:focus-visible {
     color: #2B2D31;
     transform: translateY(-2px);
 }
-.footer-rera-info {
-    font-size: 0.82rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.72);
-}
-.footer-rera-info strong {
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 600;
+
+/* Bottom Legal & Compliance */
+.footer-legal-note {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 0.76rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.45);
 }
 .footer-bottom-line {
-    border-top: 0.5px solid rgba(255, 255, 255, 0.09);
-    padding-top: 1.5rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7695,12 +7793,17 @@ button:focus-visible,a:focus-visible {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.5);
 }
+.footer-dot {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.7rem;
+    user-select: none;
+}
 
 @media (max-width: 900px) {
     .footer-main-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-        margin-bottom: 2.5rem;
+        gap: 2.25rem;
+        margin-bottom: 2rem;
     }
     .footer-brand-col {
         max-width: 100%;
@@ -7708,12 +7811,44 @@ button:focus-visible,a:focus-visible {
 }
 @media (max-width: 600px) {
     .site-footer {
-        padding: 50px 0 max(210px, calc(190px + env(safe-area-inset-bottom, 24px))) 0;
+        padding: 44px 0 max(110px, calc(90px + env(safe-area-inset-bottom, 24px))) 0 !important;
     }
-    .footer-bottom-line {
+    .footer-contact-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 0.65rem;
+    }
+    .footer-nav-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1.25rem 0.65rem;
+    }
+    .footer-nav-list a {
+        font-size: 0.8rem;
+        line-height: 1.35;
+    }
+    .footer-rera-reg strong {
+        font-size: 0.76rem;
+        display: block;
+        word-break: break-all;
+    }
+    .footer-social-cluster {
+        display: grid;
+        grid-template-columns: repeat(4, 36px);
+        gap: 10px;
+    }
+    .footer-social-btn {
+        width: 36px;
+        height: 36px;
+    }
+    .footer-bottom-line {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .footer-bottom-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
     }
 }
 
