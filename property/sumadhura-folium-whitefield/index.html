@@ -5,47 +5,350 @@
     })(window,document,'script','dataLayer','GTM-MKSRMW9C');</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:type" content="website"><meta property="og:title" content="SUMADHURA FOLIUM | AcreNKey"><meta property="og:description" content="Sumadhura Folium, Borewell Road / Core Whitefield, Bengaluru. Independent buyer intelligence from AcreNKey."><meta property="og:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp"><meta content="https://acrenkey.com/property/sumadhura-folium-whitefield/" property="og:url"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SUMADHURA FOLIUM | AcreNKey"><meta name="twitter:description" content="Sumadhura Folium, Borewell Road / Core Whitefield, Bengaluru. Independent buyer intelligence from AcreNKey."><meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/sumadhura_solace_hero.webp"><title>Sumadhura Folium in Whitefield, Bangalore | 4 BHK Luxury Apartments</title><meta name="description" content="4 BHK in Sumadhura Folium, Whitefield, Bangalore. Get floor plans, independent buyer advisory, and exact pricing. Starting from ₹2.45 Cr."><link href="https://acrenkey.com/property/sumadhura-folium-whitefield/" rel="canonical"><link rel="icon" href="../../style-guide/assets/favicon.svg?v=1791220494" type="image/svg+xml"><script src="https://unpkg.com/feather-icons" defer=""></script><link rel="stylesheet" href="../../website.min.css?v=1792373685"><link rel="stylesheet" href="../../lead-form.min.css?v=1791755621"><link rel="stylesheet" href="../../abha-form.min.css?v=1791755621"><link rel="stylesheet" href="../../style-guide/assets/css/property.css?v=1791755621"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Product","name":"Sumadhura Folium Whitefield","description":"3 & 4 BHK residences on Borewell Road Core Whitefield Bengaluru across 16.5 acres with 83% open space and ~54,000 sq.ft. clubhouse.","url":"https://acrenkey.com/property/sumadhura-folium-whitefield/","offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"24500000","highPrice":"40400000","offerCount":"1300"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"3.9","bestRating":"5","worstRating":"1","ratingCount":"1"},"brand":{"@type":"Brand","name":"Sumadhura Group"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acrenkey.com/"},{"@type":"ListItem","position":2,"name":"Bangalore","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":3,"name":"Whitefield","item":"https://acrenkey.com/#core"},{"@type":"ListItem","position":4,"name":"Sumadhura Folium","item":"https://acrenkey.com/property/sumadhura-folium-whitefield/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the price of Sumadhura Folium?","acceptedAnswer":{"@type":"Answer","text":"Indicative all-inclusive prices range from ₹2.45 Cr to ₹4.04 Cr, with an indicative all-inclusive rate of ₹15.9K–16.7K/sq.ft."}},{"@type":"Question","name":"Where is Sumadhura Folium located?","acceptedAnswer":{"@type":"Answer","text":"Sumadhura Folium is located on Borewell Road in Core Whitefield, Bengaluru, ~3 km from ITPL and ~2–3 km from the Purple Line Metro."}},{"@type":"Question","name":"What is the possession date for Sumadhura Folium?","acceptedAnswer":{"@type":"Answer","text":"Possession timeline requires verification: Phase IV RERA filing lists 31 March 2028, whereas builder page cites December 2027."}}]}]</script>    
 <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
 
+<script>
+window.scrollToFloorPlans = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var sec = document.getElementById('floor-plans');
+  if (sec) {
+    var h = document.querySelector('.header-nav');
+    var nav = document.querySelector('.prop-section-nav-sticky');
+    var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
+    var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+window.scrollToVerdict = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var sec = document.getElementById('verdict');
+  if (sec) {
+    var h = document.querySelector('.header-nav');
+    var nav = document.querySelector('.prop-section-nav-sticky');
+    var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
+    var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+</script>
+
 <style>
 /* Enable native smooth scrolling */
 html { scroll-behavior: smooth; }
-/* Local override for Snapshot Grid to match Homepage */
-.prop-snapshot-strip-v2 { border-radius: 4px !important; }
-.prop-snap-num-v2 { font-weight: 600 !important; }
-.prop-snap-lbl-v2 { color: #667085 !important; font-weight: 500 !important; }
-.prop-snap-icon-v2 { color: #2B2D31 !important; }
-/* Fix separator alignment due to 5-column layout */
-.prop-snapshot-item-v2:not(:last-child)::after { right: -0.5rem !important; }
+
+/* Hero Property At a Glance Strip */
+.prop-snapshot-strip-v2 {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem 0.85rem 1.25rem;
+  background: #FFFFFF;
+  border: 0.5px solid rgba(85, 85, 90, 0.2);
+  border-radius: 4px;
+  box-shadow: none;
+}
+.prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.prop-glance-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; color: #8C6734; text-transform: uppercase; }
+.prop-glance-rule { width: 80px; height: 1px; background: #D5C7B8; }
+.prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; }
+.prop-glance-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; }
+.prop-glance-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 10%; height: 80%; width: 1px; background: rgba(85, 85, 90, 0.2); }
+.prop-glance-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: #2B2D31; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+.prop-glance-lbl { font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: #374151; text-transform: uppercase; line-height: 1.2; }
+.prop-glance-sup { font-size: 0.7em; font-weight: 600; color: #8C6734; vertical-align: super; margin-left: 2px; }
+.prop-glance-footnote { text-align: right; margin-top: 0.45rem; font-size: 0.72rem; color: #374151; font-family: 'Manrope', sans-serif; font-weight: 500; }
+@media (max-width: 900px) {
+  .prop-glance-num { font-size: 2rem; }
+  .prop-glance-lbl { font-size: 0.65rem; }
+  .prop-glance-grid { grid-template-columns: repeat(3, 1fr); row-gap: 1.5rem; }
+  .prop-glance-item:nth-child(3n)::after { display: none; }
+  .prop-glance-item:last-child::after { display: none; }
+}
+@media (max-width: 500px) {
+  .prop-glance-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1.5rem; }
+  .prop-glance-item:nth-child(3n)::after { display: block; }
+  .prop-glance-item:nth-child(2n)::after { display: none; }
+  .prop-glance-item:last-child { grid-column: span 2; }
+  .prop-glance-item:last-child::after { display: none; }
+}
+
 /* Local Tooltip Styles */
 .ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
 .ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 250px; background-color: #2F3B42; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.4s, visibility 0.4s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; }
 .ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2F3B42 transparent transparent transparent; }
 .ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
+
 /* Sticky Nav Spacing Override & Premium Hover */
 .local-nav-link {
   display: inline-block;
-  padding: 1rem 1.15rem;
-  font-size: 0.9rem;
+  padding: 0.95rem 1.15rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  color: var(--prop-text-muted);
+  color: #374151;
   text-decoration: none;
   white-space: nowrap;
   border-bottom: none !important;
   transition: all 0.4s ease;
   position: relative;
 }
+.local-nav-link:hover, .local-nav-link.active { color: #804526 !important; border-bottom: 1px solid #804526 !important; }
+.prop-section-nav-sticky { top: 80px !important; }
+.prop-section, #verdict { scroll-margin-top: 140px; }
 
+/* Editorial Hero Gallery Style (Reference-Matched) */
+.ak-hero-editorial-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(450px, 52vh, 500px);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2B2D31;
+  box-sizing: border-box;
+}
+.ak-editorial-media-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.ak-editorial-media-canvas img,
+.ak-editorial-media-canvas video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.ak-editorial-media-canvas:hover img {
+  transform: scale(1.015);
+}
+.ak-editorial-top-left {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ak-editorial-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.08);
+}
+.ak-editorial-counter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.08);
+}
+.ak-editorial-line {
+  width: 44px;
+  height: 1.5px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+}
+.ak-editorial-top-right {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+.ak-editorial-nav-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(18, 26, 32, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 0.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 0;
+  outline: none;
+}
+.ak-editorial-nav-btn:hover {
+  background: rgba(18, 26, 32, 0.85);
+  border-color: #FFFFFF;
+  transform: scale(1.05);
+}
+.ak-editorial-nav-btn:active {
+  transform: scale(0.95);
+}
+.ak-editorial-bottom-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(10, 10, 11, 0.85) 0%, rgba(10, 10, 11, 0.45) 60%, transparent 100%);
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 20px 18px 20px;
+  box-sizing: border-box;
+  pointer-events: none;
+  gap: 12px;
+}
+.ak-editorial-thumbs-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  pointer-events: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 4px 6px 4px;
+  margin: -8px -4px -6px -4px;
+}
+.ak-editorial-thumbs-row::-webkit-scrollbar { display: none; }
+.ak-editorial-thumb {
+  width: 52px;
+  height: 38px;
+  border: 0.5px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: #2B2D31;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+  outline: none;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.ak-editorial-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ak-editorial-thumb:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+}
+.ak-editorial-thumb.active {
+  border: 2px solid #FFFFFF !important;
+  opacity: 1 !important;
+  box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+  transform: translateY(-2px);
+}
+.ak-editorial-gallery-trigger {
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.ak-editorial-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.45);
+  margin-left: 8px;
+  margin-right: 20px;
+}
+.ak-editorial-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: opacity 0.4s ease;
+  outline: none;
+}
+.ak-editorial-view-btn:hover {
+  opacity: 0.8;
+}
 
-.local-nav-link:hover, .local-nav-link.active { color: #2F3B42 !important; }
-/* Fix Anchor Scroll Offset */
-.prop-section, #verdict { scroll-margin-top: 180px; }
+.ak-hero-btn-primary {
+  flex: 1;
+  height: 42px;
+  padding: 0 1.25rem;
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  color: #FFFFFF !important;
+  border: 0.5px solid #9f5334 !important;
+  border-radius: 4px !important;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(140, 103, 52, 0.25);
+}
+.ak-hero-btn-primary:hover {
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  border-color: #9f5334 !important;
+  box-shadow: 0 8px 20px rgba(140, 103, 52, 0.4);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+.ak-hero-btn-secondary {
+  flex: 1;
+  height: 42px;
+  padding: 0 1.25rem;
+  background: #FFFFFF !important;
+  color: #2B2D31 !important;
+  border: 0.5px solid rgba(85, 85, 90, 0.25) !important;
+  border-radius: 4px !important;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.ak-hero-btn-secondary:hover {
+  background: rgba(190, 117, 85, 0.08) !important;
+  border-color: #be7555 !important;
+  color: #9f5334 !important;
+}
 
-  @media (max-width: 480px) {
-    .price-journey-card div[style*="clamp"] {
-      font-size: 0.95rem !important;
-      white-space: nowrap !important;
-    }
+@media (max-width: 480px) {
+  .price-journey-card div[style*="clamp"] {
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
   }
-
+}
 </style>
 <style>
 /* ================= ACRE&KEY MASTER MOBILE OPTIMIZATIONS (<= 768px) ================= */
@@ -475,151 +778,269 @@ html { scroll-behavior: smooth; }
 }
 </script>
 
-</head><body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header class="header-nav" id=header-nav><div class="container nav-container"><a href="/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="/#who-were-for">Clientele</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#about-us">Team</a></li><li><a href="/#testimonials">Client Outcomes</a></li></ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="/" class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=var(--deep-navy) stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="/#who-were-for" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal();"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div></div></header><main><section class="prop-hero-section"><div class="prop-container"><div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding-bottom:1rem;"><nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/#core">Bengaluru</a></li><li><span class="separator">›</span></li><li><a href="/#core">Whitefield</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Sumadhura Folium</li></ol></nav><div style="display:flex; align-items:center; gap:1.25rem;"><span style="font-size:0.85rem; color:var(--prop-navy); opacity:0.65;">Last Modified 28 August 2026</span><div style="position:relative;"><button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger"><i data-feather="share-2" style="width:14px;height:14px;color:#2B2D31;"></i><span>Share</span></button></div></div></div>
+</head><body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header class="header-nav" id=header-nav><div class="container nav-container"><a href="/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="/#who-were-for">Clientele</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">CORE</a></li><li><a href="/#about-us">Team</a></li><li><a href="/#testimonials">Client Outcomes</a></li></ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="/" class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=var(--deep-navy) stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="/#who-were-for" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class=mobile-nav-item><span class=mobile-nav-label>Core</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal();"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div></div></header><main><section class="prop-hero-section" style="background:#FAFAFA;"><div class="prop-container"><div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding: 0.25rem 0 1rem 0; border-bottom:0.5px solid #FAFAFA; margin-bottom:1rem;">
+  <div>
+    <nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/bengaluru/">Bengaluru</a></li><li><span class="separator">›</span></li><li><a href="/bengaluru/east-bengaluru/">East Bengaluru</a></li><li><span class="separator">›</span></li><li><a href="/bengaluru/whitefield/">Whitefield</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Sumadhura Folium</li></ol></nav>
+  </div>
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0.85rem; font-size:0.75rem; color:#374151;">
+    <div style="display:flex; align-items:center; gap:0.45rem;">
+      <img src="../../style-guide/assets/gaurav-mongia-founder-acre-key.webp" alt="Gaurav Mongia" width="24" height="24" style="width:24px; height:24px; border-radius:50%; object-fit:cover; border:1.5px solid rgba(128, 69, 38, 0.3); flex-shrink:0;" />
+      <span>Reviewed by <strong style="color:#2B2D31;">Gaurav Mongia</strong></span>
+    </div>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <span>Last Updated: <strong style="color:#2B2D31;"><time id="ak-last-updated" datetime="2026-09-30">30 September 2026</time>
+    <script>
+      (function() {
+        try {
+          var date = new Date(document.lastModified);
+          if (!isNaN(date) && date.getFullYear() > 2000) {
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formatted = date.toLocaleDateString('en-GB', options);
+            var el = document.getElementById('ak-last-updated');
+            if (el) {
+              el.textContent = formatted;
+              el.setAttribute('datetime', date.toISOString().split('T')[0]);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script></strong></span>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <div style="position:relative;">
+      <button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger" style="display:flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:0.5px solid rgba(85, 85, 90, 0.2); padding:0.35rem 0.65rem; border-radius:4px; font-weight:600; cursor:pointer; color:#2B2D31;">
+        <i data-feather="share-2" style="width:12px;height:12px;color:#2B2D31;"></i><span>Share</span>
+      </button>
+    </div>
+  </div>
+</div>
+
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
-        <!-- 1. Property Image / Gallery (~30-35% VH) -->
         <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="openAkLightbox(0);" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openAkLightbox(0); }">
           <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
-          <img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Pool Aerial View">
-          <div class="ak-mobile-badge-top-left">1 / 6</div>
+          <img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Pool Aerial View" width="800" height="533" style="width:100%; height:100%; object-fit:cover;">
+          
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
-            <i data-feather="share-2" style="width:14px; height:14px; color:#2F3B42;"></i>
+            <i data-feather="share-2" style="width:14px; height:14px; color:#2B2D31;"></i>
+          </button>
+          <button type="button" onclick="event.stopPropagation(); openAkLightbox(5);" style="position:absolute; bottom:10px; left:10px; z-index:2; background:rgba(10, 10, 11, 0.85); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); color:#FFFFFF; border:0.5px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.35rem 0.65rem; font-size:0.75rem; font-weight:700; display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFFFFF"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Watch Video</span>
           </button>
         </div>
 
-        <!-- 2. Project Name -->
-        <h1 style="font-family:'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color:#2F3B42; margin:0 0 0.15rem 0; line-height:1.15; letter-spacing:0.02em;">SUMADHURA FOLIUM</h1>
-
-        <!-- 3. Location -->
-        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.65rem;">~3 km from ITPL, Whitefield</div>
-
-        <!-- 4. Price -->
-        <div style="font-family:'Cormorant Garamond', serif; font-size: 2.36rem; font-weight: 400; color:#2F3B42; line-height:1.05;">₹2.45–4.04 Cr</div>
-
-        <!-- 5. Rate -->
-        <div style="font-size:0.85rem; color:#667085; font-weight:600; margin-top:0.15rem; margin-bottom:0.65rem;">₹15.9K/sq.ft. onwards</div>
-
-        <!-- 6. Configuration & Size -->
-        <div style="font-size:0.88rem; font-weight:700; color:#2F3B42; margin-bottom:0.2rem;">
-          3 &amp; 4 BHK · 1,515–2,435 sq.ft.
+        <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.5rem, 5vw, 1.85rem); font-weight: 400; color:#2B2D31; margin:0 0 0.15rem 0; line-height:1.2; letter-spacing:0.01em; text-transform:none;">Sumadhura Folium</h1>
+        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.45rem; display:flex; align-items:center; gap:0.35rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Borewell Road, Whitefield, Bengaluru</span></div>
+        <div style="display:flex; align-items:baseline; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.25rem;">
+          <span style="font-family:'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color:#2B2D31; line-height:1;">₹2.45–4.04 Cr</span>
+          <span style="font-size:0.8rem; color:#55555A; font-weight:500;">· ₹15.9K/sq.ft.</span>
+        </div>
+        <div style="font-size:0.82rem; color:#2B2D31; font-weight:600; margin-bottom:0.65rem; line-height:1.4;">
+          3 &amp; 4 BHK · 1,515–2,435 sq.ft. · Possession Mar 2028
         </div>
 
-        <!-- 7. Possession -->
-        <div style="font-size:0.85rem; font-weight:600; color:#804526; margin-bottom:0.85rem;">
-          Possession · Mar 2028
-        </div>
-
-        <!-- 8. Acre&Key Score + Verdict Card -->
-        <div style="background:#FFFFFF; border:0.5px solid rgba(140, 103, 52, 0.3); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.05); display:flex; align-items:center; gap:0.85rem;">
-          <div style="background:#2F3B42; color:#804526; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0; border:0.5px solid rgba(140, 103, 52, 0.35);">
-            <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1;">★ 3.9</div>
-            <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.scrollToVerdict(event);" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.5rem 0.85rem; margin-bottom:0.65rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+          <div style="text-align:center; padding-right:0.85rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
+            <div style="font-size:1.75rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#2B2D31; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
+              3.9<span style="font-size:1.05rem; color:#2B2D31; font-weight:400; opacity:0.8;">/5</span>
+            </div>
           </div>
-          <div>
-            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.21rem; font-weight: 400; color:#684A20; line-height:1.2; margin-bottom:0.2rem;">Core Whitefield Family Pick</div>
-            <div style="font-size:0.82rem; color:#374151; line-height:1.35; font-weight:500;">"Balanced Core Whitefield community with strong metro &amp; ITPL access."</div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.12rem;">
+            <div style="display:flex; align-items:center; gap:0.35rem;">
+              <span class="brand-inline-text" style="font-weight:700; color:#804526; font-size:0.92rem;">acre&amp;key</span>
+              <span style="font-family:'Manrope', sans-serif; font-size:0.68rem; font-weight: 500; letter-spacing:0.04em; color:#804526; text-transform:uppercase;">Assessment</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; margin-top:-1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color:#2B2D31; line-height:1.1; display:flex; align-items:center; gap:0.35rem;">Core Whitefield Family Pick <span style="color:#804526; font-family:'Manrope',sans-serif; font-size:1.1rem; transform:translateY(1px);">→</span></div>
           </div>
-        </div>
-
-        <!-- 9. Primary CTA Button -->
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.95rem; font-size:0.98rem; font-weight:700; border-radius: 4px; margin-bottom:0.5rem; text-align:center; background:#8C6734; color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(140, 103, 52, 0.25);">
-          Get Buyer Analysis
         </button>
 
-        <!-- 10. Secondary CTA Link -->
-        <div style="text-align:center; margin-bottom:0.85rem;">
-          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">View Floor Plans →</a>
+        <div style="display:flex; flex-direction:row; gap:0.5rem; margin-bottom:0.75rem; width:100%;">
+          <button type="button" data-no-modal="true" onclick="window.openModal('analysis'); return false;" class="ak-hero-btn-primary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-shadow:0 1px 2px rgba(43,45,49,0.35); cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>Get Buyer Analysis</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:#FFFFFF !important; color:#2B2D31 !important; border:0.5px solid rgba(85, 85, 90, 0.25) !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-decoration:none; cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>View Floor Plans</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </a>
         </div>
 
-        <!-- 11. Quick Decision Signals -->
-        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.5rem 0.5rem; font-size:0.8rem; font-weight:700; color:#374151;">
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#1B5E20;"><span style="font-weight:800;">✓</span> 83% Open Space</div>
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#1B5E20;"><span style="font-weight:800;">✓</span> Core Whitefield</div>
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#B76E00;"><span style="font-weight:800;">⚠</span> Mar 2028 Possession</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem; background:#FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding:0.85rem; margin-top: 0;">
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Key Highlights</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">83% open area</strong> across 16.5 acres</span></div>
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">~3 km to ITPL</strong> &amp; Purple Metro</span></div>
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">~54k sq.ft.</strong> clubhouse</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Due Diligence</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Borewell Road</strong> peak traffic</span></div>
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Possession date</strong> reconciliation</span></div>
+              <div style="display:flex; align-items:flex-start; gap:0.3rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">~1,300 homes</strong> community density</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
-<div class="prop-hero-grid" style="align-items: stretch; gap: 36px;"><div class="ak-gallery-wrapper" id="akHeroGallery" style="display: flex; flex-direction: column; height: 100%; min-height: 0;"><div class="ak-main-img-box" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="flex: 1; aspect-ratio: auto !important; min-height: 0; position: relative;"><img id="akMainHeroImage" src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Main View" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"><video id="akMainHeroVideo" style="display:none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" muted="" loop="" playsinline=""></video><button class="ak-gallery-nav prev" aria-label="Previous image" onclick="event.stopPropagation(); akGalleryPrev();"><i data-feather="chevron-left"></i></button><button class="ak-gallery-nav next" aria-label="Next image" onclick="event.stopPropagation(); akGalleryNext();"><i data-feather="chevron-right"></i></button></div><div class="ak-gallery-bottom-bar"><div class="ak-thumb-strip"><button class="ak-thumb-btn active" onclick="akGallerySelect(0)" aria-label="View photo 1"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Wide Pool Aerial View"></button><button class="ak-thumb-btn" onclick="akGallerySelect(1)" aria-label="View photo 2"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_night_highway.webp?v=1791220494" alt="Night Highway Elevation View"></button><button class="ak-thumb-btn" onclick="akGallerySelect(2)" aria-label="View photo 3"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp?v=1791220494" alt="Day Lagoon View"></button><button class="ak-thumb-btn" onclick="akGallerySelect(3)" aria-label="View photo 4"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_sunset_pool.webp?v=1791220494" alt="Sunset Pool Deck View"></button><button class="ak-thumb-btn" onclick="akGallerySelect(4)" aria-label="View photo 5"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_twilight_courtyard.webp?v=1791220494" alt="Twilight Courtyard View"></button><button class="ak-thumb-btn" onclick="akGallerySelect(5)" aria-label="Play video" style="position:relative;"><img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.08);"><i data-feather="play-circle" style="color:#FFF; width:24px; height:24px;"></i></div></button></div><button class="ak-view-all-text-btn" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="background:#2F3B42; color:#FFF; border:none; padding:0.55rem 1.15rem; font-size:0.9rem; font-weight:600; font-family:'Manrope',sans-serif; border-radius: 4px; cursor:pointer; box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1); transition:background 0.2s ease;" onmouseover="this.style.background='#2F3B42'" onmouseout="this.style.background='#2F3B42'">View all photos →</button></div></div><div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:flex-start; padding-top:0; height: 100%;">
+<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
+<div class="ak-hero-editorial-gallery" id="akHeroGallery">
+  <div class="ak-editorial-media-canvas" onclick="if(window.akGalleryMedia &amp;&amp; window.akGalleryMedia[window.akGalleryIndex] &amp;&amp; (window.akGalleryMedia[window.akGalleryIndex].type==='video'||window.akGalleryMedia[window.akGalleryIndex].type==='youtube')){ return; } openAkLightbox(window.akGalleryIndex || 0);">
+    <img id="akMainHeroImage" src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Wide Pool Aerial View">
+    <video id="akMainHeroVideo" style="display:none; width:100%; height:100%; object-fit:cover;" controls="" playsinline="" preload="metadata"></video>
+    <iframe id="akMainHeroIframe" src="" style="display:none; position:absolute; inset:0; width:100%; height:100%; border:none; z-index:2;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+  </div>
 
-  <div class="ak-info-header" style="margin-bottom:16px;">
-    <h2 class="ak-info-title" style="margin-top:-6px; margin-bottom:12px; line-height:1.1; font-size:clamp(1.5rem, 1rem + 0.8vw, 1.95rem);">SUMADHURA FOLIUM</h2>
+  <div class="ak-editorial-top-left">
+    <div class="ak-editorial-tag">SUMADHURA FOLIUM · WHITEFIELD</div>
+    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">06</span></div>
+    <div class="ak-editorial-line"></div>
+  </div>
+
+  <div class="ak-editorial-top-right">
+    <button type="button" class="ak-editorial-nav-btn" aria-label="Previous slide" onclick="event.stopPropagation(); akGalleryPrev();">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+    <button type="button" class="ak-editorial-nav-btn" aria-label="Next slide" onclick="event.stopPropagation(); akGalleryNext();">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+
+  <div class="ak-editorial-bottom-strip">
+    <div class="ak-editorial-thumbs-row">
+      <button type="button" class="ak-editorial-thumb active" onclick="event.stopPropagation(); akGallerySelect(0);" aria-label="View photo 1">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Wide Pool Aerial View">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(1);" aria-label="View photo 2">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_night_highway.webp?v=1791220494" alt="Night Highway Elevation View">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(2);" aria-label="View photo 3">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp?v=1791220494" alt="Day Lagoon View">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(3);" aria-label="View photo 4">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_sunset_pool.webp?v=1791220494" alt="Sunset Pool Deck View">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(4);" aria-label="View photo 5">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_twilight_courtyard.webp?v=1791220494" alt="Twilight Courtyard View">
+      </button>
+      <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); akGallerySelect(5);" aria-label="Play project walkthrough video" style="position:relative;">
+        <img src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Video">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.45);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg>
+        </div>
+      </button>
+    </div>
+
+    <div class="ak-editorial-gallery-trigger">
+      <div class="ak-editorial-divider"></div>
+      <button type="button" class="ak-editorial-view-btn" onclick="event.stopPropagation(); openAkLightbox(window.akGalleryIndex || 0);" aria-label="View all gallery photos">
+        <span>View gallery</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
+
+  <div class="ak-info-header" style="margin-bottom:8px;">
+    <h2 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; text-transform:none;">Sumadhura Folium</h2>
     <div class="ak-info-meta" style="font-size:0.95rem; color:var(--prop-navy); display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;">
-      <span style="white-space:nowrap;">~3 km from ITPL, Whitefield</span>
+      <span style="white-space:nowrap; display:inline-flex; align-items:center; gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Borewell Road, Whitefield, Bengaluru</span></span>
     </div>
   </div>
 
-  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:0.5px solid #FAFAFA; border-radius: 4px; box-shadow:0 2px 8px rgba(15,31,61,0.04); cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(15,31,61,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(15,31,61,0.04)';">
-    <div style="display:flex; align-items:baseline; gap:0.2rem;">
-      <span style="font-size:1.75rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.9</span>
-      <span style="font-size:0.9rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">/5</span>
+  <div onclick="window.scrollToVerdict &amp;&amp; window.scrollToVerdict(event)" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(213,209,200,0.85); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#804526';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
+    <div style="display:flex; align-items:baseline; gap:0.15rem;">
+      <span style="font-size:1.55rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.9</span>
+      <span style="font-size:0.82rem; color:#374151; font-weight:500;">/5</span>
     </div>
-    <div style="width:1px; height:32px; background:#FAFAFA;"></div>
+    <div style="width:1px; height:26px; background:rgba(213,209,200,0.8);"></div>
     <div style="display:flex; flex-direction:column; justify-content:center;">
-      <div style="display:flex; align-items:center; gap:0.35rem; font-size:0.65rem; font-weight: 400; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65; margin-bottom:0.1rem; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">acre&amp;key SCORE <i data-feather="info" style="width:12px; height:12px; opacity:0.8; margin-bottom:1px;"></i></div>
-      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.21rem; color:#2B2D31; line-height:1;">Core Whitefield Family Pick</div>
+      <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.12rem;">
+        <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#804526; font-family:'Cormorant Garamond', serif; text-transform:uppercase;"><span class="brand-inline-text" style="font-weight:400 !important; text-transform:lowercase !important; font-size:1.25em !important; letter-spacing:normal !important;">acre&amp;key</span> ASSESSMENT</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.15rem; color:#2B2D31; line-height:1;">Core Whitefield Family Pick</div>
     </div>
   </div>
 
-  <div class="ak-info-pricing" style="margin-bottom:8px; display:flex; flex-direction:column; gap:0;">
-    <div style="display:flex; align-items:baseline; gap:0.5rem;">
-      <span style="font-family:'Cormorant Garamond', serif; font-size: 2.16rem; line-height:1; color:var(--prop-navy);">₹2.45 - 4.04 Cr</span>
-      <span style="display:inline-flex; align-items:center;">
-        <span style="font-size:1rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">(₹15.9K / sq.ft.)</span>
-        <div class="ak-tooltip-wrapper" style="margin-left:6px; cursor:pointer;">
-          <i data-feather="info" style="width:14px; height:14px; color:var(--prop-navy); opacity:0.4; margin-bottom:-2px;"></i>
-          <span class="ak-tooltip-content">Information compiled from developer/RERA records and market checks. Indicative all-inclusive rate includes base rate, PLC, floor rise, parking, clubhouse, and infrastructure charges.</span>
-        </div>
-      </span>
+  <!-- Editorial Pricing Strip -->
+  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid #FAFAFA; border-bottom:0.5px solid #FAFAFA; padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <span style="font-size:1.48rem; font-weight:700; color:#2B2D31; letter-spacing:-0.01em; line-height:1.2;">₹2.45 – 4.04 Cr</span>
+    <span style="font-size:1.25rem; font-weight:400; color:#374151; margin:0 0.75rem; user-select:none;">|</span>
+    <span style="font-size:1.1rem; font-weight:500; color:#374151; line-height:1.2;">₹15.9 K/sq.ft*</span>
+  </div>
+
+  <!-- Configuration & Sizing Strip -->
+  <div class="ak-info-facts" style="display:flex; align-items:center; flex-wrap:wrap; gap:1.25rem; border-top:none !important; padding-top:0 !important; margin-bottom:10px; font-family:'Manrope', sans-serif;">
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#374151; font-family:'Cormorant Garamond', serif;">CONFIG</span>
+      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">3 &amp; 4 BHK</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#374151; font-family:'Cormorant Garamond', serif;">SIZE</span>
+      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">1,515–2,435 sq.ft.</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#374151; font-family:'Cormorant Garamond', serif;">POSSESSION</span>
+      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">Mar 2028</span>
     </div>
   </div>
 
-  <div class="ak-info-facts" style="display:flex; align-items:center; gap:2.5rem; margin-bottom:16px;">
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">CONFIG</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">3 &amp; 4 BHK</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">SIZE</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">1,515 - 2,435 sq.ft.</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">POSSESSION</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">Mar 2028</span>
-    </div>
-  </div>
-
-  <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:1.5rem; margin-bottom:16px;">
-    <a href="#" class="sd-btn-gold" onclick="window.openModal(); return false;" style="text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
-      Get Analysis
+  <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:0.85rem; margin-bottom:10px;">
+    <a href="#" class="sd-btn-gold ak-hero-btn-primary" data-no-modal="true" onclick="window.openModal('analysis'); return false;" style="background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; text-shadow:0 1px 2px rgba(43,45,49,0.35);">
+      <span>Get Buyer Analysis</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
-    <a href="#floor-plans" class="sd-btn-gold" onclick="window.scrollToFloorPlans(event);" style="background: transparent !important; color: var(--prop-navy) !important; border: 0.5px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
-      View Floor Plans
+    <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="border:0.5px solid rgba(85, 85, 90, 0.2) !important;">
+      <span>View Floor Plans</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
     </a>
   </div>
 
-  <div class="ak-info-insight" style="background:var(--white); border-radius: 4px; padding:1.15rem 1.25rem; margin-bottom:0; border:0.5px solid rgba(221, 215, 207, 0.35);">
-    <div class="ak-view-row">
-      <div class="ak-view-col">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.35rem;">
-          <i data-feather="check-circle" style="color:#166534; width:16px; height:16px; stroke-width:2;"></i>
-          <span style="font-family:var(--font-body); font-weight:700; color:var(--obsidian-black); font-size:0.9rem;">Why we like it</span>
-        </div>
-        <div style="font-family:var(--font-body); font-size:0.82rem; color:var(--deep-slate); line-height:1.5; padding-left:24px;">
-          <div style="margin-bottom:0.15rem;">• Core Whitefield location</div>
-          <div style="margin-bottom:0.15rem;">• ~3 km to ITPL &amp; Metro</div>
-          <div>• 83% open space</div>
+  <div class="ak-info-insight" style="background:#FFFFFF; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:0.5px solid rgba(85, 85, 90, 0.2); box-shadow:none;">
+    <div class="ak-view-row" style="display:flex; align-items:stretch; gap:1.25rem;">
+      <!-- Column 1: Highlights -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Key Highlights</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">83% open area</strong> across 16.5 acres</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">~3 km to ITPL</strong> &amp; Purple Metro</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">~54k sq.ft.</strong> clubhouse</span>
+          </div>
         </div>
       </div>
-      <div class="ak-view-divider" style="background:rgba(213, 209, 200,0.25);"></div>
-      <div class="ak-view-col">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.35rem;">
-          <i data-feather="alert-triangle" style="color:#C2410C; width:16px; height:16px; stroke-width:2;"></i>
-          <span style="font-family:var(--font-body); font-weight:700; color:var(--obsidian-black); font-size:0.9rem;">Watch</span>
-        </div>
-        <div style="font-family:var(--font-body); font-size:0.82rem; color:var(--deep-slate); line-height:1.5; padding-left:24px;">
-          <div style="margin-bottom:0.15rem;">• Peak-hour congestion</div>
-          <div>• Mar 2028 delivery</div>
+
+      <!-- Divider -->
+      <div class="ak-view-divider" style="width:1px; background:rgba(85, 85, 90, 0.15); flex-shrink:0; margin:0 0.1rem;"></div>
+
+      <!-- Column 2: Watch -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Due Diligence</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">Borewell Road</strong> peak traffic</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">Possession date</strong> reconciliation</span>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;">
+            <span style="color:#804526; font-weight:700;">•</span>
+            <span><strong style="color:#2B2D31;">~1,300 homes</strong> density</span>
+          </div>
         </div>
       </div>
     </div>
@@ -627,7 +1048,43 @@ html { scroll-behavior: smooth; }
 
 </div>
 </div>
-<div class="prop-snapshot-strip-v2"><div class="prop-snapshot-grid-v2"><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="maximize-2" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">16.5</span><span class="prop-snap-lbl-v2">Acres Land Parcel</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="sun" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">83%</span><span class="prop-snap-lbl-v2">Open Space</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="layers" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">7</span><span class="prop-snap-lbl-v2">Towers</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="home" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">~1,300</span><span class="prop-snap-lbl-v2">Units</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="coffee" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">~54,000</span><span class="prop-snap-lbl-v2">sq.ft. Clubhouse</span></div></div></div></div></div></section><div class="prop-section-nav-sticky"><div class="prop-container">
+
+<div class="prop-snapshot-strip-v2">
+  <div class="prop-glance-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <span class="prop-glance-tag">PROPERTY AT A GLANCE</span>
+      <span class="prop-glance-rule"></span>
+    </div>
+    <div class="prop-glance-footnote" style="margin-top:0; font-size:0.72rem; color:#374151; font-family:'Manrope', sans-serif; font-weight:500;">
+      <sup class="prop-glance-sup">1</sup> Sources: Developer disclosures &amp; project documents
+    </div>
+  </div>
+
+  <div class="prop-glance-grid">
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">16.5</span>
+      <span class="prop-glance-lbl">ACRES</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">7</span>
+      <span class="prop-glance-lbl">TOWERS</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~1,300</span>
+      <span class="prop-glance-lbl">HOMES</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">83%</span>
+      <span class="prop-glance-lbl">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~54,000</span>
+      <span class="prop-glance-lbl">SQ.FT. CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
+    </div>
+  </div>
+</div>
+</div>
+</section><div class="prop-section-nav-sticky"><div class="prop-container">
 <div class="prop-nav-inner desktop-only-nav">
 <a href="#overview" class="local-nav-link active">Overview</a>
 <a href="#verdict" class="local-nav-link">Verdict</a>
@@ -2422,24 +2879,380 @@ function copyReraNumber(text, btnEl) {
 </script>
 <style>.ak-share-option:hover { background-color: var(--prop-bg-warm) !important; }</style>
 
+<!-- AcreNKey Enhanced Architectural Lightbox Modal -->
+<style id="ak-lightbox-enhanced-styles">
+  .ak-lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: #000000;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    overflow: hidden;
+    user-select: none;
+  }
+  .ak-lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .ak-lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 10, 11, 0.08) 0%, transparent 100%);
+    z-index: 1;
+  }
+  .ak-lb-ambient {
+    position: absolute;
+    width: 75vw;
+    height: 75vh;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    filter: blur(100px);
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+  .ak-lightbox-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    background: linear-gradient(180deg, rgba(10, 10, 11, 0.08) 0%, transparent 100%);
+  }
+  .ak-lb-brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .ak-lb-brand-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+  .ak-lb-brand-dot {
+    color: #8C6734;
+    font-size: 1rem;
+  }
+  .ak-lb-brand-sub {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .ak-lb-counter-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .ak-lb-counter-sep {
+    color: #8C6734;
+    font-weight: 400;
+  }
+  .ak-lightbox-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .ak-lb-action-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .ak-lb-action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    transform: scale(1.06);
+  }
+  .ak-lb-action-btn.close-btn:hover {
+    background: rgba(220, 53, 69, 0.3);
+    border-color: rgba(220, 53, 69, 0.5);
+    transform: rotate(90deg);
+  }
+  .ak-lightbox-body {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    min-height: 0;
+  }
+  .ak-lb-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 15;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+  }
+  .ak-lb-nav-btn.prev { left: 2.2rem; }
+  .ak-lb-nav-btn.next { right: 2.2rem; }
+  .ak-lb-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 8px 25px rgba(140, 103, 52, 0.45);
+  }
+  .ak-lb-stage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 240px);
+    position: relative;
+  }
+  .ak-lb-media-viewport {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    position: relative;
+  }
+  #akLbMainImg, #akLbMainVideo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .ak-lb-caption-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.4rem 1.15rem;
+    border-radius: 4px;
+    background: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+  }
+  .ak-lb-tag-pill {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+  .ak-lb-title-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+  .ak-lightbox-footer {
+    position: relative;
+    z-index: 10;
+    padding: 0.85rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(10, 10, 11, 0.08) 0%, transparent 100%);
+  }
+  .ak-lb-thumb-tray {
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 6px 8px;
+    box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+    display: inline-flex;
+    max-width: 90vw;
+  }
+  .ak-lb-thumb-strip {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 2px;
+  }
+  .ak-lb-thumb-strip::-webkit-scrollbar { display: none; }
+  .ak-lb-thumb {
+    width: 80px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    opacity: 0.45;
+    transition: all 0.22s ease;
+    cursor: pointer;
+    position: relative;
+    background: #2B2D31;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  .ak-lb-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ak-lb-thumb:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+  .ak-lb-thumb.active {
+    opacity: 1;
+    border-color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1);
+  }
+  .ak-lb-footer-hint {
+    margin-top: 0.55rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .ak-lb-footer-hint kbd {
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-family: inherit;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  @media (max-width: 768px) {
+    .ak-lightbox-header { padding: 1rem; }
+    .ak-lb-brand-sub { display: none; }
+    .ak-lb-brand-dot { display: none; }
+    .ak-lightbox-body { padding: 0 1rem; }
+    .ak-lb-nav-btn { width: 40px; height: 40px; }
+    .ak-lb-nav-btn.prev { left: 0.5rem; }
+    .ak-lb-nav-btn.next { right: 0.5rem; }
+    .ak-lb-footer-hint { display: none; }
+    .ak-lb-thumb { width: 56px; height: 40px; }
+  }
+</style>
+
 <div class="ak-lightbox-modal" id="akLightbox" tabindex="-1" role="dialog" aria-modal="true" aria-label="Image gallery">
   <div class="ak-lightbox-overlay" onclick="closeAkLightbox()"></div>
+  <div class="ak-lb-ambient" id="akLbAmbient"></div>
+
   <div class="ak-lightbox-header">
-    <div class="ak-lightbox-counter"><span id="akLbCurrent">1</span> / <span id="akLbTotal">4</span></div>
+    <div class="ak-lb-brand-wrap">
+      <span class="ak-lb-brand-title">Sumadhura Folium</span>
+      <span class="ak-lb-brand-dot">·</span>
+      <span class="ak-lb-brand-sub">Borewell Road, Whitefield, Bengaluru</span>
+    </div>
+
+    <div class="ak-lb-counter-pill">
+      <span id="akLbCurrent">01</span>
+      <span class="ak-lb-counter-sep">/</span>
+      <span id="akLbTotal">06</span>
+    </div>
+
     <div class="ak-lightbox-actions">
-      <button class="ak-lb-action" onclick="closeAkLightbox()" aria-label="Close gallery"><i data-feather="x"></i></button>
+      <button type="button" class="ak-lb-action-btn" onclick="toggleLbFullscreen()" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+        <svg id="akLbFsIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+      <button type="button" class="ak-lb-action-btn close-btn" onclick="closeAkLightbox()" aria-label="Close Gallery" title="Close (Esc)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
   </div>
+
   <div class="ak-lightbox-body">
-    <button class="ak-lb-nav prev" aria-label="Previous image" onclick="akLbPrev()"><i data-feather="chevron-left"></i></button>
-    <div class="ak-lb-img-wrapper">
-      <img id="akLbMainImg" src="" alt="Full view">
-      <video id="akLbMainVideo" style="display: none; width: 100%; height: 100%; object-fit: contain;" controls="" playsinline=""></video>
+    <button type="button" class="ak-lb-nav-btn prev" aria-label="Previous image" onclick="akLbPrev()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+
+    <div class="ak-lb-stage-container">
+      <div class="ak-lb-media-viewport" id="akLbMediaViewport">
+        <img id="akLbMainImg" src="../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494" alt="Sumadhura Folium Full View">
+        <video id="akLbMainVideo" style="display: none; width: 100%; height: 100%; object-fit: contain;" controls="" playsinline=""></video>
+        <iframe id="akLbMainIframe" src="" style="display: none; width: 100%; height: 100%; max-width: 960px; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+      </div>
+
+      <div class="ak-lb-caption-row">
+        <span class="ak-lb-tag-pill" id="akLbCategory">AERIAL</span>
+        <span class="ak-lb-title-text" id="akLbTitle">Wide Pool Aerial View</span>
+      </div>
     </div>
-    <button class="ak-lb-nav next" aria-label="Next image" onclick="akLbNext()"><i data-feather="chevron-right"></i></button>
+
+    <button type="button" class="ak-lb-nav-btn next" aria-label="Next image" onclick="akLbNext()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
   </div>
+
   <div class="ak-lightbox-footer">
-    <div class="ak-lb-thumb-strip" id="akLbThumbStrip">
+    <div class="ak-lb-thumb-tray">
+      <div class="ak-lb-thumb-strip" id="akLbThumbStrip">
+        <!-- Dynamically generated -->
+      </div>
+    </div>
+    <div class="ak-lb-footer-hint">
+      <span>Navigate with <kbd>←</kbd> <kbd>→</kbd> keys · Press <kbd>Esc</kbd> to close</span>
     </div>
   </div>
 </div>
@@ -2447,34 +3260,54 @@ function copyReraNumber(text, btnEl) {
 <script>
 window.akGalleryIndex = 0;
 const akGalleryMedia = [
-  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494', alt: 'Wide Pool Aerial View' },
-  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_night_highway.webp?v=1791220494', alt: 'Night Highway Elevation View' },
-  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp?v=1791220494', alt: 'Day Lagoon View' },
-  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_sunset_pool.webp?v=1791220494', alt: 'Sunset Pool Deck View' },
-  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_twilight_courtyard.webp?v=1791220494', alt: 'Twilight Courtyard View' },
-  { type: 'video', src: '../../style-guide/assets/sumadhura_folium_walkthrough.mp4?v=1791220494', poster: '../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494', alt: 'Official Walkthrough Video' }
+  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494', alt: 'Wide Pool Aerial View', category: 'Aerial' },
+  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_night_highway.webp?v=1791220494', alt: 'Night Highway Elevation View', category: 'Exterior' },
+  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_day_pool_lagoon.webp?v=1791220494', alt: 'Day Lagoon View', category: 'Amenities' },
+  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_sunset_pool.webp?v=1791220494', alt: 'Sunset Pool Deck View', category: 'Amenities' },
+  { type: 'image', src: '../../style-guide/assets/folium/sumadhura_folium_hero_twilight_courtyard.webp?v=1791220494', alt: 'Twilight Courtyard View', category: 'Masterplan' },
+  { type: 'video', src: '../../style-guide/assets/sumadhura_folium_walkthrough.mp4?v=1791220494', poster: '../../style-guide/assets/folium/sumadhura_folium_hero_pool_aerial_wide.webp?v=1791220494', alt: 'Sumadhura Folium Walkthrough Video', category: 'Video' }
 ];
 
 function updateAkGalleryUI() {
   const media = akGalleryMedia[window.akGalleryIndex];
   const mainImg = document.getElementById('akMainHeroImage');
   const mainVid = document.getElementById('akMainHeroVideo');
-  if (mainImg && mainVid) {
+  const mainIframe = document.getElementById('akMainHeroIframe');
+  if (mainImg) {
     if (media.type === 'video') {
+      if (mainIframe) { mainIframe.style.display = 'none'; mainIframe.src = ''; }
       mainImg.style.display = 'none';
-      mainVid.style.display = 'block';
-      mainVid.src = media.src;
-      mainVid.poster = media.poster || '';
-      mainVid.play().catch(e => console.log(e));
+      if (mainVid) {
+        mainVid.style.display = 'block';
+        if (!mainVid.src || mainVid.src.indexOf('sumadhura_folium_walkthrough.mp4') === -1) {
+          mainVid.src = media.src;
+          mainVid.poster = media.poster || '';
+        }
+        mainVid.play().catch(e => console.log(e));
+      }
     } else {
-      mainVid.style.display = 'none';
-      mainVid.pause();
+      if (mainVid) {
+        mainVid.style.display = 'none';
+        mainVid.pause();
+      }
+      if (mainIframe) {
+        mainIframe.style.display = 'none';
+        mainIframe.src = '';
+      }
       mainImg.style.display = 'block';
       mainImg.src = media.src;
       mainImg.alt = media.alt;
     }
   }
-  const thumbs = document.querySelectorAll('.ak-thumb-btn');
+  const slideNum = document.getElementById('akHeroSlideNum');
+  if (slideNum) {
+    slideNum.textContent = String(window.akGalleryIndex + 1).padStart(2, '0');
+  }
+  const slideTotal = document.getElementById('akHeroSlideTotal');
+  if (slideTotal) {
+    slideTotal.textContent = String(akGalleryMedia.length).padStart(2, '0');
+  }
+  const thumbs = document.querySelectorAll('.ak-editorial-thumb, .ak-thumb-btn');
   thumbs.forEach((btn, idx) => {
     if(idx === window.akGalleryIndex) btn.classList.add('active');
     else btn.classList.remove('active');
@@ -2497,82 +3330,140 @@ function akGallerySelect(idx) {
 }
 
 let akLbIsOpen = false;
-function openAkLightbox(startIndex) {
-  window.akGalleryIndex = startIndex;
+window.openAkLightbox = function(startIndex) {
+  window.akGalleryIndex = startIndex || 0;
   akLbIsOpen = true;
-  document.getElementById('akLightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-  generateLbThumbs();
-  updateLbUI();
-  document.getElementById('akLightbox').focus();
-  if(window.feather) window.feather.replace();
-}
+  var lb = document.getElementById('akLightbox');
+  if (lb) {
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    generateLbThumbs();
+    updateLbUI();
+    lb.focus();
+    if(window.feather) window.feather.replace();
+  }
+};
 
-function closeAkLightbox() {
+window.closeAkLightbox = function() {
   akLbIsOpen = false;
-  document.getElementById('akLightbox').classList.remove('active');
-  document.body.style.overflow = '';
-  const mainVid = document.getElementById('akMainHeroVideo');
+  var lb = document.getElementById('akLightbox');
+  if (lb) {
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  var lbIframe = document.getElementById('akLbMainIframe');
+  if (lbIframe) { lbIframe.style.display = 'none'; lbIframe.src = ''; }
+  var mainVid = document.getElementById('akMainHeroVideo');
   if (mainVid) mainVid.pause();
-  const lbVid = document.getElementById('akLbMainVideo');
+  var lbVid = document.getElementById('akLbMainVideo');
   if (lbVid) lbVid.pause();
-}
+};
 
-function updateLbUI() {
-  const media = akGalleryMedia[window.akGalleryIndex];
-  const lbImg = document.getElementById('akLbMainImg');
-  const lbVid = document.getElementById('akLbMainVideo');
-  if (lbImg && lbVid) {
+window.toggleLbFullscreen = function() {
+  var lb = document.getElementById('akLightbox');
+  if (!document.fullscreenElement) {
+    if (lb.requestFullscreen) lb.requestFullscreen();
+    else if (lb.webkitRequestFullscreen) lb.webkitRequestFullscreen();
+  } else {
+    if (document.exitFullscreen) document.exitFullscreen();
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  }
+};
+
+window.updateLbUI = function() {
+  var media = akGalleryMedia[window.akGalleryIndex];
+  var lbImg = document.getElementById('akLbMainImg');
+  var lbVid = document.getElementById('akLbMainVideo');
+  var lbIframe = document.getElementById('akLbMainIframe');
+  var ambient = document.getElementById('akLbAmbient');
+
+  if (lbImg) {
     if (media.type === 'video') {
+      if (lbIframe) { lbIframe.style.display = 'none'; lbIframe.src = ''; }
       lbImg.style.display = 'none';
-      lbVid.style.display = 'block';
-      lbVid.src = media.src;
-      lbVid.play().catch(e => console.log(e));
+      if (lbVid) {
+        lbVid.style.display = 'block';
+        if (!lbVid.src || lbVid.src.indexOf('sumadhura_folium_walkthrough.mp4') === -1) {
+          lbVid.src = media.src;
+        }
+        lbVid.poster = media.poster || '';
+        lbVid.play().catch(function(e) {});
+      }
+      if (ambient && media.poster) {
+        ambient.style.backgroundImage = 'url("' + media.poster + '")';
+      }
     } else {
-      lbVid.style.display = 'none';
-      lbVid.pause();
+      if (lbVid) {
+        lbVid.style.display = 'none';
+        lbVid.pause();
+      }
+      if (lbIframe) {
+        lbIframe.style.display = 'none';
+        lbIframe.src = '';
+      }
       lbImg.style.display = 'block';
       lbImg.src = media.src;
+      lbImg.alt = media.alt || '';
+      if (ambient) {
+        ambient.style.backgroundImage = 'url("' + media.src + '")';
+      }
     }
   }
-  document.getElementById('akLbCurrent').textContent = window.akGalleryIndex + 1;
-  document.getElementById('akLbTotal').textContent = akGalleryMedia.length;
-  const lbThumbs = document.querySelectorAll('.ak-lb-thumb');
-  lbThumbs.forEach((t, i) => {
-    if (i === window.akGalleryIndex) t.classList.add('active');
-    else t.classList.remove('active');
-  });
-}
 
-function akLbNext() {
+  var cur = document.getElementById('akLbCurrent');
+  var tot = document.getElementById('akLbTotal');
+  if (cur) cur.textContent = String(window.akGalleryIndex + 1).padStart(2, '0');
+  if (tot) tot.textContent = String(akGalleryMedia.length).padStart(2, '0');
+
+  var catEl = document.getElementById('akLbCategory');
+  if (catEl) catEl.textContent = (media.category || 'GALLERY').toUpperCase();
+
+  var titleEl = document.getElementById('akLbTitle');
+  if (titleEl) titleEl.textContent = media.alt || '';
+
+  var lbThumbs = document.querySelectorAll('.ak-lb-thumb');
+  lbThumbs.forEach(function(t, i) {
+    if (i === window.akGalleryIndex) {
+      t.classList.add('active');
+      t.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    } else {
+      t.classList.remove('active');
+    }
+  });
+};
+
+window.akLbNext = function() {
   window.akGalleryIndex = (window.akGalleryIndex + 1) % akGalleryMedia.length;
   updateLbUI();
-}
+  updateAkGalleryUI();
+};
 
-function akLbPrev() {
+window.akLbPrev = function() {
   window.akGalleryIndex = (window.akGalleryIndex - 1 + akGalleryMedia.length) % akGalleryMedia.length;
   updateLbUI();
-}
+  updateAkGalleryUI();
+};
 
 function generateLbThumbs() {
-  const strip = document.getElementById('akLbThumbStrip');
+  var strip = document.getElementById('akLbThumbStrip');
   if (!strip) return;
   strip.innerHTML = '';
-  akGalleryMedia.forEach((media, idx) => {
-    const btn = document.createElement('button');
-    btn.className = 'ak-lb-thumb';
-    btn.onclick = () => { window.akGalleryIndex = idx; updateLbUI(); };
+  akGalleryMedia.forEach(function(media, idx) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ak-lb-thumb' + (idx === window.akGalleryIndex ? ' active' : '');
+    btn.setAttribute('aria-label', media.alt || ('Slide ' + (idx + 1)));
+    btn.onclick = function() { window.akGalleryIndex = idx; updateLbUI(); updateAkGalleryUI(); };
     if (media.type === 'video') {
-      btn.style.position = 'relative';
-      btn.innerHTML = `<img src="${media.poster}" alt="${media.alt}"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.08);"><i data-feather="play-circle" style="color:#FFF; width:24px; height:24px;"></i></div>`;
+      btn.innerHTML = '<img src="' + (media.poster || media.src) + '" alt="' + media.alt + '"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.45);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.5)"/><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"/></svg></div>';
     } else {
-      btn.innerHTML = `<img src="${media.src}" alt="${media.alt}">`;
+      btn.innerHTML = '<img src="' + media.src + '" alt="' + media.alt + '">';
     }
     strip.appendChild(btn);
   });
 }
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', function(e) {
   if (!akLbIsOpen) return;
   if (e.key === 'Escape') closeAkLightbox();
   if (e.key === 'ArrowRight') akLbNext();
