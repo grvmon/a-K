@@ -493,14 +493,44 @@ img[style*="border-radius: 50%"] {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "RealEstateAgent",
+      "@type": [
+        "RealEstateAgent",
+        "Organization"
+      ],
       "@id": "https://acrenkey.com/#organization",
-      "name": "Acre&Key",
+      "name": "acre&key",
       "url": "https://acrenkey.com/",
       "logo": "https://acrenkey.com/style-guide/assets/images/logo.png",
       "image": "https://acrenkey.com/style-guide/assets/images/logo.png",
-      "description": "4 BHK in Prestige Evergreen, Varthur, Bangalore. Get floor plans, independent buyer advisory, and exact pricing. Starting from \u20b91.07 Cr.",
-      "address": {"@type": "PostalAddress", "streetAddress": "8th floor, Summit A, Brigade Metropolis, Brigade Metro Rd, Garudachar Palya, Mahadevapura", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "postalCode": "560048", "addressCountry": "IN"}, "hasMap": "https://www.google.com/maps?cid=4303291508446554909", "telephone": "+91-9071693393"
+      "description": "4 BHK in Prestige Evergreen, Varthur, Bangalore. Get floor plans, independent buyer advisory, and exact pricing. Starting from ₹1.07 Cr.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8th floor, Summit A, Brigade Metropolis, Brigade Metro Rd, Garudachar Palya, Mahadevapura",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560048",
+        "addressCountry": "IN"
+      },
+      "hasMap": "https://www.google.com/maps?cid=4303291508446554909",
+      "telephone": "+91-9071693393",
+      "legalName": "Acrenkey Realty LLP",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Karnataka RERA Agent Registration",
+        "value": "PRM/KA/RERA/1251/446/AG/260814/007659"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Bengaluru"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/acrenkey/",
+        "https://www.instagram.com/acrenkey/",
+        "https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw",
+        "https://x.com/acreNkey",
+        "https://www.facebook.com/profile.php?id=61589792184848",
+        "https://share.google/GuvhJWg5a66VuIaUT"
+      ]
     },
     {
       "@type": "Review",
