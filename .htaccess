@@ -9,6 +9,10 @@ DirectoryIndex index.html
 # Enable Rewrite Engine for extensionless URLs
 RewriteEngine On
 
+# 301: renamed calculators (brand rules)
+RewriteRule ^calculators/luxury-home-affordability-calculator/?(.*)$ /calculators/hni-home-affordability-calculator/$1 [L,R=301]
+RewriteRule ^calculators/dream-home-timeline-planner/?(.*)$ /calculators/home-buying-timeline-planner/$1 [L,R=301]
+
 # 301 Redirect to strip index.html from URLs
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.html\ HTTP/ [NC]
 RewriteRule ^(([^/]+/)*)index\.html$ /$1 [L,R=301]

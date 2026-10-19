@@ -1,11 +1,19 @@
 <!DOCTYPE html><html lang="en-IN"><head>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MKSRMW9C');</script>
+  <script>
+  /* GTM (also loads GA4, Meta pixel, HubSpot analytics) delayed until first interaction or idle */
+  window.dataLayer=window.dataLayer||[];
+  (function(){var done=false;function load(){if(done)return;done=true;
+    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var j=document.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-MKSRMW9C';
+    document.head.appendChild(j);}
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function(e){window.addEventListener(e,load,{once:true,passive:true});});
+    window.addEventListener('load',function(){setTimeout(function(){('requestIdleCallback' in window)?requestIdleCallback(load,{timeout:2000}):load();},2500);});
+    window.akLoadTracking=load;})();
+  </script>
 
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>68 Property Calculators for Bengaluru Buyers | acre&amp;key</title>
 
@@ -20,7 +28,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="acre&key">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:title" content="Property Calculators for Bengaluru Home Buyers | acre&amp;key">
+  <meta property="og:title" content="68 Property Calculators for Bengaluru Buyers | acre&amp;key">
   <meta property="og:description" content="68 free property calculators for Bengaluru home buyers. Work out home loan EMI, affordability, stamp duty, total buying cost, rental yield, and property tax.">
   <meta property="og:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=1791220494">
   <meta property="og:image:width" content="1200">
@@ -33,7 +41,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@acreNkey">
   <meta name="twitter:creator" content="@acreNkey">
-  <meta name="twitter:title" content="Property Calculators for Bengaluru Home Buyers | acre&amp;key">
+  <meta name="twitter:title" content="68 Property Calculators for Bengaluru Buyers | acre&amp;key">
   <meta name="twitter:description" content="68 free property calculators for Bengaluru home buyers. Work out home loan EMI, affordability, stamp duty, total buying cost, rental yield, and property tax.">
   <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=1791220494">
   <meta name="twitter:image:alt" content="acre&amp;key property calculators directory">
@@ -45,11 +53,11 @@
   <link rel="preload" href="../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
 
   <!-- Global Stylesheets -->
-  <link rel="stylesheet" href="../website.min.css?v=20261020_footer_v3">
-  <link rel="stylesheet" href="../lead-form.min.css?v=1791755621">
-  <link rel="stylesheet" href="../abha-form.min.css?v=1791755621">
-  <link rel="stylesheet" href="calculator-design-system.css?v=1792318550">
-  <link rel="stylesheet" href="calculators-hub.css?v=1792318550">
+  <link rel="stylesheet" href="../website.min.css?v=20261020_calc_v4">
+  <link rel="preload" as="style" href="../lead-form.min.css?v=20261020_calc_v4" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="../lead-form.min.css?v=20261020_calc_v4"></noscript>
+  <link rel="preload" as="style" href="../abha-form.min.css?v=20261020_calc_v4" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="../abha-form.min.css?v=20261020_calc_v4"></noscript>
+  <link rel="stylesheet" href="calculator-design-system.css?v=20261020_calc_v4">
+  <link rel="stylesheet" href="calculators-hub.css?v=20261020_calc_v4">
   <style>
     .ak-faq-item[open] > .ak-faq-answer,
     details[open] > .ak-faq-answer,
@@ -201,7 +209,7 @@
     }
     .footer-rera-entity {
       font-size: 0.75rem !important;
-      color: rgba(225, 230, 235, 0.55) !important;
+      color: rgba(225, 230, 235, 0.85) !important;
       line-height: 1.4 !important;
     }
     .footer-social-wrap {
@@ -453,13 +461,13 @@
           "@type": "ListItem",
           "position": 12,
           "name": "Home Buying Timeline Planner",
-          "url": "https://acrenkey.com/calculators/dream-home-timeline-planner/"
+          "url": "https://acrenkey.com/calculators/home-buying-timeline-planner/"
         },
         {
           "@type": "ListItem",
           "position": 13,
           "name": "HNI Home Affordability Calculator",
-          "url": "https://acrenkey.com/calculators/luxury-home-affordability-calculator/"
+          "url": "https://acrenkey.com/calculators/hni-home-affordability-calculator/"
         },
         {
           "@type": "ListItem",
@@ -813,7 +821,6 @@
       "legalName": "Acrenkey Realty LLP",
       "url": "https://acrenkey.com/",
       "logo": "https://acrenkey.com/style-guide/assets/logo.jpg",
-      "email": "hello@acrenkey.com",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Karnataka RERA Agent Registration",
@@ -902,7 +909,7 @@
 </script>
 
   <!-- Typography: Cormorant Garamond 400 + Manrope -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Geographic & Regional Tags -->
   <meta name="geo.region" content="IN-KA">
@@ -946,7 +953,7 @@
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
-              <input type="text" id="calcSearchInput" class="ak-hub-search-input" placeholder="Search calculators, locations, taxes, EMI, ROI..." aria-label="Search calculators">
+              <input type="text" id="calcSearchInput" class="ak-hub-search-input" placeholder="Search calculators, taxes, EMI…" aria-label="Search calculators">
               <button type="button" id="calcSearchClear" class="ak-hub-search-clear" aria-label="Clear search input">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1208,13 +1215,13 @@
               <p class="ak-calc-card-desc">Track true recurring monthly expenses: EMI, maintenance fees, property taxes, and utility bills.</p>
               <a href="monthly-home-ownership-cost-calculator/" class="ak-calc-card-link">Calculate &rarr;</a>
             </li>
-            <li class="ak-calc-card" data-id="luxury-home-affordability-calculator" data-cat="Home Buying">
+            <li class="ak-calc-card" data-id="hni-home-affordability-calculator" data-cat="Home Buying">
               <div class="ak-calc-card-header-flex">
                 <div class="ak-calc-card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
-                <h3 class="ak-calc-card-title"><a href="luxury-home-affordability-calculator/">HNI Home Affordability Calculator</a></h3>
+                <h3 class="ak-calc-card-title"><a href="hni-home-affordability-calculator/">HNI Home Affordability Calculator</a></h3>
               </div>
               <p class="ak-calc-card-desc">Plan HNI asset allocation, portfolio liquidity, and cash flow impact for high-value homes.</p>
-              <a href="luxury-home-affordability-calculator/" class="ak-calc-card-link">Calculate &rarr;</a>
+              <a href="hni-home-affordability-calculator/" class="ak-calc-card-link">Calculate &rarr;</a>
             </li>
           </ul>
         </section>
@@ -1306,13 +1313,13 @@
               <p class="ak-calc-card-desc">Protect your family with the ideal liquid cash buffer before taking on a 20-year mortgage.</p>
               <a href="emergency-fund-calculator/" class="ak-calc-card-link">Calculate &rarr;</a>
             </li>
-            <li class="ak-calc-card" data-id="dream-home-timeline-planner" data-cat="Planning Tools">
+            <li class="ak-calc-card" data-id="home-buying-timeline-planner" data-cat="Planning Tools">
               <div class="ak-calc-card-header-flex">
                 <div class="ak-calc-card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                <h3 class="ak-calc-card-title"><a href="dream-home-timeline-planner/">Home Buying Timeline Planner</a></h3>
+                <h3 class="ak-calc-card-title"><a href="home-buying-timeline-planner/">Home Buying Timeline Planner</a></h3>
               </div>
               <p class="ak-calc-card-desc">Map your monthly savings schedule and target date to reach your down payment milestone.</p>
-              <a href="dream-home-timeline-planner/" class="ak-calc-card-link">Calculate &rarr;</a>
+              <a href="home-buying-timeline-planner/" class="ak-calc-card-link">Calculate &rarr;</a>
             </li>
           </ul>
         </section>
@@ -1450,6 +1457,7 @@
           <div class="ak-hub-section-header">
             <h2 class="ak-hub-section-h2">Tax Calculators</h2>
             <p class="ak-hub-section-desc">Tax deductions, exemptions, and capital gains calculations under the Income Tax Act.</p>
+            <p class="ak-hub-section-note">Tax rules change often. Verify with your CA before acting.</p>
           </div>
           <ul class="ak-calc-grid">
             <li class="ak-calc-card" data-id="rental-income-tax-calculator" data-cat="Tax Calculators">
@@ -1491,6 +1499,7 @@
           <div class="ak-hub-section-header">
             <h2 class="ak-hub-section-h2">Property Evaluation</h2>
             <p class="ak-hub-section-desc">Due diligence scores, builder track record assessments, and layout quality ratings.</p>
+            <p class="ak-hub-section-note">Scores are indicative. Verify title and legal documents with your lawyer before acting.</p>
           </div>
           <ul class="ak-calc-grid">
             <li class="ak-calc-card" data-id="property-risk-assessment-calculator" data-cat="Property Evaluation">
@@ -1925,9 +1934,10 @@
 </footer>
 
   <!-- Scripts -->
-  <script src="../website.min.js?v=20261020_footer_v3"></script>
-  <script src="../lead-form.min.js?v=1791755621"></script>
-  <script src="../abha-form.min.js?v=1791755621"></script>
+  <template id="akCalcCardTpl"><a class="ak-calc-card"><div class="ak-calc-card-header-flex"><div class="ak-calc-card-icon" aria-hidden="true"></div><h3 class="ak-calc-card-title"></h3></div><p class="ak-calc-card-desc"></p><span class="ak-calc-card-link">Calculate &rarr;</span></a></template>
+  <script src="../website.min.js?v=20261020_calc_v4"></script>
+  <script defer src="../lead-form.min.js?v=20261020_calc_v4"></script>
+  <script defer src="../abha-form.min.js?v=20261020_calc_v4"></script>
   
   <!-- Calculator Hub Engine Script -->
   <script>
@@ -2046,9 +2056,9 @@
           featured: false
         },
         {
-          id: "dream-home-timeline-planner",
+          id: "home-buying-timeline-planner",
           name: "Home Buying Timeline Planner",
-          slug: "/calculators/dream-home-timeline-planner/",
+          slug: "/calculators/home-buying-timeline-planner/",
           category: "Planning Tools",
           subCategories: ["Home Buying", "Planning Tools"],
           description: "Map your monthly savings schedule and target date to reach your down payment milestone.",
@@ -2056,9 +2066,9 @@
           featured: false
         },
         {
-          id: "luxury-home-affordability-calculator",
+          id: "hni-home-affordability-calculator",
           name: "HNI Home Affordability Calculator",
-          slug: "/calculators/luxury-home-affordability-calculator/",
+          slug: "/calculators/hni-home-affordability-calculator/",
           category: "Home Buying",
           subCategories: ["Home Buying", "Home Loans & Finance"],
           description: "Plan HNI asset allocation, portfolio liquidity, and cash flow impact for high-value homes.",
@@ -2761,18 +2771,14 @@
 
       // Helper function to create card HTML matching reference mockup
       function renderCard(item, isFeatured = false) {
-        const itemUrl = item.slug.replace(/^\/calculators\//, '');
-        const iconSvg = getCalculatorIconSvg(item);
-        return `
-          <a href="${itemUrl}" class="ak-calc-card ${isFeatured ? 'featured-card' : ''}">
-            <div class="ak-calc-card-header-flex">
-              <div class="ak-calc-card-icon" aria-hidden="true">${iconSvg}</div>
-              <h3 class="ak-calc-card-title">${item.name}</h3>
-            </div>
-            <p class="ak-calc-card-desc">${item.description}</p>
-            <span class="ak-calc-card-link">Calculate &rarr;</span>
-          </a>
-        `;
+        const tpl = document.getElementById('akCalcCardTpl');
+        const card = tpl.content.firstElementChild.cloneNode(true);
+        card.href = item.slug.replace(/^\/calculators\//, '');
+        if (isFeatured) card.classList.add('featured-card');
+        card.querySelector('.ak-calc-card-icon').innerHTML = getCalculatorIconSvg(item);
+        card.querySelector('.ak-calc-card-title').textContent = item.name;
+        card.querySelector('.ak-calc-card-desc').textContent = item.description;
+        return card;
       }
 
       // Dynamic Category Pill Counter
