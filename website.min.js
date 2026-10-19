@@ -23,12 +23,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     window.addEventListener('load', markPageReady);
 }
 
-window.addEventListener('beforeunload', function () {
-    if (!window.location.hash || window.location.hash === '#') {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }
-});
-
 function scrollToHashTarget(smooth) {
     var hash = window.location.hash;
     if (hash && hash.length > 1) {
@@ -44,8 +38,6 @@ function scrollToHashTarget(smooth) {
                 });
             }
         } catch (e) {}
-    } else {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 }
 
@@ -53,8 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.location.hash && window.location.hash !== '#') {
         scrollToHashTarget(false);
         setTimeout(function () { scrollToHashTarget(true); }, 150);
-    } else {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');

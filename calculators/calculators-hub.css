@@ -84,7 +84,7 @@ body.calc-hub-body {
 }
 
 .ak-hub-hero-grid {
-    max-width: 960px;
+    max-width: 100%;
 }
 
 .ak-hub-hero-content {
@@ -1247,9 +1247,15 @@ li.ak-calc-card:hover .ak-calc-card-title a {
     transform: none;
 }
 
-/* Accessible focus ring */
+/* Accessible focus ring - suppressed on mouse/pointer clicks, preserved for keyboard navigation */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
 a:focus-visible, button:focus-visible, input:not(.ak-hub-search-input):focus-visible {
-    outline: 2px solid var(--hub-brass);
+    outline: 2px solid var(--hub-copper, #804526);
     outline-offset: 2px;
 }
 
