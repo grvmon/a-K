@@ -874,3 +874,6 @@ window.addEventListener('hashchange', function () {
         mountAdvisorUnit();
     }
 })();
+
+/* keep advisor bubble above footer */
+;(function(){function i(){var a=document.getElementById("advisorFloatingUnit"),f=document.getElementById("footer");if(!a||!f)return;var b=parseFloat(getComputedStyle(a).bottom)||24,t=0;function u(){t=0;a.style.bottom="";b=parseFloat(getComputedStyle(a).bottom)||24;var o=window.innerHeight-f.getBoundingClientRect().top;o=Math.min(o,window.innerHeight-a.offsetHeight-90-b);a.style.bottom=o>0?(b+o)+"px":""}function s(){t||(t=requestAnimationFrame(u))}addEventListener("scroll",s,{passive:true});addEventListener("resize",s);u()}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",i):i()})();
