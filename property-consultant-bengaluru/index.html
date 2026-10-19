@@ -30,7 +30,7 @@
 <meta name="geo.placename" content="Bengaluru">
 <link rel="preload" href="../style-guide/assets/fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../website.min.css?v=1792500000">
+<link rel="stylesheet" href="../website.min.css?v=1792600000">
 <link rel="stylesheet" href="../lead-form.min.css?v=1791755621">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;family=Manrope:wght@400;500;600;700&amp;family=Josefin+Sans:wght@400&amp;display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;family=Manrope:wght@400;500;600;700&amp;family=Josefin+Sans:wght@400&amp;display=swap"></noscript>
@@ -749,14 +749,6 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .faq-linear-summary
 }
 /* Upgraded Institutional Mobile & Desktop Footer */
 .footer-mission { font-size: 0.9rem; line-height: 1.65; color: rgba(250, 250, 250, 0.85); margin: 0 0 1.25rem 0; }
-.footer-contact-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 1.25rem; }
-.footer-email-link { display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.4s ease; }
-.footer-email-link:hover { color: #E88D67; }
-.footer-email-link svg { stroke: #E88D67; }
-.footer-cta-link { background: none; border: none; padding: 0; color: #E88D67; font-family: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; transition: color 0.4s ease; }
-.footer-cta-link:hover { color: #FFFFFF; }
-.footer-cta-arrow { display: inline-block; transition: transform 0.4s ease; }
-.footer-cta-link:hover .footer-cta-arrow { transform: translateX(3px); }
 .footer-nav-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; }
 .footer-nav-group { min-width: 0; }
 .footer-group-heading { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E88D67; margin-bottom: 0.75rem; white-space: normal; }
@@ -773,10 +765,8 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .faq-linear-summary
 .footer-social-wrap { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.25rem; }
 .footer-social-heading { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); }
 .footer-social-cluster { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.footer-legal-note { border-top: 0.5px solid rgba(255, 255, 255, 0.08); padding-top: 1.25rem; margin: 1.5rem 0 1rem; font-size: 0.76rem; line-height: 1.6; color: rgba(255, 255, 255, 0.45); }
 @media (max-width: 600px) {
   .site-footer { padding: 44px 0 max(110px, calc(90px + env(safe-area-inset-bottom, 24px))) 0 !important; }
-  .footer-contact-row { flex-direction: column; align-items: flex-start; gap: 0.65rem; }
   .footer-nav-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem 0.75rem; }
   .footer-nav-list a { font-size: 0.8rem; line-height: 1.35; }
   .footer-rera-reg strong { font-size: 0.76rem; display: block; word-break: break-all; }
@@ -1408,15 +1398,6 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .faq-linear-summary
         <p class="footer-mission">
           Buyer-first home buying advisory in Bengaluru. We help home buyers, HNI investors and corporate leaders shortlist and check properties with structured due diligence.
         </p>
-        <div class="footer-contact-row">
-          <a href="mailto:hello@acrenkey.com" class="footer-email-link">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            hello@acrenkey.com
-          </a>
-          <button type="button" class="footer-cta-link" onclick="window.openModal &amp;&amp; window.openModal()">
-            Request Advisory Call <span class="footer-cta-arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
         <div class="footer-address-text">
           <strong>Acrenkey Realty LLP</strong><br>
           8th floor, Summit A, Brigade Tech Gardens, Mahadevapura, Whitefield, Bengaluru, Karnataka 560048
@@ -1473,10 +1454,6 @@ main a:focus-visible, .pc-carousel-nav button:focus-visible, .faq-linear-summary
       </div>
     </div>
 
-    <!-- Bottom Legal & Compliance -->
-    <div class="footer-legal-note">
-      General information, not legal advice. Please consult a property lawyer. Tax calculations are indicative only; please verify with your Chartered Accountant before acting.
-    </div>
     <div class="footer-bottom-line">
       <div>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</div>
       <div class="footer-bottom-links">

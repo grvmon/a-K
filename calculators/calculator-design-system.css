@@ -537,7 +537,7 @@
     margin-top: 2rem;
 }
 .ak-faq-item {
-    border-bottom: 1px solid var(--divider, rgba(85, 85, 90, 0.2));
+    border-bottom: 0.5px solid var(--divider, rgba(85, 85, 90, 0.2));
     padding: 1.25rem 0;
 }
 .ak-faq-question {
@@ -550,18 +550,31 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    width: 100%;
+    background: none;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    transition: color 0.4s ease;
 }
-.ak-faq-question .material-symbols-outlined {
-    transition: transform 0.3s ease;
+.ak-faq-question:hover {
     color: var(--text-copper-aaa, #804526);
 }
+.ak-faq-question svg,
+.ak-faq-question .material-symbols-outlined {
+    transition: transform 0.4s ease, color 0.4s ease;
+    color: var(--text-copper-aaa, #804526);
+    fill: var(--text-copper-aaa, #804526);
+    flex-shrink: 0;
+}
+.ak-faq-item.active .ak-faq-question svg,
 .ak-faq-item.active .ak-faq-question .material-symbols-outlined {
     transform: rotate(180deg);
 }
 .ak-faq-answer {
     display: none;
     padding-top: 0.75rem;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--deep-slate, #55555A);
     line-height: 1.6;
 }
@@ -1041,5 +1054,43 @@ blockquote {
     gap: 1.25rem;
     align-items: center;
     flex-wrap: wrap;
+}
+
+/* Sub-calculator footer refinement */
+.footer-links-cluster {
+    margin-bottom: 0.75rem;
+}
+.footer-link-line {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+}
+.footer-link-line a {
+    color: rgba(255, 255, 255, 0.82) !important;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(232, 141, 103, 0.3) !important;
+    text-underline-offset: 4px !important;
+    transition: color 0.4s ease, text-decoration-color 0.4s ease !important;
+}
+.footer-link-line a:hover {
+    color: #E88D67 !important;
+    text-decoration-color: #E88D67 !important;
+}
+.footer-rera-info {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.03);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    max-width: 380px;
+    margin-top: 0.5rem;
+}
+.footer-rera-info strong {
+    color: #FAFAFA;
+    font-weight: 600;
 }
 
