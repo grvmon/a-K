@@ -56,7 +56,7 @@
       "breadcrumb": {
         "@id": "https://acrenkey.com/calculators/total-cost-of-buying-a-home-calculator/#breadcrumb"
       },
-      "dateModified": "2026-10-18T10:00:00+05:30",
+      "datePublished": "2026-08-13T21:42:32+05:30", "dateModified": "2026-10-18T10:00:00+05:30",
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
@@ -83,7 +83,7 @@
       "publisher": {
         "@id": "https://acrenkey.com/#organization"
       },
-      "dateModified": "2026-10-18"
+      "datePublished": "2026-08-13", "dateModified": "2026-10-18"
     },
     {
       "@type": "BreadcrumbList",
@@ -1569,7 +1569,7 @@
                     <div class="akc-stat"><div class="akc-stat-v" id="stEmi">₹ 65,087</div><div class="akc-stat-n" id="stEmiN">Monthly EMI on ₹ 75.00 L</div></div>
                     <div class="akc-stat"><div class="akc-stat-v" id="stInt">₹ 81.21 L</div><div class="akc-stat-n" id="stIntN">Total interest over 20 years</div></div>
                 </div>
-                <div class="akc-alert" id="heroAlert">You must also deduct 1% TDS (₹ 1.00 L) from the seller’s payment. It is not an extra cost.</div>
+                <div class="akc-alert" id="heroAlert">GST is not added for a ready or resale home. Confirm the GST position with your CA. You must also deduct 1% TDS (₹ 1.00 L) from the seller’s payment. It is not an extra cost.</div>
                 </div>
             </section>
         </div>
@@ -1819,7 +1819,7 @@
         <div class="footer-bottom-line">
             <div>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</div>
             <div class="footer-bottom-links">
-                <a href="../../careers">Careers</a>
+                <a href="../../careers/">Careers</a>
                 <span class="footer-dot">•</span>
                 <a href="../../privacy-policy/">Privacy Policy</a>
                 <span class="footer-dot">•</span>
@@ -1836,7 +1836,7 @@
         <div class="footer-bottom-line">
             <div>&copy; 2026 Acrenkey Realty LLP. All rights reserved.</div>
             <div class="footer-bottom-links">
-                <a href="../../careers">Careers</a>
+                <a href="../../careers/">Careers</a>
                 <span class="footer-dot">•</span>
                 <a href="../../privacy-policy/">Privacy Policy</a>
                 <span class="footer-dot">•</span>
@@ -2008,7 +2008,7 @@
         });
         run();
     }
-    function akSet(id, txt) { var e = document.getElementById(id); if (e) e.textContent = txt; }
+    function akSet(id, txt) { var e = document.getElementById(id); if (e && e.textContent !== txt) e.textContent = txt; }
 
     function akRun() {
         var s = akRead();
