@@ -70,8 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const methodologyHref = (basePath || '') + '/#core';
     list.forEach((prop, idx) => {
-      const isReady = prop.possessionCategory === 'Ready to Move';
-      const statusLabel = isReady ? 'Ready to move' : 'Under construction';
       const cardWrap = document.createElement('div');
       cardWrap.className = 'ak-card-anchor';
 
@@ -79,8 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <article class="ak-property-card">
           <div class="ak-card-img-box">
             <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" width="${prop.heroW || 640}" height="${prop.heroH || 320}" ${idx < 3 ? 'loading="eager"' + (idx === 0 ? ' fetchpriority="high"' : '') : 'loading="lazy"'} decoding="async" onload="this.classList.add('is-loaded')" onerror="this.remove()" />
-            <span class="ak-card-dev-badge">${prop.developer}</span>
-            <span class="ak-status-pill ${isReady ? 'is-ready' : 'is-uc'}">${statusLabel}</span>
           </div>
           <div class="ak-card-body">
             <div class="ak-card-header">
