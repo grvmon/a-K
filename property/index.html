@@ -561,7 +561,7 @@
     .page-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.25rem; }
     .props-hero-cta { display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: -0.75rem; }
     .props-hero-btn { min-height: 48px; padding: 0 1.5rem; border: none; border-radius: 4px; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; color: #FFFFFF; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); cursor: pointer; }
-    .props-hero-link { display: inline-flex; align-items: center; min-height: 44px; font-family: 'Manrope', sans-serif; font-size: 0.95rem; font-weight: 600; color: #804526; text-decoration: underline; text-underline-offset: 3px; }
+    .props-hero-link { display: inline-flex; align-items: center; min-height: 44px; font-family: 'Manrope', sans-serif; font-size: 0.85rem; font-weight: 600; color: #804526; text-decoration: underline; text-underline-offset: 3px; }
     .props-search-row { display: flex; gap: 0.6rem; max-width: 760px; margin: 0 auto 1rem auto; }
     .props-search-row .props-search-box { margin: 0; flex: 1; }
     .props-search-input, .props-select-control { font-size: 16px; }
@@ -621,9 +621,27 @@
       body { padding-bottom: 72px; }
       .ak-floating-dossier-btn { display: none !important; }
     }
+  
+    .props-hero-section .props-subtitle { margin-bottom: 1.25rem; }
+    .props-hero-cta { margin-top: 0; flex-direction: column; gap: 0.25rem; }
+    .props-hero-link { min-height: 32px; color: #55555A; text-decoration-color: rgba(85,85,90,0.4); }
+    .props-hero-link::before { content: ''; position: absolute; inset: -6px 0; }
+    .props-hero-link { position: relative; }
+    @media (max-width: 768px) { .props-hero-section { padding-bottom: 1rem; } .props-hero-section nav[aria-label="breadcrumb"] { margin-bottom: 0.25rem !important; } }
+      @media (min-width: 769px) { #filter-drawer .props-drawer-apply, #filter-drawer .props-drawer-head { display: none !important; } }
   </style>
   
   <!-- Schema.org ItemList Markup -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://acrenkey.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Properties", "item": "https://acrenkey.com/property/"}
+    ]
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -755,19 +773,16 @@
         <div class="props-header-wrapper">
           <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
             <ol class="page-breadcrumb" style="justify-content: center;">
-              <li><a href="/">Home</a></li>
-              <li><span class="separator">›</span></li>
-              <li><a href="/#core">Bengaluru</a></li>
+              <li><a href="../">Home</a></li>
               <li><span class="separator">›</span></li>
               <li class="current" aria-current="page">Properties</li>
             </ol>
           </nav>
-          <span class="props-kicker"><span class="brand-inline-text">acre&amp;key</span> Research Intelligence</span>
           <h1 class="props-main-title">Properties in Bengaluru</h1>
-          <p class="props-subtitle">Research-backed residential projects evaluated by <span class="brand-inline-text">acre&amp;key</span>. Compare locations, configurations, possession timelines and our buyer-first assessment.</p>
+          <p class="props-subtitle">Bengaluru projects researched and assessed buyer-first.</p>
           <div class="props-hero-cta">
             <button type="button" class="primary-cta-btn props-hero-btn" onclick="window.openModal && window.openModal();">Book a consultation</button>
-            <a class="props-hero-link" href="/#core">How we assess projects</a>
+            <a class="props-hero-link" href="../#core">How we assess projects</a>
           </div>
         </div>
       </div>
