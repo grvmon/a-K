@@ -76,8 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const cardWrap = document.createElement('div');
       cardWrap.className = 'ak-card-anchor';
 
-      const possClean = prop.possession.replace(/^Possession:\s*/i, '');
-
       cardWrap.innerHTML = `
         <article class="ak-property-card">
           <div class="ak-card-img-box">
@@ -98,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="ak-ledger-item ak-ledger-config"><i data-feather="home"></i> ${prop.config}</span>
               <span class="ak-ledger-sep">·</span>
               <span class="ak-ledger-item ak-ledger-size"><i data-feather="maximize-2"></i> ${prop.sizeRange}</span>
-              <span class="ak-ledger-sep">·</span>
-              <span class="ak-ledger-item ak-ledger-poss"><i data-feather="calendar"></i> ${possClean}</span>
             </div>
           </div>
         </article>
