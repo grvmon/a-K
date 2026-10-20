@@ -87,7 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="ak-card-body">
             <div class="ak-card-header">
-              <h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>
+              <div class="ak-card-title-row">
+                <h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>
+                <span class="ak-card-score-pill" title="acre&key Score: ${prop.score} / 5"><span class="ak-score-val">${prop.score}</span><span class="ak-score-denom">/5</span></span>
+              </div>
               <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
             </div>
 
@@ -97,19 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="ak-ledger-item ak-ledger-size"><i data-feather="maximize-2"></i> ${prop.sizeRange}</span>
               <span class="ak-ledger-sep">·</span>
               <span class="ak-ledger-item ak-ledger-poss"><i data-feather="calendar"></i> ${possClean}</span>
-            </div>
-
-            <div class="ak-card-score-box">
-              <div class="ak-score-badge">
-                <span class="ak-score-num">${prop.score}</span>
-                <span class="ak-score-sub">/ 5</span>
-              </div>
-              <div class="ak-score-verdict-wrap">
-                <span class="ak-verdict-kicker"><span class="ak-brand-lc">acre&amp;key</span> Verdict
-                  <a class="ak-score-help" href="${methodologyHref}" aria-label="How the acre&amp;key Score works" data-tip="How we score: see our methodology">?</a>
-                </span>
-                <span class="ak-verdict-badge" title="${prop.verdict}">${prop.verdict}</span>
-              </div>
             </div>
 
             <div class="ak-card-footer">

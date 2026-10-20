@@ -410,17 +410,56 @@
       box-sizing: border-box;
     }
 
+    .ak-card-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+      width: 100%;
+      min-width: 0;
+    }
+
     .ak-card-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
       font-weight: 400;
       color: #2B2D31;
       line-height: 1.2;
-      margin: 0 0 0.25rem 0;
+      margin: 0;
       transition: color 0.4s ease;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ak-card-score-pill {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.15rem;
+      background: #2B2D31;
+      color: #FFFFFF;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-family: 'Manrope', sans-serif;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .ak-score-val {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .ak-score-denom {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1;
     }
 
     .ak-card-anchor:hover .ak-card-title {
@@ -504,125 +543,8 @@
       flex-shrink: 0;
     }
 
-    /* Acre&Key Compact Research Assessment Box */
-    .ak-card-score-box {
-      background: #FAFAFA;
-      border: 0.5px solid rgba(85, 85, 90, 0.2);
-      border-radius: 4px;
-      padding: 0.45rem 0.7rem;
-      margin-top: auto;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      min-width: 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .ak-score-badge {
-      background: #2B2D31;
-      color: #FFFFFF;
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.2rem;
-      flex-shrink: 0;
-    }
-
-    .ak-score-num {
-      font-family: 'Manrope', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      line-height: 1;
-      color: #FFFFFF;
-    }
-
-    .ak-score-sub {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1;
-    }
-
-    .ak-score-verdict-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-      flex: 1;
-      min-width: 0;
-    }
-
-    .ak-verdict-kicker {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.64rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #804526;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .ak-brand-lc {
-      text-transform: none;
-      letter-spacing: 0.02em;
-    }
-
-    .ak-score-help {
-      position: relative;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 0.5px solid #804526;
-      color: #804526;
-      font-size: 0.65rem;
-      text-decoration: none;
-    }
-
-    .ak-score-help::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-    }
-
-    .ak-score-help:hover::after,
-    .ak-score-help:focus-visible::after {
-      content: attr(data-tip);
-      position: absolute;
-      bottom: calc(100% + 6px);
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      background: #2B2D31;
-      color: #FFFFFF;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0;
-      text-transform: none;
-      padding: 0.35rem 0.55rem;
-      border-radius: 4px;
-    }
-
-    .ak-verdict-badge {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #2B2D31;
-      line-height: 1.25;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
     .ak-card-footer {
+      margin-top: auto;
       padding-top: 0.65rem;
       border-top: 0.5px solid rgba(85, 85, 90, 0.15);
       display: flex;
@@ -1099,8 +1021,8 @@
   <!-- Scripts -->
   <script src="../website.min.js?v=20261020_footer_v6" defer=""></script>
   <script src="../lead-form.min.js?v=1791755621" defer=""></script><script src="../abha-form.min.js?v=1791755621" defer=""></script>
-  <script src="properties-data.js?v=20261021h" defer></script>
-  <script src="properties.js?v=20261021h" defer=""></script>
+  <script src="properties-data.js?v=20261021i" defer></script>
+  <script src="properties.js?v=20261021i" defer=""></script>
 
 
 
