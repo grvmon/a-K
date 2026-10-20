@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Property price</label><span class="akc-hint" id="priceInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="1,00,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="5e+07" step="250000" value="1e+07" aria-label="Property price slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="downIn">Down payment</label><span class="akc-hint" id="downInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="downIn" data-key="down" value="25" autocomplete="off"><span class="akc-suf">% of price</span></div>
+                        <input type="range" class="akc-range" data-for="downIn" min="0" max="50" step="0.5" value="25" aria-label="Down payment slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="appIn">Price growth</label><span class="akc-hint" id="appInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="appIn" data-key="app" value="7" autocomplete="off"><span class="akc-suf">% a year</span></div>
+                        <input type="range" class="akc-range" data-for="appIn" min="0" max="20" step="0.1" value="7" aria-label="Price growth slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rentIn">Monthly rent</label><span class="akc-hint" id="rentInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rentIn" data-key="rent" data-money="1" value="30,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rentIn" min="0" max="200000" step="1000" value="30000" aria-label="Monthly rent slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="yrsIn">Years held</label><span class="akc-hint" id="yrsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="yrsIn" data-key="yrs" value="10" autocomplete="off"><span class="akc-suf">years</span></div>
+                        <input type="range" class="akc-range" data-for="yrsIn" min="1" max="30" step="1" value="10" aria-label="Years held slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rateIn">Loan rate</label><span class="akc-hint" id="rateInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="rateIn" data-key="rate" data-rate="loanRatePct" value="8.5" autocomplete="off"><span class="akc-suf">% p.a.</span></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="20" step="0.1" value="8.5" aria-label="Loan rate slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates, loan and costs</summary>
@@ -1648,6 +1655,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">No. Figures are before tax. Loan interest on a let-out home reduces the tax on its rent, and a gain on sale after more than 24 months is taxed at 12.5% plus cess. Please verify with your Chartered Accountant before acting.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/emi-vs-prepayment-strategy/">Prepay Your Home Loan or Invest the Surplus?</a></li><li><a href="https://answers.acrenkey.com/rbi-ltv-down-payment-rules/">Home Loan Down Payment: RBI&#x27;s LTV Limits Explained</a></li><li><a href="https://acrenkey.com/blogs/is-it-a-good-time-to-buy-property-in-bengaluru-2026-data/">Is It a Good Time to Buy Property in Bangalore? 2026 Data</a></li><li><a href="https://acrenkey.com/blogs/commercial-vs-residential-property-for-individuals-what-changes/">Commercial vs Residential Property Investment: What Changes</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

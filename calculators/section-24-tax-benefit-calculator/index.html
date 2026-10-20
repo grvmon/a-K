@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,6 +1455,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="interestIn">Interest this year</label><span class="akc-hint" id="interestInHint">from your lender</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="interestIn" data-key="interest" data-money="1" value="2,50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="interestIn" min="0" max="1e+06" step="5000" value="250000" aria-label="Interest this year slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-use">Home is</span></div>
@@ -1462,14 +1464,17 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="incomeIn">Other taxable income</label><span class="akc-hint" id="incomeInHint">salary after deductions</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="12,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="5e+06" step="25000" value="1.2e+06" aria-label="Other taxable income slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="preTotalIn">Pre-construction interest</label><span class="akc-hint" id="preTotalInHint">total, before possession</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="preTotalIn" data-key="preTotal" data-money="1" value="0" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="preTotalIn" min="0" max="100" step="0.5" value="0" aria-label="Pre-construction interest slider">
                     </div>
                     <div class="akc-field half" id="rentField" hidden>
                         <div class="akc-field-top"><label for="rentIn">Rent for the year</label><span class="akc-hint" id="rentInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rentIn" data-key="rent" data-money="1" value="3,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rentIn" min="0" max="2e+06" step="10000" value="300000" aria-label="Rent for the year slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust loan purpose, completion and property tax</summary>
@@ -1596,6 +1601,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">The lower limit applies to a home you live in when the loan was for repairs or renewal, or when buying or building was not completed within five years from the end of the tax year in which you borrowed. Delays in an under-construction project can push you into this limit.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/pre-construction-interest-deduction/">Pre-Construction Home Loan Interest: Can You Claim It?</a></li><li><a href="https://answers.acrenkey.com/home-loan-tax-benefit-new-act-2025/">Home Loan Tax Benefit Under the Income-tax Act 2025</a></li><li><a href="https://acrenkey.com/blogs/first-time-home-buyer-guide-bengaluru/">First-Time Home Buyer Bangalore Guide (2026): Costs, Loans</a></li><li><a href="https://acrenkey.com/blogs/land-conversion-dc-conversion-section-95-explained-for-plot-buyers/">DC Conversion Karnataka: Section 95 Rules for Plot Buyers</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

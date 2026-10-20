@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1320,6 +1320,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1470,10 +1471,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Sale price</label><span class="akc-hint" id="priceInHint">agreement value</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="1,00,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="5e+07" step="250000" value="1e+07" aria-label="Sale price slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="gvIn">Guidance value</label><span class="akc-hint" id="gvInHint">from Kaveri, if known</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="gvIn" data-key="gv" data-money="1" value="0" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="gvIn" min="0" max="100" step="0.5" value="0" aria-label="Guidance value slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-ptype">Property type</span></div>
@@ -1660,6 +1663,9 @@
         <div class="ak-faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">Yes. Beyond stamp duty and the 2% registration fee, expect document scanning fees of about ₹ 300 to ₹ 500 and e-stamping service charges of around ₹ 500. Most buyers also pay a lawyer to draft and check the sale deed, usually ₹ 25,000 to ₹ 50,000. Ask your lawyer for a written quote before the registration date.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/rental-agreement-new-owner-karnataka/">Rental Agreement Karnataka: Stamp Duty, Registration, Police</a></li><li><a href="https://answers.acrenkey.com/e-stamp-digital-karnataka-flat/">Karnataka Digital e-Stamp: Pay Duty Online</a></li><li><a href="https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/">Stamp Duty and Registration Charges in Bangalore 2026</a></li><li><a href="https://acrenkey.com/blogs/stamp-duty-and-registration-calculator-karnataka/">Stamp Duty Calculator Karnataka (2026): Rates and Examples</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

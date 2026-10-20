@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,22 +1455,27 @@
                     <div class="akc-field full">
                         <div class="akc-field-top"><label for="incomeIn">Taxable income before 80C</label><span class="akc-hint" id="incomeInHint">after standard deduction</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="12,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="5e+06" step="25000" value="1.2e+06" aria-label="Taxable income before 80C slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="principalIn">Home loan principal</label><span class="akc-hint" id="principalInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="principalIn" data-key="principal" data-money="1" value="50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="principalIn" min="0" max="200000" step="1000" value="50000" aria-label="Home loan principal slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="epfIn">EPF (your share)</label><span class="akc-hint" id="epfInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="epfIn" data-key="epf" data-money="1" value="40,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="epfIn" min="0" max="200000" step="1000" value="40000" aria-label="EPF (your share) slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="ppfIn">PPF</label><span class="akc-hint" id="ppfInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="ppfIn" data-key="ppf" data-money="1" value="20,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="ppfIn" min="0" max="100000" step="500" value="20000" aria-label="PPF slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="elssIn">ELSS funds</label><span class="akc-hint" id="elssInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="elssIn" data-key="elss" data-money="1" value="30,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="elssIn" min="0" max="200000" step="1000" value="30000" aria-label="ELSS funds slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Add insurance, tuition, stamp duty and others</summary>
@@ -1554,6 +1560,17 @@
             <li>Read the tax saved, how much of the ₹ 1.5 lakh limit you have used, and what a top-up would save.</li>
         </ol>
 
+        <h2>How it’s calculated</h2>
+        <p>The calculator adds your section 123 (old section 80C) items, caps them at ₹ 1.5 lakh, and compares old-regime tax before and after.</p>
+        <div class="ak-formula-card">
+<h3>Formulas used by the calculator</h3>
+<div class="ak-formula-step"><div class="ak-formula-num">1</div><div class="ak-formula-content"><strong>Total claimed</strong><code>Total = Principal + Stamp duty + EPF + PPF + ELSS + Insurance + Tuition + NSC + Other</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">2</div><div class="ak-formula-content"><strong>Eligible deduction</strong><code>Eligible = min(Total, ₹ 1,50,000); Room left = ₹ 1,50,000 − Total</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">3</div><div class="ak-formula-content"><strong>Tax before and after</strong><code>Tax = Slab tax (old regime) − Rebate if taxable ≤ ₹ 5 L, + 4% cess</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">4</div><div class="ak-formula-content"><strong>Tax saved</strong><code>Saved = Tax(Taxable income) − Tax(Taxable income − Eligible)</code></div></div>
+</div>
+        <p class="ak-source-note">Source: <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax Department e-filing portal</a> (Income-tax Act; old regime slabs for tax year 2026-27).</p>
+
         <h2>What is Section 80C under the new Income-tax Act?</h2>
         <p>From 1 April 2026, the Income-tax Act, 2025 replaced the 1961 Act. The old sections 80C, 80CCC and 80CCD(1) are now section 123, with the eligible items listed in Schedule XV. The combined limit stays at ₹ 1.5 lakh a year, and the deduction is available only in the old tax regime. The new regime, which is the default, does not allow it.</p>
         <p>For home buyers, two items matter. Principal repaid on a home loan from a lender such as a bank, housing finance company or employer counts, and so do stamp duty, registration fee and transfer charges in the year you pay them. If you sell the home within five years of the end of the year you got possession, the deduction already claimed is added back to your income in the year of sale.</p>
@@ -1618,6 +1635,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">In the old regime, income up to ₹ 5 lakh gets a rebate of up to ₹ 12,500, so tax may already be nil. The deduction then has nothing to reduce. If your taxable income is close to ₹ 5 lakh, the deduction can still bring it under that line.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/home-loan-tax-benefit-new-act-2025/">Home Loan Tax Benefit Under the Income-tax Act 2025</a></li><li><a href="https://answers.acrenkey.com/pre-construction-interest-deduction/">Pre-Construction Home Loan Interest: Can You Claim It?</a></li><li><a href="https://acrenkey.com/blogs/land-conversion-dc-conversion-section-95-explained-for-plot-buyers/">DC Conversion Karnataka: Section 95 Rules for Plot Buyers</a></li><li><a href="https://acrenkey.com/blogs/capital-gains-tax-on-selling-a-flat-in-bengaluru-2026-rules/">Capital Gains Tax on Sale of Flat: Bengaluru 2026 Rules</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="livingIn">Living costs a month</label><span class="akc-hint" id="livingInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="livingIn" data-key="living" data-money="1" value="60,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="livingIn" min="0" max="250000" step="2000" value="60000" aria-label="Living costs a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="emiIn">Home loan EMI</label><span class="akc-hint" id="emiInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="emiIn" data-key="emi" data-money="1" value="30,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="emiIn" min="0" max="200000" step="1000" value="30000" aria-label="Home loan EMI slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="otherIn">Other EMIs</label><span class="akc-hint" id="otherInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="otherIn" data-key="other" data-money="1" value="10,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="otherIn" min="0" max="50000" step="250" value="10000" aria-label="Other EMIs slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="maintIn">Maintenance a month</label><span class="akc-hint" id="maintInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="maintIn" data-key="maint" data-money="1" value="5,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="maintIn" min="0" max="20000" step="100" value="5000" aria-label="Maintenance a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="monthsIn">Months to cover</label><span class="akc-hint" id="monthsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="monthsIn" data-key="months" value="6" autocomplete="off"><span class="akc-suf">months</span></div>
+                        <input type="range" class="akc-range" data-for="monthsIn" min="0" max="25" step="1" value="6" aria-label="Months to cover slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="savedIn">Emergency savings now</label><span class="akc-hint" id="savedInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="savedIn" data-key="saved" data-money="1" value="1,50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="savedIn" min="0" max="1e+06" step="5000" value="150000" aria-label="Emergency savings now slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Add insurance and a saving plan</summary>
@@ -1608,6 +1615,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">It reduces the risk that one hospital bill empties the fund, but it does not replace it. Insurance does not pay your EMI or living costs if you lose your job. Count the yearly insurance cost in the fund, since policies must be renewed even in a bad year.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/corpus-fund-vs-maintenance-deposit/">Corpus Fund vs Maintenance Deposit</a></li><li><a href="https://answers.acrenkey.com/site-visit-checklist-under-construction/">Under-Construction Site Visit Checklist</a></li><li><a href="https://acrenkey.com/blogs/25-questions-every-couple-should-discuss-before-buying-a-home/">Questions for Couples Before Buying a Home: 25 to Discuss</a></li><li><a href="https://acrenkey.com/blogs/20-questions-to-ask-before-buying-a-2-5-crore-home/">Buying a ₹2–5 Crore Home in Bengaluru: 20 Questions to Ask</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

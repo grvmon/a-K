@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Loan Eligibility Calculator Bengaluru (2026) | acre&amp;key</title>
+    <title>Home Loan Eligibility Calculator Bengaluru 2026 | acre&amp;key</title>
     <meta name="description" content="Free home loan eligibility calculator for Bengaluru buyers. Check borrowing capacity, FOIR limits, co-applicant boost and bank sanctions at acre&amp;key.">
     <meta name="author" content="acre&amp;key">
     <meta name="theme-color" content="#2B2D31">
@@ -19,19 +19,19 @@
     <meta property="og:site_name" content="acre&amp;key">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://acrenkey.com/calculators/loan-eligibility-calculator/">
-    <meta property="og:title" content="Home Loan Eligibility Calculator Bengaluru (2026) | acre&amp;key">
+    <meta property="og:title" content="Home Loan Eligibility Calculator Bengaluru 2026 | acre&amp;key">
     <meta property="og:description" content="Free home loan eligibility calculator for Bengaluru buyers. Check borrowing capacity, FOIR limits, co-applicant boost and bank sanctions at acre&amp;key.">
     <meta property="og:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20261020">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home Loan Eligibility Calculator Bengaluru (2026) | acre&amp;key">
+    <meta name="twitter:title" content="Home Loan Eligibility Calculator Bengaluru 2026 | acre&amp;key">
     <meta name="twitter:description" content="Free home loan eligibility calculator for Bengaluru buyers. Check borrowing capacity, FOIR limits, co-applicant boost and bank sanctions at acre&amp;key.">
     <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20261020">
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1320,6 +1320,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1470,10 +1471,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="incomeIn">Net salary</label><span class="akc-hint" id="incomeInHint">per month</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="1,50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="1e+06" step="5000" value="150000" aria-label="Net salary slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="debtIn">Existing EMIs</label><span class="akc-hint" id="debtInHint">per month</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="debtIn" data-key="debt" data-money="1" value="15,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="debtIn" min="0" max="100000" step="500" value="15000" aria-label="Existing EMIs slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-foir">Share of salary for EMIs (FOIR)</span></div>
@@ -1554,6 +1557,18 @@
             <li>Pick the FOIR your bank uses. 45% is common; some banks allow 50% to 55% for higher salaries.</li>
             <li>Add a co-applicant’s salary, the interest rate and the tenure under “Co-applicant, rate and tenure”, then read the loan, the property budget and the cash you need upfront.</li>
         </ol>
+
+        <h2>How it’s calculated</h2>
+        <p>The calculator works out how much EMI your income can carry, then turns that EMI into a loan amount at your rate and tenure.</p>
+        <div class="ak-formula-card">
+<h3>Formulas used by the calculator</h3>
+<div class="ak-formula-step"><div class="ak-formula-num">1</div><div class="ak-formula-content"><strong>EMI you can carry</strong><code>EMI = (Your salary + Co-applicant salary) × FOIR % − Existing EMIs</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">2</div><div class="ak-formula-content"><strong>Loan amount</strong><code>Loan = EMI × ((1 + r)<sup>n</sup> − 1) ÷ (r × (1 + r)<sup>n</sup>), r = rate ÷ 1200, n = years × 12</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">3</div><div class="ak-formula-content"><strong>Loan-to-value cap</strong><code>LTV = 90% up to ₹ 30 L, 80% up to ₹ 75 L, 75% above</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">4</div><div class="ak-formula-content"><strong>Property budget</strong><code>Budget = Loan ÷ LTV; Down payment = Budget × (1 − LTV)</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">5</div><div class="ak-formula-content"><strong>Cash upfront</strong><code>Upfront = Down payment + Budget × Stamp duty &amp; registration %</code></div></div>
+</div>
+        <p class="ak-source-note">Sources: <a href="https://www.rbi.org.in/" target="_blank" rel="noopener">RBI</a> housing loan LTV limits, <a href="https://dpal.karnataka.gov.in/storage/pdf-files/34%20of%201957(E).pdf" target="_blank" rel="noopener">Karnataka Stamp Act, 1957</a>, <a href="https://igr.karnataka.gov.in/storage/pdf-files/RegistrationFee.pdf" target="_blank" rel="noopener">IGR Karnataka registration fee table</a>.</p>
 
         <h2>How banks decide your home loan eligibility</h2>
 <p>Bank loan sanction decisions are driven by algorithmic underwriting models evaluating your net disposable income, credit history, career stability, and loan-to-value benchmarks.</p>
@@ -1747,6 +1762,9 @@
         <div class="ak-faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">Most scheduled commercial banks offer a maximum home loan tenure of 30 years for salaried applicants, provided the loan matures before the borrower reaches 60 to 65 years of age (or 65 to 70 years for self-employed professionals). Longer tenures reduce monthly EMIs and maximise loan eligibility, though they incur significantly higher cumulative interest.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/first-flat-budget-emi-to-income/">How Much Home Loan Can I Get on My Salary in Bengaluru?</a></li><li><a href="https://answers.acrenkey.com/rbi-ltv-down-payment-rules/">Home Loan Down Payment: RBI&#x27;s LTV Limits Explained</a></li><li><a href="https://acrenkey.com/blogs/insights/pmay-u-2-bengaluru-who-qualifies/">PMAY-U 2.0 Eligibility: Who Qualifies in Bengaluru in 2026</a></li><li><a href="https://acrenkey.com/blogs/insights/bank-approved-project-what-it-checks/">Bank Approved Project: What a Bank&#x27;s Approval Really Checks</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

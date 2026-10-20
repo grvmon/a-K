@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,6 +1455,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Property price</label><span class="akc-hint" id="priceInHint">₹ 1.50 Cr</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="1,50,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="1e+08" step="500000" value="1.5e+07" aria-label="Property price slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-basis">Rate on</span></div>
@@ -1466,10 +1468,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="saleableIn">Saleable area</label><span class="akc-hint" id="saleableInHint">as quoted</span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="saleableIn" data-key="saleable" value="1600" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="saleableIn" min="0" max="10000" step="50" value="1600" aria-label="Saleable area slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="carpetIn">Carpet area</label><span class="akc-hint" id="carpetInHint">RERA</span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="carpetIn" data-key="carpet" value="1200" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="carpetIn" min="0" max="5000" step="25" value="1200" aria-label="Carpet area slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates and other charges</summary>
@@ -1571,6 +1575,18 @@
             <li>Read the price per sq ft and the all-in rate. Add builder charges and legal fees under “Adjust rates and other charges”.</li>
         </ol>
 
+        <h2>How it’s calculated</h2>
+        <p>The calculator divides the price, and then the full cost to own, by the area you choose (RERA carpet or saleable).</p>
+        <div class="ak-formula-card">
+<h3>Formulas used by the calculator</h3>
+<div class="ak-formula-step"><div class="ak-formula-num">1</div><div class="ak-formula-content"><strong>Quoted rate</strong><code>Rate per sq ft = Price ÷ Area</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">2</div><div class="ak-formula-content"><strong>Stamp duty and registration</strong><code>Govt charges = Price × Stamp duty % × (1 + Cess 10% + Surcharge 2%) + Registration 2% of price (per ₹ 1,000 or part)</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">3</div><div class="ak-formula-content"><strong>GST</strong><code>GST = Price × 5% (under construction) or 1% (affordable); 0 for ready or resale</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">4</div><div class="ak-formula-content"><strong>Total cost</strong><code>Total = Price + Govt charges + GST + Builder charges + Legal fees</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">5</div><div class="ak-formula-content"><strong>All-in rate and loading</strong><code>All-in per sq ft = Total ÷ Area; Loading % = (Saleable ÷ Carpet − 1) × 100</code></div></div>
+</div>
+        <p class="ak-source-note">Sources: <a href="https://dpal.karnataka.gov.in/storage/pdf-files/34%20of%201957(E).pdf" target="_blank" rel="noopener">Karnataka Stamp Act, 1957</a> (stamp duty, cess, surcharge), <a href="https://igr.karnataka.gov.in/storage/pdf-files/RegistrationFee.pdf" target="_blank" rel="noopener">IGR Karnataka registration fee table</a>, <a href="https://www.gstcouncil.gov.in/sites/default/files/2024-02/faq-real-estate-sector.pdf" target="_blank" rel="noopener">GST Council real estate FAQ</a>.</p>
+
         <h2>What does cost per sq ft really measure?</h2>
         <p>A rate per sq ft is only comparable when you know which area it is on. Builders in Bengaluru usually quote on saleable (super built-up) area, which includes a share of walls, lobbies, lifts and amenities. Carpet area, defined in the RERA Act, is the floor you can actually use inside your walls. The same flat has a lower rate on saleable area and a higher one on carpet area. And the price is not the whole cost: stamp duty, registration, GST on a flat under construction and builder charges all come on top.</p>
         <div class="ak-formula-card">
@@ -1638,6 +1654,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">No. Saleable area always includes the carpet area plus a share of walls and common spaces. If your figures show carpet as larger, one of them is wrong or uses a different definition. The calculator flags it; check both against the RERA registration and the agreement.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/carpet-area-vs-super-built-up-rera/">Carpet Area vs Super Built-Up Area Under RERA</a></li><li><a href="https://answers.acrenkey.com/affordable-housing-gst-1-percent-definition/">Affordable Housing GST: Does Your Flat Get 1%?</a></li><li><a href="https://acrenkey.com/blogs/insights/bengaluru-property-rates-by-area-guidance-value-table-2026/">Bangalore Property Rates per Sq Ft Area Wise: 2026 GV Table</a></li><li><a href="https://acrenkey.com/blogs/how-to-compare-two-apartments-or-projects-side-by-side/">Compare Two Apartments Side by Side: A Bengaluru Method</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

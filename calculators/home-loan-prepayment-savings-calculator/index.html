@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,18 +1455,22 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="loanIn">Loan outstanding</label><span class="akc-hint" id="loanInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="loanIn" data-key="loan" data-money="1" value="50,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="loanIn" min="0" max="2e+07" step="100000" value="5e+06" aria-label="Loan outstanding slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rateIn">Interest rate</label><span class="akc-hint" id="rateInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="rateIn" data-key="rate" data-rate="loanRatePct" value="8.5" autocomplete="off"><span class="akc-suf">% p.a.</span></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="20" step="0.1" value="8.5" aria-label="Interest rate slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="yearsIn">Years left</label><span class="akc-hint" id="yearsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="yearsIn" data-key="years" data-rate="loanYears" value="20" autocomplete="off"><span class="akc-suf">years</span></div>
+                        <input type="range" class="akc-range" data-for="yearsIn" min="1" max="50" step="1" value="20" aria-label="Years left slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="lumpIn">Prepay now</label><span class="akc-hint" id="lumpInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="lumpIn" data-key="lump" data-money="1" value="5,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="lumpIn" min="0" max="2e+06" step="10000" value="500000" aria-label="Prepay now slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-keep">After prepaying, keep</span></div>
@@ -1602,6 +1607,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">Prepaying gives a sure saving at your loan rate, while investing may earn more or less. If your loan rate is 8.5%, prepaying is like a risk-free return of 8.5% before tax effects. Compare it with what you expect to earn after tax and keep some savings liquid.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/emi-vs-prepayment-strategy/">Prepay Your Home Loan or Invest the Surplus?</a></li><li><a href="https://answers.acrenkey.com/first-flat-budget-emi-to-income/">How Much Home Loan Can I Get on My Salary in Bengaluru?</a></li><li><a href="https://acrenkey.com/blogs/home-loans-20-questions-to-ask-and-15-mistakes-to-avoid/">Home Loan Questions: 20 to Ask and 15 Mistakes to Avoid</a></li><li><a href="https://acrenkey.com/blogs/insights/home-loan-affordability-index-for-bengaluru-2016-2026/">Home Loan Affordability in Bengaluru: 2016–2026 Index</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

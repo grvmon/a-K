@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,6 +1455,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="flatIn">Flat price without parking</label><span class="akc-hint" id="flatInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="flatIn" data-key="flat" data-money="1" value="1,00,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="flatIn" min="0" max="5e+07" step="250000" value="1e+07" aria-label="Flat price without parking slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-ptype2">Parking type</span></div>
@@ -1462,10 +1464,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="slotsIn">Parking slots</label><span class="akc-hint" id="slotsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="slotsIn" data-key="slots" value="1" autocomplete="off"><span class="akc-suf">slots</span></div>
+                        <input type="range" class="akc-range" data-for="slotsIn" min="0" max="5" step="0.1" value="1" aria-label="Parking slots slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="eachIn">Price per slot</label><span class="akc-hint" id="eachInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="eachIn" data-key="each" data-money="1" value="3,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="eachIn" min="0" max="2e+06" step="10000" value="300000" aria-label="Price per slot slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-gst">GST on parking (see your cost sheet)</span></div>
@@ -1624,6 +1628,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">Usually not to an outsider. A covered slot sold with your flat is meant for use with that flat, and many agreements and association rules allow transfers only to other owners in the same project. Check your agreement and the association’s by-laws, and ask your lawyer before agreeing to any sale.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/can-builder-sell-car-parking-separately/">Can a Builder Sell Car Parking Separately? RERA</a></li><li><a href="https://answers.acrenkey.com/hidden-costs-flat-bangalore-beyond-base-price/">Hidden Flat Costs: Real Estate Consultancy Services Guide</a></li><li><a href="https://acrenkey.com/blogs/full-cost-bengaluru-flat-stamp-duty-registration-gst/">Stamp Duty and Registration Charges in Bangalore 2026</a></li><li><a href="https://acrenkey.com/blogs/stamp-duty-and-registration-calculator-karnataka/">Stamp Duty Calculator Karnataka (2026): Rates and Examples</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

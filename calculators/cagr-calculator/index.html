@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1458,22 +1459,27 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="startIn">Starting value</label><span class="akc-hint" id="startInHint">price you paid</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="startIn" data-key="start" data-money="1" value="50,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="startIn" min="500000" max="100000000" step="100000" value="5000000" aria-label="Starting value slider">
                     </div>
                     <div class="akc-field half" id="endField">
                         <div class="akc-field-top"><label for="endIn">Value now</label><span class="akc-hint" id="endInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="endIn" data-key="end" data-money="1" value="90,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="endIn" min="500000" max="100000000" step="100000" value="9000000" aria-label="Value now slider">
                     </div>
                     <div class="akc-field half" id="rateField" hidden>
                         <div class="akc-field-top"><label for="rateIn">Growth rate</label><span class="akc-hint" id="rateInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="rateIn" data-key="rate" value="7" autocomplete="off"><span class="akc-suf">% a year</span></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="20" step="0.25" value="7" aria-label="Growth rate slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="yrsIn">Years</label><span class="akc-hint" id="yrsInHint">decimals OK</span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="yrsIn" data-key="yrs" value="8" autocomplete="off"><span class="akc-suf">years</span></div>
+                        <input type="range" class="akc-range" data-for="yrsIn" min="1" max="40" step="1" value="8" aria-label="Years slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="infIn">Inflation</label><span class="akc-hint" id="infInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="infIn" data-key="inf" value="5" autocomplete="off"><span class="akc-suf">% a year</span></div>
+                        <input type="range" class="akc-range" data-for="infIn" min="0" max="12" step="0.25" value="5" aria-label="Inflation slider">
                     </div>
                 </div>
             </form>
@@ -1593,6 +1599,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">A gain on a home held more than 24 months is taxed at 12.5% plus cess; sooner, it is taxed at your slab. Reinvesting the gain in another home may reduce the tax, subject to conditions. Please verify with your Chartered Accountant before acting.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/assess-builder-track-record-bangalore/">Builder Track Record: Real Estate Investment Consultant</a></li><li><a href="https://answers.acrenkey.com/emi-vs-prepayment-strategy/">Prepay Your Home Loan or Invest the Surplus?</a></li><li><a href="https://acrenkey.com/blogs/is-it-a-good-time-to-buy-property-in-bengaluru-2026-data/">Is It a Good Time to Buy Property in Bangalore? 2026 Data</a></li><li><a href="https://acrenkey.com/blogs/insights/bengaluru-house-price-trends-rbi-nhb-data/">Bengaluru House Price Trends: What RBI and NHB Data Show</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

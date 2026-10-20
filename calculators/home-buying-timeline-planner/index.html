@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Price of the home today</label><span class="akc-hint" id="priceInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="80,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="5e+07" step="250000" value="8e+06" aria-label="Price of the home today slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="savedIn">Savings for the home now</label><span class="akc-hint" id="savedInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="savedIn" data-key="saved" data-money="1" value="10,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="savedIn" min="0" max="5e+06" step="25000" value="1e+06" aria-label="Savings for the home now slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="monthlyIn">You save a month</label><span class="akc-hint" id="monthlyInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="monthlyIn" data-key="monthly" data-money="1" value="50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="monthlyIn" min="0" max="200000" step="1000" value="50000" aria-label="You save a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="growthIn">Price growth (your guess)</label><span class="akc-hint" id="growthInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="growthIn" data-key="growth" value="5" autocomplete="off"><span class="akc-suf">% a year</span></div>
+                        <input type="range" class="akc-range" data-for="growthIn" min="0" max="20" step="0.1" value="5" aria-label="Price growth (your guess) slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="incomeIn">Take-home pay a month</label><span class="akc-hint" id="incomeInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="2,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="1e+06" step="5000" value="200000" aria-label="Take-home pay a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="shareIn">Pay that can go to EMI</label><span class="akc-hint" id="shareInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="shareIn" data-key="share" value="40" autocomplete="off"><span class="akc-suf">%</span></div>
+                        <input type="range" class="akc-range" data-for="shareIn" min="0" max="100" step="0.5" value="40" aria-label="Pay that can go to EMI slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates, loan and savings return</summary>
@@ -1639,6 +1646,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">No. After buying you will have an EMI and maintenance to pay, so keep several months of costs aside and count only the rest as home savings. The emergency fund calculator works out how much to keep. Interiors, moving and furniture also need money that this planner does not include.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/rbi-ltv-down-payment-rules/">Home Loan Down Payment: RBI&#x27;s LTV Limits Explained</a></li><li><a href="https://answers.acrenkey.com/home-buying-process-with-consultant-bangalore/">Home Buying Process With a Real Estate Consultant Bangalore</a></li><li><a href="https://acrenkey.com/blogs/insights/questions-to-ask-before-buying-flat-bengaluru/">Questions to Ask Before Buying a Flat: 100 for Bengaluru</a></li><li><a href="https://acrenkey.com/blogs/20-questions-before-buying-in-an-under-construction-project/">Buying Under-Construction in Bengaluru: 20 Questions</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

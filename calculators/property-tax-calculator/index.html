@@ -31,7 +31,7 @@
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,10 +1455,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="areaIn">Built-up area</label><span class="akc-hint" id="areaInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="areaIn" data-key="area" value="1200" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="areaIn" min="0" max="5000" step="25" value="1200" aria-label="Built-up area slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="parkIn">Covered parking</label><span class="akc-hint" id="parkInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="parkIn" data-key="park" value="0" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="parkIn" min="0" max="100" step="1" value="0" aria-label="Covered parking slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-zone">Zone</span></div>
@@ -1470,6 +1473,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="ageIn">Building age</label><span class="akc-hint" id="ageInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="ageIn" data-key="age" value="5" autocomplete="off"><span class="akc-suf">years</span></div>
+                        <input type="range" class="akc-range" data-for="ageIn" min="1" max="30" step="1" value="5" aria-label="Building age slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust category, payment and rates</summary>
@@ -1626,6 +1630,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">Municipal tax you actually pay on a let-out property is deducted from the rent before the 30% standard deduction when working out income from house property. There is no such deduction for a self-occupied home. Indicative only. Please verify with your Chartered Accountant before acting.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/property-tax-new-flat-bengaluru/">When Property Tax Starts on a New Bengaluru Flat</a></li><li><a href="https://answers.acrenkey.com/home-loan-tax-benefit-new-act-2025/">Home Loan Tax Benefit Under the Income-tax Act 2025</a></li><li><a href="https://acrenkey.com/blogs/20-things-to-verify-before-property-registration-in-bengaluru/">Before Property Registration in Bengaluru: 20 Checks</a></li><li><a href="https://acrenkey.com/blogs/insights/guidance-value-vs-market-price-east-bengaluru/">Guidance Value vs Market Value Bangalore: The East Gap</a></li></ul>
 
         <h2>Sources</h2>
         <ul>

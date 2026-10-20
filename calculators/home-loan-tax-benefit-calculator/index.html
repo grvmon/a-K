@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Loan Tax Benefit Calculator, Old vs New | acre&amp;key</title>
-    <meta name="description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C).">
+    <meta name="description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C)">
     <meta name="author" content="acre&amp;key">
     <meta name="theme-color" content="#2B2D31">
     <link rel="canonical" href="https://acrenkey.com/calculators/home-loan-tax-benefit-calculator/">
@@ -20,18 +20,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://acrenkey.com/calculators/home-loan-tax-benefit-calculator/">
     <meta property="og:title" content="Home Loan Tax Benefit Calculator, Old vs New | acre&amp;key">
-    <meta property="og:description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C).">
+    <meta property="og:description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C)">
     <meta property="og:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20261020">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home Loan Tax Benefit Calculator, Old vs New | acre&amp;key">
-    <meta name="twitter:description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C).">
+    <meta name="twitter:description" content="See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C)">
     <meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/og-image.jpg?v=20261020">
     <link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
     <link rel="preload" href="../../style-guide/assets/fonts/xn7gYHE41ni1AdIRggexSg.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="../../style-guide/assets/fonts/cormorant-latin.woff2?v=v112" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="../../website.min.css?v=20261020_footer_v6">
+    <link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg">
     <link rel="stylesheet" href="../calculator-design-system.css?v=1791755621">
     <!-- Lead-form styles are only needed when the modal opens: load without blocking render -->
     <link rel="stylesheet" href="../../lead-form.min.css?v=1791755621" media="print" onload="this.media='all'">
@@ -48,7 +48,7 @@
       "@id": "https://acrenkey.com/calculators/home-loan-tax-benefit-calculator/#webpage",
       "url": "https://acrenkey.com/calculators/home-loan-tax-benefit-calculator/",
       "name": "Home Loan Tax Benefit Calculator, Old vs New | acre&key",
-      "description": "See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C).",
+      "description": "See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C)",
       "inLanguage": "en-IN",
       "isPartOf": {
         "@id": "https://acrenkey.com/#website"
@@ -85,7 +85,7 @@
         "price": "0",
         "priceCurrency": "INR"
       },
-      "description": "See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C).",
+      "description": "See what your home loan saves in tax under the old and new regimes for 2026-27: interest under section 22 (old 24b), principal under section 123 (old 80C)",
       "author": {
         "@id": "https://acrenkey.com/#organization",
         "description": "acre&key (Acrenkey Realty LLP) is a Karnataka RERA registered real estate agent helping home buyers in Bengaluru with property search, due diligence and paperwork."
@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,6 +1455,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="incomeIn">Yearly income</label><span class="akc-hint" id="incomeInHint">before deductions</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="25,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="1e+07" step="50000" value="2.5e+06" aria-label="Yearly income slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-use">Home is</span></div>
@@ -1462,18 +1464,22 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="interestIn">Interest this year</label><span class="akc-hint" id="interestInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="interestIn" data-key="interest" data-money="1" value="2,50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="interestIn" min="0" max="1e+06" step="5000" value="250000" aria-label="Interest this year slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="principalIn">Principal this year</label><span class="akc-hint" id="principalInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="principalIn" data-key="principal" data-money="1" value="1,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="principalIn" min="0" max="500000" step="2500" value="100000" aria-label="Principal this year slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="other123In">Other 80C savings</label><span class="akc-hint" id="other123InHint">PF, ELSS</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="other123In" data-key="other123" data-money="1" value="50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="other123In" min="0" max="200000" step="1000" value="50000" aria-label="Other 80C savings slider">
                     </div>
                     <div class="akc-field half" id="rentField" hidden>
                         <div class="akc-field-top"><label for="rentIn">Rent for the year</label><span class="akc-hint" id="rentInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rentIn" data-key="rent" data-money="1" value="3,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rentIn" min="0" max="2e+06" step="10000" value="300000" aria-label="Rent for the year slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust income type, other deductions and loan details</summary>
@@ -1552,6 +1558,18 @@
             <li>Read your tax under both regimes and what the loan saves in each. Salary status, other deductions, pre-construction interest and property tax are under “Adjust income type, other deductions and loan details”.</li>
         </ol>
 
+        <h2>How it’s calculated</h2>
+        <p>The calculator works out your tax with and without the home loan under both regimes, using the tax year 2026-27 slabs, and shows the saving.</p>
+        <div class="ak-formula-card">
+<h3>Formulas used by the calculator</h3>
+<div class="ak-formula-step"><div class="ak-formula-num">1</div><div class="ak-formula-content"><strong>Principal deduction (old regime)</strong><code>Deduction = min(₹ 1,50,000, Principal + Other section 123 / old 80C items)</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">2</div><div class="ak-formula-content"><strong>Interest, self-occupied (old regime)</strong><code>Allowed = min(Interest + Pre-construction instalment, ₹ 2,00,000)</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">3</div><div class="ak-formula-content"><strong>Interest, let out</strong><code>House income = (Rent − Municipal tax) × 70% − Interest; old regime sets off a loss up to ₹ 2,00,000, new regime none</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">4</div><div class="ak-formula-content"><strong>Taxable income</strong><code>Taxable = Income − Standard deduction (₹ 50,000 old / ₹ 75,000 new) − Deductions ± House income</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">5</div><div class="ak-formula-content"><strong>Tax</strong><code>Tax = Slab tax − Rebate (up to ₹ 5 L old / ₹ 12 L new) + 4% cess; Saving = Tax without loan − Tax with loan</code></div></div>
+</div>
+        <p class="ak-source-note">Source: <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax Department e-filing portal</a> (Income-tax Act; slabs and limits for tax year 2026-27).</p>
+
         <h2>How does a home loan cut your income tax?</h2>
         <p>Since 1 April 2026 the Income-tax Act, 2025 applies. Interest on a home loan is deducted from income from house property under section 22, which replaced section 24(b). For a home you live in, the deduction is capped at ₹ 2 lakh a year, or ₹ 30,000 if the loan was for repairs or the home was not completed within five years of the end of the year you borrowed. For a let-out home, all the interest is deducted from the rent, but a resulting loss can be set off against salary only up to ₹ 2 lakh in the old regime; the rest is carried forward for up to eight years.</p>
         <p>Principal repaid counts towards section 123 (the old section 80C), within the ₹ 1.5 lakh limit shared with PF, PPF, ELSS, life insurance and other items. Stamp duty and registration on the purchase count in the year you pay them.</p>
@@ -1619,6 +1637,9 @@
         <div class="ak-faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">No. It uses the slabs for individuals below 60 and leaves out surcharge, which applies above ₹ 50 lakh of income. It also treats all other income as taxed at slab rates. Your Chartered Accountant can work out the exact tax for your return.</div>
     </div>
 </div>
+
+        <h2 id="related-reading">Related answers and guides</h2>
+        <ul><li><a href="https://answers.acrenkey.com/home-loan-tax-benefit-new-act-2025/">Home Loan Tax Benefit Under the Income-tax Act 2025</a></li><li><a href="https://answers.acrenkey.com/joint-home-loan-co-owner-rules/">Joint Home Loan Tax Benefit: Co-Owner Rules for Couples</a></li><li><a href="https://acrenkey.com/blogs/areas/old-madras-road-vs-hoskote-for-homebuyers/">Old Madras Road vs Hoskote: Guidance Values by Station</a></li><li><a href="https://acrenkey.com/blogs/resale-vs-new-flat-in-bengaluru-price-tax-risk/">Resale vs New Flat in Bengaluru: Price, Tax and Risk in 2026</a></li></ul>
 
         <h2>Sources</h2>
         <ul>
@@ -1829,7 +1850,7 @@
         return t * (1 + AK_TAX.cessPct / 100);
     }
     function akMarg(taxable, slabs) { for (var i = 0; i < slabs.length; i++) if (taxable <= slabs[i][0]) return slabs[i][1]; return 30; }
-    // House property under section 22 of the Income-tax Act, 2025 (old section 24); principal under section 123 (old 80C).
+    // House property under section 22 of the Income-tax Act, 2025 (old section 24); principal under section 123 (old 80C)
     function akHouse(i, regime) {
         // returns the house property figure that enters total income (negative = loss) and details
         var interest = akClamp(akNum(i.interest), 0, 1e9, 0), pre = akClamp(akNum(i.preInst), 0, 1e9, 0);
