@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,10 +1455,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="lenIn">Room length</label><span class="akc-hint" id="lenInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="lenIn" data-key="len" value="20" autocomplete="off"><span class="akc-suf">ft</span></div>
+                        <input type="range" class="akc-range" data-for="lenIn" min="0" max="100" step="1" value="20" aria-label="Room length slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="widIn">Room width</label><span class="akc-hint" id="widInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="widIn" data-key="wid" value="15" autocomplete="off"><span class="akc-suf">ft</span></div>
+                        <input type="range" class="akc-range" data-for="widIn" min="0" max="100" step="1" value="15" aria-label="Room width slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-size">Tile size</span></div>
@@ -1466,10 +1469,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="perBoxIn">Tiles per box</label><span class="akc-hint" id="perBoxInHint">on the box</span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="perBoxIn" data-key="perBox" value="4" autocomplete="off"><span class="akc-suf"></span></div>
+                        <input type="range" class="akc-range" data-for="perBoxIn" min="0" max="20" step="1" value="4" aria-label="Tiles per box slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn" id="priceLabel">Price per sq ft</label><span class="akc-hint" id="priceInHint">your quote</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="100" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="500" step="2" value="100" aria-label="priceIn slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust wastage, labour and tile size</summary>

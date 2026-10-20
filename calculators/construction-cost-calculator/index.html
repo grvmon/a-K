@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="areaIn">Built-up area</label><span class="akc-hint" id="areaInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="areaIn" data-key="area" value="2000" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="areaIn" min="0" max="10000" step="50" value="2000" aria-label="Built-up area slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rateIn">Quoted rate</label><span class="akc-hint" id="rateInHint">per sq ft</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rateIn" data-key="rate" data-money="1" value="2,500" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="10000" step="50" value="2500" aria-label="Quoted rate slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="architectIn">Architect, engineer</label><span class="akc-hint" id="architectInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="architectIn" data-key="architect" data-money="1" value="1,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="architectIn" min="0" max="500000" step="2500" value="100000" aria-label="Architect, engineer slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="approvalsIn">Approvals</label><span class="akc-hint" id="approvalsInHint">plan, power</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="approvalsIn" data-key="approvals" data-money="1" value="50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="approvalsIn" min="0" max="200000" step="1000" value="50000" aria-label="Approvals slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="contingencyIn">Contingency</label><span class="akc-hint" id="contingencyInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="contingencyIn" data-key="contingency" value="10" autocomplete="off"><span class="akc-suf">%</span></div>
+                        <input type="range" class="akc-range" data-for="contingencyIn" min="0" max="20" step="0.1" value="10" aria-label="Contingency slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="otherWorkIn">Work not in quote</label><span class="akc-hint" id="otherWorkInHint">total</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="otherWorkIn" data-key="otherWork" data-money="1" value="0" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="otherWorkIn" min="0" max="100" step="0.5" value="0" aria-label="Work not in quote slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates, plot and itemised extras</summary>

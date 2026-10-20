@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,10 +1455,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="areaIn">Built-up area</label><span class="akc-hint" id="areaInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="areaIn" data-key="area" value="1200" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="areaIn" min="0" max="5000" step="25" value="1200" aria-label="Built-up area slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="parkIn">Covered parking</label><span class="akc-hint" id="parkInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="parkIn" data-key="park" value="0" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="parkIn" min="0" max="100" step="1" value="0" aria-label="Covered parking slider">
                     </div>
                     <div class="akc-field full">
                         <div class="akc-field-top"><span class="akc-label" id="seg-zone">Zone</span></div>
@@ -1470,6 +1473,7 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="ageIn">Building age</label><span class="akc-hint" id="ageInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="ageIn" data-key="age" value="5" autocomplete="off"><span class="akc-suf">years</span></div>
+                        <input type="range" class="akc-range" data-for="ageIn" min="1" max="30" step="1" value="5" aria-label="Building age slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust category, payment and rates</summary>

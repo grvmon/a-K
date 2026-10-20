@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="runIn">Kitchen length</label><span class="akc-hint" id="runInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="runIn" data-key="run" value="10" autocomplete="off"><span class="akc-suf">running ft</span></div>
+                        <input type="range" class="akc-range" data-for="runIn" min="0" max="50" step="1" value="10" aria-label="Kitchen length slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="cabIn">Cabinets</label><span class="akc-hint" id="cabInHint">per running ft</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="cabIn" data-key="cab" data-money="1" value="12,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="cabIn" min="0" max="50000" step="250" value="12000" aria-label="Cabinets slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="ctIn">Countertop</label><span class="akc-hint" id="ctInHint">per sq ft</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="ctIn" data-key="ct" data-money="1" value="1,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="ctIn" min="0" max="5000" step="25" value="1000" aria-label="Countertop slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="hwIn">Accessories</label><span class="akc-hint" id="hwInHint">lump sum</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="hwIn" data-key="hw" data-money="1" value="50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="hwIn" min="0" max="200000" step="1000" value="50000" aria-label="Accessories slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="appIn">Appliances</label><span class="akc-hint" id="appInHint">hob, chimney</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="appIn" data-key="app" data-money="1" value="1,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="appIn" min="0" max="500000" step="2500" value="100000" aria-label="Appliances slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="instIn">Installation</label><span class="akc-hint" id="instInHint">per running ft</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="instIn" data-key="inst" data-money="1" value="1,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="instIn" min="0" max="5000" step="25" value="1000" aria-label="Installation slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust depth, GST and contingency</summary>
