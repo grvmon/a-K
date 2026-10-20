@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="ak-card-footer">
-              <button type="button" class="ak-card-assess-btn" data-project="${prop.name}">Request assessment</button>
               <span class="ak-card-cta-link" aria-hidden="true">View property <span class="ak-cta-arrow">→</span></span>
             </div>
           </div>
@@ -205,12 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  gridContainer.addEventListener('click', function (e) {
-    const btn = e.target.closest('.ak-card-assess-btn');
-    if (!btn) return;
-    e.preventDefault();
-    if (window.openModal) window.openModal();
-  });
 
   function resetFilters() {
     if (searchInput) searchInput.value = '';
