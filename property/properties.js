@@ -73,13 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (idx === 6) gridContainer.appendChild(buildCtaCard());
       const isReady = prop.possessionCategory === 'Ready to Move';
       const statusLabel = isReady ? 'Ready to move' : 'Under construction';
-      const rera = Array.isArray(prop.rera) ? prop.rera : [];
-      const firstRera = rera[0] || '';
-      const reraShort = firstRera.includes('/PR/') ? 'PR/' + firstRera.split('/PR/')[1] : firstRera;
-      const reraMoreHtml = rera.length > 1 ? ` <span class="ak-rera-more">+${rera.length - 1} phase${rera.length > 2 ? 's' : ''}</span>` : '';
-      const reraHtml = rera.length
-        ? `<div class="ak-card-rera"><span class="ak-rera-label">K-RERA</span> <span class="ak-rera-id" title="${firstRera}">${reraShort}</span>${reraMoreHtml}</div>`
-        : '';
       const cardWrap = document.createElement('div');
       cardWrap.className = 'ak-card-anchor';
 
@@ -96,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ak-card-header">
               <h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>
               <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
-              ${reraHtml}
             </div>
 
             <div class="ak-card-specs-ledger">
