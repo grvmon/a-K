@@ -124,22 +124,30 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
+    const methodologyHref = (basePath || '') + '/#core';
     list.forEach((prop, idx) => {
-      const cardAnchor = document.createElement('a');
-      cardAnchor.href = basePath + prop.url;
-      cardAnchor.className = 'ak-card-anchor';
-      cardAnchor.setAttribute('aria-label', `View ${prop.name} property details`);
+      if (idx === 6) gridContainer.appendChild(buildCtaCard());
+      const isReady = prop.possessionCategory === 'Ready to Move';
+      const statusLabel = isReady ? 'Ready to move' : 'Under construction';
+      const rera = Array.isArray(prop.rera) ? prop.rera : [];
+      const reraHtml = rera.length
+        ? `<div class="ak-card-rera"><span class="ak-rera-label">K-RERA</span> <span class="ak-rera-id">${rera[0]}</span>${rera.length > 1 ? ` <span class="ak-rera-more">+${rera.length - 1} phase${rera.length > 2 ? 's' : ''}</span>` : ''}</div>`
+        : '';
+      const cardWrap = document.createElement('div');
+      cardWrap.className = 'ak-card-anchor';
 
-      cardAnchor.innerHTML = `
+      cardWrap.innerHTML = `
         <article class="ak-property-card">
           <div class="ak-card-img-box">
-            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" width="${prop.heroW || 640}" height="${prop.heroH || 320}" ${idx < 3 ? 'loading="eager"' + (idx === 0 ? ' fetchpriority="high"' : '') : 'loading="lazy"'} decoding="async" />
+            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" width="${prop.heroW || 640}" height="${prop.heroH || 320}" ${idx < 3 ? 'loading="eager"' + (idx === 0 ? ' fetchpriority="high"' : '') : 'loading="lazy"'} decoding="async" onload="this.classList.add('is-loaded')" onerror="this.remove()" />
             <span class="ak-card-dev-badge">${prop.developer}</span>
+            <span class="ak-status-pill ${isReady ? 'is-ready' : 'is-uc'}">${statusLabel}</span>
           </div>
           <div class="ak-card-body">
             <div class="ak-card-header">
-              <h3 class="ak-card-title">${prop.name}</h3>
+              <h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>
               <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
+              ${reraHtml}
             </div>
 
             <div class="ak-card-specs">
@@ -153,30 +161,32 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
               <div class="ak-spec-item">
                 <i data-feather="calendar"></i>
-                <span>${prop.possession.replace('Possession: ', '')}</span>
+                <span>${prop.possession.replace('Possession: ', 'Possession ')}</span>
               </div>
             </div>
 
-            <!-- Acre&Key Research Assessment Box -->
             <div class="ak-card-score-box">
               <div class="ak-score-badge">
                 <span class="ak-score-num">${prop.score}</span>
                 <span class="ak-score-sub">/ 5</span>
               </div>
               <div class="ak-score-verdict-wrap">
-                <span class="ak-verdict-kicker">Acre&Key Verdict</span>
+                <span class="ak-verdict-kicker"><span class="ak-brand-lc">acre&amp;key</span> Verdict
+                  <a class="ak-score-help" href="${methodologyHref}" aria-label="How the acre&amp;key Score works" data-tip="How we score: see our methodology">?</a>
+                </span>
                 <span class="ak-verdict-badge">${prop.verdict}</span>
               </div>
             </div>
 
             <div class="ak-card-footer">
-              <span class="ak-card-cta-link">View Property <span class="ak-cta-arrow">→</span></span>
+              <button type="button" class="ak-card-assess-btn" data-project="${prop.name}">Request assessment</button>
+              <span class="ak-card-cta-link" aria-hidden="true">View property <span class="ak-cta-arrow">→</span></span>
             </div>
           </div>
         </article>
       `;
 
-      gridContainer.appendChild(cardAnchor);
+      gridContainer.appendChild(cardWrap);
     });
 
     updateCounter();
@@ -184,6 +194,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof feather !== 'undefined') {
       feather.replace();
     }
+  }
+
+  function buildCtaCard() {
+    const el = document.createElement('div');
+    el.className = 'ak-cta-card';
+    el.innerHTML = `
+      <span class="ak-cta-card-kicker">Not sure which fits?</span>
+      <h3 class="ak-cta-card-title">Get a shortlist built around your brief</h3>
+      <p class="ak-cta-card-text">Share your budget, commute and timeline. An acre&amp;key advisor will walk you through RERA records, possession risk and the trade-offs between projects.</p>
+      <button type="button" class="primary-cta-btn ak-cta-card-btn" onclick="window.openModal && window.openModal();">Book a consultation</button>
+    `;
+    return el;
   }
 
   function updateCounter() {
@@ -253,11 +275,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     renderProperties(filtered);
+    updateFilterCount();
 
     if (shouldUpdateUrl) {
       updateQueryParams();
     }
   }
+
+  function updateFilterCount() {
+    const count = [locationSelect, configSelect, possessionSelect, developerSelect].filter(s => s && s.value).length;
+    const badge = document.getElementById('filter-count');
+    if (badge) badge.textContent = count ? `(${count})` : '';
+  }
+
+  gridContainer.addEventListener('click', function (e) {
+    const btn = e.target.closest('.ak-card-assess-btn');
+    if (!btn) return;
+    e.preventDefault();
+    if (window.openModal) window.openModal();
+  });
 
   function resetFilters() {
     if (searchInput) searchInput.value = '';
@@ -292,19 +328,38 @@ document.addEventListener('DOMContentLoaded', function () {
   if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', resetFilters);
 
   // Mobile drawer handlers
+  // Bottom sheet is portalled to <body> while open so the sticky controls bar
+  // (its own stacking/containing context) cannot clip or mis-anchor it.
+  const drawerHome = filterDrawer ? document.createComment('filter-drawer-home') : null;
+  if (filterDrawer) filterDrawer.parentNode.insertBefore(drawerHome, filterDrawer);
+
   function openFilterDrawer() {
+    if (filterDrawer) document.body.appendChild(filterDrawer);
+    if (filterDrawerOverlay) document.body.appendChild(filterDrawerOverlay);
+    const ctaBarOpen = document.querySelector('.props-mobile-cta-bar');
+    if (ctaBarOpen) ctaBarOpen.style.visibility = 'hidden';
     if (filterDrawer) filterDrawer.classList.add('is-active');
     if (filterDrawerOverlay) filterDrawerOverlay.classList.add('is-active');
+    if (mobileFilterToggleBtn) mobileFilterToggleBtn.setAttribute('aria-expanded', 'true');
+    const first = filterDrawer && filterDrawer.querySelector('select');
+    if (first) first.focus();
   }
 
   function closeFilterDrawer() {
+    if (filterDrawer && drawerHome && drawerHome.parentNode) drawerHome.parentNode.insertBefore(filterDrawer, drawerHome.nextSibling);
+    const ctaBarClose = document.querySelector('.props-mobile-cta-bar');
+    if (ctaBarClose) ctaBarClose.style.visibility = '';
     if (filterDrawer) filterDrawer.classList.remove('is-active');
     if (filterDrawerOverlay) filterDrawerOverlay.classList.remove('is-active');
+    if (mobileFilterToggleBtn) mobileFilterToggleBtn.setAttribute('aria-expanded', 'false');
   }
 
   if (mobileFilterToggleBtn) mobileFilterToggleBtn.addEventListener('click', openFilterDrawer);
   if (filterDrawerCloseBtn) filterDrawerCloseBtn.addEventListener('click', closeFilterDrawer);
   if (filterDrawerOverlay) filterDrawerOverlay.addEventListener('click', closeFilterDrawer);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeFilterDrawer(); });
+  const applyBtn = document.getElementById('filter-drawer-apply');
+  if (applyBtn) applyBtn.addEventListener('click', closeFilterDrawer);
 
   // Handle browser back/forward buttons
   window.addEventListener('popstate', function () {
