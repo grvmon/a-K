@@ -30,7 +30,8 @@ function scrollToHashTarget(smooth) {
             var target = document.querySelector(hash);
             if (target) {
                 var headerNav = document.getElementById('header-nav');
-                var headerOffset = headerNav ? headerNav.offsetHeight + 10 : 90;
+                var isFixed = headerNav && window.getComputedStyle(headerNav).position === 'fixed';
+                var headerOffset = isFixed ? (headerNav.offsetHeight + 10) : 24;
                 var elemPos = target.getBoundingClientRect().top + window.pageYOffset;
                 window.scrollTo({
                     top: Math.max(0, elemPos - headerOffset),
@@ -50,7 +51,7 @@ const headerNav = document.getElementById('header-nav');
 const hasHero = document.querySelector('.hero-section');
 
 window.addEventListener('scroll', function () {
-    if (headerNav) {
+    if (headerNav && !headerNav.classList.contains('transparent-header')) {
         if (window.scrollY > 30) {
             headerNav.classList.add('scrolled');
         } else {
