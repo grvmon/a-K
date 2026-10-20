@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const methodologyHref = (basePath || '') + '/#core';
     list.forEach((prop, idx) => {
-      if (idx === 6) gridContainer.appendChild(buildCtaCard());
       const isReady = prop.possessionCategory === 'Ready to Move';
       const statusLabel = isReady ? 'Ready to move' : 'Under construction';
       const cardWrap = document.createElement('div');
