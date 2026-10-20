@@ -74,11 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
       const isReady = prop.possessionCategory === 'Ready to Move';
       const statusLabel = isReady ? 'Ready to move' : 'Under construction';
       const rera = Array.isArray(prop.rera) ? prop.rera : [];
+      const firstRera = rera[0] || '';
+      const reraShort = firstRera.includes('/PR/') ? 'PR/' + firstRera.split('/PR/')[1] : firstRera;
+      const reraMoreHtml = rera.length > 1 ? ` <span class="ak-rera-more">+${rera.length - 1} phase${rera.length > 2 ? 's' : ''}</span>` : '';
       const reraHtml = rera.length
-        ? `<div class="ak-card-rera"><span class="ak-rera-label">K-RERA</span> <span class="ak-rera-id">${rera[0]}</span>${rera.length > 1 ? ` <span class="ak-rera-more">+${rera.length - 1} phase${rera.length > 2 ? 's' : ''}</span>` : ''}</div>`
+        ? `<div class="ak-card-rera"><span class="ak-rera-label">K-RERA</span> <span class="ak-rera-id" title="${firstRera}">${reraShort}</span>${reraMoreHtml}</div>`
         : '';
       const cardWrap = document.createElement('div');
       cardWrap.className = 'ak-card-anchor';
+
+      const possClean = prop.possession.replace(/^Possession:\s*/i, '');
 
       cardWrap.innerHTML = `
         <article class="ak-property-card">
@@ -94,19 +99,12 @@ document.addEventListener('DOMContentLoaded', function () {
               ${reraHtml}
             </div>
 
-            <div class="ak-card-specs">
-              <div class="ak-spec-item">
-                <i data-feather="home"></i>
-                <span>${prop.config}</span>
-              </div>
-              <div class="ak-spec-item">
-                <i data-feather="maximize-2"></i>
-                <span>${prop.sizeRange}</span>
-              </div>
-              <div class="ak-spec-item">
-                <i data-feather="calendar"></i>
-                <span>${prop.possession.replace('Possession: ', 'Possession ')}</span>
-              </div>
+            <div class="ak-card-specs-ledger">
+              <span class="ak-ledger-item ak-ledger-config"><i data-feather="home"></i> ${prop.config}</span>
+              <span class="ak-ledger-sep">·</span>
+              <span class="ak-ledger-item ak-ledger-size"><i data-feather="maximize-2"></i> ${prop.sizeRange}</span>
+              <span class="ak-ledger-sep">·</span>
+              <span class="ak-ledger-item ak-ledger-poss"><i data-feather="calendar"></i> ${possClean}</span>
             </div>
 
             <div class="ak-card-score-box">
@@ -118,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="ak-verdict-kicker"><span class="ak-brand-lc">acre&amp;key</span> Verdict
                   <a class="ak-score-help" href="${methodologyHref}" aria-label="How the acre&amp;key Score works" data-tip="How we score: see our methodology">?</a>
                 </span>
-                <span class="ak-verdict-badge">${prop.verdict}</span>
+                <span class="ak-verdict-badge" title="${prop.verdict}">${prop.verdict}</span>
               </div>
             </div>
 
