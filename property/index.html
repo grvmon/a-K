@@ -242,21 +242,23 @@
     /* Property Cards Grid */
     .props-grid-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.75rem;
       margin-bottom: 4rem;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     @media (max-width: 1024px) {
       .props-grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.25rem;
       }
     }
 
     @media (max-width: 640px) {
       .props-grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 1.25rem;
       }
       .props-controls-section {
@@ -290,6 +292,9 @@
       color: inherit !important;
       display: block;
       height: 100%;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-property-card {
@@ -302,6 +307,9 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-card-anchor:hover .ak-property-card {
@@ -390,10 +398,16 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-card-header {
       margin-bottom: 0.55rem;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-card-title {
@@ -404,6 +418,9 @@
       line-height: 1.2;
       margin: 0 0 0.25rem 0;
       transition: color 0.4s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .ak-card-anchor:hover .ak-card-title {
@@ -418,6 +435,9 @@
       display: flex;
       align-items: center;
       gap: 0.35rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .ak-card-loc svg {
@@ -453,18 +473,40 @@
     .ak-card-specs-ledger {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 0.35rem 0.5rem;
       font-family: 'Manrope', sans-serif;
       font-size: 0.8rem;
       color: #55555A;
       margin-bottom: 0.75rem;
+      min-width: 0;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
     }
 
     .ak-ledger-item {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
+      white-space: nowrap;
+      min-width: 0;
+    }
+
+    .ak-ledger-config {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ak-ledger-size {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .ak-ledger-poss {
+      flex-shrink: 0;
       white-space: nowrap;
     }
 
@@ -480,6 +522,7 @@
       color: rgba(85, 85, 90, 0.35);
       user-select: none;
       font-weight: 700;
+      flex-shrink: 0;
     }
 
     /* Acre&Key Compact Research Assessment Box */
@@ -493,6 +536,9 @@
       display: flex;
       align-items: center;
       gap: 0.65rem;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-score-badge {
@@ -604,6 +650,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.65rem;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .ak-card-assess-btn {
@@ -620,6 +669,8 @@
       color: #804526;
       cursor: pointer;
       transition: background 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .ak-card-assess-btn:hover {
@@ -635,6 +686,8 @@
       align-items: center;
       gap: 0.3rem;
       transition: color 0.4s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .ak-card-anchor:hover .ak-cta-arrow {
@@ -1090,8 +1143,8 @@
   <!-- Scripts -->
   <script src="../website.min.js?v=20261020_footer_v6" defer=""></script>
   <script src="../lead-form.min.js?v=1791755621" defer=""></script><script src="../abha-form.min.js?v=1791755621" defer=""></script>
-  <script src="properties-data.js?v=20261021e" defer></script>
-  <script src="properties.js?v=20261021e" defer=""></script>
+  <script src="properties-data.js?v=20261021f" defer></script>
+  <script src="properties.js?v=20261021f" defer=""></script>
 
 
 
