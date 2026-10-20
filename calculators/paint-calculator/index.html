@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1459,17 +1460,17 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="widIn">Room width</label><span class="akc-hint" id="widInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="widIn" data-key="wid" value="15" autocomplete="off"><span class="akc-suf">ft</span></div>
-                        <input type="range" class="akc-range akc-m-noslider" data-for="widIn" min="5" max="60" step="0.5" value="15" aria-label="Room width slider">
+                        <input type="range" class="akc-range" data-for="widIn" min="5" max="60" step="0.5" value="15" aria-label="Room width slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="htIn">Wall height</label><span class="akc-hint" id="htInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="htIn" data-key="ht" value="10" autocomplete="off"><span class="akc-suf">ft</span></div>
-                        <input type="range" class="akc-range akc-m-noslider" data-for="htIn" min="7" max="20" step="0.5" value="10" aria-label="Wall height slider">
+                        <input type="range" class="akc-range" data-for="htIn" min="7" max="20" step="0.5" value="10" aria-label="Wall height slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Paint price</label><span class="akc-hint" id="priceInHint">per litre</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="400" autocomplete="off"></div>
-                        <input type="range" class="akc-range akc-m-noslider" data-for="priceIn" min="100" max="1500" step="10" value="400" aria-label="Paint price slider">
+                        <input type="range" class="akc-range" data-for="priceIn" min="100" max="1500" step="10" value="400" aria-label="Paint price slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="doorsIn">Doors</label><span class="akc-hint" id="doorsInHint"></span></div>
@@ -1489,12 +1490,12 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="coatsIn">Coats</label><span class="akc-hint" id="coatsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="coatsIn" data-key="coats" value="2" autocomplete="off"><span class="akc-suf"></span></div>
-                        <input type="range" class="akc-range akc-m-noslider" data-for="coatsIn" min="1" max="4" step="1" value="2" aria-label="Coats slider">
+                        <input type="range" class="akc-range" data-for="coatsIn" min="1" max="4" step="1" value="2" aria-label="Coats slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="coverageIn">Coverage</label><span class="akc-hint" id="coverageInHint">per coat, on the tin</span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="coverageIn" data-key="coverage" value="100" autocomplete="off"><span class="akc-suf">sq ft/L</span></div>
-                        <input type="range" class="akc-range akc-m-noslider" data-for="coverageIn" min="50" max="200" step="5" value="100" aria-label="Coverage slider">
+                        <input type="range" class="akc-range" data-for="coverageIn" min="50" max="200" step="5" value="100" aria-label="Coverage slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="wasteIn">Extra</label><span class="akc-hint" id="wasteInHint">spills</span></div>

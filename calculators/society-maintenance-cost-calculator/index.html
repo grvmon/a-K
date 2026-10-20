@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,14 +1455,17 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="areaIn">Area billed</label><span class="akc-hint" id="areaInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="areaIn" data-key="area" value="1,500" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="areaIn" min="0" max="10000" step="50" value="1500" aria-label="Area billed slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rateIn">Rate a month</label><span class="akc-hint" id="rateInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="rateIn" data-key="rate" value="5" autocomplete="off"><span class="akc-suf">₹ / sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="20" step="1" value="5" aria-label="Rate a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="fixedIn">Fixed charges a month</label><span class="akc-hint" id="fixedInHint">water, club, other</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="fixedIn" data-key="fixed" data-money="1" value="2,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="fixedIn" min="0" max="10000" step="50" value="2000" aria-label="Fixed charges a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-big">Society collects ₹ 20 L+ a year</span></div>

@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,14 +1455,17 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="monthsIn">Delay</label><span class="akc-hint" id="monthsInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="monthsIn" data-key="months" value="12" autocomplete="off"><span class="akc-suf">months</span></div>
+                        <input type="range" class="akc-range" data-for="monthsIn" min="0" max="50" step="1" value="12" aria-label="Delay slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rentIn">Rent you pay a month</label><span class="akc-hint" id="rentInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rentIn" data-key="rent" data-money="1" value="25,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rentIn" min="0" max="100000" step="500" value="25000" aria-label="Rent you pay a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="paidIn">Paid to builder so far</label><span class="akc-hint" id="paidInHint">incl. loan</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="paidIn" data-key="paid" data-money="1" value="80,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="paidIn" min="0" max="5e+07" step="250000" value="8e+06" aria-label="Paid to builder so far slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><span class="akc-label" id="seg-mode">Loan payments now</span></div>
@@ -1470,10 +1474,12 @@
                     <div class="akc-field half" id="loanF">
                         <div class="akc-field-top"><label for="loanIn">Loan disbursed</label><span class="akc-hint" id="loanInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="loanIn" data-key="loan" data-money="1" value="60,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="loanIn" min="0" max="2.5e+07" step="200000" value="6e+06" aria-label="Loan disbursed slider">
                     </div>
                     <div class="akc-field half" id="rateF">
                         <div class="akc-field-top"><label for="rateIn">Loan rate</label><span class="akc-hint" id="rateInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="rateIn" data-key="rate" data-rate="loanRatePct" value="8.5" autocomplete="off"><span class="akc-suf">% p.a.</span></div>
+                        <input type="range" class="akc-range" data-for="rateIn" min="0" max="20" step="0.1" value="8.5" aria-label="Loan rate slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Other costs and RERA rate</summary>

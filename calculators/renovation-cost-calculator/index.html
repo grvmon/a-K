@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="areaIn">Area being renovated</label><span class="akc-hint" id="areaInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="areaIn" data-key="area" value="1,200" autocomplete="off"><span class="akc-suf">sq ft</span></div>
+                        <input type="range" class="akc-range" data-for="areaIn" min="0" max="5000" step="25" value="1200" aria-label="Area being renovated slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="civilIn">Civil work and flooring</label><span class="akc-hint" id="civilInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="civilIn" data-key="civil" data-money="1" value="2,50,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="civilIn" min="0" max="1e+06" step="5000" value="250000" aria-label="Civil work and flooring slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="paintIn">Painting and electrical</label><span class="akc-hint" id="paintInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="paintIn" data-key="paint" data-money="1" value="1,55,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="paintIn" min="0" max="1e+06" step="5000" value="155000" aria-label="Painting and electrical slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="kitchenIn">Kitchen and plumbing</label><span class="akc-hint" id="kitchenInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="kitchenIn" data-key="kitchen" data-money="1" value="3,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="kitchenIn" min="0" max="2e+06" step="10000" value="300000" aria-label="Kitchen and plumbing slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="bathIn">Bathrooms, doors, windows</label><span class="akc-hint" id="bathInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="bathIn" data-key="bath" data-money="1" value="1,95,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="bathIn" min="0" max="1e+06" step="5000" value="195000" aria-label="Bathrooms, doors, windows slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="furnIn">Furniture and storage</label><span class="akc-hint" id="furnInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="furnIn" data-key="furn" data-money="1" value="2,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="furnIn" min="0" max="1e+06" step="5000" value="200000" aria-label="Furniture and storage slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Add labour, GST, buffer and budget</summary>

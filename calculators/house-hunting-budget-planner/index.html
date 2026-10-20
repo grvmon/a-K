@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="incomeIn">Take-home a month</label><span class="akc-hint" id="incomeInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="incomeIn" data-key="income" data-money="1" value="2,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="incomeIn" min="0" max="1e+06" step="5000" value="200000" aria-label="Take-home a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="emisIn">Current EMIs a month</label><span class="akc-hint" id="emisInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="emisIn" data-key="emis" data-money="1" value="20,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="emisIn" min="0" max="100000" step="500" value="20000" aria-label="Current EMIs a month slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="savingsIn">Savings you have</label><span class="akc-hint" id="savingsInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="savingsIn" data-key="savings" data-money="1" value="40,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="savingsIn" min="0" max="2e+07" step="100000" value="4e+06" aria-label="Savings you have slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="emerIn">Emergency fund to keep</label><span class="akc-hint" id="emerInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="emerIn" data-key="emer" data-money="1" value="8,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="emerIn" min="0" max="5e+06" step="25000" value="800000" aria-label="Emergency fund to keep slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="shareIn">Max share for EMIs</label><span class="akc-hint" id="shareInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="shareIn" data-key="share" value="50" autocomplete="off"><span class="akc-suf">% of pay</span></div>
+                        <input type="range" class="akc-range" data-for="shareIn" min="0" max="100" step="0.5" value="50" aria-label="Max share for EMIs slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="extrasIn">Interiors and moving</label><span class="akc-hint" id="extrasInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="extrasIn" data-key="extras" data-money="1" value="11,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="extrasIn" min="0" max="5e+06" step="25000" value="1.1e+06" aria-label="Interiors and moving slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates, loan and buffer</summary>

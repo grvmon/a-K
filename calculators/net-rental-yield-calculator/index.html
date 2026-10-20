@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1454,26 +1455,32 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Property price</label><span class="akc-hint" id="priceInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="1,00,00,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="5e+07" step="250000" value="1e+07" aria-label="Property price slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="rentIn">Monthly rent</label><span class="akc-hint" id="rentInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="rentIn" data-key="rent" data-money="1" value="30,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="rentIn" min="0" max="200000" step="1000" value="30000" aria-label="Monthly rent slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="vacIn">Vacancy</label><span class="akc-hint" id="vacInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="vacIn" data-key="vac" value="5" autocomplete="off"><span class="akc-suf">% of rent</span></div>
+                        <input type="range" class="akc-range" data-for="vacIn" min="0" max="20" step="0.1" value="5" aria-label="Vacancy slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="maintIn">Maintenance a year</label><span class="akc-hint" id="maintInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="maintIn" data-key="maint" data-money="1" value="60,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="maintIn" min="0" max="250000" step="2000" value="60000" aria-label="Maintenance a year slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="ptaxIn">Property tax a year</label><span class="akc-hint" id="ptaxInHint"></span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="ptaxIn" data-key="ptax" data-money="1" value="10,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="ptaxIn" min="0" max="50000" step="250" value="10000" aria-label="Property tax a year slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="otherIn">Insurance, repairs</label><span class="akc-hint" id="otherInHint">a year</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="otherIn" data-key="other" data-money="1" value="10,000" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="otherIn" min="0" max="50000" step="250" value="10000" aria-label="Insurance, repairs slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust rates and target yield</summary>

@@ -1304,6 +1304,7 @@
     .akc-range::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:#FFFFFF;border:0.5px solid #804526;box-shadow:0 0 0 3px #804526 inset}
     .akc-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#FFFFFF;border:2px solid #804526}
     .akc-range:focus-visible{outline:2px solid #804526;outline-offset:2px}
+    @media (max-width: 767px){.akc-field .akc-range{display:none !important}} /*sliders desktop-only*/
     .akc-seg{display:flex;border:0.5px solid rgba(85,85,90,.45);border-radius:4px;overflow:hidden}
     .akc-seg button{flex:1;min-height:44px;border:0;border-right:0.5px solid rgba(85,85,90,.3);background:var(--titanium-frost,#FAFAFA);font-family:var(--font-body),'Manrope',sans-serif;font-size:.74rem;font-weight:600;color:var(--deep-slate,#55555A);cursor:pointer;padding:0 .35rem;line-height:1.2}
     .akc-seg button:last-child{border-right:0}
@@ -1458,18 +1459,22 @@
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="lenIn">Length</label><span class="akc-hint" id="lenInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="lenIn" data-key="len" value="20" autocomplete="off"><span class="akc-suf">ft</span></div>
+                        <input type="range" class="akc-range" data-for="lenIn" min="0" max="100" step="1" value="20" aria-label="Length slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="widIn" id="widInLabel">Width</label><span class="akc-hint" id="widInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="widIn" data-key="wid" value="10" autocomplete="off"><span class="akc-suf">ft</span></div>
+                        <input type="range" class="akc-range" data-for="widIn" min="0" max="50" step="1" value="10" aria-label="widIn slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="thickIn">Thickness</label><span class="akc-hint" id="thickInHint"></span></div>
                         <div class="akc-box"><input type="text" inputmode="decimal" id="thickIn" data-key="thick" value="150" autocomplete="off"><span class="akc-suf">mm</span></div>
+                        <input type="range" class="akc-range" data-for="thickIn" min="0" max="1000" step="5" value="150" aria-label="Thickness slider">
                     </div>
                     <div class="akc-field half">
                         <div class="akc-field-top"><label for="priceIn">Cement price</label><span class="akc-hint" id="priceInHint">per bag</span></div>
                         <div class="akc-box"><span class="akc-pre" aria-hidden="true">₹</span><input type="text" inputmode="numeric" id="priceIn" data-key="price" data-money="1" value="380" autocomplete="off"></div>
+                        <input type="range" class="akc-range" data-for="priceIn" min="0" max="2000" step="10" value="380" aria-label="Cement price slider">
                     </div>
                     <details class="akc-adv">
                         <summary>Adjust mix, factors and bag size</summary>
