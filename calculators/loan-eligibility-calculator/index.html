@@ -1559,6 +1559,18 @@
             <li>Add a co-applicant’s salary, the interest rate and the tenure under “Co-applicant, rate and tenure”, then read the loan, the property budget and the cash you need upfront.</li>
         </ol>
 
+        <h2>How it’s calculated</h2>
+        <p>The calculator works out how much EMI your income can carry, then turns that EMI into a loan amount at your rate and tenure.</p>
+        <div class="ak-formula-card">
+<h3>Formulas used by the calculator</h3>
+<div class="ak-formula-step"><div class="ak-formula-num">1</div><div class="ak-formula-content"><strong>EMI you can carry</strong><code>EMI = (Your salary + Co-applicant salary) × FOIR % − Existing EMIs</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">2</div><div class="ak-formula-content"><strong>Loan amount</strong><code>Loan = EMI × ((1 + r)<sup>n</sup> − 1) ÷ (r × (1 + r)<sup>n</sup>), r = rate ÷ 1200, n = years × 12</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">3</div><div class="ak-formula-content"><strong>Loan-to-value cap</strong><code>LTV = 90% up to ₹ 30 L, 80% up to ₹ 75 L, 75% above</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">4</div><div class="ak-formula-content"><strong>Property budget</strong><code>Budget = Loan ÷ LTV; Down payment = Budget × (1 − LTV)</code></div></div>
+<div class="ak-formula-step"><div class="ak-formula-num">5</div><div class="ak-formula-content"><strong>Cash upfront</strong><code>Upfront = Down payment + Budget × Stamp duty &amp; registration %</code></div></div>
+</div>
+        <p class="ak-source-note">Sources: <a href="https://www.rbi.org.in/" target="_blank" rel="noopener">RBI</a> housing loan LTV limits, <a href="https://dpal.karnataka.gov.in/storage/pdf-files/34%20of%201957(E).pdf" target="_blank" rel="noopener">Karnataka Stamp Act, 1957</a>, <a href="https://igr.karnataka.gov.in/storage/pdf-files/RegistrationFee.pdf" target="_blank" rel="noopener">IGR Karnataka registration fee table</a>.</p>
+
         <h2>How banks decide your home loan eligibility</h2>
 <p>Bank loan sanction decisions are driven by algorithmic underwriting models evaluating your net disposable income, credit history, career stability, and loan-to-value benchmarks.</p>
         <h3>1. The FOIR Mechanism</h3>
