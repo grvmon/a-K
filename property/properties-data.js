@@ -1,6 +1,7 @@
 const PROPERTIES_DATA = [
   {
     id: "sumadhura-solace-whitefield",
+    rera: ["PRM/KA/RERA/1251/446/PR/111225/008330", "PRM/KA/RERA/1251/446/PR/111225/008333"],
     slug: "sumadhura-solace-whitefield",
     name: "Sumadhura Solace",
     developer: "Sumadhura Infracon",
@@ -21,6 +22,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "sumadhura-folium-whitefield",
+    rera: ["PRM/KA/RERA/1251/446/PR/141223/006468", "PRM/KA/RERA/1251/446/PR/050126/008382"],
     slug: "sumadhura-folium-whitefield",
     name: "Sumadhura Folium",
     developer: "Sumadhura Infracon",
@@ -41,6 +43,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "sattva-songbird-budigere-road",
+    rera: ["PRM/KA/RERA/1251/446/PR/060924/007008", "PRM/KA/RERA/1251/310/PR/270326/008557"],
     slug: "sattva-songbird-budigere-road",
     name: "Sattva Songbird",
     developer: "Sattva Group",
@@ -61,6 +64,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "sattva-bliss-budigere-cross",
+    rera: ["PRM/KA/RERA/1251/446/PR/120123/005620"],
     slug: "sattva-bliss-budigere-cross",
     name: "Sattva Bliss",
     developer: "Sattva Group",
@@ -81,6 +85,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "prestige-evergreen-raintree-park",
+    rera: ["PRM/KA/RERA/1251/446/PR/010126/008374"],
     slug: "prestige-evergreen-raintree-park",
     name: "Evergreen at Prestige Raintree Park",
     developer: "Prestige Group",
@@ -101,6 +106,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "brigade-belvedere-budigere-cross",
+    rera: ["PRM/KA/RERA/1251/446/PR/240326/008549"],
     slug: "brigade-belvedere-budigere-cross",
     name: "Brigade Belvedere",
     developer: "Brigade Group",
@@ -121,6 +127,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "alembic-cloud-forest-alembic-city",
+    rera: ["PRM/KA/RERA/1251/446/PR/250625/007869"],
     slug: "alembic-cloud-forest-alembic-city",
     name: "Alembic Cloud Forest at Alembic City",
     developer: "Alembic Real Estate",
@@ -141,6 +148,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "one-residences-sobha-oneworld",
+    rera: ["PRM/KA/RERA/1250/304/PR/080526/008634", "PRM/KA/RERA/1250/304/PR/080526/008635", "PRM/KA/RERA/1250/304/PR/080526/008636", "PRM/KA/RERA/1250/304/PR/080526/008637", "PRM/KA/RERA/1250/304/PR/080526/008638", "PRM/KA/RERA/1250/304/PR/080526/008639"],
     slug: "one-residences-sobha-oneworld",
     name: "One Residences at SOBHA OneWorld",
     developer: "SOBHA Limited",
@@ -161,6 +169,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "sumadhura-edition-whitefield",
+    rera: ["PRM/KA/RERA/1251/446/PR/230724/006995"],
     slug: "sumadhura-edition-whitefield",
     name: "Sumadhura Edition",
     developer: "Sumadhura Infracon",
@@ -181,6 +190,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "sumadhura-capitol-residences",
+    rera: ["PRM/KA/RERA/1251/446/PR/051024/007125"],
     slug: "sumadhura-capitol-residences",
     name: "Sumadhura Capitol Residences",
     developer: "Sumadhura Infracon",
@@ -201,6 +211,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "riviera-uno-whitefield",
+    rera: ["PRM/KA/RERA/1250/304/PR/060225/007489"],
     slug: "riviera-uno-whitefield",
     name: "Riviera Uno",
     developer: "Riviera Group",
@@ -221,6 +232,7 @@ const PROPERTIES_DATA = [
   },
   {
     id: "brigade-granada",
+    rera: ["PRM/KA/RERA/1251/446/PR/181124/007231"],
     slug: "brigade-granada",
     name: "Brigade Granada",
     developer: "Brigade Group",
