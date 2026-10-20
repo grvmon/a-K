@@ -101,10 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="ak-ledger-sep">·</span>
               <span class="ak-ledger-item ak-ledger-poss"><i data-feather="calendar"></i> ${possClean}</span>
             </div>
-
-            <div class="ak-card-footer">
-              <span class="ak-card-cta-link" aria-hidden="true">View property <span class="ak-cta-arrow">→</span></span>
-            </div>
           </div>
         </article>
       `;
