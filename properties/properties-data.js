@@ -184,7 +184,7 @@ const PROPERTIES_DATA = [
     possessionYear: 2029,
     possessionCategory: "4+ Years",
     score: 3.8,
-    verdict: "Premium Core-Whitefield Living",
+    verdict: "A-Grade Core-Whitefield Living",
     heroImg: "../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp",
     url: "/property/sumadhura-edition-whitefield/"
   },
@@ -219,16 +219,37 @@ const PROPERTIES_DATA = [
     priceRange: "₹5.25 – 5.30 Cr",
     minPrice: 5.25,
     maxPrice: 5.30,
-    config: "4 BHK Ultra-Luxury Villas",
+    config: "4 BHK Institutional-Grade Villas",
     configTypes: ["4 BHK", "Villas"],
     sizeRange: "3,800 – 4,200 sq.ft.",
     possession: "Possession: Ready to Move",
     possessionYear: 2026,
     possessionCategory: "Ready to Move",
     score: 4.1,
-    verdict: "Luxury Villa Proposition",
+    verdict: "A-Grade Villa Proposition",
     heroImg: "../style-guide/assets/riviera/riviera_hero.webp",
     url: "/property/riviera-uno-whitefield/"
+  },
+  {
+    id: "brigade-granada",
+    slug: "brigade-granada",
+    name: "Brigade Granada",
+    developer: "Brigade Group",
+    location: "Whitefield",
+    sublocation: "Kadugodi Road, Whitefield",
+    priceRange: "₹1.45 – 3.25 Cr",
+    minPrice: 1.45,
+    maxPrice: 3.25,
+    config: "2.5, 3 & 4 BHK",
+    configTypes: ["2.5 BHK", "3 BHK", "4 BHK"],
+    sizeRange: "1,260 – 2,450 sq.ft.",
+    possession: "Possession: Dec 2028",
+    possessionYear: 2028,
+    possessionCategory: "2–4 Years",
+    score: 4.18,
+    verdict: "Boutique High-Rise Living near Hope Farm Metro",
+    heroImg: "../style-guide/assets/card_property.webp",
+    url: "/property/brigade-granada/"
   }
 ];
 

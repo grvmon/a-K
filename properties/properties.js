@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const gridContainer = document.getElementById('properties-grid');
   const resultsCounter = document.getElementById('results-counter');
   const clearFiltersBtn = document.getElementById('clear-filters-btn');
+  const chipButtons = document.querySelectorAll('.props-chip');
   
   // Mobile drawer controls
   const mobileFilterToggleBtn = document.getElementById('mobile-filter-toggle-btn');
@@ -17,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const filterDrawerCloseBtn = document.getElementById('filter-drawer-close');
 
   if (!gridContainer || typeof PROPERTIES_DATA === 'undefined') return;
+
+  const isSubpath = window.location.pathname.startsWith('/a-K/');
+  const basePath = isSubpath ? '/a-K' : '';
 
   // Populate Developer Filter dynamically from properties data
   if (developerSelect && developerSelect.options.length <= 1) {
@@ -40,6 +44,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function syncChipsWithLocation(locValue) {
+    chipButtons.forEach(chip => {
+      const chipLoc = chip.getAttribute('data-location') || '';
+      if (chipLoc === locValue) {
+        chip.classList.add('is-active');
+      } else {
+        chip.classList.remove('is-active');
+      }
+    });
+  }
+
+  function updateQueryParams() {
+    const params = new URLSearchParams();
+    if (searchInput && searchInput.value.trim()) params.set('search', searchInput.value.trim());
+    if (locationSelect && locationSelect.value) params.set('location', locationSelect.value);
+    if (budgetSelect && budgetSelect.value) params.set('budget', budgetSelect.value);
+    if (configSelect && configSelect.value) params.set('config', configSelect.value);
+    if (possessionSelect && possessionSelect.value) params.set('possession', possessionSelect.value);
+    if (developerSelect && developerSelect.value) params.set('developer', developerSelect.value);
+    if (sortSelect && sortSelect.value && sortSelect.value !== 'recommended') params.set('sort', sortSelect.value);
+
+    const queryString = params.toString();
+    const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+    window.history.replaceState(null, '', newUrl);
+  }
+
+  function loadQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    const searchVal = params.get('search') || params.get('q');
+    if (searchVal && searchInput) searchInput.value = searchVal;
+
+    const locVal = params.get('location') || params.get('loc');
+    if (locVal && locationSelect) {
+      locationSelect.value = locVal;
+      syncChipsWithLocation(locVal);
+    }
+
+    const budgetVal = params.get('budget');
+    if (budgetVal && budgetSelect) budgetSelect.value = budgetVal;
+
+    const configVal = params.get('config');
+    if (configVal && configSelect) configSelect.value = configVal;
+
+    const possVal = params.get('possession');
+    if (possVal && possessionSelect) possessionSelect.value = possVal;
+
+    const devVal = params.get('developer');
+    if (devVal && developerSelect) developerSelect.value = devVal;
+
+    const sortVal = params.get('sort');
+    if (sortVal && sortSelect) sortSelect.value = sortVal;
+  }
+
   function renderProperties(list) {
     gridContainer.innerHTML = '';
 
@@ -49,13 +106,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (list.length === 0) {
       gridContainer.innerHTML = `
-        <div class="ak-no-results">
-          <div class="ak-no-results-icon"><i data-feather="search"></i></div>
-          <h3>No properties match your search</h3>
-          <p>Try adjusting your search keywords, budget, or location filters to see more results.</p>
-          <button type="button" class="sd-btn-gold" id="no-results-clear-btn" style="margin-top:1rem;">
-            <span>Reset All Filters</span>
-          </button>
+        <div class="ak-no-results" style="grid-column: 1 / -1; max-width: 640px; margin: 2rem auto; text-align: center; background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding: 2.5rem 2rem;">
+          <div style="width: 48px; height: 48px; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; background: #FAFAFA; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; color: #804526;">
+            <i data-feather="compass"></i>
+          </div>
+          <span style="font-family: 'Manrope', sans-serif; font-size: 0.8rem; font-weight: 700; color: #804526; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.4rem;">Off-Market Due Diligence Concierge</span>
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; color: #2B2D31; font-weight: 400; margin: 0 0 0.6rem 0;">No published projects match these specific criteria</h3>
+          <p style="font-family: 'Manrope', sans-serif; font-size: 0.92rem; color: #55555A; line-height: 1.6; margin: 0 0 1.5rem 0;">Our research team continually tracks pre-launch filings, phase expansions, and institutional builder inventory across Bengaluru that are not yet publicly listed.</p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="primary-cta-btn" onclick="window.openModal &amp;&amp; window.openModal();" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.25rem; font-family: 'Manrope', sans-serif; font-size: 0.88rem; font-weight: 700; border-radius: 4px; cursor: pointer; border: none; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color: #FFFFFF; text-shadow: 0 1px 2px rgba(43,45,49,0.35);">
+              <span>Request Off-Market Dossier</span>
+              <span class="cta-arrow-badge" aria-hidden="true" style="display: inline-flex;"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
+            </button>
+            <button type="button" id="no-results-clear-btn" style="display: inline-flex; align-items: center; padding: 0.65rem 1.15rem; font-family: 'Manrope', sans-serif; font-size: 0.88rem; font-weight: 600; border-radius: 4px; cursor: pointer; border: 0.5px solid rgba(85, 85, 90, 0.3); background: #FAFAFA; color: #2B2D31; transition: all 0.25s ease;">
+              <span>Reset All Filters</span>
+            </button>
+          </div>
         </div>
       `;
       if (typeof feather !== 'undefined') feather.replace();
@@ -66,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     list.forEach(prop => {
       const cardAnchor = document.createElement('a');
-      cardAnchor.href = prop.url;
+      cardAnchor.href = basePath + prop.url;
       cardAnchor.className = 'ak-card-anchor';
       cardAnchor.setAttribute('aria-label', `View ${prop.name} property details`);
 
@@ -129,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function filterAndSort() {
+  function filterAndSort(shouldUpdateUrl = true) {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
     const selectedLoc = locationSelect ? locationSelect.value : '';
     const selectedBudget = budgetSelect ? budgetSelect.value : '';
@@ -138,13 +204,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectedDev = developerSelect ? developerSelect.value : '';
     const selectedSort = sortSelect ? sortSelect.value : 'recommended';
 
+    syncChipsWithLocation(selectedLoc);
+
     let filtered = PROPERTIES_DATA.filter(prop => {
       // Search query
       if (query) {
         const matchesName = prop.name.toLowerCase().includes(query);
         const matchesDev = prop.developer.toLowerCase().includes(query);
         const matchesLoc = prop.location.toLowerCase().includes(query);
-        const matchesSubLoc = prop.sublocation.toLowerCase().includes(query);
+        const matchesSubLoc = prop.sublocation ? prop.sublocation.toLowerCase().includes(query) : false;
         if (!matchesName && !matchesDev && !matchesLoc && !matchesSubLoc) {
           return false;
         }
@@ -202,6 +270,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     renderProperties(filtered);
+
+    if (shouldUpdateUrl) {
+      updateQueryParams();
+    }
   }
 
   function resetFilters() {
@@ -212,17 +284,30 @@ document.addEventListener('DOMContentLoaded', function () {
     if (possessionSelect) possessionSelect.value = '';
     if (developerSelect) developerSelect.value = '';
     if (sortSelect) sortSelect.value = 'recommended';
+    syncChipsWithLocation('');
     filterAndSort();
   }
 
+  // Chip Buttons Event Listeners
+  chipButtons.forEach(chip => {
+    chip.addEventListener('click', function () {
+      const loc = this.getAttribute('data-location') || '';
+      if (locationSelect) {
+        locationSelect.value = loc;
+      }
+      syncChipsWithLocation(loc);
+      filterAndSort();
+    });
+  });
+
   // Event Listeners
-  if (searchInput) searchInput.addEventListener('input', filterAndSort);
-  if (locationSelect) locationSelect.addEventListener('change', filterAndSort);
-  if (budgetSelect) budgetSelect.addEventListener('change', filterAndSort);
-  if (configSelect) configSelect.addEventListener('change', filterAndSort);
-  if (possessionSelect) possessionSelect.addEventListener('change', filterAndSort);
-  if (developerSelect) developerSelect.addEventListener('change', filterAndSort);
-  if (sortSelect) sortSelect.addEventListener('change', filterAndSort);
+  if (searchInput) searchInput.addEventListener('input', () => filterAndSort());
+  if (locationSelect) locationSelect.addEventListener('change', () => filterAndSort());
+  if (budgetSelect) budgetSelect.addEventListener('change', () => filterAndSort());
+  if (configSelect) configSelect.addEventListener('change', () => filterAndSort());
+  if (possessionSelect) possessionSelect.addEventListener('change', () => filterAndSort());
+  if (developerSelect) developerSelect.addEventListener('change', () => filterAndSort());
+  if (sortSelect) sortSelect.addEventListener('change', () => filterAndSort());
   if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', resetFilters);
 
   // Mobile drawer handlers
@@ -240,6 +325,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (filterDrawerCloseBtn) filterDrawerCloseBtn.addEventListener('click', closeFilterDrawer);
   if (filterDrawerOverlay) filterDrawerOverlay.addEventListener('click', closeFilterDrawer);
 
-  // Initial render
-  filterAndSort();
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', function () {
+    loadQueryParams();
+    filterAndSort(false);
+  });
+
+  // Initial load from URL params
+  loadQueryParams();
+  filterAndSort(false);
 });
