@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('prop-search-input');
   const locationSelect = document.getElementById('filter-location');
-  const budgetSelect = document.getElementById('filter-budget');
   const configSelect = document.getElementById('filter-config');
   const possessionSelect = document.getElementById('filter-possession');
   const developerSelect = document.getElementById('filter-developer');
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams();
     if (searchInput && searchInput.value.trim()) params.set('search', searchInput.value.trim());
     if (locationSelect && locationSelect.value) params.set('location', locationSelect.value);
-    if (budgetSelect && budgetSelect.value) params.set('budget', budgetSelect.value);
     if (configSelect && configSelect.value) params.set('config', configSelect.value);
     if (possessionSelect && possessionSelect.value) params.set('possession', possessionSelect.value);
     if (developerSelect && developerSelect.value) params.set('developer', developerSelect.value);
@@ -81,8 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
       syncChipsWithLocation(locVal);
     }
 
-    const budgetVal = params.get('budget');
-    if (budgetVal && budgetSelect) budgetSelect.value = budgetVal;
 
     const configVal = params.get('config');
     if (configVal && configSelect) configSelect.value = configVal;
@@ -100,9 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderProperties(list) {
     gridContainer.innerHTML = '';
 
-    if (resultsCounter) {
-      resultsCounter.textContent = `Showing ${list.length} of ${PROPERTIES_DATA.length} verified projects`;
-    }
 
     if (list.length === 0) {
       gridContainer.innerHTML = `
@@ -124,13 +117,14 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
       `;
+      updateCounter();
       if (typeof feather !== 'undefined') feather.replace();
       const resetBtn = document.getElementById('no-results-clear-btn');
       if (resetBtn) resetBtn.addEventListener('click', resetFilters);
       return;
     }
 
-    list.forEach(prop => {
+    list.forEach((prop, idx) => {
       const cardAnchor = document.createElement('a');
       cardAnchor.href = basePath + prop.url;
       cardAnchor.className = 'ak-card-anchor';
@@ -139,18 +133,13 @@ document.addEventListener('DOMContentLoaded', function () {
       cardAnchor.innerHTML = `
         <article class="ak-property-card">
           <div class="ak-card-img-box">
-            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" loading="lazy" />
+            <img src="${prop.heroImg}" alt="${prop.name} ${prop.location}" width="${prop.heroW || 640}" height="${prop.heroH || 320}" ${idx < 3 ? 'loading="eager"' + (idx === 0 ? ' fetchpriority="high"' : '') : 'loading="lazy"'} decoding="async" />
             <span class="ak-card-dev-badge">${prop.developer}</span>
           </div>
           <div class="ak-card-body">
             <div class="ak-card-header">
               <h3 class="ak-card-title">${prop.name}</h3>
               <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
-            </div>
-            
-            <div class="ak-card-price-row">
-              <span class="ak-card-price-label">Price Range</span>
-              <span class="ak-card-price-val">${prop.priceRange}</span>
             </div>
 
             <div class="ak-card-specs">
@@ -190,15 +179,22 @@ document.addEventListener('DOMContentLoaded', function () {
       gridContainer.appendChild(cardAnchor);
     });
 
+    updateCounter();
+
     if (typeof feather !== 'undefined') {
       feather.replace();
     }
   }
 
+  function updateCounter() {
+    if (!resultsCounter) return;
+    const shown = gridContainer.querySelectorAll('.ak-property-card').length;
+    resultsCounter.textContent = `Showing ${shown} of ${PROPERTIES_DATA.length} verified projects`;
+  }
+
   function filterAndSort(shouldUpdateUrl = true) {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
     const selectedLoc = locationSelect ? locationSelect.value : '';
-    const selectedBudget = budgetSelect ? budgetSelect.value : '';
     const selectedConfig = configSelect ? configSelect.value : '';
     const selectedPoss = possessionSelect ? possessionSelect.value : '';
     const selectedDev = developerSelect ? developerSelect.value : '';
@@ -237,15 +233,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      // Budget filter
-      if (selectedBudget) {
-        if (selectedBudget === 'under_1.5' && prop.minPrice > 1.5) return false;
-        if (selectedBudget === '1.5_2' && (prop.minPrice > 2.0 || prop.maxPrice < 1.5)) return false;
-        if (selectedBudget === '2_3' && (prop.minPrice > 3.0 || prop.maxPrice < 2.0)) return false;
-        if (selectedBudget === '3_5' && (prop.minPrice > 5.0 || prop.maxPrice < 3.0)) return false;
-        if (selectedBudget === 'above_5' && prop.maxPrice < 5.0) return false;
-      }
-
       // Possession filter
       if (selectedPoss) {
         if (selectedPoss === 'ready' && prop.possessionCategory !== 'Ready to Move') return false;
@@ -261,10 +248,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sorting
     if (selectedSort === 'score_desc') {
       filtered.sort((a, b) => b.score - a.score);
-    } else if (selectedSort === 'price_asc') {
-      filtered.sort((a, b) => a.minPrice - b.minPrice);
-    } else if (selectedSort === 'price_desc') {
-      filtered.sort((a, b) => b.maxPrice - a.maxPrice);
     } else if (selectedSort === 'possession_asc') {
       filtered.sort((a, b) => a.possessionYear - b.possessionYear);
     }
@@ -279,7 +262,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetFilters() {
     if (searchInput) searchInput.value = '';
     if (locationSelect) locationSelect.value = '';
-    if (budgetSelect) budgetSelect.value = '';
     if (configSelect) configSelect.value = '';
     if (possessionSelect) possessionSelect.value = '';
     if (developerSelect) developerSelect.value = '';
@@ -303,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event Listeners
   if (searchInput) searchInput.addEventListener('input', () => filterAndSort());
   if (locationSelect) locationSelect.addEventListener('change', () => filterAndSort());
-  if (budgetSelect) budgetSelect.addEventListener('change', () => filterAndSort());
   if (configSelect) configSelect.addEventListener('change', () => filterAndSort());
   if (possessionSelect) possessionSelect.addEventListener('change', () => filterAndSort());
   if (developerSelect) developerSelect.addEventListener('change', () => filterAndSort());
