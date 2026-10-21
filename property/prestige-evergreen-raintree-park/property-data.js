@@ -19,9 +19,9 @@ const PROPERTY_DATA = {
     "Tower 1", "Tower 2", "Tower 3", "Tower 4", "Tower 5", "Tower 6", "Tower 7",
     "Tower 8", "Tower 9", "Tower 10", "Tower 11", "Tower 12", "Tower 13", "Tower 14"
   ],
-  "startingPrice": "₹1.07 Cr*",
-  "priceRangeDisplay": "₹1.07 – 4.09 Cr",
-  "pricePerSqftDisplay": "₹15,500 – 16,300 / sq.ft.",
+  "startingPrice": "On request",
+  "priceRangeDisplay": "On request",
+  "pricePerSqftDisplay": "On request",
   "siteAddress": "SH 35, Varthur Main Road, Opposite Varthur Lake, Whitefield Precinct, Bengaluru, Karnataka 560087",
   "metrics": {
     "landParcel": "24 Acres (Precinct)",
@@ -38,8 +38,8 @@ const PROPERTY_DATA = {
       "sbua": "659 – 976 sq.ft.",
       "carpet": "415 – 615 sq.ft.",
       "efficiency": "63.0% – 63.8%",
-      "basePrice": "₹1.02 – 1.48 Cr",
-      "onRoadEst": "₹1.07 – 1.62 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Young IT singles, rental yield investors, pied-à-terre"
     },
     {
@@ -47,8 +47,8 @@ const PROPERTY_DATA = {
       "sbua": "1,174 – 1,504 sq.ft.",
       "carpet": "765 – 995 sq.ft.",
       "efficiency": "65.1% – 66.1%",
-      "basePrice": "₹1.82 – 2.33 Cr",
-      "onRoadEst": "₹1.95 – 2.50 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Small tech families, couples, first-time home buyers"
     },
     {
@@ -56,8 +56,8 @@ const PROPERTY_DATA = {
       "sbua": "1,461 – 1,486 sq.ft.",
       "carpet": "965 – 982 sq.ft.",
       "efficiency": "66.0% – 66.1%",
-      "basePrice": "₹2.26 – 2.35 Cr",
-      "onRoadEst": "₹2.43 – 2.53 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Value-conscious 3 BHK seekers needing 2 baths"
     },
     {
@@ -65,8 +65,8 @@ const PROPERTY_DATA = {
       "sbua": "1,647 – 1,951 sq.ft.",
       "carpet": "1,098 – 1,308 sq.ft.",
       "efficiency": "66.7% – 67.0%",
-      "basePrice": "₹2.55 – 3.02 Cr",
-      "onRoadEst": "₹2.74 – 3.25 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Growing families desiring 3 full en-suite/powder baths"
     },
     {
@@ -74,8 +74,8 @@ const PROPERTY_DATA = {
       "sbua": "1,991 – 2,037 sq.ft.",
       "carpet": "1,340 – 1,375 sq.ft.",
       "efficiency": "67.3% – 67.5%",
-      "basePrice": "₹3.08 – 3.20 Cr",
-      "onRoadEst": "₹3.31 – 3.44 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Work-from-home leaders requiring dedicated home office"
     },
     {
@@ -83,8 +83,8 @@ const PROPERTY_DATA = {
       "sbua": "2,271 – 2,513 sq.ft.",
       "carpet": "1,530 – 1,715 sq.ft.",
       "efficiency": "67.4% – 68.2%",
-      "basePrice": "₹3.52 – 3.90 Cr",
-      "onRoadEst": "₹3.78 – 4.19 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Multi-generational families & senior executives"
     }
   ],
@@ -152,7 +152,7 @@ const PROPERTY_DATA = {
     {
       "id": "unit-type-f1",
       "config": "3 BHK",
-      "title": "Unit Type F1 (3 BHK 3T Luxury)",
+      "title": "Unit Type F1 (3 BHK 3T)",
       "towerInfo": "Towers 05, 06 & 07 (Lake & Court Facing)",
       "sbua": 1951,
       "carpet": 1308,
@@ -177,7 +177,7 @@ const PROPERTY_DATA = {
       "id": "unit-type-h7",
       "config": "4 BHK",
       "title": "Unit Type H7 (4 BHK + Maid)",
-      "towerInfo": "Premium Lakefront Towers 01 & 02",
+      "towerInfo": " Lakefront Towers 01 & 02",
       "sbua": 2513,
       "carpet": 1715,
       "balconyUtility": 88,
@@ -248,8 +248,8 @@ const PROPERTY_DATA = {
     "Structure": "Seismic Zone II compliant RCC shear-wall framework engineered for 2B + G + 19 floors.",
     "Flooring": "Large-format 800x800mm glazed vitrified tiles in foyer, living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balconies.",
     "Doors & Windows": "8-foot high engineered timber main door with biometric smart lock; UPVC/powder-coated aluminum sliding windows with mosquito mesh.",
-    "Sanitary & CP Fittings": "Concealed cisterns with premium Kohler, Grohe, or Jaguar sanitary ware and wall-hung EWCs.",
-    "Electrical & Power Backup": "Concealed FRLS copper wiring with Schneider/Legrand modular switches; 100% DG backup for elevators, pumps, and common amenities with metered power for residences."
+    "Sanitary & CP Fittings": "Concealed cisterns with Kohler, Grohe, or Jaguar sanitary ware and wall-hung EWCs.",
+    "Electrical & Power Backup": "Concealed FRLS copper wiring with Schneider/Legrand modular switches; DG backup for elevators, pumps, and common amenities with metered power for residences."
   },
   "builderStats": {
     "name": "Prestige Group",

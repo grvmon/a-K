@@ -20,7 +20,7 @@ const PROPERTY_DATA = {
     "Tower 2",
     "Tower 3"
   ],
-  "startingPrice": "₹2.20 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Alembic City Campus, Hope Farm - Kadugodi Main Road, Whitefield Precinct, Bengaluru, Karnataka 560067",
   "metrics": {
     "landParcel": "~15 Acres (Residential)",
@@ -136,10 +136,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "Seismic Zone II compliant RCC shear wall high-rise structure (G + 34 floors).",
-    "Flooring": "Premium imported marble/large vitrified tiles in living & dining; wooden laminate in master bedroom.",
+    "Flooring": "imported marble/large vitrified tiles in living & dining; wooden laminate in master bedroom.",
     "Doors & Windows": "Engineered timber main door; heavy-duty UPVC sliding doors with clear glass for balcony.",
-    "Sanitary & Fittings": "Premium Kohler/Grohe or equivalent sanitary fixtures and concealed diverters.",
-    "Electrical": "Concealed copper wiring with modular switches, 100% backup for elevators & essential facilities."
+    "Sanitary & Fittings": "Kohler/Grohe or equivalent sanitary fixtures and concealed diverters.",
+    "Electrical": "Concealed copper wiring with modular switches, backup for elevators & essential facilities."
   },
   "builderStats": {
     "yearsLegacy": "110+ (Alembic Group)",

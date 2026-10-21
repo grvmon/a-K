@@ -23,7 +23,7 @@ const PROPERTY_DATA = {
     "Tower 5",
     "Tower 6"
   ],
-  "startingPrice": "₹0.72 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Cheemasandra, Budigere Main Road, Off Old Madras Road, Bengaluru, Karnataka 560049",
   "metrics": {
     "landParcel": "16.4 Acres",
@@ -139,10 +139,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "Monolithic RCC shear wall earthquake-resistant high-rise structure.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balconies and bathrooms.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balconies and bathrooms.",
     "Doors & Windows": "Engineered wooden main door frame with digital lock; UPVC/Aluminum sliding balcony doors.",
-    "Sanitary & Fittings": "Premium Jaquar/Kohler or equivalent CP & sanitary fittings with wall-mounted EWC.",
-    "Electrical & Automation": "Concealed copper wiring with modular switches, 100% power backup for common facilities."
+    "Sanitary & Fittings": "Jaquar/Kohler or equivalent CP & sanitary fittings with wall-mounted EWC.",
+    "Electrical & Automation": "Concealed copper wiring with modular switches, power backup for common facilities."
   },
   "builderStats": {
     "yearsLegacy": "30+",

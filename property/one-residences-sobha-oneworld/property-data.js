@@ -31,7 +31,7 @@ const PROPERTY_DATA = {
     "Tower 13",
     "Tower 14"
   ],
-  "startingPrice": "₹1.10 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Old Madras Road (NH75), Greater Whitefield Corridor, Bengaluru, Karnataka 560049",
   "metrics": {
     "landParcel": "48 Acres",
@@ -147,10 +147,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "Integrated SOBHA RCC shear wall earthquake-resistant high-rise structure (3B + G + 45/46 floors).",
-    "Flooring": "Premium imported marble/vitrified tiles in living & dining; wooden-finish/vitrified tiles in master bedroom.",
+    "Flooring": "imported marble/vitrified tiles in living & dining; wooden-finish/vitrified tiles in master bedroom.",
     "Doors & Windows": "Custom SOBHA-manufactured timber door frames and heavy-duty UPVC sliding balcony doors.",
-    "Sanitary & Fittings": "Premium Kohler/Grohe or equivalent sanitary fixtures with wall-mounted EWCs.",
-    "Electrical": "Concealed copper wiring with premium switches, 100% power backup for common facilities."
+    "Sanitary & Fittings": "Kohler/Grohe or equivalent sanitary fixtures with wall-mounted EWCs.",
+    "Electrical": "Concealed copper wiring with switches, power backup for common facilities."
   },
   "builderStats": {
     "yearsLegacy": "30+",
