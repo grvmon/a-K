@@ -295,7 +295,7 @@ html { scroll-behavior: smooth; }
   }
   .mobile-only-nav .local-nav-link.active {
     background: #2B2D31 !important;
-    color: #804526 !important;
+    color: #FFFFFF !important;
   }
 }
 
@@ -392,7 +392,15 @@ html { scroll-behavior: smooth; }
 <!-- Local Business Organization Schema -->
 
 
-<style id="ak-mobile-overflow-fix">@media (max-width:767px){.page-breadcrumb{flex-wrap:wrap;row-gap:.25rem}main{overflow-wrap:anywhere}}</style>
+<style id="ak-mobile-overflow-fix">
+@media (max-width: 768px) {
+  .page-breadcrumb { flex-wrap: wrap; row-gap: .25rem; }
+  main { overflow-wrap: anywhere; }
+  div[style*="PRM/KA/RERA"] { font-size: 0.92rem !important; word-break: break-all !important; overflow-wrap: anywhere !important; }
+  .local-nav-link { min-height: 38px; display: inline-flex; align-items: center; }
+  .ak-score-modal-card { max-height: 92vh !important; overflow-y: auto !important; }
+}
+</style>
 
 <link rel="preload" as="image" href="../../style-guide/assets/riviera/riviera_hero.webp?v=1791220494" type="image/webp">
 <script type="application/ld+json">
