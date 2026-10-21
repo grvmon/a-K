@@ -376,7 +376,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-courtyard-old-madras-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-courtyard-old-madras-road/",
+    "score": 3.8,
+    "verdict": "Connected Arterial Living on OMR",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "prestige-avon-whitefield",
@@ -430,7 +433,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purvankara-northern-lights-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purvankara-northern-lights-bagalur/",
+    "score": 3.7,
+    "verdict": "Large-Scale Aerospace Tech Park Residences",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "godrej-florenne-whitefield",
@@ -718,7 +724,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-lakecrest-kr-puram.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-lakecrest-kr-puram/",
+    "score": 3.9,
+    "verdict": "Lakeside High-Rise Living near KR Puram",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "brigade-citrine-budigere-cross",
@@ -745,7 +754,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-citrine-budigere-cross.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-citrine-budigere-cross/",
+    "score": 3.9,
+    "verdict": "Contemporary High-Rise at Budigere Node",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "ramky-fortuna-bannerghatta-road",
@@ -946,7 +958,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-regent-park-east-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-regent-park-east-bangalore/",
+    "score": 3.8,
+    "verdict": "Master-Planned East Bengaluru Living",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "heart-of-harmony-by-ckpc-kudlu-gate",
@@ -1246,7 +1261,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-calista-budigere-cross.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-calista-budigere-cross/",
+    "score": 3.85,
+    "verdict": "Value-Engineered Community on Budigere Road",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "mahindra-blossom-hope-farm",
@@ -1326,7 +1344,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-angane-budigere.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-angane-budigere/",
+    "score": 3.75,
+    "verdict": "Suburban Low-Density Residences",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "prestige-raintree-park-varthur",
@@ -1479,7 +1500,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-el-dorado-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-el-dorado-bagalur/",
+    "score": 3.8,
+    "verdict": "50-Acre Integrated Township at Aerospace Park",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "godrej-woods-devanahalli",
@@ -1939,7 +1963,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-ananda-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-ananda-bagalur/",
+    "score": 3.85,
+    "verdict": "High-Rise Studio & Family Living in Bagalur",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "purva-atmosphere-thanisandra",
@@ -1988,7 +2015,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purva-celestial-airport-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purva-celestial-airport-road/",
+    "score": 3.8,
+    "verdict": "Airport Expressway Corridor Residences",
+    "possession": "Possession: Jun 2027"
   },
   {
     "id": "purva-park-hill-kanakapura-road",
@@ -2038,6 +2068,9 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purva-zenium-airport-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purva-zenium-airport-road/",
+    "score": 3.85,
+    "verdict": "High-Tech High-Rise on International Airport Road",
+    "possession": "Possession: Ready to Move"
   }
 ];
