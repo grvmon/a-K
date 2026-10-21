@@ -1042,7 +1042,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purva-heritage-south-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purva-heritage-south-bangalore/",
+    "score": 3.85,
+    "verdict": "Heritage Aesthetics with Modern Infrastructure",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "provident-sunworth-city-kengeri",
@@ -1066,7 +1069,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/provident-sunworth-city-kengeri.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/provident-sunworth-city-kengeri/",
+    "score": 3.7,
+    "verdict": "Expansive 60-Acre Metro Township at Mysore Road",
+    "possession": "Possession: Ready to Move"
   },
   {
     "id": "sattva-forest-ridge-jp-nagar",
@@ -1149,7 +1155,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/casagrand-moondance-mysore-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/casagrand-moondance-mysore-road/",
+    "score": 3.75,
+    "verdict": "Contemporary Waterfront Living on Mysore Road",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "casagrand-casablanca-kanakapura-road",
@@ -1203,7 +1212,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/casagrand-aquene-kengeri.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/casagrand-aquene-kengeri/",
+    "score": 3.75,
+    "verdict": "Family Community Living near Kengeri Metro",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "sattva-anugraha-vijayanagar",
@@ -1227,7 +1239,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-anugraha-vijayanagar.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-anugraha-vijayanagar/",
+    "score": 3.8,
+    "verdict": "Established Urban High-Rise Living in Vijayanagar",
+    "possession": "Possession: Ready to Move"
   },
   {
     "id": "lodha-azur-bannerghatta-road",
@@ -1751,7 +1766,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-pramoda-rajarajeshwari-nagar.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-pramoda-rajarajeshwari-nagar/",
+    "score": 3.9,
+    "verdict": "Exclusive Community in RR Nagar West Corridor",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "sattva-city-doddajala",
@@ -1864,7 +1882,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-aaranya-south-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-aaranya-south-bangalore/",
+    "score": 3.75,
+    "verdict": "Serene Plotted Enclave in South Bangalore",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "brigade-avalon-whitefield",
@@ -1916,7 +1937,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-lumina-tumkur-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-lumina-tumkur-road/",
+    "score": 3.9,
+    "verdict": "Transit-Connected Living on Tumkur Road",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "brigade-insignia-yelahanka",
