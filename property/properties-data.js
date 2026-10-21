@@ -23,9 +23,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 3.9,
     "verdict": "Strong End-Use Pick",
-    "heroImg": "thumbs/sumadhura_solace_hero_day_aerial.webp",
+    "heroImg": "thumbs/sumadhura-solace-whitefield.webp",
     "heroW": 640,
-    "heroH": 320,
+    "heroH": 309,
     "url": "/property/sumadhura-solace-whitefield/"
   },
   {
@@ -52,9 +52,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "2\u20134 Years",
     "score": 3.9,
     "verdict": "Core Whitefield + Metro-led Family Living",
-    "heroImg": "thumbs/sumadhura_folium_hero_pool_aerial_wide.webp",
+    "heroImg": "thumbs/sumadhura-folium-whitefield.webp",
     "heroW": 640,
-    "heroH": 340,
+    "heroH": 309,
     "url": "/property/sumadhura-folium-whitefield/"
   },
   {
@@ -82,9 +82,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 3.2,
     "verdict": "Mixed-Format Living on Budigere Road",
-    "heroImg": "thumbs/sattva_songbird_hero_elevation_day.webp",
+    "heroImg": "thumbs/sattva-songbird-budigere-road.webp",
     "heroW": 640,
-    "heroH": 358,
+    "heroH": 309,
     "url": "/property/sattva-songbird-budigere-road/"
   },
   {
@@ -111,9 +111,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "1\u20132 Years",
     "score": 3.4,
     "verdict": "Compact Community Living at Budigere",
-    "heroImg": "thumbs/sattva_bliss_hero_pool_elevation.webp",
+    "heroImg": "thumbs/sattva-bliss-budigere-cross.webp",
     "heroW": 640,
-    "heroH": 482,
+    "heroH": 309,
     "url": "/property/sattva-bliss-budigere-cross/"
   },
   {
@@ -142,9 +142,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 4.11,
     "verdict": "Strong Brand + Township Proposition",
-    "heroImg": "thumbs/prestige_evergreen_hero_pool_evening.webp",
+    "heroImg": "thumbs/prestige-evergreen-raintree-park.webp",
     "heroW": 640,
-    "heroH": 464,
+    "heroH": 309,
     "url": "/property/prestige-evergreen-raintree-park"
   },
   {
@@ -171,9 +171,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 3.3,
     "verdict": "Value-Seeking Homes at Budigere Cross",
-    "heroImg": "thumbs/brigade_belvedere_hero_towers_elevation.webp",
+    "heroImg": "thumbs/brigade-belvedere-budigere-cross.webp",
     "heroW": 640,
-    "heroH": 334,
+    "heroH": 309,
     "url": "/property/brigade-belvedere-budigere-cross/"
   },
   {
@@ -200,9 +200,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "2\u20134 Years",
     "score": 3.9,
     "verdict": "Integrated City Living",
-    "heroImg": "thumbs/alembic_hero_tower_elevation.webp",
+    "heroImg": "thumbs/alembic-cloud-forest-alembic-city.webp",
     "heroW": 640,
-    "heroH": 602,
+    "heroH": 309,
     "url": "/property/alembic-cloud-forest-alembic-city/"
   },
   {
@@ -235,9 +235,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 3.2,
     "verdict": "Future Township Scale. Long-Term Bet.",
-    "heroImg": "thumbs/sobha_oneworld_hero_elevation_day.webp",
+    "heroImg": "thumbs/one-residences-sobha-oneworld.webp",
     "heroW": 640,
-    "heroH": 640,
+    "heroH": 309,
     "url": "/property/one-residences-sobha-oneworld/"
   },
   {
@@ -264,9 +264,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "4+ Years",
     "score": 3.8,
     "verdict": "A-Grade Core-Whitefield Living",
-    "heroImg": "thumbs/sumadhura_edition_hero_towers_day.webp",
+    "heroImg": "thumbs/sumadhura-edition-whitefield.webp",
     "heroW": 640,
-    "heroH": 340,
+    "heroH": 309,
     "url": "/property/sumadhura-edition-whitefield/"
   },
   {
@@ -292,9 +292,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "2\u20134 Years",
     "score": 4,
     "verdict": "Metro-led Convenience + Compact Community",
-    "heroImg": "thumbs/sumadhura_capitol_hero_elevation_day.webp",
+    "heroImg": "thumbs/sumadhura-capitol-residences.webp",
     "heroW": 640,
-    "heroH": 340,
+    "heroH": 309,
     "url": "/property/sumadhura-capitol-residences/"
   },
   {
@@ -320,9 +320,9 @@ const PROPERTIES_DATA = [
     "possessionCategory": "Ready to Move",
     "score": 4.1,
     "verdict": "A-Grade Villa Proposition",
-    "heroImg": "thumbs/riviera_hero.webp",
+    "heroImg": "thumbs/riviera-uno-whitefield.webp",
     "heroW": 640,
-    "heroH": 480,
+    "heroH": 309,
     "url": "/property/riviera-uno-whitefield/"
   },
   {
@@ -349,7 +349,7 @@ const PROPERTIES_DATA = [
     "possessionCategory": "2\u20134 Years",
     "score": 4.18,
     "verdict": "Boutique High-Rise Living near Hope Farm Metro",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-granada.webp",
     "heroW": 640,
     "heroH": 309,
     "url": "/property/brigade-granada/"
@@ -373,7 +373,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1750 - 2600 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-courtyard-old-madras-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -398,7 +398,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1800 - 3500 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-avon-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -424,7 +424,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "408 - 2332 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purvankara-northern-lights-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -449,7 +449,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "3700 - 5500 sq.ft.",
     "propertyType": "Villa",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-florenne-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -474,7 +474,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1180 - 1850 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-belfort-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -498,7 +498,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1700 - 2800 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/lodha-whitefield-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -521,7 +521,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-panorama-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -544,7 +544,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-ekatra-plots-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -569,7 +569,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "567 - 1801 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-parklane-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -593,7 +593,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1790 - 2575 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-elm-park-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -616,7 +616,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1000 - 5000 sq.ft.",
     "propertyType": "Commercial / Mixed",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-wtc-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -642,7 +642,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "669 - 2717 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-lavender-fields-varthur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -668,7 +668,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "660 - 2481 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sobha-neopolis-panathur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -694,7 +694,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "700 - 2150 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-lakecrest-kr-puram.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -721,7 +721,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "685 - 2533 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-citrine-budigere-cross.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -745,7 +745,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1150 - 1750 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/ramky-fortuna-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -770,7 +770,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "625 - 1311 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/ramky-lumina-hosa-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -794,7 +794,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/arvind-sylva-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -820,7 +820,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "650 - 2500 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/birla-evara-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -844,7 +844,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1750 - 2600 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/lodha-elanza-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -869,7 +869,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1732 - 2786 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/eaton-park-at-the-prestige-city-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -894,7 +894,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1351 - 2610 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/keya-the-urban-forest-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -919,7 +919,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-regent-park-east-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -943,7 +943,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1824 - 2572 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/heart-of-harmony-by-ckpc-kudlu-gate.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -967,7 +967,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 1850 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purva-heritage-south-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -991,7 +991,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "883 - 1082 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/provident-sunworth-city-kengeri.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1017,7 +1017,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "732 - 1864 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-forest-ridge-jp-nagar.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1043,7 +1043,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1150 - 2100 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/arvind-skycrest-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1068,7 +1068,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "883 - 1866 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/casagrand-moondance-mysore-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1094,7 +1094,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1159 - 3500 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/casagrand-casablanca-kanakapura-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1119,7 +1119,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1218 - 2224 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/casagrand-aquene-kengeri.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1143,7 +1143,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1044 - 1666 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-anugraha-vijayanagar.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1168,7 +1168,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1750 - 3050 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/lodha-azur-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1194,7 +1194,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "685 - 2750 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-southern-star-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1219,7 +1219,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "800 - 1780 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-calista-budigere-cross.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1244,7 +1244,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1275 - 2450 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/mahindra-blossom-hope-farm.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1269,7 +1269,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1950 - 2635 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/vaswani-starlight-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1293,7 +1293,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1150 - 1750 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-angane-budigere.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1319,7 +1319,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "2005 - 3700 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/prestige-raintree-park-varthur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1343,7 +1343,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1250 - 1850 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/the-grandstand-address-by-address-maker-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1368,7 +1368,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1250 - 2450 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/my-home-whitefield-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1391,7 +1391,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-doddaballapur-doddaballapur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1414,7 +1414,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-oasis-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1440,7 +1440,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "521 - 1561 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-el-dorado-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1464,7 +1464,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1150 - 1800 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-woods-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1488,7 +1488,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1186 - 1876 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-msr-city-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1513,7 +1513,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1850 - 2650 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-elysium-panathur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1538,7 +1538,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1300 - 2300 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-solea-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1564,7 +1564,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1270 - 2095 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-epitome-thanisandra.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1589,7 +1589,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1265 - 2315 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-sarang-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1613,7 +1613,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1295 - 1900 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sumadhura-pramoda-rajarajeshwari-nagar.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1641,7 +1641,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "655 - 2623 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-city-doddajala.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1666,7 +1666,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "589 - 1013 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-aeropolis-phase-ii-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1692,7 +1692,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "690 - 2167 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-vasanta-cove-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1717,7 +1717,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2200 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/sattva-aaranya-south-bangalore.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1742,7 +1742,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1601 - 2514 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-avalon-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1766,7 +1766,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1100 - 1750 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-lumina-tumkur-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1791,7 +1791,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "2145 - 5947 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-insignia-yelahanka.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1816,7 +1816,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1620 - 2950 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-eternia-yelahanka.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1840,7 +1840,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1080 - 1680 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/brigade-laurel-maple-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1863,7 +1863,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1200 - 2400 sq.ft.",
     "propertyType": "Residential Plot",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-woodland-sarjapur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1888,7 +1888,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "436 - 1630 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/godrej-ananda-bagalur.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1913,7 +1913,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1299 - 2420 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purva-atmosphere-thanisandra.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1937,7 +1937,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1034 - 1332 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purva-celestial-airport-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1962,7 +1962,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1407 - 2678 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purva-park-hill-kanakapura-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
@@ -1987,7 +1987,7 @@ const PROPERTIES_DATA = [
     ],
     "sizeRange": "1204 - 2123 sq.ft.",
     "propertyType": "Apartment",
-    "heroImg": "thumbs/card_property.webp",
+    "heroImg": "thumbs/purva-zenium-airport-road.webp",
     "heroW": 640,
     "heroH": 309,
     "url": null
