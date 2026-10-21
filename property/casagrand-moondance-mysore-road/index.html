@@ -15,6 +15,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 <style>
 html { scroll-behavior: smooth; }
+.prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
+@media (min-width: 769px) {
+  .prop-hero-section {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.15rem 0 2rem 0 !important;
+  }
+  .prop-hero-section > .prop-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.prop-snapshot-strip-v2 { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1.25rem !important; padding: 0 !important; }
+.prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.prop-glance-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; color: #804526; text-transform: uppercase; }
+.prop-glance-rule { flex: 1; height: 0.5px; background: rgba(85, 85, 90, 0.2); }
+.prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
+.prop-glance-item { background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding: 0.85rem 1rem; text-align: left; }
+.prop-glance-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 400; color: #2B2D31; line-height: 1.1; margin-bottom: 0.2rem; }
+.prop-glance-lbl { display: block; font-family: 'Manrope', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: #55555A; text-transform: uppercase; }
+.prop-glance-sup { font-size: 0.65em; vertical-align: super; color: #804526; }
+
+@media (max-width: 991px) {
+  .prop-glance-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .prop-glance-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.ak-hero-editorial-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(450px, 52vh, 500px);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2B2D31;
+  box-sizing: border-box;
+}
+.ak-editorial-media-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.ak-editorial-media-canvas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: saturate(0.85) contrast(1.05);
+}
+.ak-editorial-media-canvas:hover img {
+  transform: scale(1.015);
+}
+.ak-editorial-top-left {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ak-editorial-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-counter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-line {
+  width: 36px;
+  height: 1.5px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  box-shadow: 0 2px 6px rgba(10, 10, 11, 0.3);
+}
+
+.ak-hero-btn-primary,
+.sd-btn-gold {
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  color: #FFFFFF !important;
+  border: 0.5px solid #9f5334 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(128, 69, 38, 0.25) !important;
+  transition: all 0.4s ease !important;
+  text-shadow: 0 1px 2px rgba(43,45,49,0.35) !important;
+}
+.ak-hero-btn-primary:hover,
+.sd-btn-gold:hover {
+  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+  border-color: #9f5334 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(128, 69, 38, 0.35) !important;
+  transform: translateY(-1px) !important;
+}
+.ak-hero-btn-secondary {
+  background: #FFFFFF !important;
+  color: #2B2D31 !important;
+  border: 0.5px solid rgba(85, 85, 90, 0.25) !important;
+  border-radius: 4px !important;
+  transition: all 0.4s ease !important;
+}
+.ak-hero-btn-secondary:hover {
+  background: rgba(190, 117, 85, 0.08) !important;
+  border-color: #804526 !important;
+  color: #804526 !important;
+}
+
 .ak-mobile-hero-v5 { display: none; }
 @media (min-width: 769px) {
   .mobile-only-nav { display: none !important; }
@@ -38,7 +170,6 @@ html { scroll-behavior: smooth; }
 .local-nav-link { display: inline-block; padding: 0.95rem 1.15rem; font-size: 0.88rem; font-weight: 600; color: #55555A; text-decoration: none; white-space: nowrap; border-bottom: none !important; transition: all 0.4s ease; position: relative; }
 .local-nav-link:hover, .local-nav-link.active { color: #804526 !important; border-bottom: 1px solid #804526 !important; }
 .prop-section-nav-sticky { position: sticky !important; top: 80px !important; z-index: 990 !important; background: #FFFFFF; border-bottom: 0.5px solid rgba(85, 85, 90, 0.2); }
-.sd-btn-gold { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 4px; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color: #FFFFFF; border: none; cursor: pointer; text-decoration: none; font-weight: 700; padding: 0.75rem 1.4rem; text-shadow: 0 1px 2px rgba(43,45,49,0.35); }
 </style>
 <script type="application/ld+json">
 {
@@ -227,77 +358,255 @@ html { scroll-behavior: smooth; }
   ]
 }
 </script>
-</head><body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header class="header-nav" id=header-nav><div class="container nav-container"><a href="/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="/#our-customers">Clientele</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">Methodology</a></li><li><a href="/#about-us">Team</a></li><li><a href="/#testimonials">Client Outcomes</a></li></ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="/" class=mobile-drawer-brand aria-label="acre&amp;key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke="#2B2D31" stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="/#our-customers" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span></a><a href="/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span></a><a href="/#core" class=mobile-nav-item><span class=mobile-nav-label>Methodology</span></a><a href="/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span></a><a href="/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal();"><span>Start Consultation</span></button></div></div></div></header><main><section class="prop-hero-section"><div class="prop-container"><div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding-bottom:1rem;">
-<nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Casagrand Moondance</li></ol></nav><div style="display:flex; align-items:center; gap:1.25rem;"><span style="font-size:0.85rem; color:#55555A;">Last Verified August 2026</span><div style="position:relative;"><button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.4rem 0.85rem; background:#FAFAFA; border:0.5px solid rgba(85,85,90,0.25); border-radius:4px; font-size:0.82rem; font-weight:600; cursor:pointer;"><i data-feather="share-2" style="width:14px;height:14px;color:#2B2D31;"></i><span>Share</span></button></div></div></div>
+</head><body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header class="header-nav" id=header-nav><div class="container nav-container"><a href="/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="/#our-customers">Clientele</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">Methodology</a></li><li><a href="/#about-us">Team</a></li><li><a href="/#testimonials">Client Outcomes</a></li></ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="/" class=mobile-drawer-brand aria-label="acre&amp;key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke="#2B2D31" stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="/#our-customers" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span></a><a href="/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span></a><a href="/#core" class=mobile-nav-item><span class=mobile-nav-label>Methodology</span></a><a href="/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span></a><a href="/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal();"><span>Start Consultation</span></button></div></div></div></header><main><section class="prop-hero-section" style="background:#FAFAFA;">
+<div class="prop-container">
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding: 0.25rem 0 1rem 0; border-bottom:0.5px solid rgba(85, 85, 90, 0.15); margin-bottom:1rem;">
+  <div>
+    <nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Casagrand Moondance</li></ol></nav>
+  </div>
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0.85rem; font-size:0.75rem; color:#55555A;">
+    <div style="display:flex; align-items:center; gap:0.45rem;">
+      <img src="../../style-guide/assets/gaurav-mongia-founder-acre-key.webp" alt="Gaurav Mongia" width="24" height="24" style="width:24px; height:24px; border-radius:50%; object-fit:cover; border:1.5px solid rgba(128, 69, 38, 0.3); flex-shrink:0;" />
+      <span>Reviewed by <strong style="color:#2B2D31;">Gaurav Mongia</strong></span>
+    </div>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <span>Last Updated: <strong style="color:#2B2D31;"><time id="ak-last-updated" datetime="2026-09-30">30 September 2026</time>
+    <script>
+      (function() {
+        try {
+          var date = new Date(document.lastModified);
+          if (!isNaN(date) && date.getFullYear() > 2000) {
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formatted = date.toLocaleDateString('en-GB', options);
+            var el = document.getElementById('ak-last-updated');
+            if (el) {
+              el.textContent = formatted;
+              el.setAttribute('datetime', date.toISOString().split('T')[0]);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script></strong></span>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <div style="position:relative;">
+      <button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger" style="display:flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:0.5px solid rgba(85, 85, 90, 0.2); padding:0.35rem 0.65rem; border-radius:4px; font-weight:600; cursor:pointer; color:#2B2D31;">
+        <i data-feather="share-2" style="width:12px;height:12px;color:#2B2D31;"></i><span>Share</span>
+      </button>
+    </div>
+  </div>
+</div>
 
-      <!-- Mobile Hero (<= 768px) -->
+      <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
-        <div role="button" tabindex="0" class="ak-mobile-img-box">
-          <img src="../thumbs/casagrand-moondance-mysore-road.webp" alt="Casagrand Moondance Mysore Road, Bengaluru Architectural Exterior Render" width="640" height="320">
+        <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="handlePropertyShare(event);">
+          <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
+          <img src="../thumbs/casagrand-moondance-mysore-road.webp" alt="Casagrand Moondance Architectural Exterior View" width="800" height="533" style="width:100%; height:100%; object-fit:cover;">
           <div class="ak-mobile-badge-top-left">RERA Registered</div>
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#2B2D31;"></i>
           </button>
         </div>
-      </div>
 
-      <!-- Desktop Hero Grid (>= 769px) -->
-      <div class="prop-hero-grid" style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:2rem; align-items:start;">
-        <div style="border-radius:4px; overflow:hidden; border:0.5px solid rgba(85,85,90,0.2); background:#FAFAFA; position:relative; min-height:420px;">
-          <img id="akMainHeroImage" src="../thumbs/casagrand-moondance-mysore-road.webp" alt="Casagrand Moondance Mysore Road, Bengaluru Architectural Elevation" width="800" height="533" style="width:100%; height:100%; object-fit:cover; filter:saturate(0.85) contrast(1.05); display:block;" fetchpriority="high" decoding="async">
-          <div style="position:absolute; bottom:1rem; left:1rem; background:rgba(43,45,49,0.85); color:#FFFFFF; padding:0.35rem 0.75rem; border-radius:4px; font-size:0.78rem; font-weight:600; backdrop-filter:blur(4px);">
-            <span>Mysore Road, Bengaluru</span>
-          </div>
+        <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.5rem, 5vw, 1.85rem); font-weight: 400; color:#2B2D31; margin:0 0 0.15rem 0; line-height:1.2; letter-spacing:0.01em; text-transform:none;">Casagrand Moondance</h1>
+        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.45rem; display:flex; align-items:center; gap:0.35rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Mysore Road, Bengaluru</span>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.25rem;">
+          <span style="font-family:'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color:#2B2D31; line-height:1;">₹0.68 – 1.44 Cr</span>
+          <span style="font-size:0.8rem; color:#55555A; font-weight:500;">· Indicative Outlay</span>
+        </div>
+        <div style="font-size:0.82rem; color:#2B2D31; font-weight:600; margin-bottom:0.65rem; line-height:1.4;">
+          1, 2 & 3 BHK · 883 - 1866 sq.ft. · Possession Dec 2028
         </div>
 
-        <div style="display:flex; flex-direction:column; justify-content:flex-start;">
-          <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#804526; margin-bottom:0.35rem;">Casagrand</div>
-          <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.9rem, 1.4rem + 1vw, 2.5rem); font-weight:400; color:#2B2D31; margin:0 0 0.5rem 0; line-height:1.15;">Casagrand Moondance</h1>
-          <div style="font-size:0.95rem; color:#55555A; margin-bottom:1rem;">Mysore Road, Bengaluru</div>
-
-          <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="display:inline-flex; align-items:center; gap:0.85rem; padding:0.6rem 1rem; background:#FFFFFF; border:0.5px solid rgba(85,85,90,0.2); border-radius:4px; cursor:pointer; margin-bottom:1.25rem;">
-            <div style="display:flex; align-items:baseline; gap:0.2rem;">
-              <span style="font-size:1.6rem; font-weight:700; color:#2B2D31; line-height:1;">★ 3.75</span>
-              <span style="font-size:0.85rem; color:#55555A;">/5</span>
-            </div>
-            <div style="width:1px; height:28px; background:rgba(85,85,90,0.2);"></div>
-            <div>
-              <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#804526;">acre&amp;key SCORE</div>
-              <div style="font-family:'Cormorant Garamond', serif; font-size:1.15rem; color:#2B2D31;">Contemporary Waterfront Living on Mysore Road</div>
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.scrollToVerdict(event);" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.5rem 0.85rem; margin-bottom:0.65rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+          <div style="text-align:center; padding-right:0.85rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
+            <div style="font-size:1.75rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#2B2D31; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
+              3.75<span style="font-size:1.05rem; color:#2B2D31; font-weight:400; opacity:0.8;">/5</span>
             </div>
           </div>
-
-          <div style="margin-bottom:1.25rem;">
-            <div style="font-family:'Cormorant Garamond', serif; font-size:2.1rem; font-weight:400; color:#2B2D31; line-height:1;">₹0.68 – 1.44 Cr*</div>
-            <div style="font-size:0.82rem; color:#55555A; margin-top:0.25rem;">Indicative base pricing · Statutory taxes &amp; floor rise additional</div>
-          </div>
-
-          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.75rem; padding:1rem; background:#FAFAFA; border:0.5px solid rgba(85,85,90,0.2); border-radius:4px; margin-bottom:1.5rem;">
-            <div>
-              <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:#55555A; letter-spacing:0.05em;">Typology</div>
-              <div style="font-size:0.95rem; font-weight:700; color:#2B2D31; margin-top:0.2rem;">1, 2 & 3 BHK</div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.12rem;">
+            <div style="display:flex; align-items:center; gap:0.35rem;">
+              <span class="brand-inline-text" style="font-weight:700; color:#804526; font-size:0.92rem;">acre&amp;key</span>
+              <span style="font-family:'Manrope', sans-serif; font-size:0.68rem; font-weight: 500; letter-spacing:0.04em; color:#804526; text-transform:uppercase;">Assessment</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; margin-top:-1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             </div>
-            <div>
-              <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:#55555A; letter-spacing:0.05em;">Size Range</div>
-              <div style="font-size:0.95rem; font-weight:700; color:#2B2D31; margin-top:0.2rem;">883 - 1866 sq.ft.</div>
-            </div>
-            <div>
-              <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:#55555A; letter-spacing:0.05em;">Possession</div>
-              <div style="font-size:0.95rem; font-weight:700; color:#2B2D31; margin-top:0.2rem;">Dec 2028</div>
-            </div>
+            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color:#2B2D31; line-height:1.1; display:flex; align-items:center; gap:0.35rem;">Contemporary Waterfront Living on Mysore Road <span style="color:#804526; font-family:'Manrope',sans-serif; font-size:1.1rem; transform:translateY(1px);">→</span></div>
           </div>
+        </button>
 
-          <div style="display:flex; gap:1rem; align-items:center;">
-            <button type="button" class="sd-btn-gold" onclick="window.openModal('analysis', null, {heading:'Request Advisory Memo', subHeading:'Comprehensive due diligence dossier on Casagrand Moondance.'}); return false;">
-              <span>Request Advisory Call →</span>
-            </button>
-            <button type="button" class="sd-btn-gold" onclick="window.scrollToFloorPlans(); return false;" style="background:transparent !important; color:#2B2D31 !important; border:0.5px solid rgba(85,85,90,0.3) !important; text-shadow:none !important; box-shadow:none !important;">
-              <span>Floor Plans</span>
-            </button>
+        <div style="display:flex; flex-direction:row; gap:0.5rem; margin-bottom:0.75rem; width:100%;">
+          <button type="button" data-no-modal="true" onclick="window.openModal('analysis'); return false;" class="ak-hero-btn-primary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-shadow:0 1px 2px rgba(43,45,49,0.35); cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>Get Buyer Analysis</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:#FFFFFF !important; color:#2B2D31 !important; border:0.5px solid rgba(85, 85, 90, 0.25) !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-decoration:none; cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>View Floor Plans</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </a>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem; background:#FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding:0.85rem; margin-top: 0;">
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Key Highlights</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Casagrand.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 1, 2 & 3 BHK typologies spanning 883 - 1866 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along West & Outer Metro Urban Corridor.</span></div>
+            </div>
           </div>
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Due Diligence</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify BWSSB</strong> municipal water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
+<div class="ak-hero-editorial-gallery" id="akHeroGallery">
+  <div class="ak-editorial-media-canvas" onclick="handlePropertyShare(event);">
+    <img id="akMainHeroImage" src="../thumbs/casagrand-moondance-mysore-road.webp" alt="Casagrand Moondance Architectural Elevation View" width="800" height="533" fetchpriority="high" decoding="async">
+  </div>
+
+  <div class="ak-editorial-top-left">
+    <div class="ak-editorial-tag">Casagrand · Mysore Road</div>
+    <div class="ak-editorial-counter"><span>01</span> &nbsp;/&nbsp; <span>01</span></div>
+    <div class="ak-editorial-line"></div>
+  </div>
+
+  <div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(10, 10, 11, 0.85) 0%, transparent 100%); z-index:3; pointer-events:none; display:flex; align-items:flex-end; padding:16px 20px;">
+    <span style="color:#FFFFFF; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;">Casagrand Moondance — Verified Karnataka RERA Layout</span>
+  </div>
+</div>
+<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
+
+  <div class="ak-info-header" style="margin-bottom:8px;">
+    <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#804526; margin-bottom:0.25rem;">Casagrand</div>
+    <h2 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; text-transform:none;">Casagrand Moondance</h2>
+    <div class="ak-info-meta" style="font-size:0.95rem; color:#55555A; display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;">
+      <span style="white-space:nowrap; display:inline-flex; align-items:center; gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Mysore Road, Bengaluru</span></span>
+    </div>
+  </div>
+
+  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(85,85,90,0.2); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#804526';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(85,85,90,0.2)';">
+    <div style="display:flex; align-items:baseline; gap:0.15rem;">
+      <span style="font-size:1.55rem; font-weight:700; color:#2B2D31; line-height:1; letter-spacing:-0.03em;">3.75</span>
+      <span style="font-size:0.82rem; color:#55555A; font-weight:500;">/5</span>
+    </div>
+    <div style="width:1px; height:26px; background:rgba(85,85,90,0.2);"></div>
+    <div style="display:flex; flex-direction:column; justify-content:center;">
+      <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.12rem;">
+        <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#804526; font-family:'Cormorant Garamond', serif; text-transform:uppercase;"><span class="brand-inline-text" style="font-weight:400 !important; text-transform:lowercase !important; font-size:1.25em !important; letter-spacing:normal !important;">acre&amp;key</span> ASSESSMENT</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.15rem; color:#2B2D31; line-height:1;">Contemporary Waterfront Living on Mysore Road</div>
+    </div>
+  </div>
+
+  <!-- Editorial Pricing Strip -->
+  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid rgba(85,85,90,0.15); border-bottom:0.5px solid rgba(85,85,90,0.15); padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <span style="font-size:1.48rem; font-weight:700; color:#2B2D31; letter-spacing:-0.01em; line-height:1.2;">₹0.68 – 1.44 Cr*</span>
+    <span style="font-size:1.25rem; font-weight:400; color:#55555A; margin:0 0.75rem; user-select:none;">|</span>
+    <span style="font-size:0.95rem; font-weight:500; color:#55555A; line-height:1.2;">Indicative base pricing · Statutory taxes &amp; floor rise additional</span>
+  </div>
+
+  <!-- Configuration & Sizing Strip -->
+  <div class="ak-info-facts" style="display:flex; align-items:center; flex-wrap:wrap; gap:1.25rem; border-top:none !important; padding-top:0 !important; margin-bottom:10px; font-family:'Manrope', sans-serif;">
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">CONFIG</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">1, 2 & 3 BHK</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">SIZE</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">883 - 1866 sq.ft.</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">POSSESSION</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">Dec 2028</span>
+    </div>
+  </div>
+
+  <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:0.85rem; margin-bottom:10px;">
+    <a href="#" class="sd-btn-gold ak-hero-btn-primary" data-no-modal="true" onclick="window.openModal('analysis'); return false;" style="background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; text-shadow:0 1px 2px rgba(43,45,49,0.35);">
+      <span>Get Buyer Analysis</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+    <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="border:0.5px solid rgba(85, 85, 90, 0.2) !important;">
+      <span>View Floor Plans</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+    </a>
+  </div>
+
+  <div class="ak-info-insight" style="background:#FFFFFF; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:0.5px solid rgba(85, 85, 90, 0.2); box-shadow:none;">
+    <div class="ak-view-row" style="display:flex; align-items:stretch; gap:1.25rem;">
+      <!-- Column 1: Highlights -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Key Highlights</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Casagrand.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 1, 2 & 3 BHK typologies spanning 883 - 1866 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along West & Outer Metro Urban Corridor.</span></div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="ak-view-divider" style="width:1px; background:rgba(85, 85, 90, 0.15); flex-shrink:0; margin:0 0.1rem;"></div>
+
+      <!-- Column 2: Watch -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Due Diligence</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify BWSSB</strong> municipal water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
         </div>
       </div>
     </div>
+  </div>
+
+</div>
+</div>
+
+<div class="prop-snapshot-strip-v2">
+  <div class="prop-glance-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <span class="prop-glance-tag">PROPERTY AT A GLANCE</span>
+      <span class="prop-glance-rule"></span>
+    </div>
+    <div class="prop-glance-footnote" style="margin-top:0; font-size:0.72rem; color:#55555A; font-family:'Manrope', sans-serif; font-weight:500;">
+      <sup class="prop-glance-sup">1</sup> Sources: Developer disclosures &amp; Karnataka RERA records
+    </div>
+  </div>
+
+  <div class="prop-glance-grid">
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~8–15</span>
+      <span class="prop-glance-lbl">ACRES</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">3–6</span>
+      <span class="prop-glance-lbl">TOWERS</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~500–950</span>
+      <span class="prop-glance-lbl">HOMES</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~75%</span>
+      <span class="prop-glance-lbl">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~25,000</span>
+      <span class="prop-glance-lbl">SQ.FT. CLUBHOUSE<sup class="prop-glance-sup">1</sup></span>
+    </div>
+  </div>
+</div>
+</div>
 </section>
 
 <!-- Sub-Navigation Sticky Bar -->

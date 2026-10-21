@@ -36,189 +36,143 @@ html { scroll-behavior: smooth; }
     width: 100%;
   }
 }
-.prop-snapshot-strip-v2 { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1rem !important; padding: 0 !important; }
+.prop-snapshot-strip-v2 { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1.25rem !important; padding: 0 !important; }
 .prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
-.prop-glance-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; color: #804526; text-transform: uppercase; }
-.prop-glance-rule { width: 80px; height: 1px; background: #D5C7B8; }
-.prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; }
-.prop-glance-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; }
-.prop-glance-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 10%; height: 80%; width: 1px; background: rgba(85, 85, 90, 0.2); }
-.prop-glance-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
-.prop-glance-lbl { font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2; }
-.prop-glance-sup { font-size: 0.7em; font-weight: 600; color: #804526; vertical-align: super; margin-left: 2px; }
-.prop-glance-footnote { text-align: right; margin-top: 0.45rem; font-size: 0.72rem; color: #55555A; font-family: 'Manrope', sans-serif; font-weight: 500; }
-@media (max-width: 900px) { .prop-glance-num { font-size: 2.1rem; } .prop-glance-lbl { font-size: 0.68rem; } }
-.page-breadcrumb a { color: #374151 !important; font-weight: 500; }
-.page-breadcrumb a:hover { color: #804526 !important; }
-.page-breadcrumb .separator { color: #374151 !important; font-weight: 600; }
-.page-breadcrumb .current { color: #1F2937 !important; font-weight: 600; }
-.advisor-status-text { color: #374151 !important; }
-.advisor-status-text strong { color: #804526 !important; }
-.ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
-.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 260px; background-color: #2B2D31; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.4s, visibility 0.4s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1); }
-.ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2B2D31 transparent transparent transparent; }
-.ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
-.local-nav-link {
-  display: inline-block;
-  padding: 0.95rem 1.15rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #374151;
-  text-decoration: none;
-  white-space: nowrap;
-  border-bottom: none !important;
-  transition: all 0.4s ease;
-  position: relative;
-}
+.prop-glance-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; color: #804526; text-transform: uppercase; }
+.prop-glance-rule { flex: 1; height: 0.5px; background: rgba(85, 85, 90, 0.2); }
+.prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
+.prop-glance-item { background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding: 0.85rem 1rem; text-align: left; }
+.prop-glance-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 400; color: #2B2D31; line-height: 1.1; margin-bottom: 0.2rem; }
+.prop-glance-lbl { display: block; font-family: 'Manrope', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: #55555A; text-transform: uppercase; }
+.prop-glance-sup { font-size: 0.65em; vertical-align: super; color: #804526; }
 
-
-.local-nav-link:hover, .local-nav-link.active { color: #111827 !important; }
-.prop-section-nav-sticky { top: 80px !important; }
-.prop-section, #verdict, #masterplan { scroll-margin-top: 140px; }
-
-@media (max-width: 768px) {
-  .prop-section, #verdict, #masterplan { scroll-margin-top: 110px; }
-  .prop-container { padding-left: 0.85rem !important; padding-right: 0.85rem !important; }
-  div[style*="padding:2.25rem"], div[style*="padding: 2.25rem"], div[style*="padding:2rem"], div[style*="padding: 2rem"] { padding: 1.25rem 1rem !important; border-radius: 4px !important; }
-  h2, h2[style*="font-size:2rem"], h2[style*="font-size: 2rem"], h2[style*="font-size:2.13rem"], h2[style*="font-size: 2.13rem"], h2[style*="font-size:2.2rem"] { font-size: 1.45rem !important; line-height: 1.3 !important; }
-  h3, h3[style*="font-size:1.65rem"], h3[style*="font-size: 1.65rem"], h3[style*="font-size:2rem"], h3[style*="font-size: 2.07rem"] { font-size: 1.25rem !important; line-height: 1.35 !important; }
-  .ak-pros-cons-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-  .prop-section-nav-sticky { top: 64px !important; border-bottom: 0.5px solid rgba(43, 45, 49, 0.08) !important; box-shadow: 0 4px 12px rgba(15, 31, 61, 0.05) !important; z-index: 990 !important; }
-  .local-nav-link { padding: 0.4rem 0.75rem !important; font-size: 0.82rem !important; }
-  .prop-snapshot-grid-v2 { grid-template-columns: repeat(2, 1fr) !important; gap: 0.65rem !important; }
-  .prop-snapshot-item-v2 { padding: 0.65rem 0.5rem !important; }
-  .prop-snap-num-v2 { font-size: 1.05rem !important; }
-  .prop-snap-lbl-v2 { font-size: 0.7rem !important; }
-}
-
-/* acre&key Reference Card System (4px Radius & Institutional Styling) */
-.prop-section div[style*="border-radius"],
-.prop-container div[style*="border-radius"],
-.prop-hero-grid div[style*="border-radius"],
-.prop-overview-card div[style*="border-radius"] {
-  border-radius: 4px !important;
-}
-div[style*="border-radius:50%"],
-div[style*="border-radius: 50%"],
-span[style*="border-radius:50%"],
-span[style*="border-radius: 50%"],
-img[style*="border-radius:50%"],
-img[style*="border-radius: 50%"] {
-  border-radius: 50% !important;
-}
-.sd-btn-gold, .evergreen-cost-cta-btn, .ak-hero-share-btn, button, input {
-  border-radius: 4px !important;
-}
-
-/* Uniform Section Spacing & Single Hairline Borders */
-.prop-section, #closing-cta {
-  padding: clamp(2.5rem, 3.5vw, 3.25rem) 0 !important;
-  border-top: none !important;
-  border-bottom: 0.5px solid #E5E0D8 !important;
-}
-.ak-card-dossier {
-  background: #FFFFFF !important;
-  border: 0.5px solid rgba(43, 45, 49, 0.08) !important;
-  border-radius: 4px !important;
-  padding: clamp(1.25rem, 2.5vw, 1.85rem) !important;
-  box-shadow: 0 4px 20px rgba(15, 31, 61, 0.04) !important;
-  margin-bottom: 0 !important;
-}
-
-/* acre&key 4-Point Diligence Checklist (Single 4-Column Row on Desktop) */
-.ak-diligence-4col-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 0.75rem !important;
-  align-items: stretch !important;
-}
-.ak-diligence-card {
-  background: #FFFFFF !important;
-  border: 0.5px solid #E5E0D8 !important;
-  border-radius: 4px !important;
-  padding: 0.85rem 0.95rem !important;
-  box-shadow: 0 2px 6px rgba(15, 31, 61, 0.03) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  height: 100% !important;
-  box-sizing: border-box !important;
-}
-.ak-diligence-header {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 0.5rem !important;
-}
-.ak-diligence-badge {
-  width: 22px !important;
-  height: 22px !important;
-  border-radius: 50% !important;
-  background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
-  color: #FFFFFF !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-weight: 800 !important;
-  font-size: 0.72rem !important;
-  flex-shrink: 0 !important;
-  margin-top: 1px !important;
-}
-.ak-diligence-title {
-  color: #2B2D31 !important;
-  font-size: 0.82rem !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important;
-  margin: 0 !important;
-}
-.ak-diligence-body {
-  font-size: 0.76rem !important;
-  color: #374151 !important;
-  line-height: 1.48 !important;
-  margin: 0.45rem 0 0 0 !important;
-  flex: 1 !important;
-}
 @media (max-width: 991px) {
-  .ak-diligence-4col-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
-  }
+  .prop-glance-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 640px) {
-  .ak-diligence-4col-grid {
-    grid-template-columns: 1fr !important;
-    gap: 0.65rem !important;
-  }
-  .ak-diligence-card {
-    padding: 0.75rem 0.85rem !important;
-  }
+@media (max-width: 768px) {
+  .prop-glance-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.ak-hero-editorial-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(450px, 52vh, 500px);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2B2D31;
+  box-sizing: border-box;
+}
+.ak-editorial-media-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.ak-editorial-media-canvas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: saturate(0.85) contrast(1.05);
+}
+.ak-editorial-media-canvas:hover img {
+  transform: scale(1.015);
+}
+.ak-editorial-top-left {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ak-editorial-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-counter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-line {
+  width: 36px;
+  height: 1.5px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  box-shadow: 0 2px 6px rgba(10, 10, 11, 0.3);
+}
 
 .ak-hero-btn-primary,
-.sd-btn-gold,
-.evergreen-cost-cta-btn {
+.sd-btn-gold {
   background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
   color: #FFFFFF !important;
-  border-color: #9f5334 !important;
+  border: 0.5px solid #9f5334 !important;
   border-radius: 4px !important;
-  box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(128, 69, 38, 0.25) !important;
   transition: all 0.4s ease !important;
+  text-shadow: 0 1px 2px rgba(43,45,49,0.35) !important;
 }
 .ak-hero-btn-primary:hover,
-.sd-btn-gold:hover,
-.evergreen-cost-cta-btn:hover {
+.sd-btn-gold:hover {
   background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
   border-color: #9f5334 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 18px rgba(125, 68, 42, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(128, 69, 38, 0.35) !important;
   transform: translateY(-1px) !important;
+}
+.ak-hero-btn-secondary {
+  background: #FFFFFF !important;
+  color: #2B2D31 !important;
+  border: 0.5px solid rgba(85, 85, 90, 0.25) !important;
+  border-radius: 4px !important;
+  transition: all 0.4s ease !important;
 }
 .ak-hero-btn-secondary:hover {
   background: rgba(190, 117, 85, 0.08) !important;
-  border-color: #be7555 !important;
-  color: #9f5334 !important;
+  border-color: #804526 !important;
+  color: #804526 !important;
 }
 
+.ak-mobile-hero-v5 { display: none; }
+@media (min-width: 769px) {
+  .mobile-only-nav { display: none !important; }
+  .desktop-only-nav { display: flex !important; }
+}
+@media (max-width: 768px) {
+  .prop-hero-grid, .prop-snapshot-strip-v2 { display: none !important; }
+  .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
+  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 4px; overflow: hidden; margin-bottom: 0.85rem; border: 0.5px solid rgba(85, 85, 90, 0.2); }
+  .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.05); }
+  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(43, 45, 49, 0.85); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px; backdrop-filter: blur(4px); }
+  .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .desktop-only-nav { display: none !important; }
+  .mobile-only-nav { display: flex !important; overflow-x: auto !important; white-space: nowrap !important; padding: 0.35rem 0.5rem !important; gap: 0.4rem !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .mobile-only-nav::-webkit-scrollbar { display: none; }
+  .mobile-only-nav .local-nav-link { padding: 0.35rem 0.75rem !important; font-size: 0.82rem !important; font-weight: 700 !important; border-radius: 4px !important; background: #FAFAFA; color: #2B2D31 !important; }
+  .mobile-only-nav .local-nav-link.active { background: #2B2D31 !important; color: #FFFFFF !important; }
+}
+.prop-section { padding: clamp(2.5rem, 3.5vw, 3.25rem) 0 !important; border-top: none !important; border-bottom: 0.5px solid rgba(85, 85, 90, 0.2) !important; scroll-margin-top: 140px; }
+.ak-card-dossier { background: #FFFFFF !important; border: 0.5px solid rgba(85, 85, 90, 0.2) !important; border-radius: 4px !important; padding: clamp(1.25rem, 2.5vw, 1.85rem) !important; box-shadow: none !important; }
+.local-nav-link { display: inline-block; padding: 0.95rem 1.15rem; font-size: 0.88rem; font-weight: 600; color: #55555A; text-decoration: none; white-space: nowrap; border-bottom: none !important; transition: all 0.4s ease; position: relative; }
+.local-nav-link:hover, .local-nav-link.active { color: #804526 !important; border-bottom: 1px solid #804526 !important; }
+.prop-section-nav-sticky { position: sticky !important; top: 80px !important; z-index: 990 !important; background: #FFFFFF; border-bottom: 0.5px solid rgba(85, 85, 90, 0.2); }
 </style>
 <style>
 .ak-mobile-hero-v5 { display: none; }
@@ -699,269 +653,210 @@ img[style*="border-radius: 50%"] {
 <main>
 <section class="prop-hero-section" style="background:#FAFAFA;">
 <div class="prop-container">
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding: 1.5rem 0;">
-<nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Alembic Cloud Forest</li></ol></nav>
-<div style="display:flex; align-items:center; gap:1.25rem;"><span style="font-size:0.85rem; color:#374151; font-weight:500;">Last Modified 20 September 2026</span><div style="position:relative;"><button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger"><i data-feather="share-2" style="width:14px;height:14px;color:#2B2D31;"></i><span>Share</span></button></div></div>
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding: 0.25rem 0 1rem 0; border-bottom:0.5px solid rgba(85, 85, 90, 0.15); margin-bottom:1rem;">
+  <div>
+    <nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Alembic Cloud Forest at Alembic City</li></ol></nav>
+  </div>
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0.85rem; font-size:0.75rem; color:#55555A;">
+    <div style="display:flex; align-items:center; gap:0.45rem;">
+      <img src="../../style-guide/assets/gaurav-mongia-founder-acre-key.webp" alt="Gaurav Mongia" width="24" height="24" style="width:24px; height:24px; border-radius:50%; object-fit:cover; border:1.5px solid rgba(128, 69, 38, 0.3); flex-shrink:0;" />
+      <span>Reviewed by <strong style="color:#2B2D31;">Gaurav Mongia</strong></span>
+    </div>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <span>Last Updated: <strong style="color:#2B2D31;"><time id="ak-last-updated" datetime="2026-09-30">30 September 2026</time>
+    <script>
+      (function() {
+        try {
+          var date = new Date(document.lastModified);
+          if (!isNaN(date) && date.getFullYear() > 2000) {
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formatted = date.toLocaleDateString('en-GB', options);
+            var el = document.getElementById('ak-last-updated');
+            if (el) {
+              el.textContent = formatted;
+              el.setAttribute('datetime', date.toISOString().split('T')[0]);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script></strong></span>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <div style="position:relative;">
+      <button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger" style="display:flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:0.5px solid rgba(85, 85, 90, 0.2); padding:0.35rem 0.65rem; border-radius:4px; font-weight:600; cursor:pointer; color:#2B2D31;">
+        <i data-feather="share-2" style="width:12px;height:12px;color:#2B2D31;"></i><span>Share</span>
+      </button>
+    </div>
+  </div>
 </div>
 
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
-        <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="openAkLightbox(0);" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openAkLightbox(0); }">
+        <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="handlePropertyShare(event);">
           <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
-          <img src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=1791220494" alt="Alembic Cloud Forest Evening View">
-          
+          <img src="../thumbs/alembic-cloud-forest-alembic-city.webp" alt="Alembic Cloud Forest at Alembic City Architectural Exterior View" width="800" height="533" style="width:100%; height:100%; object-fit:cover;">
+          <div class="ak-mobile-badge-top-left">RERA Registered</div>
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#2B2D31;"></i>
           </button>
         </div>
 
-        <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; margin:0 0 0.25rem 0; line-height:1.2; letter-spacing:0.02em; text-transform:none;">Alembic Cloud Forest</h1>
-        <div style="font-size:0.95rem; color:#804526; font-weight:600; margin-bottom:0.65rem; display:flex; align-items:center; gap:0.35rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Kadugodi / Hope Farm, Bengaluru</span></div>
-        <div style="font-family:'Cormorant Garamond', serif; font-size: 2.36rem; font-weight: 400; color:#2B2D31; line-height:1.05;">₹2.20–3.49 Cr</div>
-        <div style="font-size:0.85rem; color:#667085; font-weight:600; margin-top:0.15rem; margin-bottom:0.65rem;">₹16.6K/sq.ft. indicative all-inclusive pricing</div>
-        <div style="font-size:0.88rem; font-weight:700; color:#2B2D31; margin-bottom:0.2rem;">
-          2, 3 & 3.5 BHK + Home Office · 1,325–2,100 sq.ft.
+        <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.5rem, 5vw, 1.85rem); font-weight: 400; color:#2B2D31; margin:0 0 0.15rem 0; line-height:1.2; letter-spacing:0.01em; text-transform:none;">Alembic Cloud Forest at Alembic City</h1>
+        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.45rem; display:flex; align-items:center; gap:0.35rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Kadugodi / Hope Farm, Whitefield</span>
         </div>
-        <div style="font-size:0.82rem; color:#374151; margin-bottom:0.2rem;">~15 acres · 3 towers · 1,330 homes · G + 34</div>
-        <div style="font-size:0.85rem; font-weight:600; color:#804526; margin-bottom:0.85rem;">
-          Possession: October 2029
+        <div style="display:flex; align-items:baseline; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.25rem;">
+          <span style="font-family:'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color:#2B2D31; line-height:1;">₹2.2 – 3.49 Cr</span>
+          <span style="font-size:0.8rem; color:#55555A; font-weight:500;">· Indicative Outlay</span>
+        </div>
+        <div style="font-size:0.82rem; color:#2B2D31; font-weight:600; margin-bottom:0.65rem; line-height:1.4;">
+          2, 3 & 3.5 BHK · 1,310 – 2,180 sq.ft. · Possession Oct 2029
         </div>
 
-        <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal();" style="background:#FFFFFF; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.04); display:flex; align-items:center; gap:0.85rem; cursor:pointer;">
-          <div style="background:#2B2D31; color:#FFFFFF; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0;">
-            <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1; color:#FFFFFF;">3.90</div>
-            <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
-          </div>
-          <div style="flex:1;">
-            <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.2rem;">
-              <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#804526; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">3.90</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.scrollToVerdict(event);" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.5rem 0.85rem; margin-bottom:0.65rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+          <div style="text-align:center; padding-right:0.85rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
+            <div style="font-size:1.75rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#2B2D31; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
+              3.9<span style="font-size:1.05rem; color:#2B2D31; font-weight:400; opacity:0.8;">/5</span>
             </div>
-            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.18rem; font-weight: 400; color:#2B2D31; line-height:1.2; margin-bottom:0.2rem;">A Strong Township Bet</div>
-            <div style="font-size:0.82rem; color:#374151; line-height:1.35; font-weight:500;">Integrated City Living. Strong East Bengaluru Location.</div>
           </div>
-        </div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.12rem;">
+            <div style="display:flex; align-items:center; gap:0.35rem;">
+              <span class="brand-inline-text" style="font-weight:700; color:#804526; font-size:0.92rem;">acre&amp;key</span>
+              <span style="font-family:'Manrope', sans-serif; font-size:0.68rem; font-weight: 500; letter-spacing:0.04em; color:#804526; text-transform:uppercase;">Assessment</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; margin-top:-1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color:#2B2D31; line-height:1.1; display:flex; align-items:center; gap:0.35rem;">Integrated City Living <span style="color:#804526; font-family:'Manrope',sans-serif; font-size:1.1rem; transform:translateY(1px);">→</span></div>
+          </div>
+        </button>
 
-        <div style="display:flex; flex-direction:column; gap:0.55rem; margin-bottom:0.85rem;">
-          <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.9rem; font-size:0.95rem; font-weight:700; border-radius: 4px; text-align:center; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 12px rgba(125, 68, 42, 0.25); display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
+        <div style="display:flex; flex-direction:row; gap:0.5rem; margin-bottom:0.75rem; width:100%;">
+          <button type="button" data-no-modal="true" onclick="window.openModal('analysis'); return false;" class="ak-hero-btn-primary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-shadow:0 1px 2px rgba(43,45,49,0.35); cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
             <span>Get Buyer Analysis</span>
-            <span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </button>
-          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">
+          <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:#FFFFFF !important; color:#2B2D31 !important; border:0.5px solid rgba(85, 85, 90, 0.25) !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-decoration:none; cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
             <span>View Floor Plans</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
           </a>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.8rem; font-weight:700; color:#374151; background:#FAFAFA; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:0.75rem 0.85rem;">
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Integrated Township</strong> ecosystem</span></div>
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Adjacent to</strong> Whitefield Tech Hub</span></div>
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#1B5E20; font-weight:800;">✓</span> <span><strong>Whitefield–Kadugodi</strong> Connectivity</span></div>
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#804526; font-weight:800;">⚠</span> <span><strong>Hope Farm</strong> traffic conditions</span></div>
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#804526; font-weight:800;">⚠</span> <span><strong>Civic infrastructure</strong> &amp; water</span></div>
-          <div style="display:flex; align-items:center; gap:0.35rem; color:#2B2D31;"><span style="color:#804526; font-weight:800;">⚠</span> <span><strong>RERA completion timeline</strong></span></div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem; background:#FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding:0.85rem; margin-top: 0;">
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Key Highlights</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Alembic Real Estate.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 2, 3 & 3.5 BHK typologies spanning 1,310 – 2,180 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along Whitefield corridor.</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Due Diligence</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify municipal</strong> water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
 <div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
 <div class="ak-hero-editorial-gallery" id="akHeroGallery">
-  <div class="ak-editorial-media-canvas" onclick="openAkLightbox(window.akGalleryIndex || 0);">
-    <img id="akMainHeroImage" src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=1791220494" alt="Alembic Cloud Forest at Alembic City Towers Elevation View" width="800" height="533" fetchpriority="high" decoding="async">
-    <video id="akMainHeroVideo" style="display:none;" muted="" loop="" playsinline=""></video>
+  <div class="ak-editorial-media-canvas" onclick="handlePropertyShare(event);">
+    <img id="akMainHeroImage" src="../thumbs/alembic-cloud-forest-alembic-city.webp" alt="Alembic Cloud Forest at Alembic City Architectural Elevation View" width="800" height="533" fetchpriority="high" decoding="async">
   </div>
 
   <div class="ak-editorial-top-left">
-    <div class="ak-editorial-tag">ALEMBIC CLOUD FOREST</div>
-    <div class="ak-editorial-counter"><span id="akHeroSlideNum">01</span> &nbsp;/&nbsp; <span id="akHeroSlideTotal">05</span></div>
+    <div class="ak-editorial-tag">Alembic Real Estate · Whitefield</div>
+    <div class="ak-editorial-counter"><span>01</span> &nbsp;/&nbsp; <span>01</span></div>
     <div class="ak-editorial-line"></div>
   </div>
 
-  <div class="ak-editorial-top-right">
-    <button type="button" class="ak-editorial-nav-btn" aria-label="Previous slide" onclick="event.stopPropagation(); akGalleryPrev();">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-    </button>
-    <button type="button" class="ak-editorial-nav-btn" aria-label="Next slide" onclick="event.stopPropagation(); akGalleryNext();">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
-  </div>
-
-  <div class="ak-editorial-bottom-strip">
-    <div class="ak-editorial-thumbs-row">
-      
-      
-      
-      
-      
-      
-
-    </div>
-
-    <button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(0);" aria-label="View Alembic City Towers Elevation View" title="Alembic City Towers Elevation View"><img src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=1791220494" alt="Alembic City Towers Elevation View"></button>
-<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(1);" aria-label="View Biophilic Retail &amp; Dining Plaza" title="Biophilic Retail &amp; Dining Plaza"><img src="../../style-guide/assets/alembic/alembic_hero_retail_plaza.webp?v=1791220494" alt="Biophilic Retail &amp; Dining Plaza"></button>
-<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(2);" aria-label="View Alfresco Dining Canopy" title="Alfresco Dining Canopy"><img src="../../style-guide/assets/alembic/alembic_hero_dining_canopy.webp?v=1791220494" alt="Alfresco Dining Canopy"></button>
-<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(3);" aria-label="View Alembic Commercial Hub" title="Alembic Commercial Hub"><img src="../../style-guide/assets/alembic/alembic_hero_commercial_hub.webp?v=1791220494" alt="Alembic Commercial Hub"></button>
-<button type="button" class="ak-editorial-thumb" onclick="event.stopPropagation(); window.akGallerySelect(4);" aria-label="View Video" title="Walkthrough Video"><img src="../../style-guide/assets/alembic/alembic_hero_tower_elevation.webp?v=1791220494" alt="Walkthrough Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.08);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"><circle cx="12" cy="12" r="10" fill="rgba(10, 10, 11, 0.08)"></circle><polygon points="10 8 16 12 10 16 10 8" fill="#FFFFFF"></polygon></svg></div></button><div class="ak-editorial-gallery-trigger">
-      <div class="ak-editorial-divider"></div>
-      <button type="button" class="ak-editorial-view-btn" onclick="event.stopPropagation(); openAkLightbox(window.akGalleryIndex || 0);" aria-label="View all gallery photos">
-        <span>View gallery</span>
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-      </button>
-    </div>
+  <div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(10, 10, 11, 0.85) 0%, transparent 100%); z-index:3; pointer-events:none; display:flex; align-items:flex-end; padding:16px 20px;">
+    <span style="color:#FFFFFF; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;">Alembic Cloud Forest at Alembic City — Verified Karnataka RERA Layout</span>
   </div>
 </div>
 <div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
 
   <div class="ak-info-header" style="margin-bottom:8px;">
-    <h2 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; text-transform:none;">Alembic Cloud Forest</h2>
-    <div class="ak-info-meta" style="font-size:0.95rem; color:var(--prop-navy); display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;"><span style="white-space:nowrap; display:inline-flex; align-items:center; gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>At Alembic City · Kadugodi / Hope Farm</span></span></div>
+    <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#804526; margin-bottom:0.25rem;">Alembic Real Estate</div>
+    <h2 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; text-transform:none;">Alembic Cloud Forest at Alembic City</h2>
+    <div class="ak-info-meta" style="font-size:0.95rem; color:#55555A; display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;">
+      <span style="white-space:nowrap; display:inline-flex; align-items:center; gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Kadugodi / Hope Farm, Whitefield</span></span>
+    </div>
   </div>
 
-  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(213,209,200,0.85); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#804526';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(213,209,200,0.85)';">
+  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(85,85,90,0.2); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#804526';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(85,85,90,0.2)';">
     <div style="display:flex; align-items:baseline; gap:0.15rem;">
-      <span style="font-size:1.55rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0\.03em;">3.90</span>
-      <span style="font-size:0.82rem; color:#374151; font-weight:500;">/5</span>
+      <span style="font-size:1.55rem; font-weight:700; color:#2B2D31; line-height:1; letter-spacing:-0.03em;">3.9</span>
+      <span style="font-size:0.82rem; color:#55555A; font-weight:500;">/5</span>
     </div>
-    <div style="width:1px; height:26px; background:rgba(213,209,200,0.8);"></div>
+    <div style="width:1px; height:26px; background:rgba(85,85,90,0.2);"></div>
     <div style="display:flex; flex-direction:column; justify-content:center;">
       <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.12rem;">
         <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#804526; font-family:'Cormorant Garamond', serif; text-transform:uppercase;"><span class="brand-inline-text" style="font-weight:400 !important; text-transform:lowercase !important; font-size:1.25em !important; letter-spacing:normal !important;">acre&amp;key</span> ASSESSMENT</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
       </div>
-      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.15rem; color:#2B2D31; line-height:1;">Integrated City Living. Strong East Bengaluru Location.</div>
+      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.15rem; color:#2B2D31; line-height:1;">Integrated City Living</div>
     </div>
   </div>
 
   <!-- Editorial Pricing Strip -->
-  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid #FAFAFA; border-bottom:0.5px solid #FAFAFA; padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
-    <span style="font-size:1.48rem; font-weight:700; color:#111827; letter-spacing:-0.01em; line-height:1.2;">₹2.20 – 3.49 Cr</span>
-    <span style="font-size:1.25rem; font-weight:400; color:#374151; margin:0 0.75rem; user-select:none;">|</span>
-    <span style="font-size:1.1rem; font-weight:500; color:#374151; line-height:1.2;">₹16.6 K/sq.ft*</span>
+  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid rgba(85,85,90,0.15); border-bottom:0.5px solid rgba(85,85,90,0.15); padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <span style="font-size:1.48rem; font-weight:700; color:#2B2D31; letter-spacing:-0.01em; line-height:1.2;">₹2.2 – 3.49 Cr*</span>
+    <span style="font-size:1.25rem; font-weight:400; color:#55555A; margin:0 0.75rem; user-select:none;">|</span>
+    <span style="font-size:0.95rem; font-weight:500; color:#55555A; line-height:1.2;">Indicative base pricing · Statutory taxes &amp; floor rise additional</span>
   </div>
 
   <!-- Configuration & Sizing Strip -->
-  <div class="ak-info-facts" style="display:flex; align-items:center; gap:2.25rem; border-top:none !important; padding-top:0 !important; margin-bottom:10px; font-family:'Manrope', sans-serif;">
+  <div class="ak-info-facts" style="display:flex; align-items:center; flex-wrap:wrap; gap:1.25rem; border-top:none !important; padding-top:0 !important; margin-bottom:10px; font-family:'Manrope', sans-serif;">
     <div style="display:flex; flex-direction:column; gap:0.15rem;">
-      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">CONFIG</span>
-      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">2, 3 & 3.5 BHK</span>
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">CONFIG</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">2, 3 & 3.5 BHK</span>
     </div>
     <div style="display:flex; flex-direction:column; gap:0.15rem;">
       <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">SIZE</span>
-      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">1,325–2,100 sq.ft.</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">1,310 – 2,180 sq.ft.</span>
     </div>
     <div style="display:flex; flex-direction:column; gap:0.15rem;">
       <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">POSSESSION</span>
-      <span style="font-size:0.88rem; font-weight:600; color:var(--prop-navy);">June 2030</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">Oct 2029</span>
     </div>
   </div>
 
-  <style>
-    .ak-hero-btn-primary {
-      flex: 1;
-      height: 42px;
-      padding: 0 1.25rem;
-      background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
-      color: #FFFFFF !important;
-      border: 0.5px solid #9f5334 !important;
-      border-radius: 4px !important;
-      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
-      font-size: 0.92rem !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.01em !important;
-      text-transform: none !important;
-      text-decoration: none !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 0.5rem !important;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 12px rgba(125, 68, 42, 0.25);
-    }
-    .ak-hero-btn-primary:hover {
-      background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
-      border-color: #9f5334 !important;
-      box-shadow: 0 8px 20px rgba(125, 68, 42, 0.4);
-      color: #FFFFFF !important;
-      transform: translateY(-1px);
-    }
-    .ak-hero-btn-secondary {
-      flex: 1;
-      height: 42px;
-      padding: 0 1.25rem;
-      background: #FFFFFF !important;
-      color: #2B2D31 !important;
-      border: 0.5px solid #D5C7B8 !important;
-      border-radius: 4px !important;
-      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
-      font-size: 0.92rem !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.01em !important;
-      text-transform: none !important;
-      text-decoration: none !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 0.55rem !important;
-      cursor: pointer;
-      transition: all 0.4s ease;
-    }
-    .ak-hero-btn-secondary:hover {
-      background: rgba(190, 117, 85, 0.08) !important;
-      border-color: #be7555 !important;
-      color: #9f5334 !important;
-    }
-  </style>
   <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:0.85rem; margin-bottom:10px;">
-    <a href="#" class="sd-btn-gold ak-hero-btn-primary" onclick="window.openModal(); return false;" style="background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important;">
+    <a href="#" class="sd-btn-gold ak-hero-btn-primary" data-no-modal="true" onclick="window.openModal('analysis'); return false;" style="background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; text-shadow:0 1px 2px rgba(43,45,49,0.35);">
       <span>Get Buyer Analysis</span>
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
-    <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">
-            <span>View Floor Plans</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </a>
+    <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="border:0.5px solid rgba(85, 85, 90, 0.2) !important;">
+      <span>View Floor Plans</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+    </a>
   </div>
 
-  <div class="ak-info-insight" style="background:#FAFAFA; border-radius: 4px; padding:0.6rem 0.85rem; margin-bottom:0; border:0.5px solid rgba(213,209,200,0.7); box-shadow:none;">
-    <div class="ak-view-row" style="display:flex; align-items:stretch; gap:0.95rem;">
+  <div class="ak-info-insight" style="background:#FFFFFF; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:0.5px solid rgba(85, 85, 90, 0.2); box-shadow:none;">
+    <div class="ak-view-row" style="display:flex; align-items:stretch; gap:1.25rem;">
       <!-- Column 1: Highlights -->
       <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
-        <div style="font-family:'Cormorant Garamond', serif; font-size:0.66rem; font-weight: 400; letter-spacing:0.12em; color:#1E4631; text-transform:uppercase; margin-bottom:0.35rem; line-height:1;">Key Highlights</div>
-        <div style="display:flex; flex-direction:column; gap:0.32rem; font-family:'Manrope', sans-serif; font-size:0.74rem; color:#2B2D31; line-height:1.35;">
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background:#2E6247; margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>Integrated Township</strong> ecosystem</span>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background:#2E6247; margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>Adjacent to</strong> Whitefield Tech Hub</span>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background:#2E6247; margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>Whitefield–Kadugodi</strong> Connectivity</span>
-          </div>
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Key Highlights</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Alembic Real Estate.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 2, 3 & 3.5 BHK typologies spanning 1,310 – 2,180 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along Whitefield corridor.</span></div>
         </div>
       </div>
 
       <!-- Divider -->
-      <div class="ak-view-divider" style="width:1px; background:rgba(213,209,200,0.65); flex-shrink:0; margin:0 0.1rem;"></div>
+      <div class="ak-view-divider" style="width:1px; background:rgba(85, 85, 90, 0.15); flex-shrink:0; margin:0 0.1rem;"></div>
 
       <!-- Column 2: Watch -->
       <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
-        <div style="font-family:'Cormorant Garamond', serif; font-size:0.66rem; font-weight: 400; letter-spacing:0.12em; color:#804526; text-transform:uppercase; margin-bottom:0.35rem; line-height:1;">Due Diligence</div>
-        <div style="display:flex; flex-direction:column; gap:0.32rem; font-family:'Manrope', sans-serif; font-size:0.74rem; color:#2B2D31; line-height:1.35;">
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>Hope Farm</strong> traffic conditions</span>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>Civic infrastructure</strong> &amp; water</span>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.4rem;">
-            <span style="display:inline-block; width:4px; height:4px; border-radius:50%; background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); margin-top:5px; flex-shrink:0;"></span>
-            <span><strong>RERA completion timeline</strong></span>
-          </div>
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Due Diligence</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify municipal</strong> water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
         </div>
       </div>
     </div>
@@ -970,39 +865,39 @@ img[style*="border-radius: 50%"] {
 </div>
 </div>
 
-
-<div class="prop-snapshot-strip-v2" style="background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1rem !important; padding: 0 !important;">
+<div class="prop-snapshot-strip-v2">
   <div class="prop-glance-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
     <div style="display:flex; align-items:center; gap:1rem;">
-      <span class="prop-glance-tag" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.14em; color: #804526; text-transform: uppercase;">PROPERTY AT A GLANCE</span>
-      <span class="prop-glance-rule" style="width: 80px; height: 1px; background: #D5C7B8;"></span>
+      <span class="prop-glance-tag">PROPERTY AT A GLANCE</span>
+      <span class="prop-glance-rule"></span>
+    </div>
+    <div class="prop-glance-footnote" style="margin-top:0; font-size:0.72rem; color:#55555A; font-family:'Manrope', sans-serif; font-weight:500;">
+      <sup class="prop-glance-sup">1</sup> Sources: Developer disclosures &amp; Karnataka RERA records
     </div>
   </div>
 
-  <div class="prop-glance-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); align-items: center;">
-    <div class="prop-glance-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative;">
-      <span class="prop-glance-num" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem;">~15</span>
-      <span class="prop-glance-lbl" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2;">ACRES</span>
+  <div class="prop-glance-grid">
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">~15</span>
+      <span class="prop-glance-lbl">ACRES</span>
     </div>
-    <div class="prop-glance-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; border-left: 0.5px solid rgba(85, 85, 90, 0.2);">
-      <span class="prop-glance-num" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem;">3</span>
-      <span class="prop-glance-lbl" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2;">TOWERS</span>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">3</span>
+      <span class="prop-glance-lbl">TOWERS</span>
     </div>
-    <div class="prop-glance-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; border-left: 0.5px solid rgba(85, 85, 90, 0.2);">
-      <span class="prop-glance-num" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem;">1,330</span>
-      <span class="prop-glance-lbl" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2;">HOMES</span>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">1,330</span>
+      <span class="prop-glance-lbl">HOMES</span>
     </div>
-    <div class="prop-glance-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; border-left: 0.5px solid rgba(85, 85, 90, 0.2);">
-      <span class="prop-glance-num" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem;">>70%</span>
-      <span class="prop-glance-lbl" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2;">OPEN AREA</span>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">>70%</span>
+      <span class="prop-glance-lbl">OPEN AREA<sup class="prop-glance-sup">1</sup></span>
     </div>
-    <div class="prop-glance-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0.15rem 0.75rem; position: relative; border-left: 0.5px solid rgba(85, 85, 90, 0.2);">
-      <span class="prop-glance-num" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: #1F2937; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.25rem;">22</span>
-      <span class="prop-glance-lbl" style="font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; color: #55555A; text-transform: uppercase; line-height: 1.2;">AMENITIES</span>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">22</span>
+      <span class="prop-glance-lbl">AMENITIES<sup class="prop-glance-sup">1</sup></span>
     </div>
   </div>
-</div>
-
 </div>
 </div>
 </section>
@@ -1315,7 +1210,7 @@ img[style*="border-radius: 50%"] {
                 <div style="font-size:0.68rem; color:#804526; font-weight:700; text-transform:uppercase;">Balcony Area</div>
               </div>
               <div style="background:#FAFAFA; border:0.5px solid rgba(128, 69, 38,0.18); border-radius: 4px; padding:0.45rem 0.65rem;">
-                <div id="alembicGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#1B5E20; font-family:'Manrope',sans-serif;">East / West</div>
+                <div id="alembicGlanceFacing" style="font-size:0.95rem; font-weight:800; color:#804526; font-family:'Manrope',sans-serif;">East / West</div>
                 <div style="font-size:0.68rem; color:#804526; font-weight:700; text-transform:uppercase;">Orientation</div>
               </div>
             </div>
@@ -1902,7 +1797,7 @@ img[style*="border-radius: 50%"] {
     container.innerHTML = 
       '<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:0.5px solid #FAFAFA; padding-bottom:0.75rem; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">' +
         '<div style="font-weight:800; color:#2B2D31; font-size:1.02rem;">' + item.title + '</div>' +
-        '<div style="font-size:0.75rem; color:#1B5E20; font-weight:800; background:#E8F5E9; padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
+        '<div style="font-size:0.75rem; color:#804526; font-weight:800; background:#E8F5E9; padding:0.25rem 0.6rem; border-radius:4px;">Estimated On-Road Total: ' + item.total + '</div>' +
       '</div>' +
       '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; font-family:\'Manrope\',sans-serif;">' +
         '<div style="background:#FAFAFA; border-radius: 4px; padding:0.85rem; border: 0.5px solid rgba(43, 45, 49, 0.08);">' +
@@ -1977,7 +1872,7 @@ img[style*="border-radius: 50%"] {
             </div>
             <div style="text-align:right;">
               <div style="font-size:0.72rem; color:#804526; text-transform:uppercase; font-weight:800; letter-spacing:0.05em;"><span class="brand-inline-text">acre&amp;key</span> Outlook</div>
-              <div style="font-size:1rem; font-weight:800; color:#1B5E20; margin-top:0.15rem;">High ↗ Positive</div>
+              <div style="font-size:1rem; font-weight:800; color:#804526; margin-top:0.15rem;">High ↗ Positive</div>
             </div>
           </div>
         </div>
@@ -1987,12 +1882,12 @@ img[style*="border-radius: 50%"] {
             <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#804526; margin-bottom:0.6rem;">Interpretation</div>
             <div style="font-size:0.98rem; font-weight:800; color:#2B2D31; margin-bottom:0.75rem;">Whitefield has benefited from:</div>
             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:0.65rem 1rem; font-size:0.92rem; color:#374151; margin-bottom:1rem;">
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> IT employment concentration</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Residential demand</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Metro expansion</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> ORR connectivity</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Social infrastructure</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Retail &amp; hospitality</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> IT employment concentration</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Residential demand</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Metro expansion</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> ORR connectivity</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Social infrastructure</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Retail &amp; hospitality</div>
             </div>
             <div style="font-size:0.9rem; line-height:1.55; color:#804526; background:#FAFAFA; border:0.5px solid #FEF3C7; border-radius: 4px; padding:0.75rem 1rem; font-weight:600;">⚠️ Historical appreciation should not be extrapolated mechanically into future returns.</div>
           </div>
@@ -2065,10 +1960,10 @@ img[style*="border-radius: 50%"] {
 
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
         <div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.5rem;">
-          <div style="font-size:1.05rem; font-weight:800; color:#1B5E20; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
-            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">✓</span> Pros
+          <div style="font-size:1.05rem; font-weight:800; color:#804526; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#804526; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">✓</span> Pros
           </div>
-          <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#1B5E20; display:flex; flex-direction:column; gap:0.65rem; font-weight:600;">
+          <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#804526; display:flex; flex-direction:column; gap:0.65rem; font-weight:600;">
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> Metro proximity (~2.5 km)</li>
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> Hope Farm access (~1.2 km)</li>
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> Whitefield employment ecosystem</li>
@@ -2107,7 +2002,7 @@ img[style*="border-radius: 50%"] {
         <div style="background:#FAFAFA; border:0.5px solid rgba(128, 69, 38, 0.2); border-radius: 4px; padding:1.25rem 1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.95rem; font-weight:800; color:#2B2D31; margin-bottom:0.75rem; display:flex; align-items:center; gap:0.4rem; border-bottom:0.5px solid rgba(128, 69, 38, 0.15); padding-bottom:0.4rem;">
-              <span style="color:#1B5E20; font-weight:800;">✓</span>
+              <span style="color:#804526; font-weight:800;">✓</span>
               <span>RERA Registration</span>
             </div>
 
@@ -2115,7 +2010,7 @@ img[style*="border-radius: 50%"] {
             <div style="background:#FFFFFF; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; margin-bottom:0.5rem;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.15rem;">
                 <span style="font-size:0.7rem; font-weight:800; color:#804526; text-transform:uppercase; letter-spacing:0.05em;">PHASE 1</span>
-                <span style="font-size:0.68rem; font-weight:800; color:#1B5E20; background:#E8F5E9; padding:0.1rem 0.45rem; border-radius: 4px;">RERA Registered ✓</span>
+                <span style="font-size:0.68rem; font-weight:800; color:#804526; background:#E8F5E9; padding:0.1rem 0.45rem; border-radius: 4px;">RERA Registered ✓</span>
               </div>
               <div style="font-size:0.68rem; color:#667085; font-weight:600; margin-bottom:0.1rem;">RERA No.</div>
               <code style="font-family:'Manrope',sans-serif; font-size:0.82rem; font-weight:800; color:#2B2D31; word-break:break-all; display:block;">PRM/KA/RERA/1251/446/PR/250625/007869</code>
@@ -2413,7 +2308,7 @@ img[style*="border-radius: 50%"] {
       </div>
       <nav class="ak-footer-links" aria-label="Footer">
         <a href="/calculators/">Calculators</a>
-        <a href="/blogs/">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="https://answers.acrenkey.com/">Answers</a>
         <a href="/calculators/stamp-duty-registration-calculator/">Stamp Duty</a>
         <a href="/contact/">Contact</a>
@@ -2766,14 +2661,14 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2B2D31;">Builder</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">Tier-1 Pedigree</span>
+              <span style="background:#E8F5E9; color:#804526; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">Tier-1 Pedigree</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Developer solvency, execution track record &amp; market standing</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2B2D31; text-align:right; padding-right:0.85rem; white-space:nowrap;">4.50 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
             <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
-              <div style="width:90%; height:100%; background:#1B5E20; border-radius: 4px;"></div>
+              <div style="width:90%; height:100%; background:#804526; border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
@@ -2783,7 +2678,7 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2B2D31;">Approvals</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">RERA Validated</span>
+              <span style="background:#E8F5E9; color:#804526; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">RERA Validated</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Clean land title, sanction plans &amp; PRM/KA/RERA registration</div>
           </td>
@@ -2834,14 +2729,14 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2B2D31;">Delivery</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">June 2030 Horizon</span>
+              <span style="background:#E8F5E9; color:#804526; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">June 2030 Horizon</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">High construction velocity aligned to statutory completion date</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2B2D31; text-align:right; padding-right:0.85rem; white-space:nowrap;">4.20 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
             <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
-              <div style="width:84%; height:100%; background:#1B5E20; border-radius: 4px;"></div>
+              <div style="width:84%; height:100%; background:#804526; border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
@@ -2851,14 +2746,14 @@ function akGallerySelect(idx) {
           <td style="padding:0.42rem 0.4rem 0.42rem 0;">
             <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
               <span style="font-weight:800; font-size:0.85rem; color:#2B2D31;">Liquidity</span>
-              <span style="background:#E8F5E9; color:#1B5E20; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">High Tech Demand</span>
+              <span style="background:#E8F5E9; color:#804526; font-size:0.64rem; font-weight:700; padding:1px 6px; border-radius: 4px; letter-spacing:0.02em;">High Tech Demand</span>
             </div>
             <div class="ak-modal-param-desc" style="font-size:0.72rem; color:#667085; margin-top:0.08rem; line-height:1.3;">Tier-1 secondary sales liquidity &amp; executive rental pool</div>
           </td>
           <td style="font-weight:800; font-size:0.88rem; color:#2B2D31; text-align:right; padding-right:0.85rem; white-space:nowrap;">4.31 <span style="font-size:0.68rem; color:#8A94A6; font-weight:600;">/ 5</span></td>
           <td style="width:88px; text-align:right;">
             <div style="width:100%; height:5px; background:#EAEFF5; border-radius: 4px; overflow:hidden;">
-              <div style="width:86%; height:100%; background:#1B5E20; border-radius: 4px;"></div>
+              <div style="width:86%; height:100%; background:#804526; border-radius: 4px;"></div>
             </div>
           </td>
         </tr>
@@ -2872,7 +2767,7 @@ function akGallerySelect(idx) {
         <div style="font-weight:800; color:#2B2D31; font-size:0.9rem;"><span class="brand-inline-text">acre&amp;key</span> Overall Score</div>
       </div>
       <div style="display:flex; align-items:center; gap:0.5rem;">
-        <span style="background:#1B5E20; color:#FFFFFF; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.04em;">Strong Buy</span>
+        <span style="background:#804526; color:#FFFFFF; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.04em;">Strong Buy</span>
         <div style="font-size:1.05rem; font-weight:800; color:#2B2D31; background:#FFFFFF; padding:0.25rem 0.65rem; border-radius: 4px; border: 0.5px solid rgba(43, 45, 49, 0.08); box-shadow:0 2px 5px rgba(0,0,0,0.04); font-family:'Manrope',sans-serif;">
           4.11 <span style="font-size:0.7rem; color:#667085; font-weight:600;">/ 5.0</span>
         </div>

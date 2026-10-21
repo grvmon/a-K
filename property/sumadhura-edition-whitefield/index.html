@@ -8,65 +8,161 @@
 
 <style>
 html { scroll-behavior: smooth; }
-.page-breadcrumb a { color: #374151 !important; font-weight: 500; }
-.page-breadcrumb a:hover { color: #804526 !important; }
-.page-breadcrumb .separator { color: #374151 !important; font-weight: 600; }
-.page-breadcrumb .current { color: #2B2D31 !important; font-weight: 600; }
-.prop-snapshot-strip-v2 { border-radius: 4px !important; }
-.prop-snap-num-v2 { font-weight: 600 !important; }
-.prop-snap-lbl-v2 { color: #667085 !important; font-weight: 500 !important; }
-.prop-snap-icon-v2 { color: #2B2D31 !important; }
-.prop-snapshot-item-v2:not(:last-child)::after { right: -0.5rem !important; }
-.ak-tooltip-wrapper { position: relative; display: inline-flex; align-items: center; }
-.ak-tooltip-content { visibility: hidden; opacity: 0; width: max-content; max-width: 250px; background-color: #2B2D31; color: #fff; text-align: center; border-radius: 4px; padding: 8px 12px; position: absolute; z-index: 10; bottom: 130%; left: 50%; transform: translateX(-50%); transition: opacity 0.4s, visibility 0.4s; font-family: 'Manrope', sans-serif; font-size: 0.72rem; line-height: 1.4; font-weight: 400; white-space: normal; letter-spacing: 0.01em; }
-.ak-tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #2B2D31 transparent transparent transparent; }
-.ak-tooltip-wrapper:hover .ak-tooltip-content { visibility: visible; opacity: 1; }
-.local-nav-link {
-  display: inline-block;
-  padding: 1rem 1.15rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--prop-text-muted);
-  text-decoration: none;
-  white-space: nowrap;
-  border-bottom: none !important;
-  transition: all 0.4s ease;
-  position: relative;
+.prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
+@media (min-width: 769px) {
+  .prop-hero-section {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.15rem 0 2rem 0 !important;
+  }
+  .prop-hero-section > .prop-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.prop-snapshot-strip-v2 { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; margin-top: 1.25rem !important; padding: 0 !important; }
+.prop-glance-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.prop-glance-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; color: #804526; text-transform: uppercase; }
+.prop-glance-rule { flex: 1; height: 0.5px; background: rgba(85, 85, 90, 0.2); }
+.prop-glance-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
+.prop-glance-item { background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding: 0.85rem 1rem; text-align: left; }
+.prop-glance-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 400; color: #2B2D31; line-height: 1.1; margin-bottom: 0.2rem; }
+.prop-glance-lbl { display: block; font-family: 'Manrope', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: #55555A; text-transform: uppercase; }
+.prop-glance-sup { font-size: 0.65em; vertical-align: super; color: #804526; }
+
+@media (max-width: 991px) {
+  .prop-glance-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .prop-glance-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.ak-hero-editorial-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(450px, 52vh, 500px);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2B2D31;
+  box-sizing: border-box;
+}
+.ak-editorial-media-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.ak-editorial-media-canvas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: saturate(0.85) contrast(1.05);
+}
+.ak-editorial-media-canvas:hover img {
+  transform: scale(1.015);
+}
+.ak-editorial-top-left {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ak-editorial-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-counter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(10, 10, 11, 0.4);
+}
+.ak-editorial-line {
+  width: 36px;
+  height: 1.5px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  box-shadow: 0 2px 6px rgba(10, 10, 11, 0.3);
+}
 
-.local-nav-link:hover, .local-nav-link.active { color: #2B2D31 !important; }
-.prop-section, #verdict { scroll-margin-top: 180px; }
-
-  @media (max-width: 480px) {
-    .price-journey-card div[style*="clamp"] {
-      font-size: 0.95rem !important;
-      white-space: nowrap !important;
-    }
-  }
-
-.sd-btn-gold,
 .ak-hero-btn-primary,
-.nav-cta-btn,
-.mobile-drawer-cta {
+.sd-btn-gold {
   background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
   color: #FFFFFF !important;
-  border-color: #9f5334 !important;
+  border: 0.5px solid #9f5334 !important;
   border-radius: 4px !important;
   box-shadow: 0 4px 12px rgba(128, 69, 38, 0.25) !important;
   transition: all 0.4s ease !important;
+  text-shadow: 0 1px 2px rgba(43,45,49,0.35) !important;
 }
-.sd-btn-gold:hover,
 .ak-hero-btn-primary:hover,
-.nav-cta-btn:hover,
-.mobile-drawer-cta:hover {
+.sd-btn-gold:hover {
   background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
   border-color: #9f5334 !important;
   color: #FFFFFF !important;
   box-shadow: 0 6px 18px rgba(128, 69, 38, 0.35) !important;
   transform: translateY(-1px) !important;
 }
+.ak-hero-btn-secondary {
+  background: #FFFFFF !important;
+  color: #2B2D31 !important;
+  border: 0.5px solid rgba(85, 85, 90, 0.25) !important;
+  border-radius: 4px !important;
+  transition: all 0.4s ease !important;
+}
+.ak-hero-btn-secondary:hover {
+  background: rgba(190, 117, 85, 0.08) !important;
+  border-color: #804526 !important;
+  color: #804526 !important;
+}
 
+.ak-mobile-hero-v5 { display: none; }
+@media (min-width: 769px) {
+  .mobile-only-nav { display: none !important; }
+  .desktop-only-nav { display: flex !important; }
+}
+@media (max-width: 768px) {
+  .prop-hero-grid, .prop-snapshot-strip-v2 { display: none !important; }
+  .ak-mobile-hero-v5 { display: block !important; padding-bottom: 0.5rem; }
+  .ak-mobile-img-box { position: relative; width: 100%; height: 32vh; min-height: 210px; max-height: 270px; border-radius: 4px; overflow: hidden; margin-bottom: 0.85rem; border: 0.5px solid rgba(85, 85, 90, 0.2); }
+  .ak-mobile-img-box img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.05); }
+  .ak-mobile-badge-top-left { position: absolute; top: 10px; left: 10px; background: rgba(43, 45, 49, 0.85); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px; backdrop-filter: blur(4px); }
+  .ak-mobile-share-btn { position: absolute; top: 10px; right: 10px; background: #FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .desktop-only-nav { display: none !important; }
+  .mobile-only-nav { display: flex !important; overflow-x: auto !important; white-space: nowrap !important; padding: 0.35rem 0.5rem !important; gap: 0.4rem !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .mobile-only-nav::-webkit-scrollbar { display: none; }
+  .mobile-only-nav .local-nav-link { padding: 0.35rem 0.75rem !important; font-size: 0.82rem !important; font-weight: 700 !important; border-radius: 4px !important; background: #FAFAFA; color: #2B2D31 !important; }
+  .mobile-only-nav .local-nav-link.active { background: #2B2D31 !important; color: #FFFFFF !important; }
+}
+.prop-section { padding: clamp(2.5rem, 3.5vw, 3.25rem) 0 !important; border-top: none !important; border-bottom: 0.5px solid rgba(85, 85, 90, 0.2) !important; scroll-margin-top: 140px; }
+.ak-card-dossier { background: #FFFFFF !important; border: 0.5px solid rgba(85, 85, 90, 0.2) !important; border-radius: 4px !important; padding: clamp(1.25rem, 2.5vw, 1.85rem) !important; box-shadow: none !important; }
+.local-nav-link { display: inline-block; padding: 0.95rem 1.15rem; font-size: 0.88rem; font-weight: 600; color: #55555A; text-decoration: none; white-space: nowrap; border-bottom: none !important; transition: all 0.4s ease; position: relative; }
+.local-nav-link:hover, .local-nav-link.active { color: #804526 !important; border-bottom: 1px solid #804526 !important; }
+.prop-section-nav-sticky { position: sticky !important; top: 80px !important; z-index: 990 !important; background: #FFFFFF; border-bottom: 0.5px solid rgba(85, 85, 90, 0.2); }
 </style>
 <style>
 /* ================= ACRE&KEY MASTER MOBILE OPTIMIZATIONS (<= 768px) ================= */
@@ -493,161 +589,212 @@ html { scroll-behavior: smooth; }
 <body class="property-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSRMW9C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header-nav" id=header-nav><div class="container nav-container"><a href="/" class=nav-brand><span class=brand-logo-text>acre&amp;key</span></a><ul class=nav-links><li><a href="/#our-customers">Clientele</a></li><li><a href="/#framework">Decision Framework</a></li><li><a href="/#core">Methodology</a></li><li><a href="/#about-us">Team</a></li><li><a href="/#testimonials">Client Outcomes</a></li></ul><a href="#" class="nav-cta-btn primary-cta-btn" onclick="window.openModal(); return false;"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></a><button class=mobile-toggle id=mobile-toggle-btn aria-label="Toggle Navigation Menu" aria-expanded=false><span class="hamburger-line top-line"></span><span class="hamburger-line mid-line"></span><span class="hamburger-line bot-line"></span></button></div><div class=mobile-nav-overlay id=mobile-nav-overlay aria-hidden=true></div><div class=mobile-drawer id=mobile-drawer role=dialog aria-modal=true aria-label="Navigation Menu"><div class=mobile-drawer-inner><div class=mobile-drawer-header><a href="/" class=mobile-drawer-brand aria-label="Acre and Key Home"><span class=brand-logo-text>acre&amp;key</span></a><button class=mobile-drawer-close id=mobile-drawer-close aria-label="Close Navigation Menu"><svg width=22 height=22 viewbox="0 0 24 24" fill=none stroke=var(--deep-navy) stroke-width=2 stroke-linecap=round stroke-linejoin=round><line x1=18 y1=6 x2=6 y2=18></line><line x1=6 y1=6 x2=18 y2=18></line></svg></button></div><nav class=mobile-nav-list><a href="/#our-customers" class=mobile-nav-item><span class=mobile-nav-label>Clientele</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#framework" class=mobile-nav-item><span class=mobile-nav-label>Decision Framework</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#core" class=mobile-nav-item><span class=mobile-nav-label>Methodology</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#about-us" class=mobile-nav-item><span class=mobile-nav-label>Team</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a><a href="/#testimonials" class=mobile-nav-item><span class=mobile-nav-label>Client Outcomes</span><svg class=mobile-nav-chevron width=18 height=18 viewbox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><polyline points="9 18 15 12 9 6"></polyline></svg></a></nav><div class=mobile-drawer-footer><button type="button" class="mobile-drawer-cta primary-cta-btn" onclick="window.openModal();"><span>Start Consultation</span><span class="cta-arrow-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="4.5"></line><polyline points="6.5 4.5 11.5 4.5 11.5 9.5"></polyline></svg></span></button><span class=mobile-drawer-subtext>Expert Property Guidance</span><div class=mobile-drawer-socials><a href=https://www.linkedin.com/company/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=LinkedIn><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a><a href=https://www.instagram.com/acrenkey/ target=_blank rel="noopener noreferrer" aria-label=Instagram><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href=https://www.youtube.com/channel/UC-6WtLxFOaR_X2y7FQTBcHw target=_blank rel="noopener noreferrer" aria-label=YouTube><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href=https://x.com/acreNkey target=_blank rel="noopener noreferrer" aria-label=Twitter/X><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 23.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61589792184848" target=_blank rel="noopener noreferrer" aria-label=Facebook><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div></div></header>
 <main>
-<section class="prop-hero-section">
+<section class="prop-hero-section" style="background:#FAFAFA;">
 <div class="prop-container">
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding-bottom:1rem;">
-<nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Sumadhura Edition</li></ol></nav>
-<div style="display:flex; align-items:center; gap:1.25rem;"><span style="font-size:0.85rem; color:var(--prop-navy); opacity:0.65;">Last Modified 28 August 2026</span><div style="position:relative;"><button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger"><i data-feather="share-2" style="width:14px;height:14px;color:#2B2D31;"></i><span>Share</span></button></div></div>
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding: 0.25rem 0 1rem 0; border-bottom:0.5px solid rgba(85, 85, 90, 0.15); margin-bottom:1rem;">
+  <div>
+    <nav aria-label="breadcrumb"><ol class="page-breadcrumb" style="margin: 0;"><li><a href="/">Home</a></li><li><span class="separator">›</span></li><li><a href="/property/">Property in Bengaluru</a></li><li><span class="separator">›</span></li><li class="current" aria-current="page">Sumadhura Edition</li></ol></nav>
+  </div>
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:0.85rem; font-size:0.75rem; color:#55555A;">
+    <div style="display:flex; align-items:center; gap:0.45rem;">
+      <img src="../../style-guide/assets/gaurav-mongia-founder-acre-key.webp" alt="Gaurav Mongia" width="24" height="24" style="width:24px; height:24px; border-radius:50%; object-fit:cover; border:1.5px solid rgba(128, 69, 38, 0.3); flex-shrink:0;" />
+      <span>Reviewed by <strong style="color:#2B2D31;">Gaurav Mongia</strong></span>
+    </div>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <span>Last Updated: <strong style="color:#2B2D31;"><time id="ak-last-updated" datetime="2026-09-30">30 September 2026</time>
+    <script>
+      (function() {
+        try {
+          var date = new Date(document.lastModified);
+          if (!isNaN(date) && date.getFullYear() > 2000) {
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+            var formatted = date.toLocaleDateString('en-GB', options);
+            var el = document.getElementById('ak-last-updated');
+            if (el) {
+              el.textContent = formatted;
+              el.setAttribute('datetime', date.toISOString().split('T')[0]);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script></strong></span>
+    <span style="color:rgba(85, 85, 90, 0.2); display:inline-block; height:12px; border-left:0.5px solid rgba(85, 85, 90, 0.2);"></span>
+    <div style="position:relative;">
+      <button type="button" onclick="handlePropertyShare(event)" class="ak-hero-share-btn" aria-label="Share property" aria-haspopup="true" aria-expanded="false" id="prop-share-trigger" style="display:flex; align-items:center; gap:0.35rem; background:#FFFFFF; border:0.5px solid rgba(85, 85, 90, 0.2); padding:0.35rem 0.65rem; border-radius:4px; font-weight:600; cursor:pointer; color:#2B2D31;">
+        <i data-feather="share-2" style="width:12px;height:12px;color:#2B2D31;"></i><span>Share</span>
+      </button>
+    </div>
+  </div>
 </div>
 
       <!-- Mobile First Fold / Hero Section (<= 768px Only) -->
       <div class="ak-mobile-hero-v5">
-        <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="openAkLightbox(0);" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openAkLightbox(0); }">
+        <div role="button" tabindex="0" class="ak-mobile-img-box" onclick="handlePropertyShare(event);">
           <div style="position:absolute; top:0; left:0; width:100%; height:120px; background:linear-gradient(to bottom, rgba(10, 10, 11, 0.95) 0%, rgba(10, 10, 11, 0) 60%); z-index:1; pointer-events:none;"></div>
-          <img src="../../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp?v=1791220494" alt="Sumadhura Edition Whitefield Daytime Towers View">
-          <div class="ak-mobile-badge-top-left">1 / 6</div>
+          <img src="../thumbs/sumadhura-edition-whitefield.webp" alt="Sumadhura Edition Architectural Exterior View" width="800" height="533" style="width:100%; height:100%; object-fit:cover;">
+          <div class="ak-mobile-badge-top-left">RERA Registered</div>
           <button type="button" class="ak-mobile-share-btn" onclick="event.stopPropagation(); handlePropertyShare(event);" aria-label="Share property">
             <i data-feather="share-2" style="width:14px; height:14px; color:#2B2D31;"></i>
           </button>
         </div>
 
-        <h1 style="font-family:'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color:#2B2D31; margin:0 0 0.15rem 0; line-height:1.15; letter-spacing:0.02em;">SUMADHURA EDITION</h1>
-        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.65rem;">Siddapura · Core Whitefield</div>
-        <div style="font-family:'Cormorant Garamond', serif; font-size: 2.36rem; font-weight: 400; color:#2B2D31; line-height:1.05;">₹2.06–3.73 Cr</div>
-        <div style="font-size:0.85rem; color:#667085; font-weight:600; margin-top:0.15rem; margin-bottom:0.65rem;">₹15.9K–16.8K/sq.ft. indicative all-inclusive pricing</div>
-        <div style="font-size:0.88rem; font-weight:700; color:#2B2D31; margin-bottom:0.2rem;">
-          2, 3 &amp; 4 BHK · 1,280–2,295 sq.ft.
+        <h1 style="font-family:'Cormorant Garamond', serif; font-size:clamp(1.5rem, 5vw, 1.85rem); font-weight: 400; color:#2B2D31; margin:0 0 0.15rem 0; line-height:1.2; letter-spacing:0.01em; text-transform:none;">Sumadhura Edition</h1>
+        <div style="font-size:0.88rem; color:#804526; font-weight:600; margin-bottom:0.45rem; display:flex; align-items:center; gap:0.35rem;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Siddapura, Core Whitefield</span>
         </div>
-        <div style="font-size:0.85rem; font-weight:600; color:#804526; margin-bottom:0.85rem;">
-          Phase-I RERA completion: 31 December 2029
+        <div style="display:flex; align-items:baseline; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.25rem;">
+          <span style="font-family:'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color:#2B2D31; line-height:1;">₹2.06 – 3.73 Cr</span>
+          <span style="font-size:0.8rem; color:#55555A; font-weight:500;">· Indicative Outlay</span>
         </div>
-
-        <div style="background:#FFFFFF; border:0.5px solid rgba(128, 69, 38, 0.3); border-radius: 4px; padding:0.85rem 1rem; margin-bottom:0.85rem; box-shadow:0 4px 14px rgba(15, 31, 61, 0.05); display:flex; align-items:center; gap:0.85rem;">
-          <div style="background:#2B2D31; color:#804526; border-radius: 4px; padding:0.5rem 0.75rem; text-align:center; flex-shrink:0; border:0.5px solid rgba(128, 69, 38, 0.35);">
-            <div style="font-size:1.25rem; font-weight:800; font-family:'Manrope',sans-serif; line-height:1;">★ 3.82</div>
-            <div style="font-size:0.6rem; color:rgba(255,255,255,0.75); font-weight:600; text-transform:uppercase; margin-top:0.15rem;">Out of 5</div>
-          </div>
-          <div>
-            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.21rem; font-weight: 400; color:#804526; line-height:1.2; margin-bottom:0.2rem;">Premium Core-Whitefield Living</div>
-            <div style="font-size:0.82rem; color:#374151; line-height:1.35; font-weight:500;">A premium large-format Whitefield community combining strong employment, metro and social-infrastructure access with an upscale 2–4 BHK product — but phase boundaries and the registered-versus-aggregate plan need careful diligence.</div>
-          </div>
+        <div style="font-size:0.82rem; color:#2B2D31; font-weight:600; margin-bottom:0.65rem; line-height:1.4;">
+          2, 3 & 4 BHK · 1,280 – 2,450 sq.ft. · Possession Dec 2029
         </div>
 
-        <button type="button" class="sd-btn-gold" onclick="window.openModal(); return false;" style="width:100%; padding:0.95rem; font-size:0.98rem; font-weight:700; border-radius: 4px; margin-bottom:0.5rem; text-align:center; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%); color:#FFFFFF; border:none; font-family:'Manrope',sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(128, 69, 38, 0.25);">
-          Get Buyer Analysis
+        <button type="button" aria-label="View acre&key Assessment" onclick="window.scrollToVerdict(event);" style="text-align:left; outline:none; font-family:inherit; appearance:none; width:100%; background:#FFFFFF; border: 0.5px solid rgba(128, 69, 38, 0.4); border-radius: 4px; padding:0.5rem 0.85rem; margin-bottom:0.65rem; display:flex; align-items:center; gap:0.85rem; cursor:pointer; transition:background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;" onmouseover="this.style.backgroundColor='#FAFAFA'; this.style.borderColor='#804526';" onmouseout="this.style.backgroundColor='#FFFFFF'; this.style.borderColor='rgba(128, 69, 38, 0.4)';">
+          <div style="text-align:center; padding-right:0.85rem; border-right:0.5px solid rgba(10,10,11,0.15); flex-shrink:0;">
+            <div style="font-size:1.75rem; font-weight: 700; font-family:'Manrope',sans-serif; line-height:1; color:#2B2D31; display:flex; align-items:baseline; justify-content:center; gap:0.1rem;">
+              3.8<span style="font-size:1.05rem; color:#2B2D31; font-weight:400; opacity:0.8;">/5</span>
+            </div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.12rem;">
+            <div style="display:flex; align-items:center; gap:0.35rem;">
+              <span class="brand-inline-text" style="font-weight:700; color:#804526; font-size:0.92rem;">acre&amp;key</span>
+              <span style="font-family:'Manrope', sans-serif; font-size:0.68rem; font-weight: 500; letter-spacing:0.04em; color:#804526; text-transform:uppercase;">Assessment</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; margin-top:-1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div style="font-family:'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color:#2B2D31; line-height:1.1; display:flex; align-items:center; gap:0.35rem;">A-Grade Core-Whitefield Living <span style="color:#804526; font-family:'Manrope',sans-serif; font-size:1.1rem; transform:translateY(1px);">→</span></div>
+          </div>
         </button>
 
-        <div style="text-align:center; margin-bottom:0.85rem;">
-          <a href="#floor-plans" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary">View Floor Plans →</a>
+        <div style="display:flex; flex-direction:row; gap:0.5rem; margin-bottom:0.75rem; width:100%;">
+          <button type="button" data-no-modal="true" onclick="window.openModal('analysis'); return false;" class="ak-hero-btn-primary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-shadow:0 1px 2px rgba(43,45,49,0.35); cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>Get Buyer Analysis</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="flex:1; min-width:0; height:42px; padding:0 0.5rem; display:inline-flex; align-items:center; justify-content:center; gap:0.35rem; background:#FFFFFF !important; color:#2B2D31 !important; border:0.5px solid rgba(85, 85, 90, 0.25) !important; border-radius:4px; font-family:'Manrope', sans-serif; font-size:clamp(0.78rem, 3.2vw, 0.88rem); font-weight:600; text-decoration:none; cursor:pointer; white-space:nowrap; transition:all 0.4s ease;">
+            <span>View Floor Plans</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </a>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; font-weight:700; color:#374151;">
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#1B5E20;"><span style="font-weight:800;">✓</span> 76% Open Area</div>
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#1B5E20;"><span style="font-weight:800;">✓</span> Premium 2–4 BHK Homes</div>
-          <div style="display:flex; align-items:center; gap:0.3rem; color:#B76E00;"><span style="font-weight:800;">⚠</span> Phase / Masterplan Reconciliation</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem; background:#FFFFFF; border: 0.5px solid rgba(85, 85, 90, 0.2); border-radius: 4px; padding:0.85rem; margin-top: 0;">
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Key Highlights</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Sumadhura Group.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 2, 3 & 4 BHK typologies spanning 1,280 – 2,450 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along Whitefield corridor.</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.5rem;">Due Diligence</div>
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:#2B2D31; font-weight:500; line-height:1.3;">
+              <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify municipal</strong> water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
-<div class="prop-hero-grid" style="align-items: stretch; gap: 36px;">
-<div class="ak-gallery-wrapper" id="akHeroGallery" style="display: flex; flex-direction: column; height: 100%; min-height: 0;">
-<div class="ak-main-img-box" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="flex: 1; aspect-ratio: auto !important; min-height: 0; position: relative;">
-<img id="akMainHeroImage" src="../../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp?v=1791220494" alt="Sumadhura Edition Whitefield Daytime Towers Elevation View" width="800" height="533" fetchpriority="high" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-<video id="akMainHeroVideo" style="display:none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" muted="" loop="" playsinline=""></video>
-<button class="ak-gallery-nav prev" aria-label="Previous image" onclick="event.stopPropagation(); akGalleryPrev();"><i data-feather="chevron-left"></i></button>
-<button class="ak-gallery-nav next" aria-label="Next image" onclick="event.stopPropagation(); akGalleryNext();"><i data-feather="chevron-right"></i></button>
-</div>
-<div class="ak-gallery-bottom-bar">
-<div class="ak-thumb-strip">
-<button class="ak-thumb-btn active" onclick="akGallerySelect(0)" aria-label="View photo 1"><img src="../../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp?v=1791220494" alt="Day Towers View"></button>
-<button class="ak-thumb-btn" onclick="akGallerySelect(1)" aria-label="View photo 2"><img src="../../style-guide/assets/edition/sumadhura_edition_hero_twilight_tower.webp?v=1791220494" alt="Twilight Tower View"></button>
-<button class="ak-thumb-btn" onclick="akGallerySelect(2)" aria-label="View photo 3"><img src="../../style-guide/assets/edition/sumadhura_edition_hero_entrance_wide.webp?v=1791220494" alt="Wide Entrance Gate View"></button>
-<button class="ak-thumb-btn" onclick="akGallerySelect(3)" aria-label="View photo 4"><img src="../../style-guide/assets/edition/sumadhura_edition_hero_arch_close.webp?v=1791220494" alt="Grand Entrance Arch View"></button>
-<button class="ak-thumb-btn" onclick="akGallerySelect(4)" aria-label="Play video" style="position:relative;"><img src="../../style-guide/assets/edition/sumadhura_edition_hero_towers_day.webp?v=1791220494" alt="Video"><div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(10, 10, 11, 0.08);"><i data-feather="play-circle" style="color:#FFF; width:24px; height:24px;"></i></div></button>
-</div>
-<button class="ak-view-all-text-btn" onclick="openAkLightbox(window.akGalleryIndex || 0);" style="background:#2B2D31; color:#FFF; border:none; padding:0.55rem 1.15rem; font-size:0.9rem; font-weight:600; font-family:'Manrope',sans-serif; border-radius: 4px; cursor:pointer; box-shadow: 0 10px 30px -10px rgba(10, 10, 11, 0.1); transition:background 0.2s ease;" onmouseover="this.style.background='#2B2D31'" onmouseout="this.style.background='#2B2D31'">View all photos →</button>
-</div>
-</div>
-<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:flex-start; padding-top:0; height: 100%;">
+<div class="prop-hero-grid" style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch;">
+<div class="ak-hero-editorial-gallery" id="akHeroGallery">
+  <div class="ak-editorial-media-canvas" onclick="handlePropertyShare(event);">
+    <img id="akMainHeroImage" src="../thumbs/sumadhura-edition-whitefield.webp" alt="Sumadhura Edition Architectural Elevation View" width="800" height="533" fetchpriority="high" decoding="async">
+  </div>
 
-  <div class="ak-info-header" style="margin-bottom:16px;">
-    <h2 class="ak-info-title" style="margin-top:-6px; margin-bottom:12px; line-height:1.1; font-size:clamp(1.5rem, 1rem + 0.8vw, 1.95rem);">SUMADHURA EDITION</h2>
-    <div class="ak-info-meta" style="font-size:0.95rem; color:var(--prop-navy); display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;">
-      <span style="white-space:nowrap;">Siddapura · Core Whitefield</span>
+  <div class="ak-editorial-top-left">
+    <div class="ak-editorial-tag">Sumadhura Group · Whitefield</div>
+    <div class="ak-editorial-counter"><span>01</span> &nbsp;/&nbsp; <span>01</span></div>
+    <div class="ak-editorial-line"></div>
+  </div>
+
+  <div style="position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(to top, rgba(10, 10, 11, 0.85) 0%, transparent 100%); z-index:3; pointer-events:none; display:flex; align-items:flex-end; padding:16px 20px;">
+    <span style="color:#FFFFFF; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;">Sumadhura Edition — Verified Karnataka RERA Layout</span>
+  </div>
+</div>
+<div class="prop-hero-details" style="display:flex; flex-direction:column; justify-content:space-between; padding-top:0; height: 100%;">
+
+  <div class="ak-info-header" style="margin-bottom:8px;">
+    <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#804526; margin-bottom:0.25rem;">Sumadhura Group</div>
+    <h2 class="ak-info-title" style="margin-top:-2px; margin-bottom:4px; line-height:1.2; font-family:'Cormorant Garamond', serif; font-size:clamp(1.6rem, 1.15rem + 0.85vw, 2.05rem); font-weight: 400; color:#2B2D31; text-transform:none;">Sumadhura Edition</h2>
+    <div class="ak-info-meta" style="font-size:0.95rem; color:#55555A; display:flex; align-items:center; flex-wrap:wrap; gap:0.5rem; line-height:1.4;">
+      <span style="white-space:nowrap; display:inline-flex; align-items:center; gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Siddapura, Core Whitefield</span></span>
     </div>
   </div>
 
-  <div onclick="window.openAkScoreModal &amp;&amp; window.openAkScoreModal()" style="margin-bottom:16px; display:inline-flex; align-self:flex-start; align-items:center; gap:1rem; padding:0.65rem 1rem; background:#FFFFFF; border:0.5px solid #FAFAFA; border-radius: 4px; box-shadow:0 2px 8px rgba(15,31,61,0.04); cursor:pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(15,31,61,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(15,31,61,0.04)';">
-    <div style="display:flex; align-items:baseline; gap:0.2rem;">
-      <span style="font-size:1.75rem; font-weight:700; color:var(--prop-navy); line-height:1; letter-spacing:-0.03em;">3.82</span>
-      <span style="font-size:0.9rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">/5</span>
+  <div onclick="window.openAkScoreModal && window.openAkScoreModal()" style="margin-bottom:10px; display:inline-flex; align-self:flex-start; align-items:center; gap:0.85rem; padding:0.35rem 0.85rem; background:rgba(255,255,255,0.85); border:0.5px solid rgba(85,85,90,0.2); border-radius: 4px; cursor:pointer; transition:all 0.2s ease;" onmouseover="this.style.background='#FFFFFF'; this.style.borderColor='#804526';" onmouseout="this.style.background='rgba(255,255,255,0.85)'; this.style.borderColor='rgba(85,85,90,0.2)';">
+    <div style="display:flex; align-items:baseline; gap:0.15rem;">
+      <span style="font-size:1.55rem; font-weight:700; color:#2B2D31; line-height:1; letter-spacing:-0.03em;">3.8</span>
+      <span style="font-size:0.82rem; color:#55555A; font-weight:500;">/5</span>
     </div>
-    <div style="width:1px; height:32px; background:#FAFAFA;"></div>
+    <div style="width:1px; height:26px; background:rgba(85,85,90,0.2);"></div>
     <div style="display:flex; flex-direction:column; justify-content:center;">
-      <div style="display:flex; align-items:center; gap:0.35rem; font-size:0.65rem; font-weight: 400; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65; margin-bottom:0.1rem; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">acre&amp;key SCORE <i data-feather="info" style="width:12px; height:12px; opacity:0.8; margin-bottom:1px;"></i></div>
-      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.21rem; color:#2B2D31; line-height:1;">Premium Core-Whitefield Living</div>
+      <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.12rem;">
+        <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#804526; font-family:'Cormorant Garamond', serif; text-transform:uppercase;"><span class="brand-inline-text" style="font-weight:400 !important; text-transform:lowercase !important; font-size:1.25em !important; letter-spacing:normal !important;">acre&amp;key</span> ASSESSMENT</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.85; flex-shrink:0; margin-bottom:1px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond', serif; font-size: 1.15rem; color:#2B2D31; line-height:1;">A-Grade Core-Whitefield Living</div>
     </div>
   </div>
 
-  <div class="ak-info-pricing" style="margin-bottom:8px; display:flex; flex-direction:column; gap:0;">
-    <div style="display:flex; align-items:baseline; gap:0.5rem;">
-      <span style="font-family:'Cormorant Garamond', serif; font-size: 2.16rem; line-height:1; color:var(--prop-navy);">₹2.06–3.73 Cr</span>
-      <span style="display:inline-flex; align-items:center;">
-        <span style="font-size:1rem; color:var(--prop-navy); opacity:0.65; font-weight:500;">(₹15.9K–16.8K / sq.ft.)</span>
-        <div class="ak-tooltip-wrapper" style="margin-left:6px; cursor:pointer;">
-          <i data-feather="info" style="width:14px; height:14px; color:var(--prop-navy); opacity:0.4; margin-bottom:-2px;"></i>
-          <span class="ak-tooltip-content">Information compiled from developer/RERA records and market checks. Indicative all-inclusive rate includes base rate, PLC, floor rise, parking, clubhouse, and infrastructure charges.</span>
-        </div>
-      </span>
+  <!-- Editorial Pricing Strip -->
+  <div class="ak-info-metrics-strip" style="display:flex; align-items:baseline; flex-wrap:wrap; border-top:0.5px solid rgba(85,85,90,0.15); border-bottom:0.5px solid rgba(85,85,90,0.15); padding:0.5rem 0; margin-bottom:10px; font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <span style="font-size:1.48rem; font-weight:700; color:#2B2D31; letter-spacing:-0.01em; line-height:1.2;">₹2.06 – 3.73 Cr*</span>
+    <span style="font-size:1.25rem; font-weight:400; color:#55555A; margin:0 0.75rem; user-select:none;">|</span>
+    <span style="font-size:0.95rem; font-weight:500; color:#55555A; line-height:1.2;">Indicative base pricing · Statutory taxes &amp; floor rise additional</span>
+  </div>
+
+  <!-- Configuration & Sizing Strip -->
+  <div class="ak-info-facts" style="display:flex; align-items:center; flex-wrap:wrap; gap:1.25rem; border-top:none !important; padding-top:0 !important; margin-bottom:10px; font-family:'Manrope', sans-serif;">
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif; text-transform:uppercase;">CONFIG</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">2, 3 & 4 BHK</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">SIZE</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">1,280 – 2,450 sq.ft.</span>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.15rem;">
+      <span style="font-size:0.66rem; font-weight: 400; letter-spacing:0.08em; color:#55555A; font-family:'Cormorant Garamond', serif;">POSSESSION</span>
+      <span style="font-size:0.88rem; font-weight:600; color:#2B2D31;">Dec 2029</span>
     </div>
   </div>
 
-  <div class="ak-info-facts" style="display:flex; align-items:center; gap:2.5rem; margin-bottom:16px;">
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">CONFIG</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">2, 3 &amp; 4 BHK</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">SIZE</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">1,280–2,295 sq.ft.</span>
-    </div>
-    <div style="display:flex; flex-direction:column; gap:0.25rem;">
-      <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--prop-navy); opacity:0.65;">POSSESSION</span>
-      <span style="font-size:1.15rem; font-weight:600; color:var(--prop-navy);">Dec 2029</span>
-    </div>
-  </div>
-
-  <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:1.5rem; margin-bottom:16px;">
-    <a href="#" class="sd-btn-gold" onclick="window.openModal(); return false;" style="text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
-      Get Analysis
+  <div class="ak-info-cta-row" style="display:flex; align-items:center; gap:0.85rem; margin-bottom:10px;">
+    <a href="#" class="sd-btn-gold ak-hero-btn-primary" data-no-modal="true" onclick="window.openModal('analysis'); return false;" style="background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important; color:#FFFFFF !important; border:0.5px solid #9f5334 !important; text-shadow:0 1px 2px rgba(43,45,49,0.35);">
+      <span>Get Buyer Analysis</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; transform:translateY(0.5px);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
-    <a href="#floor-plans" class="sd-btn-gold" onclick="window.scrollToFloorPlans(event);" style="background: transparent !important; color: var(--prop-navy) !important; border: 0.5px solid var(--prop-gold) !important; text-transform: none; letter-spacing: 0.03em; font-family: var(--font-heading), 'Cormorant Garamond', serif;">
-      View Floor Plans
+    <a href="#floor-plans" data-no-modal="true" onclick="window.scrollToFloorPlans(event);" class="ak-hero-btn-secondary" style="border:0.5px solid rgba(85, 85, 90, 0.2) !important;">
+      <span>View Floor Plans</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
     </a>
   </div>
 
-  <div class="ak-info-insight" style="background:var(--white); border-radius: 4px; padding:1.15rem 1.25rem; margin-bottom:0; border:0.5px solid rgba(221, 215, 207, 0.35);">
-    <div class="ak-view-row">
-      <div class="ak-view-col">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.35rem;">
-          <i data-feather="check-circle" style="color:#166534; width:16px; height:16px; stroke-width:2;"></i>
-          <span style="font-family:var(--font-body); font-weight:700; color:var(--obsidian-black); font-size:0.9rem;">WHY WE LIKE IT</span>
-        </div>
-        <div style="font-family:var(--font-body); font-size:0.82rem; color:var(--deep-slate); line-height:1.5; padding-left:24px;">
-          <div style="margin-bottom:0.15rem;">• 20-acre masterplan positioning</div>
-          <div style="margin-bottom:0.15rem;">• Strong Core Whitefield employment access</div>
-          <div>• Premium 2–4 BHK product range</div>
+  <div class="ak-info-insight" style="background:#FFFFFF; border-radius: 4px; padding:0.75rem 0.85rem; margin-bottom:0; border:0.5px solid rgba(85, 85, 90, 0.2); box-shadow:none;">
+    <div class="ak-view-row" style="display:flex; align-items:stretch; gap:1.25rem;">
+      <!-- Column 1: Highlights -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Key Highlights</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Institutional delivery</strong> capability and brand heritage of Sumadhura Group.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Layout efficiency</strong> across 2, 3 & 4 BHK typologies spanning 1,280 – 2,450 sq.ft..</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Direct arterial</strong> transit connectivity along Whitefield corridor.</span></div>
         </div>
       </div>
-      <div class="ak-view-divider" style="background:rgba(213, 209, 200,0.25);"></div>
-      <div class="ak-view-col">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.35rem;">
-          <i data-feather="alert-triangle" style="color:#C2410C; width:16px; height:16px; stroke-width:2;"></i>
-          <span style="font-family:var(--font-body); font-weight:700; color:var(--obsidian-black); font-size:0.9rem;">WATCH</span>
-        </div>
-        <div style="font-family:var(--font-body); font-size:0.82rem; color:var(--deep-slate); line-height:1.5; padding-left:24px;">
-          <div style="margin-bottom:0.15rem;">• Not walk-to-metro</div>
-          <div style="margin-bottom:0.15rem;">• Peak-hour Siddapura congestion</div>
-          <div>• Registered phase vs aggregate masterplan</div>
+
+      <!-- Divider -->
+      <div class="ak-view-divider" style="width:1px; background:rgba(85, 85, 90, 0.15); flex-shrink:0; margin:0 0.1rem;"></div>
+
+      <!-- Column 2: Watch -->
+      <div class="ak-view-col" style="flex:1; display:flex; flex-direction:column;">
+        <div style="font-family:'Manrope', sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; color:#55555A; text-transform:uppercase; margin-bottom:0.4rem; line-height:1;">Due Diligence</div>
+        <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:'Manrope', sans-serif; font-size:0.78rem; color:#2B2D31; line-height:1.35;">
+          <div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Audit unit-specific</strong> floor-rise charges, PLC premiums, and clubhouse infrastructure levies before token deposit.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Examine peak-hour</strong> transit bottlenecks along connecting feeder roads during peak corporate commute windows.</span></div>
+<div style="display:flex; align-items:flex-start; gap:0.35rem;"><span style="color:#804526; font-weight:700;">•</span><span><strong style="color:#2B2D31;">Verify municipal</strong> water pipeline sanction and secondary borewell / STP recycling capacities.</span></div>
         </div>
       </div>
     </div>
@@ -656,7 +803,40 @@ html { scroll-behavior: smooth; }
 </div>
 </div>
 
-<div class="prop-snapshot-strip-v2"><div class="prop-snapshot-grid-v2"><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="maximize-2" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">20 Acres</span><span class="prop-snap-lbl-v2">Masterplan</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="sun" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">76%</span><span class="prop-snap-lbl-v2">Reported Open Area</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="layers" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">11</span><span class="prop-snap-lbl-v2">Towers</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="home" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">1,650</span><span class="prop-snap-lbl-v2">Reported Units</span></div></div><div class="prop-snapshot-item-v2"><div class="prop-snap-icon-v2"><i data-feather="coffee" style="width:24px;height:24px;"></i></div><div class="prop-snap-content-v2"><span class="prop-snap-num-v2">66,000 sq.ft.</span><span class="prop-snap-lbl-v2">Clubhouse reported</span></div></div></div></div>
+<div class="prop-snapshot-strip-v2">
+  <div class="prop-glance-header" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <span class="prop-glance-tag">PROPERTY AT A GLANCE</span>
+      <span class="prop-glance-rule"></span>
+    </div>
+    <div class="prop-glance-footnote" style="margin-top:0; font-size:0.72rem; color:#55555A; font-family:'Manrope', sans-serif; font-weight:500;">
+      <sup class="prop-glance-sup">1</sup> Sources: Developer disclosures &amp; Karnataka RERA records
+    </div>
+  </div>
+
+  <div class="prop-glance-grid">
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">20 Acres</span>
+      <span class="prop-glance-lbl">MASTERPLAN</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">76%</span>
+      <span class="prop-glance-lbl">REPORTED OPEN AREA</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">11</span>
+      <span class="prop-glance-lbl">TOWERS</span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">1,650</span>
+      <span class="prop-glance-lbl">REPORTED UNITS<sup class="prop-glance-sup">1</sup></span>
+    </div>
+    <div class="prop-glance-item">
+      <span class="prop-glance-num">66,000 sq.ft.</span>
+      <span class="prop-glance-lbl">CLUBHOUSE REPORTED<sup class="prop-glance-sup">1</sup></span>
+    </div>
+  </div>
+</div>
 </div>
 </section>
 
@@ -687,7 +867,7 @@ html { scroll-behavior: smooth; }
 
 <!-- Section 2: acre&key Verdict -->
 <div id="verdict" class="ak-verdict-section-box" style="background:#FAFAFA; border:0.5px solid rgba(128, 69, 38, 0.28); border-radius: 4px; padding:2rem; margin-top:2.25rem; box-shadow:0 4px 20px rgba(15, 31, 61, 0.05);">
-<div class="ak-desktop-verdict-v5" style="display:block !important;"><div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; border-bottom:0.5px solid rgba(128, 69, 38, 0.18); padding-bottom:1.25rem; margin-bottom:1.5rem;"><div><span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#804526; display:block; margin-bottom:0.35rem;">BUYER-FIRST ADVISORY VERDICT</span><h3 style="font-family:'Cormorant Garamond', serif; font-size: 2.07rem; font-weight: 400; color:#2B2D31; margin:0; line-height:1.2;"><span class="brand-inline-text">acre&amp;key</span> Verdict</h3><div style="font-size:1.1rem; font-weight:700; color:#804526; margin-top:0.4rem;">Premium Core-Whitefield Living</div></div></div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">Sumadhura Edition is a location-led premium proposition. Its strongest attributes are Core Whitefield employment access, social infrastructure, broad family-sized configurations and a strong masterplan proposition.</p><div style="background:#FFFFFF; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:1.35rem; margin-top:1.25rem;"><h4 style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2B2D31; margin-top:0; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; letter-spacing:0.02em;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Our View </h4><div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;"><div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#1B5E20; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">✓</span> Buy for:</div><div style="font-size:0.92rem; color:#1B5E20; font-weight:700; line-height:1.6;">Premium Core Whitefield living + broad configurations + large-format community + long-term end use.</div></div><div style="background:#FAFAFA; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#B76E00; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">!</span> Be cautious about:</div><div style="font-size:0.92rem; color:#804526; font-weight:700; line-height:1.6;">Premium pricing + metro distance + traffic + phase/masterplan reconciliation + early construction stage.</div></div></div></div></div>
+<div class="ak-desktop-verdict-v5" style="display:block !important;"><div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; border-bottom:0.5px solid rgba(128, 69, 38, 0.18); padding-bottom:1.25rem; margin-bottom:1.5rem;"><div><span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#804526; display:block; margin-bottom:0.35rem;">BUYER-FIRST ADVISORY VERDICT</span><h3 style="font-family:'Cormorant Garamond', serif; font-size: 2.07rem; font-weight: 400; color:#2B2D31; margin:0; line-height:1.2;"><span class="brand-inline-text">acre&amp;key</span> Verdict</h3><div style="font-size:1.1rem; font-weight:700; color:#804526; margin-top:0.4rem;">Premium Core-Whitefield Living</div></div></div><p style="font-size:1.02rem; line-height:1.7; color:#374151; margin-bottom:1rem;">Sumadhura Edition is a location-led premium proposition. Its strongest attributes are Core Whitefield employment access, social infrastructure, broad family-sized configurations and a strong masterplan proposition.</p><div style="background:#FFFFFF; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:1.35rem; margin-top:1.25rem;"><h4 style="font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:800; color:#2B2D31; margin-top:0; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; letter-spacing:0.02em;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#804526" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Our View </h4><div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;"><div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#804526; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#804526; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">✓</span> Buy for:</div><div style="font-size:0.92rem; color:#804526; font-weight:700; line-height:1.6;">Premium Core Whitefield living + broad configurations + large-format community + long-term end use.</div></div><div style="background:#FAFAFA; border:0.5px solid #FEF3C7; border-radius: 4px; padding:1.1rem 1.25rem;"><div style="font-size:0.9rem; font-weight:800; color:#B76E00; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.45rem;"><span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; background:#B76E00; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;" aria-hidden="true">!</span> Be cautious about:</div><div style="font-size:0.92rem; color:#804526; font-weight:700; line-height:1.6;">Premium pricing + metro distance + traffic + phase/masterplan reconciliation + early construction stage.</div></div></div></div></div>
 </div></div></section>
 
 
@@ -1039,7 +1219,7 @@ html { scroll-behavior: smooth; }
             </div>
             <div style="text-align:right;">
               <div style="font-size:0.72rem; color:#804526; text-transform:uppercase; font-weight:800; letter-spacing:0.05em;"><span class="brand-inline-text">acre&amp;key</span> Outlook</div>
-              <div style="font-size:1rem; font-weight:800; color:#1B5E20; margin-top:0.15rem;">High ↗ Positive</div>
+              <div style="font-size:1rem; font-weight:800; color:#804526; margin-top:0.15rem;">High ↗ Positive</div>
             </div>
           </div>
         </div>
@@ -1049,12 +1229,12 @@ html { scroll-behavior: smooth; }
             <div style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#804526; margin-bottom:0.6rem;">Interpretation</div>
             <div style="font-size:0.98rem; font-weight:800; color:#2B2D31; margin-bottom:0.75rem;">Whitefield has benefited from:</div>
             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:0.65rem 1rem; font-size:0.92rem; color:#374151; margin-bottom:1rem;">
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> IT employment concentration</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Residential demand</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Metro expansion</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> ORR connectivity</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Social infrastructure</div>
-              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#1B5E20; font-weight:800;">✓</span> Retail &amp; hospitality</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> IT employment concentration</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Residential demand</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Metro expansion</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> ORR connectivity</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Social infrastructure</div>
+              <div style="display:flex; align-items:center; gap:0.45rem;"><span style="color:#804526; font-weight:800;">✓</span> Retail &amp; hospitality</div>
             </div>
             <div style="font-size:0.9rem; line-height:1.55; color:#804526; background:#FAFAFA; border:0.5px solid #FEF3C7; border-radius: 4px; padding:0.75rem 1rem; font-weight:600;">⚠️ Historical appreciation should not be extrapolated mechanically into future returns.</div>
           </div>
@@ -1120,7 +1300,7 @@ html { scroll-behavior: smooth; }
         <div style="background:#FAFAFA; border:0.5px solid rgba(128, 69, 38, 0.2); border-radius: 4px; padding:1.25rem 1.5rem; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div style="font-size:0.95rem; font-weight:800; color:#2B2D31; margin-bottom:0.75rem; display:flex; align-items:center; gap:0.4rem; border-bottom:0.5px solid rgba(128, 69, 38, 0.15); padding-bottom:0.4rem;">
-              <span style="color:#1B5E20; font-weight:800;">✓</span>
+              <span style="color:#804526; font-weight:800;">✓</span>
               <span>RERA Registration</span>
             </div>
 
@@ -1128,7 +1308,7 @@ html { scroll-behavior: smooth; }
             <div style="background:#FFFFFF; border: 0.5px solid rgba(43, 45, 49, 0.08); border-radius: 4px; padding:0.65rem 0.85rem; margin-bottom:0.5rem;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.15rem;">
                 <span style="font-size:0.7rem; font-weight:800; color:#804526; text-transform:uppercase; letter-spacing:0.05em;">PHASE 1</span>
-                <span style="font-size:0.68rem; font-weight:800; color:#1B5E20; background:#E8F5E9; padding:0.1rem 0.45rem; border-radius: 4px;">RERA Registered ✓</span>
+                <span style="font-size:0.68rem; font-weight:800; color:#804526; background:#E8F5E9; padding:0.1rem 0.45rem; border-radius: 4px;">RERA Registered ✓</span>
               </div>
               <div style="font-size:0.68rem; color:#667085; font-weight:600; margin-bottom:0.1rem;">RERA No.</div>
               <code style="font-family:'Manrope',sans-serif; font-size:0.82rem; font-weight:800; color:#2B2D31; word-break:break-all; display:block;">PRM/KA/RERA/1251/446/PR/230724/006995</code>
@@ -1175,10 +1355,10 @@ html { scroll-behavior: smooth; }
 
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
         <div style="background:#E8F5E9; border:0.5px solid #A5D6A7; border-radius: 4px; padding:1.5rem;">
-          <div style="font-size:1.05rem; font-weight:800; color:#1B5E20; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
-            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#1B5E20; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">✓</span> Pros
+          <div style="font-size:1.05rem; font-weight:800; color:#804526; margin-bottom:0.85rem; display:flex; align-items:center; gap:0.5rem;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#804526; color:#FFFFFF; border-radius:50%; font-size:0.75rem; font-weight:800;">✓</span> Pros
           </div>
-          <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#1B5E20; display:flex; flex-direction:column; gap:0.65rem; font-weight:600;">
+          <ul style="list-style:none; padding:0; margin:0; font-size:0.95rem; color:#804526; display:flex; flex-direction:column; gap:0.65rem; font-weight:600;">
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> Core Whitefield employment catchment</li>
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> ITPL proximity</li>
             <li style="display:flex; align-items:center; gap:0.45rem;"><span>•</span> Established social infrastructure</li>
@@ -1529,7 +1709,7 @@ html { scroll-behavior: smooth; }
       </div>
       <nav class="ak-footer-links" aria-label="Footer">
         <a href="/calculators/">Calculators</a>
-        <a href="/blogs/">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="https://answers.acrenkey.com/">Answers</a>
         <a href="/calculators/stamp-duty-registration-calculator/">Stamp Duty</a>
         <a href="/contact/">Contact</a>
