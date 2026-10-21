@@ -38,8 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-      // 4. Robust Section Navigation Active Underline & Smooth Scroll Controller
+  // 4. Robust Section Navigation Active Underline & Smooth Scroll Controller
   window.isNavClicking = false;
+
+  function getPropStickyOffset() {
+    var header = document.querySelector('.header-nav');
+    var subnav = document.querySelector('.prop-section-nav-sticky');
+    var hH = header ? header.offsetHeight : 80;
+    var sH = subnav ? subnav.offsetHeight : 46;
+    return hH + sH + 12;
+  }
 
   window.switchPropNavTab = function(el) {
     if (!el) return;
@@ -48,58 +56,67 @@ document.addEventListener('DOMContentLoaded', function() {
     el.classList.add('active');
   };
 
-  var navLinks = document.querySelectorAll('.prop-nav-link');
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      var href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        var targetEl = document.querySelector(href);
-        if (targetEl) {
-          e.preventDefault();
-          window.isNavClicking = true;
-          window.switchPropNavTab(this);
+  // Only bind fallback navigation controller if page does not define its own local-nav-link controller
+  if (!document.querySelector('.local-nav-link')) {
+    var navLinks = document.querySelectorAll('.prop-nav-link');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          var targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            window.isNavClicking = true;
+            window.switchPropNavTab(this);
 
-          var topPos = targetEl.offsetTop - 120;
-          window.scrollTo({
-            top: topPos,
-            behavior: 'smooth'
-          });
+            var offset = getPropStickyOffset();
+            var topPos = targetEl.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - offset;
+            window.scrollTo({
+              top: topPos,
+              behavior: 'smooth'
+            });
 
-          setTimeout(function() {
-            window.isNavClicking = false;
-          }, 900);
-        }
-      }
-    });
-  });
-
-  window.addEventListener('scroll', function() {
-    if (window.isNavClicking) return;
-
-    var scrollPos = window.scrollY + 180;
-    var activeHref = '#overview';
-
-    var allNavLinks = document.querySelectorAll('.prop-nav-link');
-    allNavLinks.forEach(function(link) {
-      var href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        var sec = document.querySelector(href);
-        if (sec && sec.offsetTop <= scrollPos) {
-          activeHref = href;
-        }
-      }
-    });
-
-    if (activeHref) {
-      allNavLinks.forEach(function(link) {
-        if (link.getAttribute('href') === activeHref) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
+            setTimeout(function() {
+              window.isNavClicking = false;
+            }, 900);
+          }
         }
       });
-    }
-  });
+    });
+
+    window.addEventListener('scroll', function() {
+      if (window.isNavClicking) return;
+
+      var offset = getPropStickyOffset();
+      var scrollPos = (window.pageYOffset || document.documentElement.scrollTop) + offset + 20;
+      var activeHref = '#overview';
+
+      var allNavLinks = document.querySelectorAll('.prop-nav-link');
+      allNavLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          var sec = document.querySelector(href);
+          if (sec) {
+            var rect = sec.getBoundingClientRect();
+            var secTop = rect.top + (window.pageYOffset || document.documentElement.scrollTop);
+            if (secTop <= scrollPos) {
+              activeHref = href;
+            }
+          }
+        }
+      });
+
+      if (activeHref) {
+        allNavLinks.forEach(function(link) {
+          if (link.getAttribute('href') === activeHref) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    }, { passive: true });
+  }
 
   // 6. Amenities Drawer Overlay Controls
   var amDrawer = document.getElementById('propAmenitiesDrawer');
@@ -495,12 +512,30 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Global Smooth Scroll Helper for Floor Plans
-window.scrollToFloorPlans = function(e) {
-  if (e) e.preventDefault();
-  var sec = document.querySelector('#floor-plans') || document.querySelector('#floorplan') || document.querySelector('#configuration') || document.querySelector('#configurations');
+// Global Smooth Scroll Helpers
+window.scrollToSection = function(id, e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var sec = document.getElementById(id) || document.querySelector('#' + id);
   if (sec) {
-    var topPos = sec.offsetTop - 100;
+    var header = document.querySelector('.header-nav');
+    var subnav = document.querySelector('.prop-section-nav-sticky');
+    var hH = header ? header.offsetHeight : 80;
+    var sH = subnav ? subnav.offsetHeight : 46;
+    var offset = hH + sH + 12;
+    var topPos = sec.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - offset;
     window.scrollTo({ top: topPos, behavior: 'smooth' });
   }
+};
+
+window.scrollToFloorPlans = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var sec = document.querySelector('#floor-plans') || document.querySelector('#floorplan') || document.querySelector('#configuration') || document.querySelector('#configurations');
+  if (sec) {
+    var id = sec.getAttribute('id') || 'floor-plans';
+    window.scrollToSection(id, e);
+  }
+};
+
+window.scrollToVerdict = function(e) {
+  window.scrollToSection('verdict', e);
 };

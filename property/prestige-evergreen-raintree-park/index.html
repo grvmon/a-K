@@ -5,7 +5,7 @@
     })(window,document,'script','dataLayer','GTM-MKSRMW9C');</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:type" content="website"><meta property="og:title" content="Evergreen at Prestige Raintree Park | Price, Floor Plans, RERA &amp; Review | acre&amp;key"><meta property="og:description" content="Buyer-first intelligence for Evergreen at Prestige Raintree Park at Varthur Junction, Bengaluru. 1–4 BHK residences across a 24-acre township precinct."><meta property="og:image" content="https://acrenkey.com/style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp"><meta content="https://acrenkey.com/property/prestige-evergreen-raintree-park/" property="og:url"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Evergreen at Prestige Raintree Park | acre&amp;key"><meta name="twitter:description" content="Buyer-first intelligence for Evergreen at Prestige Raintree Park at Varthur Junction, Bengaluru. Explore verified pricing, floor plans, true cost, location, and RERA diligence."><meta name="twitter:image" content="https://acrenkey.com/style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp"><title>Prestige Evergreen in Varthur, Bangalore | 4 BHK Apartments</title><meta name="description" content="4 BHK in Prestige Evergreen, Varthur, Bangalore. Get floor plans, buyer-first advisory, and exact pricing. Starting from ₹1.07 Cr."><link href="https://acrenkey.com/property/prestige-evergreen-raintree-park/" rel="canonical"><link rel="icon" href="../../style-guide/assets/favicon.svg?v=1791220494" type="image/svg+xml"><script src="https://unpkg.com/feather-icons" defer=""></script><link rel="preload" as="image" href="../../style-guide/assets/evergreen/prestige_evergreen_hero_pool_evening.webp?v=1791220494" type="image/webp" fetchpriority="high"><link rel="stylesheet" href="../../website.min.css?v=20261020_fontcg"><link rel="stylesheet" href="../../lead-form.min.css?v=1791755621"><link rel="stylesheet" href="../../abha-form.min.css?v=1791755621"><link rel="stylesheet" href="../../style-guide/assets/css/property.css?v=1791755621"><link rel="icon" type="image/svg+xml" href="../../style-guide/assets/favicon.svg">
 
 <style>
-html { scroll-behavior: auto !important; }
+html { scroll-behavior: smooth; }
 .prop-hero-section { padding: 1.75rem 0 3.5rem 0 !important; }
 @media (min-width: 769px) {
   .prop-hero-section {
@@ -469,28 +469,8 @@ img[style*="border-radius: 50%"] {
 window.openModal = window.openModal || function(c, f, o) {
   window._pendingModal = [c, f, o];
 };
-window.scrollToFloorPlans = function(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  var sec = document.getElementById('floor-plans');
-  if (sec) {
-    var h = document.querySelector('.header-nav');
-    var nav = document.querySelector('.prop-section-nav-sticky');
-    var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
-    var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-};
-window.scrollToVerdict = function(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  var sec = document.getElementById('verdict');
-  if (sec) {
-    var h = document.querySelector('.header-nav');
-    var nav = document.querySelector('.prop-section-nav-sticky');
-    var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
-    var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-};
+window.scrollToFloorPlans = function(e) { if (window.scrollToSection) window.scrollToSection('floor-plans', e); };
+window.scrollToVerdict = function(e) { if (window.scrollToSection) window.scrollToSection('verdict', e); };
 </script>
 <style id="ak-mobile-overflow-fix">
 @media (max-width: 768px) {
@@ -570,7 +550,7 @@ window.scrollToVerdict = function(e) {
         "publisher": {
           "@id": "https://acrenkey.com/#organization"
         },
-        "reviewBody": "A large Prestige township proposition with strong brand pull — but Varthur traffic, delivery horizon and shared-infrastructure questions deserve careful diligence. Premium End-User Lifestyle Hold best suited for 7–10 year capital preservation.",
+        "reviewBody": "A large Prestige township proposition with strong brand pull — but Varthur traffic, delivery horizon and shared-infrastructure questions deserve careful diligence. Premium End-User Lifestyle Hold Target buyers: 7–10 year capital preservation.",
         "datePublished": "2026-09-01T08:00:00+05:30"
       },
       "brand": {
@@ -1183,7 +1163,7 @@ window.scrollToVerdict = function(e) {
           <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:0.5rem; margin-bottom:0.85rem; padding-bottom:0.45rem; border-bottom:0.5px solid rgba(85, 85, 90, 0.15);">
             <div style="font-size:0.82rem; font-weight:800; color:#2B2D31; text-transform:uppercase; letter-spacing:0.04em; display:flex; align-items:center; gap:0.5rem; min-width:0;">
               <span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; min-width:20px; min-height:20px; flex-shrink:0; background:#2B2D31; color:#FFFFFF; border-radius:4px; font-size:0.7rem; font-weight:800; line-height:1;">✓</span>
-              <span>Investment Case &amp; Best-Fit Buyers</span>
+              <span>Investment Case &amp; Target Buyer Profile</span>
             </div>
             <span style="font-size:0.68rem; font-weight:700; background:rgba(10, 10, 11,0.05); color:#2B2D31; padding:0.15rem 0.45rem; border-radius:4px; flex-shrink:0;">STRENGTHS</span>
           </div>
@@ -3519,18 +3499,22 @@ function akGallerySelect(idx) {
       return hH + sH + 12;
     }
 
+    var isNavClicking = false;
+
     function initSubnavScrollspy() {
       var navLinks = document.querySelectorAll('.local-nav-link, .prop-nav-link');
       if (!navLinks.length) return;
 
       var linkSectionMap = [];
+      var seenIds = new Set();
       navLinks.forEach(function(link) {
         var href = link.getAttribute('href');
         if (href && href.startsWith('#') && href.length > 1) {
           try {
             var sec = document.querySelector(href);
-            if (sec) {
-              linkSectionMap.push({ link: link, section: sec, id: href });
+            if (sec && !seenIds.has(href)) {
+              seenIds.add(href);
+              linkSectionMap.push({ href: href, section: sec });
             }
           } catch(e) {}
         }
@@ -3539,9 +3523,10 @@ function akGallerySelect(idx) {
       if (!linkSectionMap.length) return;
 
       function updateActiveState() {
+        if (isNavClicking) return;
         var offset = getStickyOffset();
         var scrollPos = (window.pageYOffset || document.documentElement.scrollTop) + offset + 20;
-        var activeMapItem = null;
+        var activeHref = linkSectionMap[0].href;
 
         for (var i = 0; i < linkSectionMap.length; i++) {
           var item = linkSectionMap[i];
@@ -3550,23 +3535,22 @@ function akGallerySelect(idx) {
           var secHeight = item.section.offsetHeight;
 
           if (scrollPos >= secTop && scrollPos < secTop + secHeight) {
-            activeMapItem = item;
+            activeHref = item.href;
           }
         }
 
         var atBottom = (window.innerHeight + (window.pageYOffset || document.documentElement.scrollTop)) >= (document.documentElement.scrollHeight - 60);
         if (atBottom) {
-          activeMapItem = linkSectionMap[linkSectionMap.length - 1];
+          activeHref = linkSectionMap[linkSectionMap.length - 1].href;
         }
 
-        if (activeMapItem) {
-          var activeHref = activeMapItem.id;
+        if (activeHref) {
           navLinks.forEach(function(l) {
             if (l.getAttribute('href') === activeHref) {
               if (!l.classList.contains('active')) {
                 l.classList.add('active');
                 var container = l.parentElement;
-                if (container && (container.scrollWidth > container.clientWidth)) {
+                if (container && (container.scrollWidth > container.clientWidth) && container.offsetParent !== null) {
                   var targetLeft = l.offsetLeft - (container.clientWidth / 2) + (l.offsetWidth / 2);
                   container.scrollTo({ left: targetLeft, behavior: 'smooth' });
                 }
@@ -3600,6 +3584,7 @@ function akGallerySelect(idx) {
             var target = document.querySelector(href);
             if (target) {
               e.preventDefault();
+              isNavClicking = true;
               var offset = getStickyOffset();
               var targetTop = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - offset;
               window.scrollTo({ top: targetTop, behavior: 'smooth' });
@@ -3608,7 +3593,7 @@ function akGallerySelect(idx) {
                 if (l.getAttribute('href') === href) {
                   l.classList.add('active');
                   var container = l.parentElement;
-                  if (container && (container.scrollWidth > container.clientWidth)) {
+                  if (container && (container.scrollWidth > container.clientWidth) && container.offsetParent !== null) {
                     var targetLeft = l.offsetLeft - (container.clientWidth / 2) + (l.offsetWidth / 2);
                     container.scrollTo({ left: targetLeft, behavior: 'smooth' });
                   }
@@ -3620,6 +3605,10 @@ function akGallerySelect(idx) {
               if (history.pushState) {
                 history.pushState(null, null, href);
               }
+
+              setTimeout(function() {
+                isNavClicking = false;
+              }, 800);
             }
           }
         });
@@ -3803,7 +3792,7 @@ function akGallerySelect(idx) {
       </div>
       <div style="text-align:right;">
         <div style="font-weight:700; color:#2B2D31; font-size:0.95rem; line-height:1.2;">Premium End-User Lifestyle Hold</div>
-        <div style="font-size:0.75rem; color:#667085; font-weight:500; margin-top:0.15rem;">Best suited for 7–10 year capital preservation</div>
+        <div style="font-size:0.75rem; color:#667085; font-weight:500; margin-top:0.15rem;">Target buyers: 7–10 year capital preservation</div>
       </div>
     </div>
 
@@ -4572,30 +4561,6 @@ function akGallerySelect(idx) {
         if (e.key === 'ArrowRight') akLbNext();
         if (e.key === 'ArrowLeft') akLbPrev();
     });
-
-    window.scrollToFloorPlans = function(e) {
-        if (e && e.preventDefault) e.preventDefault();
-        var sec = document.getElementById('floor-plans');
-        if (sec) {
-            var h = document.querySelector('.header-nav');
-            var nav = document.querySelector('.prop-section-nav-sticky');
-            var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
-            var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-    };
-
-    window.scrollToVerdict = function(e) {
-        if (e && e.preventDefault) e.preventDefault();
-        var sec = document.getElementById('verdict');
-        if (sec) {
-            var h = document.querySelector('.header-nav');
-            var nav = document.querySelector('.prop-section-nav-sticky');
-            var offset = (h ? h.offsetHeight : 80) + (nav ? nav.offsetHeight : 46);
-            var y = sec.getBoundingClientRect().top + window.pageYOffset - (offset || 126);
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-    };
 
     // Social Sharing Dialog
     var shareTriggerBtnEl = null;
