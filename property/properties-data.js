@@ -542,7 +542,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-panorama-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-panorama-devanahalli/",
+    "score": 3.85,
+    "verdict": "Institutional Plotted Layout near Airport",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "sattva-ekatra-plots-devanahalli",
@@ -565,7 +568,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-ekatra-plots-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-ekatra-plots-devanahalli/",
+    "score": 3.75,
+    "verdict": "Master-Planned Plotted Enclave in North",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "prestige-parklane-devanahalli",
@@ -590,7 +596,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-parklane-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-parklane-devanahalli/",
+    "score": 4.1,
+    "verdict": "Prestige Quality in Devanahalli Micro-Market",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "prestige-elm-park-whitefield",
@@ -640,7 +649,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-wtc-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-wtc-devanahalli/",
+    "score": 4.25,
+    "verdict": "Integrated Commercial & Residential Growth Engine",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "prestige-lavender-fields-varthur",
@@ -830,7 +842,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/arvind-sylva-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/arvind-sylva-devanahalli/",
+    "score": 3.8,
+    "verdict": "Nature-Centric Plotted Community",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "birla-evara-sarjapur-road",
@@ -1451,7 +1466,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-doddaballapur-doddaballapur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-doddaballapur-doddaballapur/",
+    "score": 3.65,
+    "verdict": "Strategic Long-Term North Industrial Plotted Land",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "brigade-oasis-devanahalli",
@@ -1474,7 +1492,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-oasis-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-oasis-devanahalli/",
+    "score": 4.05,
+    "verdict": "A-Grade Plotted Sanctuary in North Bengaluru",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "brigade-el-dorado-bagalur",
@@ -1527,7 +1548,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-woods-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-woods-devanahalli/",
+    "score": 3.9,
+    "verdict": "Green Plotted Infrastructure Development",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "godrej-msr-city-devanahalli",
@@ -1551,7 +1575,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-msr-city-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-msr-city-devanahalli/",
+    "score": 4.0,
+    "verdict": "Joint-Venture High-Rise Township Hub",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sumadhura-elysium-panathur",
@@ -1713,7 +1740,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-city-doddajala.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-city-doddajala/",
+    "score": 3.95,
+    "verdict": "Mega Integrated Township along Doddajala Highway",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sattva-aeropolis-phase-ii-devanahalli",
@@ -1738,7 +1768,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-aeropolis-phase-ii-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-aeropolis-phase-ii-devanahalli/",
+    "score": 3.75,
+    "verdict": "Value High-Rise Living near KIADB Aerospace Park",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "sattva-vasanta-cove-devanahalli",
@@ -1764,7 +1797,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-vasanta-cove-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-vasanta-cove-devanahalli/",
+    "score": 3.8,
+    "verdict": "Plotted Living in Devanahalli Aerotropolis",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "sattva-aaranya-south-bangalore",
@@ -1915,7 +1951,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-laurel-maple-devanahalli.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-laurel-maple-devanahalli/",
+    "score": 3.9,
+    "verdict": "Twin-Tower Suburban Residential Precinct",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "godrej-woodland-sarjapur",
@@ -1991,7 +2030,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purva-atmosphere-thanisandra.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purva-atmosphere-thanisandra/",
+    "score": 4.1,
+    "verdict": "Bold Air-Filtration Architecture at Thanisandra",
+    "possession": "Possession: Ready to Move"
   },
   {
     "id": "purva-celestial-airport-road",
