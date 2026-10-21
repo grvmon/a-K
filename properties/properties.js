@@ -71,7 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const methodologyHref = (basePath || '') + '/#core';
     list.forEach((prop, idx) => {
       const cardWrap = document.createElement('div');
-      cardWrap.className = 'ak-card-anchor';
+      const hasLiveUrl = Boolean(prop.url);
+      cardWrap.className = 'ak-card-anchor' + (hasLiveUrl ? '' : ' ak-card-unlinked');
+
+      const titleMarkup = hasLiveUrl
+        ? `<h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>`
+        : `<h3 class="ak-card-title">${prop.name}</h3>`;
 
       cardWrap.innerHTML = `
         <article class="ak-property-card">
@@ -81,8 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="ak-card-body">
             <div class="ak-card-header">
               <div class="ak-card-title-row">
-                <h3 class="ak-card-title"><a class="ak-card-stretch" href="${basePath + prop.url}">${prop.name}</a></h3>
-                <span class="ak-card-score-pill" title="acre&key Score: ${prop.score} / 5"><span class="ak-score-val">${prop.score}</span><span class="ak-score-denom">/5</span></span>
+                ${titleMarkup}
               </div>
               <span class="ak-card-loc"><i data-feather="map-pin"></i> ${prop.sublocation || prop.location}</span>
             </div>
@@ -159,6 +163,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (selectedConfig) {
         if (selectedConfig === 'Villas') {
           if (!prop.configTypes.includes('Villas') && !prop.config.toLowerCase().includes('villa')) return false;
+        } else if (selectedConfig === 'Plots') {
+          if (!prop.configTypes.includes('Plots') && !prop.config.toLowerCase().includes('plot')) return false;
         } else {
           if (!prop.configTypes.includes(selectedConfig) && !prop.config.includes(selectedConfig)) return false;
         }
@@ -169,9 +175,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Sorting
     if (selectedSort === 'score_desc') {
-      filtered.sort((a, b) => b.score - a.score);
+      filtered.sort((a, b) => (b.score || 0) - (a.score || 0));
     } else if (selectedSort === 'possession_asc') {
-      filtered.sort((a, b) => a.possessionYear - b.possessionYear);
+      filtered.sort((a, b) => (a.possessionYear || 9999) - (b.possessionYear || 9999));
     }
 
     renderProperties(filtered);

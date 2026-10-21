@@ -79,8 +79,8 @@ Quality checks:
 
 ## 6. Schema / structured data (P0, JSON-LD in the <head> or body)
 Every calculator page uses one @graph containing:
-- [ ] WebPage (or a WebPage subtype) with @id, url, name, description, inLanguage en-IN, datePublished, dateModified, isPartOf → WebSite, breadcrumb → BreadcrumbList @id, author/reviewedBy where real.
-- [ ] WebApplication (or SoftwareApplication) with name, url, applicationCategory "FinanceApplication", operatingSystem "Any", browserRequirements "Requires JavaScript", offers {price 0, priceCurrency INR}, and publisher → Organization @id.
+- [ ] Do NOT include standalone WebApplication or SoftwareApplication schema unless real, user-submitted on-page review ratings (AggregateRating) exist on the page. (Google Search Central and Semrush Site Audit strictly require either aggregateRating or review for SoftwareApplication/WebApplication; omitting it causes validation errors across search audits, and Google provides no rich snippet for web calculators without reviews).
+- [ ] WebPage with @id, url, name, description, inLanguage en-IN, datePublished, dateModified, isPartOf → WebSite, breadcrumb → BreadcrumbList @id, mainEntity → FAQPage @id, author/reviewedBy where real.
 - [ ] BreadcrumbList that matches the visible breadcrumb.
 - [ ] FAQPage whose Q&A text matches the visible FAQs word for word, with no HTML links inside the text. Note that Google shows FAQ rich results only for limited sites, but FAQPage still helps AI engines parse Q&A, so keep it.
 - [ ] Organization (or RealEstateAgent) with @id (site-wide, referenced, not duplicated in full on every page), name "acre&key", legalName, url, logo, address, sameAs (LinkedIn and other real profiles).
