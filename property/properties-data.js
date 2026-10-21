@@ -793,7 +793,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/ramky-fortuna-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/ramky-fortuna-bannerghatta-road/",
+    "score": 3.75,
+    "verdict": "Value High-Rise Living on Bannerghatta Main Road",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "ramky-lumina-hosa-road",
@@ -901,7 +904,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/lodha-elanza-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/lodha-elanza-bannerghatta-road/",
+    "score": 4.15,
+    "verdict": "Institutional Urban Development in South Bangalore",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "eaton-park-at-the-prestige-city-sarjapur-road",
@@ -1086,7 +1092,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sattva-forest-ridge-jp-nagar.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sattva-forest-ridge-jp-nagar/",
+    "score": 3.85,
+    "verdict": "Serene Nature-Facing Homes in JP Nagar Extension",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "arvind-skycrest-bannerghatta-road",
@@ -1112,7 +1121,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/arvind-skycrest-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/arvind-skycrest-bannerghatta-road/",
+    "score": 3.9,
+    "verdict": "Modern Smart-Living High-Rise in South",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "casagrand-moondance-mysore-road",
@@ -1163,7 +1175,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/casagrand-casablanca-kanakapura-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/casagrand-casablanca-kanakapura-road/",
+    "score": 3.8,
+    "verdict": "Roman-Inspired High-Rise Living near Metro",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "casagrand-aquene-kengeri",
@@ -1237,7 +1252,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/lodha-azur-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/lodha-azur-bannerghatta-road/",
+    "score": 4.25,
+    "verdict": "A-Grade Lakeside Residences on Bannerghatta Rd",
+    "possession": "Possession: Jun 2028"
   },
   {
     "id": "prestige-southern-star-bannerghatta-road",
@@ -1263,7 +1281,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-southern-star-bannerghatta-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-southern-star-bannerghatta-road/",
+    "score": 4.2,
+    "verdict": "Flagship 42-Acre South Bengaluru High-Rise",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "brigade-calista-budigere-cross",
@@ -2112,7 +2133,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/purva-park-hill-kanakapura-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/purva-park-hill-kanakapura-road/",
+    "score": 3.95,
+    "verdict": "Hillside View High-Rise Living on Kanakapura Rd",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "purva-zenium-airport-road",
