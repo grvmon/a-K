@@ -818,7 +818,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/ramky-lumina-hosa-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/ramky-lumina-hosa-road/",
+    "score": 3.7,
+    "verdict": "Strategic Commute Living near Hosa Road Junction",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "arvind-sylva-devanahalli",
@@ -871,7 +874,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/birla-evara-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/birla-evara-sarjapur-road/",
+    "score": 4.15,
+    "verdict": "Institutional Grade Living on Sarjapur Road",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "lodha-elanza-bannerghatta-road",
@@ -920,7 +926,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/eaton-park-at-the-prestige-city-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/eaton-park-at-the-prestige-city-sarjapur-road/",
+    "score": 4.2,
+    "verdict": "Prime Cluster in 180-Acre Prestige City",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "keya-the-urban-forest-sarjapur-road",
@@ -1000,7 +1009,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/heart-of-harmony-by-ckpc-kudlu-gate.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/heart-of-harmony-by-ckpc-kudlu-gate/",
+    "score": 3.75,
+    "verdict": "Electronic City Metro Corridor Urban High-Rise",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "purva-heritage-south-bangalore",
@@ -1415,7 +1427,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/the-grandstand-address-by-address-maker-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/the-grandstand-address-by-address-maker-sarjapur-road/",
+    "score": 3.8,
+    "verdict": "Low-Density Plotted & Villa Haven",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "my-home-whitefield-whitefield",
@@ -1660,7 +1675,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-epitome-thanisandra.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-epitome-thanisandra/",
+    "score": 3.9,
+    "verdict": "Modern High-Rise Living near Manyata Tech Park",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "sumadhura-sarang-whitefield",
@@ -1902,7 +1920,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-insignia-yelahanka.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-insignia-yelahanka/",
+    "score": 4.25,
+    "verdict": "Ultra-Exclusive Sky Residences in Yelahanka",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "brigade-eternia-yelahanka",
@@ -1927,7 +1948,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-eternia-yelahanka.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-eternia-yelahanka/",
+    "score": 4.15,
+    "verdict": "Architectural Elegance in North Bengaluru",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "brigade-laurel-maple-devanahalli",
@@ -1977,7 +2001,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-woodland-sarjapur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-woodland-sarjapur/",
+    "score": 3.85,
+    "verdict": "Plotted Resort-Style Living on Sarjapur Extension",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "godrej-ananda-bagalur",
