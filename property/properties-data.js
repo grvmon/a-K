@@ -145,7 +145,7 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-evergreen-raintree-park.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": "/property/prestige-evergreen-raintree-park"
+    "url": "/property/prestige-evergreen-raintree-park/"
   },
   {
     "id": "brigade-belvedere-budigere-cross",
@@ -401,7 +401,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-avon-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-avon-whitefield/",
+    "score": 4.15,
+    "verdict": "Institutional Pre-Launch in Whitefield",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "purvankara-northern-lights-bagalur",
@@ -452,7 +455,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/godrej-florenne-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/godrej-florenne-whitefield/",
+    "score": 4.25,
+    "verdict": "A-Grade Private Villa Community",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sumadhura-belfort-whitefield",
@@ -477,7 +483,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-belfort-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-belfort-whitefield/",
+    "score": 3.85,
+    "verdict": "Efficient High-Rise Family Community",
+    "possession": "Possession: Jun 2028"
   },
   {
     "id": "lodha-whitefield-whitefield",
@@ -501,7 +510,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/lodha-whitefield-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/lodha-whitefield-whitefield/",
+    "score": 4.1,
+    "verdict": "Institutional Brand Footprint in Whitefield",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sumadhura-panorama-devanahalli",
@@ -596,7 +608,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-elm-park-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-elm-park-whitefield/",
+    "score": 4.2,
+    "verdict": "Prime Whitefield Arterial Convenience",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "brigade-wtc-devanahalli",
@@ -645,7 +660,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-lavender-fields-varthur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-lavender-fields-varthur/",
+    "score": 4.15,
+    "verdict": "Integrated High-Rise Varthur Precinct",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "sobha-neopolis-panathur",
@@ -671,7 +689,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sobha-neopolis-panathur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sobha-neopolis-panathur/",
+    "score": 4.1,
+    "verdict": "Massive Greek-Themed Panathur Township",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "brigade-lakecrest-kr-puram",
@@ -897,7 +918,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/keya-the-urban-forest-sarjapur-road.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/keya-the-urban-forest-sarjapur-road/",
+    "score": 3.85,
+    "verdict": "Biophilic Architecture on Sarjapur Road",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "godrej-regent-park-east-bangalore",
@@ -1247,7 +1271,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/mahindra-blossom-hope-farm.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/mahindra-blossom-hope-farm/",
+    "score": 4.05,
+    "verdict": "Green-Engineered Residences near Hope Farm",
+    "possession": "Possession: Dec 2028"
   },
   {
     "id": "vaswani-starlight-whitefield",
@@ -1272,7 +1299,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/vaswani-starlight-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/vaswani-starlight-whitefield/",
+    "score": 3.8,
+    "verdict": "Boutique High-Rise on ECC Road",
+    "possession": "Possession: Jun 2027"
   },
   {
     "id": "sattva-angane-budigere",
@@ -1322,7 +1352,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-raintree-park-varthur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/prestige-raintree-park-varthur/",
+    "score": 4.3,
+    "verdict": "Flagship Integrated Township Phase 1",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "the-grandstand-address-by-address-maker-sarjapur-road",
@@ -1371,7 +1404,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/my-home-whitefield-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/my-home-whitefield-whitefield/",
+    "score": 4.0,
+    "verdict": "Large-Scale Integrated Living Concept",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sattva-doddaballapur-doddaballapur",
@@ -1516,7 +1552,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-elysium-panathur.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-elysium-panathur/",
+    "score": 3.9,
+    "verdict": "Panathur ORR Tech-Corridor Living",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "sumadhura-solea-whitefield",
@@ -1541,7 +1580,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-solea-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-solea-whitefield/",
+    "score": 3.85,
+    "verdict": "Transit-Oriented Compact Community",
+    "possession": "Possession: Dec 2026"
   },
   {
     "id": "sumadhura-epitome-thanisandra",
@@ -1592,7 +1634,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/sumadhura-sarang-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/sumadhura-sarang-whitefield/",
+    "score": 3.9,
+    "verdict": "Spacious High-Rise Units at Doddanekkundi",
+    "possession": "Possession: Dec 2027"
   },
   {
     "id": "sumadhura-pramoda-rajarajeshwari-nagar",
@@ -1745,7 +1790,10 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-avalon-whitefield.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": null
+    "url": "/property/brigade-avalon-whitefield/",
+    "score": 4.2,
+    "verdict": "A-Grade High-Rise Living in Whitefield",
+    "possession": "Possession: Dec 2029"
   },
   {
     "id": "brigade-lumina-tumkur-road",
@@ -1993,7 +2041,3 @@ const PROPERTIES_DATA = [
     "url": null
   }
 ];
-
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = PROPERTIES_DATA;
-}
