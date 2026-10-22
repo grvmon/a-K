@@ -1,4 +1,5 @@
 (function () {
+  var LF_MODAL_HTML = "<div class=\"lf-modal-overlay\" id=\"lfModalOverlay\" style=\"display: none;\"><div class=\"lf-cc-backdrop\" id=\"lfCcBackdrop\"></div><div class=\"lf-wrap\" id=\"lfWrap\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"lfMainHeading\" aria-describedby=\"lfSubHeading\"><div class=\"lf-drag-handle\"></div><button type=\"button\" class=\"lf-modal-close-icon lf-focusable\" id=\"lfModalClose\" aria-label=\"Close modal window\" tabindex=\"0\"><svg viewBox=\"0 0 14 14\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" d=\"M1 1l12 12M13 1L1 13\"></path></svg></button><div id=\"lfModalFormContent\"><div class=\"lf-header\"><h2 class=\"lf-main-heading\" id=\"lfMainHeading\">Get Buyer Analysis</h2><p class=\"lf-sub-heading\" id=\"lfSubHeading\">Share your details and an acre&amp;key expert will reach out within minutes.</p></div><form class=\"lf-form\" id=\"lfForm\" novalidate=\"\"><input class=\"lf-hp\" type=\"text\" name=\"website\" value=\"\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\" style=\"position:absolute;left:-9999px;opacity:0;\"><input type=\"hidden\" id=\"lfGclid\" name=\"gclid\"><input type=\"hidden\" id=\"lfFclid\" name=\"fclid\"><input type=\"hidden\" id=\"lfUtmSource\" name=\"utm_source\"><input type=\"hidden\" id=\"lfUtmMedium\" name=\"utm_medium\"><input type=\"hidden\" id=\"lfUtmCampaign\" name=\"utm_campaign\"><input type=\"hidden\" id=\"lfUtmTerm\" name=\"utm_term\"><input type=\"hidden\" id=\"lfUtmContent\" name=\"utm_content\"><input type=\"hidden\" id=\"lfSourceUrl\" name=\"source_url\"><input type=\"hidden\" id=\"lfSubmittedAt\" name=\"submitted_at\"><input type=\"hidden\" id=\"lfFormName\" name=\"form_name\" value=\"\"><div class=\"lf-field\" id=\"lfNameField\"><div class=\"lf-input-box\"><label class=\"lf-label\" for=\"lfName\">Full name<span class=\"lf-req\" aria-hidden=\"true\">*</span></label><input class=\"lf-input lf-focusable\" type=\"text\" id=\"lfName\" name=\"name\" autocomplete=\"name\" enterkeyhint=\"next\" aria-required=\"true\" tabindex=\"0\" aria-invalid=\"false\" maxlength=\"60\" aria-describedby=\"lfNameErr\"><span class=\"lf-valid-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 14 14\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M1 7l4 4 8-8\"></path></svg></span><button type=\"button\" class=\"lf-clear-btn lf-focusable\" aria-label=\"Clear name field\" tabindex=\"-1\"><svg viewBox=\"0 0 10 10\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" d=\"M1 1l8 8M9 1L1 9\"></path></svg></button></div><div class=\"lf-err\" id=\"lfNameErr\" role=\"alert\"></div></div><div class=\"lf-field lf-field-phone\" id=\"lfPhoneField\"><div class=\"lf-input-box\"><label class=\"lf-label\" id=\"lfPhoneLbl\" for=\"lfPhone\">Mobile<span class=\"lf-req\" aria-hidden=\"true\">*</span></label><div class=\"lf-phone-row\"><button type=\"button\" class=\"lf-cc-trigger lf-focusable\" id=\"lfCcTrigger\" aria-haspopup=\"listbox\" aria-expanded=\"false\" aria-controls=\"lfCcPanel\" aria-label=\"Select country dial code\" tabindex=\"0\"><span id=\"lfCcDisplay\">+91</span><svg class=\"lf-cc-arrow\" viewBox=\"0 0 8 5\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" d=\"M1 1l3 3 3-3\"></path></svg></button><div class=\"lf-cc-panel\" id=\"lfCcPanel\" role=\"listbox\" aria-labelledby=\"lfPhoneLbl\"><input class=\"lf-cc-search lf-focusable\" type=\"text\" id=\"lfCcSearch\" role=\"combobox\" aria-expanded=\"true\" aria-autocomplete=\"list\" aria-controls=\"lfCcList\" placeholder=\"Search country\u2026\" autocomplete=\"off\" aria-label=\"Search countries by name or code\" tabindex=\"-1\"><div class=\"lf-cc-list\" id=\"lfCcList\"></div></div><input type=\"hidden\" id=\"lfCcVal\" name=\"country_code\" value=\"+91\"><div class=\"lf-divider\"></div><input class=\"lf-input lf-focusable\" type=\"tel\" id=\"lfPhone\" name=\"phone\" inputmode=\"numeric\" autocomplete=\"tel\" enterkeyhint=\"next\" aria-required=\"true\" tabindex=\"0\" aria-invalid=\"false\" maxlength=\"15\" aria-describedby=\"lfPhoneErr\"><span class=\"lf-valid-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 14 14\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M1 7l4 4 8-8\"></path></svg></span><button type=\"button\" class=\"lf-clear-btn lf-focusable\" id=\"lfPhoneClearBtn\" aria-label=\"Clear mobile number field\" tabindex=\"-1\"><svg viewBox=\"0 0 10 10\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" d=\"M1 1l8 8M9 1L1 9\"></path></svg></button></div></div><div class=\"lf-err\" id=\"lfPhoneErr\" role=\"alert\"></div></div><div class=\"lf-field\" id=\"lfEmailField\"><div class=\"lf-input-box\"><label class=\"lf-label\" for=\"lfEmail\">Email<span class=\"lf-req\" aria-hidden=\"true\">*</span></label><input class=\"lf-input lf-focusable\" type=\"email\" id=\"lfEmail\" name=\"email\" autocomplete=\"email\" enterkeyhint=\"done\" aria-required=\"true\" tabindex=\"0\" aria-invalid=\"false\" maxlength=\"120\" aria-describedby=\"lfEmailErr\"><span class=\"lf-valid-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 14 14\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M1 7l4 4 8-8\"></path></svg></span><button type=\"button\" class=\"lf-clear-btn lf-focusable\" aria-label=\"Clear email field\" tabindex=\"-1\"><svg viewBox=\"0 0 10 10\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" d=\"M1 1l8 8M9 1L1 9\"></path></svg></button></div><div class=\"lf-err\" id=\"lfEmailErr\" role=\"alert\"></div></div><div class=\"lf-submit-wrap\"><button type=\"submit\" class=\"lf-btn lf-focusable primary-cta-btn\" id=\"lfSubmitBtn\" tabindex=\"0\"><div class=\"lf-spinner\"></div><span id=\"lfBtnText\">Request Advisory Callback</span><span class=\"cta-arrow-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4.5\" y1=\"11.5\" x2=\"11.5\" y2=\"4.5\"></line><polyline points=\"6.5 4.5 11.5 4.5 11.5 9.5\"></polyline></svg></span></button><p class=\"lf-privacy-consent\" style=\"font-size: 0.75rem; color: var(--neutral-grey); margin-top: 12px; text-align: center; line-height: 1.4;\"> By submitting your details, you agree to our <a href=\"/privacy-policy/\" style=\"text-decoration: underline; color: inherit;\">Privacy Policy</a>. </p><p class=\"lf-global-err\" id=\"lfGlobalErr\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">Connection issue. Your details are safely held. Please click Submit once more to retry or reach out to support.</p></div></form></div></div></div>";
   var HUBSPOT_PORTAL_ID = window.lfHubspotPortalId || "246341570";
   var HUBSPOT_FORM_GUID = window.lfHubspotFormGuid || "e0b2fc29-e29b-4983-850e-8dca7815d213";
   var REDIRECT_URL      = (typeof window.lfRedirectUrl !== "undefined") ? window.lfRedirectUrl : "/thankyou";
@@ -258,6 +259,9 @@
   var submitBtn          = document.getElementById("lfSubmitBtn");
   var btnText            = document.getElementById("lfBtnText");
   var honeypot           = form ? form.querySelector('input[name="website"]') : null;
+  var lfInitialForm = form;
+  var lfLateBound = false;
+  var lfQueuedOpen = null;
   var ccTrigger          = document.getElementById("lfCcTrigger");
   var ccDisplay          = document.getElementById("lfCcDisplay");
   var ccPanel            = document.getElementById("lfCcPanel");
@@ -372,6 +376,11 @@
 
   var ModalController = {
     open: function (context, formName, customOptions) {
+      if (typeof lfEnsureLeadForm === "function") lfEnsureLeadForm();
+      if (!document.getElementById("lfModalOverlay")) {
+        lfQueuedOpen = [context, formName, customOptions];
+        return;
+      }
       if (!modalOverlay) {
         modalOverlay       = document.getElementById("lfModalOverlay");
         modalTrigger       = document.getElementById("lfModalTrigger");
@@ -960,6 +969,8 @@
   })();
 
   var formSubmitTracker = async function (e) {
+    if (e && e.lfHandled) return;
+    if (e) e.lfHandled = true;
     e.preventDefault();
     if (isSubmitting) return;
     submitted = true;
@@ -1090,7 +1101,10 @@
     }
   };
 
-  if (form) form.addEventListener("submit", formSubmitTracker);
+  if (form && !form.__lfSubmitBound) {
+    form.__lfSubmitBound = true;
+    form.addEventListener("submit", formSubmitTracker);
+  }
 
   /* ── Automatic CTA binding across the entire website ── */
   function bindWebsiteCTAs() {
@@ -1184,4 +1198,168 @@
     });
     autofillListeners.forEach(function(item){ item.node.removeEventListener("animationstart", item.handler); });
   };
+
+  function lfRefreshRefs() {
+    modalOverlay       = document.getElementById("lfModalOverlay");
+    modalTrigger       = document.getElementById("lfModalTrigger");
+    modalClose         = document.getElementById("lfModalClose");
+    modalContent       = document.getElementById("lfWrap");
+    mainFormContentBox = document.getElementById("lfModalFormContent");
+    form               = document.getElementById("lfForm");
+    nameInput          = document.getElementById("lfName");
+    phoneInput         = document.getElementById("lfPhone");
+    emailInput         = document.getElementById("lfEmail");
+    nameField          = document.getElementById("lfNameField");
+    phoneField         = document.getElementById("lfPhoneField");
+    emailField         = document.getElementById("lfEmailField");
+    nameErr            = document.getElementById("lfNameErr");
+    phoneErr           = document.getElementById("lfPhoneErr");
+    emailErr           = document.getElementById("lfEmailErr");
+    submitBtn          = document.getElementById("lfSubmitBtn");
+    btnText            = document.getElementById("lfBtnText");
+    honeypot           = form ? form.querySelector('input[name="website"]') : null;
+    ccTrigger          = document.getElementById("lfCcTrigger");
+    ccDisplay          = document.getElementById("lfCcDisplay");
+    ccPanel            = document.getElementById("lfCcPanel");
+    ccSearch           = document.getElementById("lfCcSearch");
+    ccList             = document.getElementById("lfCcList");
+    ccVal              = document.getElementById("lfCcVal");
+    globalErr          = document.getElementById("lfGlobalErr");
+    ccBackdrop         = document.getElementById("lfCcBackdrop");
+  }
+
+  function lfAttachLateListeners() {
+    var root = modalOverlay || document;
+    root.querySelectorAll(".lf-input").forEach(function(inp) {
+      var h = function(e) {
+        if (e.animationName === "lfAutofillDetected") {
+          var f = inp.closest(".lf-field");
+          if (f) f.classList.add("lf-autofilled");
+          checkValueState(inp);
+          if (inp === phoneInput) PhoneSyncManager.syncInput();
+          if (modalOverlay) modalOverlay.scrollLeft = 0;
+          if (modalContent) modalContent.scrollLeft = 0;
+          if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
+        }
+      };
+      inp.addEventListener("animationstart", h);
+      inp.addEventListener("focus", function() {
+        if (modalOverlay) modalOverlay.scrollLeft = 0;
+        if (modalContent) modalContent.scrollLeft = 0;
+        if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
+      });
+      autofillListeners.push({ node: inp, handler: h });
+    });
+
+    if (modalTrigger) modalTrigger.addEventListener("click", window.openModal);
+    if (modalClose) modalClose.addEventListener("click", window.closeModal);
+    if (modalOverlay) {
+      modalOverlay.addEventListener("click", overlayClickTracker);
+      modalOverlay.addEventListener("keydown", modalKeyTracker);
+    }
+    if (ccBackdrop) {
+      ccBackdrop.addEventListener("click", function(e) {
+        e.stopPropagation();
+        closePanel();
+        if (ccTrigger) ccTrigger.focus();
+      });
+    }
+    if (ccTrigger) ccTrigger.addEventListener("click", ccTriggerTracker);
+    if (ccSearch) {
+      ccSearch.addEventListener("input", ccSearchTracker);
+      ccSearch.addEventListener("keydown", ccCcPanelKeyHandler);
+    }
+    var latePhoneClearBtn = document.getElementById("lfPhoneClearBtn");
+    if (latePhoneClearBtn) latePhoneClearBtn.addEventListener("click", phoneClearTracker);
+    root.querySelectorAll(".lf-field:not(.lf-field-phone)").forEach(function(fieldEl) {
+      var inp = fieldEl.querySelector(".lf-input");
+      var btn = fieldEl.querySelector(".lf-clear-btn");
+      if (btn && inp) {
+        var h = function() {
+          inp.value = ""; fieldEl.classList.remove("lf-is-valid");
+          checkValueState(inp); inp.focus();
+          if (submitted) {
+            if (inp.id === "lfName") ValidationService.vName(true);
+            if (inp.id === "lfEmail") ValidationService.vEmail(true);
+          }
+        };
+        btn.addEventListener("click", h);
+        activeFieldEraserClosuresArray.push({ node: btn, handler: h });
+      }
+    });
+    [nameInput, emailInput, phoneInput].forEach(function(el) {
+      if (!el) return;
+      el.addEventListener("focus", inputFocusTracker);
+      el.addEventListener("blur", inputBlurTracker);
+      el.addEventListener("input", inputInputTracker);
+    });
+    if (phoneInput) {
+      phoneInput.addEventListener("input", syncPhoneTracker);
+      phoneInput.addEventListener("change", syncPhoneTracker);
+      phoneInput.addEventListener("paste", phonePasteTracker);
+    }
+    if (form && !form.__lfSubmitBound) {
+      form.__lfSubmitBound = true;
+      form.addEventListener("submit", formSubmitTracker);
+    }
+    var gclid = document.getElementById("lfGclid");
+    var fclid = document.getElementById("lfFclid");
+    var utmSource = document.getElementById("lfUtmSource");
+    var utmMedium = document.getElementById("lfUtmMedium");
+    var utmCampaign = document.getElementById("lfUtmCampaign");
+    var utmTerm = document.getElementById("lfUtmTerm");
+    var utmContent = document.getElementById("lfUtmContent");
+    var sourceUrl = document.getElementById("lfSourceUrl");
+    if (typeof getParam === "function") {
+      if (gclid) gclid.value = getParam("gclid");
+      if (fclid) fclid.value = getParam("fclid");
+      if (utmSource) utmSource.value = getParam("utm_source");
+      if (utmMedium) utmMedium.value = getParam("utm_medium");
+      if (utmCampaign) utmCampaign.value = getParam("utm_campaign");
+      if (utmTerm) utmTerm.value = getParam("utm_term");
+      if (utmContent) utmContent.value = getParam("utm_content");
+    }
+    if (sourceUrl) sourceUrl.value = window.location.href;
+  }
+
+  function lfEnsureLeadForm() {
+    if (lfInitialForm || lfLateBound) return true;
+    if (!document.body) return false;
+    if (typeof phoneClearTracker !== "function" || typeof formSubmitTracker !== "function") return false;
+    if (!document.getElementById("lfModalOverlay")) {
+      if (document.readyState === "loading") return false;
+      document.body.insertAdjacentHTML("beforeend", LF_MODAL_HTML);
+    }
+    if (!document.getElementById("lfForm")) return false;
+    lfRefreshRefs();
+    lfAttachLateListeners();
+    lfLateBound = true;
+    return true;
+  }
+
+  function lfReplayQueuedOpen() {
+    if (!lfQueuedOpen) return;
+    var queued = lfQueuedOpen;
+    lfQueuedOpen = null;
+    window.openModal(queued[0], queued[1], queued[2]);
+  }
+
+  document.addEventListener("submit", function (e) {
+    var target = e.target;
+    if (!target || target.id !== "lfForm") return;
+    if (lfInitialForm || lfLateBound) return;
+    lfEnsureLeadForm();
+    if (typeof formSubmitTracker === "function") formSubmitTracker(e);
+  }, true);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      lfEnsureLeadForm();
+      lfReplayQueuedOpen();
+    });
+  } else {
+    lfEnsureLeadForm();
+    lfReplayQueuedOpen();
+  }
+
 })();
