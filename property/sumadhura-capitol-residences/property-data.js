@@ -9,7 +9,7 @@ const PROPERTY_DATA = {
   "rating": 4.03,
   "reviewsCount": 118,
   "shortDescription": "3 & 4 BHK Family-Sized Residences",
-  "secondaryLine": "4.1-Acre Parcel | 4 Towers | ~180m from Kadugodi Tree Park Metro",
+  "secondaryLine": "4.1-Acre Parcel | towers | ~180m from Kadugodi Tree Park Metro",
   "rera": "Reported RERA Completion: 30 December 2027",
   "possession": "30 December 2027",
   "status": "Under Construction",
@@ -24,11 +24,11 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "siteAddress": "Hope Farm Circle, ITPL Main Road, Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "4.1 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "77%",
-    "towers": "4 Towers",
+    "towers": "towers",
     "units": "368 Units (Reported)",
-    "clubhouse": "~21,000 sq.ft. (Reported)",
+    "clubhouse": "clubhouse size not confirmed (Reported)",
     "metroDistance": "~180 m"
   },
   "commuteCategories": {
@@ -114,7 +114,7 @@ const PROPERTY_DATA = {
       "Visitor Parking Bays"
     ],
     "Clubhouse & Social": [
-      "~21,000 sq.ft. Multi-Level Clubhouse (Reported)",
+      "clubhouse size not confirmed Multi-Level Clubhouse (Reported)",
       "Co-Working Spaces & Executive Lounge",
       "Multipurpose Celebration Hall",
       "Indoor Games Room & Table Tennis"

@@ -1,6 +1,6 @@
 const PROPERTY_DATA = {
   "id": "alembic-cloud-forest-alembic-city",
-  "name": "Alembic Cloud Forest at Alembic City",
+  "name": "Alembic Cloud Forest",
   "codename": "Alembic Cloud Forest Kadugodi Hope Farm",
   "location": "At Alembic City · Kadugodi / Hope Farm, Bengaluru",
   "builder": "Alembic",
@@ -8,8 +8,8 @@ const PROPERTY_DATA = {
   "tagline": "Integrated City Living. Strong East Bengaluru Location.",
   "rating": 3.90,
   "reviewsCount": 142,
-  "shortDescription": "2, 3 & 3.5 BHK + Home Office Residences in a ~15-Acre Residential Component",
-  "secondaryLine": "~15-Acre Residential Component | 3 Towers (G+34) | >70% Green/Open Area & 22 Amenities",
+  "shortDescription": "2, 3, 3.5 & 4 BHK + Home Office Residences in a ~15-Acre Residential Component",
+  "secondaryLine": "~15-Acre Residential Component | towers (G+34) | >70% Green/Open Area & 22 Amenities",
   "rera": "PRM/KA/RERA/1251/446/PR/250625/007869 | Target: 1 October 2029",
   "possession": "1 October 2029",
   "status": "Under Construction",
@@ -21,12 +21,12 @@ const PROPERTY_DATA = {
     "Tower 3"
   ],
   "startingPrice": "On request",
-  "siteAddress": "Alembic City Campus, Hope Farm - Kadugodi Main Road, Whitefield Precinct, Bengaluru, Karnataka 560067",
+  "siteAddress": "Alembic City Campus, Hope Farm - Kadugodi Main Road, Whitefield Precinct, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "~15 Acres (Residential)",
+    "landParcel": "a site area that is not confirmed (Residential)",
     "openSpace": ">70%",
-    "towers": "3 Towers (Primary Table)",
-    "units": "1,330 Homes",
+    "towers": "towers (Primary Table)",
+    "units": "798 Homes",
     "clubhouse": "~2,200 sq.ft. / 100 Homes",
     "metroDistance": "Whitefield / Kadugodi Metro (~2.5 km)"
   },

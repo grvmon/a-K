@@ -27,11 +27,11 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "siteAddress": "Sy.No 31/3, 32/3, 48/2A, 48/3 & 48/4 of Thubarahalli Village, Varthur Hobli, Marathahalli Main Road, Bangalore-East, Bengaluru",
   "metrics": {
-    "landParcel": "11.66 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "81%",
-    "towers": "7 Towers (2B+G+18)",
+    "towers": "towers (2B+G+18)",
     "units": "777 Residences (526 Phase 1)",
-    "clubhouse": "45,000 sq.ft.",
+    "clubhouse": "clubhouse size not confirmed",
     "amenitiesCount": "90+"
   },
   "commuteCategories": {
@@ -172,7 +172,7 @@ const PROPERTY_DATA = {
       "24/7 CCTV & Solar Fencing"
     ],
     "Recreation & Clubhouse": [
-      "45,000 sq.ft. Clubhouse",
+      "clubhouse size not confirmed",
       "Clubhouse drop-off water feature",
       "Outdoor dining & Cafeteria",
       "Informal Amphitheater",

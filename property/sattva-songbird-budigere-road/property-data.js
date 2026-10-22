@@ -26,9 +26,9 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "siteAddress": "Cheemasandra, Budigere Main Road, Off Old Madras Road, Bengaluru, Karnataka 560049",
   "metrics": {
-    "landParcel": "16.4 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "80%",
-    "towers": "6 Towers",
+    "towers": "towers",
     "units": "1,758 Units (Detailed assessment)",
     "clubhouse": "~100,000 sq.ft. (Reported)",
     "metroDistance": "~6.1 km"

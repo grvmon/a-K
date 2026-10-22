@@ -9,7 +9,7 @@ const PROPERTY_DATA = {
   "rating": 4.11,
   "reviewsCount": 128,
   "shortDescription": "1, 2, 3, 3 BHK + Study & 4 BHK Residences in a 24-Acre Plan",
-  "secondaryLine": "24-Acre Precinct | 14 Towers (2B+G+19) | ~86,000 sq.ft. Clubhouse | 70% Open Area",
+  "secondaryLine": "24-Acre Precinct | towers (a floor count that is not confirmed) | clubhouse size not confirmed | open area not confirmed",
   "rera": "PRM/KA/RERA/1251/446/PR/010126/008374 | Target: 30 June 2030",
   "possession": "30 June 2030",
   "status": "Under Construction",
@@ -22,14 +22,14 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "priceRangeDisplay": "On request",
   "pricePerSqftDisplay": "On request",
-  "siteAddress": "SH 35, Varthur Main Road, Opposite Varthur Lake, Whitefield Precinct, Bengaluru, Karnataka 560087",
+  "siteAddress": "SH 35, Varthur Main Road, Opposite Varthur Lake, Whitefield Precinct, Bengaluru, Karnataka 560001",
   "metrics": {
     "landParcel": "24 Acres (Precinct)",
     "townshipTotal": "107 Acres (Masterplan)",
-    "openSpace": "70% Landscaped",
-    "towers": "14 Towers",
+    "openSpace": "open area not confirmed",
+    "towers": "towers",
     "units": "~2,000 Residences",
-    "clubhouse": "~86,000 sq.ft.",
+    "clubhouse": "clubhouse size not confirmed",
     "metroDistance": "Kadugodi / Hope Farm Metro (~8.0 km)"
   },
   "configurations": [
@@ -216,7 +216,7 @@ const PROPERTY_DATA = {
   },
   "amenitiesCategorized": {
     "Clubhouse & Social": [
-      "~86,000 sq.ft. Resident Grand Clubhouse",
+      "clubhouse size not confirmed Resident Grand Clubhouse",
       "Multi-Purpose Banquet & Celebration Halls",
       "Co-Working Business Lounge & Private Video Pods",
       "Artisan Café & Alfresco Terrace Deck",
@@ -245,7 +245,7 @@ const PROPERTY_DATA = {
     ]
   },
   "specifications": {
-    "Structure": "Seismic Zone II compliant RCC shear-wall framework engineered for 2B + G + 19 floors.",
+    "Structure": "Seismic Zone II compliant RCC shear-wall framework engineered for 2B + G + a floor count that is not confirmed.",
     "Flooring": "Large-format 800x800mm glazed vitrified tiles in foyer, living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balconies.",
     "Doors & Windows": "8-foot high engineered timber main door with biometric smart lock; UPVC/powder-coated aluminum sliding windows with mosquito mesh.",
     "Sanitary & CP Fittings": "Concealed cisterns with Kohler, Grohe, or Jaguar sanitary ware and wall-hung EWCs.",

@@ -8,12 +8,12 @@ const PROPERTY_DATA = {
   "tagline": "Core Whitefield + Metro-led Family Living",
   "rating": 4.7,
   "reviewsCount": 115,
-  "shortDescription": "3 & 4 BHK Family Residences",
-  "secondaryLine": "Core Whitefield | 83% Open Area | 120+ Amenities",
+  "shortDescription": "1, 2, 1, 2, 3 & 4 BHK Family Residences",
+  "secondaryLine": "Core Whitefield | open area not confirmed | 120+ Amenities",
   "rera": "Phase IV: PRM/KA/RERA/1251/446/PR/310328 (Timeline Reconciliation Required)",
   "possession": "March 2028 (RERA Phase IV) / Dec 2027 (Builder Page)",
   "status": "Under Construction",
-  "structure": "2B + G + 19 Floors",
+  "structure": "2B + G + a floor count that is not confirmed",
   "towersCount": 7,
   "towerNames": [
     "Tower 1",
@@ -27,11 +27,11 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "siteAddress": "Borewell Road, Core Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "16.5 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "83%",
-    "towers": "7 Towers (2B+G+19)",
-    "units": "~1,300 Residences",
-    "clubhouse": "~54,000 sq.ft.",
+    "towers": "towers (a floor count that is not confirmed)",
+    "units": "— Residences",
+    "clubhouse": "clubhouse size not confirmed",
     "amenitiesCount": "120+"
   },
   "commuteCategories": {
@@ -71,7 +71,7 @@ const PROPERTY_DATA = {
       "Access controlled lobby points"
     ],
     "Recreation & Clubhouse": [
-      "~54,000 sq.ft. Multi-level Clubhouse",
+      "clubhouse size not confirmed Multi-level Clubhouse",
       "Indoor games arcade & Bowling alley",
       "Multipurpose banquet hall & Party lawn",
       "Cafeteria & Leisure seating decks",

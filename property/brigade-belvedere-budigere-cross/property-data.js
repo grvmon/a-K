@@ -8,12 +8,12 @@ const PROPERTY_DATA = {
   "tagline": "Value-Seeking Homes at Budigere Cross",
   "rating": 3.35,
   "reviewsCount": 105,
-  "shortDescription": "1, 2 & 3 BHK + Study Residences at Budigere Cross",
-  "secondaryLine": "10.7-Acre Scheme | 5 Towers (G+43) | ~75,000 sq.ft. Clubhouse & 80% Open Area",
+  "shortDescription": "1, 2, 3 & 3.5 BHK + Study Residences at Budigere Cross",
+  "secondaryLine": "10.7-Acre Scheme | towers (a floor count that is not confirmed) | clubhouse size not confirmed & 80% Open Area",
   "rera": "RERA Completion Target: 31 March 2031",
   "possession": "31 March 2031",
   "status": "Under Construction",
-  "structure": "G + 43 Floors",
+  "structure": "G + a floor count that is not confirmed",
   "towersCount": 5,
   "towerNames": [
     "Tower 1",
@@ -27,9 +27,9 @@ const PROPERTY_DATA = {
   "metrics": {
     "landParcel": "10.7 Acres (Detailed Scheme)",
     "openSpace": "80%",
-    "towers": "5 Towers (Detailed Scheme)",
-    "units": "1,750 Homes (Detailed Scheme)",
-    "clubhouse": "~75,000 sq.ft. (Reported)",
+    "towers": "towers (Detailed Scheme)",
+    "units": "773 Homes (Detailed Scheme)",
+    "clubhouse": "clubhouse size not confirmed (Reported)",
     "metroDistance": "Whitefield / Kadugodi Metro (~9.7–12 km)"
   },
   "commuteCategories": {
@@ -109,13 +109,13 @@ const PROPERTY_DATA = {
   "amenitiesCategorized": {
     "Arrival & Masterplan": [
       "Italian-Inspired Gateway & Entry Plaza",
-      "10.7-Acre Masterplan Scheme (5 Towers)",
+      "10.7-Acre Masterplan Scheme (towers)",
       "80% Open & Landscaped Space",
       "Central Promenade & Pedestrian Walkways",
       "Tower Drop-Off Decks"
     ],
     "Clubhouse & Social": [
-      "~75,000 sq.ft. Multi-Tier Clubhouse Complex (Reported)",
+      "clubhouse size not confirmed Multi-Tier Clubhouse Complex (Reported)",
       "40 Labelled Landscape & Amenity Elements",
       "Grand Banquet & Event Terraces",
       "Co-Working Lounges & Executive Pods",
@@ -137,7 +137,7 @@ const PROPERTY_DATA = {
     ]
   },
   "specifications": {
-    "Structure": "Integrated RCC shear wall high-rise structure (G + 43 floors).",
+    "Structure": "Integrated RCC shear wall high-rise structure (G + a floor count that is not confirmed).",
     "Flooring": "Vitrified tiles in living, dining & bedrooms; anti-skid ceramic tiles in toilets and balcony.",
     "Doors & Windows": "Engineered timber door frames; heavy-duty UPVC/Aluminum sliding balcony doors.",
     "Sanitary & Fittings": "Jaguar/Kohler or equivalent sanitary ware and CP fittings.",

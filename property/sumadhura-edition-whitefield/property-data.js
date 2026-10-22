@@ -9,7 +9,7 @@ const PROPERTY_DATA = {
   "rating": 3.82,
   "reviewsCount": 142,
   "shortDescription": "2, 3 & 4 BHK Residences",
-  "secondaryLine": "20-Acre Masterplan | 11 Towers | 76% Open Area",
+  "secondaryLine": "20-Acre Masterplan | towers | 76% Open Area",
   "rera": "Phase-I RERA Completion: 31 December 2029",
   "possession": "31 December 2029",
   "status": "Under Construction / Launch",
@@ -31,11 +31,11 @@ const PROPERTY_DATA = {
   "startingPrice": "On request",
   "siteAddress": "Siddapura, Core Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "20 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "76%",
-    "towers": "11 Towers (2B+G+18)",
+    "towers": "towers (2B+G+18)",
     "units": "~1,650 Residences (2 Phases)",
-    "clubhouse": "66,000 sq.ft. (Reported)",
+    "clubhouse": "clubhouse size not confirmed (Reported)",
     "amenitiesCount": "16+ Sports Courts"
   },
   "commuteCategories": {
@@ -129,7 +129,7 @@ const PROPERTY_DATA = {
       "Visitor Parking & Bus Bay"
     ],
     "Clubhouse & Social": [
-      "66,000 sq.ft. Multi-Level Clubhouse (Reported)",
+      "clubhouse size not confirmed Multi-Level Clubhouse (Reported)",
       "Cafeteria & Outdoor Dining",
       "Multipurpose Celebration Hall",
       "Co-Working Lounges with High-Speed Wi-Fi",
