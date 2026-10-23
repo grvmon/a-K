@@ -7742,13 +7742,15 @@ button:focus-visible,a:focus-visible {
     border: 0.5px solid rgba(255, 255, 255, 0.12);
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    transition: all 0.22s ease;
+    transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
-.footer-social-btn:hover {
+.footer-social-btn:hover,
+.footer-social-btn:focus {
     background: #E88D67;
     border-color: #E88D67;
     color: #2B2D31;
-    transform: translateY(-2px);
+    text-decoration: none;
+    transform: none;
 }
 
 /* Bottom Legal & Compliance */
