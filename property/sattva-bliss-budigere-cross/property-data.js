@@ -8,24 +8,24 @@ const PROPERTY_DATA = {
   "tagline": "Compact Community Living at Budigere",
   "rating": 3.40,
   "reviewsCount": 86,
-  "shortDescription": "1, 2 & 3 BHK Residences in a B+G+10 Lower-Rise Format",
-  "secondaryLine": "3.3-Acre Parcel | 338 Homes across 3 Towers | ~6,293 sq.ft. Clubhouse",
+  "shortDescription": "1, 2 & 3 BHK Residences in a floor count that is not confirmed Lower-Rise Format",
+  "secondaryLine": "3.3-Acre Parcel | 338 Homes across towers | ~6,293 sq.ft. Clubhouse",
   "rera": "RERA Completion: 22 August 2027",
   "possession": "22 August 2027",
   "status": "Under Construction",
-  "structure": "B + G + 10 Floors",
+  "structure": "B + G + a floor count that is not confirmed",
   "towersCount": 3,
   "towerNames": [
     "Tower 1",
     "Tower 2",
     "Tower 3"
   ],
-  "startingPrice": "₹0.66 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Budigere Cross, Off Old Madras Road (NH75), Bengaluru, Karnataka 560049",
   "metrics": {
-    "landParcel": "3.3 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "74–78%",
-    "towers": "3 Towers",
+    "towers": "towers",
     "units": "338 Homes",
     "clubhouse": "~6,293 sq.ft. (Reported)",
     "metroDistance": "~7.6 km"
@@ -134,11 +134,11 @@ const PROPERTY_DATA = {
     ]
   },
   "specifications": {
-    "Structure": "RCC framed structure designed for seismic resistance (B+G+10 floors).",
+    "Structure": "RCC framed structure designed for seismic resistance (a floor count that is not confirmed floors).",
     "Flooring": "Vitrified tile flooring in living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balcony.",
     "Doors & Windows": "Main door with teakwood frame and flush shutter; UPVC/Aluminum sliding windows with bug screens.",
     "Sanitary & Fittings": "Standard Jaquar/Hindware or equivalent CP fittings and sanitary fixtures.",
-    "Electrical": "Concealed copper wiring with modular switches, 100% backup for elevators and common areas."
+    "Electrical": "Concealed copper wiring with modular switches, backup for elevators and common areas."
   },
   "builderStats": {
     "yearsLegacy": "30+",

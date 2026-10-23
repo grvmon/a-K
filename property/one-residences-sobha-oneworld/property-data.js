@@ -9,7 +9,7 @@ const PROPERTY_DATA = {
   "rating": 3.24,
   "reviewsCount": 112,
   "shortDescription": "1, 2, 3 & 4 BHK Residences in a 48-Acre Integrated Masterplan",
-  "secondaryLine": "48-Acre Masterplan | 14 Towers | ~100,000 sq.ft. Clubhouse & 5 Themed Landscapes",
+  "secondaryLine": "48-Acre Masterplan | towers | clubhouse size not confirmed & 5 Themed Landscapes",
   "rera": "July 2032 – September 2033 (across 6 RERA phases)",
   "possession": "July 2032 – Sept 2033",
   "status": "Under Construction",
@@ -31,14 +31,14 @@ const PROPERTY_DATA = {
     "Tower 13",
     "Tower 14"
   ],
-  "startingPrice": "₹1.10 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Old Madras Road (NH75), Greater Whitefield Corridor, Bengaluru, Karnataka 560049",
   "metrics": {
-    "landParcel": "48 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "5 Themed Zones",
-    "towers": "14 Towers",
+    "towers": "towers",
     "units": "3,484 Homes",
-    "clubhouse": "~100,000 sq.ft. (Reported)",
+    "clubhouse": "clubhouse size not confirmed (Reported)",
     "metroDistance": "~4.3 km (Proposed)"
   },
   "commuteCategories": {
@@ -124,7 +124,7 @@ const PROPERTY_DATA = {
       "Dedicated Residential Wing Drop-Off Plazas"
     ],
     "Clubhouse & Social": [
-      "~100,000 sq.ft. Multi-Zone Clubhouse Complex (Reported)",
+      "clubhouse size not confirmed Multi-Zone Clubhouse Complex (Reported)",
       "Six Specialized Amenity Zones",
       "Grand Banquet Halls & Party Terraces",
       "Co-Working Hub & Executive Lounges",
@@ -147,10 +147,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "Integrated SOBHA RCC shear wall earthquake-resistant high-rise structure (3B + G + 45/46 floors).",
-    "Flooring": "Premium imported marble/vitrified tiles in living & dining; wooden-finish/vitrified tiles in master bedroom.",
+    "Flooring": "imported marble/vitrified tiles in living & dining; wooden-finish/vitrified tiles in master bedroom.",
     "Doors & Windows": "Custom SOBHA-manufactured timber door frames and heavy-duty UPVC sliding balcony doors.",
-    "Sanitary & Fittings": "Premium Kohler/Grohe or equivalent sanitary fixtures with wall-mounted EWCs.",
-    "Electrical": "Concealed copper wiring with premium switches, 100% power backup for common facilities."
+    "Sanitary & Fittings": "Kohler/Grohe or equivalent sanitary fixtures with wall-mounted EWCs.",
+    "Electrical": "Concealed copper wiring with switches, power backup for common facilities."
   },
   "builderStats": {
     "yearsLegacy": "30+",

@@ -9,7 +9,7 @@ const PROPERTY_DATA = {
   "rating": 4.03,
   "reviewsCount": 118,
   "shortDescription": "3 & 4 BHK Family-Sized Residences",
-  "secondaryLine": "4.1-Acre Parcel | 4 Towers | ~180m from Kadugodi Tree Park Metro",
+  "secondaryLine": "4.1-Acre Parcel | towers | ~180m from Kadugodi Tree Park Metro",
   "rera": "Reported RERA Completion: 30 December 2027",
   "possession": "30 December 2027",
   "status": "Under Construction",
@@ -21,14 +21,14 @@ const PROPERTY_DATA = {
     "Tower 3",
     "Tower 4"
   ],
-  "startingPrice": "₹2.55 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Hope Farm Circle, ITPL Main Road, Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "4.1 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "77%",
-    "towers": "4 Towers",
+    "towers": "towers",
     "units": "368 Units (Reported)",
-    "clubhouse": "~21,000 sq.ft. (Reported)",
+    "clubhouse": "clubhouse size not confirmed (Reported)",
     "metroDistance": "~180 m"
   },
   "commuteCategories": {
@@ -114,7 +114,7 @@ const PROPERTY_DATA = {
       "Visitor Parking Bays"
     ],
     "Clubhouse & Social": [
-      "~21,000 sq.ft. Multi-Level Clubhouse (Reported)",
+      "clubhouse size not confirmed Multi-Level Clubhouse (Reported)",
       "Co-Working Spaces & Executive Lounge",
       "Multipurpose Celebration Hall",
       "Indoor Games Room & Table Tennis"
@@ -134,10 +134,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "RCC shear wall framed earthquake-resistant structure.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid tiles in balcony and toilets.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid tiles in balcony and toilets.",
     "Doors & Windows": "Teakwood frame main door with smart digital lock; UPVC sliding doors for balconies.",
-    "Sanitary & Fittings": "Premium Kohler / Grohe CP and sanitary fittings with wall-mounted EWC.",
-    "Electrical & Automation": "Concealed copper wiring with modular switches, 100% DG power backup for common areas."
+    "Sanitary & Fittings": "Kohler / Grohe CP and sanitary fittings with wall-mounted EWC.",
+    "Electrical & Automation": "Concealed copper wiring with modular switches, DG power backup for common areas."
   },
   "builderStats": {
     "yearsLegacy": "30+",

@@ -4,11 +4,11 @@ const PROPERTY_DATA = {
   "codename": "Codename E-119",
   "location": "Thubarahalli, Whitefield, Bengaluru",
   "builder": "Sumadhura Group",
-  "badge": "Premium Project",
-  "tagline": "The Rarest Element in Luxury Living",
+  "badge": "project",
+  "tagline": "The Rarest Element in residential living",
   "rating": 4.8,
   "reviewsCount": 128,
-  "shortDescription": "Luxury 3 & 4 BHK Residences",
+  "shortDescription": "3 & 4 BHK Residences",
   "secondaryLine": "Surrounded by Twin Lakes | 81% Open Space",
   "rera": "PRM/KA/RERA/1251/446/PR/111225/008330",
   "possession": "December 2029",
@@ -24,14 +24,14 @@ const PROPERTY_DATA = {
     "MIRA (T6)",
     "OLEA (T7)"
   ],
-  "startingPrice": "\u20b92.18 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Sy.No 31/3, 32/3, 48/2A, 48/3 & 48/4 of Thubarahalli Village, Varthur Hobli, Marathahalli Main Road, Bangalore-East, Bengaluru",
   "metrics": {
-    "landParcel": "11.66 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "81%",
-    "towers": "7 Towers (2B+G+18)",
+    "towers": "towers (2B+G+18)",
     "units": "777 Residences (526 Phase 1)",
-    "clubhouse": "45,000 sq.ft.",
+    "clubhouse": "clubhouse size not confirmed",
     "amenitiesCount": "90+"
   },
   "commuteCategories": {
@@ -172,7 +172,7 @@ const PROPERTY_DATA = {
       "24/7 CCTV & Solar Fencing"
     ],
     "Recreation & Clubhouse": [
-      "45,000 sq.ft. Clubhouse",
+      "clubhouse size not confirmed",
       "Clubhouse drop-off water feature",
       "Outdoor dining & Cafeteria",
       "Informal Amphitheater",
@@ -207,11 +207,11 @@ const PROPERTY_DATA = {
     ]
   },
   "specifications": {
-    "Structure": "Core wall and shear wall monolithic construction using best-quality Aluminum Modular shuttering system.",
+    "Structure": "Core wall and shear wall monolithic construction using modular-grade Aluminum Modular shuttering system.",
     "Flooring": "Double height entrance lobby in Italian marble. Living, Dining & Master Bedroom in imported marble or laminated wooden flooring.",
     "Doors & Windows": "Timber frame main door with ironmongery. Aluminum sliding doors with clear glass and mosquito mesh for balconies.",
     "Sanitary & Fittings": "Wall-mounted EWC with concealed flush tank. TOTO / Grohe sanitary ware and Grohe CP fittings.",
-    "Electrical & Automation": "Havells/Polycab copper wiring, Panasonic/Schneider switches, home automation in living & master bedroom, 100% DG backup."
+    "Electrical & Automation": "Havells/Polycab copper wiring, Panasonic/Schneider switches, home automation in living & master bedroom, DG backup."
   },
   "builderStats": {
     "yearsLegacy": "30+",

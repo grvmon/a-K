@@ -8,12 +8,12 @@ const PROPERTY_DATA = {
   "tagline": "Core Whitefield + Metro-led Family Living",
   "rating": 4.7,
   "reviewsCount": 115,
-  "shortDescription": "3 & 4 BHK Family Residences",
-  "secondaryLine": "Core Whitefield | 83% Open Area | 120+ Amenities",
+  "shortDescription": "1, 2, 1, 2, 3 & 4 BHK Family Residences",
+  "secondaryLine": "Core Whitefield | open area not confirmed | 120+ Amenities",
   "rera": "Phase IV: PRM/KA/RERA/1251/446/PR/310328 (Timeline Reconciliation Required)",
   "possession": "March 2028 (RERA Phase IV) / Dec 2027 (Builder Page)",
   "status": "Under Construction",
-  "structure": "2B + G + 19 Floors",
+  "structure": "2B + G + a floor count that is not confirmed",
   "towersCount": 7,
   "towerNames": [
     "Tower 1",
@@ -24,14 +24,14 @@ const PROPERTY_DATA = {
     "Tower 6",
     "Tower 7"
   ],
-  "startingPrice": "₹2.45 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Borewell Road, Core Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
-    "landParcel": "16.5 Acres",
+    "landParcel": "a site area that is not confirmed",
     "openSpace": "83%",
-    "towers": "7 Towers (2B+G+19)",
-    "units": "~1,300 Residences",
-    "clubhouse": "~54,000 sq.ft.",
+    "towers": "towers (a floor count that is not confirmed)",
+    "units": "— Residences",
+    "clubhouse": "clubhouse size not confirmed",
     "amenitiesCount": "120+"
   },
   "commuteCategories": {
@@ -71,7 +71,7 @@ const PROPERTY_DATA = {
       "Access controlled lobby points"
     ],
     "Recreation & Clubhouse": [
-      "~54,000 sq.ft. Multi-level Clubhouse",
+      "clubhouse size not confirmed Multi-level Clubhouse",
       "Indoor games arcade & Bowling alley",
       "Multipurpose banquet hall & Party lawn",
       "Cafeteria & Leisure seating decks",
@@ -94,10 +94,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "RCC framed structure / monolithic shear wall construction engineered for seismic compliance.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balcony and toilets.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balcony and toilets.",
     "Doors & Windows": "Teakwood frame main door with digital lock. UPVC / Aluminum sliding doors with mosquito mesh for balconies.",
-    "Sanitary & Fittings": "Wall-mounted EWC with concealed cisterns. Premium Grohe / Kohler or equivalent CP and sanitary fittings.",
-    "Electrical & Automation": "Concealed copper wiring with modular switches. 100% DG backup for common areas and 1KW power backup per apartment."
+    "Sanitary & Fittings": "Wall-mounted EWC with concealed cisterns. Grohe / Kohler or equivalent CP and sanitary fittings.",
+    "Electrical & Automation": "Concealed copper wiring with modular switches. DG backup for common areas and 1KW power backup per apartment."
   },
   "builderStats": {
     "yearsLegacy": "30+",

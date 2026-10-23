@@ -17,7 +17,7 @@ const PROPERTIES_DATA = [
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "1,705 \u2013 2,730 sq.ft.",
+    "sizeRange": "1,550–2,550 sq.ft.",
     "possession": "Possession: Dec 2029",
     "possessionYear": 2029,
     "possessionCategory": "4+ Years",
@@ -41,15 +41,15 @@ const PROPERTIES_DATA = [
     "sublocation": "Borewell Road, Whitefield",
     "minPrice": 2.45,
     "maxPrice": 4.04,
-    "config": "3 & 4 BHK",
+    "config": "1, 2, 3 & 4 BHK",
     "configTypes": [
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "1,470 \u2013 2,425 sq.ft.",
-    "possession": "Possession: Mar 2028",
+    "sizeRange": "578–1,950 sq.ft.",
+    "possession": "RERA completion: 31 Mar 2028",
     "possessionYear": 2028,
-    "possessionCategory": "2\u20134 Years",
+    "possessionCategory": "2–4 Years",
     "score": 3.9,
     "verdict": "Core Whitefield + Metro-led Family Living",
     "heroImg": "thumbs/sumadhura-folium-whitefield.webp",
@@ -70,13 +70,13 @@ const PROPERTIES_DATA = [
     "sublocation": "Cheemasandra, Budigere Road",
     "minPrice": 0.72,
     "maxPrice": 2.67,
-    "config": "Studio \u2013 3 BHK",
+    "config": "1, 2 & 3 BHK",
     "configTypes": [
       "1 BHK",
       "2 BHK",
       "3 BHK"
     ],
-    "sizeRange": "470 \u2013 1,845 sq.ft.",
+    "sizeRange": "750–1,813 sq.ft.",
     "possession": "Possession: May 2029",
     "possessionYear": 2029,
     "possessionCategory": "4+ Years",
@@ -105,10 +105,10 @@ const PROPERTIES_DATA = [
       "2 BHK",
       "3 BHK"
     ],
-    "sizeRange": "540 \u2013 980 sq.ft.",
+    "sizeRange": "537–958 sq.ft.",
     "possession": "Possession: Aug 2027",
     "possessionYear": 2027,
-    "possessionCategory": "1\u20132 Years",
+    "possessionCategory": "1–2 Years",
     "score": 3.4,
     "verdict": "Compact Community Living at Budigere",
     "heroImg": "thumbs/sattva-bliss-budigere-cross.webp",
@@ -128,7 +128,7 @@ const PROPERTIES_DATA = [
     "sublocation": "Varthur Junction, Whitefield",
     "minPrice": 1.07,
     "maxPrice": 4.09,
-    "config": "1 \u2013 4 BHK",
+    "config": "1 – 4 BHK",
     "configTypes": [
       "1 BHK",
       "2 BHK",
@@ -136,8 +136,8 @@ const PROPERTIES_DATA = [
       "3.5 BHK",
       "4 BHK"
     ],
-    "sizeRange": "650 \u2013 2,500 sq.ft.",
-    "possession": "Possession: Jun 2030",
+    "sizeRange": "650 – 2,500 sq.ft.",
+    "possession": "RERA completion: 30 Jun 2030",
     "possessionYear": 2030,
     "possessionCategory": "4+ Years",
     "score": 4.11,
@@ -145,7 +145,8 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/prestige-evergreen-raintree-park.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": "/property/prestige-evergreen-raintree-park/"
+    "url": "/property/prestige-evergreen-raintree-park/",
+    "units": 2000
   },
   {
     "id": "brigade-belvedere-budigere-cross",
@@ -159,13 +160,13 @@ const PROPERTIES_DATA = [
     "sublocation": "Budigere Cross, Bengaluru",
     "minPrice": 0.93,
     "maxPrice": 2.79,
-    "config": "1, 2 & 3 BHK",
+    "config": "1, 2, 3 & 3.5 BHK",
     "configTypes": [
       "1 BHK",
       "2 BHK",
       "3 BHK"
     ],
-    "sizeRange": "620 \u2013 1,780 sq.ft.",
+    "sizeRange": "715–2,013 sq.ft.",
     "possession": "Possession: Mar 2031",
     "possessionYear": 2031,
     "possessionCategory": "4+ Years",
@@ -174,7 +175,8 @@ const PROPERTIES_DATA = [
     "heroImg": "thumbs/brigade-belvedere-budigere-cross.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": "/property/brigade-belvedere-budigere-cross/"
+    "url": "/property/brigade-belvedere-budigere-cross/",
+    "units": 773
   },
   {
     "id": "alembic-cloud-forest-alembic-city",
@@ -182,28 +184,29 @@ const PROPERTIES_DATA = [
       "PRM/KA/RERA/1251/446/PR/250625/007869"
     ],
     "slug": "alembic-cloud-forest-alembic-city",
-    "name": "Alembic Cloud Forest at Alembic City",
+    "name": "Alembic Cloud Forest",
     "developer": "Alembic Real Estate",
     "location": "Whitefield",
     "sublocation": "Kadugodi / Hope Farm, Whitefield",
     "minPrice": 2.2,
     "maxPrice": 3.49,
-    "config": "2, 3 & 3.5 BHK",
+    "config": "2, 3, 3.5 & 4 BHK",
     "configTypes": [
       "2 BHK",
       "3 BHK",
       "3.5 BHK"
     ],
-    "sizeRange": "1,310 \u2013 2,180 sq.ft.",
+    "sizeRange": "1,337–2,670 sq.ft.",
     "possession": "Possession: Oct 2029",
     "possessionYear": 2029,
-    "possessionCategory": "2\u20134 Years",
+    "possessionCategory": "2–4 Years",
     "score": 3.9,
     "verdict": "Integrated City Living",
     "heroImg": "thumbs/alembic-cloud-forest-alembic-city.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": "/property/alembic-cloud-forest-alembic-city/"
+    "url": "/property/alembic-cloud-forest-alembic-city/",
+    "units": 798
   },
   {
     "id": "one-residences-sobha-oneworld",
@@ -218,18 +221,18 @@ const PROPERTIES_DATA = [
     "slug": "one-residences-sobha-oneworld",
     "name": "One Residences at SOBHA OneWorld",
     "developer": "Sobha Limited",
-    "location": "Greater Whitefield",
+    "location": "Hoskote",
     "sublocation": "OMR / Greater Whitefield",
     "minPrice": 1.1,
     "maxPrice": 3.93,
-    "config": "1 \u2013 4 BHK",
+    "config": "1 – 4 BHK",
     "configTypes": [
       "1 BHK",
       "2 BHK",
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "680 \u2013 2,650 sq.ft.",
+    "sizeRange": "734–2,415 sq.ft.",
     "possession": "Possession: Jul 2032",
     "possessionYear": 2032,
     "possessionCategory": "4+ Years",
@@ -243,12 +246,12 @@ const PROPERTIES_DATA = [
   {
     "id": "sumadhura-edition-whitefield",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/230724/006995"
+      "PRM/KA/RERA/1251/446/PR/111225/008328"
     ],
     "slug": "sumadhura-edition-whitefield",
     "name": "Sumadhura Edition",
     "developer": "Sumadhura Group",
-    "location": "Whitefield",
+    "location": "Brookefield",
     "sublocation": "Siddapura, Core Whitefield",
     "minPrice": 2.06,
     "maxPrice": 3.73,
@@ -258,8 +261,8 @@ const PROPERTIES_DATA = [
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "1,280 \u2013 2,450 sq.ft.",
-    "possession": "Possession: Dec 2029",
+    "sizeRange": "1,360–2,295 sq.ft.",
+    "possession": "RERA completion: not confirmed",
     "possessionYear": 2029,
     "possessionCategory": "4+ Years",
     "score": 3.8,
@@ -286,10 +289,10 @@ const PROPERTIES_DATA = [
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "1,690 \u2013 2,280 sq.ft.",
-    "possession": "Possession: Dec 2028",
-    "possessionYear": 2028,
-    "possessionCategory": "2\u20134 Years",
+    "sizeRange": "1,635–2,150 sq.ft.",
+    "possession": "RERA completion: 31 Dec 2027",
+    "possessionYear": 2027,
+    "possessionCategory": "2–4 Years",
     "score": 4,
     "verdict": "Metro-led Convenience + Compact Community",
     "heroImg": "thumbs/sumadhura-capitol-residences.webp",
@@ -314,8 +317,8 @@ const PROPERTIES_DATA = [
       "4 BHK",
       "Villas"
     ],
-    "sizeRange": "3,800 \u2013 4,200 sq.ft.",
-    "possession": "Possession: Ready to Move",
+    "sizeRange": "3,450–3,490 sq.ft.",
+    "possession": "RERA completion: not confirmed",
     "possessionYear": 2026,
     "possessionCategory": "Ready to Move",
     "score": 4.1,
@@ -327,9 +330,7 @@ const PROPERTIES_DATA = [
   },
   {
     "id": "brigade-granada",
-    "rera": [
-      "PRM/KA/RERA/1251/446/PR/181124/007231"
-    ],
+    "rera": [],
     "slug": "brigade-granada",
     "name": "Brigade Granada",
     "developer": "Brigade Group",
@@ -337,28 +338,28 @@ const PROPERTIES_DATA = [
     "sublocation": "Kadugodi Road, Whitefield",
     "minPrice": 1.45,
     "maxPrice": 3.25,
-    "config": "2.5, 3 & 4 BHK",
+    "config": "1, 2, 3 & 4 BHK",
     "configTypes": [
-      "2.5 BHK",
+      "1 BHK",
+      "2 BHK",
       "3 BHK",
       "4 BHK"
     ],
-    "sizeRange": "1,260 \u2013 2,450 sq.ft.",
-    "possession": "Possession: Dec 2028",
-    "possessionYear": 2028,
-    "possessionCategory": "2\u20134 Years",
+    "sizeRange": "730–2,760 sq.ft.",
+    "possession": "RERA completion: not confirmed",
+    "possessionYear": null,
+    "possessionCategory": "2–4 Years",
     "score": 4.18,
     "verdict": "Boutique High-Rise Living near Hope Farm Metro",
     "heroImg": "thumbs/brigade-granada.webp",
     "heroW": 640,
     "heroH": 309,
-    "url": "/property/brigade-granada/"
+    "url": "/property/brigade-granada/",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "sattva-courtyard-old-madras-road",
-    "rera": [
-      "PRM/KA/RERA/1251/446/PR/260418/008112"
-    ],
+    "rera": [],
     "slug": "sattva-courtyard-old-madras-road",
     "name": "Sattva Courtyard",
     "developer": "Sattva Group",
@@ -379,13 +380,12 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-courtyard-old-madras-road/",
     "score": 3.8,
     "verdict": "Connected Arterial Living on OMR",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "prestige-avon-whitefield",
-    "rera": [
-      "RERA Applied (Pre-launch)"
-    ],
+    "rera": [],
     "slug": "prestige-avon-whitefield",
     "name": "Prestige Avon",
     "developer": "Prestige Group",
@@ -407,15 +407,16 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-avon-whitefield/",
     "score": 4.15,
     "verdict": "Institutional Pre-Launch in Whitefield",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "RERA Applied (Pre-launch)"
   },
   {
     "id": "purvankara-northern-lights-bagalur",
     "rera": [
-      "PRM/KA/RERA/1251/309/PR/260115/008410"
+      "PRM/KA/RERA/1251/309/PR/120326/008523"
     ],
     "slug": "purvankara-northern-lights-bagalur",
-    "name": "Purva Northern Lights",
+    "name": "Purvankara Northern Lights",
     "developer": "Puravankara Limited",
     "location": "Bagalur / Hennur Road",
     "sublocation": "KIADB Aerospace Park / Hennur, Bengaluru",
@@ -436,7 +437,9 @@ const PROPERTIES_DATA = [
     "url": "/property/purvankara-northern-lights-bagalur/",
     "score": 3.7,
     "verdict": "Large-Scale Aerospace Tech Park Residences",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Dec 2029",
+    "possessionYear": 2029,
+    "units": 1225
   },
   {
     "id": "godrej-florenne-whitefield",
@@ -464,12 +467,12 @@ const PROPERTIES_DATA = [
     "url": "/property/godrej-florenne-whitefield/",
     "score": 4.25,
     "verdict": "A-Grade Private Villa Community",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sumadhura-belfort-whitefield",
     "rera": [
-      "PRM/KA/RERA/1250/304/PR/250819/007980"
+      "PRM/KA/RERA/1250/304/PR/230926/008960"
     ],
     "slug": "sumadhura-belfort-whitefield",
     "name": "Sumadhura Belfort",
@@ -492,13 +495,13 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-belfort-whitefield/",
     "score": 3.85,
     "verdict": "Efficient High-Rise Family Community",
-    "possession": "Possession: Jun 2028"
+    "possession": "RERA completion: 31 Aug 2030",
+    "possessionYear": 2030,
+    "units": 523
   },
   {
     "id": "lodha-whitefield-whitefield",
-    "rera": [
-      "PRM/KA/RERA/1251/446/PR/251104/008215"
-    ],
+    "rera": [],
     "slug": "lodha-whitefield-whitefield",
     "name": "Lodha Whitefield",
     "developer": "Lodha Group",
@@ -519,7 +522,8 @@ const PROPERTIES_DATA = [
     "url": "/property/lodha-whitefield-whitefield/",
     "score": 4.1,
     "verdict": "Institutional Brand Footprint in Whitefield",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "sumadhura-panorama-devanahalli",
@@ -545,7 +549,7 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-panorama-devanahalli/",
     "score": 3.85,
     "verdict": "Institutional Plotted Layout near Airport",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sattva-ekatra-plots-devanahalli",
@@ -571,12 +575,13 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-ekatra-plots-devanahalli/",
     "score": 3.75,
     "verdict": "Master-Planned Plotted Enclave in North",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "prestige-parklane-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/260210/008455"
+      "PRM/KA/RERA/1251/309/PR/150926/008941",
+      "PRM/KA/RERA/1251/446/PR/200126/008415"
     ],
     "slug": "prestige-parklane-devanahalli",
     "name": "Prestige Parklane",
@@ -599,7 +604,9 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-parklane-devanahalli/",
     "score": 4.1,
     "verdict": "Prestige Quality in Devanahalli Micro-Market",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 31 Dec 2030",
+    "possessionYear": 2030,
+    "units": 1788
   },
   {
     "id": "prestige-elm-park-whitefield",
@@ -626,13 +633,11 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-elm-park-whitefield/",
     "score": 4.2,
     "verdict": "Prime Whitefield Arterial Convenience",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "brigade-wtc-devanahalli",
-    "rera": [
-      "PRM/KA/RERA/1250/303/PR/250410/007680"
-    ],
+    "rera": [],
     "slug": "brigade-wtc-devanahalli",
     "name": "Brigade WTC",
     "developer": "Brigade Group",
@@ -652,7 +657,8 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-wtc-devanahalli/",
     "score": 4.25,
     "verdict": "Integrated Commercial & Residential Growth Engine",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "prestige-lavender-fields-varthur",
@@ -681,7 +687,7 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-lavender-fields-varthur/",
     "score": 4.15,
     "verdict": "Integrated High-Rise Varthur Precinct",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sobha-neopolis-panathur",
@@ -710,7 +716,7 @@ const PROPERTIES_DATA = [
     "url": "/property/sobha-neopolis-panathur/",
     "score": 4.1,
     "verdict": "Massive Greek-Themed Panathur Township",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "brigade-lakecrest-kr-puram",
@@ -739,7 +745,9 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-lakecrest-kr-puram/",
     "score": 3.9,
     "verdict": "Lakeside High-Rise Living near KR Puram",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Mar 2030",
+    "possessionYear": 2030,
+    "units": 604
   },
   {
     "id": "brigade-citrine-budigere-cross",
@@ -769,12 +777,12 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-citrine-budigere-cross/",
     "score": 3.9,
     "verdict": "Contemporary High-Rise at Budigere Node",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "ramky-fortuna-bannerghatta-road",
     "rera": [
-      "PRM/KA/RERA/1251/310/PR/250718/007912"
+      "TOR/PRM/KA/RERA/1251/446/PR/250915/000308"
     ],
     "slug": "ramky-fortuna-bannerghatta-road",
     "name": "Ramky Fortuna",
@@ -796,12 +804,14 @@ const PROPERTIES_DATA = [
     "url": "/property/ramky-fortuna-bannerghatta-road/",
     "score": 3.75,
     "verdict": "Value High-Rise Living on Bannerghatta Main Road",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Dec 2030",
+    "possessionYear": 2030,
+    "units": 1739
   },
   {
     "id": "ramky-lumina-hosa-road",
     "rera": [
-      "PRM/KA/RERA/1251/308/PR/130624/006901"
+      "TOR/PRM/KA/RERA/1251/310/PR/250304/000047"
     ],
     "slug": "ramky-lumina-hosa-road",
     "name": "Ramky Lumina",
@@ -824,12 +834,13 @@ const PROPERTIES_DATA = [
     "url": "/property/ramky-lumina-hosa-road/",
     "score": 3.7,
     "verdict": "Strategic Commute Living near Hosa Road Junction",
-    "possession": "Possession: Dec 2028"
+    "possession": "Possession: Dec 2028",
+    "units": 729
   },
   {
     "id": "arvind-sylva-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/250512/007720"
+      "PRM/KA/RERA/1251/446/PR/090726/008800"
     ],
     "slug": "arvind-sylva-devanahalli",
     "name": "Arvind Sylva",
@@ -851,12 +862,14 @@ const PROPERTIES_DATA = [
     "url": "/property/arvind-sylva-devanahalli/",
     "score": 3.8,
     "verdict": "Nature-Centric Plotted Community",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 31 Aug 2031",
+    "possessionYear": 2031,
+    "units": 374
   },
   {
     "id": "birla-evara-sarjapur-road",
     "rera": [
-      "PRM/KA/RERA/1251/308/PR/060225/007487"
+      "PRM/KA/RERA/1251/446/PR/060225/007487"
     ],
     "slug": "birla-evara-sarjapur-road",
     "name": "Birla Evara",
@@ -880,13 +893,13 @@ const PROPERTIES_DATA = [
     "url": "/property/birla-evara-sarjapur-road/",
     "score": 4.15,
     "verdict": "Institutional Grade Living on Sarjapur Road",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 25 Dec 2031",
+    "possessionYear": 2031,
+    "units": 1594
   },
   {
     "id": "lodha-elanza-bannerghatta-road",
-    "rera": [
-      "PRM/KA/RERA/1251/310/PR/250822/007995"
-    ],
+    "rera": [],
     "slug": "lodha-elanza-bannerghatta-road",
     "name": "Lodha Elanza",
     "developer": "Lodha Group",
@@ -907,7 +920,8 @@ const PROPERTIES_DATA = [
     "url": "/property/lodha-elanza-bannerghatta-road/",
     "score": 4.15,
     "verdict": "Institutional Urban Development in South Bangalore",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "eaton-park-at-the-prestige-city-sarjapur-road",
@@ -935,7 +949,9 @@ const PROPERTIES_DATA = [
     "url": "/property/eaton-park-at-the-prestige-city-sarjapur-road/",
     "score": 4.2,
     "verdict": "Prime Cluster in 180-Acre Prestige City",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 30 Jun 2030",
+    "possessionYear": 2030,
+    "units": 366
   },
   {
     "id": "keya-the-urban-forest-sarjapur-road",
@@ -963,12 +979,14 @@ const PROPERTIES_DATA = [
     "url": "/property/keya-the-urban-forest-sarjapur-road/",
     "score": 3.85,
     "verdict": "Biophilic Architecture on Sarjapur Road",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: 31 Dec 2028",
+    "possessionYear": 2028,
+    "units": 391
   },
   {
     "id": "godrej-regent-park-east-bangalore",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/250918/008088"
+      "PRM/KA/RERA/1251/308/PR/150726/008810"
     ],
     "slug": "godrej-regent-park-east-bangalore",
     "name": "Godrej Regent Park",
@@ -991,13 +1009,13 @@ const PROPERTIES_DATA = [
     "url": "/property/godrej-regent-park-east-bangalore/",
     "score": 3.8,
     "verdict": "Master-Planned East Bengaluru Living",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Jul 2031",
+    "possessionYear": 2031,
+    "units": 534
   },
   {
     "id": "heart-of-harmony-by-ckpc-kudlu-gate",
-    "rera": [
-      "PRM/KA/RERA/1251/310/PR/251010/008150"
-    ],
+    "rera": [],
     "slug": "heart-of-harmony-by-ckpc-kudlu-gate",
     "name": "Heart of Harmony by CKPC",
     "developer": "CKPC Properties",
@@ -1018,12 +1036,13 @@ const PROPERTIES_DATA = [
     "url": "/property/heart-of-harmony-by-ckpc-kudlu-gate/",
     "score": 3.75,
     "verdict": "Electronic City Metro Corridor Urban High-Rise",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "purva-heritage-south-bangalore",
     "rera": [
-      "PRM/KA/RERA/1251/310/PR/250422/007705"
+      "PRM/KA/RERA/1251/310/PR/090726/008801"
     ],
     "slug": "purva-heritage-south-bangalore",
     "name": "Purva Heritage",
@@ -1045,7 +1064,7 @@ const PROPERTIES_DATA = [
     "url": "/property/purva-heritage-south-bangalore/",
     "score": 3.85,
     "verdict": "Heritage Aesthetics with Modern Infrastructure",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "provident-sunworth-city-kengeri",
@@ -1072,7 +1091,7 @@ const PROPERTIES_DATA = [
     "url": "/property/provident-sunworth-city-kengeri/",
     "score": 3.7,
     "verdict": "Expansive 60-Acre Metro Township at Mysore Road",
-    "possession": "Possession: Ready to Move"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sattva-forest-ridge-jp-nagar",
@@ -1101,7 +1120,7 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-forest-ridge-jp-nagar/",
     "score": 3.85,
     "verdict": "Serene Nature-Facing Homes in JP Nagar Extension",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "arvind-skycrest-bannerghatta-road",
@@ -1130,7 +1149,9 @@ const PROPERTIES_DATA = [
     "url": "/property/arvind-skycrest-bannerghatta-road/",
     "score": 3.9,
     "verdict": "Modern Smart-Living High-Rise in South",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Mar 2031",
+    "possessionYear": 2031,
+    "units": 333
   },
   {
     "id": "casagrand-moondance-mysore-road",
@@ -1158,7 +1179,9 @@ const PROPERTIES_DATA = [
     "url": "/property/casagrand-moondance-mysore-road/",
     "score": 3.75,
     "verdict": "Contemporary Waterfront Living on Mysore Road",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Dec 2029",
+    "possessionYear": 2029,
+    "units": 504
   },
   {
     "id": "casagrand-casablanca-kanakapura-road",
@@ -1187,7 +1210,7 @@ const PROPERTIES_DATA = [
     "url": "/property/casagrand-casablanca-kanakapura-road/",
     "score": 3.8,
     "verdict": "Roman-Inspired High-Rise Living near Metro",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "casagrand-aquene-kengeri",
@@ -1215,7 +1238,7 @@ const PROPERTIES_DATA = [
     "url": "/property/casagrand-aquene-kengeri/",
     "score": 3.75,
     "verdict": "Family Community Living near Kengeri Metro",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sattva-anugraha-vijayanagar",
@@ -1242,7 +1265,7 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-anugraha-vijayanagar/",
     "score": 3.8,
     "verdict": "Established Urban High-Rise Living in Vijayanagar",
-    "possession": "Possession: Ready to Move"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "lodha-azur-bannerghatta-road",
@@ -1270,7 +1293,7 @@ const PROPERTIES_DATA = [
     "url": "/property/lodha-azur-bannerghatta-road/",
     "score": 4.25,
     "verdict": "A-Grade Lakeside Residences on Bannerghatta Rd",
-    "possession": "Possession: Jun 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "prestige-southern-star-bannerghatta-road",
@@ -1299,7 +1322,9 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-southern-star-bannerghatta-road/",
     "score": 4.2,
     "verdict": "Flagship 42-Acre South Bengaluru High-Rise",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 30 Sep 2029",
+    "possessionYear": 2029,
+    "units": 2130
   },
   {
     "id": "brigade-calista-budigere-cross",
@@ -1327,12 +1352,13 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-calista-budigere-cross/",
     "score": 3.85,
     "verdict": "Value-Engineered Community on Budigere Road",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "mahindra-blossom-hope-farm",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/171225/008347"
+      "PRM/KA/RERA/1251/446/PR/171225/008348",
+      "TOR/PRM/KA/RERA/1251/446/PR/260615/008348"
     ],
     "slug": "mahindra-blossom-hope-farm",
     "name": "Mahindra Blossom",
@@ -1355,7 +1381,9 @@ const PROPERTIES_DATA = [
     "url": "/property/mahindra-blossom-hope-farm/",
     "score": 4.05,
     "verdict": "Green-Engineered Residences near Hope Farm",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Oct 2030",
+    "possessionYear": 2030,
+    "units": 735
   },
   {
     "id": "vaswani-starlight-whitefield",
@@ -1383,12 +1411,12 @@ const PROPERTIES_DATA = [
     "url": "/property/vaswani-starlight-whitefield/",
     "score": 3.8,
     "verdict": "Boutique High-Rise on ECC Road",
-    "possession": "Possession: Jun 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sattva-angane-budigere",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/250610/007820"
+      "PRM/KA/RERA/1251/446/PR/180926/008944"
     ],
     "slug": "sattva-angane-budigere",
     "name": "Sattva Angane",
@@ -1410,7 +1438,8 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-angane-budigere/",
     "score": 3.75,
     "verdict": "Suburban Low-Density Residences",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 21 Oct 2032",
+    "possessionYear": 2032
   },
   {
     "id": "prestige-raintree-park-varthur",
@@ -1418,7 +1447,7 @@ const PROPERTIES_DATA = [
       "PRM/KA/RERA/1251/446/PR/270824/006981"
     ],
     "slug": "prestige-raintree-park-varthur",
-    "name": "Prestige Raintree Park (Phase 1)",
+    "name": "Prestige Raintree Park",
     "developer": "Prestige Group",
     "location": "Varthur",
     "sublocation": "Varthur, Bengaluru",
@@ -1439,7 +1468,8 @@ const PROPERTIES_DATA = [
     "url": "/property/prestige-raintree-park-varthur/",
     "score": 4.3,
     "verdict": "Flagship Integrated Township Phase 1",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 31 Dec 2028",
+    "possessionYear": 2028
   },
   {
     "id": "the-grandstand-address-by-address-maker-sarjapur-road",
@@ -1466,13 +1496,11 @@ const PROPERTIES_DATA = [
     "url": "/property/the-grandstand-address-by-address-maker-sarjapur-road/",
     "score": 3.8,
     "verdict": "Low-Density Plotted & Villa Haven",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "my-home-whitefield-whitefield",
-    "rera": [
-      "PRM/KA/RERA/1251/446/PR/250912/008045"
-    ],
+    "rera": [],
     "slug": "my-home-whitefield-whitefield",
     "name": "My Home Whitefield",
     "developer": "My Home Group",
@@ -1494,12 +1522,13 @@ const PROPERTIES_DATA = [
     "url": "/property/my-home-whitefield-whitefield/",
     "score": 4.0,
     "verdict": "Large-Scale Integrated Living Concept",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "sattva-doddaballapur-doddaballapur",
     "rera": [
-      "PRM/KA/RERA/1250/301/PR/250214/007510"
+      "PRM/KA/RERA/1250/301/PR/180926/008945"
     ],
     "slug": "sattva-doddaballapur-doddaballapur",
     "name": "Sattva Doddaballapur",
@@ -1520,12 +1549,14 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-doddaballapur-doddaballapur/",
     "score": 3.65,
     "verdict": "Strategic Long-Term North Industrial Plotted Land",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "brigade-oasis-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/041122/005401"
+      "PRM/KA/RERA/1250/303/PR/041122/005401",
+      "PRM/KA/RERA/1250/303/PR/220223/005745",
+      "PRM/KA/RERA/1250/303/PR/220124/006562"
     ],
     "slug": "brigade-oasis-devanahalli",
     "name": "Brigade Oasis",
@@ -1546,7 +1577,8 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-oasis-devanahalli/",
     "score": 4.05,
     "verdict": "A-Grade Plotted Sanctuary in North Bengaluru",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 30 Jun 2026",
+    "possessionYear": 2026
   },
   {
     "id": "brigade-el-dorado-bagalur",
@@ -1575,12 +1607,12 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-el-dorado-bagalur/",
     "score": 3.8,
     "verdict": "50-Acre Integrated Township at Aerospace Park",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "godrej-woods-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/250720/007925"
+      "PRM/KA/RERA/1251/472/PR/121125/008248"
     ],
     "slug": "godrej-woods-devanahalli",
     "name": "Godrej Woods",
@@ -1602,7 +1634,9 @@ const PROPERTIES_DATA = [
     "url": "/property/godrej-woods-devanahalli/",
     "score": 3.9,
     "verdict": "Green Plotted Infrastructure Development",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 30 Nov 2030",
+    "possessionYear": 2030,
+    "units": 558
   },
   {
     "id": "godrej-msr-city-devanahalli",
@@ -1629,7 +1663,8 @@ const PROPERTIES_DATA = [
     "url": "/property/godrej-msr-city-devanahalli/",
     "score": 4.0,
     "verdict": "Joint-Venture High-Rise Township Hub",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 31 Dec 2030",
+    "possessionYear": 2030
   },
   {
     "id": "sumadhura-elysium-panathur",
@@ -1662,7 +1697,7 @@ const PROPERTIES_DATA = [
   {
     "id": "sumadhura-solea-whitefield",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/251120/008260"
+      "PRM/KA/RERA/1251/446/PR/100326/008517"
     ],
     "slug": "sumadhura-solea-whitefield",
     "name": "Sumadhura Solea",
@@ -1685,7 +1720,9 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-solea-whitefield/",
     "score": 3.85,
     "verdict": "Transit-Oriented Compact Community",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 30 Jun 2029",
+    "possessionYear": 2029,
+    "units": 233
   },
   {
     "id": "sumadhura-epitome-thanisandra",
@@ -1714,12 +1751,12 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-epitome-thanisandra/",
     "score": 3.9,
     "verdict": "Modern High-Rise Living near Manyata Tech Park",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sumadhura-sarang-whitefield",
     "rera": [
-      "PRM/KA/RERA/1251/446/PR/060623/005975"
+      "PRM/KA/RERA/1251/446/PR/050225/007481"
     ],
     "slug": "sumadhura-sarang-whitefield",
     "name": "Sumadhura Sarang",
@@ -1742,12 +1779,12 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-sarang-whitefield/",
     "score": 3.9,
     "verdict": "Spacious High-Rise Units at Doddanekkundi",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: not confirmed"
   },
   {
     "id": "sumadhura-pramoda-rajarajeshwari-nagar",
     "rera": [
-      "PRM/KA/RERA/1251/310/PR/130924/007043"
+      "PRM/KA/RERA/1251/310/PR/250325/007625"
     ],
     "slug": "sumadhura-pramoda-rajarajeshwari-nagar",
     "name": "Sumadhura Pramoda",
@@ -1769,12 +1806,14 @@ const PROPERTIES_DATA = [
     "url": "/property/sumadhura-pramoda-rajarajeshwari-nagar/",
     "score": 3.9,
     "verdict": "Exclusive Community in RR Nagar West Corridor",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Dec 2029",
+    "possessionYear": 2029,
+    "units": 297
   },
   {
     "id": "sattva-city-doddajala",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/300125/007458"
+      "PRM/KA/RERA/1251/472/PR/270226/008494"
     ],
     "slug": "sattva-city-doddajala",
     "name": "Sattva City",
@@ -1800,12 +1839,14 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-city-doddajala/",
     "score": 3.95,
     "verdict": "Mega Integrated Township along Doddajala Highway",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 28 Feb 2032",
+    "possessionYear": 2032,
+    "units": 2477
   },
   {
     "id": "sattva-aeropolis-phase-ii-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/140223/005725"
+      "PRM/KA/RERA/1250/303/PR/250925/008119"
     ],
     "slug": "sattva-aeropolis-phase-ii-devanahalli",
     "name": "Sattva Aeropolis Phase II",
@@ -1828,12 +1869,14 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-aeropolis-phase-ii-devanahalli/",
     "score": 3.75,
     "verdict": "Value High-Rise Living near KIADB Aerospace Park",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: 16 Oct 2028",
+    "possessionYear": 2028,
+    "units": 554
   },
   {
     "id": "sattva-vasanta-cove-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/080525/007730"
+      "PRM/KA/RERA/1250/303/PR/041225/008310"
     ],
     "slug": "sattva-vasanta-cove-devanahalli",
     "name": "Sattva Vasanta Cove",
@@ -1857,12 +1900,14 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-vasanta-cove-devanahalli/",
     "score": 3.8,
     "verdict": "Plotted Living in Devanahalli Aerotropolis",
-    "possession": "Possession: Dec 2027"
+    "possession": "RERA completion: 27 Dec 2030",
+    "possessionYear": 2030,
+    "units": 200
   },
   {
     "id": "sattva-aaranya-south-bangalore",
     "rera": [
-      "PRM/KA/RERA/1251/310/PR/250812/007960"
+      "PRM/KA/RERA/1251/310/PR/241225/008358"
     ],
     "slug": "sattva-aaranya-south-bangalore",
     "name": "Sattva Aaranya",
@@ -1885,7 +1930,9 @@ const PROPERTIES_DATA = [
     "url": "/property/sattva-aaranya-south-bangalore/",
     "score": 3.75,
     "verdict": "Serene Plotted Enclave in South Bangalore",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 23 Jan 2031",
+    "possessionYear": 2031,
+    "units": 418
   },
   {
     "id": "brigade-avalon-whitefield",
@@ -1913,12 +1960,14 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-avalon-whitefield/",
     "score": 4.2,
     "verdict": "A-Grade High-Rise Living in Whitefield",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 31 Mar 2030",
+    "possessionYear": 2030,
+    "units": 206
   },
   {
     "id": "brigade-lumina-tumkur-road",
     "rera": [
-      "PRM/KA/RERA/1251/310/PR/250418/007695"
+      "PRM/KA/RERA/1251/309/PR/230326/008545"
     ],
     "slug": "brigade-lumina-tumkur-road",
     "name": "Brigade Lumina",
@@ -1940,7 +1989,9 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-lumina-tumkur-road/",
     "score": 3.9,
     "verdict": "Transit-Connected Living on Tumkur Road",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Dec 2030",
+    "possessionYear": 2030,
+    "units": 416
   },
   {
     "id": "brigade-insignia-yelahanka",
@@ -1968,12 +2019,14 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-insignia-yelahanka/",
     "score": 4.25,
     "verdict": "Ultra-Exclusive Sky Residences in Yelahanka",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 30 Jun 2029",
+    "possessionYear": 2029
   },
   {
     "id": "brigade-eternia-yelahanka",
     "rera": [
-      "PRM/KA/RERA/1251/309/PR/030425/007648"
+      "PRM/KA/RERA/1251/309/PR/070325/007559",
+      "PRM/KA/RERA/1251/446/PR/060825/007979"
     ],
     "slug": "brigade-eternia-yelahanka",
     "name": "Brigade Eternia",
@@ -1996,12 +2049,14 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-eternia-yelahanka/",
     "score": 4.15,
     "verdict": "Architectural Elegance in North Bengaluru",
-    "possession": "Possession: Dec 2029"
+    "possession": "RERA completion: 31 Mar 2030",
+    "possessionYear": 2030,
+    "units": 1124
   },
   {
     "id": "brigade-laurel-maple-devanahalli",
     "rera": [
-      "PRM/KA/RERA/1250/303/PR/240814/006950"
+      "PRM/KA/RERA/1250/303/PR/040326/008505"
     ],
     "slug": "brigade-laurel-maple-devanahalli",
     "name": "Brigade Laurel & Maple",
@@ -2023,12 +2078,14 @@ const PROPERTIES_DATA = [
     "url": "/property/brigade-laurel-maple-devanahalli/",
     "score": 3.9,
     "verdict": "Twin-Tower Suburban Residential Precinct",
-    "possession": "Possession: Dec 2028"
+    "possession": "RERA completion: 31 Mar 2030",
+    "possessionYear": 2030
   },
   {
     "id": "godrej-woodland-sarjapur",
     "rera": [
-      "PRM/KA/RERA/1250/304/PR/210208/003885"
+      "PRM/KA/RERA/1250/304/PR/020922/005201",
+      "PRM/KA/RERA/1250/304/PR/210208/003856"
     ],
     "slug": "godrej-woodland-sarjapur",
     "name": "Godrej Woodland",
@@ -2077,7 +2134,8 @@ const PROPERTIES_DATA = [
     "url": "/property/godrej-ananda-bagalur/",
     "score": 3.85,
     "verdict": "High-Rise Studio & Family Living in Bagalur",
-    "possession": "Possession: Dec 2026"
+    "possession": "RERA completion: 8 Jan 2027",
+    "possessionYear": 2027
   },
   {
     "id": "purva-atmosphere-thanisandra",
@@ -2105,13 +2163,12 @@ const PROPERTIES_DATA = [
     "url": "/property/purva-atmosphere-thanisandra/",
     "score": 4.1,
     "verdict": "Bold Air-Filtration Architecture at Thanisandra",
-    "possession": "Possession: Ready to Move"
+    "possession": "RERA completion: 30 Dec 2025",
+    "possessionYear": 2025
   },
   {
     "id": "purva-celestial-airport-road",
-    "rera": [
-      "PRM/KA/RERA/1251/309/PR/071022/005303"
-    ],
+    "rera": [],
     "slug": "purva-celestial-airport-road",
     "name": "Purva Celestial",
     "developer": "Puravankara Limited",
@@ -2132,7 +2189,8 @@ const PROPERTIES_DATA = [
     "url": "/property/purva-celestial-airport-road/",
     "score": 3.8,
     "verdict": "Airport Expressway Corridor Residences",
-    "possession": "Possession: Jun 2027"
+    "possession": "RERA completion: not confirmed",
+    "reraStatus": "Registration not confirmed"
   },
   {
     "id": "purva-park-hill-kanakapura-road",
@@ -2188,6 +2246,7 @@ const PROPERTIES_DATA = [
     "url": "/property/purva-zenium-airport-road/",
     "score": 3.85,
     "verdict": "High-Tech High-Rise on International Airport Road",
-    "possession": "Possession: Ready to Move"
+    "possession": "RERA completion: 30 Dec 2024",
+    "possessionYear": 2024
   }
 ];
