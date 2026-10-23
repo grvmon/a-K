@@ -840,7 +840,7 @@ b .brand-inline-text,
 .nav-cta-btn:hover {
     background:var(--highlight-gold);
     color:var(--white);
-    transform:translateY(-2px);
+    transform:none;
     box-shadow: none !important}
 
 .mobile-toggle,.mobile-drawer,.mobile-nav-overlay {
@@ -1326,7 +1326,7 @@ b .brand-inline-text,
 
 .mobile-drawer-cta:hover,.mobile-drawer-cta:active {
     background-color:var(--deep-navy);
-    transform:translateY(-1px);
+    transform:none;
     box-shadow: none !important}
 
 .mobile-drawer-subtext {
@@ -1459,7 +1459,7 @@ body.drawer-open {
     background:#734937;
     border-color:var(--highlight-gold);
     color:var(--white);
-    transform:translateY(-1px);
+    transform:none;
     box-shadow: none !important}
 
 .sd-btn-gold .btn-arrow-badge,.nav-cta-btn .btn-arrow-badge,.btn-arrow-badge {
@@ -1523,7 +1523,7 @@ body.drawer-open {
 .sd-btn-gold:hover {
     background:#734937;
     color:var(--white);
-    transform:translateY(-2px);
+    transform:none;
     box-shadow: none !important}
 
 .sd-btn-gold:hover .btn-arrow-badge {
@@ -4434,7 +4434,7 @@ body.page-404 .error-404-section {
 
 .premium-inline-cta:hover {
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .premium-inline-cta span {
@@ -4481,7 +4481,7 @@ body.page-404 .error-404-section {
 .nav-cta-btn:hover {
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .nav-cta-btn,.mobile-drawer-cta {
@@ -4494,7 +4494,7 @@ body.page-404 .error-404-section {
 
 .nav-cta-btn:hover,.mobile-drawer-cta:hover {
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .nav-cta-btn span,.mobile-drawer-cta span {
@@ -4532,7 +4532,7 @@ body.page-404 .error-404-section {
 
 .header-nav .nav-cta-btn:hover,.header-nav.transparent-header:not(.scrolled) .nav-cta-btn:hover,.mobile-drawer-cta:hover {
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .header-nav .nav-cta-btn span,.header-nav.transparent-header:not(.scrolled) .nav-cta-btn span,.mobile-drawer-cta span {
@@ -4558,7 +4558,7 @@ body.page-404 .error-404-section {
 
 .primary-cta-btn:hover,.header-nav .primary-cta-btn:hover,.header-nav.transparent-header:not(.scrolled) .primary-cta-btn:hover {
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .primary-cta-btn span,.primary-cta-btn .btn-arrow-badge,.header-nav.transparent-header:not(.scrolled) .primary-cta-btn span {
@@ -4572,7 +4572,7 @@ body.page-404 .error-404-section {
 .primary-cta-btn:hover,.header-nav .primary-cta-btn:hover,.header-nav.transparent-header:not(.scrolled) .primary-cta-btn:hover,.mobile-drawer-cta.primary-cta-btn:hover,.nav-cta-btn.primary-cta-btn:hover {
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .primary-cta-btn,.nav-cta-btn,.premium-inline-cta,.mobile-drawer-cta {
@@ -4744,7 +4744,7 @@ body.page-404 .error-404-section {
 .header-nav.scrolled .primary-cta-btn:hover {
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .header-nav.scrolled .primary-cta-btn span {
@@ -4969,7 +4969,7 @@ body.page-404 .error-404-section {
 .sd-btn-gold:hover,.lf-btn:hover,.form-submit-btn:hover,button.sd-btn-gold:hover,a.sd-btn-gold:hover,.mobile-drawer-cta:hover,.nav-cta-btn:hover {
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
     box-shadow: none !important;
-    transform:translateY(-1px) !important
+    transform:none !important
 }
 
 .sd-btn-gold span,.lf-btn span,.form-submit-btn span {
@@ -6410,7 +6410,7 @@ body.drawer-open .advisor-floating-unit {
 .primary-cta-btn:hover,.nav-cta-btn:hover,.mobile-drawer-cta:hover,.premium-inline-cta:hover {
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
     box-shadow: none !important;
-    transform:translateY(-1px) !important;
+    transform:none !important;
     border:none !important;
     color:#FFFFFF !important
 }
@@ -6655,8 +6655,9 @@ button:focus-visible,a:focus-visible {
     outline-offset:2px !important
 }
 
-.primary-cta-btn:focus-visible,.btn-primary:focus-visible,.sd-btn-gold:focus-visible,.advisor-talk-btn:focus-visible {
-    outline:none !important;
+.primary-cta-btn:focus-visible,.btn-primary:focus-visible,.sd-btn-gold:focus-visible,.advisor-talk-btn:focus-visible,.lf-btn:focus-visible,.nav-cta-btn:focus-visible,.mobile-drawer-cta:focus-visible {
+    outline: 2px solid #E88D67 !important;
+    outline-offset: 3px !important;
     box-shadow: none !important
 }
 
