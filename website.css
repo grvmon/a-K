@@ -4579,9 +4579,9 @@ body.page-404 .error-404-section {
     display:inline-flex !important;
     align-items:center !important;
     justify-content:center !important;
-    height:40px !important;
-    min-height:40px !important;
-    padding:0 12px !important;
+    height:48px !important;
+    min-height:48px !important;
+    padding:0 16px 0 24px !important;
     gap:12px !important;
     border-radius: 4px !important;
     font-family:var(--font-body),'Manrope',sans-serif !important;
@@ -4592,6 +4592,11 @@ body.page-404 .error-404-section {
     text-decoration:none !important;
     box-sizing:border-box !important;
     cursor:pointer !important;
+    background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
+    border:none !important;
+    box-shadow:none !important;
+    color:#FFFFFF !important;
+    text-shadow:0 1px 2px rgba(43, 45, 49, 0.35) !important;
     transition:transform 0.4s ease,background 0.4s ease,box-shadow 0.4s ease !important
 }
 
@@ -6387,9 +6392,9 @@ body.drawer-open .advisor-floating-unit {
     display:inline-flex !important;
     align-items:center !important;
     justify-content:center !important;
-    height:40px !important;
-    min-height:40px !important;
-    padding:0 12px !important;
+    height:48px !important;
+    min-height:48px !important;
+    padding:0 16px 0 24px !important;
     gap:12px !important;
     border-radius: 4px !important;
     background:linear-gradient(135deg,#E88D67 0%, #9E3F23 100%) !important;
@@ -6404,6 +6409,7 @@ body.drawer-open .advisor-floating-unit {
     border:none !important;
     box-sizing:border-box !important;
     cursor:pointer !important;
+    text-shadow:0 1px 2px rgba(43, 45, 49, 0.35) !important;
     transition:transform 0.4s ease,background 0.4s ease,box-shadow 0.4s ease !important
 }
 
@@ -7908,11 +7914,10 @@ button:focus-visible,a:focus-visible {
 .primary-cta-btn, .nav-cta-btn, .premium-inline-cta, .mobile-drawer-cta, .hero-cta-group .primary-cta-btn.premium-inline-cta {
     width: auto !important;
     max-width: none !important;
-    height: 50px !important;
-    min-height: 50px !important;
-    padding: 0 24px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    padding: 0 16px 0 24px !important;
     display: inline-flex !important;
-    
     align-items: center !important;
 }
 
@@ -9512,3 +9517,226 @@ h1.hero-title, .hero-title, .hero-headline, .display-title, .brand-headline {
 .ak-footer .ak-footer-bottom{justify-content:center;text-align:center;gap:4px 16px;font-size:12.5px;color:#c9cfd6}
 .ak-footer .ak-footer-bottom a{color:#c9cfd6}
 @media (width<=900px){.ak-footer .ak-footer-top{flex-direction:column;flex-wrap:wrap;text-align:center}.ak-footer .ak-footer-brand{align-items:center;flex-basis:auto}.ak-footer .ak-footer-links{gap:0 6px}.ak-footer .ak-footer-links a,.ak-footer .ak-footer-bottom a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px}.ak-footer .ak-footer-social{flex-wrap:wrap;justify-content:center}.ak-footer .ak-footer-social .footer-social-btn{width:44px;height:44px}.ak-footer .ak-footer-address{display:inline-flex;align-items:center;min-height:44px;max-width:340px}.ak-footer .ak-footer-inner{padding:0 18px;gap:10px}.ak-footer .ak-footer-bottom{gap:0 4px}.site-footer.ak-footer{padding:24px 0 max(96px,env(safe-area-inset-bottom))!important}}
+
+/* ==========================================================================
+   AUTHORITATIVE SITEWIDE MANDATE: 100% IDENTICAL HEADER & CTA STYLING
+   Enforced sitewide across all pages (Calculators, Blogs, Answers, Home, etc.)
+   ========================================================================== */
+
+/* 1. Header Navigation Bar (Fixed 80px) */
+.header-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 80px !important;
+    z-index: 1000 !important;
+    background: rgba(43, 45, 49, 0.90) !important;
+    background-color: rgba(43, 45, 49, 0.90) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.header-nav.scrolled {
+    position: fixed !important;
+    height: 80px !important;
+    background: rgba(43, 45, 49, 0.95) !important;
+    background-color: rgba(43, 45, 49, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: none !important;
+}
+
+/* Maintain hero overlay transparent-header on homepage only when NOT scrolled */
+.header-nav.transparent-header:not(.scrolled) {
+    position: absolute !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 2. Brand Logo Typography (2.05rem, Josefin Sans, 400, lowercase) */
+.brand-logo-text,
+.brand-inline-text {
+    font-family: var(--font-brand), 'Josefin Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 2.05rem !important;
+    letter-spacing: -0.02em !important;
+    text-transform: lowercase !important;
+    line-height: 1 !important;
+    color: #FAFAFA !important;
+    font-style: normal !important;
+    transition: color 0.4s ease !important;
+}
+
+.header-nav.scrolled .brand-logo-text {
+    color: #FFFFFF !important;
+}
+
+/* Mobile drawer brand text (dark navy on light drawer background) */
+.header-nav .mobile-drawer-brand .brand-logo-text,
+.mobile-drawer .mobile-drawer-brand .brand-logo-text,
+.mobile-drawer-brand .brand-logo-text {
+    color: var(--deep-navy, #2B2D31) !important;
+    font-size: 1.98rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* 3. Primary CTA Button: 48px Height, Padding 0 16px 0 24px, 15px/600 Manrope */
+.primary-cta-btn,
+.nav-cta-btn,
+.mobile-drawer-cta,
+.premium-inline-cta,
+.lf-btn,
+#lfSubmitBtn,
+.header-nav .primary-cta-btn,
+.header-nav.scrolled .primary-cta-btn,
+.header-nav .nav-cta-btn,
+.header-nav.scrolled .nav-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    padding: 0 16px 0 24px !important;
+    gap: 12px !important;
+    border-radius: 4px !important;
+    font-family: var(--font-body), var(--font-sans), 'Manrope', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    text-shadow: 0 1px 2px rgba(43, 45, 49, 0.35) !important;
+    transition: transform 120ms cubic-bezier(0.2, 0, 0, 1), background 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease, box-shadow 0.4s ease !important;
+}
+
+/* CTA Hover States: Identical Across All Pages, Both Scroll and Non-Scroll */
+.primary-cta-btn:hover,
+.nav-cta-btn:hover,
+.mobile-drawer-cta:hover,
+.premium-inline-cta:hover,
+.lf-btn:hover,
+#lfSubmitBtn:hover,
+.header-nav .primary-cta-btn:hover,
+.header-nav.scrolled .primary-cta-btn:hover,
+.header-nav .nav-cta-btn:hover,
+.header-nav.scrolled .nav-cta-btn:hover {
+    background: linear-gradient(135deg, #E88D67 0%, #9E3F23 100%) !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    transform: none !important;
+    text-decoration: none !important;
+}
+
+.primary-cta-btn:active,
+.nav-cta-btn:active,
+.mobile-drawer-cta:active,
+.premium-inline-cta:active {
+    transform: scale(0.975) !important;
+}
+
+.primary-cta-btn:focus-visible,
+.nav-cta-btn:focus-visible,
+.mobile-drawer-cta:focus-visible {
+    outline: 2px solid #E88D67 !important;
+    outline-offset: 3px !important;
+    box-shadow: none !important;
+}
+
+/* CTA Text Inner Span */
+.primary-cta-btn > span:not(.cta-arrow-badge),
+.nav-cta-btn > span:not(.cta-arrow-badge),
+.mobile-drawer-cta > span:not(.cta-arrow-badge),
+.premium-inline-cta > span:not(.cta-arrow-badge) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    color: #FFFFFF !important;
+}
+
+/* 4. Arrow Badge Inside CTA: 24x24px, 4px radius, SVG 11x11px */
+.cta-arrow-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    box-sizing: border-box !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.cta-arrow-badge svg {
+    width: 11px !important;
+    height: 11px !important;
+    stroke: currentColor !important;
+    stroke-width: 1.8 !important;
+    display: block !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.primary-cta-btn:hover .cta-arrow-badge,
+.nav-cta-btn:hover .cta-arrow-badge,
+.mobile-drawer-cta:hover .cta-arrow-badge,
+.premium-inline-cta:hover .cta-arrow-badge {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.95) !important;
+    transform: scale(1.06) !important;
+    box-shadow: none !important;
+}
+
+.primary-cta-btn:hover .cta-arrow-badge svg,
+.nav-cta-btn:hover .cta-arrow-badge svg,
+.mobile-drawer-cta:hover .cta-arrow-badge svg,
+.premium-inline-cta:hover .cta-arrow-badge svg {
+    transform: translate(1.5px, -1.5px) !important;
+}
+
+/* Eliminate pseudo-element artifacts on CTA buttons */
+.primary-cta-btn::after,
+.premium-inline-cta::after,
+.nav-cta-btn::after,
+.mobile-drawer-cta::after,
+.primary-cta-btn span::after,
+.premium-inline-cta span::after,
+.nav-cta-btn span::after,
+.mobile-drawer-cta span::after,
+.primary-cta-btn *::after,
+.premium-inline-cta *::after {
+    content: none !important;
+    display: none !important;
+}
+
