@@ -21,7 +21,7 @@ const PROPERTY_DATA = {
     "Tower 3",
     "Tower 4"
   ],
-  "startingPrice": "₹2.55 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Hope Farm Circle, ITPL Main Road, Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
     "landParcel": "4.1 Acres",
@@ -134,10 +134,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "RCC shear wall framed earthquake-resistant structure.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid tiles in balcony and toilets.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid tiles in balcony and toilets.",
     "Doors & Windows": "Teakwood frame main door with smart digital lock; UPVC sliding doors for balconies.",
-    "Sanitary & Fittings": "Premium Kohler / Grohe CP and sanitary fittings with wall-mounted EWC.",
-    "Electrical & Automation": "Concealed copper wiring with modular switches, 100% DG power backup for common areas."
+    "Sanitary & Fittings": "Kohler / Grohe CP and sanitary fittings with wall-mounted EWC.",
+    "Electrical & Automation": "Concealed copper wiring with modular switches, DG power backup for common areas."
   },
   "builderStats": {
     "yearsLegacy": "30+",

@@ -24,7 +24,7 @@ const PROPERTY_DATA = {
     "Tower 6",
     "Tower 7"
   ],
-  "startingPrice": "₹2.45 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Borewell Road, Core Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
     "landParcel": "16.5 Acres",
@@ -94,10 +94,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "RCC framed structure / monolithic shear wall construction engineered for seismic compliance.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balcony and toilets.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in balcony and toilets.",
     "Doors & Windows": "Teakwood frame main door with digital lock. UPVC / Aluminum sliding doors with mosquito mesh for balconies.",
-    "Sanitary & Fittings": "Wall-mounted EWC with concealed cisterns. Premium Grohe / Kohler or equivalent CP and sanitary fittings.",
-    "Electrical & Automation": "Concealed copper wiring with modular switches. 100% DG backup for common areas and 1KW power backup per apartment."
+    "Sanitary & Fittings": "Wall-mounted EWC with concealed cisterns. Grohe / Kohler or equivalent CP and sanitary fittings.",
+    "Electrical & Automation": "Concealed copper wiring with modular switches. DG backup for common areas and 1KW power backup per apartment."
   },
   "builderStats": {
     "yearsLegacy": "30+",

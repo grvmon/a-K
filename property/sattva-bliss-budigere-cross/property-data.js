@@ -20,7 +20,7 @@ const PROPERTY_DATA = {
     "Tower 2",
     "Tower 3"
   ],
-  "startingPrice": "₹0.66 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Budigere Cross, Off Old Madras Road (NH75), Bengaluru, Karnataka 560049",
   "metrics": {
     "landParcel": "3.3 Acres",
@@ -138,7 +138,7 @@ const PROPERTY_DATA = {
     "Flooring": "Vitrified tile flooring in living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balcony.",
     "Doors & Windows": "Main door with teakwood frame and flush shutter; UPVC/Aluminum sliding windows with bug screens.",
     "Sanitary & Fittings": "Standard Jaquar/Hindware or equivalent CP fittings and sanitary fixtures.",
-    "Electrical": "Concealed copper wiring with modular switches, 100% backup for elevators and common areas."
+    "Electrical": "Concealed copper wiring with modular switches, backup for elevators and common areas."
   },
   "builderStats": {
     "yearsLegacy": "30+",

@@ -1,3 +1,4 @@
+// TODO: Brigade Granada project RERA registration ID is unpublished. The previously displayed ID is unverified and there is no confirmed replacement.
 const PROPERTY_DATA = {
   "id": "brigade-granada",
   "name": "Brigade Granada",
@@ -8,9 +9,9 @@ const PROPERTY_DATA = {
   "tagline": "Boutique High-Rise Residences near Hope Farm Junction Metro",
   "rating": 4.18,
   "reviewsCount": 114,
-  "shortDescription": "2.5, 3 & 4 BHK Luxury Residences on Whitefield-Kadugodi Main Road",
+  "shortDescription": "2.5, 3 & 4 BHK residences on Whitefield-Kadugodi Main Road",
   "secondaryLine": "5.5-Acre Precinct | 4 High-Rise Towers (2B+G+19) | ~35,000 sq.ft. Clubhouse | 70% Open Area",
-  "rera": "PRM/KA/RERA/1251/446/PR/181124/007231 | Target: 31 December 2028",
+  "rera": "Not published | Target: 31 December 2028",
   "possession": "31 December 2028",
   "status": "Under Construction",
   "structure": "2 Basements + Ground + 19 Residential Floors",
@@ -18,9 +19,9 @@ const PROPERTY_DATA = {
   "towerNames": [
     "Tower 1", "Tower 2", "Tower 3", "Tower 4"
   ],
-  "startingPrice": "₹1.45 Cr*",
-  "priceRangeDisplay": "₹1.45 – 3.25 Cr",
-  "pricePerSqftDisplay": "₹11,500 – 12,800 / sq.ft.",
+  "startingPrice": "On request",
+  "priceRangeDisplay": "On request",
+  "pricePerSqftDisplay": "On request",
   "siteAddress": "Whitefield - Kadugodi Main Road, Near Hope Farm Junction, Whitefield Precinct, Bengaluru, Karnataka 560067",
   "metrics": {
     "landParcel": "5.5 Acres",
@@ -36,8 +37,8 @@ const PROPERTY_DATA = {
       "sbua": "1,260 – 1,310 sq.ft.",
       "carpet": "830 – 865 sq.ft.",
       "efficiency": "65.8% – 66.0%",
-      "basePrice": "₹1.45 – 1.55 Cr",
-      "onRoadEst": "₹1.58 – 1.69 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Tech professionals & small families needing dedicated study space"
     },
     {
@@ -45,8 +46,8 @@ const PROPERTY_DATA = {
       "sbua": "1,540 – 1,590 sq.ft.",
       "carpet": "1,010 – 1,045 sq.ft.",
       "efficiency": "65.6% – 65.7%",
-      "basePrice": "₹1.77 – 1.88 Cr",
-      "onRoadEst": "₹1.93 – 2.05 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Value-conscious 3 BHK seekers needing efficient spatial footprint"
     },
     {
@@ -54,8 +55,8 @@ const PROPERTY_DATA = {
       "sbua": "1,780 – 1,850 sq.ft.",
       "carpet": "1,175 – 1,220 sq.ft.",
       "efficiency": "66.0% – 66.0%",
-      "basePrice": "₹2.05 – 2.22 Cr",
-      "onRoadEst": "₹2.23 – 2.42 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Growing families desiring 3 full en-suite bathrooms"
     },
     {
@@ -63,8 +64,8 @@ const PROPERTY_DATA = {
       "sbua": "2,350 – 2,480 sq.ft.",
       "carpet": "1,550 – 1,640 sq.ft.",
       "efficiency": "66.0% – 66.1%",
-      "basePrice": "₹2.70 – 2.98 Cr",
-      "onRoadEst": "₹2.94 – 3.25 Cr",
+      "basePrice": "On request",
+      "onRoadEst": "On request",
       "bestFor": "Multi-generational living & senior tech leadership"
     }
   ],
@@ -105,7 +106,7 @@ const PROPERTY_DATA = {
     {
       "id": "unit-type-4bhk",
       "config": "4 BHK + Maid",
-      "title": "Unit Type D (4 BHK Premium)",
+      "title": "Unit Type D (4 BHK)",
       "towerInfo": "Tower 04 (Level G–19)",
       "sbua": 2350,
       "carpet": 1550,

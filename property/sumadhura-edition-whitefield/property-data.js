@@ -4,11 +4,11 @@ const PROPERTY_DATA = {
   "codename": "Sumadhura Edition Whitefield",
   "location": "Siddapura, Core Whitefield, Bengaluru",
   "builder": "Sumadhura Group",
-  "badge": "Premium Core-Whitefield Project",
-  "tagline": "Premium Large-Format Core Whitefield Living",
+  "badge": "Core-Whitefield Project",
+  "tagline": "large-format Core Whitefield Living",
   "rating": 3.82,
   "reviewsCount": 142,
-  "shortDescription": "Premium 2, 3 & 4 BHK Residences",
+  "shortDescription": "2, 3 & 4 BHK Residences",
   "secondaryLine": "20-Acre Masterplan | 11 Towers | 76% Open Area",
   "rera": "Phase-I RERA Completion: 31 December 2029",
   "possession": "31 December 2029",
@@ -28,7 +28,7 @@ const PROPERTY_DATA = {
     "Tower 10",
     "Tower 11"
   ],
-  "startingPrice": "₹2.06 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "Siddapura, Core Whitefield, Bengaluru, Karnataka 560066",
   "metrics": {
     "landParcel": "20 Acres",
@@ -152,10 +152,10 @@ const PROPERTY_DATA = {
   },
   "specifications": {
     "Structure": "2B + G + 18 Floors monolithic RCC shear wall structure.",
-    "Flooring": "Premium vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balconies.",
+    "Flooring": "vitrified tiles in living, dining, and bedrooms; anti-skid ceramic tiles in toilets and balconies.",
     "Doors & Windows": "Timber frame main door with digital lock; UPVC/Aluminum sliding doors for balconies.",
     "Sanitary & Fittings": "Wall-mounted EWC with concealed flush cistern; Kohler/Grohe or equivalent CP and sanitary fittings.",
-    "Electrical & Automation": "Concealed copper wiring, modular switches, 100% power backup for common areas and partial backup for apartments."
+    "Electrical & Automation": "Concealed copper wiring, modular switches, power backup for common areas and partial backup for apartments."
   },
   "builderStats": {
     "yearsLegacy": "30+",

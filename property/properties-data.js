@@ -326,10 +326,9 @@ const PROPERTIES_DATA = [
     "url": "/property/riviera-uno-whitefield/"
   },
   {
+    // TODO: Brigade Granada project RERA registration ID is unpublished. The previously stored ID is unverified and there is no confirmed replacement.
     "id": "brigade-granada",
-    "rera": [
-      "PRM/KA/RERA/1251/446/PR/181124/007231"
-    ],
+    "rera": [],
     "slug": "brigade-granada",
     "name": "Brigade Granada",
     "developer": "Brigade Group",

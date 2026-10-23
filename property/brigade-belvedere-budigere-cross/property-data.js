@@ -22,7 +22,7 @@ const PROPERTY_DATA = {
     "Tower 4",
     "Tower 5"
   ],
-  "startingPrice": "₹0.93 Cr*",
+  "startingPrice": "On request",
   "siteAddress": "NH75 / Budigere Main Road, Budigere Cross, Bengaluru, Karnataka 560049",
   "metrics": {
     "landParcel": "10.7 Acres (Detailed Scheme)",
@@ -140,8 +140,8 @@ const PROPERTY_DATA = {
     "Structure": "Integrated RCC shear wall high-rise structure (G + 43 floors).",
     "Flooring": "Vitrified tiles in living, dining & bedrooms; anti-skid ceramic tiles in toilets and balcony.",
     "Doors & Windows": "Engineered timber door frames; heavy-duty UPVC/Aluminum sliding balcony doors.",
-    "Sanitary & Fittings": "Premium Jaguar/Kohler or equivalent sanitary ware and CP fittings.",
-    "Electrical": "Concealed copper wiring with modular switches, 100% backup for elevator and essential common areas."
+    "Sanitary & Fittings": "Jaguar/Kohler or equivalent sanitary ware and CP fittings.",
+    "Electrical": "Concealed copper wiring with modular switches, backup for elevator and essential common areas."
   },
   "builderStats": {
     "yearsLegacy": "35+",
