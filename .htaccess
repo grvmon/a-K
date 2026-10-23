@@ -13,6 +13,9 @@ RewriteEngine On
 RewriteRule ^calculators/luxury-home-affordability-calculator/?(.*)$ /calculators/hni-home-affordability-calculator/$1 [L,R=301]
 RewriteRule ^calculators/dream-home-timeline-planner/?(.*)$ /calculators/home-buying-timeline-planner/$1 [L,R=301]
 
+# 301: blog plural to singular canonical
+RewriteRule ^blogs/?(.*)$ /blog/$1 [L,R=301]
+
 # 301: retired partners page to the home page
 RewriteRule ^partners\.html$ / [L,R=301,NC]
 RewriteRule ^partners/?$ / [L,R=301,NC]
