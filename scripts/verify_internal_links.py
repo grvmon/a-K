@@ -391,7 +391,7 @@ def main() -> int:
             continue
         if len(any_referrers[url]) == 0:
             orphans.append(rel)
-        if len(referrers[url]) < 5:
+        if len(referrers[url]) < 3:
             weak.append((rel, len(referrers[url]), sorted(referrers[url])[:8]))
 
     sitemap_errors = []
